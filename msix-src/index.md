@@ -1,5 +1,8 @@
 # MSIX
 
+## Video example
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
+
 ## Two columns
 
 :::row:::
