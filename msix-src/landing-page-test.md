@@ -1,3 +1,8 @@
+---
+layout: LandingPage
+
+---
+
 # MSIX
 
 ## Two columns

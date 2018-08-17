@@ -1,3 +1,8 @@
+---
+layout: HubPage
+
+---
+
 # MSIX
 
 ## Two columns
