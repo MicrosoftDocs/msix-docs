@@ -23,7 +23,7 @@
 :::row:::
     :::column:::
         ![hero image](images/header-color.svg)
-        ### {Package existing Windows apps](color.md)
+        ### [Package existing Windows apps](color.md)
         MSIX Packaging Tool enables you to update your existing Win32 application packages to the MSIX format.
     :::column-end:::
     :::column:::
