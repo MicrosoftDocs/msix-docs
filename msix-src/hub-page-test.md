@@ -54,11 +54,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                 <li>
                     <a href="#it-pro1"></a>
                     <ul id="it-pro1" class="cardsF">
-                        <li>
-                            <div class="container intro">
-                                <p>Guidance for administrators in organizations and schools</p>
-                            </div>
-                        </li>
+
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -71,14 +67,9 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                         <div class="cardText">
                                             <h3>What's new</h3>
                                             <p>
-                                                <a href="whats-new/windows-10-version-latest.md">New APIs and features</a>
+                                                <a href="whats-new/windows-10-version-latest.md">New tools and features</a>
                                             </p>
-                                            <p>
-                                                <a href="whats-new/windows-docs-latest.md">What's new in the docs</a>
-                                            </p>
-                                            <p>
-                                                <a href="whats-new/experimental-apis.md">Experimental APIs</a>
-                                            </p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -96,16 +87,13 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                         <div class="cardText">
                                             <h3>Get started</h3>
                                             <p>
-                                                <a href="get-started/universal-application-platform-guide.md">What's a UWP app?</a>
+                                                <a href="get-started/universal-application-platform-guide.md">Update existing installers to MSIX</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/sign-up.md">Sign up for a developer account</a>
+                                                <a href="get-started/sign-up.md">MSIX packaging tool</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/get-set-up.md">Get set up</a>
-                                            </p>
-                                            <p>
-                                                <a href="get-started/your-first-app.md">Create your first app</a>
+                                                <a href="get-started/get-set-up.md">Package Support Framework</a>
                                             </p>
                                         </div>
                                     </div>
@@ -118,22 +106,22 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="/media/common/i_management.svg" alt="Design icon" />
+                                                <img src="/media/common/i_management.svg" alt="Package icon" />
                                             </div>
                                         </div>
                                         <div class="cardText">
                                             <h3>Design and UI</h3>
                                             <p>
-                                                <a href="design/basics/design-and-ui-intro.md">Design basics</a>
+                                                <a href="design/basics/design-and-ui-intro.md">Use MSIX packaging tool</a>
                                             </p>
                                             <p>
-                                                <a href="design/fluent-design-system/index.md">Fluent Design System</a>
+                                                <a href="design/fluent-design-system/index.md">Use Visual Studio</a>
                                             </p>
                                             <p>
-                                                <a href="design/controls-and-patterns/index.md">Controls and patterns</a>
+                                                <a href="design/controls-and-patterns/index.md">Use command line tools</a>
                                             </p>
                                             <p>
-                                                <a href="design/downloads/index.md">Design toolkits</a>
+                                                <a href="design/downloads/index.md">Signing packages</a>
                                             </p>
                                         </div>
                                     </div>
@@ -146,32 +134,20 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="/media/common/i_code-edit.svg" alt="Develop icon" />
+                                                <img src="/media/common/i_code-edit.svg" alt="Validate icon" />
                                             </div>
                                         </div>
                                         <div class="cardText">
                                             <h3>Develop apps</h3>
                                             <p>
-                                                <a href="enterprise/index.md">Enterprise apps</a>
+                                                <a href="enterprise/index.md">Microsoft Store flighting</a>
                                             </p>
                                             <p>
-                                                <a href="packaging/index.md">Packaging apps</a>
+                                                <a href="packaging/index.md">Validate on local devices</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows Community Toolkit</a>
-                                            </p>
-                                            <p>
-                                                <a href="porting/index.md">Porting apps to Windows 10</a>
-                                            </p>
-                                            <p>
-                                                <a href="winrt-components/index.md">Windows Runtime components</a>
-                                            </p>
-                                            <p>
-                                                <a href="apps-for-education/index.md">Education apps</a>
-                                            </p>
-                                            <p>
-                                                <a href="porting/apps-on-arm.md">Windows 10 on ARM</a>
-                                            </p>
+                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Test for Windows 10 S mode</a>
+                                            </p>                                           
                                         </div>
                                     </div>
                                 </div>
@@ -183,25 +159,25 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="/media/common/i_build.svg" alt="Develop Games icon" />
+                                                <img src="/media/common/i_build.svg" alt="Distribute icon" />
                                             </div>
                                         </div>
                                         <div class="cardText">
                                             <h3>Develop games</h3>
                                             <p>
-                                                <a href="gaming/e2e.md">Windows 10 game development guide</a>
+                                                <a href="gaming/e2e.md">Microsoft Store</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/index.md">Game programming</a>
+                                                <a href="gaming/index.md">Microsoft Store for Business</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/directx-programming.md">DirectX programming</a>
+                                                <a href="gaming/directx-programming.md">System Center Configuration Manager</a>
                                             </p>
                                             <p>
-                                                <a href="xbox-apps/index.md">UWP on Xbox One</a>
+                                                <a href="xbox-apps/index.md">Microsoft Intune</a>
                                             </p>
                                             <p>
-                                                <a href="xbox-live/index.md">Xbox Live</a>
+                                                <a href="xbox-live/index.md">Non-store distribution</a>
                                             </p>
                                         </div>
                                     </div>
@@ -214,26 +190,22 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="/media/common/i_upgrade.svg" alt="Publish icon" />
+                                                <img src="/media/common/i_upgrade.svg" alt="Manage icon" />
                                             </div>
                                         </div>
                                         <div class="cardText">
                                             <h3>Publish</h3>
                                             <p>
-                                                <a href="publish/app-submissions.md">App submissions</a>
+                                                <a href="publish/app-submissions.md">Install for all users</a>
                                             </p>
                                             <p>
-                                                <a href="publish/the-app-certification-process.md">App certification process</a>
+                                                <a href="publish/the-app-certification-process.md">Advanced app management</a>
                                             </p>
+
                                             <p>
-                                                <a href="publish/upload-app-packages.md">Upload app packages</a>
+                                                <a href="publish/create-your-app-by-reserving-a-name.md">Background tasks</a>
                                             </p>
-                                            <p>
-                                                <a href="publish/create-your-app-by-reserving-a-name.md">Reserve a name</a>
-                                            </p>
-                                            <p>
-                                                <a href="publish/set-app-pricing-and-availability.md">Set app pricing and availability</a>
-                                            </p>
+
                                         </div>
                                     </div>
                                 </div>
