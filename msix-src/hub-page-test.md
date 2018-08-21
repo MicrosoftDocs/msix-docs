@@ -30,12 +30,12 @@ layout: HubPage
     :::column-end:::
     :::column:::
         ![hero image](images/header-typography.svg)
-        ### [Package for many distribution channels](typography.md)
+        ### [Use MSIX anywhere](typography.md)
       The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
         ![hero image](images/header-color.svg)
-        ### [Install MXIX app packages](color.md)
+        ### [Install MSIX app packages](color.md)
         App Installer allows for easy installation and update of any MSIX app package that are locally available or on any content distribution network.
     :::column-end:::
     :::column:::
@@ -46,38 +46,39 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row-end:::
 
 <div class="container">
-    <h1>Windows documentation</h1>
+   
     <ul class="pivots">
         <li>
-            <a data-default="true" href="#developer">Developer</a>
+            <a data-default="true" href="#developer">IT pro</a>
             <ul id="developer">
                 <li>
                     <a href="#developer-all">all</a>
-                    <ul id="developer-all" class="cardsC">
-<li>
-                            <div class="container intro">
-                                <p>Build for Windows 10</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://docs.microsoft.com/windows/uwp/">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img data-scaleimage="/media/hubs/windows/win_developer-uwp.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>UWP apps</h3>
-                                                <p>Build apps for any Windows device—PCs, phones, Xbox One, HoloLens, and more—and publish them to the Store. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+                    <ul id="developer-all" class="cardsF">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="What's new icon" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>What's new</h3>
+                        <p>
+                            <a href="whats-new/windows-10-version-latest.md">New APIs and features</a>
+                        </p>
+                        <p>
+                            <a href="whats-new/windows-docs-latest.md">What's new in the docs</a>
+                        </p>
+                        <p>
+                            <a href="whats-new/experimental-apis.md">Experimental APIs</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
                         <li>
                             <a href="https://docs.microsoft.com/en-us/windows/desktop">
                                 <div class="cardSize">
