@@ -661,3 +661,34 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
       
     </ul>
 </div>
+ <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833100">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833101">
+                    Twitter
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833103">
+                    Stack Overflow
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=874480">
+                    Issue Reporting
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833105">
+                    User Voice
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
