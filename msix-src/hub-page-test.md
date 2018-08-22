@@ -4,6 +4,9 @@ layout: HubPage
 
 # MSIX
 # MSIX
+MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+
+[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
 
 ## Two columns
 
@@ -493,7 +496,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
             </ul>
         </li>
         <li>
-            <a href="#hardware-dev">Hardware dev</a>
+            <a href="#hardware-dev">Partners</a>
             <ul id="hardware-dev">
                 <li>
                     <a href="#hardware-dev1"></a>
