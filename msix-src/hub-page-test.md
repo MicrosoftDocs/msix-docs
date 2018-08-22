@@ -2,7 +2,7 @@
 layout: HubPage
 ---
 
-
+# MSIX
 
 ## Two columns
 
@@ -45,9 +45,9 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row-end:::
 
 <div class="container">
-
+<h1>Windows documentation</h1>
     <ul class="pivots">
-	<h1>Windows documentation</h1>
+	
         <li>
             <a href="#it-pro">IT pro</a>
             <ul id="it-pro">
