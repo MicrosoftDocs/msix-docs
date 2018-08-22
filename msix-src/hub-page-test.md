@@ -2,13 +2,17 @@
 layout: HubPage
 ---
 
-# MSIX
-# MSIX
-MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
-
-
->[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-
+:::row:::
+    :::column:::
+       # MSIX
+        MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+    :::column-end:::
+    :::column:::
+        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
+        ### Introducing MSIX
+      MSIX provides a wide array of tools to assist IT Pros and developers to build, distribute and deploy MSIX app packages.  
+    :::column-end:::
+:::row-end:::
 
 ## Two columns
 
@@ -26,17 +30,6 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 :::row-end:::
 
 
-:::row:::
-    :::column:::
-       # MSIX
-        MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
-    :::column-end:::
-    :::column:::
-        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-        ### Introducing MSIX
-      MSIX provides a wide array of tools to assist IT Pros and developers to build, distribute and deploy MSIX app packages.  
-    :::column-end:::
-:::row-end:::
 
 ## Four columns
 
