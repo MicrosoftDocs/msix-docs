@@ -3,7 +3,7 @@ layout: HubPage
 
 ---
 
-# MSIX
+## MSIX
 
 ## Two columns
 
