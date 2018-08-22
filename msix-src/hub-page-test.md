@@ -229,11 +229,6 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                     <a href="#developer-all">all</a>
                     <ul id="developer-all" class="cardsF">
                         <li>
-                            <div class="container intro">
-                                <p>Guidance for administrators in organizations and schools</p>
-                            </div>
-                        </li>
-                        <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -249,9 +244,6 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </p>
                                             <p>
                                                 <a href="whats-new/windows-docs-latest.md">What's new in the docs</a>
-                                            </p>
-                                            <p>
-                                                <a href="whats-new/experimental-apis.md">Experimental APIs</a>
                                             </p>
                                         </div>
                                     </div>
@@ -270,16 +262,13 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                         <div class="cardText">
                                             <h3>Get started</h3>
                                             <p>
-                                                <a href="get-started/universal-application-platform-guide.md">What's a UWP app?</a>
+                                                <a href="get-started/universal-application-platform-guide.md">Windows SDK and app dev tools</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/sign-up.md">Sign up for a developer account</a>
+                                                <a href="get-started/sign-up.md">MSIX package types</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/get-set-up.md">Get set up</a>
-                                            </p>
-                                            <p>
-                                                <a href="get-started/your-first-app.md">Create your first app</a>
+                                                <a href="get-started/get-set-up.md">MSIX SDK</a>
                                             </p>
                                         </div>
                                     </div>
