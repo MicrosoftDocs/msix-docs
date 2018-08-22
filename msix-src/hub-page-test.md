@@ -285,18 +285,18 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Design and UI</h3>
+                                            <h3>Build</h3>
                                             <p>
-                                                <a href="design/basics/design-and-ui-intro.md">Design basics</a>
+                                                <a href="design/basics/design-and-ui-intro.md">Packaging tools</a>
                                             </p>
                                             <p>
-                                                <a href="design/fluent-design-system/index.md">Fluent Design System</a>
+                                                <a href="design/fluent-design-system/index.md">Visual Studio</a>
                                             </p>
                                             <p>
-                                                <a href="design/controls-and-patterns/index.md">Controls and patterns</a>
+                                                <a href="design/controls-and-patterns/index.md">Share code between Win32 and Windows 10 apps</a>
                                             </p>
                                             <p>
-                                                <a href="design/downloads/index.md">Design toolkits</a>
+                                                <a href="design/downloads/index.md">Signing packages</a>
                                             </p>
                                         </div>
                                     </div>
@@ -313,27 +313,18 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Develop apps</h3>
+                                            <h3>Validate</h3>
                                             <p>
-                                                <a href="enterprise/index.md">Enterprise apps</a>
+                                                <a href="enterprise/index.md">Windows Device Portal</a>
                                             </p>
                                             <p>
-                                                <a href="packaging/index.md">Packaging apps</a>
+                                                <a href="packaging/index.md">Windows App Certification Kit</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows Community Toolkit</a>
+                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows Store flighting</a>
                                             </p>
                                             <p>
-                                                <a href="porting/index.md">Porting apps to Windows 10</a>
-                                            </p>
-                                            <p>
-                                                <a href="winrt-components/index.md">Windows Runtime components</a>
-                                            </p>
-                                            <p>
-                                                <a href="apps-for-education/index.md">Education apps</a>
-                                            </p>
-                                            <p>
-                                                <a href="porting/apps-on-arm.md">Windows 10 on ARM</a>
+                                                <a href="porting/index.md">Validate on local devices</a>
                                             </p>
                                         </div>
                                     </div>
