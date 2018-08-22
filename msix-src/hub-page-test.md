@@ -2,7 +2,7 @@
 layout: HubPage
 ---
 
-<h1>Windows documentation</h1>
+
 
 ## Two columns
 
@@ -47,7 +47,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 <div class="container">
 
     <ul class="pivots">
-	<h1></h1>
+	<h1>Windows documentation</h1>
         <li>
             <a href="#it-pro">IT pro</a>
             <ul id="it-pro">
