@@ -47,8 +47,8 @@ layout: LandingPage
 
 <h2>MSIX documentation</h2>
                  
-<ul class="cardsF">
-  <li>
+<ul class="panelContent cardsF">
+     <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -66,8 +66,8 @@ layout: LandingPage
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
+     </li>
+     <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -91,8 +91,8 @@ layout: LandingPage
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
+     </li>
+     <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -119,8 +119,8 @@ layout: LandingPage
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
+     </li>
+     <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -144,8 +144,8 @@ layout: LandingPage
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
+     </li>
+     <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -175,8 +175,8 @@ layout: LandingPage
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
+     </li>
+     <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -200,7 +200,6 @@ layout: LandingPage
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                       
-                    </ul>
+     </li>                      
+ </ul>
 
