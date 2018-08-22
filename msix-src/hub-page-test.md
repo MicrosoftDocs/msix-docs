@@ -25,15 +25,16 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
     :::column-end:::
 :::row-end:::
 
+
 :::row:::
     :::column:::
-       ### [Color](color.md)
-        Color provides intuitive wayfinding through an app's various levels of information and serves as a crucial tool for reinforcing the interaction model.
+       # MSIX
+        MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
     :::column-end:::
     :::column:::
         >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-        ### [Typography]
-       As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. The following guidelines focus on how to use typography to help users understand content easily. 
+        ### Introducing MSIX
+      MSIX provides a wide array of tools to assist IT Pros and developers to build, distribute and deploy MSIX app packages.  
     :::column-end:::
 :::row-end:::
 
