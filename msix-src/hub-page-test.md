@@ -219,7 +219,11 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                 <li>
                     <a href="#developer-all">all</a>
                     <ul id="developer-all" class="cardsF">
-
+                        <li>
+                            <div class="container intro">
+                                <p>Guidance for administrators in organizations and schools</p>
+                            </div>
+                        </li>
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
