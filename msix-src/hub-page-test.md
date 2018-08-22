@@ -9,8 +9,6 @@ layout: HubPage
     :::column-end:::
     :::column:::
         >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-        ### Introducing MSIX
-      MSIX provides a wide array of tools to assist IT Pros and developers to build, distribute and deploy MSIX app packages.  
     :::column-end:::
 :::row-end:::
 
