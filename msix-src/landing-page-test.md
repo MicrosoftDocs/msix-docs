@@ -3,7 +3,15 @@ layout: LandingPage
 
 ---
 
-# MSIX
+:::row:::
+    :::column:::
+       # MSIX
+        MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+    :::column-end:::
+    :::column:::
+        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
+    :::column-end:::
+:::row-end:::
 
 ## Two columns
 
@@ -203,3 +211,34 @@ layout: LandingPage
      </li>                      
  </ul>
 
+ <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833100">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833101">
+                    Twitter
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833103">
+                    Stack Overflow
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=874480">
+                    Issue Reporting
+                </a>
+            </li>
+            <li>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833105">
+                    User Voice
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
