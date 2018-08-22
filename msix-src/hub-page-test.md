@@ -391,49 +391,15 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>API reference</h3>
+                                            <h3>API and schema references</h3>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/">Universal Windows Platform APIs</a>
+                                                <a href="//docs.microsoft.com/uwp/">Packaging and Package Manager APIs</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/API">Windows UWP namespaces</a>
+                                                <a href="//docs.microsoft.com/uwp/API">App manifest schema</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/extension-sdks">Extension SDKs</a>
-                                            </p>
-                                            <p>
-                                                <a href="//docs.microsoft.com/uwp/schemas">Schemas</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="/media/common/i_multi-connect.svg" alt="Related links icon" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                            <h3>Related links</h3>
-                                            <p>
-                                                <a href="//docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps">Win32 and COM APIs for UWP apps</a>
-                                            </p>
-                                            <p>
-                                                <a href="//msdn.microsoft.com/library/windows/apps/mt185501.aspx">.NET for UWP apps</a>
-                                            </p>
-                                            <p>
-                                                <a href="//msdn.microsoft.com/library/windows/apps/mt691886.aspx">Microsoft Store Services SDK APIs</a>
-                                            </p>
-                                            <p>
-                                                <a href="//docs.microsoft.com/uwp/extension-sdks">Device Family Extension SDKs and API contracts</a>
-                                            </p>
-                                            <p>
-                                                <a href="//docs.microsoft.com/uwp/schemas/">File and XML schema specifications for UWP apps</a>
+                                                <a href="//docs.microsoft.com/uwp/extension-sdks">App Installer file schema</a>
                                             </p>
                                         </div>
                                     </div>
