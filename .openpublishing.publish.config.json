@@ -11,7 +11,7 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "ContextObject: "Toc",
+        "ContextObject": "Toc",
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
