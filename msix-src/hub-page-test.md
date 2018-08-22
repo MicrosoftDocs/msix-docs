@@ -8,7 +8,9 @@ layout: HubPage
         MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
     :::column-end:::
     :::column:::
-        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]       
+        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
+        ### Introducing MSIX
+      MSIX provides a wide array of tools to assist IT Pros and developers to build, distribute and deploy MSIX app packages.  
     :::column-end:::
 :::row-end:::
 
@@ -250,6 +252,9 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             <p>
                                                 <a href="whats-new/windows-docs-latest.md">What's new in the docs</a>
                                             </p>
+                                            <p>
+                                                <a href="whats-new/experimental-apis.md">Experimental APIs</a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -267,15 +272,17 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                         <div class="cardText">
                                             <h3>Get started</h3>
                                             <p>
-                                                <a href="get-started/universal-application-platform-guide.md">Windows SDK tools</a>
+                                                <a href="get-started/universal-application-platform-guide.md">What's a UWP app?</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/sign-up.md">MSIX package types</a>
+                                                <a href="get-started/sign-up.md">Sign up for a developer account</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/get-set-up.md">MSIX SDK</a>
+                                                <a href="get-started/get-set-up.md">Get set up</a>
                                             </p>
-
+                                            <p>
+                                                <a href="get-started/your-first-app.md">Create your first app</a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -291,18 +298,18 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Build</h3>
+                                            <h3>Design and UI</h3>
                                             <p>
-                                                <a href="design/basics/design-and-ui-intro.md">Packaging tools</a>
+                                                <a href="design/basics/design-and-ui-intro.md">Design basics</a>
                                             </p>
                                             <p>
-                                                <a href="design/fluent-design-system/index.md">Visual Studio</a>
+                                                <a href="design/fluent-design-system/index.md">Fluent Design System</a>
                                             </p>
                                             <p>
-                                                <a href="design/controls-and-patterns/index.md">Share code between Win32 and Windows 10 apps</a>
+                                                <a href="design/controls-and-patterns/index.md">Controls and patterns</a>
                                             </p>
                                             <p>
-                                                <a href="design/downloads/index.md">Signing packages</a>
+                                                <a href="design/downloads/index.md">Design toolkits</a>
                                             </p>
                                         </div>
                                     </div>
@@ -319,19 +326,28 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Validate</h3>
+                                            <h3>Develop apps</h3>
                                             <p>
-                                                <a href="enterprise/index.md">Windows device portal</a>
+                                                <a href="enterprise/index.md">Enterprise apps</a>
                                             </p>
                                             <p>
-                                                <a href="packaging/index.md">Windows App Certification Kit</a>
+                                                <a href="packaging/index.md">Packaging apps</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Microsoft Store Flighting</a>
+                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows Community Toolkit</a>
                                             </p>
                                             <p>
-                                                <a href="porting/index.md">Validate on local devices</a>
-                                            </p>                                            
+                                                <a href="porting/index.md">Porting apps to Windows 10</a>
+                                            </p>
+                                            <p>
+                                                <a href="winrt-components/index.md">Windows Runtime components</a>
+                                            </p>
+                                            <p>
+                                                <a href="apps-for-education/index.md">Education apps</a>
+                                            </p>
+                                            <p>
+                                                <a href="porting/apps-on-arm.md">Windows 10 on ARM</a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -347,15 +363,21 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Distribute</h3>
+                                            <h3>Develop games</h3>
                                             <p>
-                                                <a href="gaming/e2e.md">Microsoft Store</a>
+                                                <a href="gaming/e2e.md">Windows 10 game development guide</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/index.md">Microsoft Store for Business</a>
+                                                <a href="gaming/index.md">Game programming</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/directx-programming.md">Non-Store distribution</a>
+                                                <a href="gaming/directx-programming.md">DirectX programming</a>
+                                            </p>
+                                            <p>
+                                                <a href="xbox-apps/index.md">UWP on Xbox One</a>
+                                            </p>
+                                            <p>
+                                                <a href="xbox-live/index.md">Xbox Live</a>
                                             </p>
                                         </div>
                                     </div>
@@ -372,15 +394,21 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>MSIX concepts</h3>
+                                            <h3>Publish</h3>
                                             <p>
-                                                <a href="publish/app-submissions.md">MSIX package format</a>
+                                                <a href="publish/app-submissions.md">App submissions</a>
                                             </p>
                                             <p>
-                                                <a href="publish/the-app-certification-process.md">MSIX package types</a>
+                                                <a href="publish/the-app-certification-process.md">App certification process</a>
                                             </p>
                                             <p>
-                                                <a href="publish/upload-app-packages.md">Windows 10 app lifecycle</a>
+                                                <a href="publish/upload-app-packages.md">Upload app packages</a>
+                                            </p>
+                                            <p>
+                                                <a href="publish/create-your-app-by-reserving-a-name.md">Reserve a name</a>
+                                            </p>
+                                            <p>
+                                                <a href="publish/set-app-pricing-and-availability.md">Set app pricing and availability</a>
                                             </p>
                                         </div>
                                     </div>
@@ -397,21 +425,80 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>API and schema references</h3>
+                                            <h3>API reference</h3>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/">Packageing and Package Manager APIs</a>
+                                                <a href="//docs.microsoft.com/uwp/">Universal Windows Platform APIs</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/API">App manifest schema</a>
+                                                <a href="//docs.microsoft.com/uwp/API">Windows UWP namespaces</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/extension-sdks">App installer file schema</a>
+                                                <a href="//docs.microsoft.com/uwp/extension-sdks">Extension SDKs</a>
+                                            </p>
+                                            <p>
+                                                <a href="//docs.microsoft.com/uwp/schemas">Schemas</a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </li>            
+                        </li>
+                        <li>
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="/media/common/i_multi-connect.svg" alt="Related links icon" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Related links</h3>
+                                            <p>
+                                                <a href="//docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps">Win32 and COM APIs for UWP apps</a>
+                                            </p>
+                                            <p>
+                                                <a href="//msdn.microsoft.com/library/windows/apps/mt185501.aspx">.NET for UWP apps</a>
+                                            </p>
+                                            <p>
+                                                <a href="//msdn.microsoft.com/library/windows/apps/mt691886.aspx">Microsoft Store Services SDK APIs</a>
+                                            </p>
+                                            <p>
+                                                <a href="//docs.microsoft.com/uwp/extension-sdks">Device Family Extension SDKs and API contracts</a>
+                                            </p>
+                                            <p>
+                                                <a href="//docs.microsoft.com/uwp/schemas/">File and XML schema specifications for UWP apps</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="/media/common/i_support.svg" alt=" " />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Community and support</h3>
+                                            <p>
+                                                <a href="https://twitter.com/WindowsDocs">@WindowsDocs on Twitter</a>
+                                            </p>
+                                            <p>
+                                                <a href="http://aka.ms/OneDevMinute">OneDevMinute on YouTube</a>
+                                            </p>
+                                            <p>
+                                                <a href="https://developer.microsoft.com/windows/support">Windows developer support</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>    
                     </ul>
                 </li>
             </ul>
