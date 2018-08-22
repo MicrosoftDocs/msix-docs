@@ -50,7 +50,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     <ul class="pivots">
 	
         <li>
-            <a href="#it-pro">IT pro</a>
+            <a data-default="true" href="#it-pro">IT pro</a>
             <ul id="it-pro">
                 <li>
                     <a href="#it-pro1"></a>
@@ -214,16 +214,12 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
             </ul>
         </li>
         <li>
-            <a data-default="true" href="#developer">Developer</a>
+            <a href="#developer">Developer</a>
             <ul id="developer">
                 <li>
                     <a href="#developer-all">all</a>
                     <ul id="developer-all" class="cardsF">
-                        <li>
-                            <div class="container intro">
-                                <p>Guidance for administrators in organizations and schools</p>
-                            </div>
-                        </li>
+
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
