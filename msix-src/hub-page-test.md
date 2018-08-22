@@ -55,11 +55,6 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                     <a href="#it-pro1"></a>
                     <ul id="it-pro1" class="cardsF">
                         <li>
-                            <div class="container intro">
-                                <p>Guidance for administrators in organizations and schools</p>
-                            </div>
-                        </li>
-                        <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -71,14 +66,8 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                         <div class="cardText">
                                             <h3>What's new</h3>
                                             <p>
-                                                <a href="whats-new/windows-10-version-latest.md">New APIs and features</a>
-                                            </p>
-                                            <p>
-                                                <a href="whats-new/windows-docs-latest.md">What's new in the docs</a>
-                                            </p>
-                                            <p>
-                                                <a href="whats-new/experimental-apis.md">Experimental APIs</a>
-                                            </p>
+                                                <a href="whats-new/windows-10-version-latest.md">New tools and features</a>
+                                            </p>                                            
                                         </div>
                                     </div>
                                 </div>
