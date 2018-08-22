@@ -341,21 +341,15 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Develop games</h3>
+                                            <h3>Distribute</h3>
                                             <p>
-                                                <a href="gaming/e2e.md">Windows 10 game development guide</a>
+                                                <a href="gaming/e2e.md">Microsoft Store</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/index.md">Game programming</a>
+                                                <a href="gaming/index.md">Microsoft Store for Business</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/directx-programming.md">DirectX programming</a>
-                                            </p>
-                                            <p>
-                                                <a href="xbox-apps/index.md">UWP on Xbox One</a>
-                                            </p>
-                                            <p>
-                                                <a href="xbox-live/index.md">Xbox Live</a>
+                                                <a href="gaming/directx-programming.md">Non-Store distribution</a>
                                             </p>
                                         </div>
                                     </div>
@@ -372,21 +366,15 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Publish</h3>
+                                            <h3>MSIX concepts</h3>
                                             <p>
-                                                <a href="publish/app-submissions.md">App submissions</a>
+                                                <a href="publish/app-submissions.md">Package format</a>
                                             </p>
                                             <p>
-                                                <a href="publish/the-app-certification-process.md">App certification process</a>
+                                                <a href="publish/the-app-certification-process.md">Package types</a>
                                             </p>
                                             <p>
-                                                <a href="publish/upload-app-packages.md">Upload app packages</a>
-                                            </p>
-                                            <p>
-                                                <a href="publish/create-your-app-by-reserving-a-name.md">Reserve a name</a>
-                                            </p>
-                                            <p>
-                                                <a href="publish/set-app-pricing-and-availability.md">Set app pricing and availability</a>
+                                                <a href="publish/upload-app-packages.md">Windows 10 app lifecyle</a>
                                             </p>
                                         </div>
                                     </div>
