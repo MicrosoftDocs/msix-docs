@@ -3,6 +3,7 @@ layout: HubPage
 ---
 
 # MSIX
+# MSIX
 
 ## Two columns
 
@@ -45,7 +46,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row-end:::
 
 <div class="container">
-<h1>Windows documentation</h1>
+<h2>MSIX documentation</h2>
     <ul class="pivots">
 	
         <li>
