@@ -2,8 +2,9 @@
 layout: HubPage
 ---
 
-# Get started with MSIX
-MSIX is a package format for all Windows 10 apps regardless of the device type - PCs, Xbox, Hololens and more. MSIX provides a wide array of tools to assist IT Pros and developers to build, distribute and deploy MSIX app packages.
+<h1>Get started with MSIX</h1>
+
+MSIX is a package format for all Windows 10 apps regardless of the device type and provides a wide array of tools to assist you build, distribute, and deploy MSIX app packages.
 
 <div class="container">
 <h2>MSIX documentation</h2>
