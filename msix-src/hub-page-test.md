@@ -2,7 +2,7 @@
 layout: HubPage
 ---
 
-<div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 20px;">
+<div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
     <video src="https://www.youtube.com/embed/XKIIEC5BMWg" controls style="margin: auto;">
     </video>
 </div>
