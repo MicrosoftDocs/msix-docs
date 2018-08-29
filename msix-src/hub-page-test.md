@@ -3,8 +3,8 @@ layout: HubPage
 ---
 
 <div style="background-color: black; padding-top: 20px; padding-bottom: 20px;">
-    <video controls>
-        <source src="https://www.youtube.com/embed/XKIIEC5BMWg" type="video/mp4">
+    <video controls style="margin: auto;">
+        <source src="https://www.youtube.com/embed/XKIIEC5BMWg">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -48,7 +48,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 
 ***
 
-
+# Partners supporting MSIX
 
 :::row:::
     :::column:::
