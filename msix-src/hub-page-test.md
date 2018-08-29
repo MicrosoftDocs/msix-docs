@@ -2,7 +2,18 @@
 layout: HubPage
 ---
 
-:::row:::
+<div style="background-color: black; padding-top: 20px; padding-bottom: 20px;">
+    <video controls>
+        <source src="https://www.youtube.com/embed/XKIIEC5BMWg" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+# MSIX
+MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+
+
+<!-- :::row:::
     :::column:::
        # MSIX
         MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
@@ -10,7 +21,7 @@ layout: HubPage
     :::column:::
         >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
     :::column-end:::
-:::row-end:::
+:::row-end::: -->
 
 
 :::row:::
