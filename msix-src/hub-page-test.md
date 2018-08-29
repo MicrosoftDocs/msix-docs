@@ -32,7 +32,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     :::column-end:::
 :::row-end:::
 
-
+<div>
 :::row:::
     :::column:::
        ![alt+text](images/ai-logo.png)(https://www.advancedinstaller.com/express-edition.html)  
@@ -60,7 +60,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     :::column:::
 	:::column-end:::
 :::row-end:::
-
+</div>
 </div>
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
