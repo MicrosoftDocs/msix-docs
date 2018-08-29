@@ -2,10 +2,8 @@
 layout: HubPage
 ---
 
-<div style="background-color: black; padding-top: 20px; padding-bottom: 20px;">
-    <video controls style="margin: auto;">
-        <source src="https://www.youtube.com/embed/XKIIEC5BMWg">
-        Your browser does not support the video tag.
+<div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 20px;">
+    <video src="https://www.youtube.com/embed/XKIIEC5BMWg" controls style="margin: auto;">
     </video>
 </div>
 
