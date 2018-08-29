@@ -35,16 +35,16 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 <div>
 :::row:::
     :::column:::
-       ![alt+text](images/ai-logo.png)(https://www.advancedinstaller.com/express-edition.html)  
+       [![alt+text](images/ai-logo.png)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-        ![alt+text](images/chouse-logo.png)(https://www.advancedinstaller.com/express-edition.html)  
+        [![alt+text](images/chouse-logo.png)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-	![alt+text](images/fg-logo.png)(https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/fg-logo.png)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	 ![alt+text](images/installaware-logo.png)(https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/installaware-logo.png)](https://www.advancedinstaller.com/express-edition.html)
 	 :::column-end:::
 :::row-end:::
 :::row:::
