@@ -3,4 +3,4 @@ uhfHeaderId: MSDocsHeader-WinUWP
 searchScope:
   - UWP
 breadcrumb_path: ./breadcrumb.json
-toc_rel: ./toc.yml
+toc_rel: msix-src/toc.md
