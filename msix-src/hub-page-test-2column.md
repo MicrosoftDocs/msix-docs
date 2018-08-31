@@ -1,24 +1,26 @@
 ---
 layout: HubPage
 ---
-
+<!-- 
 <div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AUUwZTurcmQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-
+ -->
 # MSIX
 MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 
-<!-- :::row:::
-    :::column:::
-       # MSIX
-        MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
-    :::column-end:::
+:::row:::
+
     :::column:::
         >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
+
     :::column-end:::
-:::row-end::: -->
+	    :::column:::
+       ###Announcent one
+        This is an amazing description. 
+    :::column-end:::
+:::row-end:::
 
 
 :::row:::
@@ -49,16 +51,16 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 
 :::row:::
     :::column:::
-       [![alt+text](images/ai-logo.png)](https://www.advancedinstaller.com/express-edition.html)  
+       [![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-        [![alt+text](images/chouse-logo.png)](https://www.advancedinstaller.com/express-edition.html)  
+        [![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-	[![alt+text](images/fg-logo.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/installaware-logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
 	 :::column-end:::
 :::row-end:::
 :::row:::
