@@ -18,7 +18,7 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
         >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
 
     :::column-end:::
-	    :::column:::
+	:::column:::
 		## New and noteworthy
        ### [Announcent one]
         This is an amazing description. 
@@ -71,11 +71,13 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 	:::column-end:::
     :::column:::
 	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
-    :::column:::
+    :::column-end:::
+	:::column:::
 	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
 	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
+	:::column-end:::
 :::row-end:::
 
 ## Conference talks by MSIX team
@@ -92,6 +94,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     :::column:::
 	 :::column-end:::
 
+<div>
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
