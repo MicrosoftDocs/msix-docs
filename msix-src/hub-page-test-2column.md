@@ -7,6 +7,7 @@ layout: HubPage
 </div>
  -->
 # MSIX
+# MSIX
 MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 
@@ -17,7 +18,8 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 
     :::column-end:::
 	    :::column:::
-       ###Announcent one
+		## New and noteworthy
+       ### [Announcent one]
         This is an amazing description. 
     :::column-end:::
 :::row-end:::
@@ -45,10 +47,8 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 <br>
 <br>
 
+## Partners supporting MSIX
 ***
-
-# Partners supporting MSIX
-
 :::row:::
     :::column:::
        [![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)  
@@ -77,28 +77,44 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 	:::column-end:::
 :::row-end:::
 
+## Conference talks by MSIX team
+***
+:::row:::
+    :::column:::
+         >[!VIDEO https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1] 
+    :::column-end:::
+    :::column:::
+         >[!VIDEO https://www.youtube.com/watch?v=z6q15jwk0H8]
+    :::column-end:::
+    :::column:::
+	  
+	:::column-end:::
+    :::column:::
+
+	 :::column-end:::
+
 </div>
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833100">
-                    Blog
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
                 </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833101">
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/#!/search/realtime/%23msix">
                     Twitter
-                </a>
-            </li>
-            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833103">
-                    Stack Overflow
-                </a>
-            </li>
-            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=874480">
-                    Issue Reporting
                 </a>
             </li>
             <li>
