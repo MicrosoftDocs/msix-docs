@@ -10,7 +10,8 @@ layout: HubPage
 # MSIX
 MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
-
+<br>
+<br>
 :::row:::
 
     :::column:::
@@ -23,7 +24,8 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
         This is an amazing description. 
     :::column-end:::
 :::row-end:::
-
+<br>
+<br>
 
 :::row:::
     :::column:::
@@ -65,16 +67,15 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row-end:::
 :::row:::
     :::column:::
-	[![alt+text](images/installshield-logo.jpg)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/pace-logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
+    :::column:::
+	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/raynet-logo.png)](https://www.advancedinstaller.com/express-edition.html)
-	:::column-end:::
-    :::column:::
-	:::column-end:::
+	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
 :::row-end:::
 
 ## Conference talks by MSIX team
@@ -86,14 +87,11 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     :::column:::
          >[!VIDEO https://www.youtube.com/watch?v=z6q15jwk0H8]
     :::column-end:::
-    :::column:::
-	  
+    :::column:::	  
 	:::column-end:::
     :::column:::
-
 	 :::column-end:::
 
-</div>
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
