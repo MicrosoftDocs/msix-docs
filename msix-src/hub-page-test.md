@@ -3,7 +3,7 @@ layout: HubPage
 ---
 
 <div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKIIEC5BMWg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AUUwZTurcmQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 # MSIX
