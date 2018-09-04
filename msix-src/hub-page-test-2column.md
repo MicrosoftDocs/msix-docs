@@ -85,14 +85,12 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 ***
 :::row:::
     :::column:::
-	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
-        ### [MSIX: Inside and out](https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1")
-        Learn why MSIX brings the best of MSI, Click Once, App-V and APPX togehter for you customers and business. 
+
+		>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
+        ### [Tech talk 1](https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1")
+        MSIX Packaging Tool enables you to update your existing Win32 application packages to the MSIX format.
     :::column-end:::
-    :::column:::
-	>[!VIDEO https://channel9.msdn.com/Events/Build/2018/BRK2416/player] 
-        ### [Accelerating Windows 10 enterprise app deployment](https://www.advancedinstaller.com/express-edition.html")  
-      Deep dive into the benefits of MSIX and the new tooling and features available to make it easy to move your existing apps to MSIX.  
+	
     :::column-end:::
         :::column:::
        
@@ -101,8 +99,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
      
     :::column-end:::
 :::row-end:::
-<br>
-<br>
+
 
         
 <!-- 
