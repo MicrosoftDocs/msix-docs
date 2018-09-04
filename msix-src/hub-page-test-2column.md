@@ -92,10 +92,12 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
         ### [Use MSIX anywhere](typography.md)
       The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
-      
+        :::column:::
+        ### [Install MSIX app packages](color.md)
     :::column-end:::
     :::column:::
-     
+       ### [Packgage support framework](typography.md)
+
     :::column-end:::
 :::row-end:::
 
