@@ -83,18 +83,19 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 ***
 :::row:::
     :::column:::
+	[![alt+text](images/advanced_intaller_logo2.png)]
         ### [Tech talk 1](https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1")
         MSIX Packaging Tool enables you to update your existing Win32 application packages to the MSIX format.
     :::column-end:::
     :::column:::
-        ### [Tech talk 2](https://www.youtube.com/watch?v=z6q15jwk0H
+        ### [Tech talk 2](https://www.youtube.com/watch?v=z6q15jwk0H8")
       The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
         ### [Install MSIX app packages](color.md)
     :::column-end:::
     :::column:::
-       ### [Packgage support framework](typography.md)
+     
     :::column-end:::
 :::row-end:::
 
