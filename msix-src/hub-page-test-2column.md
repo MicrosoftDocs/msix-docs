@@ -91,7 +91,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     :::column-end:::
     :::column:::
 	>[!VIDEO https://channel9.msdn.com/Events/Build/2018/BRK2416/player] 
-        ### [Accelerating Windows 10 enterprise app deployment](https://www.advancedinstaller.com/express-edition.html)  
+        ### [Accelerating Windows 10 enterprise app deployment](https://www.advancedinstaller.com/express-edition.html")  
       Deep dive into the benefits of MSIX and the new tooling and features available to make it easy to move your existing apps to MSIX.  
     :::column-end:::
         :::column:::
