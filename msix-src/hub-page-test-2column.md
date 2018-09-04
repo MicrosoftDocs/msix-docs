@@ -79,7 +79,8 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 	:::column-end:::
 :::row-end:::
 
-
+<br>
+<br>
 ## Conference talks by MSIX team
 ***
 
