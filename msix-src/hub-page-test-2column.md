@@ -85,7 +85,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 ***
 :::row:::
     :::column:::
-	[![alt+text](images/)]
+	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
         ### [Tech talk 1](https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1")
         MSIX Packaging Tool enables you to update your existing Win32 application packages to the MSIX format.
     :::column-end:::
