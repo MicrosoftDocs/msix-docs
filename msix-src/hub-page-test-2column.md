@@ -86,7 +86,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row:::
     :::column:::
 	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
-        ### [MSIX: Inside and out]
+        ### [MSIX: Inside and out](https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1")
         Learn why MSIX brings the best of MSI, Click Once, App-V and APPX togehter for you customers and business. 
     :::column-end:::
     :::column:::
@@ -103,6 +103,8 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row-end:::
 <br>
 <br>
+
+        
 <!-- 
 <div>
         <ul class="links">
