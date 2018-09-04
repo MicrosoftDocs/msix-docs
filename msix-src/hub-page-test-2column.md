@@ -86,11 +86,11 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row:::
     :::column:::
 	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
-        ### [MSIX: Inside and out](https://www.advancedinstaller.com/express-edition.html)  
+        ### [MSIX: Inside and out]
         Learn why MSIX brings the best of MSI, Click Once, App-V and APPX togehter for you customers and business. 
     :::column-end:::
     :::column:::
-	[!VIDEO https://channel9.msdn.com/Events/Build/2018/BRK2416/player] 
+	>[!VIDEO https://channel9.msdn.com/Events/Build/2018/BRK2416/player] 
         ### [Accelerating Windows 10 enterprise app deployment](https://www.advancedinstaller.com/express-edition.html)  
       Deep dive into the benefits of MSIX and the new tooling and features available to make it easy to move your existing apps to MSIX.  
     :::column-end:::
