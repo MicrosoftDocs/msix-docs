@@ -119,7 +119,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 
 
 
-<div>
+
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
@@ -145,5 +145,5 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
             </li>
             
         </ul>
-    </div>
+		</div>
 
