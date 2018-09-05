@@ -124,31 +124,9 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 :::row-end:::
 
 
-        
-<!-- 
-<div>
-        <ul class="links">
-           <li>
-                <a href="https://www.youtube-nocookie.com/6c46e9e2-ac10-4237-a29a-86243142bac1">
-                   Tech talk 1
-                </a>
-				<p>description</p>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/watch?v=z6q15jwk0H8">
-                    Tech talk 2
-                </a>
-						<p>description</p>
-            </li>
-            <li>
-
-            </li>
-            <li>
-            </li>
-            
-        </ul>
-</div>
--->
+       
+<br>
+<br>
 
 
 
