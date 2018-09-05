@@ -11,23 +11,51 @@ layout: HubPage
 MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 
-:::row:::
+<!-- :::row:::
 
     :::column:::
         >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
 
     :::column-end:::
 	:::column:::
-	:::row:::
-	   >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-	:::row-end:::
-	:::row:::
+	
 		### [Get the MSIX SDK](color.md)
         This is an amazing description. 
-	:::row-end:::
 
     :::column-end:::
 :::row-end:::
+ -->
+
+ :::row:::
+    :::column span="2":::
+        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
+        ### 2 column span
+        This is where your content goes.
+    :::column-end:::
+    :::column:::
+        ![Some image](http://via.placeholder.com/1000x150)
+        ### Hello, title
+        This is where your content goes.
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ![Some image](http://via.placeholder.com/1000x150)
+        ### Hello, title
+        This is where your content goes.
+    :::column-end:::
+    :::column:::
+        ![Some image](http://via.placeholder.com/1000x150)
+        ### Hello, title
+        This is where your content goes.
+    :::column-end:::
+    :::column:::
+        ![Some image](http://via.placeholder.com/1000x150)
+        ### Hello, title
+        This is where your content goes.
+    :::column-end:::
+:::row-end:::
+
 
 <br>
 <br>
