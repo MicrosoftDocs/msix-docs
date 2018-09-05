@@ -18,8 +18,7 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 
     :::column-end:::
 	:::column:::
-		## New and noteworthy
-       ### [Announcent one]
+       ### [Get the MSIX SDK](color.md)
         This is an amazing description. 
     :::column-end:::
 :::row-end:::
