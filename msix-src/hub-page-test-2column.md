@@ -18,10 +18,17 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 
     :::column-end:::
 	:::column:::
-       ### [Get the MSIX SDK](color.md)
+	:::row:::
+	   >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
+	:::row-end:::
+	:::row:::
+		### [Get the MSIX SDK](color.md)
         This is an amazing description. 
+	:::row-end:::
+
     :::column-end:::
 :::row-end:::
+
 <br>
 <br>
 
