@@ -15,15 +15,19 @@
 ## [Get started]()
 ### [What is MSIX?]()
 #### [MSIX package format]()
-#### [MSIX package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture)
+#### [MSIX package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 ### [Get set up with the MSIX SDK]()
 
 ## [Build]()
 ### [Package an app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-### [Package a classic Windows application]
-#### [Package a Win32 app]()
+### [Package a Windows desktop application](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+#### [Prepare to package a desktop application](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-prepare)
+#### [Package a desktop application with Visual Studio](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+#### [Package a desktop application with the Desktop App Converter](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+#### [Package a desktop application manually](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)
 #### [Package a ClickOnce installer]()
 #### [Package an existing Virtual Machine]()
+#### [Optimize desktop application binaries with native images](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-r2r)
 ### [Manual packaging tools](https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root)
 ### [Sign an app package](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool)
 ### [Share code between Win32 and Windows 10 apps]()
@@ -32,6 +36,10 @@
 ### [Windows app certification kit](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)
 ### [Windows device portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal)
 ### [Package flighting](https://docs.microsoft.com/windows/uwp/publish/package-flights)
+
+## [Apply fixes]()
+### [Package Support Framework]()
+### [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework)
 
 ## [Distribute]()
 ### [Publish to the Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/)
