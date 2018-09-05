@@ -80,13 +80,9 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 	 :::column-end:::
 	:::column:::
 	[![alt+text](images/FireGiant_Logo.png)](https://www.advancedinstaller.com/express-edition.html)     
-	:::column-end:::
-    :::column:::
+	:::column-end:::  
 :::row-end:::
 :::row:::
-    :::column:::
-	[![alt+text](images/FireGiant_Logo.png)](https://www.advancedinstaller.com/express-edition.html)     
-	:::column-end:::
     :::column:::
 	[![alt+text](images/InfoPulse_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
     :::column-end:::
