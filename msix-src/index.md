@@ -1,5 +1,10 @@
 ---
 layout: HubPage
+title: MSIX app packaging format
+description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+ms.prod: windows
+keywords: windows 10, uwp
+ms.localizationpriority: medium
 ---
 <!-- 
 <div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
@@ -10,6 +15,7 @@ layout: HubPage
 # MSIX
 MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
+<br>
 
 <!-- :::row:::
 
@@ -32,8 +38,8 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
     :::column-end:::
     :::column:::
           >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg] 
-        ### Hello, title
-        This is where your content goes.
+        ### Get the MSIX SDK
+        Description text 
     :::column-end:::
 :::row-end:::
 
@@ -48,15 +54,15 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
     :::column-end:::
     :::column:::
         ### [Use MSIX anywhere](typography.md)
-      The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
+		The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
         ### [Install MSIX app packages](color.md)
-        App Installer allows for easy installation and update of any MSIX app package that are locally available or on any content distribution network.
+        App Installer allows for easy installation and updates of any MSIX app package that are locally available or on any content distribution network.
     :::column-end:::
     :::column:::
-       ### [Packgage support framework](typography.md)
-PSF can help your app bypass, in a very targeted way, some of the modern runtime environment limitations to make sure your existing solution runs as expected without changing the source code.
+		### [Package support framework](typography.md)
+		PSF can help your app bypass, in a very targeted way, some of the modern runtime environment limitations to make sure your existing solution runs as expected without changing the source code.
     :::column-end:::
 :::row-end:::
 
@@ -67,33 +73,33 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 ***
 :::row:::
     :::column:::
-       [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/express-edition.html)  
+    [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)  
     :::column-end:::
     :::column:::
-     [![alt+text](images/Apptimized_Logo.png)](https://www.advancedinstaller.com/express-edition.html)  
+     [![alt+text](images/Apptimized_Logo.png)](http://www.apptimized.com/solutions/)  
     :::column-end:::
     :::column:::
-	[![alt+text](images/CloudHouse_Logo.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/EMCO_Software_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/EMCO_Software_Logo.png)](https://emcosoftware.com/msi-package-builder)
 	 :::column-end:::
 	:::column:::
-	[![alt+text](images/FireGiant_Logo.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/FireGiant_Logo.png)](https://www.firegiant.com/)     
 	:::column-end:::  
 :::row-end:::
 :::row:::
     :::column:::
-	[![alt+text](images/InfoPulse_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/InfoPulse_Logo.png)](https://www.infopulse.com/)
     :::column-end:::
 	:::column:::
-	[![alt+text](images/installaware-logo.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/installaware-logo.png)](https://www.installaware.com/msix.htm)     
 	:::column-end:::
 	:::column:::
-	[![alt+text](images/Liquit_Logo.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/Liquit_Logo.png)](https://www.liquit.com/)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/Raynet_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
 	:::column-end:::
 	:::column:::
 	:::column-end:::
