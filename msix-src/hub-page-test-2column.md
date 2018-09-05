@@ -54,7 +54,7 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
        [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-        [![alt+text](images/Apptimized_Logo.png)](https://www.advancedinstaller.com/express-edition.html)  
+     [![alt+text](images/Apptimized_Logo.png)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
 	[![alt+text](images/CloudHouse_Logo.png)](https://www.advancedinstaller.com/express-edition.html)     
@@ -62,6 +62,9 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
     :::column:::
 	[![alt+text](images/EMCO_Software_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
 	 :::column-end:::
+	:::column:::
+	[![alt+text](images/Raynet_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	:::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
@@ -75,6 +78,8 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 	:::column-end:::
     :::column:::
 	[![alt+text](images/Raynet_Logo.png)](https://www.advancedinstaller.com/express-edition.html)
+	:::column-end:::
+	:::column:::
 	:::column-end:::
 :::row-end:::
 
