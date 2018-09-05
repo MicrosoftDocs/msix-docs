@@ -51,30 +51,30 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 ***
 :::row:::
     :::column:::
-       [![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)  
+       [![alt+text](images/AdvancedInstaller_Logo)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-        [![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)  
+        [![alt+text](images/Apptimized_Logo)](https://www.advancedinstaller.com/express-edition.html)  
     :::column-end:::
     :::column:::
-	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/CloudHouse_Logo)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/EMCO_Software_Logo)](https://www.advancedinstaller.com/express-edition.html)
 	 :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/FireGiant_Logo)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/InfoPulse_Logo)](https://www.advancedinstaller.com/express-edition.html)
     :::column-end:::
 	:::column:::
-	[![alt+text](images/advanced_intaller_logo2.png)](https://www.advancedinstaller.com/express-edition.html)     
+	[![alt+text](images/installaware-logo)](https://www.advancedinstaller.com/express-edition.html)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/apptimized_logo2.png)](https://www.advancedinstaller.com/express-edition.html)
+	[![alt+text](images/Raynet_Logo)](https://www.advancedinstaller.com/express-edition.html)
 	:::column-end:::
 :::row-end:::
 
