@@ -181,7 +181,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                 <li>
                     <a href="#developer-all">all</a>
                     <ul id="developer-all" class="cardsF">
-                        <li>
+                        <!-- <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -202,7 +202,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -215,13 +215,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Get started</h3>
                                             <p>
-                                                <a href="get-started/universal-application-platform-guide.md">Windows SDK and app dev tools</a>
+                                                <a href="get-started/universal-application-platform-guide.md">What is MSIX?</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/sign-up.md">MSIX package types</a>
+                                                <a href="get-started/sign-up.md">MSIX package format</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/get-set-up.md">MSIX SDK</a>
+                                                <a href="get-started/get-set-up.md">Get setup with the MSIX SDK</a>
                                             </p>
                                         </div>
                                     </div>
@@ -240,16 +240,22 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Build</h3>
                                             <p>
-                                                <a href="design/basics/design-and-ui-intro.md">Packaging tools</a>
+                                                <a href="//docs.microsoft.com/uwp/packaging/packaging-uwp-apps">Package an app with Visual Studio</a>
                                             </p>
                                             <p>
-                                                <a href="design/fluent-design-system/index.md">Visual Studio</a>
+                                                <a href="design/fluent-design-system/index.md">Package a Win32 application</a>
                                             </p>
                                             <p>
-                                                <a href="design/controls-and-patterns/index.md">Share code between Win32 and Windows 10 apps</a>
+                                                <a href="design/fluent-design-system/index.md">Package a ClickOnce installer</a>
                                             </p>
                                             <p>
-                                                <a href="design/downloads/index.md">Signing packages</a>
+                                                <a href="design/fluent-design-system/index.md">Package an existing Virtual Machine</a>
+                                            </p>
+                                            <p>
+                                                <a href="//docs.microsoft.com/uwp/packaging/manual-packaging-root">Manual packaging tools</a>
+                                            </p>
+                                            <p>
+                                                <a href="//docs.microsoft.com/uwp/packaging/sign-app-package-using-signtool">Signing an app package</a>
                                             </p>
                                         </div>
                                     </div>
@@ -268,16 +274,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Validate</h3>
                                             <p>
-                                                <a href="enterprise/index.md">Windows Device Portal</a>
+                                                <a href="//docs.microsoft.com/uwp/debug-test-perf/windows-app-certification-kit">Windows App Certification Kit</a>
                                             </p>
                                             <p>
-                                                <a href="packaging/index.md">Windows App Certification Kit</a>
+                                                <a href="//docs.microsoft.com/uwp/debug-test-perf/device-portal">Windows Device Portal</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows Store flighting</a>
-                                            </p>
-                                            <p>
-                                                <a href="porting/index.md">Validate on local devices</a>
+                                                <a href="//docs.microsoft.com/uwp/publish/package-flights">Package flighting</a>
                                             </p>
                                         </div>
                                     </div>
@@ -296,20 +299,20 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Distribute</h3>
                                             <p>
-                                                <a href="gaming/e2e.md">Microsoft Store</a>
+                                                <a href="//docs.microsoft.com/uwp/publish">Publish to the Microsoft Store</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/index.md">Microsoft Store for Business</a>
+                                                <a href="//docs.microsoft.com/uwp/publish/distribute-lob-apps-to-enterprises">Publish to the Microsoft Store for Business</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/directx-programming.md">Non-Store distribution</a>
+                                                <a href="//docs.microsoft.com/uwp/packaging/appinstaller-root">Non-Microsoft Store distribution</a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -321,19 +324,19 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>MSIX concepts</h3>
                                             <p>
-                                                <a href="publish/app-submissions.md">Package format</a>
+                                                <a href="//docs.microsoft.com/uwp/publish/app-submissions">Package format</a>
                                             </p>
                                             <p>
-                                                <a href="publish/the-app-certification-process.md">Package types</a>
+                                                <a href="//docs.microsoft.com/uwp/publish/the-app-certification-process">Package types</a>
                                             </p>
                                             <p>
-                                                <a href="publish/upload-app-packages.md">Windows 10 app lifecyle</a>
+                                                <a href="//docs.microsoft.com/uwp/publish/upload-app-packages">Windows 10 app lifecyle</a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -346,13 +349,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>API and schema references</h3>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/">Packaging and Package Manager APIs</a>
+                                                <a href="//docs.microsoft.com/uwp/api/windows.management.deployment">Package Manager API</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/API">App manifest schema</a>
+                                                <a href="//docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest">App manifest schema</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/extension-sdks">App Installer file schema</a>
+                                                <a href="//docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file">App Installer file schema</a>
                                             </p>
                                         </div>
                                     </div>
