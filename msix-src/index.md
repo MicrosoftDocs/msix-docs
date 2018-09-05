@@ -1,5 +1,6 @@
 ---
 layout: HubPage
+hide_bc: true
 title: MSIX app packaging format
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 ms.prod: windows
