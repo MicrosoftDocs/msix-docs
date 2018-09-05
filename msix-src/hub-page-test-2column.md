@@ -28,29 +28,10 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 
  :::row:::
     :::column span="2":::
-        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-        ### 2 column span
-        This is where your content goes.
+        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]       
     :::column-end:::
     :::column:::
-        ![Some image](http://via.placeholder.com/1000x150)
-        ### Hello, title
-        This is where your content goes.
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        ![Some image](http://via.placeholder.com/1000x150)
-        ### Hello, title
-        This is where your content goes.
-    :::column-end:::
-    :::column:::
-        ![Some image](http://via.placeholder.com/1000x150)
-        ### Hello, title
-        This is where your content goes.
-    :::column-end:::
-    :::column:::
-        ![Some image](http://via.placeholder.com/1000x150)
+          >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg] 
         ### Hello, title
         This is where your content goes.
     :::column-end:::
