@@ -1,11 +1,19 @@
 ---
 layout: HubPage
+title: Get started with MSIX
+description: Find documentation for MSIX, an updated packaging format built for all Windows 10 apps regardless of the device type and provides a wide array of tools to assist you build, distribute, and deploy MSIX app packages. 
+ms.prod: windows
+keywords: windows 10, uwp
+ms.localizationpriority: medium
 ---
 
 # Get started with MSIX
 # Get started with MSIX
 
 MSIX is a package format for all Windows 10 apps regardless of the device type and provides a wide array of tools to assist you build, distribute, and deploy MSIX app packages.
+
+<br>
+<br>
 
 <div class="container">
 <h2>MSIX documentation</h2>
@@ -398,28 +406,23 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833100">
-                    Blog
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
                 </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833101">
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/#!/search/realtime/%23msix">
                     Twitter
-                </a>
-            </li>
-            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833103">
-                    Stack Overflow
-                </a>
-            </li>
-            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=874480">
-                    Issue Reporting
-                </a>
-            </li>
-            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833105">
-                    User Voice
                 </a>
             </li>
         </ul>
