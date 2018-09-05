@@ -28,7 +28,7 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 
  :::row:::
     :::column span="2":::
-        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]       
+        >[!VIDEO https://www.youtube.com/embed/AUUwZTurcmQ]       
     :::column-end:::
     :::column:::
           >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg] 
