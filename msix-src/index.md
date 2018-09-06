@@ -74,7 +74,7 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 ***
 :::row:::
     :::column:::
-    [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge target="_blank")  
+    [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge" target="_blank")  
     :::column-end:::
     :::column:::
      [![alt+text](images/Apptimized_Logo.png)](http://www.apptimized.com/solutions/)  
