@@ -12,26 +12,17 @@ ms.localizationpriority: medium
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AUUwZTurcmQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
  -->
+
+<!-- 
+ keep the double title - it seems to work. if you remove one then it disppears from page
+ -->
+
 # MSIX
 # MSIX
 MSIX is a packaging format built to be safe, secure and reliable, based on a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 <br>
 
-<!-- :::row:::
-
-    :::column:::
-        >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg]
-
-    :::column-end:::
-	:::column:::
-	
-		### [Get the MSIX SDK](color.md)
-        This is an amazing description. 
-
-    :::column-end:::
-:::row-end:::
- -->
 
  :::row:::
     :::column span="2":::
@@ -40,8 +31,11 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column:::
           >[!VIDEO https://www.youtube.com/embed/FKCX4Rzfysk] 
         ###     
-	### [Get the MSIX Packaging Tool from Microsoft Store now](https://www.microsoft.com/store/r/9N5LW3JBCXKF)
+	### [Get the MSIX Packaging Tool from Microsoft Store now]
           Install the app to update existing windows installers to be packaged in MSIX format.  
+
+		  <br>
+
 	  [Get the app](https://www.microsoft.com/store/r/9N5LW3JBCXKF)
     :::column-end:::
 :::row-end:::
