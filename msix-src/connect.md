@@ -17,7 +17,7 @@ ms.localizationpriority: medium
         <ul class="links">
            <li>
                 <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com">
-                    Mail Us
+                    Mail us
                 </a>
             </li>
             
