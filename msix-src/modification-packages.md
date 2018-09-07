@@ -1,3 +1,4 @@
+---
 title: Customize your Enterprise apps with Modification Package 
 description: Learn how to customize your Enterprise apps
 author: lahugh
@@ -8,6 +9,7 @@ ms.prod: windows
 ms.technology: msix
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+---
 
 # Customize your Enterprise apps with Modification Package 
 
