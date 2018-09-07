@@ -52,7 +52,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 
 :::row:::
     :::column:::
-        ### [Package existing Windows apps](color.md)
+        ### [Package existing Windows apps](mpt-overview.md)
         MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format.
     :::column-end:::
     :::column:::
@@ -60,7 +60,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
-        ### [Install MSIX app packages](/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render)
+        ### [Install MSIX app packages](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
         App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network.
     :::column-end:::
     :::column:::
@@ -140,7 +140,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         <h2>Have feedback for us? We'd love to hear it.</h2>
         <ul class="links">
            <li>
-                <a href="mailto:aiacare@microsoft.com" data-linktype="external">
+                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
                     Email the MSIX team
                 </a>
             </li>
