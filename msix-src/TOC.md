@@ -24,6 +24,7 @@
 #### [Hosting UWP app packages on AWS for web install](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-aws?context=/windows/msix/render)
 
 ## [Create App Installer file in Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render)
+## [App updates using App Installer file](app-installer-file-update.md)
 ## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/en-us/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
 
 # [MSIX SDK](msix-sdk-overview.md)
