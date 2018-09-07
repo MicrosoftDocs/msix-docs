@@ -1,3 +1,14 @@
+title:
+description: 
+author: lahugh
+ms.author: lahugh
+ms.date: 09/07/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: msix
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+
 # Package editor
 
 To make changes to an exiting MSIX package for changing the properties in the manifest or the content of the package without needing to package the installer again, one can use package editor in MSIX Packaging tool. 
