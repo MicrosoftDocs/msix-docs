@@ -434,5 +434,5 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                 </a>
             </li>
         </ul>
-    </div>
-</div>
+ </div>
+
