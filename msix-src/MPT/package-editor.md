@@ -1,6 +1,6 @@
 ---
-title:
-description: 
+title: Package Editor 
+description: use Package Editor to modify package information
 author: lahugh
 ms.author: lahugh
 ms.date: 09/07/2018
