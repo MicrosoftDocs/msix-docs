@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 
 ---
-
+<!-- Keep both H1s in file>-->
 # Get started with MSIX
 # Get started with MSIX
 
