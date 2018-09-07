@@ -1,3 +1,4 @@
+---
 title: AppInstaller file updates
 description: Learn how to update the AppInstaller file
 author: lahugh
@@ -8,6 +9,7 @@ ms.prod: windows
 ms.technology: msix
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+---
 
 # Appinstaller File 
 
