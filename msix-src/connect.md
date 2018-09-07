@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 ---
 
 <br>
-<br>
 
 
  <div class="container centered pageFooter">
