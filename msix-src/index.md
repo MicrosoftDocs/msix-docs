@@ -92,16 +92,17 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 	:::column-end:::  
 :::row-end:::
 :::row:::
-    :::column:::
-    :::column-end:::
+
 	:::column:::
 	[![Installaware logo](images/installaware-logo.png)](https://www.installaware.com/msix.htm)     
-	:::column-end:::
-	:::column:::
 	:::column-end:::
     :::column:::
 	[![Raynet logo](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
 	:::column-end:::
+	:::column:::
+	:::column-end:::
+	:::column:::
+    :::column-end:::
 	:::column:::
 	:::column-end:::
 :::row-end:::
