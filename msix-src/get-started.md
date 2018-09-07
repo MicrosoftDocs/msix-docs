@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 
 ---
-
+<!-- Keep both of the H1s. Both needed to show up on page-->
 # Get started with MSIX
 # Get started with MSIX
 
@@ -189,6 +189,55 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                     </ul>
                 </li>
             </ul>
+
+            <ul id="it-pro1" class="cardsF">
+                        <li>
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="/media/common/i_whats-new.svg" alt="What's new icon" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>What's new</h3>
+                                            <p>
+                                                <a href="whats-new/windows-10-version-latest.md">New tools and features</a>
+                                            </p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="/media/common/i_get-started.svg" alt="Get started icon" />
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Get started</h3>
+                                            <p>
+                                                <a href="get-started/universal-application-platform-guide.md">Update existing installers to MSIX</a>
+                                            </p>
+                                            <p>
+                                                <a href="get-started/sign-up.md">MSIX Packaging Tool</a>
+                                            </p>
+                                            <p>
+                                                <a href="get-started/get-set-up.md">Package Support Framework</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                                         
+         </ul>
+        
         </li>
         <li>
             <a href="#developer">Developer</a>
