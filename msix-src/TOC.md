@@ -10,9 +10,7 @@
 ### [App package formats]()
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 
-# [MSIX packaging tool]()
-
-# [MSIX SDK]()
+# [MSIX SDK and packaging tool](https://github.com/Microsoft/msix-packaging)
 
 # [App Installer]()
 ## [App Installer file](https://docs.microsoft.com/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render)
@@ -37,6 +35,7 @@
 ## [Windows app certification kit](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render)
 ## [Windows device portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render)
 ## [Package flighting](https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render)
+## [Test your Windows app for Windows 10 in S mode](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render)
 
 
 # [Distribute]()
