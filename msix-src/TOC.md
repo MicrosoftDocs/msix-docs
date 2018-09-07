@@ -1,11 +1,5 @@
-# [Hub page test](hub-page-test.md)
-# [Hub page get started](hub-page-test-docs.md)
-# [Landing page test](landing-page-test.md)
-# [Index](index.md)
-
-
-
-# [Get started]()
+# [MSIX](index.md)
+# [Get started](get-started.md)
 ## [What is MSIX?]()
 ### [App package formats]()
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
