@@ -195,7 +195,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                 <li>
                     <a href="#developer-all">all</a>
                     <ul id="developer-all" class="cardsF">
-                        <!-- <li>
+                        <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -216,7 +216,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                     </div>
                                 </div>
                             </div>
-                        </li> -->
+                        </li>
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
@@ -323,7 +323,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                 </div>
                             </div>
                         </li>
-                        <!-- <li>
+                        <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -347,7 +347,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                     </div>
                                 </div>
                             </div>
-                        </li> -->
+                        </li>
                         <li>
                             <div class="cardSize">
                                 <div class="cardPadding">
