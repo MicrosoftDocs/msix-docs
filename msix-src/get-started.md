@@ -289,7 +289,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render">Windows App Certification Kit</a>
                                             </p>
                                             <p>
-                                                <a href="/https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render">Windows Device Portal</a>
+                                                <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render">Windows Device Portal</a>
                                             </p>
                                             <p>
                                                 <a href="https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render">Package flighting</a>
@@ -336,13 +336,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>MSIX concepts</h3>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/publish/app-submissions">Package format</a>
+                                                <a href="https://docs.microsoft.com/uwp/publish/app-submissions">Package format</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/publish/the-app-certification-process">Package types</a>
+                                                <a href="https://docs.microsoft.com/uwp/publish/the-app-certification-process">Package types</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/uwp/publish/upload-app-packages">Windows 10 app lifecyle</a>
+                                                <a href="https://docs.microsoft.com/uwp/publish/upload-app-packages">Windows 10 app lifecyle</a>
                                             </p>
                                         </div>
                                     </div>
