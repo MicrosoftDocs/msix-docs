@@ -14,7 +14,7 @@ ms.localizationpriority: medium
  -->
 # MSIX
 # MSIX
-MSIX is an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+MSIX is a packaging format built to be safe, secure and reliable, based on a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 <br>
 
@@ -51,19 +51,19 @@ MSIX is an updated packaging format built to be safe, secure and reliable that i
 :::row:::
     :::column:::
         ### [Package existing Windows apps](color.md)
-        MSIX Packaging Tool enables you to update your existing Win32 application packages to the MSIX format.
+        MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format.
     :::column-end:::
     :::column:::
         ### [Use MSIX anywhere](typography.md)
-		The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
+		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
         ### [Install MSIX app packages](color.md)
-        App Installer allows for easy installation and updates of any MSIX app package that are locally available or on any content distribution network.
+        App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network.
     :::column-end:::
     :::column:::
 		### [Package support framework](typography.md)
-		PSF can help your app bypass, in a very targeted way, some of the modern runtime environment limitations to make sure your existing solution runs as expected without changing the source code.
+		PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code.
     :::column-end:::
 :::row-end:::
 
