@@ -1,3 +1,14 @@
+title: AppInstaller file updates
+description: Learn how to update the AppInstaller file
+author: lahugh
+ms.author: lahugh
+ms.date: 09/07/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: msix
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+
 # Appinstaller File 
 
 Often, you need to share your app with many users. Later you need to update the app and you want to make sure you can do that in a way that is seamless even for your non-technical users, and easy for you. 
