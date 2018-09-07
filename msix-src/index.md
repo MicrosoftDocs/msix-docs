@@ -137,8 +137,19 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 <br>
 <br>
 
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:aiacare@microsoft.com" data-linktype="external">
+                    Email MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
 
-
+<!--
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
@@ -165,4 +176,4 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
             
         </ul>
 		</div>
-
+-->
