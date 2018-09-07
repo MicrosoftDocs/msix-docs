@@ -1,3 +1,4 @@
+---
 title:
 description: 
 author: lahugh
@@ -8,6 +9,7 @@ ms.prod: windows
 ms.technology: msix
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+---
 
 # MSIX Packaging Tool 
 
