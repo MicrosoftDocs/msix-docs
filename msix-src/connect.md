@@ -11,10 +11,7 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-
 ---
-
-<br>
 
 
  <div class="container centered pageFooter">
@@ -22,7 +19,7 @@ ms.localizationpriority: medium
         <ul class="links">
            <li>
                 <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com">
-                    Mail MSIX Team
+                    Email the MSIX Team
                 </a>
             </li>
             
