@@ -8,10 +8,10 @@
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 
 # [MSIX Packaging Tool](mpt-overview.md)
-## [Create app package from .MSI using a VM](create-app-package-MSI-VM.md)
-## [Create app package using Command Line](package-conversion-cli.md)
-## [Automate Conversion using Command Line](automate-conversion.md)
-## [Modify package using package editor](package-editor.md)
+## [Create app package from .MSI using a VM](MPT/create-app-package-MSI-VM.md)
+## [Create app package using Command Line](MPT/package-conversion-cli.md)
+## [Automate Conversion using Command Line](MPT/automate-conversion.md)
+## [Modify package using package editor](MPT/package-editor.md)
 
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
