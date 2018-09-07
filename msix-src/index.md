@@ -60,11 +60,11 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
-        ### [Install MSIX app packages](color.md)
+        ### [Install MSIX app packages](/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render)
         App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network.
     :::column-end:::
     :::column:::
-		### [Package support framework](typography.md)
+		### [Package support framework](package-support-framework-overview.md)
 		PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code.
     :::column-end:::
 :::row-end:::
