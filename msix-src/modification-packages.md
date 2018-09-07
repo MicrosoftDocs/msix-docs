@@ -1,3 +1,14 @@
+title: Customize your Enterprise apps with Modification Package 
+description: Learn how to customize your Enterprise apps
+author: lahugh
+ms.author: lahugh
+ms.date: 09/07/2018
+ms.topic: article
+ms.prod: windows
+ms.technology: msix
+keywords: windows 10, uwp
+ms.localizationpriority: medium
+
 # Customize your Enterprise apps with Modification Package 
 
 MSIX is the future installer of Windows. MSIX is the best technology for installing application on Windows. It inherits UWP features, allows for application customization, more container security options and supports all Windows application. MSIX will be supported in the Microsoft store and supports enterprise management as well. 
