@@ -37,7 +37,6 @@
 ## [Package flighting](https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render)
 ## [Test your Windows app for Windows 10 in S mode](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render)
 
-
 # [Distribute]()
 ## [Publish to the Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/?context=/windows/msix/render)
 ## [Publish to the Microsoft Store for Business](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render)
@@ -47,8 +46,8 @@
 ## [Deployment Imaging Service Management](https://docs.microsoft.com/windows-hardware/manufacture/desktop/what-is-dism?context=/windows/msix/render)
 ## [Windows PowerShell](https://docs.microsoft.com/powershell/module/appx/?view=win10-ps?context=/windows/msix/render)
 
-
-## [API and schema reference]()
-### [Package Manager API](https://docs.microsoft.com/uwp/api/windows.management.deployment?context=/windows/msix/render)
-### [App Manifest schema](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render)
-### [App Installer file schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render)
+# [API and schema reference]()
+## [Package Manager API](https://docs.microsoft.com/uwp/api/windows.management.deployment?context=/windows/msix/render)
+## [Packaging APIs](https://docs.microsoft.com/windows/desktop/appxpkg/interfaces?context=/windows/msix/render)
+## [App Manifest schema](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render)
+## [App Installer file schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render)
