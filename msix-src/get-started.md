@@ -384,7 +384,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="https://twitter.com/WindowsDocs">@WindowsDocs on Twitter</a>
                                             </p>
                                             <p>
-                                                <a href="http://aka.ms/OneDevMinute">OneDevMinute on YouTube</a>
+                                                <a href="https://aka.ms/OneDevMinute">OneDevMinute on YouTube</a>
                                             </p>
                                             <p>
                                                 <a href="https://developer.microsoft.com/windows/support">Windows developer support</a>
@@ -424,7 +424,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                 </a>
             </li>
             <li>
-                <a href="http://twitter.com/#!/search/realtime/%23msix">
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
                     Twitter
                 </a>
             </li>
