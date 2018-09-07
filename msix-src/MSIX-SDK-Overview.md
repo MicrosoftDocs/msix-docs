@@ -1,6 +1,4 @@
-# MSIX SDK Overview page 
-
-## What is it?
+# MSIX SDK 
 
 MSIX SDK is an open source project that allows developers to use MSIX package format universally on all platforms. This allows the developers to build consistent experience for their users on all platforms and distribute the experience using the same package. The SDK provides guidance for developers to package their app content and build app package manifest in a way it can target the platforms for their choice. This enables developers to package their app content once instead of having package for each platform. 
 
