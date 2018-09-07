@@ -1,6 +1,6 @@
-#MSIX SDK Overview page 
+# MSIX SDK Overview page 
 
-##What is it?
+## What is it?
 
 MSIX SDK is an open source project that allows developers to use MSIX package format universally on all platforms. This allows the developers to build consistent experience for their users on all platforms and distribute the experience using the same package. The SDK provides guidance for developers to package their app content and build app package manifest in a way it can target the platforms for their choice. This enables developers to package their app content once instead of having package for each platform. 
 
@@ -10,7 +10,7 @@ The SDK can be used by any cross platform client app that allows for third parti
 
 One of the key differentiators of the MSIX package is the manifest file. The manifest file contains all the metadata regarding the package and specifies all the key information that the client app can access to make appropriate choices like applicability or supportability. The manifest file allows the client app developers and third party developers more options and flexibility to communicate the requirements, availability, support etc. 
 
-##Get more info
+## Get more info
 
 MSIX SDK is an open source project on GitHub. Here you access to the full source and instructions on how to build the binaries for each platform are available here. 
 
