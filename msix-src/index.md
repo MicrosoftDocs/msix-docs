@@ -40,7 +40,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column:::
           >[!VIDEO https://www.youtube.com/embed/FKCX4Rzfysk] 
         ###     
-	### [Get the MSIX Packaging Tool from Microsoft Store Now](https://www.microsoft.com/store/r/9N5LW3JBCXKF)
+	### [Get the MSIX Packaging Tool from Microsoft Store now](https://www.microsoft.com/store/r/9N5LW3JBCXKF)
           Install the app to update existing windows installers to be packaged in MSIX format.  
 	  [Get the app](https://www.microsoft.com/store/r/9N5LW3JBCXKF)
     :::column-end:::
@@ -56,7 +56,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format.
     :::column-end:::
     :::column:::
-        ### [Use MSIX anywhere](typography.md)
+        ### [Use MSIX anywhere](msix-sdk-overview.md)
 		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
         :::column:::
@@ -76,33 +76,31 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 ***
 :::row:::
     :::column:::
-    [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
+    [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
     :::column-end:::
     :::column:::
-     [![alt+text](images/Apptimized_Logo.png)](https://www.apptimized.com/solutions/)  
+     [![Apptimized logo](images/Apptimized_Logo.png)](https://www.apptimized.com/solutions/)  
     :::column-end:::
     :::column:::
-	[![alt+text](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)     
+	[![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/EMCO_Software_Logo.png)](https://emcosoftware.com/msi-package-builder)
+	[![Emco logo](images/EMCO_Software_Logo.png)](https://emcosoftware.com/msi-package-builder)
 	 :::column-end:::
 	:::column:::
-	[![alt+text](images/FireGiant_Logo.png)](https://www.firegiant.com/)     
+	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/)     
 	:::column-end:::  
 :::row-end:::
 :::row:::
     :::column:::
-	[![alt+text](images/InfoPulse_Logo.png)](https://www.infopulse.com/)
     :::column-end:::
 	:::column:::
-	[![alt+text](images/installaware-logo.png)](https://www.installaware.com/msix.htm)     
+	[![Installaware logo](images/installaware-logo.png)](https://www.installaware.com/msix.htm)     
 	:::column-end:::
 	:::column:::
-	[![alt+text](images/Liquit_Logo.png)](https://www.liquit.com/)     
 	:::column-end:::
     :::column:::
-	[![alt+text](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
+	[![Raynet logo](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
 	:::column-end:::
 	:::column:::
 	:::column-end:::
@@ -142,7 +140,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         <ul class="links">
            <li>
                 <a href="mailto:aiacare@microsoft.com" data-linktype="external">
-                    Email MSIX team
+                    Email the MSIX team
                 </a>
             </li>
            
