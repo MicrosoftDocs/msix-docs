@@ -1,6 +1,6 @@
 ---
-title:
-description: 
+title: Create app package using .msi on a VM
+description: Create an MSIX package using an existing .msi on a VM
 author: lahugh
 ms.author: lahugh
 ms.date: 09/07/2018
