@@ -55,7 +55,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format.
     :::column-end:::
     :::column:::
-      The MSIX SDK is an effort to enable developers on a variety of platforms to pack and unpack packages for the purposes of distribution from either the Microsoft Store, or their own content distribution networks.
         ### [Use MSIX anywhere](msix-sdk-overview.md)
 		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks.
     :::column-end:::
