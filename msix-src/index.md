@@ -129,7 +129,20 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
 <br>
 
 
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:aiacare@microsoft.com">
+                    MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
 
+
+<!--
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
@@ -156,4 +169,4 @@ PSF can help your app bypass, in a very targeted way, some of the modern runtime
             
         </ul>
 		</div>
-
+-->
