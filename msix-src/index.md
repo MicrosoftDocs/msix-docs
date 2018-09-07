@@ -77,7 +77,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     [![alt+text](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
     :::column-end:::
     :::column:::
-     [![alt+text](images/Apptimized_Logo.png)](http://www.apptimized.com/solutions/)  
+     [![alt+text](images/Apptimized_Logo.png)](https://www.apptimized.com/solutions/)  
     :::column-end:::
     :::column:::
 	[![alt+text](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)     
@@ -156,7 +156,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                 </a>
             </li>
             <li>
-                <a href="http://twitter.com/#!/search/realtime/%23msix">
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
                     Twitter
                 </a>
             </li>
