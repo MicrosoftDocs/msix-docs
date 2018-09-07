@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 
 ---
-<!-- Keep both of the H1s. Both needed to show up on page-->
+<!-- Keep both of the H1s. Both needed to show up on page. added-->
 # Get started with MSIX
 # Get started with MSIX
 
