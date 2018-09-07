@@ -1,6 +1,6 @@
 ---
-title:
-description: 
+title: create package using command line interface
+description: create msix app package using command line interface 
 author: lahugh
 ms.author: lahugh
 ms.date: 09/07/2018
