@@ -15,7 +15,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
 
 
 <div class="container">
-
+<!-- <<h2>MSIX documentation</h2>-->
     <ul class="pivots">
 	
         <li>
