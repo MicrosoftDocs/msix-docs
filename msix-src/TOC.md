@@ -10,6 +10,7 @@
 # [MSIX Packaging Tool](mpt-overview.md)
 ## [Create app package from .MSI using a VM](MPT/create-app-package-MSI-VM.md)
 ## [Create app package using Command Line](MPT/package-conversion-cli.md)
+## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
 ## [Automate Conversion using Command Line](MPT/automate-conversion.md)
 ## [Modify package using package editor](MPT/package-editor.md)
 
