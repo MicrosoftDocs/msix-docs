@@ -13,11 +13,11 @@ ms.localizationpriority: medium
 
 
  <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
+        <h2>Have feedback for us? We'd love to hear it.</h2>
         <ul class="links">
            <li>
                 <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com">
-                    Mail us
+                    Mail MSIX Team
                 </a>
             </li>
             
