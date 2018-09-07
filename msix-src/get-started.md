@@ -16,6 +16,7 @@ ms.localizationpriority: medium
 ---
 
 # Get started with MSIX
+# Get started with MSIX
 
 MSIX is a package format for all Windows 10 apps regardless of the device type and provides a wide array of tools to assist you build, distribute, and deploy MSIX app packages.
 
