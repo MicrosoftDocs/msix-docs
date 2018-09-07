@@ -3,9 +3,14 @@ layout: HubPage
 hide_bc: true
 title: Connect
 description: Connect page 
+author: lahugh
+ms.author: lahugh
+ms.date: 09/07/2018
+ms.topic: article
 ms.prod: windows
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+
 ---
 
 <br>
