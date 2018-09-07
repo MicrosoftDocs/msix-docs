@@ -38,7 +38,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         >[!VIDEO https://www.youtube.com/embed/AUUwZTurcmQ]       
     :::column-end:::
     :::column:::
-          >[!VIDEO https://www.youtube.com/embed/XKIIEC5BMWg] 
+          >[!VIDEO https://www.youtube.com/watch?v=FKCX4Rzfysk] 
         ### Get the MSIX SDK
         Description text 
     :::column-end:::
