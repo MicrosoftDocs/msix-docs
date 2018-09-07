@@ -1,4 +1,3 @@
-
 ---
 layout: HubPage
 hide_bc: true
@@ -23,5 +22,5 @@ ms.localizationpriority: medium
             </li>
             
         </ul>
-		</div>
+</div>
 
