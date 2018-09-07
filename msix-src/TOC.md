@@ -1,16 +1,33 @@
 # [MSIX](index.md)
+
 # [Get started](get-started.md)
 ## [What is MSIX?]()
 ### [App package formats]()
+#### [Optional Packages](https://docs.microsoft.com/en-us/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
+#### [Windows App Streaming Install](https://docs.microsoft.com/en-us/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 
-# [MSIX SDK and packaging tool](https://github.com/Microsoft/msix-packaging)
+# [MSIX Packaging Tool](mpt-overview.md)
+## [Create app package from .MSI using a VM](create-app-package-MSI-VM.md)
+## [Create app package using Command Line](package-conversion-cli.md)
+## [Automate Conversion using Command Line](automate-conversion.md)
+## [Modify package using package editor](package-editor.md)
 
-# [App Installer]()
-## [App Installer file](https://docs.microsoft.com/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render)
-
-# [Package Support Framework]()
+# [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
+
+# [App Installer](https://docs.microsoft.com/en-us/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
+## [Install from web](https://docs.microsoft.com/en-us/windows/uwp/packaging/installing-uwp-apps-web?context=/windows/msix/render)
+### [Web Install Tutorials]()
+#### [Install a UWP app from an Azure Web App](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-azure?context=/windows/msix/render)
+#### [Install a UWP app from an IIS server](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-iis?context=/windows/msix/render)
+#### [Hosting UWP app packages on AWS for web install](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-aws?context=/windows/msix/render)
+
+## [Create App Installer file in Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render)
+## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/en-us/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
+
+# [MSIX SDK](msix-sdk-overview.md)
+## [Build packages for cross platform use](msix-sdk-guidance.md)
 
 # [Package]()
 ## [Package an app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render)
@@ -19,8 +36,7 @@
 ### [Package a desktop application with Visual Studio](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render)
 ### [Package a desktop application with the Desktop App Converter](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter?context=/windows/msix/render)
 ### [Package a desktop application manually](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render)
-### [Package a ClickOnce installer]()
-### [Package an existing Virtual Machine]()
+### [Package an existing Virtual Machine](MPT/create-app-package-MSI-VM.md)
 ### [Optimize desktop application binaries with native images](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-r2r?context=/windows/msix/render)
 ## [Manual packaging tools](https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render)
 ## [Sign an app package](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render)
