@@ -38,3 +38,46 @@ Here are typically ways of which you can create a .dat file:
 Once you’ve made the necessary changes, you can create the modification package like any other MSIX package. Then, you can deploy the package with the current deployment set-up. When you relaunch your main app, you can see the changes that the modification package has made. If you choose to remove the modification package, your main app will revert to a state without the modification package. 
 
 
+<br>
+<br>
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
+                    Email the MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
+
+<!--
+ <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
+                    Twitter
+                </a>
+            </li>
+            
+        </ul>
+		</div>
+-->
+
