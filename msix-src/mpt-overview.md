@@ -31,3 +31,47 @@ Remember, this a preview and not all features are supported. Here is what you ca
 - Package your favorite application(msi, exe, App-V 5.x and to MSIX format by launching the tool and selecting "Application package" icon.
 - Create a modification package for a newly created Application MSIX Package by launching the tool and selecting "Modification package" icon. 
 - Open your MSIX package to view and edit its content/properties by navigating to "Open package editor" tab and browsing to the MSIX package and selecting open package.
+
+
+<br>
+<br>
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
+                    Email the MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
+
+<!--
+ <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
+                    Twitter
+                </a>
+            </li>
+            
+        </ul>
+		</div>
+-->
