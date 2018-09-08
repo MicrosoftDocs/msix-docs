@@ -237,3 +237,46 @@ If you would like to use the package for all platforms(Windows 10 and non-Window
 To make the most of the MSIX Packaging SDK, you will need to build the package in a way that will be deployed like an app package on Windows 10 and at the same time supported on other platforms. On Windows 10, you can build the package as an app extension. To find more information about App Extensions and how they can help make your app extensible - [you will find it here](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/). 
 
 In the above manifest file, you will notice within the AppExtension element, there is a section for Properties. There is no validation performed in this section of the manifest file. This allows developers to specify the required metadata between extension and host/client app. 
+
+<br>
+<br>
+
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
+                    Email the MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
+<!--
+ <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
+                    Twitter
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+-->
