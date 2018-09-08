@@ -86,7 +86,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render">Use Visual Studio</a>
                                             </p>
                                             <p>
-                                                <a href="/windows/msix/package-conversion-cli?context=/windows/msix/render">Use command line</a>
+                                                <a href="/windows/uwp/package-conversion-cli?context=/windows/msix/render">Use command line</a>
                                             </p>
                                             <p>
                                                 <a href="/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render">Signing packages</a>
