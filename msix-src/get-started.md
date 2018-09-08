@@ -55,13 +55,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Get started</h3>
                                             <p>
-                                                <a href="/windows/msix/mpt/create-app-package-msi-vm.md">Update existing installers to MSIX</a>
+                                                <a href="/windows/msix/mpt/create-app-package-msi-vm">Update existing installers to MSIX</a>
                                             </p>
                                             <p>
-                                                <a href="/windows/msix/mpt-overview.md">MSIX Packaging Tool</a>
+                                                <a href="/windows/msix/mpt-overview">MSIX Packaging Tool</a>
                                             </p>
                                             <p>
-                                                <a href="/windows/msix/package-support-framework-overview.md">Package Support Framework</a>
+                                                <a href="/windows/msix/package-support-framework-overview">Package Support Framework</a>
                                             </p>
                                         </div>
                                     </div>
@@ -80,13 +80,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Package</h3>
                                             <p>
-                                                <a href="/windows/msix/mpt-overview.md">Use the MSIX Packaging Tool</a>
+                                                <a href="/windows/msix/mpt-overview">Use the MSIX Packaging Tool</a>
                                             </p>
                                             <p>
                                                 <a href="/cpp/windows/desktop-applications-visual-cpp?context=/windows/msix/render">Use Visual Studio</a>
                                             </p>
                                             <p>
-                                                <a href="/MPT/package-conversion-cli.md">Use command line</a>
+                                                <a href="/MPT/package-conversion-cli">Use command line</a>
                                             </p>
                                             <p>
                                                 <a href="/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render">Signing packages</a>
@@ -180,7 +180,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="">MSIX package format</a>
                                             </p>
                                             <p>
-                                                <a href="msix-sdk-overview.md">Get setup with the MSIX SDK</a>
+                                                <a href="msix-sdk-overview">Get setup with the MSIX SDK</a>
                                             </p>
                                         </div>
                                     </div>
