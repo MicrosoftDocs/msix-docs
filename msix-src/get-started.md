@@ -405,6 +405,18 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
 <br>
 <br>
 
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
+                    Email the MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
+<!--
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
@@ -431,3 +443,4 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
         </ul>
     </div>
 </div>
+-->
