@@ -61,7 +61,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="/windows/msix/mpt-overview?context=/windows/msix/render">MSIX Packaging Tool</a>
                                             </p>
                                             <p>
-                                                <a href="get-started/get-set-up.md">Package Support Framework</a>
+                                                <a href="/windows/msix/package-support-framework-overview?context=/windows/msix/render">Package Support Framework</a>
                                             </p>
                                         </div>
                                     </div>
@@ -80,16 +80,16 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Package</h3>
                                             <p>
-                                                <a href="design/basics/design-and-ui-intro.md">Use the MSIX Packaging Tool</a>
+                                                <a href="/windows/msix/mpt-overview?context=/windows/msix/render">Use the MSIX Packaging Tool</a>
                                             </p>
                                             <p>
-                                                <a href="design/fluent-design-system/index.md">Use Visual Studio</a>
+                                                <a href="/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render">Use Visual Studio</a>
                                             </p>
                                             <p>
-                                                <a href="design/controls-and-patterns/index.md">Use command line</a>
+                                                <a href="/windows/msix/package-conversion-cli?context=/windows/msix/render">Use command line</a>
                                             </p>
                                             <p>
-                                                <a href="design/downloads/index.md">Signing packages</a>
+                                                <a href="/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render">Signing packages</a>
                                             </p>
                                         </div>
                                     </div>
