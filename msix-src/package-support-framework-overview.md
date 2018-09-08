@@ -47,3 +47,46 @@ If you can't find a runtime fix that addresses your issue, you can create one. T
 ## Get started with the Package Support framework
 
 If you're ready to begin using the Package Support Framework to resolve compatibility issues, see our step-by-step guide here: [Apply runtime fixes to an MSIX package by using the Package Support Framework](https://docs.microsoft.com/windows/uwp/porting/package-support-framework)
+<br>
+<br>
+
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
+                    Email the MSIX team
+                </a>
+            </li>
+           
+        </ul>
+		</div>
+<!--
+ <div class="container centered pageFooter">
+        <h2>Keep in touch with us</h2>
+        <ul class="links">
+           <li>
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
+                    Twitter
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+-->
+
