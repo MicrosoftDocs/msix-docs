@@ -36,7 +36,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>What's new</h3>
                                             <p>
-                                                <a href="/windows/uwp/whats-new/windows-10-version-latest?context=/windows/msix/render">New tools and features</a>
+                                                <a href="/windows/msix/mpt-overview">New tools and features</a>
                                             </p>                                            
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Get started</h3>
                                             <p>
-                                                <a href="get-started/universal-application-platform-guide.md">Update existing installers to MSIX</a>
+                                                <a href="/windows/msix/mpt/create-app-package-msi-vm">Update existing installers to MSIX</a>
                                             </p>
                                             <p>
                                                 <a href="/windows/msix/mpt-overview?context=/windows/msix/render">MSIX Packaging Tool</a>
