@@ -58,7 +58,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="get-started/universal-application-platform-guide.md">Update existing installers to MSIX</a>
                                             </p>
                                             <p>
-                                                <a href="/windows/msix/mpt-overview.md">MSIX Packaging Tool</a>
+                                                <a href="/windows/msix/mpt-overview?context=/windows/msix/render">MSIX Packaging Tool</a>
                                             </p>
                                             <p>
                                                 <a href="get-started/get-set-up.md">Package Support Framework</a>
