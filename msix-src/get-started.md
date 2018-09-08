@@ -108,13 +108,13 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Validate</h3>
                                             <p>
-                                                <a href="enterprise/index.md">Microsoft Store flighting</a>
+                                                <a href="/windows/uwp/publish/package-flights?context=/windows/msix/render">Microsoft Store flighting</a>
                                             </p>
                                             <p>
                                                 <a href="packaging/index.md">Validate on local devices</a>
                                             </p>
                                             <p>
-                                                <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Test for Windows 10 in S mode</a>
+                                                <a href="/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render">Test for Windows 10 in S mode</a>
                                             </p>
                                         </div>
                                     </div>
@@ -133,10 +133,10 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                         <div class="cardText">
                                             <h3>Distribute</h3>
                                             <p>
-                                                <a href="gaming/e2e.md">Microsoft Store</a>
+                                                <a href="/windows/uwp/publish/?context=/windows/msix/render">Microsoft Store</a>
                                             </p>
                                             <p>
-                                                <a href="gaming/index.md">Microsoft Store for Business</a>
+                                                <a href="/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render">Microsoft Store for Business</a>
                                             </p>
                                             <p>
                                                 <a href="gaming/directx-programming.md">System Center Configuration Manager</a>
@@ -145,7 +145,7 @@ MSIX is a package format for all Windows 10 apps regardless of the device type a
                                                 <a href="xbox-apps/index.md">Microsoft Intune</a>
                                             </p>
                                             <p>
-                                                <a href="xbox-live/index.md">Non-Store distribution</a>
+                                                <a href="/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render">Non-Store distribution</a>
                                             </p>
                                         </div>
                                     </div>
