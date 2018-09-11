@@ -3,8 +3,8 @@
 # [Get started](get-started.md)
 ## [What is MSIX?]()
 ### [App package formats]()
-#### [Optional Packages](https://docs.microsoft.com/en-us/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
-#### [Windows App Streaming Install](https://docs.microsoft.com/en-us/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
+#### [Optional Packages](https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
+#### [Windows App Streaming Install](https://docs.microsoft.com/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 ## [App package updates](app-package-updates.md)
 
@@ -18,16 +18,16 @@
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
 
-# [App Installer](https://docs.microsoft.com/en-us/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
-## [Install from web](https://docs.microsoft.com/en-us/windows/uwp/packaging/installing-uwp-apps-web?context=/windows/msix/render)
+# [App Installer](https://docs.microsoft.com/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
+## [Install from web](https://docs.microsoft.com/windows/uwp/packaging/installing-uwp-apps-web?context=/windows/msix/render)
 ### [Web Install Tutorials]()
-#### [Install a UWP app from an Azure Web App](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-azure?context=/windows/msix/render)
-#### [Install a UWP app from an IIS server](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-iis?context=/windows/msix/render)
-#### [Hosting UWP app packages on AWS for web install](https://docs.microsoft.com/en-us/windows/uwp/packaging/web-install-aws?context=/windows/msix/render)
+#### [Install a UWP app from an Azure Web App](https://docs.microsoft.com/windows/uwp/packaging/web-install-azure?context=/windows/msix/render)
+#### [Install a UWP app from an IIS server](https://docs.microsoft.com/windows/uwp/packaging/web-install-iis?context=/windows/msix/render)
+#### [Hosting UWP app packages on AWS for web install](https://docs.microsoft.com/windows/uwp/packaging/web-install-aws?context=/windows/msix/render)
 
 ## [Create App Installer file in Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render)
 ## [App updates using App Installer file](app-installer-file-update.md)
-## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/en-us/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
+## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
 
 # [MSIX SDK](msix-sdk-overview.md)
 ## [Build packages for cross platform use](msix-sdk-guidance.md)
