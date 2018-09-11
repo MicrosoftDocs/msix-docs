@@ -5,8 +5,7 @@ author: lahugh
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
+
 ---
 
 # Developer Guidance to target MSIX SDK

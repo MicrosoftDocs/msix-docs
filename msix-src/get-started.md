@@ -3,8 +3,7 @@ layout: HubPage
 hide_bc: true
 title: Get started with MSIX
 description: Find documentation for MSIX, an updated packaging format built for all Windows 10 apps regardless of the device type and provides a wide array of tools to assist you build, distribute, and deploy MSIX app packages. 
-ms.prod: windows
-keywords: windows 10, uwp
+keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
 

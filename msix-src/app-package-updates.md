@@ -5,8 +5,6 @@ author: laurenhughes
 ms.author: lahugh
 ms.date: 09/10/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.localizationpriority: medium
 ---
