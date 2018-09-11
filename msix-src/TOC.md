@@ -6,6 +6,7 @@
 #### [Optional Packages](https://docs.microsoft.com/en-us/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
 #### [Windows App Streaming Install](https://docs.microsoft.com/en-us/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
+## [App package updates](app-package-updates.md)
 
 # [MSIX Packaging Tool](mpt-overview.md)
 ## [Create app package from .MSI using a VM](MPT/create-app-package-MSI-VM.md)
