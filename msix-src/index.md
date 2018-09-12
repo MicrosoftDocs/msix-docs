@@ -1,7 +1,7 @@
 ---
 layout: LandingPage
 hide_bc: true
-title: MSIX app packaging format
+title: MSIX Documentation
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 author: laurenhughes
 ms.author: lahugh
@@ -24,7 +24,6 @@ ms.localizationpriority: medium
  -->
 
 # MSIX
-# MSIX
 MSIX is a packaging format built to be safe, secure and reliable, based on a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 <br>
@@ -45,8 +44,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column-end:::
 :::row-end:::
 
-
-<br>
 <br>
 
 :::row:::
@@ -83,35 +80,16 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img alt="What's new icon" src="/en-us/media/common/i_whats-new.svg" data-linktype="absolute-path">
-                                </div>
-                            </div>
-                            <div class="cardText">
-                                <h3 class="x-hidden-focus">What's new</h3>
-                                <p>
-                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">New tools and features</a>
-                                </p>                                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="cardSize">
-                    <div class="cardPadding">
-                        <div class="card">
-                            <div class="cardImageOuter">
-                                <div class="cardImage">
                                     <img alt="Get started icon" src="/en-us/media/common/i_get-started.svg" data-linktype="absolute-path">
                                 </div>
                             </div>
                             <div class="cardText">
-                                <h3>Get started</h3>
-                                <p>
-                                    <a href="/en-us/windows/msix/mpt/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
-                                </p>
+                                <h3>Get started</h3>                                
                                 <p>
                                     <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">MSIX Packaging Tool</a>
+                                </p>
+				<p>
+                                    <a href="/en-us/windows/msix/mpt/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/msix/package-support-framework-overview" data-linktype="absolute-path">Package Support Framework</a>
@@ -132,9 +110,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             </div>
                             <div class="cardText">
                                 <h3>Package</h3>
-                                <p>
-                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">Use the MSIX Packaging Tool</a>
-                                </p>
                                 <p>
                                     <a href="/cpp/windows/desktop-applications-visual-cpp?context=/windows/msix/render" data-linktype="absolute-path">Use Visual Studio</a>
                                 </p>
@@ -162,9 +137,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                 <h3>Validate</h3>
                                 <p>
                                     <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store flighting</a>
-                                </p>
-                                <p>
-                                    <a href="/en-us/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render" data-linktype="absolute-path">Validate on local devices</a>
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
@@ -302,9 +274,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Publish to the Microsoft Store for Business</a>
-                                </p>
-                                <p>
-                                    <a href="/en-us/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render" data-linktype="absolute-path">Non-Microsoft Store distribution</a>
                                 </p>
                             </div>
                         </div>
