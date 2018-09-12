@@ -159,7 +159,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img src="images/installaware-logo.png" alt="" />
+                                        <img src="images/installAware_logo.png" alt="" />
                                     </div>
                                 </div>
                             </div>
