@@ -76,7 +76,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 <hr />
 <div class="v2" id="main1">
     <div class="container">
-        <ul class="cardsX panelContent featuredContent" style="margin-left: 0px;">
+        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
             <li>
                 <a href="https://www.advancedinstaller.com/desktop-bridge">
                     <div class="cardSize">
@@ -158,7 +158,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/installAware_logo.png" alt="" />
                                     </div>
                                 </div>
