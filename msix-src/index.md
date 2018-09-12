@@ -71,159 +71,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 <br>
 <br>
 
-## Partners supporting MSIX
-
-<hr />
-<div class="v2" id="main1">
-    <div class="container">
-        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
-            <li>
-                <a href="https://www.advancedinstaller.com/desktop-bridge">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/AdvancedInstaller_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apptimized.com/solutions/">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/Apptimized_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://cloudhouse.com/msixpr">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/CloudHouse_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://emcosoftware.com/msi-package-builder">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/EMCO_Software_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.firegiant.com/">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/FireGiant_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.installaware.com/msix.htm">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/installAware_logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://raynet.de/en/Raynet-Products/RayPackStudio">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/Raynet_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-## Conference talks by MSIX team
-***
-
-:::row:::
-    :::column:::
-	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
-        #### MSIX: Inside and out
-        Learn why MSIX brings the best of MSI, Click Once, App-V and APPX togehter for you customers and business. 
-    :::column-end:::
-    :::column:::
-	  >[!VIDEO https://channel9.msdn.com/Events/Build/2018/BRK2416/player] 
-        #### Accelerating Windows 10 enterprise app deployment
-		 Deep dive into the benefits of MSIX and the new tooling and features available to make it easy to move your existing apps to MSIX. 
-    :::column-end:::
-        :::column:::
-
-    :::column-end:::
-    :::column:::
-   
-
-    :::column-end:::
-:::row-end:::
-
-
-       
-<br>
-<br>
-
-<div class="container centered pageFooter">
-    <h2>Have feedback for us? We'd love to hear it.</h2>
-    <ul class="links">
-        <li>
-            <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                Email the MSIX team
-            </a>
-        </li>
-    </ul>
-</div>
 <a name="get-started"></a>
 <div class="v2" id="main2">
     <h2>IT Pro</h2>
@@ -491,6 +338,163 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
             </li>
         </ul>
     </div>
+</div>
+
+<br>
+<br>
+
+## Partners supporting MSIX
+
+<hr />
+<div class="v2" id="main1">
+    <div class="container">
+        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
+            <li>
+                <a href="https://www.advancedinstaller.com/desktop-bridge">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/AdvancedInstaller_Logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apptimized.com/solutions/">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/Apptimized_Logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://cloudhouse.com/msixpr">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/CloudHouse_Logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://emcosoftware.com/msi-package-builder">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/EMCO_Software_Logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.firegiant.com/">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/FireGiant_Logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.installaware.com/msix.htm">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/installAware_logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://raynet.de/en/Raynet-Products/RayPackStudio">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/Raynet_Logo.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+## Conference talks by MSIX team
+***
+
+:::row:::
+    :::column:::
+	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
+        #### MSIX: Inside and out
+        Learn why MSIX brings the best of MSI, Click Once, App-V and APPX togehter for you customers and business. 
+    :::column-end:::
+    :::column:::
+	  >[!VIDEO https://channel9.msdn.com/Events/Build/2018/BRK2416/player] 
+        #### Accelerating Windows 10 enterprise app deployment
+		 Deep dive into the benefits of MSIX and the new tooling and features available to make it easy to move your existing apps to MSIX. 
+    :::column-end:::
+        :::column:::
+
+    :::column-end:::
+    :::column:::
+   
+
+    :::column-end:::
+:::row-end:::
+
+
+       
+<br>
+<br>
+
+<div class="container centered pageFooter">
+    <h2>Have feedback for us? We'd love to hear it.</h2>
+    <ul class="links">
+        <li>
+            <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
+                Email the MSIX team
+            </a>
+        </li>
+    </ul>
 </div>
 <!--
  <div class="container centered pageFooter">
