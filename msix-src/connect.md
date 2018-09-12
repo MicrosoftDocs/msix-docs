@@ -3,7 +3,7 @@ layout: HubPage
 hide_bc: true
 title: Connect
 description: Connect page 
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article
