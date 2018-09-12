@@ -1,7 +1,7 @@
 ---
 title: Best Practices for MSIX Packaging Tool
 description: Best Practices for MSIX Packaging Tool 
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: MSIX SDK Guidance
 description: Guidance to developers who are using SDK to pack MSIX packages for cross plat use
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

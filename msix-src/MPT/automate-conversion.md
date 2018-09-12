@@ -1,7 +1,7 @@
 ---
 title: automate conversion of windows installers to msix packages
 description: automate conversion of existing windows installers using the command line interface to generate msix packages
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

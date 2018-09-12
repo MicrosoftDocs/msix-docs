@@ -1,7 +1,7 @@
 ---
 title: AppInstaller file updates
 description: Learn how to update the AppInstaller file
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

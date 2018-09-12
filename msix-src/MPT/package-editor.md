@@ -1,7 +1,7 @@
 ---
 title: Package Editor 
 description: use Package Editor to modify package information
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

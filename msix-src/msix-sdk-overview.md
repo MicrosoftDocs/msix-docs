@@ -1,7 +1,7 @@
 ---
-title:
-description: 
-author: lahugh
+title: MSIX SDK 
+description: MSIX SDK is an open source project that allows developers to use MSIX package format universally on all platforms.
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

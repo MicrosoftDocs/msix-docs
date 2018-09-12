@@ -2,9 +2,9 @@
 
 # [Get started](get-started.md)
 ## [What is MSIX?](msix-overview.md)
-### [App package formats]()
-#### [Optional Packages](https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
-#### [Windows App Streaming Install](https://docs.microsoft.com/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
+## [App package formats]()
+### [Optional Packages](https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
+### [Windows App Streaming Install](https://docs.microsoft.com/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 ## [App package updates](app-package-updates.md)
 

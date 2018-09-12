@@ -1,7 +1,7 @@
 ---
 title: Customize your Enterprise apps with Modification Package 
 description: Learn how to customize your Enterprise apps
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article

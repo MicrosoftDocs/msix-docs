@@ -1,7 +1,7 @@
 ---
 title: Create app package using .msi on a VM
 description: Create an MSIX package using an existing .msi on a VM
-author: lahugh
+author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article
