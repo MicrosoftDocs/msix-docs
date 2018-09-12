@@ -317,7 +317,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 <hr />
 <div class="v2" id="main1">
     <div class="container">
-        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
+        <ul class="cardsX panelContent singlePanelContent cols cols5" style="float: left; display: flex!important;">
             <li>
                 <a href="https://www.advancedinstaller.com/desktop-bridge">
                     <div class="cardSize">
