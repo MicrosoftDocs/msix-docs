@@ -33,7 +33,8 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column:::
         >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]      
     :::column-end:::
-    <!--:::column:::
+:::column:::
+    <!--
           >[!VIDEO https://www.youtube.com/embed/AUUwZTurcmQ] 
 -->
         ###     
