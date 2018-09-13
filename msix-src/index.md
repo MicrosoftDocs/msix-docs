@@ -38,8 +38,9 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
           >[!VIDEO https://www.youtube.com/embed/AUUwZTurcmQ] 
 -->
         ###     
-	### Get the MSIX Packaging Tool from Microsoft Store now
-          Install the app to update existing windows installers to be packaged in MSIX format.  
+	### Get the MSIX Packaging Tool from Microsoft Store
+          Install the app to update existing windows 
+	  installers to be packaged in MSIX format.
 
       <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the app</a></p></div>
       
@@ -61,6 +62,8 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         ### Install MSIX app packages
         App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [more>](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
     :::column-end:::
+ :::row-end:::
+ :::row:::
     :::column:::
 		### Package support framework
 		PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [more>](package-support-framework-overview.md)
