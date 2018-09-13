@@ -324,7 +324,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/AdvancedInstaller_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -339,7 +339,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/Apptimized_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -354,7 +354,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/CloudHouse_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -369,7 +369,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/EMCO_Software_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -384,7 +384,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/FireGiant_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -399,7 +399,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/installAware_logo.png" alt="" />
                                     </div>
                                 </div>
@@ -414,7 +414,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
+                                    <div class="cardImage" style="height: 20px;">
                                         <img src="images/Raynet_Logo.png" alt="" />
                                     </div>
                                 </div>
