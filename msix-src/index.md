@@ -318,14 +318,14 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 <hr />
 <div class="v2" id="main1">
     <div class="container">
-        <ul class="cardsX panelContent singlePanelContent cols cols5" style="float: left; display: flex!important;">
+        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
             <li>
                 <a href="https://www.advancedinstaller.com/desktop-bridge">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/AdvancedInstaller_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -340,7 +340,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/Apptimized_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -355,7 +355,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/CloudHouse_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -370,7 +370,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/EMCO_Software_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -385,7 +385,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/FireGiant_Logo.png" alt="" />
                                     </div>
                                 </div>
@@ -400,7 +400,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/installAware_logo.png" alt="" />
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: 20px;">
+                                    <div class="cardImage" style="height: auto;">
                                         <img src="images/Raynet_Logo.png" alt="" />
                                     </div>
                                 </div>
