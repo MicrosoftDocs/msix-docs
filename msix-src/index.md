@@ -312,7 +312,8 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 <br>
 <br>
 
-## Partners supporting MSIX
+## MSIX partner documentation
+See additional documentation from our trusted partners on MSIX tooling and support.
 
 <hr />
 <div class="v2" id="main1">
