@@ -380,21 +380,6 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                 </a>
             </li>
             <li>
-                <a href="https://www.firegiant.com/">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/FireGiant_Logo.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
                 <a href="https://www.installaware.com/msix.htm">
                     <div class="cardSize">
                         <div class="cardPadding">
