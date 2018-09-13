@@ -13,15 +13,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 
 ---
-<!-- 
-<div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/AUUwZTurcmQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
- -->
 
-<!-- 
- keep the double title - it seems to work. if you remove one then it disppears from page
- -->
 
 # MSIX
 MSIX is a packaging format built to be safe, secure and reliable, based on a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
@@ -29,46 +21,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 <br>
 
 
- :::row:::
-    :::column span="2":::
-        >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]      
-    :::column-end:::
-    :::column:::
-          >[!VIDEO https://www.youtube.com/embed/AUUwZTurcmQ] 
-        ###     
-	### Get the MSIX Packaging Tool from Microsoft Store now
-          Install the app to update existing windows installers to be packaged in MSIX format.  
-
-      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the app</a></p></div>
-      
-    :::column-end:::
-:::row-end:::
-
-<br>
-
-:::row:::
-    :::column:::
-        ### Package existing Windows apps
-        MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format. [more>](mpt-overview.md)
-    :::column-end:::
-    :::column:::
-        ### Use MSIX anywhere
-		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [more>](msix-sdk-overview.md)
-    :::column-end:::
-        :::column:::
-        ### Install MSIX app packages
-        App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [more>](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
-    :::column-end:::
-    :::column:::
-		### Package support framework
-		PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [more>](package-support-framework-overview.md)
-    :::column-end:::
-:::row-end:::
-
-<br>
-<br>
-
-<a name="get-started"></a>
+ <a name="get-started"></a>
 <div class="v2" id="main2">
     <h2>IT Pro</h2>
     <hr />
