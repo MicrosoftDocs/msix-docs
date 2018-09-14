@@ -1,5 +1,5 @@
 ---
-title: Create app package using .msi on a VM
+title: Create app package using .msi on a VM | Microsoft Docs
 description: Create an MSIX package using an existing .msi on a VM
 author: laurenhughes
 ms.author: lahugh
