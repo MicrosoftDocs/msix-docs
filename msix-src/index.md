@@ -56,119 +56,106 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column-end:::
 :::row-end:::
 
+<br>
+<br>
 <a name="get-started"></a>
 <h2>IT Pro</h2>
 <hr />
 <ul class="panelContent cardsF">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg?branch=master" alt="Get started icon" />
+<li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Get started icon" src="/media/common/i_get-started.svg" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Get started</h3>                                
+				<p>
+                                    <a href="/en-us/windows/msix/mpt/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cardText">
-                        <h2>Get started</h2>
-                        <p>
-                            <a href="desktop-programming">Desktop programming</a>
-                        </p>
-                        <p>
-                            <a href="learnwin32/learn-to-program-for-windows">Learn to program for Windows</a>
-                        </p>
-                        <p>
-                            <a href="direct3dgetstarted/building-your-first-directx-app">Create your first app using DirectX</a>
-                        </p>
-                        <p>
-                            <a href="winprog64/programming-guide-for-64-bit-windows">Programming guide for 64-bit Windows</a>
-                        </p>
-                        <p>
-                            <a href="winprog/using-the-windows-headers">Using the Windows headers</a>
-                        </p>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_management.svg?branch=master" alt="Design icon" />
+            </li>
+            <li class="x-hidden-focus">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Design icon" src="/media/common/i_management.svg" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Package</h3>
+                                <p>
+                                    <a href="/cpp/windows/desktop-applications-visual-cpp?context=/windows/msix/render" data-linktype="absolute-path">Use Visual Studio</a>
+                                </p>
+                                <p>
+                                    <a href="/MPT/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing packages</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cardText">
-                        <h2>Design</h2>
-                        <p>
-                            <a href="uxguide/designprinciples">Design basics</a>
-                        </p>
-                         <p>
-                            <a href="uxguide/guidelines">Design guidelines</a>
-                        </p>
-                        <p>
-                            <a href="uxguide/visual-index">Visual index</a>
-                        </p>
-                        <p>
-                            <a href="uxguide/glossary">Glossary</a>
-                        </p>                      
-                    </div>
                 </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_code-edit.svg?branch=master" alt="Develop icon" />
+            </li>
+            <li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Develop icon" src="/media/common/i_code-edit.svg" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Validate</h3>
+                                <p>
+                                    <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store flighting</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cardText">
-                        <h2>Develop</h2>
-                        <p>
-                            <a href="desktop-app-technologies">Desktop app technologies</a>
-                        </p>
-                        <p>
-                            <a href="apiindex/api-index-portal">API index</a>
-                        </p>
-                        <p>
-                            <a href="winrt/reference">Windows Runtime C++ reference</a>
-                        </p>
-                        <p>
-                            <a href="server-and-system-technologies">Develop with server technologies</a>
-                        </p>
-                        <p>
-                            <a href="win_cert/windows-certification-portal">Windows certification</a>
-                        </p>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </li>
-        <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_api.svg?branch=master" alt="Get started icon" />
+            </li>
+            <li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Develop Games icon" src="/media/common/i_build.svg" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Distribute</h3>
+                                <p>
+                                    <a href="/en-us/windows/uwp/publish/app-submissions?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store for Business</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/sccm/apps/understand/introduction-to-application-management?context=/windows/msix/render" data-linktype="absolute-path">System Center Configuration Manager</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/intune/introduction-intune?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Intune</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cardText">
-                        <h2>API reference</h2>
-                        <p>
-                            <a href="api">Windows API reference</a>
-                        </p>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </li>
+            </li>
 </ul>
 
 ## Conference talks by MSIX team
