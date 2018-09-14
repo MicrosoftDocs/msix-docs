@@ -27,9 +27,13 @@ Here are the parameters that can be passed as command line arguments:
 
 Examples:
 
+``` command prompt
+
     MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml
 
     MSIXPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml --virtualMachinePassword pswd112893
+    
+```
 
 **Conversion template file**
 
