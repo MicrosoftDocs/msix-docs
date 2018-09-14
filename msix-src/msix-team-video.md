@@ -11,9 +11,18 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ---
-# Conference talks by MSIX Team
+# MSIX Videos
 ***
 
+## MSIX 
+ :::row:::
+    :::column:::
+        >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]
+    :::column-end:::
+:::row-end:::
+	
+
+## Conference Videos by MSIX Team
 :::row:::
     :::column:::
 	>[!VIDEO https://channel9.msdn.com/events/Build/2018/BRK2432/player]
