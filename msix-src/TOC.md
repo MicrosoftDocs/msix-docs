@@ -27,7 +27,7 @@
 ## [App updates using App Installer file](app-installer-file-update.md)
 ## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
 
-# [MSIX SDK](msix-sdk-overview.md)
+# [MSIX SDK](sdk-overview.md)
 ## [Build packages for cross platform use](msix-sdk-guidance.md)
 
 # [Package]()
