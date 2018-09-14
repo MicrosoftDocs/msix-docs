@@ -1,5 +1,5 @@
 ---
-title: App package updates
+title: App package updates | Microsoft Docs
 description: Learn how apps are differentially updated.
 author: laurenhughes
 ms.author: lahugh
