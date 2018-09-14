@@ -161,9 +161,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                 <p>
                                     <a href="">MSIX package format</a>
                                 </p>
-                                <p>
-                                    <a href="msix-sdk-overview" data-linktype="relative-path">Get setup with the MSIX SDK</a>
-                                </p>
                             </div>
                         </div>
                     </div>
