@@ -64,3 +64,7 @@
 ## [Packaging APIs](https://docs.microsoft.com/windows/desktop/appxpkg/interfaces?context=/windows/msix/render)
 ## [App Manifest schema](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render)
 ## [App Installer file schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render)
+
+# [Resources]()
+## [MSIX Partners](msix-partners.md)
+## [Conference Videos by MSIX Team](msix-team-video.md)
