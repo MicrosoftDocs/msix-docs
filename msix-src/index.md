@@ -56,8 +56,9 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column-end:::
 :::row-end:::
 
-
-
+<a name="get-started"></a>
+<h2>IT Pro</h2>
+<hr />
 <ul class="panelContent cardsF">
     <li>
         <div class="cardSize">
