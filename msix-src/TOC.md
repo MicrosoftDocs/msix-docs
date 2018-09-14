@@ -9,11 +9,11 @@
 ## [App package updates](app-package-updates.md)
 
 # [MSIX Packaging Tool](mpt-overview.md)
-## [Create app package from .MSI using a VM](MPT/create-app-package-MSI-VM.md)
-## [Create app package using Command Line](MPT/package-conversion-cli.md)
+## [Create app package from .MSI using a VM](msix-packaging-tool/create-app-package-MSI-VM.md)
+## [Create app package using Command Line](msix-packaging-tool/package-conversion-cli.md)
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
-## [Automate Conversion using Command Line](MPT/automate-conversion.md)
-## [Modify package using package editor](MPT/package-editor.md)
+## [Automate Conversion using Command Line](msix-packaging-tool/automate-conversion.md)
+## [Modify package using package editor](msix-packaging-tool/package-editor.md)
 
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
