@@ -10,7 +10,6 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-
 ---
 <!-- 
 <div style="background-color: black; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
@@ -23,7 +22,7 @@ ms.localizationpriority: medium
  -->
 
 # MSIX Documentation
-MSIX is a packaging format built to be safe, secure and reliable, based on a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+MSIX is a packaging format built to be safe, secure and reliable, based on a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
 
 <br>
 
@@ -76,13 +75,13 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 
 <br>
 <br>
-
+<hr />
 <a name="get-started"></a>
 <div class="v2" id="main2">
     <h2>IT Pro</h2>
     <hr />
     <div class="container">
-        <ul class="cardsF panelContent featuredContent" style="margin-left: 0px;">
+        <ul class="cardsF panelContent featuredContent" >
             <li>
                 <div class="cardSize">
                     <div class="cardPadding">
