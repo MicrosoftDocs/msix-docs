@@ -1,0 +1,6 @@
+### YamlMime:ContextObject
+uhfHeaderId: MSDocsHeader-MSIX
+searchScope:
+  - UWP
+breadcrumb_path: ./breadcrumb/toc.json
+toc_rel: ./toc.json  

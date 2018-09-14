@@ -36,8 +36,10 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/windows/msix/breadcrumb/toc.json",
+      "uhfHeaderId": "MSDocsHeader-MSIX",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "ms.prod": "msix"
     },
     "fileMetadata": {},
     "template": [],
