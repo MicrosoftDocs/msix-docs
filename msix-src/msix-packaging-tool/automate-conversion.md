@@ -13,6 +13,8 @@ ms.localizationpriority: medium
 
 # Automating conversion
 
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+
 MSIX Packaging Tool supports command line interface for creating MSIX application packages which allows the user to automate repackaging and doing bulk conversions with a simple PowerShell script.
 
 Below is a simple powershell script that using a sample conversion template creates corresponding templates for each installer in a folder path and passes the templates to the MSIX packaging tool to create MSIX Packages.
