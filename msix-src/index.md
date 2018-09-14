@@ -78,7 +78,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                     <a href="/cpp/windows/desktop-applications-visual-cpp?context=/windows/msix/render" data-linktype="absolute-path">Use Visual Studio</a>
                                 </p>
                                 <p>
-                                    <a href="/msix/msix-packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
+                                    <a href="/en-us/windows/msix/msix-packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing packages</a>
