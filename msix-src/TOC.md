@@ -1,6 +1,4 @@
 # [MSIX](index.md)
-
-# [Get started](index.md#get-started)
 ## [What is MSIX?](msix-overview.md)
 ## [App package formats]()
 ### [Optional Packages](https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
