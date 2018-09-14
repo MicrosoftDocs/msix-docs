@@ -23,7 +23,7 @@ ms.localizationpriority: medium
  keep the double title - it seems to work. if you remove one then it disppears from page
  -->
 
-# MSIX
+# MSIX Documentation
 MSIX is a packaging format built to be safe, secure and reliable, based on a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
 
 <br>
