@@ -158,9 +158,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
             </li>
 </ul>
 
-<br>
-<br>
-<a name="get-started"></a>
 <h2>Developer</h2>
 <hr />
 
@@ -288,8 +285,10 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                 </div>
             </li>
 </ul>
+
 <br>
 <br>
+
 ## Conference talks by MSIX team
 ***
 
