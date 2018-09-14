@@ -1,5 +1,5 @@
 ---
-title: What is MSIX?
+title: What is MSIX? | Microsoft Docs
 description: Learn the basics of the MSIX packaging format.
 author: laurenhughes
 ms.author: lahugh
