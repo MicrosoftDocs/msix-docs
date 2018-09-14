@@ -13,17 +13,17 @@ ms.localizationpriority: medium
 
 
  :::row:::
-    :::column span="2":::
+    :::column span="3":::
         >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]      
     :::column-end:::
 :::column:::
 
         ###     
-	### Get the MSIX Packaging Tool from Microsoft Store
+	### Get MSIX Packaging Tool
           Install the app to update existing windows 
 	  installers to be packaged in MSIX format.
 
-      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the app</a></p></div>
+      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the tool</a></p></div>
       
     :::column-end:::
 :::row-end:::
