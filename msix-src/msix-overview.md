@@ -11,6 +11,23 @@ ms.localizationpriority: medium
 
 # What is MSIX?
 
+
+ :::row:::
+    :::column:::
+        >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]      
+    :::column-end:::
+:::column:::
+
+        ###     
+	### Get the MSIX Packaging Tool from Microsoft Store
+          Install the app to update existing windows 
+	  installers to be packaged in MSIX format.
+
+      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the app</a></p></div>
+      
+    :::column-end:::
+:::row-end:::
+
 MSIX is the Windows app package format that provides a universal, modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and/or install files in addition to enabling new, modern packaging and deployment features to Win32, WPF, and WinForm apps.
 
 All Windows applications packaged as an MSIX package will include support for:
