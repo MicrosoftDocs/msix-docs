@@ -6,7 +6,7 @@ description: Find documentation for MSIX, an updated packaging format built to b
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
-ms.topic: article
+ms.topic: landing-page
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
@@ -70,8 +70,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column-end:::
     :::column:::
     :::column-end:::
-:::row-end:::
-:::row:::
+
         :::column:::
 	### Package support framework
 	PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [More...](package-support-framework-overview.md)
