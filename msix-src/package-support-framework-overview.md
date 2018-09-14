@@ -48,18 +48,6 @@ If you're ready to begin using the Package Support Framework to resolve compatib
 <br>
 <br>
 
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-<!--
  <div class="container centered pageFooter">
         <h2>Keep in touch with us</h2>
         <ul class="links">
@@ -86,5 +74,5 @@ If you're ready to begin using the Package Support Framework to resolve compatib
         </ul>
     </div>
 </div>
--->
+
 
