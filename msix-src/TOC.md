@@ -64,4 +64,4 @@
 
 # [Resources]()
 ## [MSIX Partners](msix-partners.md)
-## [Conference Videos by MSIX Team](msix-team-video.md)
+## [Conference Videos by MSIX Team](team-video.md)
