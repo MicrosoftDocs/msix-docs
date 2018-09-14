@@ -68,7 +68,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img alt="Get started icon" src="/media/common/i_get-started.svg" data-linktype="absolute-path">
+                                    <img alt="Get started icon" src="/media/common/i_get-started.svg?branch=master" data-linktype="absolute-path">
                                 </div>
                             </div>
                             <div class="cardText">
@@ -87,7 +87,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img alt="Design icon" src="/media/common/i_management.svg" data-linktype="absolute-path">
+                                    <img alt="Design icon" src="/media/common/i_management.svg?branch=master" data-linktype="absolute-path">
                                 </div>
                             </div>
                             <div class="cardText">
@@ -112,7 +112,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img alt="Develop icon" src="/media/common/i_code-edit.svg" data-linktype="absolute-path">
+                                    <img alt="Develop icon" src="/media/common/i_code-edit.svg?branch=master" data-linktype="absolute-path">
                                 </div>
                             </div>
                             <div class="cardText">
@@ -134,7 +134,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                         <div class="card">
                             <div class="cardImageOuter">
                                 <div class="cardImage">
-                                    <img alt="Develop Games icon" src="/media/common/i_build.svg" data-linktype="absolute-path">
+                                    <img alt="Develop Games icon" src="/media/common/i_build.svg?branch=master" data-linktype="absolute-path">
                                 </div>
                             </div>
                             <div class="cardText">
@@ -158,6 +158,138 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
             </li>
 </ul>
 
+<br>
+<br>
+<a name="get-started"></a>
+<h2>Developer</h2>
+<hr />
+
+<ul class="panelContent cardsF">
+<li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Get started icon" src="/media/common/i_get-started.svg?branch=master" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Get started</h3>
+                                <p>
+                                    <a href="">What is MSIX?</a>
+                                </p>
+                                <p>
+                                    <a href="">MSIX package format</a>
+                                </p>
+                                <p>
+                                    <a href="msix-sdk-overview" data-linktype="relative-path">Get setup with the MSIX SDK</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+	<li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Design icon" src="/media/common/i_management.svg?branch=master" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Build</h3>
+                                <p>
+                                    <a href="/en-us/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render" data-linktype="absolute-path">Package an app with Visual Studio</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render" data-linktype="absolute-path">Manual packaging tools</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing an app package</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+	<li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Develop icon" src="/media/common/i_code-edit.svg?branch=master" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Validate</h3>
+                                <p>
+                                    <a href="/en-us/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render" data-linktype="absolute-path">Windows App Certification Kit</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render" data-linktype="absolute-path">Windows Device Portal</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Package flighting</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+	<li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="Develop Games icon" src="/media/common/i_build.svg?branch=master" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Distribute</h3>
+                                <p>
+                                    <a href="/en-us/windows/uwp/publish/?context=/windows/msix/render" data-linktype="absolute-path">Publish to the Microsoft Store</a>
+                                </p>
+                                <p>
+                                    <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Publish to the Microsoft Store for Business</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+	<li>
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img alt="API Ref icon" src="/media/common/i_api-reference.svg?branch=master" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>API and schema references</h3>
+                                <p>
+                                    <a href="/uwp/api/windows.management.deployment?context=/windows/msix/render" data-linktype="absolute-path">Package Manager API</a>
+                                </p>
+                                <p>
+                                    <a href="/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render" data-linktype="absolute-path">App manifest schema</a>
+                                </p>
+                                <p>
+                                    <a href="/uwp/schemas/appinstallerschema/schema-root?context=/windows/msix/render" data-linktype="absolute-path">App Installer file schema</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+</ul>
+<br>
+<br>
 ## Conference talks by MSIX team
 ***
 
