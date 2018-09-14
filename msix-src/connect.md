@@ -1,7 +1,7 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Connect
+title: Connect | Microsoft Docs
 description: Connect page 
 author: laurenhughes
 ms.author: lahugh
