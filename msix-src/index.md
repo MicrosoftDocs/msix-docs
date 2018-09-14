@@ -2,7 +2,7 @@
 layout: LandingPage
 hide_bc: true
 title: MSIX Documentation
-description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of MSI, .appx, App-V and ClickOnce installation technologies. 
+description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
@@ -42,8 +42,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 
       <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the app</a></p></div>
       
-    :::column-end:::
-    :::column:::
     :::column-end:::
 :::row-end:::
 
