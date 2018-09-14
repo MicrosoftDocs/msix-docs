@@ -38,21 +38,21 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 :::row:::
     :::column:::
         ### Package existing Windows apps
-        MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format. [More...](mpt-overview.md)
+        MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format. [Learn more](mpt-overview.md)
     :::column-end:::
     :::column:::
         ### Use MSIX anywhere
-	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [More...](msix-sdk-overview.md)
+	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [Learn more](msix-sdk-overview.md)
     :::column-end:::
 :::row-end:::
 :::row:::
         :::column:::
         ### Install MSIX app packages
-        App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [More...](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
+        App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [Learn more](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
     :::column-end:::
     :::column:::
 	### Package support framework
-	PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [More...](package-support-framework-overview.md)
+	PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [Learn more](package-support-framework-overview.md)
     :::column-end:::
 :::row-end:::
 
