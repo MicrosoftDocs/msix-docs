@@ -28,7 +28,7 @@
 ## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
 
 # [MSIX SDK](sdk-overview.md)
-## [Build packages for cross platform use](msix-sdk-guidance.md)
+## [Build packages for cross platform use](sdk-guidance.md)
 
 # [Package]()
 ## [Package an app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render)
