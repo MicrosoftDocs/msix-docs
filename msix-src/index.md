@@ -68,6 +68,8 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 		### Package support framework
 		PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [more>](package-support-framework-overview.md)
     :::column-end:::
+    :::column:::
+    :::column-end:::
 :::row-end:::
 
 <br>
