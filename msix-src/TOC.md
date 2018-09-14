@@ -39,7 +39,6 @@
 ### [Package a desktop application with Visual Studio](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render)
 ### [Package a desktop application with the Desktop App Converter](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter?context=/windows/msix/render)
 ### [Package a desktop application manually](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render)
-### [Package an existing Virtual Machine](MPT/create-app-package-MSI-VM.md)
 ### [Optimize desktop application binaries with native images](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-r2r?context=/windows/msix/render)
 ## [Manual packaging tools](https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render)
 ## [Sign an app package](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render)
