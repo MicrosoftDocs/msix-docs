@@ -11,6 +11,8 @@ ms.localizationpriority: medium
 
 # Best practices for MSIX Packaging tool
 
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+
 This article covers a list of best practices for repackaging your app to MSIX and using the MSIX Packaging Tool. 
 
 To begin with, to have support of MSIX, you need to be on a RS5 build of the MSIX Packaging Tool.
