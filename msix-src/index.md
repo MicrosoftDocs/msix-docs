@@ -5,7 +5,7 @@ description: Find documentation for MSIX, an updated packaging format built to b
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
-ms.topic: landing-page
+ms.topic: overview
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
