@@ -156,10 +156,10 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="cardText">
                                 <h3>Get started</h3>
                                 <p>
-                                    <a href="">What is MSIX?</a>
+                                    <a href="msix-overview">What is MSIX?</a>
                                 </p>
                                 <p>
-                                    <a href="">MSIX package format</a>
+                                    <a href="/en-us/windows/msix/app-package-updates?context=/windows/msix/render">MSIX app updates</a>
                                 </p>
                             </div>
                         </div>
