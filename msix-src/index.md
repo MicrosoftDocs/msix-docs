@@ -1,6 +1,5 @@
 ---
 layout: LandingPage
-hide_bc: true
 title: MSIX Documentation
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
 author: laurenhughes
@@ -63,19 +62,15 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column:::
     :::column-end:::
 :::row-end:::
+
 :::row:::
         :::column:::
         ### Install MSIX app packages
         App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [More...](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
     :::column-end:::
     :::column:::
-    :::column-end:::
-
-        :::column:::
 	### Package support framework
 	PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [More...](package-support-framework-overview.md)
-    :::column-end:::
-    :::column:::
     :::column-end:::
 :::row-end:::
 
