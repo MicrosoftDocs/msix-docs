@@ -1,5 +1,5 @@
 ---
-title: MSIX Partners
+title: MSIX Partners | Microsoft Docs
 description: partners supporting MSIX
 author: laurenhughes
 ms.author: lahugh
@@ -9,7 +9,7 @@ keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
 
-## Documentation from Partners supporting MSIX
+# Documentation from Partners supporting MSIX
 <hr />
 See additional documentation from our trusted partners on MSIX tooling and support.
 
