@@ -57,10 +57,8 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 :::row-end:::
 
 <br>
-<a name="get-started"></a>
-<h2>IT Pro</h2>
-<hr />
 
+<div>
 <ul class="pivots">
     <li>
         <a data-default="true" href="#it-pro">IT pro</a>
@@ -296,6 +294,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         </ul>
     </li>      
 </ul>
+</div>
 
 <br>
 
