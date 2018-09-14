@@ -1,5 +1,5 @@
 ---
-title: MSIX SDK 
+title: MSIX SDK  | Microsoft Docs
 description: MSIX SDK is an open source project that allows developers to use MSIX package format universally on all platforms.
 author: laurenhughes
 ms.author: lahugh

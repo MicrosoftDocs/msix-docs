@@ -1,17 +1,17 @@
 # [MSIX](index.md)
-## [What is MSIX?](msix-overview.md)
-## [App package formats]()
+## [What is MSIX?](overview.md)
+## [App package formats](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages?context=/windows/msix/render)
 ### [Optional Packages](https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
 ### [Windows App Streaming Install](https://docs.microsoft.com/windows/uwp/packaging/streaming-install?context=/windows/msix/render)
 ### [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render)
 ## [App package updates](app-package-updates.md)
 
 # [MSIX Packaging Tool](mpt-overview.md)
-## [Create app package from .MSI using a VM](msix-packaging-tool/create-app-package-MSI-VM.md)
-## [Create app package using Command Line](msix-packaging-tool/package-conversion-cli.md)
+## [Create app package from .MSI using a VM](packaging-tool/create-app-package-MSI-VM.md)
+## [Create app package using Command Line](packaging-tool/package-conversion-cli.md)
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
-## [Automate Conversion using Command Line](msix-packaging-tool/automate-conversion.md)
-## [Modify package using package editor](msix-packaging-tool/package-editor.md)
+## [Automate Conversion using Command Line](packaging-tool/automate-conversion.md)
+## [Modify package using package editor](packaging-tool/package-editor.md)
 
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
@@ -27,8 +27,8 @@
 ## [App updates using App Installer file](app-installer-file-update.md)
 ## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
 
-# [MSIX SDK](msix-sdk-overview.md)
-## [Build packages for cross platform use](msix-sdk-guidance.md)
+# [MSIX SDK](sdk-overview.md)
+## [Build packages for cross platform use](sdk-guidance.md)
 
 # [Package]()
 ## [Package an app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render)
@@ -63,5 +63,5 @@
 ## [App Installer file schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render)
 
 # [Resources]()
-## [MSIX Partners](msix-partners.md)
-## [Conference Videos by MSIX Team](msix-team-video.md)
+## [MSIX Partners](partners.md)
+## [Conference Videos by MSIX Team](team-video.md)

@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-title: MSIX Documentation
+title: MSIX Documentation | Microsoft Docs
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
 author: laurenhughes
 ms.author: lahugh
@@ -24,7 +24,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column-end:::
     :::column:::
         ### Use MSIX anywhere
-	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [Learn more](msix-sdk-overview.md)
+	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [Learn more](sdk-overview.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -56,7 +56,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="cardText">
                                 <h3>Get started</h3>                                
 				<p>
-                                    <a href="/en-us/windows/msix/msix-packaging-tool/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
+                                    <a href="/en-us/windows/msix/packaging-tool/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
                                 </p>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                     <a href="/cpp/windows/desktop-applications-visual-cpp?context=/windows/msix/render" data-linktype="absolute-path">Use Visual Studio</a>
                                 </p>
                                 <p>
-                                    <a href="/msix-packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
+                                    <a href="/en-us/windows/msix/packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing packages</a>
@@ -156,10 +156,10 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="cardText">
                                 <h3>Get started</h3>
                                 <p>
-                                    <a href="">What is MSIX?</a>
+                                    <a href="/en-us/windows/msix/overview">What is MSIX?</a>
                                 </p>
                                 <p>
-                                    <a href="">MSIX package format</a>
+                                    <a href="/en-us/windows/msix/app-package-updates?context=/windows/msix/render">MSIX app updates</a>
                                 </p>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 ---
-title: AppInstaller file updates
+title: AppInstaller file updates | Microsoft Docs
 description: Learn how to update the AppInstaller file
 author: laurenhughes
 ms.author: lahugh

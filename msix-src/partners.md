@@ -1,5 +1,5 @@
 ---
-title: MSIX Partners
+title: MSIX Partners | Microsoft Docs
 description: partners supporting MSIX
 author: laurenhughes
 ms.author: lahugh
@@ -9,7 +9,7 @@ keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
 
-## Documentation from Partners supporting MSIX
+# Documentation from Partners supporting MSIX
 <hr />
 See additional documentation from our trusted partners on MSIX tooling and support.
 
@@ -23,7 +23,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/AdvancedInstaller_Logo.png" alt="" />
+                                        <img src="images/AdvancedInstaller_Logo.png" alt="Advanced Installer Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/Apptimized_Logo.png" alt="" />
+                                        <img src="images/Apptimized_Logo.png" alt="Apptimized Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/CloudHouse_Logo.png" alt="" />
+                                        <img src="images/CloudHouse_Logo.png" alt="Cloudhouse Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/EMCO_Software_Logo.png" alt="" />
+                                        <img src="images/EMCO_Software_Logo.png" alt="Emco Software Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/FireGiant_Logo.png" alt="" />
+                                        <img src="images/FireGiant_Logo.png" alt="Firegiant Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/installAware_logo.png" alt="" />
+                                        <img src="images/installAware_logo.png" alt="InstallAware Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
-                                        <img src="images/Raynet_Logo.png" alt="" />
+                                        <img src="images/Raynet_Logo.png" alt="RayNet Logo" />
                                     </div>
                                 </div>
                             </div>

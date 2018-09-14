@@ -1,5 +1,5 @@
 ---
-title: Customize your Enterprise apps with Modification Package 
+title: Customize your Enterprise apps with Modification Package | Microsoft Docs
 description: Learn how to customize your Enterprise apps
 author: laurenhughes
 ms.author: lahugh

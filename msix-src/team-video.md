@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-title: Conference talks by MSIX Team
+title: Conference talks by MSIX Team | Microsoft Docs
 description: conference talks by msix team on topics related to msix
 author: laurenhughes
 ms.author: lahugh

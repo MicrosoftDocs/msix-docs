@@ -1,5 +1,5 @@
 ---
-title: create package using command line interface
+title: create package using command line interface | Microsoft Docs
 description: create msix app package using command line interface 
 author: laurenhughes
 ms.author: lahugh

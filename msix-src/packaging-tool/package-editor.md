@@ -1,5 +1,5 @@
 ---
-title: Package Editor 
+title: Package Editor | Microsoft Docs
 description: use Package Editor to modify package information
 author: laurenhughes
 ms.author: lahugh
