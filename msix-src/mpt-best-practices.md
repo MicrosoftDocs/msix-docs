@@ -1,5 +1,5 @@
 ---
-title: Best Practices for MSIX Packaging Tool
+title: Best Practices for MSIX Packaging Tool | Microsoft Docs
 description: Best Practices for MSIX Packaging Tool 
 author: laurenhughes
 ms.author: lahugh
