@@ -4,7 +4,7 @@ description: partners supporting MSIX
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/14/2018
-ms.topic: article
+ms.topic: landing-page
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
