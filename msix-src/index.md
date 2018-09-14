@@ -16,25 +16,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 
 <br>
 
-
- :::row:::
-    :::column:::
-        >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]      
-    :::column-end:::
-:::column:::
-
-        ###     
-	### Get the MSIX Packaging Tool from Microsoft Store
-          Install the app to update existing windows 
-	  installers to be packaged in MSIX format.
-
-      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the app</a></p></div>
-      
-    :::column-end:::
-:::row-end:::
-
-<br>
-
 :::row:::
     :::column:::
         ### Package existing Windows apps
