@@ -39,7 +39,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 
 <br>
 
-<div class="container">
+<div>
 <ul class="pivots">
     <li>
         <a data-default="true" href="#it-pro">IT pro</a>
