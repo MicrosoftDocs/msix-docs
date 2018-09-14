@@ -55,18 +55,28 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
         MSIX Packaging Tool enables you to update existing Win32 application packages to the MSIX format. [more>](mpt-overview.md)
     :::column-end:::
     :::column:::
-        ### Use MSIX anywhere
-		The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [more>](msix-sdk-overview.md)
     :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ### Use MSIX anywhere
+	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [more>](msix-sdk-overview.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
         :::column:::
         ### Install MSIX app packages
         App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [more>](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
     :::column-end:::
- :::row-end:::
- :::row:::
     :::column:::
-		### Package support framework
-		PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [more>](package-support-framework-overview.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+        :::column:::
+	### Package support framework
+	PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [more>](package-support-framework-overview.md)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -92,14 +102,8 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             </div>
                             <div class="cardText">
                                 <h3>Get started</h3>                                
-                                <p>
-                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">MSIX Packaging Tool</a>
-                                </p>
 				<p>
                                     <a href="/en-us/windows/msix/mpt/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
-                                </p>
-                                <p>
-                                    <a href="/en-us/windows/msix/package-support-framework-overview" data-linktype="absolute-path">Package Support Framework</a>
                                 </p>
                             </div>
                         </div>
@@ -175,9 +179,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                 </p>
                                 <p>
                                     <a href="/en-us/intune/introduction-intune?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Intune</a>
-                                </p>
-                                <p>
-                                    <a href="/en-us/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render" data-linktype="absolute-path">Non-Store distribution</a>
                                 </p>
                             </div>
                         </div>
