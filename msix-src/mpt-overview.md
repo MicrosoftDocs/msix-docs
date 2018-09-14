@@ -1,5 +1,5 @@
 ---
-title: MSIX Packaging Tool Overview
+title: MSIX Packaging Tool Overview | Microsoft Docs
 description: Overview doc on getting started with Msix Packaging Tool
 author: laurenhughes
 ms.author: lahugh
