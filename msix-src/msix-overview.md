@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 
  :::row:::
-    :::column:::
+    :::column span="2":::
         >[!VIDEO https://www.youtube.com/embed/phrD081sMWc]      
     :::column-end:::
 :::column:::
