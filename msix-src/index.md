@@ -57,7 +57,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 :::row-end:::
 
 <br>
-<br>
 <a name="get-started"></a>
 <h2>IT Pro</h2>
 <hr />
@@ -286,7 +285,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
             </li>
 </ul>
 
-<br>
 <br>
 
 ## Conference talks by MSIX team
