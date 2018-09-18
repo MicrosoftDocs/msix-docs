@@ -75,7 +75,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="cardText">
                                 <h3>Package</h3>
                                 <p>
-                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">MSIX Packaging Tool</a>
+                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">Use MSIX Packaging Tool</a>
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/msix/packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
