@@ -76,7 +76,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                 </a>
             </li>
             <li>
-                <a href="https://www.firegiant.com/">
+                <a href="https://www.firegiant.com/r/msix/">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
