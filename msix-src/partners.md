@@ -15,7 +15,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 
 <div class="v2" id="main1">
     <div class="container">
-        <ul class="cardsX panelContent singlePanelContent cols cols3" style="float: left; display: flex!important;">
+        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
             <li>
                 <a href="https://www.advancedinstaller.com/desktop-bridge">
                     <div class="cardSize">
