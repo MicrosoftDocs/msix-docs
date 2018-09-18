@@ -31,6 +31,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
+ <!--           
             <li>
                 <a href="https://www.apptimized.com/solutions/">
                     <div class="cardSize">
@@ -46,6 +47,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
+-->
             <li>
                 <a href="https://cloudhouse.com/msixpr">
                     <div class="cardSize">
@@ -61,6 +63,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
+<!--
             <li>
                 <a href="https://emcosoftware.com/msi-package-builder">
                     <div class="cardSize">
@@ -76,6 +79,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
+-->
             <li>
                 <a href="https://www.firegiant.com/r/msix/">
                     <div class="cardSize">
@@ -84,6 +88,21 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
                                         <img src="images/FireGiant_Logo.png" alt="Firegiant Logo" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage" style="height: auto;">
+                                        <img src="images/Flexera_Logo.png" alt="Flexera Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -106,6 +125,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
+ <!--
             <li>
                 <a href="https://raynet.de/en/Raynet-Products/RayPackStudio">
                     <div class="cardSize">
@@ -121,6 +141,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
+-->
         </ul>
     </div>
 </div>
