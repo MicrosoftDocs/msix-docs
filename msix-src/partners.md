@@ -4,7 +4,7 @@ description: partners supporting MSIX
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/14/2018
-ms.topic: landing-page
+ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
@@ -13,6 +13,7 @@ ms.localizationpriority: medium
 <hr />
 See additional documentation from our trusted partners on MSIX tooling and support.
 
+<div class="v2" id="main1">
     <div class="container">
         <ul class="cardsX panelContent singlePanelContent cols cols3" style="float: left; display: flex!important;">
             <li>
@@ -122,5 +123,5 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
             </li>
         </ul>
     </div>
-
+</div>
 
