@@ -4,7 +4,7 @@ description: partners supporting MSIX
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/14/2018
-ms.topic: article
+ms.topic: landing-page
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
@@ -15,7 +15,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 
 <div class="v2" id="main1">
     <div class="container">
-        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
+        <ul class="cardsX panelContent singlePanelContent cols cols3" style="float: left; display: flex!important;">
             <li>
                 <a href="https://www.advancedinstaller.com/desktop-bridge">
                     <div class="cardSize">
@@ -31,7 +31,6 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
- <!--           
             <li>
                 <a href="https://www.apptimized.com/solutions/">
                     <div class="cardSize">
@@ -47,7 +46,6 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
--->
             <li>
                 <a href="https://cloudhouse.com/msixpr">
                     <div class="cardSize">
@@ -63,7 +61,6 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
-<!--
             <li>
                 <a href="https://emcosoftware.com/msi-package-builder">
                     <div class="cardSize">
@@ -79,30 +76,14 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
--->
             <li>
-                <a href="https://www.firegiant.com/r/msix/">
+                <a href="https://www.firegiant.com/">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage" style="height: auto;">
                                         <img src="images/FireGiant_Logo.png" alt="Firegiant Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/Flexera_Logo.png" alt="Flexera Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +106,6 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
- <!--
             <li>
                 <a href="https://raynet.de/en/Raynet-Products/RayPackStudio">
                     <div class="cardSize">
@@ -141,7 +121,6 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
                     </div>
                 </a>
             </li>
--->
         </ul>
     </div>
 </div>

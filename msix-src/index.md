@@ -75,7 +75,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="cardText">
                                 <h3>Package</h3>
                                 <p>
-                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">Use MSIX Packaging Tool</a>
+                                    <a href="/cpp/windows/desktop-applications-visual-cpp?context=/windows/msix/render" data-linktype="absolute-path">Use Visual Studio</a>
                                 </p>
                                 <p>
                                     <a href="/en-us/windows/msix/packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
@@ -103,7 +103,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                     <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store flighting</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render#first-download-the-policies-and-then-choose-one" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
+                                    <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
                                 </p>
                             </div>
                         </div>
@@ -132,9 +132,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                 </p>
                                 <p>
                                     <a href="/en-us/intune/introduction-intune?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Intune</a>
-                                </p>
-                                <p>
-                                    <a href="/en-us/windows/uwp/packaging/install-related-set?context=/windows/msix/render" data-linktype="absolute-path">Non-Store Distribution</a>
                                 </p>
                             </div>
                         </div>
@@ -214,9 +211,6 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                 <p>
                                     <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Package flighting</a>
                                 </p>
-                                <p>
-                                    <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -234,13 +228,10 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                             <div class="cardText">
                                 <h3>Distribute</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store</a>
+                                    <a href="/en-us/windows/uwp/publish/?context=/windows/msix/render" data-linktype="absolute-path">Publish to the Microsoft Store</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store for Business</a>
-                                </p>
-                                <p>
-                                    <a href="/en-us/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render" data-linktype="absolute-path">Non-Store Distribution</a>
+                                    <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Publish to the Microsoft Store for Business</a>
                                 </p>
                             </div>
                         </div>
