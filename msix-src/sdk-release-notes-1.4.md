@@ -1,5 +1,5 @@
 ---
-title: msix sdk release notes | Microsoft Docs
+title: MSIX SDK Ver 1.4 Release Notes | Microsoft Docs
 description: release notes for msix sdk ver 1.4
 author: c-don
 ms.author: cdon
@@ -23,4 +23,33 @@ Along with the performance and feature improvements, we are also including bette
 
 You can get the latest SDK on GitHub. 
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://github.com/Microsoft/msix-packaging" data-linktype="external">Get the tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://github.com/Microsoft/msix-packaging" data-linktype="external">MSIX SDK on GitHub</a></p></div>
+
+<div class="container centered pageFooter">
+        <h2>Have feedback for us? We'd love to hear it.</h2>
+        <ul class="links">
+           <li>
+                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                    MSIX tech community
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                    Package Support Framework
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Microsoft/msix-packaging/issues">
+                    MSIX SDK
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/#!/search/realtime/%23msix">
+                    Twitter
+                </a>
+            </li>
+            
+        </ul>
+</div>
+
+
