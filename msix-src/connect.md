@@ -11,7 +11,7 @@ keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
 
-<div class="container centered">
+<div class="container centered pageFooter">
         <h2>Have feedback for us? We'd love to hear it.</h2>
         <ul class="links">
            <li>
