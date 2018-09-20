@@ -52,7 +52,7 @@ You can get the latest SDK on GitHub.
         </ul>
         
         <br>
-        </br>
+        <br>
         
 </div>
 
