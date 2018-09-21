@@ -1,6 +1,6 @@
 ---
 title: Package Editor | Microsoft Docs
-description: use Package Editor to modify package information
+description: Use Package Editor to modify package information
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
@@ -56,13 +56,7 @@ There are multiple context menu options on this page:
     - Add binary: to add a binary value to a key
     - Add DWORD: to add a DWORD value to a key
 
-![pic14](pic14.png)
-
 This page shows the package files, user can add or delete files by right clicking on a file and selecting add file or delete.
-
-![pic15](pic15.png)
-
-Last page is for editing Package Support Framework runtime fixes. (Coming soon)
 
 
 <br>
