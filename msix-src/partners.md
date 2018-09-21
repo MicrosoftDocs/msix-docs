@@ -17,7 +17,8 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
     :::column:::
     [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
     :::column-end:::
-<!--    :::column:::
+<!--    
+	:::column:::
     [![Camwood logo](images/Camwood_Logo.jpg)](http://camwood.com/windows-10/)
     :::column-end:::
 -->
@@ -34,11 +35,11 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	[![Emco logo](images/EMCO_Software_Logo.png)](https://emcosoftware.com/msi-package-builder)
     :::column-end:::
 -->
-	:::column:::
-	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)     
-	:::column-end::: 
 :::row-end:::
 :::row:::
+	:::column:::
+	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)     
+	:::column-end:::
     :::column:::
 	[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
 	:::column-end:::
@@ -50,9 +51,5 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	[![Raynet logo](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
 	:::column-end:::
 -->
-	:::column:::
-    :::column-end:::
-	:::column:::
-	:::column-end:::
 :::row-end:::
 
