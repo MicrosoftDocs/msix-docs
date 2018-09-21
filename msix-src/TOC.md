@@ -30,6 +30,8 @@
 ## [Troubleshoot installation issues with App Installer file](https://docs.microsoft.com/windows/uwp/packaging/troubleshoot-appinstaller-issues?context=/windows/msix/render)
 
 # [MSIX SDK](sdk-overview.md)
+## [Release Notes]()
+### [MSIX SDK Ver 1.4](sdk-release-notes-1.4.md)
 ## [Build packages for cross platform use](sdk-guidance.md)
 
 # [Package]()

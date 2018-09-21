@@ -4,7 +4,7 @@ description: partners supporting MSIX
 author: laurenhughes
 ms.author: lahugh
 ms.date: 09/14/2018
-ms.topic: landing-page
+ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
@@ -13,115 +13,46 @@ ms.localizationpriority: medium
 <hr />
 See additional documentation from our trusted partners on MSIX tooling and support.
 
-<div class="v2" id="main1">
-    <div class="container">
-        <ul class="cardsX panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
-            <li>
-                <a href="https://www.advancedinstaller.com/desktop-bridge">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/AdvancedInstaller_Logo.png" alt="Advanced Installer Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apptimized.com/solutions/">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/Apptimized_Logo.png" alt="Apptimized Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://cloudhouse.com/msixpr">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/CloudHouse_Logo.png" alt="Cloudhouse Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://emcosoftware.com/msi-package-builder">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/EMCO_Software_Logo.png" alt="Emco Software Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.firegiant.com/">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/FireGiant_Logo.png" alt="Firegiant Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.installaware.com/msix.htm">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/installAware_logo.png" alt="InstallAware Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://raynet.de/en/Raynet-Products/RayPackStudio">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage" style="height: auto;">
-                                        <img src="images/Raynet_Logo.png" alt="RayNet Logo" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
+:::row:::
+    :::column:::
+    [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
+    :::column-end:::
+<!--    :::column:::
+    [![Camwood logo](images/Camwood_Logo.jpg)](http://camwood.com/windows-10/)
+    :::column-end:::
+-->
+<!--
+    :::column:::
+     [![Apptimized logo](images/Apptimized_Logo.png)](https://www.apptimized.com/solutions/)  
+    :::column-end:::
+-->
+    :::column:::
+	[![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)     
+	:::column-end:::
+<!--
+    :::column:::
+	[![Emco logo](images/EMCO_Software_Logo.png)](https://emcosoftware.com/msi-package-builder)
+    :::column-end:::
+-->
+	:::column:::
+	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)     
+	:::column-end::: 
+:::row-end:::
+:::row:::
+    :::column:::
+	[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
+	:::column-end:::
+	:::column:::
+	[![Installaware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)     
+	:::column-end:::
+<!--
+    :::column:::
+	[![Raynet logo](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
+	:::column-end:::
+-->
+	:::column:::
+    :::column-end:::
+	:::column:::
+	:::column-end:::
+:::row-end:::
 
