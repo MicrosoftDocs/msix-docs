@@ -14,6 +14,7 @@
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
 ## [Automate Conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)
+## [Modification Packages](modification-packages.md)
 
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
