@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 
 # Documentation from Partners supporting MSIX
-<hr />
+
 See additional documentation from our trusted partners on MSIX tooling and support.
 
 :::row:::
