@@ -42,7 +42,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
 	:::column-end:::
 	:::column:::
-	[![Installaware logo](images/installaware-logo.png)](https://www.installaware.com/msix.htm)     
+	[![Installaware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)     
 	:::column-end:::
 <!--
     :::column:::
