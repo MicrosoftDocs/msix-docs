@@ -35,6 +35,8 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	[![Emco logo](images/EMCO_Software_Logo.png)](https://emcosoftware.com/msi-package-builder)
     :::column-end:::
 -->
+	:::column:::
+	:::column-end:::
 :::row-end:::
 :::row:::
 	:::column:::
