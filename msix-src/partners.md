@@ -38,13 +38,13 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	:::column:::
 	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)     
 	:::column-end:::
-    :::column:::
-
-	[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
+    
+	:::column:::
+		[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
 	:::column-end:::
-	:::row-end:::
+:::row-end:::
 
-	:::row:::
+:::row:::
 	:::column:::
 	[![Installaware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)     
 	:::column-end:::
@@ -53,5 +53,14 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	[![Raynet logo](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
 	:::column-end:::
 -->
+:::column:::
+:::column-end:::
+
+:::column:::
+:::column-end:::
+
+:::column:::
+:::column-end:::
+
 :::row-end:::
 
