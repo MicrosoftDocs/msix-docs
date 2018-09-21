@@ -18,7 +18,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
     [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
     :::column-end:::
     :::column:::
-    [![Camwood logo](images/Camwood_Logo.png)](http://camwood.com/windows-10/)
+    [![Camwood logo](images/Camwood_Logo.jpg)](http://camwood.com/windows-10/)
     :::column-end:::
 <!--
     :::column:::
