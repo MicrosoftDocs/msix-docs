@@ -25,17 +25,17 @@ ms.localizationpriority: medium
 ## Conference Videos by MSIX Team
 :::row:::
     :::column:::
-	>[!VIDEO https://myignite.techcommunity.microsoft.com/sessions/64604]
+	>[!VIDEO https://www.youtube.com/watch?time_continue=27&v=sBOTQoi6iXQ]
         #### MSIX inside and out
         MSIX is the future of app installation and a significant step forward in enabling enterprises to modernize their app deployment processes and stay current with Windows, Office and third-party apps. 
     :::column-end:::
     :::column:::
-    >[!VIDEO https://myignite.techcommunity.microsoft.com/sessions/64526]
+    >[!VIDEO https://www.youtube.com/watch?v=0kSwCOr7-Ao]
         #### MSIX – Accelerating Windows 10 and app deployment
-        MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MISX in your enterprise and the benefits to developers, IT Pros and end users. 
+        MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users. 
     :::column-end:::
     :::column:::
-    >[!VIDEO https://myignite.techcommunity.microsoft.com/sessions/64524]
+    >[!VIDEO https://www.youtube.com/watch?v=_wCv31TI_30]
         #### Updating your existing Configuration Manager apps to MSIX
         MSIX simplifies and modernizes app deployment. It brings a faster, more reliable, and rot-free deployment for your enterprise. Learn the ins and outs of updating your existing System Center Configuration Manager apps to MSIX along with how it will integrate with Configuration Manager. 
     :::column-end:::
