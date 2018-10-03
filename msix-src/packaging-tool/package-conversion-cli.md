@@ -100,7 +100,9 @@ Examples:
         DisableWindowsUpdateService ="true"/>
     <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute -->
 
-    <SaveLocation Path="C:\users\user\Desktop" />
+    <SaveLocation
+    PackagePath="C:\users\user\Desktop\MyPackage.msix" 
+    TemplatePath="C:\users\user\Desktop\MyTemplate.xml" />
 
     <Installer
         Path="C:\MyAppInstaller.msi"
@@ -130,8 +132,7 @@ Examples:
         </Capabilities>
 
     </PackageInformation>
-</MsixPackagingToolTemplate> 
-
+</MsixPackagingToolTemplate>
 ```
 
 **Conversion template parameter reference**
@@ -153,8 +154,9 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |PrepareComputer:: DisableWindowsSearchService |		[optional] Disables Windows Search while the app is being converted. If set to false, overrides ApplyAllPrepareComputerFixes.|
 |PrepareComputer:: DisableSmsHostService	 |	[optional] Disables SMS Host while the app is being converted. If set to false, overrides ApplyAllPrepareComputerFixes.|
 |PrepareComputer:: DisableWindowsUpdateService	 |	[optional] Disables Windows Update while the app is being converted. If set to false, overrides ApplyAllPrepareComputerFixes.|
-|SaveLocation |		[optional] An element to specify the save location of the tool. If not specified, the package will be saved under the Desktop folder.|
-|SaveLocation::Path	 |	The path to the folder where the resulting MSIX package is saved.|
+|SaveLocation     |[optional] An element to specify the save location of the tool. If not specified, the package will be saved under the Desktop folder.         |
+|SaveLocation::PackagePath     |[optional] The path to the file or folder where the resulting MSIX package is saved.         |
+|SaveLocation::TemplatePath    |[optional] The path to the file or folder where the resulting CLI template is saved.    |
 |Installer::Path |		The path to the application installer.|
 |Installer::Arguments |		The arguments to pass to the installer. You must pass the arguments to force your installer to run unattended/silently.|
 |Installer::InstallLocation |		[optional] The full path to your application's root folder for the installed files if it were installed (e.g. "C:\Program Files (x86)\MyAppInstalllocation").|
