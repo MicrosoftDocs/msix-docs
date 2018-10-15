@@ -45,7 +45,7 @@ The **Create App Packages** wizard appears.
 
 **Enable automatic updates** is enabled only if the project's `TargetPlatformMinVersion` is set to the correct version of Windows 10.
 
-3. The **Select and Configure Packages** dialog allows you to select the supported architecture configurations. If you select a bundle it will generate a single installer, however if you don't want a bundle and prefer one package per architecture you will also get one installer file per architecture.  If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](device-architecture.md).
+3. The **Select and Configure Packages** dialog allows you to select the supported architecture configurations. If you select a bundle it will generate a single installer, however if you don't want a bundle and prefer one package per architecture you will also get one installer file per architecture.  If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render).
 
 4. Configure any additional details, such as version numbering or the package output location.
 
