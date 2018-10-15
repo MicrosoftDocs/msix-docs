@@ -28,8 +28,8 @@
 ## [AppInstaller File](app-installer/app-installer-file-overview.md)
 ## [Create AppInstaller file in Visual Studio](app-installer/create-appinstallerfile-vs.md)
 ## [Create AppInstaller file manually](app-installer/how-to-create-appinstaller-file.md)
-## [AppInstaller file Update Settings](update-settings.md)
-## [App updates using AppInstaller file](app-installer/install-related-set.md)
+## [AppInstaller file Update Settings](app-installer/update-settings.md)
+## [Optional packages and related sets](app-installer/install-related-set.md)
 ## [Troubleshoot installation issues with App Installer file](app-installer/troubleshoot-appinstaller-issues.md)
 
 # [MSIX SDK](sdk-overview.md)

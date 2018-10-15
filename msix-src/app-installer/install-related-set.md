@@ -11,9 +11,9 @@ keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, o
 ms.localizationpriority: medium
 ---
 
-# Install a related set using an App Installer file
+# Optional Packages and Related Sets
 
-If you're just starting out with UWP optional packages or related sets, the following articles are good resources to get started. 
+If you're just starting out with Windows 10 optional packages or related sets, the following articles are good resources to get started: 
 
 1.  [Extend your application using Optional Packages](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
 2.  [Build your first Optional Package](https://blogs.msdn.microsoft.com/appinstaller/2017/05/09/build-your-first-optional-package/)
