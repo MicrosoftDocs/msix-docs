@@ -15,7 +15,7 @@ With the Windows 10 1809 update, you can now package your registry-based plugins
 
 Note that your main package may be using the VREG to do the following things: 
 1.	Viewing where to load the file i.e. dll of plugin. If this is the case, then ensure that the file is part of the package. By doing this, main package is able to access the file at runtime.  
-2.	Viewing where to see the value of the VREG keys. Your main package may be looking for a value to exist in the VREG. When you create your modification package either by hand or using our tool, ensure that the value is correct. 
+2.	Viewing where to see the value of the VREG keys. Your main package may be looking for a value to exist in the VREG. When you create your modification package either by hand or using our [tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf), ensure that the value is correct. 
 
 You can create a modification package with the MSIX Packaging Tool 
 -	Specify the main package. Be sure to have the MSIX version of your main package available on your machine that you are converting on. If not than we will ask you to manually provide the publisher and main application information. Also some customization require that your main application is installed on your machine.
