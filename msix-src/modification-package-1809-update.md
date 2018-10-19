@@ -19,11 +19,11 @@ Note that your main package may be using the VREG to do the following things:
 2.	Viewing where to see the value of the VREG keys. Your main package may be looking for a value to exist in the VREG. When you create your modification package either by hand or using our tool, ensure that the value is correct. 
 
 You can create a modification package with the MSIX Packaging Tool 
-•	Specify the main package. Be sure to have the MSIX version of your main package available on your machine that you are converting on. If not than we will ask you to manually provide the publisher and main application information. Also some customization require that your main application is installed on your machine.
-•	Modify the package ones it has gone through conversion using the package editor. There may be a case where the main package requires your modification package to have certain values in their VREG. This is where you would go and edit the package appropriately. 
+-	Specify the main package. Be sure to have the MSIX version of your main package available on your machine that you are converting on. If not than we will ask you to manually provide the publisher and main application information. Also some customization require that your main application is installed on your machine.
+-	Modify the package ones it has gone through conversion using the package editor. There may be a case where the main package requires your modification package to have certain values in their VREG. This is where you would go and edit the package appropriately. 
 
 You can create a modification package manually by using the makeappx tool that you can get with our Windows 10 SDK
-•	In the manifest, specify the main package – include the publisher and the main package name
+-	In the manifest, specify the main package – include the publisher and the main package name
 
 ```xml
 
