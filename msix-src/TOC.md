@@ -15,7 +15,7 @@
 ## [Automate Conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)
 ## [Modification Packages](modification-packages.md)
-### [Modification Pacakage on Windows 10 1809 Update](modification-package-1809-update.md)
+### [Modification Package on Windows 10 1809 Update](modification-package-1809-update.md)
 
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
