@@ -23,7 +23,7 @@ ms.localizationpriority: medium
           Install the app to update existing windows 
 	  installers to be packaged in MSIX format.
 
-      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get the tool</a></p></div>
+      <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get the tool</a></p></div>
       
     :::column-end:::
 :::row-end:::

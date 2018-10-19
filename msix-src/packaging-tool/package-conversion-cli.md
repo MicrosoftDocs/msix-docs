@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 # Conversion with CLI
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
       
 To create a new MSIX package for your application, run the MsixPackagingTool.exe create-package command in a Command prompt window. 
 
