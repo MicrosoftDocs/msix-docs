@@ -6,8 +6,8 @@ ms.author: diahar
 ms.date: 10/19/2018
 ms.topic: article
 ms.prod: windows
-ms.technology: uwp
-keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
+ms.technology: windows 10, uwp, msix
+keywords: 
 ms.localizationpriority: medium
 ---
 
