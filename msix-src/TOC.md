@@ -1,4 +1,4 @@
- # [MSIX](index.md)
+# [MSIX](index.md)
 ## [What is MSIX?](overview.md)
 ## [App package formats](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages?context=/windows/msix/render)
 ### [Optional Packages](https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render)
