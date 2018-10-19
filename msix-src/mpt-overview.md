@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # MSIX Packaging Tool 
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 The MSIX Packaging Tool enables you to repackage your existing Win32 applications to the MSIX format. It offers both an interactive GUI and a command line for conversions, and gives you the ability to convert an application without having the source code. We want to enable IT Pros to convert their existing assets to MSIX, to give them a better way to do packaging and app management.
 
@@ -24,7 +24,7 @@ MSIX Packaging Tool (Preview) is now available to from the Microsoft Store. You 
 - Administrator privileges on your PC account
 - A valid MSA alias (to access the app from the Store)
  
-To install MSIX Packaging Tool from Microsoft Store, go [here](https://www.microsoft.com/store/r/9N5LW3JBCXKF), making sure you are logged in with the MSA that is used for your Windows Insider Program. Next, go to the product description page and click the Install icon to begin the installation.
+To install MSIX Packaging Tool from Microsoft Store, go [here](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf), making sure you are logged in with the MSA that is used for your Windows Insider Program. Next, go to the product description page and click the Install icon to begin the installation.
  
 Remember, this a preview and not all features are supported. Here is what you can expect to be able to do with this preview:
  

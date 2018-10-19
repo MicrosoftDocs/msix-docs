@@ -21,7 +21,7 @@ In the Fall 2018 release, we are introducing modifications packages. Modificatio
 
 Again, modification packages are geared towards enterprises that do not own the code of the application and only have the installer. If you have the code for the application, we suggest you use app extensions model to do similar things. You can create a modification package by using the MSIX packaging tool that will be out early in Fall 2018 (or earlier with an Insider build) 
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/store/r/9N5LW3JBCXKF" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 However, if you would like to create a modification package that has a strict binding to the main app you can declare the main app as a dependency in the modification package’s manifest. 
 
