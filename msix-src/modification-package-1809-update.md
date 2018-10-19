@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 
 # MSIX Modification packages on Windows 10 1809 update 
-With the Windows 10 1908 update, you can now package your registry-based plugins and customization inside an MSIX modification package. Customization can include configurations needed to be set in the registry such that the main package will run as expected. Meaning your main application leverages the registry to view whether a plugin exist. When you deploy the main package and the modification package, at runtime the application will view the virtual registry (VREG) of both the main package and the modification package. 
+With the Windows 10 1809 update, you can now package your registry-based plugins and customization inside an MSIX modification package. Customization can include configurations needed to be set in the registry such that the main package will run as expected. Meaning your main application leverages the registry to view whether a plugin exist. When you deploy the main package and the modification package, at runtime the application will view the virtual registry (VREG) of both the main package and the modification package. 
 
 Note that your main package may be using the VREG to do the following things: 
 1.	Viewing where to load the file i.e. dll of plugin. If this is the case, then ensure that the file is part of the package. By doing this, main package is able to access the file at runtime.  
@@ -19,6 +19,8 @@ Note that your main package may be using the VREG to do the following things:
 
 You can create a modification package with the MSIX Packaging Tool 
 -	Specify the main package. Be sure to have the MSIX version of your main package available on your machine that you are converting on. If not than we will ask you to manually provide the publisher and main application information. Also some customization require that your main application is installed on your machine.
+![Modification Package MPT](images/MPT-mod-page.png)
+
 -	Modify the package ones it has gone through conversion using the package editor. There may be a case where the main package requires your modification package to have certain values in their VREG. This is where you would go and edit the package appropriately. 
 
 You can create a modification package manually by using the makeappx tool that you can get with our Windows 10 SDK
@@ -35,6 +37,3 @@ You can create a modification package manually by using the makeappx tool that y
 
 We also support file system type plugins and customization if the executable of the main application is not in a VFS. This is to ensure that the main package will get all the VFS of the main package and the modification package. We are currently working on supporting file system type plugins and customization with executable in VFS in the next release. 
 
-Thanks for taking the time to read. 
-
--MSIX team
