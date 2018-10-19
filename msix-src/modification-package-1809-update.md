@@ -27,13 +27,12 @@ You can create a modification package manually by using the makeappx tool that y
 -	In the manifest, specify the main package – include the publisher and the main package name
 
 ```xml
-
 <Dependencies>
   <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17701.0" MaxVErsionTest="12.0.0.0"/>
   <uap4:MainPackageDependency Name="HeadTrax" Publisher="CN=Contoso Software, O=Contoso Corporation, C=US" />
 </Dependencies>
 ```
-•	Create Registry.dat, User.dat and Userclass.dat to whatever is needed to load your modification package. This is only required if you need your main application to view custom registry keys. Remember that since everything is running inside a container, at runtime the main package and the modification package virtual registry will merge such that main package can view the modification packages virtual registry.  
+• 	Create Registry.dat, User.dat and Userclass.dat to whatever is needed to load your modification package. This is only required if you need your main application to view custom registry keys. Remember that since everything is running inside a container, at runtime the main package and the modification package virtual registry will merge such that main package can view the modification packages virtual registry.  
 
 We also support file system type plugins and customization if the executable of the main application is not in a VFS. This is to ensure that the main package will get all the VFS of the main package and the modification package. We are currently working on supporting file system type plugins and customization with executable in VFS in the next release. 
 
