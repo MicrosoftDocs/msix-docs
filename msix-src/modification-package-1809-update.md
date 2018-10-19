@@ -29,7 +29,7 @@ You can create a modification package manually by using the makeappx tool that y
 
 ```xml
 <Dependencies>
-  <TargetDeviceFamily Name="Windows.Desktop" MinOSVersion="10.0.17701.0" MaxVersionTest="12.0.0.0"/>
+  <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17701.0" MaxVersionTested="12.0.0.0"/>
   <uap4:MainPackageDependency Name="HeadTrax" Publisher="CN=Contoso Software, O=Contoso Corporation, C=US" />
 </Dependencies>
 ```
