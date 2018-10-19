@@ -1,6 +1,6 @@
 ---
 author: dianmsft
-title: MSIX Modification packages on Windows 10 1809 update 
+title: MSIX Modification packages on Windows 10 1809 update | Microsoft Docs
 description: In this section, we will review modification packages in Windows 10 1809 Update
 ms.author: diahar
 ms.date: 10/19/2018
@@ -10,7 +10,8 @@ keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
 
-# MSIX Modification packages on Windows 10 1809 update 
+# MSIX modification packages on Windows 10 1809 update 
+
 With the Windows 10 1809 update, you can now package your registry-based plugins and customization inside an MSIX modification package. Customization can include configurations needed to be set in the registry such that the main package will run as expected. Meaning your main application leverages the registry to view whether a plugin exist. When you deploy the main package and the modification package, at runtime the application will view the virtual registry (VREG) of both the main package and the modification package. 
 
 Note that your main package may be using the VREG to do the following things: 
@@ -28,7 +29,7 @@ You can create a modification package manually by using the makeappx tool that y
 
 ```xml
 <Dependencies>
-  <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17701.0" MaxVErsionTest="12.0.0.0"/>
+  <TargetDeviceFamily Name="Windows.Desktop" MinOSVersion="10.0.17701.0" MaxVersionTest="12.0.0.0"/>
   <uap4:MainPackageDependency Name="HeadTrax" Publisher="CN=Contoso Software, O=Contoso Corporation, C=US" />
 </Dependencies>
 ```
@@ -36,3 +37,31 @@ You can create a modification package manually by using the makeappx tool that y
 
 We also support file system type plugins and customization if the executable of the main application is not in a VFS. This is to ensure that the main package will get all the VFS of the main package and the modification package. We are currently working on supporting file system type plugins and customization with executable in VFS in the next release. 
 
+<br>
+<br>
+
+<div class="container centered pageFooter">
+    <h2>Keep in touch with us</h2>
+    <ul class="links">
+        <li>
+            <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
+                MSIX tech community
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
+                Package Support Framework
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Microsoft/msix-packaging/issues">
+                MSIX SDK
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/#!/search/realtime/%23msix">
+                Twitter
+            </a>
+        </li>            
+    </ul>
+</div>
