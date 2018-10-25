@@ -45,7 +45,8 @@ Examples:
         AllowTelemetry="true"
         ApplyAllPrepareComputerFixes="true"
         GenerateCommandLineFile="true"
-        AllowPromptForPassword="false" >
+        AllowPromptForPassword="false" 
+		EnforceMicrosoftStoreVersioningRequirements="false">
 
         <ExclusionItems>
             <FileExclusion ExcludePath="[{CryptoKeys}]" />
@@ -145,6 +146,7 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |Settings:: ApplyAllPrepareComputerFixes	 |	[optional] Applies all recommended prepare computer fixes. Cannot be set when other attributes are used.|
 |Settings:: GenerateCommandLineFile	 |	[optional] Copies the template file input to the SaveLocation directory for future use.|
 |Settings:: AllowPromptForPassword |		[optional] Instructs the tool to prompt the user to enter passwords for the Virtual Machine and for the signing certificate if it is required and not specified.|
+|Settings:: EnforceMicrosoftStoreVersioningRequirements |		[optional] Instructs the tool to enforce the package versioning scheme required for deployment from Microsoft Store and Microsoft Store for Business.|
 |ExclusionItems |		[optional] 0 or more FileExclusion or RegistryExclusion elements. All FileExclusion elements must appear before any RegistryExclusion elements.|
 |ExclusionItems::FileExclusion |		[optional] A file to exclude for packaging.|
 |ExclusionItems::FileExclusion::ExcludePath |		Path to file to exclude for packaging.|
