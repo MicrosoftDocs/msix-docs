@@ -46,7 +46,7 @@ Examples:
         ApplyAllPrepareComputerFixes="true"
         GenerateCommandLineFile="true"
         AllowPromptForPassword="false" 
-		EnforceMicrosoftStoreVersioningRequirements="false">
+	EnforceMicrosoftStoreVersioningRequirements="false">
 
         <ExclusionItems>
             <FileExclusion ExcludePath="[{CryptoKeys}]" />
