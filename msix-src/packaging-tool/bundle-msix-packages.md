@@ -35,10 +35,40 @@ Once the Windows 10 SDK is installed, MakeAppx.exe is usually found here:
 ### Step 2: Bundle the packages
 Use MakeAppx.exe to bundle the packages like the following. The easiest way to bundle packages is by adding all the packages that you want to bundle together in one folder. It is recommended that the directory be free of everything else except the packages that been to be bundled. 
 
+Move the app packages that you want to bundle into one directory:
+![pic1](bundle-pic1.png)
+
 [!NOTE] MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package architecture for application package and resourceID for [resource packages]() can be different. 
 
 [!NOTE] Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. 
 
-```command prompt
-MakeAppx.exe bundle 
+```Command Prompt
+C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
 ```
+```Command Prompt
+Example:
+C:\> MakeAppx.exe bundle /d c:\users\johnsmith\Desktop\AppPackages\ /p c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg.msixbundle
+```
+After running the command, an unsigned msixbundle will be created in the path specified. 
+
+### Step 3: Sign the bundle
+Now that we created the bundle, you will need to sign the package before you can distribute the app to your users or even to install it. 
+
+To sign a package, you will need a general code signing certificate and use the SignTool from the Windows 10 SDK. 
+
+We strongly recommend that you use a trusted cert from certificate authority as that allows for the package to be distributed and deployed on your end users devices seamlessly. Once you have access to the private certificate(.pfx file), you can sign the package like so:
+
+[!NOTE] SignTool.exe can be found in the same directory as MakeAppx.exe and is distributed as part of the Windows 10 SDK. 
+
+```Command Prompt
+C:\> SignTool.exe sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msixbundle
+```
+```Command Prompt
+Example:
+C:\>SignTool sign /fd SHA256 /a /f c:\users\johnsmith\Desktop\private-cert.pfx /p aaabbb123 c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg_Signed.msixbundle
+```
+
+More information and help with signing app packages with SignTool is available [here](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool). 
+
+After successfully signing the bundle, you are ready to host it on a network share, or on a CDN to distribute it to your users. 
+
