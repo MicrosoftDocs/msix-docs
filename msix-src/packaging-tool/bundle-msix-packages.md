@@ -39,10 +39,10 @@ Move the app packages that you want to bundle into one directory:
 ![pic1](bundle-pic1.png)
 
 >[!NOTE] 
-MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package architecture for application package and resourceID for [resource packages]() can be different. 
+> MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package architecture for application package and resourceID for [resource packages]() can be different. 
 
 >[!NOTE]
-Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. 
+> Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. 
 
 ```Command Prompt
 C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
@@ -61,7 +61,7 @@ To sign a package, you will need a general code signing certificate and use the 
 We strongly recommend that you use a trusted cert from certificate authority as that allows for the package to be distributed and deployed on your end users devices seamlessly. Once you have access to the private certificate(.pfx file), you can sign the package like so:
 
 >[!NOTE]
-SignTool.exe can be found in the same directory as MakeAppx.exe and is distributed as part of the Windows 10 SDK. 
+> SignTool.exe can be found in the same directory as MakeAppx.exe and is distributed as part of the Windows 10 SDK. 
 
 ```Command Prompt
 C:\> SignTool.exe sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msixbundle
