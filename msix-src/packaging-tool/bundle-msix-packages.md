@@ -39,10 +39,7 @@ Move the app packages that you want to bundle into one directory:
 ![pic1](bundle-pic1.png)
 
 >[!NOTE] 
-> MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package architecture for application package and resourceID for [resource packages]() can be different. 
-
->[!NOTE]
-> Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. 
+> MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package architecture for an application package and resourceID for a resource packages can be different. 
 
 ```Command Prompt
 C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
@@ -51,6 +48,10 @@ C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
 Example:
 C:\> MakeAppx.exe bundle /d c:\users\johnsmith\Desktop\AppPackages\ /p c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg.msixbundle
 ```
+
+>[!NOTE]
+> Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. 
+
 After running the command, an unsigned msixbundle will be created in the path specified. 
 
 ### Step 3: Sign the bundle
