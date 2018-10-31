@@ -43,8 +43,7 @@ Move the app packages that you want to bundle into one directory:
 
 ```Command Prompt
 C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
-```
-```Command Prompt
+
 Example:
 C:\> MakeAppx.exe bundle /d c:\users\johnsmith\Desktop\AppPackages\ /p c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg.msixbundle
 ```
@@ -66,8 +65,7 @@ We strongly recommend that you use a trusted cert from certificate authority as 
 
 ```Command Prompt
 C:\> SignTool.exe sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msixbundle
-```
-```Command Prompt
+
 Example:
 C:\>SignTool sign /fd SHA256 /a /f c:\users\johnsmith\Desktop\private-cert.pfx /p aaabbb123 c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg_Signed.msixbundle
 ```
