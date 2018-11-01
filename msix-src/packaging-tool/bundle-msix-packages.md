@@ -36,7 +36,8 @@ Once the Windows 10 SDK is installed, MakeAppx.exe is usually found here:
 Use MakeAppx.exe to bundle the packages like the following. The easiest way to bundle packages is by adding all the packages that you want to bundle together in one folder. It is recommended that the directory be free of everything else except the packages that been to be bundled. 
 
 Move the app packages that you want to bundle into one directory:
-![pic1](bundle-pic1.png)
+
+<img src="bundle-pic1.png" width="450" height="250">
 
 >[!NOTE] 
 > MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package architecture for an application package and resourceID for a resource packages can be different. 
@@ -45,7 +46,8 @@ Move the app packages that you want to bundle into one directory:
 C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
 
 Example:
-C:\> MakeAppx.exe bundle /d c:\users\johnsmith\Desktop\AppPackages\ /p c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg.msixbundle
+C:\> MakeAppx.exe bundle /d c:\users\johnsmith\Desktop\AppPackages\ 
+/p c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg.msixbundle
 ```
 
 >[!NOTE]
