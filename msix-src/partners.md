@@ -59,8 +59,5 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 :::column:::
 :::column-end:::
 
-:::column:::
-:::column-end:::
-
 :::row-end:::
 
