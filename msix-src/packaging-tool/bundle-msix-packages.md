@@ -47,7 +47,7 @@ C:\> MakeAppx.exe bundle /d input_directorypath /p filepath**.msixbundle**
 
 Example:
 C:\> MakeAppx.exe bundle /d c:\users\johnsmith\Desktop\AppPackages\ 
-/p c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg.msixbundle
+/p c:\users\johnsmith\Desktop\MyLOBApp_10.0.0.0_ph1m9x8skttmg.msixbundle
 ```
 
 >[!NOTE]
@@ -69,7 +69,7 @@ We strongly recommend that you use a trusted cert from certificate authority as 
 C:\> SignTool.exe sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msixbundle
 
 Example:
-C:\>SignTool sign /fd SHA256 /a /f c:\users\johnsmith\Desktop\private-cert.pfx /p aaabbb123 c:\users\johnsmith\Desktop\Teams_10.0.0.0_ph1m9x8skttmg_Signed.msixbundle
+C:\>SignTool sign /fd SHA256 /a /f c:\users\johnsmith\Desktop\private-cert.pfx /p aaabbb123 c:\users\johnsmith\Desktop\MyLOBApp_10.0.0.0_ph1m9x8skttmg_Signed.msixbundle
 ```
 
 More information and help with signing app packages with SignTool is available [here](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool). 
