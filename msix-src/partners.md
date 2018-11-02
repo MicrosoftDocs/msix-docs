@@ -45,17 +45,17 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
    :::row:::
 
 	:::column:::
-		[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
+	[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
 	:::column-end:::
 
 	:::column:::
 	[![Installaware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)     
 	:::column-end:::
-<!--
+
     :::column:::
-	[![Raynet logo](images/Raynet_Logo.png)](https://raynet.de/en/Raynet-Products/RayPackStudio)
+	[![Raynet logo](images/RayPackStudio_Logo.png)](https://raynet.de/en/msix/)
 	:::column-end:::
--->
+
 :::column:::
 :::column-end:::
 
