@@ -53,7 +53,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	:::column-end:::
 
     :::column:::
-	[![Raynet logo](images/RayPackStudio_Logo.png)](https://raynet.de/en/msix/)
+	[![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
 	:::column-end:::
 
 :::column:::
