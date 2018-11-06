@@ -32,6 +32,8 @@ When users start your application, the Package Support Framework launcher is the
 
 ![Package Support Framework  DLL Injection](images/package-support-framework-2.png)
 
+
+
 ## How to use the Package Support Framework
 
 After you create a package for your application, install and run it, and observe its behavior. You might receive error messages that can help you identify a compatibility issue. You can also use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to identify issues.
