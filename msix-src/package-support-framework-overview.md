@@ -43,7 +43,6 @@ If you can't find a runtime fix that addresses your issue, you can create one. T
 ## Get started with the Package Support Framework
 
 If you're ready to begin using the Package Support Framework to resolve compatibility issues, see our step-by-step guide here: [Apply runtime fixes to an MSIX package by using the Package Support Framework](https://docs.microsoft.com/windows/uwp/porting/package-support-framework).
-
 <br>
 <br>
 
