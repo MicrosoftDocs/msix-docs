@@ -47,7 +47,8 @@ Examples:
         GenerateCommandLineFile="true"
         AllowPromptForPassword="false" 
 	EnforceMicrosoftStoreVersioningRequirements="false">
-
+	    
+	<!--Note: Exclusion items are optional and if declared take precedence over the default tool exclusion items
         <ExclusionItems>
             <FileExclusion ExcludePath="[{CryptoKeys}]" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Crypto" />
@@ -91,15 +92,17 @@ Examples:
             <RegistryExclusion ExcludePath= "REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\AppV" />
             <RegistryExclusion ExcludePath= "REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\AppV" />
         </ExclusionItems>
+	-->
+	    
     </Settings>
 
-
+    <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute -->
     <PrepareComputer
         DisableDefragService="true"
         DisableWindowsSearchService="true"
         DisableSmsHostService="true"
         DisableWindowsUpdateService ="true"/>
-    <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute -->
+    
 
     <SaveLocation
     PackagePath="C:\users\user\Desktop\MyPackage.msix" 
@@ -109,8 +112,11 @@ Examples:
         Path="C:\MyAppInstaller.msi"
         Arguments="/quiet"
         InstallLocation="C:\Program Files\MyAppInstallLocation" />
-
+	
+	
+    <!-- This section specifies that the conversion will be run on a local Virtual Machine.
     <VirtualMachine Name="vmname" Username="vmusername" />
+    -->
 
     <PackageInformation
         PackageName="MyAppPackageName"
@@ -119,7 +125,8 @@ Examples:
         PublisherDisplayName="MyPublisher Display Name"
         Version="1.1.0.0"
         MainPackageNameForModificationPackage="MainPackageIdentityName">
-
+        
+	<!-- This ID will be used if the Application entry detected matches the specified ExecutableName
         <Applications>
             <Application
                 Id="MyApp1"
@@ -127,11 +134,12 @@ Examples:
                 DisplayName="My App"
                 ExecutableName="MyApp.exe"/>
         </Applications>
-
+	-->
+	<!-- This is optional as “runFullTrust” capability is added by default during conversion
         <Capabilities>
             <Capability Name="runFullTrust" />
         </Capabilities>
-
+	-->
     </PackageInformation>
 </MsixPackagingToolTemplate>
 ```
