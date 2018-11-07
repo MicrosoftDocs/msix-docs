@@ -96,13 +96,13 @@ Examples:
 	    
     </Settings>
 
-    <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute -->
+    <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute and is optional
     <PrepareComputer
         DisableDefragService="true"
         DisableWindowsSearchService="true"
         DisableSmsHostService="true"
         DisableWindowsUpdateService ="true"/>
-    
+    -->
 
     <SaveLocation
     PackagePath="C:\users\user\Desktop\MyPackage.msix" 
@@ -134,12 +134,14 @@ Examples:
                 DisplayName="My App"
                 ExecutableName="MyApp.exe"/>
         </Applications>
+
 	-->
 	<!-- This is optional as “runFullTrust” capability is added by default during conversion
         <Capabilities>
             <Capability Name="runFullTrust" />
         </Capabilities>
 	-->
+	    
     </PackageInformation>
 </MsixPackagingToolTemplate>
 ```
