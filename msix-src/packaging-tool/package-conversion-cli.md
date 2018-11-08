@@ -66,15 +66,20 @@ Examples:
             <FileExclusion ExcludePath="[{Windows}]\Temp" />
             <FileExclusion ExcludePath="[{Windows}]\WinSxS\ManifestCache" />
             <FileExclusion ExcludePath="[{Windows}]\WindowsUpdate.log" />
+	    <FileExclusion ExcludePath="[{Windows}]\Installer" />
             <FileExclusion ExcludePath="[{AppVPackageDrive}]\$Recycle.Bin " />
             <FileExclusion ExcludePath="[{AppVPackageDrive}]\System Volume Information" />
+	    <FileExclusion ExcludePath="[{AppVPackageDrive}]\Config.Msi" />
             <FileExclusion ExcludePath="[{AppData}]\Microsoft\AppV" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Microsoft Security Client" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Microsoft Antimalware" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Windows Defender" />
             <FileExclusion ExcludePath="[{ProgramFiles}]\Microsoft Security Client" />
             <FileExclusion ExcludePath="[{ProgramFiles}]\Windows Defender" />
+	    <FileExclusion ExcludePath="[{ProgramFiles}]\WindowsApps" />
             <FileExclusion ExcludePath="[{Local AppData}]\Temp" />
+	    <FileExclusion ExcludePath="[{Local AppData}]\Microsoft\Windows" />
+	    <FileExclusion ExcludePath="[{Local AppData}]\Packages" />
 
             <RegistryExclusion ExcludePath= "REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography" />
             <RegistryExclusion ExcludePath= "REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography" />
@@ -114,7 +119,7 @@ Examples:
         InstallLocation="C:\Program Files\MyAppInstallLocation" />
 	
 	
-    <!-- This section specifies that the conversion will be run on a local Virtual Machine.
+    <!--NOTE: This section specifies that the conversion will be run on a local Virtual Machine.
     <VirtualMachine Name="vmname" Username="vmusername" />
     -->
 
@@ -126,7 +131,7 @@ Examples:
         Version="1.1.0.0"
         MainPackageNameForModificationPackage="MainPackageIdentityName">
         
-	<!-- This ID will be used if the Application entry detected matches the specified ExecutableName
+	<!--NOTE: This ID will be used if the Application entry detected matches the specified ExecutableName
         <Applications>
             <Application
                 Id="MyApp1"
@@ -134,9 +139,9 @@ Examples:
                 DisplayName="My App"
                 ExecutableName="MyApp.exe"/>
         </Applications>
-
 	-->
-	<!-- This is optional as “runFullTrust” capability is added by default during conversion
+
+	<!--NOTE: This is optional as “runFullTrust” capability is added by default during conversion
         <Capabilities>
             <Capability Name="runFullTrust" />
         </Capabilities>
