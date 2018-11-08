@@ -175,7 +175,7 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |SaveLocation::PackagePath     |[optional] The path to the file or folder where the resulting MSIX package is saved.         |
 |SaveLocation::TemplatePath    |[optional] The path to the file or folder where the resulting CLI template is saved.    |
 |Installer::Path |		The path to the application installer.|
-|Installer::Arguments |		The arguments to pass to the installer. You must pass the arguments to force your installer to run unattended/silently.|
+|Installer::Arguments |		[optional] The arguments to pass to the installer.  The tool will automatically run MSI installer silently. NOTE: You must pass the arguments to force your installer to run unattended/silently if you are using .exe installers.|
 |Installer::InstallLocation |		[optional] The full path to your application's root folder for the installed files if it were installed (e.g. "C:\Program Files (x86)\MyAppInstalllocation").|
 |VirtualMachine |		[optional] An element to specify that the conversion will be run on a local Virtual Machine.|
 |VrtualMachine::Name	 |	The name of the Virtual Machine to be used for the conversion environment.|
