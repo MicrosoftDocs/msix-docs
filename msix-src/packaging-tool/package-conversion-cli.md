@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
       
-To create a new MSIX package for your application, run the MsixPackagingTool.exe create-package command in a Command prompt window. 
+To create a new MSIX package for your application, run the MsixPackagingTool.exe create-package command in an administrator Command prompt window. 
 
 Here are the parameters that can be passed as command line arguments:
 
@@ -47,7 +47,8 @@ Examples:
         GenerateCommandLineFile="true"
         AllowPromptForPassword="false" 
 	EnforceMicrosoftStoreVersioningRequirements="false">
-
+	    
+	<!--Note: Exclusion items are optional and if declared take precedence over the default tool exclusion items
         <ExclusionItems>
             <FileExclusion ExcludePath="[{CryptoKeys}]" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Crypto" />
@@ -65,15 +66,20 @@ Examples:
             <FileExclusion ExcludePath="[{Windows}]\Temp" />
             <FileExclusion ExcludePath="[{Windows}]\WinSxS\ManifestCache" />
             <FileExclusion ExcludePath="[{Windows}]\WindowsUpdate.log" />
+	    <FileExclusion ExcludePath="[{Windows}]\Installer" />
             <FileExclusion ExcludePath="[{AppVPackageDrive}]\$Recycle.Bin " />
             <FileExclusion ExcludePath="[{AppVPackageDrive}]\System Volume Information" />
+	    <FileExclusion ExcludePath="[{AppVPackageDrive}]\Config.Msi" />
             <FileExclusion ExcludePath="[{AppData}]\Microsoft\AppV" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Microsoft Security Client" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Microsoft Antimalware" />
             <FileExclusion ExcludePath="[{Common AppData}]\Microsoft\Windows Defender" />
             <FileExclusion ExcludePath="[{ProgramFiles}]\Microsoft Security Client" />
             <FileExclusion ExcludePath="[{ProgramFiles}]\Windows Defender" />
+	    <FileExclusion ExcludePath="[{ProgramFiles}]\WindowsApps" />
             <FileExclusion ExcludePath="[{Local AppData}]\Temp" />
+	    <FileExclusion ExcludePath="[{Local AppData}]\Microsoft\Windows" />
+	    <FileExclusion ExcludePath="[{Local AppData}]\Packages" />
 
             <RegistryExclusion ExcludePath= "REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography" />
             <RegistryExclusion ExcludePath= "REGISTRY\MACHINE\SOFTWARE\Microsoft\Cryptography" />
@@ -91,15 +97,17 @@ Examples:
             <RegistryExclusion ExcludePath= "REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\AppV" />
             <RegistryExclusion ExcludePath= "REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\AppV" />
         </ExclusionItems>
+	-->
+	    
     </Settings>
 
-
+    <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute and is optional
     <PrepareComputer
         DisableDefragService="true"
         DisableWindowsSearchService="true"
         DisableSmsHostService="true"
         DisableWindowsUpdateService ="true"/>
-    <!--Note: this section takes precedence over the Settings::ApplyAllPrepareComputerFixes attribute -->
+    -->
 
     <SaveLocation
     PackagePath="C:\users\user\Desktop\MyPackage.msix" 
@@ -107,10 +115,12 @@ Examples:
 
     <Installer
         Path="C:\MyAppInstaller.msi"
-        Arguments="/quiet"
         InstallLocation="C:\Program Files\MyAppInstallLocation" />
-
+	
+	
+    <!--NOTE: This section specifies that the conversion will be run on a local Virtual Machine.
     <VirtualMachine Name="vmname" Username="vmusername" />
+    -->
 
     <PackageInformation
         PackageName="MyAppPackageName"
@@ -119,7 +129,8 @@ Examples:
         PublisherDisplayName="MyPublisher Display Name"
         Version="1.1.0.0"
         MainPackageNameForModificationPackage="MainPackageIdentityName">
-
+        
+	<!--NOTE: This ID will be used if the Application entry detected matches the specified ExecutableName
         <Applications>
             <Application
                 Id="MyApp1"
@@ -127,11 +138,14 @@ Examples:
                 DisplayName="My App"
                 ExecutableName="MyApp.exe"/>
         </Applications>
+	-->
 
+	<!--NOTE: This is optional as “runFullTrust” capability is added by default during conversion
         <Capabilities>
             <Capability Name="runFullTrust" />
         </Capabilities>
-
+	-->
+	    
     </PackageInformation>
 </MsixPackagingToolTemplate>
 ```
@@ -160,7 +174,7 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |SaveLocation::PackagePath     |[optional] The path to the file or folder where the resulting MSIX package is saved.         |
 |SaveLocation::TemplatePath    |[optional] The path to the file or folder where the resulting CLI template is saved.    |
 |Installer::Path |		The path to the application installer.|
-|Installer::Arguments |		The arguments to pass to the installer. You must pass the arguments to force your installer to run unattended/silently.|
+|Installer::Arguments |		[optional] The arguments to pass to the installer.  The tool will automatically run MSI installers silently using argument  "/qn /norestart INSTALLSTARTMENUSHORTCUTS=1 DISABLEADVTSHORTCUTS=1". NOTE: You must pass the arguments to force your installer to run silently if you are using .exe installers.|
 |Installer::InstallLocation |		[optional] The full path to your application's root folder for the installed files if it were installed (e.g. "C:\Program Files (x86)\MyAppInstalllocation").|
 |VirtualMachine |		[optional] An element to specify that the conversion will be run on a local Virtual Machine.|
 |VrtualMachine::Name	 |	The name of the Virtual Machine to be used for the conversion environment.|
