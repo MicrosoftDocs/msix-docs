@@ -15,6 +15,17 @@ ms.localizationpriority: medium
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
+
+Before you can create an application package on a VM, your VM needs to meet these requirements:
+
+- Virtual Machine need to have PSRemoting enabled. (Enable-PSRemoting command should be run on the VM)
+
+- Execution Policy needs to be seem on the Virtual Machine: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+- Virtual Machine needs to 1709 or higher similar to the host machine.
+
+
+
 ![pic1](pic1.png)
 When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
 
