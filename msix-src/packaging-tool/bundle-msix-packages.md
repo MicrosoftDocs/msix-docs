@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 In this article, we will go through the process of creating a bundle after converting x86 and x64 versions of your Windows installers. 
 
-By of bundling the multiple architecture versions of your installer in one is that it can be one entity that needs to uploaded to the Store or another distribution location. Windows 10 deployment platform is aware of the msixbundle package type and will only download the files that are applicable for your device's architecture. Keep in mind that if you decide to distribute a msixbundle, you cannot revert back to distributing just a msix package. 
+By bundling the multiple architecture versions of your installer into one entity, only the bundle needs to be uploaded to the Store or another distribution location. Windows 10 deployment platform is aware of the msixbundle package type and will only download the files that are applicable for your device's architecture. Keep in mind that if you decide to distribute a msixbundle for a particular app, you cannot revert back to distributing just a msix package. 
 
 In the following section, I will go through a step-by-step approach to build an msixbundle assuming that you have already [converted your existing x86 and x64 versions](https://docs.microsoft.com/en-us/windows/msix/mpt-best-practices) of the Windows installer to MSIX packages. 
 
