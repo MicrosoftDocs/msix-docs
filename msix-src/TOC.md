@@ -11,9 +11,10 @@
 # [MSIX Packaging Tool](mpt-overview.md)
 ## [Create app package from .MSI using a VM](packaging-tool/create-app-package-MSI-VM.md)
 ## [Create app package using Command Line](packaging-tool/package-conversion-cli.md)
-## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
 ## [Automate Conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)
+## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
+## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
 ## [Modification Packages](modification-packages.md)
 ### [Modification Package on Windows 10 1809 Update](modification-package-1809-update.md)
 
