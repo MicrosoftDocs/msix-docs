@@ -18,12 +18,12 @@ By of bundling the multiple architecture versions of your installer in one is th
 
 In the following section, I will go through a step-by-step approach to build an msixbundle assuming that you have already [converted your existing x86 and x64 versions](https://docs.microsoft.com/en-us/windows/msix/mpt-best-practices) of the Windows installer to MSIX packages. 
 
-## Setup
+### Setup
 You will need the following setup to successfully build an MSIX bundle:
 - Windows 10 SDK - [Get it here](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
 - Converted x64 and x86 MSIX packages 
 
-### Step 1: Find MakeAppx.exe
+## Step 1: Find MakeAppx.exe
 [MakeAppx.exe](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) is a tool available in the Windows 10 SDK that allows for packaging and bundling of MSIX packages. We will use this tool to bundle the two msix packages together. 
 
 MakeAppx can be used to extract the file contents of a Windows 10 app package or bundle and encrypts and decrypts app packages and bundles.
@@ -32,7 +32,7 @@ Once the Windows 10 SDK is installed, MakeAppx.exe is usually found here:
 - [x86] - C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe
 - [x64] - C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x64\MakeAppx.exe
 
-### Step 2: Bundle the packages
+## Step 2: Bundle the packages
 Use MakeAppx.exe to bundle the packages like the following. The easiest way to bundle packages is by adding all the packages that you want to bundle together in one folder. The directory must be free of everything else except the packages that been to be bundled. 
 
 Move the app packages that you want to bundle into one directory:
@@ -55,7 +55,7 @@ C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" 
 
 After running the command, an unsigned msixbundle will be created in the path specified. 
 
-### Step 3: Sign the bundle
+## Step 3: Sign the bundle
 Now that we created the bundle, you will need to sign the package before you can distribute the app to your users or even to install it. 
 
 To sign a package, you will need a general code signing certificate and use the SignTool from the Windows 10 SDK. 
