@@ -13,19 +13,22 @@ ms.localizationpriority: medium
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
+## Best practices during setup
 This article covers a list of best practices for repackaging your app to MSIX and using the MSIX Packaging Tool. 
 
-To begin with, to have support of MSIX, you need to be on a RS5 build of the MSIX Packaging Tool.
+To begin with, to have support of MSIX, you need to be on a 1809 build of the MSIX Packaging Tool.For the conversion process, there are a few other things that we recommend you consider before you start. 
 
-- For the conversion process, there are a few other things that we recommend you consider before you start. 
+- First, we understand that not everyone is on Windows 10 1809 update or even Windows 10. So we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX. 
 
-- First, we understand that not everyone is on RS5 or even Windows 10. So we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX. Another reason this is a recommendation is that during the interactive GUI conversion using the MSIX Packaging Tool, we will be listening to everything on the device, and it will help to prevent extraneous data in your package. 
+- Another reason this is a recommendation is that during the interactive GUI conversion using the MSIX Packaging Tool, we will be listening to everything on the device, and it will help to prevent extraneous data in your package. 
 
 - Its also good to know what kind of dependencies you have so that you can understand which ones you should run with your app and which should be packaged as a modification package. For example, if you have runtime dependencies, it’s a good idea to include those in your main application. If you have a plug in, you should package that as an associated modification package. 
 
 ---
 
-When you are going through the MSIX Packaging Tool, there are a few things that we also recommend you do as best practice.
+## Best practices during repackaging 
+
+When you are going through the MSIX Packaging Tool, there are a few things that we also recommend you do as best practice:
 
 - When Packaging ClickOnce installers it is necessary to send a shortcut to desktop if the installer is not doing so already. In general, it is good practice to always remember to send a shortcut to desktop for the main app executable.
 
@@ -35,48 +38,16 @@ When you are going through the MSIX Packaging Tool, there are a few things that 
 
 - Performing the preparation steps in Prepare Computer page is optional but highly recommended.
 
+---
+
+## Best practices while bundling msix packages
+
+Bundling of msix packages is recommended when there are different installers available for different processor architectures like x86, x64, ARM etc for your application. By bundling the installers together, you can allow the Windows 10 OS to figure out the applicability of the appropriate installer instead of the user having to make the correct selection. 
+
+While bundling msix packages, you will need to have already converted your Win 32 installers into msix packages. 
+
+- MSIX Packaging Tool will assume the processor architecture of the Windows 10 OS version that the conversion is taking place. For example, if you are on a x64 version of Windows 10, and you are converting a x86 version of an installers, the resulting msix package will be of x64. 
+- If you plan to bundle msix packages, you will need to convert your installers in the same environment where you expect to deploy them. That way, MSIX Packaging Tool will build the appropriate msix package for that environment. 
 
 
-<br>
-<br>
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-
-<!--
- <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                    MSIX tech community
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                    Package Support Framework
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/msix-packaging/issues">
-                    MSIX SDK
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/#!/search/realtime/%23msix">
-                    Twitter
-                </a>
-            </li>
-            
-        </ul>
-		</div>
--->
 
