@@ -50,10 +50,7 @@ C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" 
 /p c:\users\johnsmith\Desktop\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
 
->[!NOTE]
-> Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. 
-
-After running the command, an unsigned msixbundle will be created in the path specified. 
+Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. After running the command, an unsigned msixbundle will be created in the path specified. 
 
 ## Step 3: Sign the bundle
 Now that we created the bundle, you will need to sign the package before you can distribute the app to your users or even to install it. 
