@@ -134,7 +134,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
                                     <a href="/en-us/intune/introduction-intune?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Intune</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/install-related-set?context=/windows/msix/render" data-linktype="absolute-path">Non-Store Distribution</a>
+                                    <a href="/en-us/windows/msix/app-installer/app-installer-file-overview" data-linktype="absolute-path">Non-Store Distribution</a>
                                 </p>
                             </div>
                         </div>
