@@ -69,7 +69,7 @@ C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" 
 
 Example:
 C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" sign /fd SHA256 /a 
-/f c:\private-cert.pfx /p aaabbb123 c:\MyLOBApp_10.0.0.0_ph1m9x8skttmg.msixbundle
+/f c:\private-cert.pfx /p aaabbb123 c:\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
 
 More information and help with signing app packages with SignTool is available [here](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool). 
