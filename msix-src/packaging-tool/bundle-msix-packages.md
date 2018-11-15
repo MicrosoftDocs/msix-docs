@@ -43,11 +43,12 @@ Move the app packages that you want to bundle into one directory:
 > MakeAppx.exe is only going to bundle packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package processor architecture for an application package can be different. 
 
 ```Command Prompt
-C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" bundle /d input_directorypath /p filepath**.msixbundle**
+C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" bundle /d input_directorypath 
+/p <filepath>.msixbundle
 
 Example:
-C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" bundle /d c:\users\johnsmith\Desktop\AppPackages\ 
-/p c:\users\johnsmith\Desktop\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
+C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" bundle /d c:\AppPackages\ 
+/p c:\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
 
 Packages do not need to be signed prior to bundling. You will need to sign them after to be able to distribute the app. After running the command, an unsigned msixbundle will be created in the path specified. 
@@ -63,10 +64,12 @@ We strongly recommend that you use a trusted cert from certificate authority as 
 > SignTool.exe can be found in the same directory as MakeAppx.exe and is distributed as part of the Windows 10 SDK. 
 
 ```Command Prompt
-C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msixbundle
+C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" sign /fd <Hash Algorithm> /a 
+/f <Path to Certificate>.pfx /p <Your Password> <File path>.msixbundle
 
 Example:
-C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" sign /fd SHA256 /a /f c:\users\johnsmith\Desktop\private-cert.pfx /p aaabbb123 c:\users\johnsmith\Desktop\MyLOBApp_10.0.0.0_ph1m9x8skttmg_Signed.msixbundle
+C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" sign /fd SHA256 /a 
+/f c:\private-cert.pfx /p aaabbb123 c:\MyLOBApp_10.0.0.0_ph1m9x8skttmg.msixbundle
 ```
 
 More information and help with signing app packages with SignTool is available [here](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool). 
