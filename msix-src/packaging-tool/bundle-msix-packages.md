@@ -20,7 +20,7 @@ In the following section, I will go through a step-by-step approach to build an 
 
 ### Setup
 You will need the following setup to successfully build an MSIX bundle:
-- Windows 10 SDK - [Get it here](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
+- Windows 10 SDK(Version 1809 or above) - [Get it here](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
 - Converted x64 and x86 MSIX packages 
 
 ## Step 1: Find MakeAppx.exe
