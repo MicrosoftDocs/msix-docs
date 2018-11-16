@@ -9,6 +9,7 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Troubleshoot installation issues with the App Installer file

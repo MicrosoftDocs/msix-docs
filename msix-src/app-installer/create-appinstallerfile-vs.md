@@ -9,6 +9,7 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Create an App Installer file with Visual Studio

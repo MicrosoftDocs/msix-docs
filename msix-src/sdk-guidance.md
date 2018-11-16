@@ -5,7 +5,7 @@ author: laurenhughes
 ms.author: lahugh
 ms.date: 09/07/2018
 ms.topic: article
-
+ms.custom: RS5
 ---
 
 # Developer Guidance to target MSIX SDK

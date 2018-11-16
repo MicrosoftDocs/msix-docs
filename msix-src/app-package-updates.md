@@ -7,6 +7,7 @@ ms.date: 09/10/2018
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # App package updates
