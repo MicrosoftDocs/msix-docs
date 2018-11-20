@@ -20,9 +20,7 @@ Before you can create an application package on a VM, your VM needs to meet thes
 
 - Virtual Machine need to have PSRemoting enabled. (Enable-PSRemoting command should be run on the VM)
 
-- Execution Policy needs to be seem on the Virtual Machine: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-- Virtual Machine needs to 1709 or higher similar to the host machine.
+- Virtual Machine needs to 1809 or higher similar to the host machine.
 
 
 
