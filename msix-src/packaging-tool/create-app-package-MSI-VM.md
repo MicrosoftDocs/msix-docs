@@ -16,11 +16,11 @@ ms.localizationpriority: medium
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 
-Before you can create an application package on a VM, your VM needs to meet these requirements:
+Before you can create an application package on a VM, your Hyper-V VM needs to meet these requirements:
 
 - Virtual Machine need to have PSRemoting enabled. (Enable-PSRemoting command should be run on the VM)
 
-- Virtual Machine needs to 1809 or higher similar to the host machine.
+- Virtual Machine needs to be running Windows 1809 or higher similar to the host machine.
 
 
 
