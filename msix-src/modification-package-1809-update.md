@@ -8,6 +8,7 @@ ms.topic: article
 ms.prod: windows
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # MSIX modification packages on Windows 10 1809 update 

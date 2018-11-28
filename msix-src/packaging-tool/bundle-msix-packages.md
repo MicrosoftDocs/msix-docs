@@ -8,6 +8,7 @@ ms.topic: article
 ms.prod: windows
 keywords: windows 10, msix
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Bundle MSIX packages 

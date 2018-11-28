@@ -9,6 +9,7 @@ ms.prod: windows
 ms.technology: UWP
 keywords: windows 10, Windows 10, UWP, app installer, AppInstaller, sideload, related set, optional packages, AWS
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Hosting UWP app packages on AWS for web install
