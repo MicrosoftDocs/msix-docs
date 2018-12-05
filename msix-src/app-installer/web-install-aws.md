@@ -1,12 +1,10 @@
 ---
-author: laurenhughes
+author: mcleanbyron
 title: Hosting UWP app packages on AWS for web install 
 description: Tutorial for setting up AWS web server to validate app install via App Installer App
-ms.author: cdon
+ms.author: mcleans
 ms.date: 05/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: UWP
 keywords: windows 10, Windows 10, UWP, app installer, AppInstaller, sideload, related set, optional packages, AWS
 ms.localizationpriority: medium
 ms.custom: RS5

@@ -1,8 +1,8 @@
 ---
 title: App package updates | Microsoft Docs
 description: Learn how apps are differentially updated.
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/10/2018
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx

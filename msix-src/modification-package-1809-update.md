@@ -5,7 +5,6 @@ description: In this section, we will review modification packages in Windows 10
 ms.author: diahar
 ms.date: 10/19/2018
 ms.topic: article
-ms.prod: windows
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ms.custom: RS5

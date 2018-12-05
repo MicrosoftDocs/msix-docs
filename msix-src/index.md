@@ -2,12 +2,10 @@
 layout: LandingPage
 title: MSIX Documentation | Microsoft Docs
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: landing-page
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
