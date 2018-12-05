@@ -1,12 +1,10 @@
 ---
-author: laurenhughes
+author: mcleanbyron
 title: Install a UWP app from an IIS server
 description: This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
-ms.author: cdon
+ms.author: mcleans
 ms.date: 05/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, IIS Server
 ms.localizationpriority: medium
 ms.custom: RS5

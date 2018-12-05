@@ -1,8 +1,8 @@
 ---
 title: AppInstaller file updates | Microsoft Docs
 description: Learn how to update the AppInstaller file
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

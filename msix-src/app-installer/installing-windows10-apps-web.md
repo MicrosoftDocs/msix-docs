@@ -1,12 +1,10 @@
 ---
-author: laurenhughes
+author: mcleanbyron
 title: Installing UWP apps from a web page
 description: In this section, we will review the steps you need to take to allow users to install your apps directly from the web page.
-ms.author: lahugh
+ms.author: mcleans
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.localizationpriority: medium
 ms.custom: RS5
