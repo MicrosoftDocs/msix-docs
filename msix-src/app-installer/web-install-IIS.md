@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Install a UWP app from an IIS server
+title: Install a Windows 10 app from an IIS server | Microsoft Docs
 description: This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 ms.author: mcleans
 ms.date: 05/30/2018
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Install a UWP app from an IIS server
+# Install a Windows 10 app from an IIS server
 
 This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 
@@ -22,7 +22,7 @@ To successfully go through with this tutorial, you will need the following:
 
 1. Visual Studio 2017  
 2. Web development tools and IIS 
-3. UWP app package - The app package that you will distribute
+3. Windows 10 app package - The app package that you will distribute
 
 Optional: [Starter Project](https://github.com/AppInstaller/MySampleWebApp) on GitHub. This is helpful if you don't have app packages to work with, but would still like to learn how to use this feature.
 
@@ -115,7 +115,7 @@ Open the **Web.config** file from the solution explorer and add the following li
 
 ## Step 8 - Add loopback exemption for App Installer
 
-Due to network isolation, UWP apps like App Installer are restricted to use IP loopback addresses like http://localhost/. When using local IIS Server, App Installer must be added to the loopback exempt list. 
+Due to network isolation, Windows 10 apps like App Installer are restricted to use IP loopback addresses like http://localhost/. When using local IIS Server, App Installer must be added to the loopback exempt list. 
 
 To do this, open **Command Prompt** as an **Administrator** and enter the following:
 ```Command Line

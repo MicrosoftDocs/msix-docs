@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Installing UWP apps from a web page
+title: Installing Windows 10 apps from a web page | Microsoft Docs
 description: In this section, we will review the steps you need to take to allow users to install your apps directly from the web page.
 ms.author: mcleans
 ms.date: 11/16/2017
@@ -55,7 +55,7 @@ If you are deploying an app to employees within an enterprise, you can use an en
 
 Invoking App Installer from the browser is supported on all versions of Windows 10 where App Installer is available (starting with the Anniversary Update). However, the functionality to install directly from the web without the need to download the package first is only available on the Windows 10 Fall Creators Update.  
 
-Users of previous versions of Windows 10 (with App Installer available) can also take advantage of web install of UWP apps via App Installer, but will have a different user experience. When these users click the web link, App Installer will prompt to **Download** the package instead of **Install**. After download, App Installer will initiate the launch of the downloaded package automatically. Because the app package is downloaded from the web, these files will pass through Microsoft SmartScreen for a security check. Once the user provides permission to continue and then one more click on **Install**, the app is ready for use!
+Users of previous versions of Windows 10 (with App Installer available) can also take advantage of web install of Windows 10 apps via App Installer, but will have a different user experience. When these users click the web link, App Installer will prompt to **Download** the package instead of **Install**. After download, App Installer will initiate the launch of the downloaded package automatically. Because the app package is downloaded from the web, these files will pass through Microsoft SmartScreen for a security check. Once the user provides permission to continue and then one more click on **Install**, the app is ready for use!
 
 Although this flow isn't quite as seamless as the direct install on Windows 10 Fall Creators Update, users can still quickly engage with the app. Additionally, with this flow the user doesn't have to worry about app package files unnecessarily taking up space in drives. App Installer efficiently manages space by downloading the package to its app data folder and clearing packages when they are no longer needed. 
 

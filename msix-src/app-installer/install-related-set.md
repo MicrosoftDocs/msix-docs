@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Install a related set using an App Installer file
+title: Install a related set using an App Installer file | Microsoft Docs
 description: In this section, we will review the steps you need to take to allow the installation of a related set via App Installer. We will also go through the steps to construct a *.appinstaller file that will define your related set.
 ms.author: mcleans
 ms.date: 1/4/2018
