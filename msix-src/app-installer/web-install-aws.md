@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Hosting UWP app packages on AWS for web install 
+title: Hosting Windows 10 app packages on AWS for web install | Microsoft Docs
 description: Tutorial for setting up AWS web server to validate app install via App Installer App
 ms.author: mcleans
 ms.date: 05/30/2018
@@ -10,11 +10,11 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Hosting UWP app packages on AWS for web install
+# Hosting Windows 10 app packages on AWS for web install
 
 The App Installer app allows developers and IT Pros to distribute Windows 10 apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows 10 packaging and deployment platform.
 
-This topic outlines the steps to configure an Amazon Web Services (AWS) website to host UWP app packages, and how to use the App Installer app to install the app packages.
+This topic outlines the steps to configure an Amazon Web Services (AWS) website to host Windows 10 app packages, and how to use the App Installer app to install the app packages.
 
 ## Setup
 
@@ -22,7 +22,7 @@ To successfully follow this tutorial, you will need the following:
  
 1. AWS subscription 
 2. Web page
-3. UWP app package - The app package that you will distribute
+3. Windows 10 app package - The app package that you will distribute
 
 Optional: [Starter Project](https://github.com/AppInstaller/MySampleWebApp) on GitHub. This is helpful if you don't an app package or web page to work with, but would still like to learn how to use this feature.
 
@@ -33,17 +33,17 @@ To get an AWS membership, visit the [AWS account details page](https://aws.amazo
 
 ## Step 2 - Create an Amazon S3 bucket
 
-Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing and analyzing data. S3 buckets are a convenient way to host UWP app packages and web pages for distribution. 
+Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing and analyzing data. S3 buckets are a convenient way to host Windows 10 app packages and web pages for distribution. 
 
 After logging in to AWS with your credentials, under `Services` find `S3`. 
 
-Select **Create bucket**, and enter a **Bucket name** for your website. Follow the dialog prompts for setting properties and permissions. To ensure that your UWP app can be distributed from your website, enable **Read** and **Write** permissions for your bucket and select **Grant public read access to this bucket**.
+Select **Create bucket**, and enter a **Bucket name** for your website. Follow the dialog prompts for setting properties and permissions. To ensure that your Windows 10 app can be distributed from your website, enable **Read** and **Write** permissions for your bucket and select **Grant public read access to this bucket**.
 
 ![Set permissions on Amazon S3 bucket](images/aws-permissions.png) 
 
 Review the summary to make sure the selected options are reflected. Click **Create bucket** to finish this step. 
 
-## Step 3 - Upload UWP app package and web pages to an S3 bucket
+## Step 3 - Upload Windows 10 app package and web pages to an S3 bucket
 
 One you have created an Amazon S3 bucket, you will be able to see it in your Amazon S3 view. Here's an example of what our demo bucket looks like:
 
@@ -90,7 +90,7 @@ Upload the html file to your Amazon S3 bucket. Remember to set the permissions t
 
 Once the web page is uploaded into your Amazon S3 bucket, get the link to the web page by selecting the uploaded html file.
 
-Use the link to open the web page. Since we set permissions to grant public access to the app package and web page, anyone with the link to the web page will be able to access it and install your UWP app packages using App Installer. Note that App Installer is part of the Windows 10 platform. As a developer, you do not need to add any additional code or features to your app to enable the use of App Installer. 
+Use the link to open the web page. Since we set permissions to grant public access to the app package and web page, anyone with the link to the web page will be able to access it and install your Windows 10 app packages using App Installer. Note that App Installer is part of the Windows 10 platform. As a developer, you do not need to add any additional code or features to your app to enable the use of App Installer. 
 
 ## Troubleshooting
 

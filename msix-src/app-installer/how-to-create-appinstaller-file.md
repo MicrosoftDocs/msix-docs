@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Install a related set using an App Installer file
+title: Install a related set using an App Installer file  | Microsoft Docs
 description: In this section, we will review the steps you need to take to allow the installation of a related set via App Installer. We will also go through the steps to construct a *.appinstaller file that will define your related set.
 ms.author: mcleans
 ms.date: 1/4/2018
@@ -231,5 +231,5 @@ For all of the details on the XML schema, see [App Installer file reference](htt
 
 > [!NOTE]
 > 
-> The App Installer file type is new in the Windows 10 Fall Creators Update. There is no support for deployment of UWP apps using an App Installer file on previous versions of Windows 10.
+> The App Installer file type is new in the Windows 10 Fall Creators Update. There is no support for deployment of Windows 10 apps using an App Installer file on previous versions of Windows 10.
 > It also should be noted that the **HoursBetweenUpdateChecks** element is new in the next major update to Windows 10.
