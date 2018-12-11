@@ -23,7 +23,7 @@ If you are having issues installing the driver on an insider build of Windows:
 #### Installing MSIX Packaging Tool driver FOD in WSUS
 Organizations that use Windows Server Update Services (WSUS) must take action to manually install the driver:
 - [Check your version of Windows](https://support.microsoft.com/en-us/help/13443/windows-which-operating-system). You must be on at least Windows 10, version 1809. OS build 17763 
-- Download the FOD .cab file for [Windows 10, version 1809]()
+- Download the FOD .cab file for [Windows 10, version 1809](https://download.microsoft.com/download/8/4/3/8436215A-42DB-4FD2-966D-60D436D6EEFC/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab)
 - Individually-obtained Feature on Demand packages can be installed using [DISM command-line options](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options). In an elevated PowerShell window type: Dism /Online /add-package /packagepath:(path) 
 
 IT admins can also create [Side by side feature store (shared folder)](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275(v=ws.11)) to allow access to the MSIX Packaging tool driver FOD. You can find additional details at the bottom of this [post](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Language-pack-acquisition-and-retention-for-enterprise-devices/ba-p/275404).
@@ -32,6 +32,7 @@ Otherwise if you have access to Enterprise or OEM channels you can obtain the dr
 - [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/servicecenter/default.aspx) - VL access is required
 - [OEM Portal](https://www.microsoftoem.com) - OEM access is required
 - [MSDN Download](https://my.visualstudio.com/Downloads/Featured) - MSDN subscription is required
+
 Individually-obtained Feature on Demand packages can be installed using DISM command-line options.
 
 #### Other known issues
