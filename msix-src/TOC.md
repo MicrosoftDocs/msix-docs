@@ -14,6 +14,7 @@
 ## [Automate Conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
+## [Known Issues](packaging-tool/mpt-known-issues.md)
 ## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
 ## [Modification Packages](modification-packages.md)
 ### [Modification Package on Windows 10 1809 Update](modification-package-1809-update.md)
