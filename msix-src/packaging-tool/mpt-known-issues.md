@@ -32,6 +32,7 @@ Otherwise if you have access to Enterprise or OEM channels you can obtain the dr
 - [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/servicecenter/default.aspx) - VL access is required
 - [OEM Portal](https://www.microsoftoem.com) - OEM access is required
 - [MSDN Download](https://my.visualstudio.com/Downloads/Featured) - MSDN subscription is required
+
 Individually-obtained Feature on Demand packages can be installed using DISM command-line options.
 
 #### Other known issues
