@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-title: MSIX Documentation | Microsoft Docs
+title: MSIX Documentation
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
 author: mcleanbyron
 ms.author: mcleans
@@ -8,7 +8,7 @@ ms.date: 09/07/2018
 ms.topic: landing-page
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.custom: RS5
+ms.custom: "RS5, seodec18"
 ---
 # MSIX documentation
 MSIX is a packaging format built to be safe, secure and reliable, based on a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
@@ -29,7 +29,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
 :::row:::
         :::column:::
         ### Install MSIX app packages
-        App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [Learn more](/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render)
+        App Installer allows for installation and updates of any MSIX app package that is locally available or on any content distribution network. [Learn more](app-installer/app-installer-root.md)
     :::column-end:::
     :::column:::
 	### Package support framework

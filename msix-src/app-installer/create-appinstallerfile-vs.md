@@ -7,7 +7,7 @@ ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
 ms.localizationpriority: medium
-ms.custom: RS5
+ms.custom: "RS5, seodec18"
 ---
 
 # Create an App Installer file with Visual Studio
@@ -18,7 +18,7 @@ Starting with Windows 10, Version 1804, and Visual Studio 2017, Update 15.7, sid
 The `.appinstaller` file can be hosted in a shared location like a HTTP endpoint or a UNC shared folder, and includes the path to find the app packages to be installed. Users install the app from the shared location and enable periodic checks for new updates. 
 
 
-### Configure the project to target the correct Windows version
+## Configure the project to target the correct Windows version
 
 You can either configure the `TargetPlatformMinVersion` property when you create the project, or change it later from the project properties. 
 
@@ -26,7 +26,7 @@ You can either configure the `TargetPlatformMinVersion` property when you create
 > The app installer file is only generated when the `TargetPlatformMinVersion` is Windows 10, Version 1804 or greater.
 
 
-### Create Packages
+## Create packages
 
 To distribute an app via sideloading, you must create an app package (.appx/.msix) or app bundle (.appxbundle/.msixbundle) and publish it in a shared location.
 
@@ -34,29 +34,29 @@ To do that, use the **Create App Packages** wizard in Visual Studio with the fol
 
 1. Right-click the project and choose **Store** -> **Create App Packages**.  
 
-![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)   
+    ![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)   
 
-The **Create App Packages** wizard appears.
+    The **Create App Packages** wizard appears.
 
 2. Select **I want to create packages for sideloading.** and **Enable automatic updates**  
 
-![Create Your Packages dialog window shown](images/select-sideloading.png)  
+    ![Create Your Packages dialog window shown](images/select-sideloading.png)  
 
-**Enable automatic updates** is enabled only if the project's `TargetPlatformMinVersion` is set to the correct version of Windows 10.
+    **Enable automatic updates** is enabled only if the project's `TargetPlatformMinVersion` is set to the correct version of Windows 10.
 
 3. The **Select and Configure Packages** dialog allows you to select the supported architecture configurations. If you select a bundle it will generate a single installer, however if you don't want a bundle and prefer one package per architecture you will also get one installer file per architecture.  If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render).
 
 4. Configure any additional details, such as version numbering or the package output location.
 
-![Create App Packages window with package configuration shown](images/packaging-screen5.jpg)  
+    ![Create App Packages window with package configuration shown](images/packaging-screen5.jpg)  
 
 5. If you checked **Enable automatic updates** in Step 2, the **Configure Update Settings** dialog will appear. Here, you can specify the **Installation URL** and the frequency of update checks.
 
-![Configure Update Settings window with publish location configuration shown](images/sideloading-screen.png)  
+    ![Configure Update Settings window with publish location configuration](images/sideloading-screen.png)  
 
 6. When your app has been successfully packaged, a dialog will display the location of the output folder containing your app package. The output folder includes all the files needed to sideload the app, including an HTML page that can be used to promote your app.
 
-### Publish packages
+## Publish packages
 
 To make the application available the generated files must be published to the location specified:
 
@@ -81,22 +81,3 @@ To configure the web server you must verify the MIME types used for the file typ
   </system.webServer>  
 </configuration>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
