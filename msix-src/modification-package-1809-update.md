@@ -1,13 +1,13 @@
 ---
 author: dianmsft
-title: MSIX Modification packages on Windows 10 1809 update | Microsoft Docs
+title: MSIX Modification packages on Windows 10 1809 update
 description: In this section, we will review modification packages in Windows 10 1809 Update
 ms.author: diahar
 ms.date: 10/19/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
-ms.custom: RS5
+ms.custom: "RS5, seodec18"
 ---
 
 # MSIX modification packages on Windows 10 1809 update 
@@ -18,14 +18,18 @@ Note that your main package may be using the VREG to do the following things:
 1.	Viewing where to load the file i.e. dll of plugin. If this is the case, then ensure that the file is part of the package. By doing this, main package is able to access the file at runtime.  
 2.	Viewing where to see the value of the VREG keys. Your main package may be looking for a value to exist in the VREG. When you create your modification package either by hand or using our [tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf), ensure that the value is correct. 
 
-You can create a modification package with the MSIX Packaging Tool 
--	Specify the main package. Be sure to have the MSIX version of your main package available on your machine that you are converting on. If not than we will ask you to manually provide the publisher and main application information. Also some customization require that your main application is installed on your machine.
+## Create a modification package using the MSIX Packaging Tool
+
+You can create a modification package with the MSIX Packaging Tool:
+* Specify the main package. Be sure to have the MSIX version of your main package available on your machine that you are converting on. If not than we will ask you to manually provide the publisher and main application information. Also some customization require that your main application is installed on your machine.
 ![Modification Package MPT](images/MPT-mod-page.png)
 
--	Modify the package once it has gone through conversion using the package editor. There may be a case where the main package requires your modification package to have certain values in their VREG. This is where you would go and edit the package appropriately. 
+* Modify the package once it has gone through conversion using the package editor. There may be a case where the main package requires your modification package to have certain values in their VREG. This is where you would go and edit the package appropriately. 
 
-You can create a modification package manually by using the makeappx tool that you can get with our Windows 10 SDK
--	In the manifest, specify the main package – include the publisher and the main package name
+## Create a modification package using MakeAppx.exe
+
+You can create a modification package manually by using the [MakeAppX.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool) tool that is included in the Windows 10 SDK:
+* In the manifest, specify the main package – include the publisher and the main package name
 
 ```xml
 <Dependencies>
@@ -37,31 +41,3 @@ You can create a modification package manually by using the makeappx tool that y
 
 We also support file system type plugins and customization if the executable of the main application is not in a VFS. This is to ensure that the main package will get all the VFS of the main package and the modification package. We are currently working on supporting file system type plugins and customization with executable in VFS in the next release. 
 
-<br>
-<br>
-
-<div class="container centered pageFooter">
-    <h2>Keep in touch with us</h2>
-    <ul class="links">
-        <li>
-            <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                MSIX tech community
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                Package Support Framework
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/Microsoft/msix-packaging/issues">
-                MSIX SDK
-            </a>
-        </li>
-        <li>
-            <a href="https://twitter.com/#!/search/realtime/%23msix">
-                Twitter
-            </a>
-        </li>            
-    </ul>
-</div>

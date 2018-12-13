@@ -1,6 +1,6 @@
 ---
-title: MSIX Partners | Microsoft Docs
-description: partners supporting MSIX
+title: MSIX partners
+description: Provides links to additional documentation from our trusted partners on MSIX tooling and support.
 author: mcleanbyron
 ms.author: mcleans
 ms.date: 09/14/2018
@@ -10,15 +10,15 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Documentation from Partners supporting MSIX
+# MSIX partners
 
-See additional documentation from our trusted partners on MSIX tooling and support.
+The following partners provide additional tooling and support for MSIX development scenarios.
 
 :::row:::
     :::column:::
     [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
     :::column-end:::
-    
+
 	:::column:::
     [![Camwood logo](images/Camwood_Logo_2.png)](http://camwood.com/windows-10/)
     :::column-end:::
@@ -40,7 +40,7 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 	:::column:::
 	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)     
 	:::column-end:::
-   
+
    :::row-end:::
 
    :::row:::
@@ -61,4 +61,3 @@ See additional documentation from our trusted partners on MSIX tooling and suppo
 :::column-end:::
 
 :::row-end:::
-

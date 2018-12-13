@@ -1,6 +1,6 @@
 ---
-title: automate conversion of windows installers to msix packages | Microsoft Docs
-description: automate conversion of existing windows installers using the command line interface to generate msix packages
+title: Automate conversion of Windows installers to MSIX packages
+description: Automate conversion of existing windows installers using the command line interface to generate msix packages
 author: mcleanbyron
 ms.author: mcleans
 ms.date: 09/07/2018
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Automating conversion
+# Automate conversion of Windows installers to MSIX packages
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 

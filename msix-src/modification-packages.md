@@ -1,5 +1,5 @@
 ---
-title: Customize your Enterprise apps with Modification Package | Microsoft Docs
+title: Customize your Enterprise apps with Modification Package
 description: Learn how to customize your Enterprise apps
 author: mcleanbyron
 ms.author: mcleans
@@ -7,7 +7,7 @@ ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
-ms.custom: RS5
+ms.custom: "RS5, seodec18"
 ---
 
 # Customize your Enterprise apps with Modification Package 
@@ -54,35 +54,3 @@ Here are typically ways of which you can create a .dat file:
 
 
 Once you’ve made the necessary changes, you can create the modification package like any other MSIX package. Then, you can deploy the package with the current deployment set-up. When you relaunch your main app, you can see the changes that the modification package has made. If you choose to remove the modification package, your main app will revert to a state without the modification package. 
-
-
-<br>
-<br>
-
-<div class="container centered pageFooter">
-    <h2>Keep in touch with us</h2>
-    <ul class="links">
-        <li>
-            <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                MSIX tech community
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                Package Support Framework
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/Microsoft/msix-packaging/issues">
-                MSIX SDK
-            </a>
-        </li>
-        <li>
-            <a href="https://twitter.com/#!/search/realtime/%23msix">
-                Twitter
-            </a>
-        </li>            
-    </ul>
-</div>
-
-

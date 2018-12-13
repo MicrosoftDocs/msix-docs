@@ -7,7 +7,7 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, Windows 10, UWP, app installer, AppInstaller, sideload, related set, optional packages, AWS
 ms.localizationpriority: medium
-ms.custom: RS5
+ms.custom: "RS5, seodec18"
 ---
 
 # Hosting Windows 10 app packages on AWS for web install
@@ -47,7 +47,7 @@ Review the summary to make sure the selected options are reflected. Click **Crea
 
 One you have created an Amazon S3 bucket, you will be able to see it in your Amazon S3 view. Here's an example of what our demo bucket looks like:
 
-![Amazon S3 bucket view](images/aws-post-create.png)
+![Screenshot of Amazon S3 bucket view](images/aws-post-create.png)
 
 We are now ready to upload the app packages and web pages that we would like to host in our Amazon S3 bucket. 
 
@@ -56,7 +56,7 @@ Click on the newly created bucket to upload content. The bucket is currently emp
 > [!NOTE]
 > You can use the app package that is part of the provided [Starter Project](https://github.com/AppInstaller/MySampleWebApp) repository on GitHub if you don't have an app package available. The certificate (MySampleApp.cer) that the package was signed with is also with the sample on GitHub. You must have the certificate installed to your device prior to installing the app.
 
-![upload app package](images/aws-upload-package.png)
+![Screenshot of upload app package UX](images/aws-upload-package.png)
 
 Similar to the permissions for creating an Amazon S3 bucket, the content in the bucket must also have **read**, **write**, and **Grant public read access to this object(s)** permissions.
 
@@ -67,9 +67,9 @@ If you would like to test uploading a web page, but don't have one, you can use 
 
 To get the app package reference, upload the app package first and copy the app package URL. Edit the html web page to reflect the correct app package path. See the code example for more details. 
 
-Select the uploaded app package file to get the reference link to the app package, it should be similar to this example:
+Select the uploaded app package file to get the reference link to the app package, it should be similar to this example.
 
-![uploaded package path](images/aws-package-path.png)
+![Screenshot of uploaded package path](images/aws-package-path.png)
 
 **Copy** the link to the app package and add the reference in your web page. 
 
