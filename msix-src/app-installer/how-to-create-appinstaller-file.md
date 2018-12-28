@@ -16,7 +16,7 @@ A related set is not one entity, but rather a combination of a main package and 
 
 ## App Installer file example
 
-Before we go in to more detail, here is a complete sample *.appinstaller file:
+Before we go in to more detail, here is a complete sample msixbundle *.appinstaller file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -29,28 +29,33 @@ Before we go in to more detail, here is a complete sample *.appinstaller file:
         Name="Contoso.MainApp"
         Publisher="CN=Contoso"
         Version="2.23.12.43"
-        Uri="http://mywebservice.azurewebsites.net/mainapp.appxbundle" />
+        Uri="http://mywebservice.azurewebsites.net/mainapp.msixbundle" />
 
     <OptionalPackages>
         <Bundle
             Name="Contoso.OptionalApp1"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.msixbundle" />
 
         <Bundle
             Name="Contoso.OptionalApp2"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.msixbundle" />
 
         <Package
             Name="Fabrikam.OptionalApp3"
             Publisher="CN=Fabrikam"
             Version="10.34.54.23"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.appx" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.msix"
+            ProcessorArchitecture="x64" />
 
     </OptionalPackages>
+    
+    <UpdateSettings>
+    <OnLaunch HoursBetweenUpdateChecks="0"/>   
+  </UpdateSettings>
 
 </AppInstaller>
 ```
@@ -76,7 +81,26 @@ The basic template includes the App Installer file information.
 ```
 
 ### Step 3: Add the main package information
-If the main app package is an .appxbundle or .msixbundle file, then use the `<MainBundle>` shown below. If the main app package is an .appx or .msix file, then use `<MainPackage>` in place of `<MainBundle>` in the snippet.
+If the main app package is an .msix or .appx file, then use `<MainPackage>`, as shown below. Be sure to include the ProcessorArchitecture, as it is mandatory for non-bundle packages.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
+    Version="1.0.0.0"
+    Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" >
+
+    <MainPackage
+        Name="Contoso.MainApp"
+        Publisher="CN=Contoso"
+        Version="2.23.12.43"
+        ProcessorArchitecture="x64"
+        Uri="http://mywebservice.azurewebsites.net/mainapp.msix" />
+
+</AppInstaller>
+```
+
+If the main app package is an .msixbundle or .appxbundle or file, then use the `<MainBundle>` in place of `<MainPackage>` as shown below. For bundles, ProcessorArchitecture is not required.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -89,7 +113,7 @@ If the main app package is an .appxbundle or .msixbundle file, then use the `<Ma
         Name="Contoso.MainApp"
         Publisher="CN=Contoso"
         Version="2.23.12.43"
-        Uri="http://mywebservice.azurewebsites.net/mainapp.appxbundle" />
+        Uri="http://mywebservice.azurewebsites.net/mainapp.msixbundle" />
 
 </AppInstaller>
 ```
@@ -109,26 +133,27 @@ Similar to the main app package attribute, if the optional package can be either
         Name="Contoso.MainApp"
         Publisher="CN=Contoso"
         Version="2.23.12.43"
-        Uri="http://mywebservice.azurewebsites.net/mainapp.appxbundle" />
+        Uri="http://mywebservice.azurewebsites.net/mainapp.msixbundle" />
 
     <OptionalPackages>
         <Bundle
             Name="Contoso.OptionalApp1"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.msixbundle" />
 
         <Bundle
             Name="Contoso.OptionalApp2"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.msixbundle" />
 
         <Package
             Name="Fabrikam.OptionalApp3"
             Publisher="CN=Fabrikam"
             Version="10.34.54.23"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.appx" />
+            ProcessorArchitecture="x64"
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.msix" />
 
     </OptionalPackages>
 
@@ -149,27 +174,27 @@ In the dependencies element, you can specify the required framework packages for
         Name="Contoso.MainApp"
         Publisher="CN=Contoso"
         Version="2.23.12.43"
-        Uri="http://mywebservice.azurewebsites.net/mainapp.appxbundle" />
+        Uri="http://mywebservice.azurewebsites.net/mainapp.msixbundle" />
 
     <OptionalPackages>
         <Bundle
             Name="Contoso.OptionalApp1"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.msixbundle" />
 
         <Bundle
             Name="Contoso.OptionalApp2"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.msixbundle" />
 
         <Package
             Name="Fabrikam.OptionalApp3"
             Publisher="CN=Fabrikam"
             Version="10.34.54.23"
             ProcessorArchitecture="x86"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.appx" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.msix" />
 
     </OptionalPackages>
 
@@ -182,7 +207,8 @@ In the dependencies element, you can specify the required framework packages for
 ```
 
 ### Step 6: Add Update setting
-The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours.
+The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings schema (https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch schema (https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-onlaunch)
+
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
@@ -194,27 +220,27 @@ The App Installer file can also specify update setting so that the related sets 
         Name="Contoso.MainApp"
         Publisher="CN=Contoso"
         Version="2.23.12.43"
-        Uri="http://mywebservice.azurewebsites.net/mainapp.appxbundle" />
+        Uri="http://mywebservice.azurewebsites.net/mainapp.msixbundle" />
 
     <OptionalPackages>
         <Bundle
             Name="Contoso.OptionalApp1"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp1.msixbundle" />
 
         <Bundle
             Name="Contoso.OptionalApp2"
             Publisher="CN=Contoso"
             Version="2.23.12.43"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.appxbundle" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp2.msixbundle" />
 
         <Package
             Name="Fabrikam.OptionalApp3"
             Publisher="CN=Fabrikam"
             Version="10.34.54.23"
             ProcessorArchitecture="x86"
-            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.appx" />
+            Uri="http://mywebservice.azurewebsites.net/OptionalApp3.msix" />
 
     </OptionalPackages>
 
