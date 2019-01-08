@@ -81,6 +81,7 @@ The basic template includes the App Installer file information.
 ```
 
 ### Step 3: Add the main package information
+
 If the main app package is an .msix or .appx file, then use `<MainPackage>`, as shown below. Be sure to include the ProcessorArchitecture, as it is mandatory for non-bundle packages.
 
 ```xml
@@ -117,6 +118,7 @@ If the main app package is an .msixbundle or .appxbundle or file, then use the `
 
 </AppInstaller>
 ```
+
 The information in the `<MainBundle>` or `<MainPackage>` attribute should match the [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the app bundle manifest or app package manifest respectively.
 
 ### Step 4: Add the optional packages
@@ -207,7 +209,8 @@ In the dependencies element, you can specify the required framework packages for
 ```
 
 ### Step 6: Add Update setting
-The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings schema (https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch schema (https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-onlaunch)
+
+The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-onlaunch)
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
