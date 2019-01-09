@@ -1,7 +1,7 @@
 ---
 title: MSIX Package support on builds 16299 and later
 description: Install MSIX packages on Windows 10 Version 1709 (build 16299) and later.
-author: nonasir
+author: nonasi
 ms.author: nonasir
 ms.date: 01/07/2019
 ms.topic: article
