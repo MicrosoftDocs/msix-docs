@@ -26,7 +26,7 @@ We are working to update the MSIX Packaging Tool to handle this, but in the mean
  
 Open the MSIX packaging tool and navigate to the package editor.
 
-![open] (mpt_blog_1.jpg) 
+![open](mpt_blog_1.jpg) 
 ![navigate](mpt_blog_2.jpg)
 
 
