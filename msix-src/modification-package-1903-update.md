@@ -1,0 +1,37 @@
+---
+author: dianmsft
+title: MSIX Modification packages on Windows 10 1809 update
+description: In this section, we will review modification packages in Windows 10 1903 Update
+ms.author: diahar
+ms.date: 10/19/2018
+ms.topic: article
+keywords: windows 10, uwp, msix
+ms.localizationpriority: medium
+---
+
+# MSIX modification packages on Windows 10 1903 update 
+In our 1809 release, we introduced modification packages that allowed enterprises to customize their apps on Windows 10. In this release, we are adding in additional support, to allow IT Pros to package customizations like file-based plugin to be packaged into an MSIX. 
+
+# What’s New with Modification Package?
+## Manifest update
+
+In the next release, we’ve made changes in MSIX modification package’s manifest.
+
+```xml
+<Properties>
+   <rescap6:ModificationPackage>true</rescap6:ModificationPackage>
+</Properties>
+```
+This declaration is required to light up in the 1903 release features. This will be done for you if you package your MSIX modification package using the January release of the MSIX packaging tool.If you've converted a package using our tool prior to the release, you can go back and edit your existing package in our tool to add this new attribute. In addition, if users install the modification package, they will be prompted that the package may modify the main application. 
+
+##Overriding a file in the main package
+In the next release, you can “override” a file in the main package with a modification package. This does not mean you are changing the file of the main package. The file remains unchanged by the modification package. However, at runtime, the main package sees both its files and the modification package’s file and will choose the modification package’s files to load. 
+Note: in order for this to happen the file that the modification package intends to override must be in a virtual file system (VSF) folder. 
+
+## File system base plugin
+In the next release, you can package your file system base plugin as a MSIX modification package. If your main packages load their plugin by looking at a folder, you can install your main package and modification package separately. At runtime, the plugin will appear because the main app can query its folders and the modification’s folders. 
+Note: for this to happen the folder the main app uses to load plugins must be in a virtual file system (VFS) folder.  
+
+## What remains the same
+Virtual registry plugins that have been converted into MSIX modification packages will still be supported in the next release. 
+
