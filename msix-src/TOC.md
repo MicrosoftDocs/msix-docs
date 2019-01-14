@@ -18,7 +18,7 @@
 ## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
 ## [Modification packages](modification-packages.md)
 ### [Modification package on Windows 10 1809 Update](modification-package-1809-update.md)
-### [Modification package on Windows 10 Insider Preview Build 18312 Update](modification-package-Insider-Preview-Build-18312-update.md)
+### [Modification package on Windows 10 Insider Preview Build 18312 and later](modification-package-insider-preview-build-18312.md)
 
 # [Package Support Framework](package-support-framework-overview.md)
 ## [Apply runtime fixes to a desktop application package](https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render)
