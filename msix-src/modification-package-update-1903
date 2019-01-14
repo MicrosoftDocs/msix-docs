@@ -20,10 +20,10 @@ In the next release, we’ve made changes in MSIX modification package’s manif
 ```xml
 <Properties>
    <rescap6:ModificationPackage>true</rescap6:ModificationPackage>
-  </Properties>
+</Properties>
 
 ```
-This declaration is required to light up in the 1903 release features. This will be done for you if you package your MSIX modification package using the January release of the MSIX packaging tool. In addition, if users install the modification package, they will be prompted that the package may modify the main application. 
+This declaration is required to light up in the 1903 release features. This will be done for you if you package your MSIX modification package using the January release of the MSIX packaging tool.If you've converted a package using our tool prior to the release, you can go back and edit your existing package in our tool to add this new attribute. In addition, if users install the modification package, they will be prompted that the package may modify the main application. 
 
 ##Overriding a file in the main package
 In the next release, you can “override” a file in the main package with a modification package. This does not mean you are changing the file of the main package. The file remains unchanged by the modification package. However, at runtime, the main package sees both its files and the modification package’s file and will choose the modification package’s files to load. 
