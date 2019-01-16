@@ -72,7 +72,7 @@ After you choose to package your application on an existing virtual machine, you
     - This field accepts a version string in quad notation: "Major.Minor.Build.Revision".
 - Install location:
     - This is the location that the installer is going to copy the application payload to (usually Programs Files folder).
-    - This field is optional but recommended.
+    - This field is optional but recommended specially when app payload is being installed outside of the Program Files folders.
     - Browse to and select a folder path.
     - Make sure this file matches the installer's install location while you go through the application install operation.
 
