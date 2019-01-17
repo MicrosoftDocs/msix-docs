@@ -25,10 +25,10 @@ We’ve added support for the following element to the MSIX modification package
 
 To ensure that modification packages work in build 18312 or later, the modification package's manifest must include this element. This will be done for you if you package your MSIX modification package using the January release of the MSIX packaging tool. If you've converted a package using our tool prior to the release, you can edit your existing package in our tool to add this new element. In addition, if users install the modification package, they will be alerted that the package may modify the main application.
 
-If you are using a modification package that was created before the build 18132, it is necessary to edit the package manifest to update the MaxVersionTested attribute to 10.0.18137.0.
+If you are using a modification package that was created before the build 18132, it is necessary to edit the package manifest to update the MaxVersionTested attribute to 10.0.18132.0.
 
 ```xml
-<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17701.0" MaxVersionTested="10.0.18137.0" />
+<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17701.0" MaxVersionTested="10.0.18132.0" />
 ```
 
 ## Overriding a file in the main package
