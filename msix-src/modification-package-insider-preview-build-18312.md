@@ -23,7 +23,13 @@ We’ve added support for the following element to the MSIX modification package
 </Properties>
 ```
 
-To ensure that modification packages work in build 18312 or later, the modification package's manifest must include this element. This will be done for you if you package your MSIX modification package using the January release of the MSIX packaging tool. If you've converted a package using our tool prior to the release, you can edit your existing package in our tool to add this new element. In addition, if users install the modification package, they will be alerted that the package may modify the main application. 
+To ensure that modification packages work in build 18312 or later, the modification package's manifest must include this element. This will be done for you if you package your MSIX modification package using the January release of the MSIX packaging tool. If you've converted a package using our tool prior to the release, you can edit your existing package in our tool to add this new element. In addition, if users install the modification package, they will be alerted that the package may modify the main application.
+
+If you are using a modification package that was created before the build 18132, it is necessary to edit the package manifest to update the MaxVersionTested attribute to 10.0.18137.0.
+
+```xml
+<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17701.0" MaxVersionTested="10.0.18137.0" />
+```
 
 ## Overriding a file in the main package
 You can override a file in the main package with a modification package. This does not mean you are changing the file of the main package. The file remains unchanged by the modification package. However, at runtime the main package sees both its files and the modification package’s file, and it will choose the modification package’s files to load. 
