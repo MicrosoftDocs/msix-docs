@@ -18,7 +18,7 @@ To make changes to an exiting MSIX package for changing the properties in the ma
 
 From the welcome screen, select the package editor option:
 
-![pic9](pic9.png)
+![pic1](pic1.PNG)
 
 Then they hit browse to locate the MSIX package that needs to be edited and select open package:
 
