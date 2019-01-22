@@ -32,6 +32,23 @@ To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://w
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
  
+ ## What's new:
+ **v1.2019.110.0**
+- Improved packaging times 
+- Updated default file exclusion list
+- Incorporated MSIExec error logs into tool reporting
+- Updated logs to add more clarity and troubleshooting steps
+- Added support for capturing installation from PowerShell ISE during manual packaging
+- Added support for declaring PowerShell scripts as installer argument in the UI and the command line template file
+- Added a verbose logging flag(--verbose | -v) for the Command line interface
+- Fixed an issue where network paths on the VM were sometimes inaccessible
+- Fixed an issue where Store versioning requirement validation was failing when using the command line interface
+- Fixed an issue where file paths in quotations were not being accepted
+- Fixed an issue where the VM was not being cleaned up correctly after conversion
+- Fixed an issue where adding files to packages in package editor was not working properly
+- UI cleanup 
+
+
  ## Tasks
  
 Here is what you can expect to be able to do with this tool:
@@ -39,5 +56,3 @@ Here is what you can expect to be able to do with this tool:
 - Package your favorite application(msi, exe, App-V 5.x and to MSIX format by launching the tool and selecting the **Application package** icon.
 - Create a modification package for a newly created Application MSIX Package by launching the tool and selecting the **Modification package** icon. 
 - Open your MSIX package to view and edit its content/properties by navigating to the **Open package editor** tab, browsing to the MSIX package, and selecting **Open package**.
-
-
