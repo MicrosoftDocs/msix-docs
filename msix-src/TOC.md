@@ -17,6 +17,7 @@
 ## [Known Issues](packaging-tool/mpt-known-issues.md)
 ## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
 ## [Modification packages](modification-packages.md)
+## [Create packaging VM using Quick Create](packaging-tool/Quick-Create-VM.md)
 ### [Modification packages on Windows 10 version 1809](modification-package-1809-update.md)
 ### [Modification packages on Windows 10 Insider Preview Build 18312 and later](modification-package-insider-preview-build-18312.md)
 
