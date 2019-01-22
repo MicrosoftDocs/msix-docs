@@ -56,3 +56,9 @@ Here is what you can expect to be able to do with this tool:
 - Package your favorite application(msi, exe, App-V 5.x and to MSIX format by launching the tool and selecting the **Application package** icon.
 - Create a modification package for a newly created Application MSIX Package by launching the tool and selecting the **Modification package** icon. 
 - Open your MSIX package to view and edit its content/properties by navigating to the **Open package editor** tab, browsing to the MSIX package, and selecting **Open package**.
+
+# MSIX Packaging Tool Insider Preview Program
+
+You will get all the latest MSIX Packaging tool fixes as soon as they are available and be one of the first to experience the new ideas and concepts we’re building. In return we want to know what you think.
+
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://aka.ms/MSIXPackagingPreviewProgram" data-linktype="external">Click here to join</a></p></div>
