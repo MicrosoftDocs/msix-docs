@@ -5,3 +5,5 @@ We are happy to announce that we have made MSIX packaging even easier on windows
 Simply type Hyper-V Quick Create in your start menu and select MSIX Packaging Tool Environment to get started. Once you finish going through the wizard, launch MSIX Packaging tool on the VM from the start menu.
 
 Note: This feature requires Hyper-V. You can learn more about Hyper-V and how to enable it [here](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+
+![quickCreatepic1](quickCreatepic1.png)
