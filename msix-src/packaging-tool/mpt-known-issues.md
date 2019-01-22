@@ -37,8 +37,6 @@ Individually-obtained Feature on Demand packages can be installed using DISM com
 
 #### Other known issues
 - Restarting the machine during application installation is not supported. Please ignore the restart request if possible or pass an argument to the installer to not require a restart.
-- Setting EnforceMicrosoftStoreVersioningRequirements=true, when using the command line interface, will throw an error, even if the vesrion is set correctly. To work around this issue, use EnforceMicrosoftStoreVersioningRequirements=false in the conversion template file.
-- Adding files to MSIX packages in package editor does not add the file to the folder that the user right-clicks. To work around this issue, ensure that the file being added is in the correct classic app location. For example if you want to add a file in the VFS\ProgramFilesx86\MyApp folder, copy the file locally to your C:\Program Files (86)\MyApp location first, then in the package editor right-click Package files, and then click Add file. Browse to the newly copied file, then click Save.
 
 ### MSIX Packaging Tool logs
 Conversion logs can be found at %localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\
