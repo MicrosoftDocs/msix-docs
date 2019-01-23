@@ -15,7 +15,6 @@
 ## [Modify package using package editor](packaging-tool/package-editor.md)
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
 ## [Known Issues](packaging-tool/mpt-known-issues.md)
-## [Create packaging VM using Quick Create](packaging-tool/Quick-Create-VM.md)
 ## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
 ## [Modification packages](modification-packages.md)
 ### [Modification packages on Windows 10 version 1809](modification-package-1809-update.md)
