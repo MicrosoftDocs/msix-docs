@@ -1,17 +1,20 @@
 ---
-title: App package updates | Microsoft Docs
+title: App package updates
 description: Learn how apps are differentially updated.
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/10/2018
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.localizationpriority: medium
+ms.custom: "RS5, seodec18"
 ---
 
 # App package updates
 
 Updating modern Windows app packages is optimized to ensure that only the essential changed bits of the app are downloaded to update an existing Windows app.
+
+## Metadata in the AppxBlockMap.xml file
 
 At a high level, during package creation, a piece of metadata is created and stored in the app package file (.appx or .msix) which allows parts of the package to be uniquely identified by Windows. When updating an app package, Windows uses the metadata file to compare the old package to the new package and determine what needs to be downloaded to the device.
 

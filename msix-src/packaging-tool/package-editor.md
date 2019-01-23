@@ -1,14 +1,13 @@
 ---
 title: Package Editor | Microsoft Docs
 description: Use Package Editor to modify package information
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Package editor
@@ -17,9 +16,9 @@ ms.localizationpriority: medium
       
 To make changes to an exiting MSIX package for changing the properties in the manifest or the content of the package without needing to package the installer again, one can use package editor in MSIX Packaging tool. 
 
-From the welcome screen, select the Open package editor tab:
+From the welcome screen, select the package editor option:
 
-![pic9](pic9.png)
+![pic1](pic1.PNG)
 
 Then they hit browse to locate the MSIX package that needs to be edited and select open package:
 
@@ -59,45 +58,3 @@ There are multiple context menu options on this page:
 This page shows the package files, user can add or delete files by right clicking on a file and selecting add file or delete.
 
 
-<br>
-<br>
-
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-<!--
- <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                    MSIX tech community
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                    Package Support Framework
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/msix-packaging/issues">
-                    MSIX SDK
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/#!/search/realtime/%23msix">
-                    Twitter
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
--->

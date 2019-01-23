@@ -1,13 +1,14 @@
 ---
-author: normesta
+author: mcleanbyron
 Description: The Package Support Framework helps you fix issues that prevent your desktop application from running in an MSIX container.
 Search.Product: eADQiWindows 10XVcnh
-title: Package Support Framework | Microsoft Docs
-ms.author: normesta
+title: Package Support Framework
+ms.author: mcleans
 ms.date: 09/05/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Package Support Framework
@@ -26,15 +27,13 @@ The Package Support Framework contains an executable, a runtime manager  DLL, an
 
 ![Package Support Framework](images/package-support-framework.png)
 
-Here's how it works. You'll create a configuration file that specifies the fix(s) that you want to apply to your application. Then, you'll modify your package to point to the shim launcher executable file.
+Here's how it works. You'll create a configuration file that specifies the fixes that you want to apply to your application. Then, you'll modify your package to point to the Package Support Framework (PSF) launcher executable file.
 
-When users start your application, the shim launcher is the first executable that runs. It reads your configuration file, and injects the runtime fix(s) and the runtime manager  DLL into the application process. The runtime manager applies the fix when it's needed by the application to run inside of an MSIX container.
+When users start your application, the Package Support Framework launcher is the first executable that runs. It reads your configuration file and injects the runtime fixes and the runtime manager DLL into the application process. The runtime manager applies the fix when it's needed by the application to run inside of an MSIX container.
 
 ![Package Support Framework  DLL Injection](images/package-support-framework-2.png)
 
-
-
-## How to use the Package Support framework
+## How to use the Package Support Framework
 
 After you create a package for your application, install and run it, and observe its behavior. You might receive error messages that can help you identify a compatibility issue. You can also use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to identify issues.
 
@@ -42,49 +41,6 @@ After you find an issue, you can check our [GitHub](https://github.com/Microsoft
 
 If you can't find a runtime fix that addresses your issue, you can create one. To do that, you'll identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
 
-## Get started with the Package Support framework
+## Get started with the Package Support Framework
 
-If you're ready to begin using the Package Support Framework to resolve compatibility issues, see our step-by-step guide here: [Apply runtime fixes to an MSIX package by using the Package Support Framework](https://docs.microsoft.com/windows/uwp/porting/package-support-framework)
-<br>
-<br>
-
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-<!--
- <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                    MSIX tech community
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                    Package Support Framework
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/msix-packaging/issues">
-                    MSIX SDK
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/#!/search/realtime/%23msix">
-                    Twitter
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
--->
-
+If you're ready to begin using the Package Support Framework to resolve compatibility issues, see our step-by-step guide at [Apply runtime fixes to an MSIX package by using the Package Support Framework](https://docs.microsoft.com/windows/uwp/porting/package-support-framework).

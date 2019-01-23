@@ -1,17 +1,16 @@
 ---
-author: laurenhughes
-title: Install a UWP app from an IIS server
+author: mcleanbyron
+title: Install a Windows 10 app from an IIS server | Microsoft Docs
 description: This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
-ms.author: cdon
+ms.author: mcleans
 ms.date: 05/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, IIS Server
 ms.localizationpriority: medium
+ms.custom: "RS5, seodec18"
 ---
 
-# Install a UWP app from an IIS server
+# Install a Windows 10 app from an IIS server
 
 This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 
@@ -23,7 +22,7 @@ To successfully go through with this tutorial, you will need the following:
 
 1. Visual Studio 2017  
 2. Web development tools and IIS 
-3. UWP app package - The app package that you will distribute
+3. Windows 10 app package - The app package that you will distribute
 
 Optional: [Starter Project](https://github.com/AppInstaller/MySampleWebApp) on GitHub. This is helpful if you don't have app packages to work with, but would still like to learn how to use this feature.
 
@@ -38,7 +37,7 @@ Find and select **Internet Information Services** to install IIS.
 
 You will also need to install ASP.NET 4.5 or greater. To install it, locate **Internet Information Services -> World Wide Web Services -> Application Development Features**. Select a version of ASP.NET that is greater than or equal to ASP.NET 4.5.
 
-![Install ASP.NET](images/install-asp.png)
+![Screenshot of installing ASP.NET feature](images/install-asp.png)
 
 ## Step 2 - Install Visual Studio 2017 and Web Development tools 
 
@@ -52,7 +51,7 @@ Once installation is complete, launch Visual Studio and create a new project (**
 
 Launch Visual Studio 2017 as **Administrator** and create a new **Visual C# Web Application** project with an **empty** project template. 
 
-![New project](images/sample-web-app.png)
+![Screenshot of creating a new web project](images/sample-web-app.png)
 
 ## Step 4 - Configure IIS with our Web App 
 
@@ -60,7 +59,7 @@ From the Solution Explorer, right click on the root project and select **Propert
 
 In the web app properties, select the **Web** tab. In the **Servers** section, choose **Local IIS** from the drop down menu and click **Create Virtual Directory**. 
 
-![web tab](images/web-tab.png)
+![Screenshot of web tab in project properties](images/web-tab.png)
 
 ## Step 5 - Add an app package to a web application 
 
@@ -68,7 +67,7 @@ Add the app package that you are going to distribute into the web application. Y
 
 In the starter project web application, a new folder was added to the web app called `packages` that contains the app packages to be distributed. To create the folder in Visual Studio, right click on the root of the Solution Explorer, select **Add** -> **New Folder** and name it `packages`. To add app packages to the folder, right click on the `packages` folder and select **Add** -> **Existing Item...** and browse to the app package location. 
 
-![add package](images/add-package.png)
+![Screenshot of adding a package](images/add-package.png)
 
 ## Step 6 - Create a Web Page
 
@@ -116,7 +115,7 @@ Open the **Web.config** file from the solution explorer and add the following li
 
 ## Step 8 - Add loopback exemption for App Installer
 
-Due to network isolation, UWP apps like App Installer are restricted to use IP loopback addresses like http://localhost/. When using local IIS Server, App Installer must be added to the loopback exempt list. 
+Due to network isolation, Windows 10 apps like App Installer are restricted to use IP loopback addresses like http://localhost/. When using local IIS Server, App Installer must be added to the loopback exempt list. 
 
 To do this, open **Command Prompt** as an **Administrator** and enter the following:
 ```Command Line
@@ -140,11 +139,11 @@ CheckNetIsolation.exe LoopbackExempt -d -n=microsoft.desktopappinstaller_8wekyb3
 
 Build and run the web application by clicking on the run button on the VS Ribbon as shown in the image below:
 
-![run](images/run.png)
+![Screenshot of running web app in Visual Studio](images/run.png)
 
 A web page will open in your browser:
 
-![web page](images/web-page.png)
+![Screenshot of installing app from web page](images/web-page.png)
 
 Click on the link in the web page to launch the App Installer app and install your Windows 10 app package.
 

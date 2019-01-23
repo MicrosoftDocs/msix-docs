@@ -1,14 +1,13 @@
 ---
 author: ridomin
-title: Troubleshoot installation issues with the App Installer file
+title: Troubleshoot installation issues with the App Installer file | Microsoft Docs
 description: Common issues when sideloading applications with the App Installer file.
 ms.author: rmpablos
 ms.date: 5/2/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Troubleshoot installation issues with the App Installer file
@@ -53,7 +52,7 @@ The app package must be signed with a certificate that is trusted by the device.
 
 ### Dependencies not installed 
 
-UWP applications can have framework dependencies based on the application platform used to generate the app. If you are using C# or VB, the app will require the .NET Runtime and .NET framework packages. C++ applications require the VCLibs.
+Windows 10 applications can have framework dependencies based on the application platform used to generate the app. If you are using C# or VB, the app will require the .NET Runtime and .NET framework packages. C++ applications require the VCLibs.
 
 >[!IMPORTANT] 
 > If the app package is built in Release mode configuration, the framework dependencies will be obtained from the Microsoft Store. However, if the app is built in Debug mode configuration, the dependencies will be obtained from the location specified in the `.appinstaller` file.

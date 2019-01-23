@@ -1,14 +1,13 @@
 ---
 title: create package using command line interface | Microsoft Docs
 description: create msix app package using command line interface 
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # Conversion with CLI
@@ -24,12 +23,13 @@ Here are the parameters that can be passed as command line arguments:
 |-? --help	|Show help information|
 |--template	| [required] path to the conversion template XML file containing package information and settings for this conversion|
 |--virtualMachinePassword	| [optional] The password for the Virtual Machine to be used for the conversion environment. Notes: The template file must contain a VirtualMachine element and the Settings::AllowPromptForPassword attribute must not be set to true.|
+|-v --verbose	|[optional] Print verbose logs to the console.|
 
 Examples:
 
 ``` command prompt
 
-    MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml
+    MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml -v
 
     MSIXPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml --virtualMachinePassword pswd112893
     
@@ -193,45 +193,3 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |Capabilities |		[optional] 0 or more Capability elements to add custom capabilities to your MSIX package. “runFullTrust” capability is added by default during conversion.|
 |Capability::Name |	The capability to add to your MSIX package.
 
-<br>
-<br>
-
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-<!--
- <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                    MSIX tech community
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                    Package Support Framework
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/msix-packaging/issues">
-                    MSIX SDK
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/#!/search/realtime/%23msix">
-                    Twitter
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
--->

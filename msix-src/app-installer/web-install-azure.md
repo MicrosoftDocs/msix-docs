@@ -1,21 +1,20 @@
 ---
 author: c-don
-title: UWP App Installation from an Azure Web Server 
+title: Windows 10 App Installation from an Azure Web Server | Microsoft Docs 
 description: This tutorial demonstrates how to set up an Azure web server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 ms.author: cdon
 ms.date: 09/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, Azure web server
 ms.localizationpriority: medium
+ms.custom: "RS5, seodec18"
 ---
 
-# Install a UWP app from an Azure Web App
+# Install a Windows 10 app from an Azure Web App
 
 The App Installer app allows developers and IT Pros to distribute Windows 10 apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows 10 packaging and deployment platform.
 
-This topic outlines the steps to configure an Azure Web Server to host UWP app packages, and how to use the App Installer app to install the app packages.
+This topic outlines the steps to configure an Azure Web Server to host Windows 10 app packages, and how to use the App Installer app to install the app packages.
 
 In this tutorial, we will go over setting up an IIS server to locally verify that your web application can properly host the app packages and invoke and use App Installer app effectively. We will also have tutorials for hosting your web applications properly on the popular cloud web services in the field (Azure and AWS) to ensure that they meets the App Installer web install requirements. This step-by-step tutorial doesn't require any expertise and is very easy to follow. 
 
@@ -24,7 +23,7 @@ In this tutorial, we will go over setting up an IIS server to locally verify tha
 To successfully follow this tutorial, you will need the following:
  
 1. Microsoft Azure subscription 
-2. UWP app package - The app package that you will distribute
+2. Windows 10 app package - The app package that you will distribute
 
 Optional: [Starter Project](https://github.com/AppInstaller/MySampleWebApp) on GitHub. This is helpful if you don't an app package or web page to work with, but would still like to learn how to use this feature.
 
@@ -34,11 +33,11 @@ To get an Azure subscription, visit the [Azure account page](https://azure.micro
 ### Step 2 - Create an Azure Web App 
 In the Azure portal page, click the **+ Create a Resource** button and then select **Web App**
 
-![create](images/azure-create-app.png)
+![Screenshot of creating an Azure app](images/azure-create-app.png)
 
 Create a unique **App name** and leave the rest of the fields as default. Click **Create** to finish the Web App creation wizard. 
 
-![create web app](images/azure-create-app-2.png)
+![Screenshot of creating a web app](images/azure-create-app-2.png)
 
 ### Step 3 - Hosting the app package and the web page 
 Once the web app had been created, you can access it from the dashboard on the Azure portal. In this step, we're going to create a simple web page with the GUI of the Azure portal.
@@ -50,7 +49,7 @@ In the editor, there is a default `hostingstart.html` file. Right-click in the e
 > [!NOTE]
 > You can use the app package that is part of the provided [Starter Project](https://github.com/AppInstaller/MySampleWebApp) repository on GitHub if you don't have an app package available. The certificate (MySampleApp.cer) that the package was signed with is also with the sample on GitHub. You must have the certificate installed to your device prior to installing the app.
 
-![upload](images/azure-upload-file.png)
+![Screenshot of uploading packages](images/azure-upload-file.png)
 
 Right-click in the empty space of file explorer panel and select **New Files** to create a new file. Name the file: `default.html`.
 
@@ -92,7 +91,7 @@ Add a new file to the web app named: `Web.config`. Open the `Web.config` file fr
 
 To launch the web page that you created, use the URL from step 3 into the browser followed by `/default.html`. 
 
-![edge](images/edge.png)
+![Screenshot of installing app from Web page](images/edge.png)
 
 Click "Install My Sample App" to launch App Installer and install your app package. 
 
@@ -101,7 +100,7 @@ Click "Install My Sample App" to launch App Installer and install your app packa
 ### App Installer app fails to install 
 App install will fail if the certificate that the app package is signed with isn't installed on the device. To fix this, you will need to install the certificate prior to the installation of the app. If you are hosting an app package for public distribution, we recommended signing your app package with a certificate from a certificate authority. 
 
-![app cert](images/aws-app-cert.png)
+![Screenshot of certification failure](images/aws-app-cert.png)
 
 ### Nothing happens when you click the link 
 Ensure that the App Installer app is installed. Go to **Settings** -> **Apps & Features** and find App Installer in the installed apps list. 

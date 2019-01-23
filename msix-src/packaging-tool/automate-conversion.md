@@ -1,17 +1,16 @@
 ---
-title: automate conversion of windows installers to msix packages | Microsoft Docs
-description: automate conversion of existing windows installers using the command line interface to generate msix packages
-author: laurenhughes
-ms.author: lahugh
+title: Automate conversion of Windows installers to MSIX packages
+description: Automate conversion of existing windows installers using the command line interface to generate msix packages
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
-# Automating conversion
+# Automate conversion of Windows installers to MSIX packages
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
@@ -54,45 +53,3 @@ get-childitem $root -recurse | where {$_.extension -eq ".msi"} | % {
 }
 ```
 
-<br>
-<br>
-
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-<!--
- <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                    MSIX tech community
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                    Package Support Framework
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/msix-packaging/issues">
-                    MSIX SDK
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/#!/search/realtime/%23msix">
-                    Twitter
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
--->

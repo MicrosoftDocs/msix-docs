@@ -1,12 +1,13 @@
 ---
-title: What is MSIX? | Microsoft Docs
+title: What is MSIX?
 description: Learn the basics of the MSIX packaging format.
-author: laurenhughes
-ms.author: lahugh
+author: mcleanbyron
+ms.author: mcleans
 ms.date: 09/12/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
+ms.custom: RS5
 ---
 
 # What is MSIX?

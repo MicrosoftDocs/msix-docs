@@ -1,22 +1,20 @@
 ---
-title: MSIX SDK Guidance | Microsoft Docs
-description: Guidance to developers who are using SDK to pack MSIX packages for cross plat use
-author: laurenhughes
-ms.author: lahugh
-ms.date: 09/07/2018
+title: Developer Guidance to target MSIX SDK
+description: Guidance to developers who are using SDK to pack MSIX packages for cross platform use
+author: mcleanbyron
+ms.author: mcleans
+ms.date: 12/13/2018
 ms.topic: article
-
+ms.custom: RS5
 ---
 
-# Developer Guidance to target MSIX SDK
+# Use the MSIX SDK to build a package for cross-platform use
 
-## Build a package to target the SDK 
+The MSIX SDK offers developers a universal way to distribute package contents to client devices regardless of the OS platform on the client device. This enables developers to package their app content once instead of having to package for each platform.
 
-The MSIX SDK offers developers a universal way to distribute package contents to client devices regardless of the OS platform on the client device. This enables developers to package their app content once instead of having to package for each platform. 
+To take advantage of the MSIX SDK and the ability to distribute your package contents to multiple platforms, we provide a way to specify the target platforms where you want your packages to extract to. This means you can ensure that the package contents are being extracted from the package only as you desire.
 
-To take advantage of the new SDK and the ability to distribute your package contents to multiple platforms, we are providing a way to specify the target platforms where you want your packages to extract to. This means, the app developers can ensure that the package contents are being extracted from the package only as desired. 
-
-The following table shows the target device families to declare in the manifest:
+The following table shows the target device families to declare in the manifest.
 
 <table class="tg">
   <tr>
@@ -161,7 +159,7 @@ The following table shows the target device families to declare in the manifest:
 
 In the app package manifest file, you will need to include the appropriate target device family if you like the package contents to be only extracted on specific platforms and devices. If you like the bulid the package in such a way that it is supported on all platform and device types, choose **Platform.All** as the target device family. Similarly, if you like the package to be only supported in web apps, choose **Web.All**.
 
-## Sample Manifest File (AppxManifest.xml)
+## Sample manifest file (AppxManifest.xml)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -183,11 +181,11 @@ In the app package manifest file, you will need to include the appropriate targe
     <Description>This is an extension package to my app</Description>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-  
+
   <Resources>
     <Resource Language="x-generate"/>
   </Resources>
-  
+
   <Dependencies>
     <TargetDeviceFamily Name="Platform.All" MinVersion="0.0.0.0" MaxVersionTested="0.0.0.0"/>
   </Dependencies>
@@ -207,7 +205,7 @@ In the app package manifest file, you will need to include the appropriate targe
         <uap3:Extension Category="Windows.appExtension">
           <uap3:AppExtension Name="add-in-contract" Id="add-in" PublicFolder="Public" DisplayName="Sample Add-in" Description="This is a sample add-in">
             <uap3:Properties>
-               <!--Free form space--> 
+               <!--Free form space-->
             </uap3:Properties>
           </uap3:AppExtension>
         </uap3:Extension>
@@ -218,8 +216,8 @@ In the app package manifest file, you will need to include the appropriate targe
 </Package>
 ```
 
-## Platform Version 
-In the above sample manifest file, along with the platform name, there are also parameters to specify the **MinVersion** and **MaxVersionTested** These parameters are used on Windows 10 platforms. On Windows 10, the package will only be deployed on Windows 10 OS versions greater than the MinVersion. On other non-Windows 10 platforms, the MinVersion and MaxVersionTested parameters aren't used to make the declaration of whether to extract the package contents. 
+## Platform version
+In the above sample manifest file, along with the platform name, there are also parameters to specify the **MinVersion** and **MaxVersionTested** These parameters are used on Windows 10 platforms. On Windows 10, the package will only be deployed on Windows 10 OS versions greater than the MinVersion. On other non-Windows 10 platforms, the MinVersion and MaxVersionTested parameters aren't used to make the declaration of whether to extract the package contents.
 
 If you would like to use the package for all platforms(Windows 10 and non-Windows 10), we recommend that you use the MinVersion and MaxVersionTested parameters to specify the Windows 10 OS Versions where you would like your app to work. So your manifest's **Dependencies** section would look like this:
 ```xml
@@ -229,53 +227,10 @@ If you would like to use the package for all platforms(Windows 10 and non-Window
   </Dependencies>
 ```
 
-**MinVersion** and **MaxVersionTested** are required fields in the manifest and they need to conform the quad notation(#.#.#.#). If you are only using the MSIX packaging SDK for only non-Windows 10 platforms, you can simply use '0.0.0.0' as the **MinVersion** and **MaxVersionTested** as the versions. 
+**MinVersion** and **MaxVersionTested** are required fields in the manifest and they need to conform the quad notation(#.#.#.#). If you are only using the MSIX packaging SDK for only non-Windows 10 platforms, you can simply use '0.0.0.0' as the **MinVersion** and **MaxVersionTested** as the versions.
 
 ## How to effectively use the same package on all platforms (Windows 10 and non-Windows 10)
 
-To make the most of the MSIX Packaging SDK, you will need to build the package in a way that will be deployed like an app package on Windows 10 and at the same time supported on other platforms. On Windows 10, you can build the package as an app extension. To find more information about App Extensions and how they can help make your app extensible - [you will find it here](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/). 
+To make the most of the MSIX Packaging SDK, you will need to build the package in a way that will be deployed like an app package on Windows 10 and at the same time supported on other platforms. On Windows 10, you can build the package as an *App Extension*. For more information about App Extensions and how they can help make your app extensible, see the [Introduction to App Extensions](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/) blog post.
 
-In the above manifest file, you will notice within the AppExtension element, there is a section for Properties. There is no validation performed in this section of the manifest file. This allows developers to specify the required metadata between extension and host/client app. 
-
-<br>
-<br>
-
-<div class="container centered pageFooter">
-        <h2>Have feedback for us? We'd love to hear it.</h2>
-        <ul class="links">
-           <li>
-                <a href="mailto:MSIXWebsiteFeedback@service.microsoft.com" data-linktype="external">
-                    Email the MSIX team
-                </a>
-            </li>
-           
-        </ul>
-		</div>
-<!--
- <div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX">
-                    MSIX tech community
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/MSIX-PackageSupportFramework/issues">
-                    Package Support Framework
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Microsoft/msix-packaging/issues">
-                    MSIX SDK
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/#!/search/realtime/%23msix">
-                    Twitter
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
--->
+In the manifest file example shown earlier in this article, you will notice a **Properties** element within the **AppExtension** element. There is no validation performed in this section of the manifest file. This allows developers to specify the required metadata between extension and host/client app.
