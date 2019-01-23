@@ -16,9 +16,9 @@ ms.custom: RS5
       
 To make changes to an exiting MSIX package for changing the properties in the manifest or the content of the package without needing to package the installer again, one can use package editor in MSIX Packaging tool. 
 
-From the welcome screen, select the Open package editor tab:
+From the welcome screen, select the package editor option:
 
-![pic9](pic9.png)
+![pic1](pic1.PNG)
 
 Then they hit browse to locate the MSIX package that needs to be edited and select open package:
 
