@@ -41,6 +41,7 @@ On Windows 10 versions 1809 and later, the MSIX user can verify the app's signat
 However, on versions between 1709 and 1808 inclusive, users cannot verify the signature from the MSIX package's properties, unless the 1809 SDK is installed. If the user has the 1809 SDK on a device with Windows 1709 through 1808, the signature can be verified through SDK tools from PowerShell. 
 
 ##  MSIX double-click support: 
-One of the benefits of deploying and MSIX on version 1809 and later is that the user can install the package by clicking on it. This causes our OS component to show some UI to the user and guide them through the app installation.
+One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. This causes Microsofts's App Installer application to show UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can bring you the best installation experience quickly. 
 
-With our latest update to the App Installer - the component that guides the user through installation -  this functionality is available on versions 1709 and 1803 as well. 
+
+With our latest version of the App Installer - 1.0.30232.0 - the ability to install an MSIX just by clicking on it is available on versions 1709 and 1803 as well. 
