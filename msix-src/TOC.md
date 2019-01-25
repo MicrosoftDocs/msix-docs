@@ -13,7 +13,7 @@
 ## [Create app package using Command Line](packaging-tool/package-conversion-cli.md)
 ## [Automate conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)
-## [MSIX Package support on Windows 10 version 1709 and later](packaging-tool/Support on builds 16299 and later.md)
+## [MSIX Package support on 1709 and later](packaging-tool/Support-on-1709-and-later.md)
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
 ## [Known Issues](packaging-tool/mpt-known-issues.md)
 ## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
