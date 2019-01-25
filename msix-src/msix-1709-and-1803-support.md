@@ -25,9 +25,9 @@ Admins using builds earlier than 1809 cannot auto-elevate MSIX apps. On these ea
 ## Store support:
 The minimum supported OS version of an MSIX is listed in the manifest file of the package as MinVersion in the TargetDeviceFamily element. For example an MSIX package may list MinVersion="10.0.17701.0" as the min supported version, which means that the MSIX can run on this and later versions of the OS.
 
-For MSIX packages whose minimum supported OS version is listed as 17701 (corresponding to version 1809) and later, an MSIX package can be deployed in many ways. For example MSIX packages can be deployed through the store,  store for business, Intune, SCCM, by clicking on the MSIX package directly, by clicking on a .appinstaller file which references the MSIX package, or through powershell.. 
+For MSIX packages whose minimum supported OS version is listed as 17701 (corresponding to version 1809) and later, an MSIX package can be deployed in many ways. For example MSIX packages can be deployed through the store,  store for business, Intune, SCCM, by clicking on the MSIX package directly, by clicking on a .appinstaller file which references the MSIX package, or through PowerShell.. 
 
-However, on versions between 1709 and 1808 inclusive (corresponding to builds 16299 to 17700) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through powershell.
+However, on versions between 1709 and 1808 inclusive (corresponding to builds 16299 to 17700) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through PowerShell.
 
 
 ## Packaging & signing: 
