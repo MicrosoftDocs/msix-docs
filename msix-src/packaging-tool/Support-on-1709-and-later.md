@@ -59,11 +59,13 @@ At this point, you can install the app on a device with 16299 build or later.
 
  
 ## Troubleshooting tips:
-For now, in devices running builds 16299 to 17700, you need to install MSIX apps through PowerShell. 
+For now, in devices running builds 16299 to 17700, you can install MSIX apps through PowerShell. 
 Specifically, you need this command in PowerShell:
 add-appxpackage <path to MSIX package>
 
 ![PowerPoint command](mpt_blog_11.jpg)
+
+You can also use Intune, SCCM or the Packaging Manager API.
 
 
 
