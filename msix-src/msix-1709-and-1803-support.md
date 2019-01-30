@@ -29,7 +29,7 @@ For MSIX packages whose minimum supported OS version is listed as 17701 (corresp
 
 However, on versions 1709 and 1803 inclusive (corresponding to builds 16299 to 17700) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through PowerShell.
 
-## MSIXbundle installation
+## MSIXbundle installation:
 MSIXbundles can be installed in 1809 and later. However in 1709 and 1803, MSIXbundles cannot be installed with a single click or command line argument. To install an MISXbundle on these OS versions, the user must unpack the bundle manually, and install the applicable MSIX package.   
 
 ## Packaging & signing: 
