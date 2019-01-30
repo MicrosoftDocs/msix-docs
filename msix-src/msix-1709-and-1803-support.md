@@ -27,18 +27,20 @@ The minimum supported OS version of an MSIX is listed in the manifest file of th
 
 For MSIX packages whose minimum supported OS version is listed as 17701 (corresponding to version 1809) and later, an MSIX package can be deployed in many ways. For example MSIX packages can be deployed through the store,  store for business, Intune, SCCM, by clicking on the MSIX package directly, by clicking on a .appinstaller file which references the MSIX package, or through PowerShell.. 
 
-However, on versions between 1709 and 1808 inclusive (corresponding to builds 16299 to 17700) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through PowerShell.
+However, on versions 1709 and 1803 inclusive (corresponding to builds 16299 to 17700) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through PowerShell.
 
+## MSIXbundle installation
+MSIXbundles can be installed in 1809 and later. However in 1709 and 1803, MSIXbundles cannot be installed with a single click or command line argument. To install an MISXbundle on these OS versions, the user must unpack the bundle manually, and install the applicable MSIX package.   
 
 ## Packaging & signing: 
 Currently to package and sign an MSIX, you need the MSIX packaging tool or Visual Studio. Both tools require the 1809 SDK or later. In earlier SDKs packaging and/or signing MSIX is not supported.
  
-## Verifying signing: 
+## Signature Verification: 
 As mentioned earlier, we enforce proper signing of MSIX packages on all Windows versions 1709 and later. However, on the older Windows versions (1709 and 1803), users need a few extra steps to verify the signature for themselves. 
 
 On Windows 10 versions 1809 and later, the MSIX user can verify the app's signature either from PowerShell or through the properties of the MSIX package. 
 
-However, on versions between 1709 and 1808 inclusive, users cannot verify the signature from the MSIX package's properties, unless the 1809 SDK is installed. If the user has the 1809 SDK on a device with Windows 1709 through 1808, the signature can be verified through SDK tools from PowerShell. 
+However, on versions 1709 and 1803 inclusive, users cannot verify the signature from the MSIX package's properties, unless the 1809 SDK is installed. If the user has the 1809 SDK on a device with Windows 1709 through 1803, the signature can be verified through SDK tools from PowerShell. 
 
 ##  MSIX double-click support: 
 One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. This causes Microsofts's App Installer application to show UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can bring you the best installation experience quickly. 
