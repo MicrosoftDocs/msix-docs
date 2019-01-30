@@ -35,16 +35,22 @@ MSIXbundles can be installed in 1809 and later. However in 1709 and 1803, MSIXbu
 ## Packaging & signing: 
 Currently to package and sign an MSIX, you need the MSIX packaging tool or Visual Studio. Both tools require the 1809 SDK or later. In earlier SDKs packaging and/or signing MSIX is not supported.
  
-## Signature Verification: 
+## Signature Verification
 As mentioned earlier, we enforce proper signing of MSIX packages on all Windows versions 1709 and later. However, on the older Windows versions (1709 and 1803), users need a few extra steps to verify the signature for themselves. 
 
 On Windows 10 versions 1809 and later, the MSIX user can verify the app's signature either from PowerShell or through the properties of the MSIX package. 
 
 However, on versions 1709 and 1803 inclusive, users cannot verify the signature from the MSIX package's properties, unless the 1809 SDK is installed. If the user has the 1809 SDK on a device with Windows 1709 through 1803, the signature can be verified through SDK tools from PowerShell. 
 
-##  MSIX double-click support: 
-One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. This causes Microsofts's App Installer application to show UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can bring you the best installation experience quickly. 
+##  MSIX double-click support
+One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. This causes Microsoft's App Installer application to show UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can bring you the best installation experience quickly. 
 
+### Support Matrix
+
+| OS version|.msix     |.msixbundle|.appx|.appxbundle|
+|Win 10 1709| :&#x2713;: | &#x2713; | &#x2713; | &#x2713; |
+|Win 10 1803| &#x2717; | &#x2717; | &#x2717; | &#x2717; |
+|Win 10 1809| &#x2717; | &#x2717; | &#x2717; | &#x2717; |
 
 With our latest version of the App Installer - 1.0.30232.0 - the ability to install an MSIX just by clicking on it is available on versions 1709 and 1803 as well. 
 
