@@ -13,7 +13,7 @@ ms.custom: "RS5, seodec18"
 
 # MSIX support on builds 1709 and 1803
 
-This article summarizes the limitations to MSIX support with our latest updates.
+This article summarizes the MSIX support and limitations with our latest updates.
 
 By popular demand, we have added support for MSIX on more Windows versions. Most notably, this covers versions 1709 and 1803. This support allows users to deploy MSIX packages on earlier Windows versions, while taking advantage of all benefits of MSIX, including containerization and security through certificates.
 
@@ -47,3 +47,7 @@ One of the benefits of deploying an MSIX on version 1809 and later is that the u
 
 
 With our latest version of the App Installer - 1.0.30232.0 - the ability to install an MSIX just by clicking on it is available on versions 1709 and 1803 as well. 
+
+## MDM support: 
+Intune and SCCM support MSIX installation on 1709 and 1803. MSIX can be installed on these builds in the same way as it can in 1809 and later. 
+
