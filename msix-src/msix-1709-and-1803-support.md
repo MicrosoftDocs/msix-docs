@@ -13,7 +13,7 @@ ms.custom: "RS5, seodec18"
 
 # MSIX support on builds 1709 and 1803
 
-This article summarizes the support for MSIX with our latest updates as of 1/22/2019.
+This article summarizes the limitations to MSIX support with our latest updates.
 
 By popular demand, we have added support for MSIX on more Windows versions. Most notably, this covers versions 1709 and 1803. This support allows users to deploy MSIX packages on earlier Windows versions, while taking advantage of all benefits of MSIX, including containerization and security through certificates.
 
