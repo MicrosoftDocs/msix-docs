@@ -30,12 +30,12 @@ For MSIX packages whose minimum supported OS version is listed as 17701 (corresp
 However, on versions 1709 and 1803 inclusive (corresponding to builds 16299 to 17134) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through PowerShell.
 
 ## MSIXbundle installation
-MSIXbundles can be installed in 1809 and later. However in 1709 and 1803, MSIXbundles cannot be installed with a single click or command line argument. To install an MISXbundle on these OS versions, the user must unpack the bundle manually, and install the applicable MSIX package.   
+MSIXbundles are not supported on Windows 10 versions 1709 and 1803.  Developers looking to build packages compatible with these Windows versions can leverage the .appxbundle technology.  
 
 ## Packaging & signing
 Currently to package and sign an MSIX, you need the MSIX packaging tool or Visual Studio. Both tools require the 1809 SDK or later. In earlier SDKs packaging and/or signing MSIX is not supported.
  
-## Signature Verification
+## Signature verification
 As mentioned earlier, we enforce proper signing of MSIX packages on all Windows versions 1709 and later. However, on the older Windows versions (1709 and 1803), users need a few extra steps to verify the signature for themselves. 
 
 On Windows 10 versions 1809 and later, the MSIX user can verify the app's signature either from PowerShell or through the properties of the MSIX package. 
