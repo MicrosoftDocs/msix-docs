@@ -32,7 +32,7 @@ Each Windows 10 release improves on the sideloading experience, in the table bel
 
 | Version | Sideload Notes |
 |---------|----------------|
-| Build 17134 (April 2018 Update, version 1804)    | The `.appinstaller` file can be accessed over UNC/Share folders. Configurable update checks are also available. |
+| Build 17134 (April 2018 Update, version 1803)    | The `.appinstaller` file can be accessed over UNC/Share folders. Configurable update checks are also available. |
 | Build 16299 (Fall Creators Update, version 1709) | Introduced the `.appinstaller` file to provide automatic updates to your app. This version only supports HTTP endpoints. Update checks are not configurable and happens each 24 hours. |
 | Build 15063 (Creators Update, version 1703)      | The App Installer app is able to download app dependencies (only in release mode) from the Store. |
 | Build 14393 (Anniversary Update, version 1607)   | Introduced the App Installer app to install .appx and .appxbundle files, .appinstaller file is not supported. |
