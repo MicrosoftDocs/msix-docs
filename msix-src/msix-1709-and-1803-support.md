@@ -25,15 +25,15 @@ Admins using builds earlier than 1809 cannot auto-elevate MSIX apps. On these ea
 ## Store support
 The minimum supported OS version of an MSIX is listed in the manifest file of the package as MinVersion in the TargetDeviceFamily element. For example an MSIX package may list MinVersion="10.0.17701.0" as the min supported version, which means that the MSIX can run on this and later versions of the OS.
 
-For MSIX packages whose minimum supported OS version is listed as 17701 (corresponding to version 1809) and later, an MSIX package can be deployed in many ways. For example MSIX packages can be deployed through the store,  store for business, Intune, SCCM, by clicking on the MSIX package directly, by clicking on a .appinstaller file which references the MSIX package, or through PowerShell.. 
+For MSIX packages whose minimum supported OS version is listed as 17701 (corresponding to version 1809) and later, an MSIX package can be deployed in many ways. For example MSIX packages can be deployed through the Microsoft Store,  Microsoft Store for Business, Microsoft Intune, SCCM, by clicking on the MSIX package directly, by clicking on a .appinstaller file which references the MSIX package, or through PowerShell.
 
-However, on versions 1709 and 1803 inclusive (corresponding to builds 16299 to 17134) , MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the store or store for business. However, they can still be deployed through PowerShell.
+However, on versions 1709 and 1803 inclusive (corresponding to builds 16299 to 17134), MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the Microsoft Store or Store for Business. However, they can still be deployed through PowerShell or App Installer.
 
 ## MSIXbundle installation
 MSIXbundles are not supported on Windows 10 versions 1709 and 1803.  Developers looking to build packages compatible with these Windows versions can leverage the .appxbundle technology.  
 
 ## Packaging & signing
-Currently to package and sign an MSIX, you need the MSIX packaging tool or Visual Studio. Both tools require the 1809 SDK or later. In earlier SDKs packaging and/or signing MSIX is not supported.
+Currently to package and sign an MSIX, you need the MSIX Packaging Tool or Visual Studio. Both tools require the 1809 Windows 10 SDK or later. In earlier SDKs, packaging and/or signing of MSIX is not supported.
  
 ## Signature verification
 As mentioned earlier, we enforce proper signing of MSIX packages on all Windows versions 1709 and later. However, on the older Windows versions (1709 and 1803), users need a few extra steps to verify the signature for themselves. 
@@ -53,7 +53,7 @@ One of the benefits of deploying an MSIX on version 1809 and later is that the u
 | Win 10 1803(17134) | &#x2713; | &#x2717; | &#x2713; | &#x2713; |
 | Win 10 1809(17763) and above | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
 
-With our latest version of the App Installer - 1.0.30232.0 - the ability to install an MSIX package is available on versions 1709 and 1803 as well. 
+With the latest version of the App Installer - 1.0.30311 - the ability to install an MSIX package is available on versions 1709 and 1803 as well. 
 
 ## MDM support: 
 Intune and SCCM supports MSIX installation on 1709 and 1803. MSIX can be installed on these builds in the same way as it can in 1809 and later. 
