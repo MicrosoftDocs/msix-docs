@@ -6,6 +6,6 @@ Simply type 'Hyper-V Quick Create' in your start menu and select MSIX Packaging 
 
 MSIX Packaging Tool Environment is a custom Windows 10 build that already includes MSIX Packaging Tool app and other pre-reqs so that you can get started with limited setup. 
 
-![quickCreatepic1](quickCreatepic1.png)
+![quickCreatepic1](images/quickCreatepic1.png)
 Note: This feature requires Hyper-V. You can learn more about Hyper-V and how to enable it [here](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 

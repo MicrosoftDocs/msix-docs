@@ -14,6 +14,7 @@
 ## [Automate conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)
 ## [Best practices for MSIX Packaging Tool](mpt-best-practices.md)
+## [Use Hyper-V Quick Create to package](packaging-tool/Quick-Create-VM.md)
 ## [Known Issues](packaging-tool/mpt-known-issues.md)
 ## [Bundle MSIX packages](packaging-tool/bundle-msix-packages.md)
 ## [Modification packages](modification-packages.md)
