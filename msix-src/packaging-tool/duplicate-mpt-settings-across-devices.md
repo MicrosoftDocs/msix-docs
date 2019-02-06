@@ -25,7 +25,7 @@ Follow these simple steps to duplicate settings for the MSIX Packaging Tool acro
 
 From the device with the configured baseline, copy the following file to a known good location, such as network server share.
 
-* C:\Users\%username%\AppData\Local\Packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\settings.xml  
+* C:\Users\\%username%\AppData\Local\Packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\settings.xml  
 
 > [!NOTE]
 > Make sure this file isn't deleted or altered, because it will be your template for all other installations.
@@ -34,7 +34,7 @@ From the device with the configured baseline, copy the following file to a known
 
 When a new device is setup with the MSIX Packaging Tool installed, copy the settings.xml from the known good location back to the local device: 
 
-* C:\Users\%username%\AppData\Local\Packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\settings.xml 
+* C:\Users\\%username%\AppData\Local\Packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\settings.xml 
 
 ## Considerations
 
