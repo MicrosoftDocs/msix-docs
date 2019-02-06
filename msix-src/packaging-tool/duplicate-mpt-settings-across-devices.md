@@ -8,7 +8,7 @@ ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
-
+# Duplicating MSIX Packaging Tool Settings across multiple devices 
 One feature ask we have been receiving from our users is an easy way to duplicate settings for the MSIX Packaging Tool across multiple devices, or even a back up and restore if you need to reimage a device. 
 Here are a couple simple steps you can do to easily duplicate the same settings for your users. 
  
