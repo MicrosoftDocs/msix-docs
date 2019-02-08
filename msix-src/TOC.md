@@ -37,10 +37,12 @@
 ## [Optional packages and related sets](app-installer/install-related-set.md)
 ## [Troubleshoot installation issues with App Installer file](app-installer/troubleshoot-appinstaller-issues.md)
 
-# [MSIX SDK](sdk-overview.md)
+# [MSIX SDK](msix-sdk/sdk-overview.md)
 ## [Release notes]()
-### [MSIX SDK Ver 1.4](sdk-release-notes-1.4.md)
-## [Use the MSIX SDK to build a package for cross-platform use](sdk-guidance.md)
+### [MSIX SDK Release 1.4](msix-sdk/release-notes/sdk-release-notes-1.4.md)
+### [MSIX SDK Release 1.5](msix-sdk/release-notes/sdk-release-notes-1.5.md)
+### [MSIX SDK Release 1.6](msix-sdk/release-notes/sdk-release-notes-1.6.md)
+## [Use the MSIX SDK to build a package for cross-platform use](msix-sdk/sdk-guidance.md)
 
 # [Package]()
 ## [Package an app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render)
