@@ -23,7 +23,7 @@ MSIX is a packaging format built to be safe, secure and reliable, based on a com
     :::column-end:::
     :::column:::
         ### Use MSIX anywhere
-	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [Learn more](sdk-overview.md)
+	The MSIX SDK enables developers on various platforms to pack and unpack packages for distribution from either the Microsoft Store, or their own content distribution networks. [Learn more](msix-sdk/sdk-overview.md)
     :::column-end:::
 :::row-end:::
 :::row:::
