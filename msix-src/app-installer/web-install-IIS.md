@@ -65,7 +65,7 @@ In the web app properties, select the **Web** tab. In the **Servers** section, c
 
 Add the app package that you are going to distribute into the web application. You can use the app package that is part of the provided [starter project packages](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) on GitHub if you don't have an app package available. The certificate (MySampleApp.cer) that the package was signed with is also with the sample on GitHub. You must have the certificate installed to your device prior to installing the app (Step 9).
 
-In the starter project web application, a new folder was added to the web app called `packages` that contains the app packages to be distributed. To create the folder in Visual Studio, right click on the root of the Solution Explorer, select **Add** -> **New Folder** and name it `packages`. To add app packages to the folder, right click on the `packages` folder and select **Add** -> **Existing Item...** and browse to the app package location. 
+In the starter project web application, a new folder was added to the web app called **packages** that contains the app packages to be distributed. To create the folder in Visual Studio, right click on the project node in Solution Explorer, select **Add** -> **New Folder** and name it **packages**. To add app packages to the folder, right click on the **packages** folder and select **Add** -> **Existing Item...** and browse to the app package location. 
 
 ![Screenshot of adding a package](images/add-package.png)
 

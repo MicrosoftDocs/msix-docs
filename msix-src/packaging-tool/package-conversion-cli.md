@@ -23,12 +23,13 @@ Here are the parameters that can be passed as command line arguments:
 |-? --help	|Show help information|
 |--template	| [required] path to the conversion template XML file containing package information and settings for this conversion|
 |--virtualMachinePassword	| [optional] The password for the Virtual Machine to be used for the conversion environment. Notes: The template file must contain a VirtualMachine element and the Settings::AllowPromptForPassword attribute must not be set to true.|
+|-v --verbose	|[optional] Print verbose logs to the console.|
 
 Examples:
 
 ``` command prompt
 
-    MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml
+    MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml -v
 
     MSIXPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml --virtualMachinePassword pswd112893
     
