@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "msix-src/sdk-overview.md",
+      "redirect_url": "/windows/msix/msix-sdk/sdk-overview",
+      "redirect_document_id": true
+    }
+  ]
+}
