@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Creating an application package with MSI on a VM
+# Creating an application package with MSI or AppV on a VM
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
@@ -30,7 +30,7 @@ Creating an application package is the most commonly used option. This is where 
 
 ![pic2](pic2.png)
 
-Navigate to your MSI installer by clicking **Browse** and selecting the MSI installer in the file picker. Then, click **Next**.
+Navigate to your installer by clicking **Browse** and selecting the MSI installer in the file picker. Then, click **Next**.
 
 Optionally:
 - Check the box under **Use existing MSIX package**, browse, and select an existing MSIX package you'd like to update.
