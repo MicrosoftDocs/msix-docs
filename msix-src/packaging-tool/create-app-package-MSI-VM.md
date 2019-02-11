@@ -1,16 +1,16 @@
 ---
-title: Create app package using .msi on a VM | Microsoft Docs
+title: Creating an application package with MSI or App-V on a VM
 description: Create an MSIX package using an existing .msi on a VM
 author: mcleanbyron
 ms.author: mcleans
-ms.date: 09/07/2018
+ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Creating an application package with MSI or AppV on a VM
+# Creating an application package with MSI or App-V on a VM
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
