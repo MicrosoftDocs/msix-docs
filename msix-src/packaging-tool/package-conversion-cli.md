@@ -1,9 +1,9 @@
 ---
-title: create package using command line interface | Microsoft Docs
-description: create msix app package using command line interface 
+title: Create a package using the command line interface
+description: Learn how to create an MSIX package using the command line interface.
 author: mcleanbyron
 ms.author: mcleans
-ms.date: 09/07/2018
+ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -186,7 +186,7 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |PackageInformation::Version |		The version number for your MSIX package.|
 |PackageInformation:: MainPackageNameForModificationPackage |		[optional] The Package identity name of the main package name. This is used when creating a modification package that takes a dependency on a main (parent) application.|
 |Applications |		[optional] 0 or more Application elements to configure the Application entries in your MSIX package.|
-|Application::Id |		The App ID for your MSIX application. This ID will be used for the Application entry detected that matches the specified ExecutableName. You can have multiple Application ID for executables in the package|
+|Application::Id |		The App ID for your MSIX application. This ID will be used for the Application entry detected that matches the specified ExecutableName. You can have multiple Application ID values for executables in the package.<br/><br/>This value is the unique identifier of the application within the package. This value is sometimes referred to as the package-relative app identifier (PRAID). The ID must be unique within the package (the same ID cannot be used more than once in the same package). However, the ID must not be unique globally. There may be another package on the system that uses the same ID.<br/><br/>This string contains alpha-numeric fields separated by periods. Each field must begin with an ASCII alphabetic character. You cannot use these as field values: "CON", "PRN", "AUX", "NUL", "COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "LPT1", "LPT2", "LPT3", "LPT4", "LPT5", "LPT6", "LPT7", "LPT8", and "LPT9".|
 |Application::ExecutableName |		The executable name for the MSIX application that will be added to the package manifest. The corresponding application entry will be ignored if no application with this name is detected.|
 |Application::Description |		[optional] The App Description for your MSIX application. If not used, the Application DisplayName will be used. This description will be used for the application entry detected that matches the specified ExecutableName|
 |Application::DisplayName	 |	The App Display Name for your MSIX package. This Display Name will be used for the application entry detected that matches the specified ExecutableName|
