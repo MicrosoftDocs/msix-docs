@@ -20,7 +20,7 @@ By popular demand, we have added support for MSIX on more Windows 10 versions. M
 Below, we discuss features and limitations of MSIX support on the earlier OS versions.
 
 ##  MSIX double-click support
-One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. With the latest version of the App Installer - 1.0.30311 - the ability to install an MSIX package by clicking on it is available on 1709 and 1803 as well. 
+One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. With the latest version of the App Installer - 1.0.30311.0 - the ability to install an MSIX package by clicking on it is available on 1709 and 1803 as well. 
 
 Clicking on the package provides the same installation support as in 1809, namely Microsoft's App Installer application shows UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can always bring you the best installation experience. 
 
@@ -28,17 +28,18 @@ Below is a summary of the click-to-install MSIX support available on 1709 and 18
 
 ### Support matrix
 
-| OS Version|   .msix    |.msixbundle|.appx|.appxbundle|
-|-------------|:--------:|:--------:|:--------:|:--------:|
+| OS Version|.msix|.msixbundle|.appx|.appxbundle|
+|:-------------:|:--------:|:--------:|:--------:|:--------:|
 | Win 10 1709(16299) | &#x2713; | &#x2717; | &#x2713; | &#x2713; | 
 | Win 10 1803(17134) | &#x2713; | &#x2717; | &#x2713; | &#x2713; |
 | Win 10 1809(17763) and above | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
 
 
-Note: MSIXbundles are not supported on Windows 10 versions 1709 and 1803.  Developers looking to build packages compatible with these Windows versions can leverage the .appxbundle technology.
+> [!NOTE] 
+> MSIXbundles are not supported on Windows 10 versions 1709 and 1803.  Developers looking to build packages compatible with these Windows versions can leverage the .appxbundle technology.
 
 ## MDM support
-Intune and SCCM supports MSIX installation on 1709 and 1803. MSIX can be installed on these builds in the same way as it can in 1809 and later. 
+Microsoft Intune and SCCM supports MSIX installation on 1709 and 1803. MSIX can be installed on these builds in the same way as it can in 1809 and later. 
 
 ## Store support
 The minimum supported OS version of an MSIX is listed in the manifest file of the package as MinVersion in the TargetDeviceFamily element. For example an MSIX package may list MinVersion="10.0.17701.0" as the min supported version, which means that the MSIX can run on this and later versions of the OS.
