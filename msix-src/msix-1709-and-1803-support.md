@@ -44,19 +44,12 @@ Microsoft Intune and SCCM supports MSIX installation on 1709 and 1803. MSIX can 
 ## Store support
 The minimum supported OS version of an MSIX is listed in the manifest file of the package as MinVersion in the TargetDeviceFamily element. For example an MSIX package may list MinVersion="10.0.17701.0" as the min supported version, which means that the MSIX can run on this and later versions of the OS.
 
-For MSIX packages whose minimum supported OS version is listed as 17701 (corresponding to version 1809) and later, an MSIX package can be deployed in many ways. For example MSIX packages can be deployed through the Microsoft Store,  Microsoft Store for Business, Microsoft Intune, SCCM, by clicking on the MSIX package directly, by clicking on a .appinstaller file which references the MSIX package, or through PowerShell.
+On 1709, 1803 and 1809 we support the mainstream enterprise deployment scenarios. These include installation through System Center Configuration Manger (SCCM), Microsoft Intune, scripting via PowerShell or double-click installation.
 
-However, on versions 1709 and 1803 inclusive (corresponding to builds 16299 to 17134), MSIX package deployment is more limited. Specifically, MSIX packages cannot be deployed through the Microsoft Store or Store for Business. However, they can still be deployed through PowerShell or App Installer.
+Currently MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1809.
 
 ## Packaging & signing
-Currently to package and sign an MSIX, you need the MSIX Packaging Tool or Visual Studio. Both tools require the 1809 Windows 10 SDK or later. In earlier SDKs, packaging and/or signing of MSIX is not supported. 
- 
-## Signature verification
-As mentioned earlier, we enforce proper signing of MSIX packages on all Windows versions 1709 and later. However, on the older Windows versions (1709 and 1803), IT Pros need to follow a few extra steps to verify the signature before releasing an app for their end users. Note, for the end user the MSIX experience does not change in any way. The end-user continues to install, launch and use the application as before, since the signature verification is handled by the IT Pros. 
-
-On Windows 10 versions 1809 and later, an IT Pro can verify the app's signature either from PowerShell or through the properties of the MSIX package. 
-
-However, on versions 1709 and 1803 IT Pros cannot verify the signature from the MSIX package's properties, unless the 1809 SDK is installed. If the IT Pro has the 1809 SDK on a device with Windows 1709 through 1803, the signature can be verified through SDK tools from PowerShell. 
+Currently to package and sign an MSIX, you need the 1809 SDK. Packaging and signing can be done via the SDK command line tools, the MSIX Packaging Tool or Visual Studio. 
 
 ## Auto elevation
 In rare instances, some apps require elevated privileges. 
@@ -64,3 +57,10 @@ In rare instances, some apps require elevated privileges.
 Users running MSIX on builds later than 1809 can use elevated privileges just by clicking on the app tile. The plaftorm detects that elevation is needed and automatically provides it when the user has the necessary credentials. 
 
 On builds 1709 and 1803, users can still run apps with elevated privileges, however they need to explicity select to run the app as an admin. One way to do that is by right-clicking on the app's tile and selecting the "Run as administrator" option.
+
+## Signature verification
+As mentioned earlier, we enforce proper signing of MSIX packages on all Windows versions 1709 and later. However, on the older Windows versions (1709 and 1803), IT Pros need to follow a few extra steps to verify the signature before releasing an app for their end users. Note, for the end user the MSIX experience does not change in any way. The end-user continues to install, launch and use the application as before, since the signature verification is handled by the IT Pros. 
+
+On Windows 10 versions 1809 and later, an IT Pro can verify the app's signature either from PowerShell or through the properties of the MSIX package. 
+
+However, on versions 1709 and 1803 IT Pros cannot verify the signature from the MSIX package's properties, unless the 1809 SDK is installed. If the IT Pro has the 1809 SDK on a device with Windows 1709 through 1803, the signature can be verified through SDK tools from PowerShell. 
