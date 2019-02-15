@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Duplicate MSIX Packaging Tool Settings across multiple devices 
 
-Follow these simple steps to duplicate settings for the MSIX Packaging Tool across multiple devices, or to back up and restore settings if you need to re-image a device. This is available in version 1.2019.110.0. 
+Follow these simple steps to duplicate settings for the MSIX Packaging Tool across multiple devices, or to back up and restore settings if you need to re-image a device. This feature is available starting in version 1.2019.110.0 of the MSIX Packaging Tool. 
 
 ## Build the baseline
 
