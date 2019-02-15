@@ -10,7 +10,7 @@
 ## [MSIX support on 1709 and 1803](msix-1709-and-1803-support.md)
 
 # [MSIX Packaging Tool](mpt-overview.md)
-## [Create app package from .MSI using a VM](packaging-tool/create-app-package-MSI-VM.md)
+## [Create app package with MSI or App-V on a VM](packaging-tool/create-app-package-MSI-VM.md)
 ## [Create app package using Command Line](packaging-tool/package-conversion-cli.md)
 ## [Automate conversion using Command Line](packaging-tool/automate-conversion.md)
 ## [Modify package using package editor](packaging-tool/package-editor.md)

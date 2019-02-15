@@ -1,24 +1,23 @@
 ---
-title: Create app package using .msi on a VM | Microsoft Docs
+title: Create an application package with MSI or App-V on a VM
 description: Create an MSIX package using an existing .msi on a VM
 author: mcleanbyron
 ms.author: mcleans
-ms.date: 09/07/2018
+ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Creating an application package with MSI on a VM
+# Create an application package with MSI or App-V on a VM
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
+You can use the MSIX Packaging Tool to create an MSIX application package for an existing MSI or App-V installer on a Hyper-V virtual machine (VM). The VM must meet these requirements:
 
-Before you can create an application package on a VM, your Hyper-V VM needs to meet these requirements:
-
-- Virtual Machine need to have PSRemoting enabled. (Enable-PSRemoting command should be run on the VM)
-- Virtual Machine needs to be running Windows 1809 or higher similar to the host machine.
+- It must be configured to [receive remote commands](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts) (run the [Enable-PSRemoting](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Enable-PSRemoting?view=powershell-5.1) command on the VM)
+- It must be running Windows 10, version 1809, or a later version of Windows.
 
 When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
 
@@ -30,7 +29,7 @@ Creating an application package is the most commonly used option. This is where 
 
 ![pic2](pic2.png)
 
-Navigate to your MSI installer by clicking **Browse** and selecting the MSI installer in the file picker. Then, click **Next**.
+Navigate to your MSI or App-V installer by clicking **Browse** and selecting the installer in the file picker. Then, click **Next**.
 
 Optionally:
 - Check the box under **Use existing MSIX package**, browse, and select an existing MSIX package you'd like to update.
