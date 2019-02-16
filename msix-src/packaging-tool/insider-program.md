@@ -43,5 +43,6 @@ If you run into an issue while using the app, press **Windows key + F** to launc
 
 1. I didn't get an email confirming my enrollment into the Insider Program. 
     - Please [join the program](https://aka.ms/MSIXPackagingPreviewProgram) again.  
+
 2. I am enrolled into the Insider Program but I don't have the Insider Preview version of the MSIX Packaging Tool on my computer. 
     - Updates from the Microsoft Store are pushed gradually to users around the world, and there might be a delay in getting the automatic updates. You can trigger an update check by going to the [tool page](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf) in the Store. 
