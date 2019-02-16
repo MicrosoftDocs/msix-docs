@@ -23,7 +23,7 @@ MSIX Packaging Tool is now available from the Microsoft Store. You can run your 
 - Windows 10, version 1809 (or later)
 - Participation in the Windows Insider Program (if you're using an Insider build)
 - A valid Microsoft account (MSA) alias to access the app from the Microsoft Store 
-- Admin privileges on your PC account 
+- Administrator privileges on your PC to run the tool
  
  ## Install
  
