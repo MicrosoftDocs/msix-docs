@@ -43,6 +43,8 @@
       href: packaging-tool/bundle-msix-packages.md
     - name: Duplicate MSIX Packaging Tool settings across multiple devices
       href: packaging-tool/duplicate-mpt-settings-across-devices.md
+    - name: MSIX Packaging Tool Insider Program
+      href: packaging-tool/insider-program.md
     - name: Modification packages
       href: modification-packages.md
       items: 
