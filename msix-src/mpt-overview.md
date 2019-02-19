@@ -3,7 +3,7 @@ title: MSIX Packaging Tool Overview
 description: Overview doc on getting started with Msix Packaging Tool
 author: mcleanbyron
 ms.author: mcleans
-ms.date: 09/07/2018
+ms.date: 02/19/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -17,6 +17,8 @@ ms.custom: "RS5, seodec18"
 The MSIX Packaging Tool enables you to repackage your existing Win32 applications to the MSIX format. It offers both an interactive GUI and a command line for conversions, and gives you the ability to convert an application without having the source code. We want to enable IT Pros to convert their existing assets to MSIX, to give them a better way to do packaging and app management.
 
 MSIX Packaging Tool is now available from the Microsoft Store. You can run your desktop installers through this tool and obtain an MSIX package that you can install on your machine.
+
+Interested to be a MSIX Packaging Tool insider, click [here](pacakging-tool/insider-program.md) for more details.
 
 ## Prerequisites
 
@@ -32,7 +34,7 @@ To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://w
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
  
- ## What's new:
+ ## What's New
  **v1.2019.110.0**
 - Improved packaging times 
 - Updated default file exclusion list
