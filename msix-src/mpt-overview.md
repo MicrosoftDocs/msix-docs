@@ -18,7 +18,7 @@ The MSIX Packaging Tool enables you to repackage your existing Win32 application
 
 MSIX Packaging Tool is now available from the Microsoft Store. You can run your desktop installers through this tool and obtain an MSIX package that you can install on your machine.
 
-Interested to be a MSIX Packaging Tool insider, click [here](pacakging-tool/insider-program.md) for more details.
+Interested to be a MSIX Packaging Tool insider, click [here](packaging-tool/insider-program.md) for more details.
 
 ## Prerequisites
 
