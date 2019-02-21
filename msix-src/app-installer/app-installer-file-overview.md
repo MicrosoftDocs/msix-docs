@@ -18,7 +18,6 @@ To help you achieve this, we introduce created the App Installer file. This is a
 
 Later, when you have an update to the application, you only update the App Installer (.appinstaller) file. When you update the file, the new version of the application is pushed to the user. This is especially good for your users because they don’t have to do anything to get the update. They just keep using the application as usual, and the update will be delivered to them.
 
-
 Here's an example showing how this works:
 
 1. IT Pro Joe wants to distribute the Human Resources app to his enterprise.
@@ -32,6 +31,7 @@ Here's an example showing how this works:
 9. The application detects that there’s an update and applies the update automatically
 10. Manager Maggie is happy that she now has the latest version of the application and can take advantage of the new features.
 
+Starting in the Windows 10 Fall Creators Update and later releases, the Windows SDK also provides several APIs that you can use to programmatically modify packages via App Installer files or to retrieve information about apps with an App Installer association. For more information, see [Related documentation](app-installer-documentation.md).
 
 ## Contents of the App Installer file
 
