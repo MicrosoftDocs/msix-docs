@@ -77,10 +77,16 @@
           href: app-installer/web-install-IIS.md
         - name: Hosting Windows 10 app packages on AWS for web install
           href: app-installer/web-install-aws.md
+    - name: Known Issues
+      items:
+        - name: Troubleshoot installation issues with the App Installer file
+          href: app-installer/troubleshoot-appinstaller-issues.md
+        - name: API issues
+          href: app-installer/app-installer-api-issues.md
     - name: Optional packages and related sets
       href: app-installer/install-related-set.md
-    - name: Troubleshoot installation issues with App Installer file
-      href: app-installer/troubleshoot-appinstaller-issues.md
+    - name: Related documentation
+      href: app-installer/app-installer-documentation.md
 - name: MSIX SDK
   href: msix-sdk/sdk-overview.md
   items: 
