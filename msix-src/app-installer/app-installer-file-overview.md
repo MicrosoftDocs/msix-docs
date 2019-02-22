@@ -31,7 +31,7 @@ Here's an example showing how this works:
 9. The application detects that there’s an update and applies the update automatically
 10. Manager Maggie is happy that she now has the latest version of the application and can take advantage of the new features.
 
-Starting in the Windows 10 Fall Creators Update and later releases, the Windows SDK also provides several APIs that you can use to programmatically modify packages via App Installer files or to retrieve information about apps with an App Installer association. For more information, see [Related documentation](app-installer-documentation.md).
+Starting in the Windows 10 Fall Creators Update (version 1709, build 16299) and later releases, the Windows SDK also provides several APIs that you can use to programmatically modify packages via App Installer files or to retrieve information about apps with an App Installer association. For more information, see [Related documentation](app-installer-documentation.md).
 
 ## Contents of the App Installer file
 
