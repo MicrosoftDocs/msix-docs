@@ -1,6 +1,6 @@
 # MSIX packaging enviroment on Hyper-V Quick Create
  
-You can create a virtual environment for MSIX packaging projects using [Hyper-V Quick Create](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine) feature added in the Windows 10, version 1709. 
+You can create a virtual environment for MSIX packaging projects using the [Hyper-V Quick Create](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine) feature. This feature is available starting in Windows 10, version 1709. 
 
 To get started, type 'Hyper-V Quick Create' in your Start menu and select **MSIX Packaging Tool Environment**. After you finish the wizard, start the MSIX Packaging tool on the VM from the Start menu. Or if you have Hyper-V Manager open, Click 'Quick Create...' and it will display the same UI. 
 
