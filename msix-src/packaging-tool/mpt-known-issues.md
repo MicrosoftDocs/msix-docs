@@ -84,3 +84,7 @@ The best way for us to get your feedback is through the **Feedback Hub**. To sen
 4. Attach any [log files](#log-files) associated to the conversion. You can find the logs in the folder provided above.
 5. Attach the converted MSIX package (if possible).
 6. Click **Submit**.
+
+You can also send us feedback by going to Feedback tab under Settings. 
+> [!NOTE]
+> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert. You may want to keep your VM on and in it's state for 24 hours after conversion. 
