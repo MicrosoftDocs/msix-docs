@@ -37,7 +37,7 @@
       href: mpt-best-practices.md
     - name: Use Hyper-V Quick Create to package
       href: packaging-tool/Quick-Create-VM.md
-    - name: Known Issues
+    - name: Known issues and troubleshooting
       href: packaging-tool/mpt-known-issues.md
     - name: Bundle MSIX packages
       href: packaging-tool/bundle-msix-packages.md
