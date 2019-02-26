@@ -9,8 +9,8 @@ keywords: msix packaging tool, known issues
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# Ensure that your machine is set up for conversion 
-We provide a list of best practices here. A couple of considerations regarding the drivers the following
+# Known Issues and Troubleshooting Tips
+Here are the a couple of known issues and troubleshooting tips to consider when converting your apps to MSIX. 
 
 ## Known Issues
 #### MSIX Packaging Tool driver considerations
