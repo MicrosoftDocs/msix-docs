@@ -66,5 +66,9 @@ The best way for us to get your feedback is through the Feedback Hub. Here are t
 
 #### Other known issues
 - Restarting the machine during application installation is not supported. Please ignore the restart request if possible or pass an argument to the installer to not require a restart.
+- Installers may require certain frameworks or drivers to be installed prior to installation. To look up frameworks and drivers on the machine that is being used to convert apps please use the following queries 
+-driverquery /v | Out-File
+-driverquery /v | Out-File "path to text file"
+
 
 
