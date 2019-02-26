@@ -1,6 +1,6 @@
 ---
-title: Known issues | Microsoft Docs
-description: MSIX Packaging Tool known issues 
+title: Troubleshooting Tips | Microsoft Docs
+description: MSIX Packaging Tool Troubleshooting tips and known issues 
 author: pezan
 ms.author: pezan
 ms.date: 12/11/2018
@@ -9,6 +9,8 @@ keywords: msix packaging tool, known issues
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
+# Ensure that your machine is set up for conversion 
+We provide a list of best practices here. A couple of considerations regarding the drivers the following
 
 # Known Issues
 #### MSIX Packaging Tool driver considerations
@@ -34,6 +36,13 @@ Otherwise if you have access to Enterprise or OEM channels you can obtain the dr
 - [MSDN Download](https://my.visualstudio.com/Downloads/Featured) - MSDN subscription is required
 
 Individually-obtained Feature on Demand packages can be installed using DISM command-line options.
+
+# Troubleshooting Conversions
+## Reading the log files 
+Whether your conversion was successful or not, log files are generated for every conversion. They can be found here: 
+%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\
+
+Failure codes are written and indicate any point of failure during the conversion process. 
 
 #### Other known issues
 - Restarting the machine during application installation is not supported. Please ignore the restart request if possible or pass an argument to the installer to not require a restart.
