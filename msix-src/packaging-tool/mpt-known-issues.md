@@ -42,10 +42,20 @@ Individually-obtained Feature on Demand packages can be installed using DISM com
 Whether your conversion was successful or not, log files are generated for every conversion. They can be found here: 
 %localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\
 
-Failure codes are written and indicate any point of failure during the conversion process. 
+Failure codes are written and indicate any point of failure during the conversion process. The error codes are meant to be self explanatory. 
+
+### Examples of failures during conversions 
+#### Uninstallation Error - Exit Code 259
+We noticed some installers exiting failing to convert with exit code 259. If you encountered this, it is because the installer spawns a thread and does not wait for it to complete. In other words, the main thread finishes installing but it exits with error 259 because the spawned a thread that is still running. We recommend that IT Pros use the appropriate install option for setup.exe. 
+
+#### Internal warning messages
+An example of warning signs you may encounter is this:
+[Warning] W_COM_PUBFAIL_INPROC_SERVER_NOT_SUPPORTED
+This indicates we detected COM registration that do not have a match with MSIX today. If you convert an app and it works, changes are these were unnecessary COM entries. However, if you see missing behavior than that means that this COM behavior was not captured during the conversion. 
+Note: this may only occur in early verisons of the tool
+
 
 #### Other known issues
 - Restarting the machine during application installation is not supported. Please ignore the restart request if possible or pass an argument to the installer to not require a restart.
 
-### MSIX Packaging Tool logs
-Conversion logs can be found at %localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\
+
