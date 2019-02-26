@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Tips | Microsoft Docs
 description: MSIX Packaging Tool Troubleshooting tips and known issues 
-author: pezan
-ms.author: pezan
+author: dianmsft
+ms.author: diahar
 ms.date: 12/11/2018
 ms.topic: article
 keywords: msix packaging tool, known issues
