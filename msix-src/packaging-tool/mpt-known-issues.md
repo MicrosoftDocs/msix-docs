@@ -51,9 +51,18 @@ We noticed some installers exiting failing to convert with exit code 259. If you
 #### Internal warning messages
 An example of warning signs you may encounter is this:
 [Warning] W_COM_PUBFAIL_INPROC_SERVER_NOT_SUPPORTED
-This indicates we detected COM registration that do not have a match with MSIX today. If you convert an app and it works, changes are these were unnecessary COM entries. However, if you see missing behavior than that means that this COM behavior was not captured during the conversion. 
+This indicates we detected COM registration that do not have a match with MSIX today. If you convert an app and it works, changes are these were unnecessary COM entries. However, if you see missing behavior than that means that this COM behavior was not captured during 
+the conversion. 
 Note: this may only occur in early verisons of the tool
 
+### Please file feedback 
+The best way for us to get your feedback is through the Feedback Hub. Here are the steps to file feedback 
+1. Open 'Feedback Hub' app or hit Windows + F 
+2. Provide a title and necessary steps to reproduce the issue 
+3. Under Category, select Apps and select MSIX Packaging Tool 
+4. Attach logs associated to the conversion. You can find the logs in the folder provided above. 
+5. Attach the converted MSIX package (if possible) 
+6. Click Submit 
 
 #### Other known issues
 - Restarting the machine during application installation is not supported. Please ignore the restart request if possible or pass an argument to the installer to not require a restart.
