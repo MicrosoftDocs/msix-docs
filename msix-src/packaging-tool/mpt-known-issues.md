@@ -17,7 +17,7 @@ This article describes known issues and provides troubleshooting tips to conside
 
 ### MSIX Packaging Tool driver considerations
 
-MSIX Packaging Tool driver is delivered as a [Feature on Demand(FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if the Windows Update service is disabled on the machine or Windows Insider flight ring settings do no match the OS build of the machine.
+MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if the Windows Update service is disabled on the machine or Windows Insider flight ring settings do no match the OS build of the machine.
 
 ### Installing MSIX Packaging Tool driver FOD on Windows Insider builds
 
