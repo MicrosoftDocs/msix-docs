@@ -12,7 +12,7 @@ ms.custom: RS5
 # Ensure that your machine is set up for conversion 
 We provide a list of best practices here. A couple of considerations regarding the drivers the following
 
-# Known Issues
+## Known Issues
 #### MSIX Packaging Tool driver considerations
 MSIX Packaging Tool driver is delivered as a [Feature on Demand(FOD)](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if WU service is disabled on the machine or Windows Insider flight ring settings do no match the OS build of the machine. 
 
