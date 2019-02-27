@@ -75,9 +75,9 @@ This indicates that the MSIX Packaging Tool detected a COM registration that doe
 > [!NOTE]
 > This may only occur in early versions of the tool.
 
-## Filing feedback
+## Sending feedback
 
-The best way for us to get your feedback is through the **Feedback Hub**. To send us feedback:
+The best way to send your feedback is through the **Feedback Hub**.
 1. Open **Feedback Hub** or type **Windows + F**.
 2. Provide a title and necessary steps to reproduce the issue.
 3. Under **Category**, select **Apps** and select **MSIX Packaging Tool**.
@@ -85,6 +85,7 @@ The best way for us to get your feedback is through the **Feedback Hub**. To sen
 5. Attach the converted MSIX package (if possible).
 6. Click **Submit**.
 
-You can also send us feedback by going to Feedback tab under Settings. 
+You can also send us feedback directly from the MSIX Packaging Tool by going to the **Feedback** tab under **Settings**. 
+
 > [!NOTE]
-> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert. You may want to keep your VM on and in it's state for 24 hours after conversion. 
+> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert your package, you may want to keep your VM on and in its current state for 24 hours after conversion. 
