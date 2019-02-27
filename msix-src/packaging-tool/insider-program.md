@@ -34,9 +34,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 New Features:
 
-    - Ability to convert on a remote machine [remote-conversion-setup.md]
-    - Improved management experience in package editor
-    - Auto versioning recommendations when saving in package editor
+- Ability to convert on a remote machine [remote-conversion-setup.md]
+- Improved management experience in package editor
+- Auto versioning recommendations when saving in package editor
 
 Additional updates
 
