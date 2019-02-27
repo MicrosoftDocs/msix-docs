@@ -14,9 +14,10 @@ ms.custom: 19H1
 
 > [!NOTE]
 > Remote machine conversions is a new feature that is currently only available in the insider preview build. 
-> You can join the MSIX Packaging Tool Insider Preview Program [here](insider-program.md). 
+>
+> You can join the [MSIX Packaging Tool Insider Preview Program](insider-program.md) to get access to this feature. 
 
-In 1.2019.226.0 release of the [MSIX Packaging Tool(preview)](insider-program.md), we enabled the ability to connect to a remote machine to run your conversion on. There are a few steps that you will need to take before getting started with remote conversions.  
+In this preview release of the [MSIX Packaging Tool(1.2019.226.0)](insider-program.md#current-insider-preview-build), we enabled the ability to connect to a remote machine to run your conversion on. There are a few steps that you will need to take before getting started with remote conversions.  
 
 PowerShell remoting must be enabled on the remote machine for secure access. You must also have an admin account for your remote machine.  If you would like to connect using an IP address, follow the instructions for connecting to a non-domain joined remote machine. 
 
