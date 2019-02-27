@@ -62,4 +62,4 @@ You can also share feedback directly from within the app. Click on Settings(gear
 2. I am enrolled into the Insider Program but I don't have the Insider Preview version of the MSIX Packaging Tool on my computer. 
     - Updates from the Microsoft Store are pushed gradually to users around the world, and there might be a delay in getting the automatic updates. You can trigger an update check by going to the [tool page](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf) in the Store. 
 3. I would like to opt-out of the MSIX Packaging Tool Insider Program. 
-    - We are sorry to see you leave the program. Fill the form [here](https://aka.ms/MSIXPackagingPreviewProgram-OptOut) to unsubscribe from the program. 
+    - We are sorry to see you leave the program. Fill the form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-NSOqDz219PqoOqk5qxQEZUMlEwNVNKMDhNUVlKOVpTRTlVWFhMMThLQy4u) to unsubscribe from the program. 
