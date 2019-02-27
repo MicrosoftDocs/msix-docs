@@ -14,15 +14,16 @@ ms.custom: 19H1
 
 > [!NOTE]
 > Remote machine conversions is a new feature that is currently only available in the insider preview build. 
-> You can join the MSIX Packaging Tool Insider Preview Program [here](insider-program.md). 
+>
+> You can join the [MSIX Packaging Tool Insider Preview Program](insider-program.md) to get access to this feature. 
 
-In 1.2019.226.0 release of the [MSIX Packaging Tool(preview)](insider-program.md), we enabled the ability to connect to a remote machine to run your conversion on. There are a few steps that you will need to take before getting started with remote conversions.  
+In this preview release of the [MSIX Packaging Tool(1.2019.226.0)](insider-program.md#current-insider-preview-build), we enabled the ability to connect to a remote machine to run your conversion on. There are a few steps that you will need to take before getting started with remote conversions.  
 
 PowerShell remoting must be enabled on the remote machine for secure access. You must also have an admin account for your remote machine.  If you would like to connect using an IP address, follow the instructions for connecting to a non-domain joined remote machine. 
 
 ## Connecting to a remote machine in a trusted domain 
 
-To enable PowerShell remoting, run the following on the remote machine from an admin PowerShell window: 
+To enable PowerShell remoting, run the following on the remote machine from an **admin** PowerShell window: 
 
 ``` PowerShell
 Enable-PSRemoting -Force -SkipNetworkProfileCheck 
@@ -34,10 +35,10 @@ If your remote machine is part of a security group(such as Azure), you must conf
 
 #### Azure 
 
-1. In your Azure Portal, go to Networking > Add inbound port 
-2. Click ‘Basic’ 
-3. Service field should remain set to ‘Custom’ 
-4. Set the port number to 1599 (MSIX Packaging Tool default port value – this can be changed in the Settings of the tool) and give the rule a name (e.g. AllowMPTServerInBound) 
+1. In your Azure Portal, go to **Networking** > **Add inbound port** 
+2. Click **Basic**
+3. Service field should remain set to **Custom**
+4. Set the port number to **1599** (MSIX Packaging Tool default port value – this can be changed in the Settings of the tool) and give the rule a name (e.g. AllowMPTServerInBound) 
 
 #### Other infrastructure 
 
@@ -47,7 +48,7 @@ Make sure your server port configuration is aligned to the MSIX Packaging Tool p
 
 For a non-domain joined machine, you must be set up with a certificate to connect over HTTPS. 
 
-1. Enable PowerShell remoting and appropriate firewall rules by running the following on the remote machine in an admin PowerShell window: 
+1. Enable PowerShell remoting and appropriate firewall rules by running the following on the remote machine in an **admin** PowerShell window: 
 
 ``` PowerShell
 Enable-PSRemoting -Force -SkipNetworkProfileCheck  
@@ -81,9 +82,9 @@ If your remote machine is part of a security group (such as Azure), you must con
 
 Follow the instructions to [add a custom port](#azure), as well as adding a network security rule for WinRM HTTPS 
 
-1. In your Azure Portal, go to Networking > Add inbound port 
-2. Click ‘Basic’ 
-3. Set Service field to ‘WinRM’ 
+1. In your Azure Portal, go to **Networking** > **Add inbound port** 
+2. Click **Basic** 
+3. Set Service field to **WinRM**
 
 #### Other infrastructure 
 
