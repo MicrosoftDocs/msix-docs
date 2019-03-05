@@ -32,22 +32,15 @@ If the tool is already installed on your computer, check the installed version. 
 ### Current Insider Preview build 
 #### Ver 1.2019.304.0
 
+#### Ver 1.2019.304.0
+
 New Features:
 
-- Ability to convert on a remote machine - [more info](remote-conversion-setup.md)
-- Improved management experience in package editor
-- Auto versioning recommendations when saving in package editor
 - User can specify known expected exit codes for CLI conversions
-
-Additional updates
-
-- Added the ability to use “.” to progress the version field
-- Fixed validation for installation location
-- Fixed manifest translation issues for file type association handlers and com server entries
-- Added the ability to get the status of your command line conversions
-- Improved COM warning logging with human readable errors
 - Empty folders generated during a conversion will persist through packaging
 - Updated AppID generation logic, and added validation for package name and app 
+
+You can find full history of MSIX Packaging Tool release notes [here](release-notes/history.md)
 
 ## Share your feedback 
 
