@@ -38,7 +38,7 @@ New Features:
 - Empty folders generated during a conversion will persist through packaging
 - Updated AppID generation logic, and added validation for package name and app 
 
-You can find full history of MSIX Packaging Tool release notes [here](release-notes/history.md)
+You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
 ## Share your feedback 
 
