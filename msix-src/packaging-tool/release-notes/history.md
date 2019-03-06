@@ -18,7 +18,17 @@ New Features:
 
 - User can specify valid expected exit codes for CLI conversions
 - Empty folders generated during a conversion will persist through packaging
-- Updated AppID generation logic, and added additional validation for package name and app 
+- Updated [AppID generation logic](#appid-generation-logic), and added additional validation for package name and app 
+
+##### AppID generation logic
+The new procedure to derive the App ID is as follows: 
+1. Find the exe/msi name, and strip the extension
+2. Convert to uppercase
+3. Remove all non alpha-numeric characters
+4. Translate the numerals to corresponding English words
+5. If the resulting string contains less than 3 characters, use the string “APP” instead
+6. If the resulting string contains more than 64 characters, truncate it.
+7. For collisions, truncate the string if it contains more than 62 characters, and append a two-digit value, starting with 00.
 
 #### Ver 1.2019.226.0
 New Features:
