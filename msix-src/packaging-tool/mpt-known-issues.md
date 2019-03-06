@@ -72,9 +72,6 @@ You may encounter warning messages such as:
 **[Warning] W_COM_PUBFAIL_INPROC_SERVER_NOT_SUPPORTED**.
 This indicates that the MSIX Packaging Tool detected a COM registration that does not have a match with MSIX today. If you convert an app and it works, chances are these were unnecessary COM entries. However, if you see missing behavior, that means that this COM behavior was not captured during the conversion.
 
-> [!NOTE]
-> This may only occur in early versions of the tool.
-
 ## Sending feedback
 
 The best way to send your feedback is through the **Feedback Hub**.
