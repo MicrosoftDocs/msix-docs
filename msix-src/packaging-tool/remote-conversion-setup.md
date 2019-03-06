@@ -29,7 +29,7 @@ To enable PowerShell remoting, run the following on the remote machine from an *
 Enable-PSRemoting -Force -SkipNetworkProfileCheck 
 ```
 
-### Server port configuration 
+### Port configuration 
 
 If your remote machine is part of a security group(such as Azure), you must configure your network security rules to reach the MSIX Packaging Tool server.  
 
@@ -74,13 +74,13 @@ Export-Certificate -Cert Cert:\LocalMachine\My\$thumbprint -FilePath <path_to_ce
 Import-Certificate -FilePath <path> -CertStoreLocation Cert:\LocalMachine\Root 
 ``` 
 
-### Server port configuration 
+### Port configuration 
 
 If your remote machine is part of a security group (such as Azure), you must configure your network security rules to reach the MSIX Packaging Tool server.  
 
 #### Azure 
 
-Follow the instructions to [add a custom port](#azure), as well as adding a network security rule for WinRM HTTPS 
+Follow the instructions to [add a custom port](#azure) for the MSIX Packaging Tool, as well as adding a network security rule for WinRM HTTPS 
 
 1. In your Azure Portal, go to **Networking** > **Add inbound port** 
 2. Click **Basic** 
