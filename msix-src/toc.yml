@@ -47,6 +47,9 @@
       href: packaging-tool/remote-conversion-setup.md
     - name: MSIX Packaging Tool Insider Program
       href: packaging-tool/insider-program.md
+      items:
+        - name: Release Notes
+          href: packaging-tool/release-notes/history.md
     - name: Modification packages
       href: modification-packages.md
       items: 
