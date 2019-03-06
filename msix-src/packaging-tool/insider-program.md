@@ -36,7 +36,7 @@ New Features:
 
 - User can specify known valid exit codes for CLI conversions
 - Empty folders generated during a conversion will persist through packaging
-- Updated AppID generation logic, and added validation for package name and app 
+- Updated AppID generation logic, and added additional validation for package name and app 
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
