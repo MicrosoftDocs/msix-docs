@@ -58,7 +58,7 @@ or ```driverquery /v | Out-File "path to text file"```
 Whether or not your conversion was successful, log files are generated for every conversion. They can be found here: 
 %localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\
 
-Failure codes are written and indicate any point of failure during the conversion process. The error codes are meant to be self explanatory.
+Failure codes are written and indicate any point of failure during the conversion process. The error codes are meant to be user friendly.
 
 ## Examples of failures during conversions
 
