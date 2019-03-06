@@ -32,8 +32,6 @@ If the tool is already installed on your computer, check the installed version. 
 ### Current Insider Preview build 
 #### Ver 1.2019.304.0
 
-#### Ver 1.2019.304.0
-
 New Features:
 
 - User can specify known expected exit codes for CLI conversions
