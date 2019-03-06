@@ -18,7 +18,7 @@ New Features:
 
 - User can specify valid expected exit codes for CLI conversions
 - Empty folders generated during a conversion will persist through packaging
-- Updated AppID generation logic, and added validation for package name and app 
+- Updated AppID generation logic, and added additional validation for package name and app 
 
 #### Ver 1.2019.226.0
 New Features:
