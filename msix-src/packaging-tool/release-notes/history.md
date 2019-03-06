@@ -16,7 +16,7 @@ ms.custom: Vibranium
 
 New Features:
 
-- User can specify known expected exit codes for CLI conversions
+- User can specify valid expected exit codes for CLI conversions
 - Empty folders generated during a conversion will persist through packaging
 - Updated AppID generation logic, and added validation for package name and app 
 
