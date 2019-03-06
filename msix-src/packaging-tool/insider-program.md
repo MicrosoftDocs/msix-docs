@@ -34,7 +34,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 New Features:
 
-- User can specify known expected exit codes for CLI conversions
+- User can specify known valid exit codes for CLI conversions
 - Empty folders generated during a conversion will persist through packaging
 - Updated AppID generation logic, and added validation for package name and app 
 
