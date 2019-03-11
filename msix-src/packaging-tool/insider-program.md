@@ -37,11 +37,9 @@ New Features:
 - Improved management experience in package editor
     - Auto versioning recommendations when saving in package editor
     - Now supports existing folder addition to package in VFS
-    - Changed manifest validation in package editor to be less sensitive
 - User can specify known valid exit codes for CLI conversions
-- Added the ability to timestamp while signing packages
-    - Added time stamp URl and RFC 3161 compliance input options in Application package, Modification package and Package editor workflows.
-    - Time stamp URL and RFC compliance options will be pre-populated if they have default values set in the settings.
+- Added the ability to time stamp your signed package in all of the workflows where signing is currently available 
+    - You can specify your default time stamp URL and type of time stamp server in the tool Settings page
 - Updated [AppID generation logic](release-notes/history.md#appid-generation-logic), and added additional validation for package name and app 
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
