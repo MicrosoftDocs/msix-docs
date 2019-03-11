@@ -12,6 +12,18 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
+#### Ver 1.2019.308.0
+
+- Added the ability to timestamp while signing packages
+    - Added time stamp URl and RFC 3161 compliance input options in Application package workflow, Modification package workflow and Package editor workflow.
+    - Time stamp URL and RFC compliance options will be pre-populated if they have default values set in the settings.
+- Changed manifest validation in package editor to be less sensitive. 
+- Package Editor - now supports existing folder addition to package in VFS
+- Added PE header fix up for invalid optional header field
+- Added logic to prevent double-clicking the 'Next' button 
+- Annotated CLI resource string with locked keywords('VirtualMachine' and 'RemoteMachine')
+- Updated DISM to timeout after 10 minutes
+
 #### Ver 1.2019.304.0
 
 New Features:
@@ -33,7 +45,7 @@ The new procedure to derive the App ID is as follows:
 #### Ver 1.2019.226.0
 New Features:
 
-- Ability to convert on a remote machine - more info
+- Ability to convert on a remote machine - [more info](../remote-conversion-setup.md)
 - Improved management experience in package editor
 - Auto versioning recommendations when saving in package editor
 
