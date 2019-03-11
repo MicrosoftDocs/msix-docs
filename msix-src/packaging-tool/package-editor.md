@@ -18,26 +18,26 @@ To make changes to an exiting MSIX package for changing the properties in the ma
 
 From the welcome screen, select the package editor option:
 
-![pic1](pic1.PNG)
+![pic1](images/pic1.PNG)
 
 Then they hit browse to locate the MSIX package that needs to be edited and select open package:
 
-![pic10](pic10.png)
+![pic10](images/pic10.png)
 
 Package editor now shows the content and properties of the package.
 
-![pic11](pic11.png)
+![pic11](images/pic11.png)
 
 First page shows the package information, user can change the package info in the UI or choose to open the MSIX manifest file manually in their editor of choice to make changes to the manifest fields. While they are editing the manifest the package editor page is not editable. Once the save the manifest, the UI will get updated.
 
 User can select save button when they are done editing the package or hit cancel or x to discard the changes. Otherwise they can navigate to other pages by clicking on the pages on the left-hand side.
 
-![pic12](pic12.png)
+![pic12](images/pic12.png)
 
 In this page they can add or remove capabilities for the package. If a capability is present in the package, then the checkbox will be checked.
 - This translates to the <capability> element in the MSIX manifest.
 
-![pic13](pic13.png)
+![pic13](images/pic13.png)
 
 This page shows all the packaged virtual registry entries for the application. 
 There are multiple context menu options on this page:
