@@ -12,6 +12,12 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
+#### Ver 1.2019.308.0
+
+- Added the ability to time stamp your signed package in all of the workflows where signing is currently available
+    - You can specify your default time stamp URL and type of time stamp server in the tool Settings page 
+- Empty folders created in the VFS of the Package Editor will persist after saving the package
+
 #### Ver 1.2019.304.0
 
 New Features:
@@ -21,7 +27,7 @@ New Features:
 - Updated [AppID generation logic](#appid-generation-logic), and added additional validation for package name and app 
 
 ##### AppID generation logic
-The new procedure to derive the App ID is as follows: 
+The current procedure to derive the App ID is as follows: 
 1. Find the exe/msi name, and strip the extension
 2. Convert to uppercase
 3. Remove all non alpha-numeric characters
@@ -33,7 +39,7 @@ The new procedure to derive the App ID is as follows:
 #### Ver 1.2019.226.0
 New Features:
 
-- Ability to convert on a remote machine - more info
+- Ability to convert on a remote machine - [more info](../remote-conversion-setup.md)
 - Improved management experience in package editor
 - Auto versioning recommendations when saving in package editor
 

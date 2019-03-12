@@ -38,7 +38,7 @@ The easiest way to bundle packages with MakeApp.exe is to add all the packages t
 
 Move the app packages that you want to bundle into one directory, as shown in the following screenshot.
 
-![Bundle packages in a directory](bundle-pic1.png)
+![Bundle packages in a directory](images/bundle-pic1.png)
 
 >[!NOTE] 
 > MakeAppx.exe only bundles packages that have the same identity, which means that the AppID, publisher, version needs to be the same. Only the package processor architecture for an application package can be different. 
