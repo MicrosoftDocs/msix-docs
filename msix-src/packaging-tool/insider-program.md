@@ -30,12 +30,16 @@ Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.micr
 If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build). 
 
 ### Current Insider Preview build 
-#### Ver 1.2019.304.0
-
+#### Ver 1.2019.308.0
 New Features:
 
+- Ability to convert on a remote machine - [more info](remote-conversion-setup.md)
+- Improved management experience in package editor
+    - Auto versioning recommendations when saving in package editor
+    - Now supports existing folder addition to package in VFS
 - User can specify known valid exit codes for CLI conversions
-- Empty folders generated during a conversion will persist through packaging
+- Added the ability to time stamp your signed package in all of the workflows where signing is currently available 
+    - You can specify your default time stamp URL and type of time stamp server in the tool Settings page
 - Updated [AppID generation logic](release-notes/history.md#appid-generation-logic), and added additional validation for package name and app 
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).

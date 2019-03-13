@@ -23,11 +23,11 @@ When the tool is first launched, you will be prompted to provide consent to send
 
 Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by manual installation of application payload.
 
-![pic1](pic1.png)
+![pic1](images/pic1.png)
 
 ## Choose the installer you want to package
 
-![pic2](pic2.png)
+![pic2](images/pic2.png)
 
 Navigate to your MSI or App-V installer by clicking **Browse** and selecting the installer in the file picker. Then, click **Next**.
 
@@ -38,7 +38,7 @@ Optionally:
 
 ## Packaging method
 
-![pic3](pic3.png)
+![images/pic3](images/pic3.png)
 
 - Select the virtual machine for packaging environment.
   - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM if there are any.
@@ -46,7 +46,7 @@ Optionally:
 
 ## Package information
 
-![pic4](pic4.png)
+![images/pic4](images/pic4.png)
 
 After you choose to package your application on an existing virtual machine, you must provide information about to the app. The tool will try to auto-fill these fields based on the information available from the installer. You will always have a choice to update the entries as needed. If the field as an asterisk*, it's required, but you already knew that. Inline help is provided if the entry is not valid.
 - Package name:
@@ -77,7 +77,7 @@ After you choose to package your application on an existing virtual machine, you
 
 ## Prepare computer
 
-![pic5](pic5.png)
+![images/pic5](images/pic5.png)
 
 Next, the **Prepare computer** page provides options to prepare the computer for packaging.
 
@@ -100,7 +100,7 @@ When you're done preparing the machine, click **Next**.
 
 ## Installation
 
-![pic6](pic6.png)
+![images/pic6](images/pic6.png)
 
 - This is installation phase where the tool is monitoring and capturing the application install operations.
 - The tool will launch the installer in the Virtual Machine Window that it opened in an earlier stage and you'll need to go through the installer wizard to install the application.
@@ -114,7 +114,7 @@ When you're done preparing the machine, click **Next**.
 
 ## Manage first launch tasks
 
-![pic7](pic7.png)
+![images/pic7](images/pic7.png)
 
 This page shows application executables that the tool captured. We recommended launching the application at least once to capture any first launch tasks.
 
@@ -126,7 +126,7 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 
 ## Create package
 
-![pic8](pic8.png)
+![images/pic8](images/pic8.png)
 
 - Provide a location to save the MSIX package.
 - By default, packages are saved in local app data folder.
