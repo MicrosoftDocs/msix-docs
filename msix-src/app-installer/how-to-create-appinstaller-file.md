@@ -12,7 +12,9 @@ ms.custom: "RS5, seodec18"
 
 # Create an App Installer file manually
 
-A related set is not one entity, but rather a combination of a main package and optional packages. To be able to install a related set as one entity, we must be able to specify the main package and optional package as one. To do this, we will need to create an XML file with a ".appinstaller" extension to define a related set. App Installer consumes the *.appinstaller file and allows the user to install all of the defined packages with a single click. For more information about related sets, see [Optional packages and related sets](install-related-set.md).
+This article shows how to manually create an App Installer file that defines a [related set](install-related-set.md). A related set is not one entity, but rather a combination of a main package and optional packages. 
+
+To be able to install a related set as one entity, we must be able to specify the main package and optional package as one. To do this, we will need to create an XML file with an **.appinstaller** extension to define a related set. App Installer consumes the **.appinstaller** file and allows the user to install all of the defined packages with a single click. 
 
 ## App Installer file example
 
@@ -262,5 +264,4 @@ The App Installer file can also specify update setting so that the related sets 
 For all of the details on the XML schema, see [App Installer file reference](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file).
 
 > [!NOTE]
-> The App Installer file type is new in the Windows 10 Fall Creators Update. There is no support for deployment of Windows 10 apps using an App Installer file on previous versions of Windows 10.
-> It also should be noted that the **HoursBetweenUpdateChecks** element is new in the next major update to Windows 10.
+> The App Installer file type is new in Windows 10, version 1709 (the Windows 10 Fall Creators Update). There is no support for deployment of Windows 10 apps using an App Installer file on previous versions of Windows 10. The **HoursBetweenUpdateChecks** element is available starting in Windows 10, version 1803.
