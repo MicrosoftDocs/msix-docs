@@ -12,6 +12,11 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
+#### Ver 1.2019.315.0
+
+ - Robust handling of PowerShell installer arguments
+ - Made disabling Windows Update service a required step in the machine prep phase
+
 #### Ver 1.2019.308.0
 
 - Added the ability to time stamp your signed package in all of the workflows where signing is currently available
