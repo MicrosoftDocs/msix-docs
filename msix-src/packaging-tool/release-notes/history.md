@@ -16,7 +16,6 @@ ms.custom: Vibranium
 
  - Robust handling of PowerShell installer arguments
  - Allow to continue conversion if disabling Windows Update service fails
- - Version increment prompt to be only displayed in package create flow
 
 #### Ver 1.2019.308.0
 
