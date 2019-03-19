@@ -41,9 +41,9 @@ The following partners provide additional tooling and support for MSIX developme
 	[![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)     
 	:::column-end:::
 
-   :::row-end:::
+:::row-end:::
 
-   :::row:::
+:::row:::
 
 	:::column:::
 	[![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
@@ -57,7 +57,8 @@ The following partners provide additional tooling and support for MSIX developme
 	[![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
 	:::column-end:::
 
-:::column:::
-:::column-end:::
+    :::column:::
+	[![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/activ/)
+	:::column-end:::
 
 :::row-end:::
