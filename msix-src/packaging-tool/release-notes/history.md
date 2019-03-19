@@ -15,7 +15,7 @@ ms.custom: Vibranium
 #### Ver 1.2019.315.0
 
  - Robust handling of PowerShell installer arguments
- - Allow to continue conversion if disabling Windows Update service fails
+ - Made disabling Windows Update service a required step in the machine prep phase
 
 #### Ver 1.2019.308.0
 
