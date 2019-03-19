@@ -29,6 +29,8 @@ To enable PowerShell remoting, run the following on the remote machine from an *
 Enable-PSRemoting -Force -SkipNetworkProfileCheck 
 ```
 
+Be sure to sign in to your domain-joined machine using a domain account and not a local account, or you will need to follow the set up instructions for a non-domain joined machine. 
+
 ### Port configuration 
 
 If your remote machine is part of a security group(such as Azure), you must configure your network security rules to reach the MSIX Packaging Tool server.  
