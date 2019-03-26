@@ -12,6 +12,10 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
+#### Ver 1.2019.322.0
+
+ - Automatically split arguments into a separate fields for manifested com executables
+
 #### Ver 1.2019.315.0
 
  - Robust handling of PowerShell installer arguments
