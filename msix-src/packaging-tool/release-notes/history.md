@@ -14,7 +14,7 @@ ms.custom: Vibranium
 
 #### Ver 1.2019.322.0
 
- - Clean ExeServer executable path if it contains arguments
+ - Automatically split arguments into a separate fields for manifested com executables
 
 #### Ver 1.2019.315.0
 
