@@ -15,7 +15,6 @@ ms.custom: Vibranium
 #### Ver 1.2019.322.0
 
  - Clean ExeServer executable path if it contains arguments
- - Fixed infinite allocation loop that can be triggered if the selected msi installer was removed
 
 #### Ver 1.2019.315.0
 
