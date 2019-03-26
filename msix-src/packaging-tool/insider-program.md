@@ -31,7 +31,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ### Current Insider Preview build 
 
-#### Ver 1.2019.315.0
+#### Ver 1.2019.322.0
 
 New Features:
 
