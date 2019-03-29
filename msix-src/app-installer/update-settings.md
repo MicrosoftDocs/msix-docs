@@ -32,9 +32,12 @@ Specifically, the syntax that is available to you is the following:
 
     - **OnLaunch**: Checks for updates on launch. This type of update can show UI and has the following attributes:
 
-        - **ShowPrompt**: ABoolean that determines if UI will be shown to the user.
+        - **ShowPrompt**: A boolean that determines if UI will be shown to the user.
 
-        - **UpdateBlocksActivation**: A Boolean that determines if the UI shown to the user allows the user to launch the app without taking the update, or if the user must take the update before launching the app. This attribute can be set to “true” only if **ShowPrompt** is set to “true”. **UpdateBlocksActivation** =“true” means the UI the user will see allows the user to take the update or close the app. **UpdateBlocksActivation** =“false” means the UI the user will see allows the user to take the update or start the app without updating. In the latter case, the update will be applied silently the next time the app is launched.
+        - **UpdateBlocksActivation**: A boolean that determines if the UI shown to the user allows the user to launch the app without taking the update, or if the user must take the update before launching the app. This attribute can be set to “true” only if **ShowPrompt** is set to “true”. **UpdateBlocksActivation**=“true” means the UI the user will see, allows the user to take the update or close the app. **UpdateBlocksActivation**="false" means the UI the user will see, allows the user to take the update or start the app without updating. In the latter case, the update will be applied silently at an opportune time. Available in Windows 10, version 1809 and later.
+
+        > [!NOTE]
+        > ShowPrompt needs to be set to true if UpdateBlocksActivation is set to true.
 
         - **HoursBetweenUpdateChecks**: An integer that indicates how often (in how many hours) the system will check for updates to the app. “0” to “255” inclusive. The default value is 24 (if this value is not specified). For example if HoursBetweenUpdateChecks = 3 then when the user launches the app, if the system has not checked for updates within the past 3 hours, it will check for updates now.  
 
