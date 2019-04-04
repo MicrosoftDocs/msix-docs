@@ -1,9 +1,9 @@
 ---
 title: MSIX Package support on Windows 10 version 1709 and later
 description: Install MSIX packages on 1709 and later.
-author: nonasi
-ms.author: nonasir
-ms.date: 01/07/2019
+author: c-don
+ms.author: cdon
+ms.date: 04/04/2019
 ms.topic: article
 keywords: MSIX, MPT, MSIX Packaging Tool, 1709, 16299
 ms.localizationpriority: medium
