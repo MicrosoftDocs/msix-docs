@@ -56,9 +56,19 @@ or ```driverquery /v | Out-File "path to text file"```
 ## Log files
 
 Whether or not your conversion was successful, log files are generated for every conversion. They can be found here: 
-%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\
+
+`%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\`
 
 Failure codes are written and indicate any point of failure during the conversion process. The error codes are meant to be user friendly.
+
+### Log files from remote devices or VMs
+
+If the conversion is performed on a remote device or a VM, we recommend that you copy the log files from that device and attach them as part of the feedback item. This will help us diagnose and resolve issues more efficiently. 
+
+You will find the logs from the remote conversions here:
+`%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\<Logs_#>\RemoteServer\Log.txt`
+
+It would even more beneficial if you can share the whole Logs folder that will include the operations occuring on the local client as well the remote server.
 
 ## Examples of failures during conversions
 
