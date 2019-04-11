@@ -12,8 +12,8 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
-####  :point_right: Ver 1.2019.402.0  :point_left: 
-> :point_up: **Public Release**
+### **Ver 1.2019.402.0 - Public Release**
+
  - Validate COM ProgId type values, COM class entries and remove invalid COM registrations
  - Update Windows SDK tools that are redistributed in MSIX Packaging Tool 
 
@@ -65,10 +65,8 @@ Additional updates
 - Added the ability to get the status of your command line conversions
 - Improved COM warning logging with human readable errors
 
- #### :point_right: Ver 1.2019.110.0 :point_left:
-  > :point_up: **Public Release**
-
-
+ ### **Ver 1.2019.110.0 - Public Release**
+  
 New Features:
 
 - Improved packaging times 
