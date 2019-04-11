@@ -12,7 +12,7 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
-#### Ver 1.2019.402.0
+### **Ver 1.2019.402.0 - Public Release**
 
  - Validate COM ProgId type values, COM class entries and remove invalid COM registrations
  - Update Windows SDK tools that are redistributed in MSIX Packaging Tool 
@@ -65,3 +65,20 @@ Additional updates
 - Added the ability to get the status of your command line conversions
 - Improved COM warning logging with human readable errors
 
+ ### **Ver 1.2019.110.0 - Public Release**
+  
+New Features:
+
+- Improved packaging times 
+- Updated default file exclusion list
+- Incorporated MSIExec error logs into tool reporting
+- Updated logs to add more clarity and troubleshooting steps
+- Added support for capturing installation from PowerShell ISE during manual packaging
+- Added support for declaring PowerShell scripts as installer argument in the UI and the command line template file
+- Added a verbose logging flag(--verbose | -v) for the Command line interface
+- Fixed an issue where network paths on the VM were sometimes inaccessible
+- Fixed an issue where Store versioning requirement validation was failing when using the command line interface
+- Fixed an issue where file paths in quotations were not being accepted
+- Fixed an issue where the VM was not being cleaned up correctly after conversion
+- Fixed an issue where adding files to packages in package editor was not working properly
+- UI cleanup 
