@@ -14,7 +14,7 @@ ms.custom: "RS5, seodec18"
 MSIX is a packaging format built to be safe, secure and reliable, based on a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
 
  > [!TIP]
- > Visit the [MSIX Tech Community](aka.ms/msixcommunity) page for discussions and latest information.
+ > Visit the [MSIX Tech Community](https://aka.ms/msixcommunity) page for discussions and latest information.
  
 :::row:::
     :::column:::
