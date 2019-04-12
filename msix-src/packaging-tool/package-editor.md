@@ -24,8 +24,7 @@ You can navigate to other sections of the package editor to modify your capablit
 
 ![pic10](images/pic10.png)
 
-On the Capabilities page you can add or remove [capabilities](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-capability) for the package. If a capability is present in the package, then the checkbox will be checked. If you select or un-select a capability, it will update your manifest. 
-- This translates to the <capability> element in the MSIX manifest.
+On the Capabilities page you can add or remove [capabilities](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-capability) for the package. If a capability is present in the package, then the checkbox will be checked. If you select or un-select a capability, it will update your manifest. This translates to the "<capability>" element in the MSIX manifest.
 
 ![pic11](images/pic11.png)
 
