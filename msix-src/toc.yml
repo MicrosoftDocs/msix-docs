@@ -20,6 +20,8 @@
       href: app-package-updates.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
+    - name: MSIX Core
+      href: msix-sdk/msixcore.md
 - name: MSIX Packaging Tool
   href: mpt-overview.md
   items: 
