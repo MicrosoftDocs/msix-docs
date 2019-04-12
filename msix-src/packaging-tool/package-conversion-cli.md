@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Conversion with CLI
+# Conversion with Command Line Interface (CLI)
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
       
@@ -34,6 +34,8 @@ Examples:
     MSIXPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml --virtualMachinePassword pswd112893
     
 ```
+> [!NOTE]
+> App-V 5.x conversion is currently supported to be converted throught the command line. This includes capabilities. 
 
 **Conversion template file**
 
