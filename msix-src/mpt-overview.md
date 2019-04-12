@@ -14,7 +14,7 @@ ms.custom: "RS5, seodec18"
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-The MSIX Packaging Tool enables you to repackage your existing Win32 applications to the MSIX format. It offers both an interactive GUI and a command line for conversions, and gives you the ability to convert an application without having the source code. We want to enable IT Pros to convert their existing assets to MSIX, to give them a better way to do packaging and app management.
+The MSIX Packaging Tool enables you to repackage your existing Win32 applications to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. We want to enable IT Pros to convert their existing assets to MSIX, to give them a better way to do packaging and app management.
 
 MSIX Packaging Tool is now available from the Microsoft Store. You can run your desktop installers through this tool and obtain an MSIX package that you can install on your machine.
 
@@ -53,7 +53,7 @@ You can find the full history of MSIX Packaging Tool release notes [here](packag
  
 Here is what you can expect to be able to do with this tool:
  
-- Package your favorite application(msi, exe, App-V 5.x and to MSIX format by launching the tool and selecting the **Application package** icon.
-- Create a modification package for a newly created Application MSIX Package by launching the tool and selecting the **Modification package** icon. 
-- Open your MSIX package to view and edit its content/properties by navigating to the **Open package editor** tab, browsing to the MSIX package, and selecting **Open package**.
+- Package your favorite application(msi, exe, App-V 5.x and custom scripts) in the MSIX format by launching the tool and selecting the **Application package** icon.
+- Create a modification package for a MSIX Package by launching the tool and selecting the **Modification package** icon. 
+- Open your MSIX package to view and edit its content/properties by selecting the **Package editor** icon, browsing to the MSIX package, and selecting **Open package**.
 
