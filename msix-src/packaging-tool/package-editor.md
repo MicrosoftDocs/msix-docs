@@ -57,5 +57,5 @@ Right click on a file:
     - Delete: Delete the selected file
     - Move: Rename or move the file to a new location
 
-![pic13](images/pic13.png)
+![pic13](images/Pic13.png)
 
