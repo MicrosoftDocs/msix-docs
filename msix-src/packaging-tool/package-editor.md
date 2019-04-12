@@ -31,30 +31,30 @@ On the Capabilities page you can add or remove [capabilities](https://docs.micro
 The Virtual registry page shows all the packaged virtual registry entries for the application. 
 
 Right click on a node in left window:
-    - Expand/collapse: to expand or collapse all the registry keys in the hive
-    - Key: allows user to rename, delete or create a new key
-    - Value: allows user to add a key value as string, binary or DWORD
+- Expand/collapse: to expand or collapse all the registry keys in the hive
+- Key: allows user to rename, delete or create a new key
+- Value: allows user to add a key value as string, binary or DWORD
 
 Right click anywhere in the right window:
-    - Delete: to delete a key
-    - Add String: to add a string value to a key
-    - Add binary: to add a binary value to a key
-    - Add DWORD: to add a DWORD value to a key
+- Delete: to delete a key
+- Add String: to add a string value to a key
+- Add binary: to add a binary value to a key
+- Add DWORD: to add a DWORD value to a key
 
 ![pic12](images/pic12.png)
 
 On the Package files page, you can double click to expand the file system. 
 
 Right click on a folder:
-    - Add file: Add a file to the folder selected
-    - New folder: Create a new empty folder
-    - Add folder: Browse to add an existing folder
-    - Delete: Delete the selected folder
-    - Move: Rename or move the folder to a new location
+- Add file: Add a file to the folder selected
+- New folder: Create a new empty folder
+- Add folder: Browse to add an existing folder
+- Delete: Delete the selected folder
+- Move: Rename or move the folder to a new location
 
 Right click on a file:
-    - Delete: Delete the selected file
-    - Move: Rename or move the file to a new location
+- Delete: Delete the selected file
+- Move: Rename or move the file to a new location
 
 ![pic13](images/pic13.png)
 
