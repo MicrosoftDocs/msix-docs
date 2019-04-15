@@ -12,19 +12,17 @@ ms.localizationpriority: medium
 
 You can use the MSIX Packaging Tool to create an MSIX application package for any installer types. 
 The device or VM that you are using to convert your apps to MSIX must meet the following criterias: 
-It must be configured to receive remote commands (run the Enable-PSRemoting command on the VM)
-It must be running Windows 10, version 1809, or a later version of Windows.
-When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
+- It must be configured to receive remote commands (run the Enable-PSRemoting command on the VM)
+- It must be running Windows 10, version 1809, or a later version of Windows.
+- When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
 ## Choose the installer you want to package
 Under **Choose the installer you want to package**, find the installer on your machine. If you do not have an installer, you may skip this step. We do recommend that you sign your package.
-- Check the box under **Sign package for testing**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
-- Check the box under **Use installer arguments** and enter the desired argument in the provided field. This field accepts any string.
+- Check the box under **Sign package**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
+- Check the box under **Use installer arguments** and enter the desired argument in the provided field. This is optional. This field accepts any string.
 ## Packaging method
-- Select the virtual machine for packaging environment.
-  - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM if there are any.
-  - Click **Next**.
+- Select your packaging method and click **Next**.
 ## Package information
-After you choose to package your application on an existing virtual machine, you must provide information about to the app. The tool will try to auto-fill these fields based on the information available from the installer (if applicable). You will always have a choice to update the entries as needed. If the field as an asterisk*, it's required, but you already knew that. Inline help is provided if the entry is not valid.
+After you choose to package your application on an existing virtual machine, you must provide information about to the app. The tool will try to auto-fill these fields based on the information available from the installer (if applicable). You will always have a choice to update the entries as needed. If the field as an asterisk*, it's required. Inline help is provided if the entry is not valid.
 - Package name:
     - Required and corresponds to package identity Name in the manifest to describe the contents of the package.
     - Must match the Name subject information of the certificate used to sign a package.
@@ -80,12 +78,11 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 - If you're not done, click **No, I'm not done**. You'll be taken back to the last page to where you can launch applications, install or copy other files, and dlls/executables.
 ## Create package
 - Provide a location to save the MSIX package.
-- By default, packages are saved in local app data folder.
+- The default save location is the desktop.
 - You can define the default save location in Settings menu.
-- If you'd like to continue to edit the content and properties of the package before saving the MSIX package, you can select “Package editor” and be taken to package editor.
-- If you prefer to sign the package with a pre-made certificate for testing, browse to and select the certificate.
+- If you'd like to continue to edit the content and properties of the package before saving the MSIX package, you can select **Package editor** and be taken to [package editor]("https://docs.microsoft.com/en-us/windows/msix/packaging-tool/package-editor")
 - Click **Create** to create the MSIX package.
 
-You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select package editor to see and modify the package content and properties.
+You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, save location of logs and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select package editor to see and modify the package content and properties.
 
 
