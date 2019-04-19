@@ -2,5 +2,5 @@
 uhfHeaderId: MSDocsHeader-MSIX
 searchScope:
   - UWP
-breadcrumb_path: ./breadcrumb/toc.json
-toc_rel: ./toc.json  
+breadcrumb_path: ./breadcrumb/toc.yml
+toc_rel: ./toc.yml 
