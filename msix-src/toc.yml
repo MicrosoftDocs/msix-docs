@@ -20,11 +20,15 @@
       href: app-package-updates.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
+    - name: Group policy and MSIX packaged apps
+      href: group-policy-msix.md
 - name: MSIX Packaging Tool
   href: mpt-overview.md
   items: 
     - name: Create app package with MSI or App-V on a VM
       href: packaging-tool/create-app-package-MSI-VM.md
+    - name: Create an MSIX package with all other installer types
+      href: packaging-tool/create-other-installer.md
     - name: Create app package using Command Line
       href: packaging-tool/package-conversion-cli.md
     - name: Automate conversion using Command Line
