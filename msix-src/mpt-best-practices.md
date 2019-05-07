@@ -26,7 +26,7 @@ To begin with, you must have the version of the MSIX Packaging Tool for the Wind
 
 - Its also good to know what kind of dependencies you have so that you can understand which ones you should run with your app and which should be packaged as a modification package. For example, if you have runtime dependencies, it’s a good idea to include those in your main application. If you have a plug in, you should package that as an associated modification package. 
 
----
+
 ## Best practices during repackaging 
 When you are using the MSIX Packaging Tool, there are a few things that we also recommend you do as best practice:
 - When packaging ClickOnce installers, it is necessary to send a shortcut to desktop if the installer is not doing so already. In general, it is good practice to always remember to send a shortcut to desktop for the main app executable.
@@ -34,7 +34,7 @@ When you are using the MSIX Packaging Tool, there are a few things that we also 
 - Declaring an installation location field in the **Package information** page is optional but recommended. Make sure that this path matches the installation location of application installer.
 - Performing the preparation steps in the **Prepare computer** page is optional but highly recommended.
 ms.custom: RS5
----
+
 
 ## Best practices while bundling MSIX packages
 
