@@ -1,11 +1,13 @@
 - name: MSIX
-  href: index.md
   items: 
+    - name: Overview
+      href: index.md
     - name: What is MSIX?
       href: overview.md
     - name: App package formats
-      href: https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages?context=/windows/msix/render
       items: 
+        - name: Overview
+          href: https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages?context=/windows/msix/render
         - name: Optional packages
           href: https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render
         - name: Windows app streaming install
@@ -23,8 +25,9 @@
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
 - name: MSIX Packaging Tool
-  href: mpt-overview.md
   items: 
+    - name: Overview
+      href: mpt-overview.md
     - name: Create app package with MSI or App-V on a VM
       href: packaging-tool/create-app-package-MSI-VM.md
     - name: Create an MSIX package with all other installer types
@@ -50,25 +53,29 @@
     - name: Remote machine conversions
       href: packaging-tool/remote-conversion-setup.md
     - name: MSIX Packaging Tool Insider Program
-      href: packaging-tool/insider-program.md
       items:
+        - name: Overview
+          href: packaging-tool/insider-program.md
         - name: Release Notes
           href: packaging-tool/release-notes/history.md
     - name: Modification packages
-      href: modification-packages.md
       items: 
+        - name: Overview
+          href: modification-packages.md
         - name: Modification packages on Windows 10 version 1809
           href: modification-package-1809-update.md
         - name: Modification packages on Windows 10 Insider Preview Build 18312 and later
           href: modification-package-insider-preview-build-18312.md
 - name: Package Support Framework
-  href: package-support-framework-overview.md
   items: 
+    - name: Overview
+      href: package-support-framework-overview.md
     - name: Apply runtime fixes to a desktop application package
       href: https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render
 - name: App Installer
-  href: app-installer/app-installer-root.md
   items: 
+    - name: Overview
+      href: app-installer/app-installer-root.md
     - name: App Installer file overview
       href: app-installer/app-installer-file-overview.md
     - name: Create an App Installer file in Visual Studio
@@ -78,8 +85,9 @@
     - name: Configure update settings in the App Installer file
       href: app-installer/update-settings.md
     - name: Install a Windows 10 app from the web using App Installer
-      href: app-installer/installing-windows10-apps-web.md
       items: 
+        - name: Overview
+          href: app-installer/installing-windows10-apps-web.md
         - name: Install a Windows 10 app from an Azure Web App
           href: app-installer/web-install-azure.md
         - name: Install a Windows 10 app from an IIS server
@@ -97,8 +105,9 @@
     - name: Related documentation
       href: app-installer/app-installer-documentation.md
 - name: MSIX SDK
-  href: msix-sdk/sdk-overview.md
   items: 
+    - name: Overview
+      href: msix-sdk/sdk-overview.md
     - name: Release notes
       items: 
         - name: MSIX SDK Release 1.4
