@@ -141,7 +141,7 @@
     - name: Test your Windows app for Windows 10 in S mode
       href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render
 - name: Distribute
-  items: 
+  items:
     - name: Publish to the Microsoft Store
       href: https://docs.microsoft.com/windows/uwp/publish/?context=/windows/msix/render
     - name: Publish to the Microsoft Store for Business
@@ -150,6 +150,8 @@
       href: https://docs.microsoft.com/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render
 - name: Manage
   items: 
+    - name: Troubleshoot MSIX container
+      href: manage/troubleshoot-msix-container.md
     - name: Deployment Imaging Service Management
       href: https://docs.microsoft.com/windows-hardware/manufacture/desktop/what-is-dism?context=/windows/msix/render
     - name: Windows PowerShell
