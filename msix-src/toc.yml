@@ -146,7 +146,7 @@
       href: https://docs.microsoft.com/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render
 - name: Manage
   items: 
-    - name: Troubleshoot MSIX Container
+    - name: Troubleshoot MSIX container
       href: manage/troubleshoot-msix-container.md
     - name: Deployment Imaging Service Management
       href: https://docs.microsoft.com/windows-hardware/manufacture/desktop/what-is-dism?context=/windows/msix/render
