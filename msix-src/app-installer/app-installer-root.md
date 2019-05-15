@@ -15,7 +15,11 @@ ms.custom: "RS5, seodec18"
 ## Purpose
 This section contains or links to articles about App Installer and how to use the features of App Installer.
 
-App Installer allows for Windows 10 apps to be installed by double clicking the app package. This means that users don't need to use PowerShell or other developer tools to deploy Windows 10 apps. The App Installer can also install an app from the web, optional packages, and related sets. To learn how to use the App Installer to install your app, see the topics in the table.
+App Installer allows for Windows 10 apps to be installed by double clicking the app package. This means that users don't need to use PowerShell or other developer tools to deploy Windows 10 apps. The App Installer can also install an app from the web, optional packages, and related sets. 
+
+App Installer can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/en-us/store/details/app-installer/9NBLGGH4NNS1). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
+
+To learn how to use the App Installer to install your app, see the topics in the table.
 
 | Topic | Description |
 |-------|-------------|
