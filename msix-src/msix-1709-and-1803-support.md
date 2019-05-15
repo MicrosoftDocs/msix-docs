@@ -24,6 +24,8 @@ One of the benefits of deploying an MSIX on version 1809 and later is that the u
 
 Clicking on the package provides the same installation support as in 1809, namely Microsoft's App Installer application shows UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can always bring you the best installation experience. 
 
+App Installer can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/en-us/store/details/app-installer/9NBLGGH4NNS1). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
+
 Below is a summary of the click-to-install MSIX support available on 1709 and 1803.
 
 ### Support matrix
@@ -49,7 +51,7 @@ On 1709, 1803 and 1809 we support the mainstream enterprise deployment scenarios
 Currently MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1809.
 
 ## Packaging & signing
-Currently to package and sign an MSIX, you need the 1809 SDK. Packaging and signing can be done via the SDK command line tools, the MSIX Packaging Tool or Visual Studio. 
+Currently to package and sign an MSIX, you need the 1809 SDK. Packaging and signing can be done via the Windows 10 SDK command line tools(MakeAppx.exe and SignTool.exe), the MSIX Packaging Tool or Visual Studio. 
 
 ## Auto elevation
 In rare instances, some apps require elevated privileges. 
