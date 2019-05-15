@@ -16,125 +16,106 @@
           href: https://docs.microsoft.com/windows/uwp/packaging/flat-bundles?context=/windows/msix/render
         - name: Asset packages
           href: https://docs.microsoft.com/windows/uwp/packaging/asset-packages?context=/windows/msix/render
-        - name: App package architectures
-          href: https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render
+        - name: Modification packages
+          items: 
+            - name: Overview
+              href: modification-packages.md
+            - name: Modification packages on Windows 10 version 1809
+              href: modification-package-1809-update.md
+            - name: Modification packages on Windows 10 version 1903
+              href: modification-package-1903.md
+            - name: App package architectures
+              href: https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render
     - name: App package updates
       href: app-package-updates.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
-- name: MSIX Packaging Tool
+- name: Tools
+  items:
+  - name: MSIX Packaging Tool
+    items: 
+      - name: Overview
+        href: mpt-overview.md
+      - name: Modify package using package editor
+        href: packaging-tool/package-editor.md
+      - name: MSIX Package support on 1709 and later
+        href: packaging-tool/Support-on-1709-and-later.md
+      - name: Best practices for MSIX Packaging Tool
+        href: mpt-best-practices.md
+      - name: Use Hyper-V Quick Create to package
+        href: packaging-tool/Quick-Create-VM.md
+      - name: Known issues and troubleshooting
+        href: packaging-tool/mpt-known-issues.md      
+      - name: Duplicate MSIX Packaging Tool settings across multiple devices
+        href: packaging-tool/duplicate-mpt-settings-across-devices.md
+      - name: MSIX Packaging Tool Insider Program
+        items:
+          - name: Overview
+            href: packaging-tool/insider-program.md
+          - name: Release Notes
+            href: packaging-tool/release-notes/history.md
+  - name: Package Support Framework
+    items: 
+      - name: Overview
+        href: package-support-framework-overview.md
+      - name: Apply runtime fixes to a desktop application package
+        href: https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render
+  - name: App Installer
+    items: 
+      - name: Overview
+        href: app-installer/app-installer-root.md
+      - name: AppInstaller file overview
+        href: app-installer/app-installer-file-overview.md         
+      - name: Known Issues
+        items:
+          - name: Troubleshoot installation issues with the App Installer file
+            href: app-installer/troubleshoot-appinstaller-issues.md
+          - name: API issues
+            href: app-installer/app-installer-api-issues.md
+      - name: Optional packages and related sets
+        href: app-installer/install-related-set.md
+      - name: Related documentation
+        href: app-installer/app-installer-documentation.md
+  - name: MSIX SDK
+    items: 
+      - name: Overview
+        href: msix-sdk/sdk-overview.md
+      - name: Release notes
+        items: 
+          - name: MSIX SDK Release 1.4
+            href: msix-sdk/release-notes/sdk-release-notes-1.4.md
+          - name: MSIX SDK Release 1.5
+            href: msix-sdk/release-notes/sdk-release-notes-1.5.md
+          - name: MSIX SDK Release 1.6
+            href: msix-sdk/release-notes/sdk-release-notes-1.6.md
+      - name: Use the MSIX SDK to distribute a MSIX package on non-Windows 10 platforms
+        href: msix-sdk/sdk-guidance.md
+- name: Package
   items: 
-    - name: Overview
-      href: mpt-overview.md
-    - name: Create app package with MSI or App-V on a VM
+    - name: Create MSIX package with MSI or App-V on a VM
       href: packaging-tool/create-app-package-MSI-VM.md
-    - name: Create an MSIX package with all other installer types
+    - name: Create MSIX package with other installer types
       href: packaging-tool/create-other-installer.md
-    - name: Create app package using Command Line
+    - name: Create MSIX package using Command Line
       href: packaging-tool/package-conversion-cli.md
     - name: Automate conversion using Command Line
       href: packaging-tool/automate-conversion.md
-    - name: Modify package using package editor
-      href: packaging-tool/package-editor.md
-    - name: MSIX Package support on 1709 and later
-      href: packaging-tool/Support-on-1709-and-later.md
-    - name: Best practices for MSIX Packaging Tool
-      href: mpt-best-practices.md
-    - name: Use Hyper-V Quick Create to package
-      href: packaging-tool/Quick-Create-VM.md
-    - name: Known issues and troubleshooting
-      href: packaging-tool/mpt-known-issues.md
+    - name: Create MSIX package on a remote machine 
+      href: packaging-tool/remote-conversion-setup.md
     - name: Bundle MSIX packages
       href: packaging-tool/bundle-msix-packages.md
-    - name: Duplicate MSIX Packaging Tool settings across multiple devices
-      href: packaging-tool/duplicate-mpt-settings-across-devices.md
-    - name: Remote machine conversions
-      href: packaging-tool/remote-conversion-setup.md
-    - name: MSIX Packaging Tool Insider Program
-      items:
-        - name: Overview
-          href: packaging-tool/insider-program.md
-        - name: Release Notes
-          href: packaging-tool/release-notes/history.md
-    - name: Modification packages
-      items: 
-        - name: Overview
-          href: modification-packages.md
-        - name: Modification packages on Windows 10 version 1809
-          href: modification-package-1809-update.md
-        - name: Modification packages on Windows 10 Insider Preview Build 18312 and later
-          href: modification-package-insider-preview-build-18312.md
-- name: Package Support Framework
-  items: 
-    - name: Overview
-      href: package-support-framework-overview.md
-    - name: Apply runtime fixes to a desktop application package
-      href: https://docs.microsoft.com/windows/uwp/porting/package-support-framework?context=/windows/msix/render
-- name: App Installer
-  items: 
-    - name: Overview
-      href: app-installer/app-installer-root.md
-    - name: App Installer file overview
-      href: app-installer/app-installer-file-overview.md
-    - name: Create an App Installer file in Visual Studio
-      href: app-installer/create-appinstallerfile-vs.md
-    - name: Create an App Installer file manually
-      href: app-installer/how-to-create-appinstaller-file.md
-    - name: Configure update settings in the App Installer file
-      href: app-installer/update-settings.md
-    - name: Install a Windows 10 app from the web using App Installer
-      items: 
-        - name: Overview
-          href: app-installer/installing-windows10-apps-web.md
-        - name: Install a Windows 10 app from an Azure Web App
-          href: app-installer/web-install-azure.md
-        - name: Install a Windows 10 app from an IIS server
-          href: app-installer/web-install-IIS.md
-        - name: Hosting Windows 10 app packages on AWS for web install
-          href: app-installer/web-install-aws.md
-    - name: Known Issues
-      items:
-        - name: Troubleshoot installation issues with the App Installer file
-          href: app-installer/troubleshoot-appinstaller-issues.md
-        - name: API issues
-          href: app-installer/app-installer-api-issues.md
-    - name: Optional packages and related sets
-      href: app-installer/install-related-set.md
-    - name: Related documentation
-      href: app-installer/app-installer-documentation.md
-- name: MSIX SDK
-  items: 
-    - name: Overview
-      href: msix-sdk/sdk-overview.md
-    - name: Release notes
-      items: 
-        - name: MSIX SDK Release 1.4
-          href: msix-sdk/release-notes/sdk-release-notes-1.4.md
-        - name: MSIX SDK Release 1.5
-          href: msix-sdk/release-notes/sdk-release-notes-1.5.md
-        - name: MSIX SDK Release 1.6
-          href: msix-sdk/release-notes/sdk-release-notes-1.6.md
-    - name: Use the MSIX SDK to build a package for cross-platform use
-      href: msix-sdk/sdk-guidance.md
-- name: Package
-  items: 
     - name: Package an app with Visual Studio
       href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
-    - name: Package a Windows desktop application
-      href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render
+    - name: Package a desktop application with source code with Visual Studio
       items: 
-        - name: Prepare to package a desktop application
-          href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-prepare?context=/windows/msix/render
-        - name: Package a desktop application with Visual Studio
-          href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render
-        - name: Package a desktop application with the Desktop App Converter
-          href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter?context=/windows/msix/render
-        - name: Package a desktop application manually
-          href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render
-        - name: Optimize desktop application binaries with native images
-          href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-r2r?context=/windows/msix/render
+      - name: Prepare to package a desktop application
+        href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-prepare?context=/windows/msix/render
+      - name: Package a desktop application with Visual Studio
+        href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render
+      - name: Package a desktop application manually
+        href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render  
     - name: Manual packaging tools
       href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
     - name: Sign an app package
@@ -150,13 +131,29 @@
     - name: Test your Windows app for Windows 10 in S mode
       href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render
 - name: Distribute
-  items:
+  items: 
     - name: Publish to the Microsoft Store
       href: https://docs.microsoft.com/windows/uwp/publish/?context=/windows/msix/render
     - name: Publish to the Microsoft Store for Business
       href: https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render
-    - name: Non-Microsoft Store distribution
-      href: https://docs.microsoft.com/windows/uwp/packaging/appinstaller-root?context=/windows/msix/render
+    - name: Distribute apps outside the Microsoft Store (App Installer)
+      items:
+      - name: Distribute a Windows 10 app from the web using App Installer
+        items: 
+          - name: Overview
+            href: app-installer/installing-windows10-apps-web.md
+          - name: Distribute a Windows 10 app from an Azure Web App
+            href: app-installer/web-install-azure.md
+          - name: Distribute a Windows 10 app from an IIS server
+            href: app-installer/web-install-IIS.md
+          - name: Distribute a Windows 10 app from an AWS web service
+            href: app-installer/web-install-aws.md
+      - name: Create an App Installer file in Visual Studio
+        href: app-installer/create-appinstallerfile-vs.md
+      - name: Create an App Installer file manually
+        href: app-installer/how-to-create-appinstaller-file.md
+      - name: Configure update settings in the App Installer file
+        href: app-installer/update-settings.md
 - name: Manage
   items: 
     - name: Troubleshoot MSIX container
