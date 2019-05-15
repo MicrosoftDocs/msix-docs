@@ -15,18 +15,18 @@ ms.custom: "RS5, seodec18"
 
 This article summarizes the MSIX support and limitations with our latest updates.
 
-By popular demand, we have added support for MSIX on more Windows 10 versions. Most notably, this covers versions 1709 and 1803. This support allows users to deploy MSIX packages on earlier Windows versions, while taking advantage of all benefits of MSIX, including containerization and security through certificates. To take advantage of these updates, make sure you have the 1.0.30311 or later version of App Installer and the latest servicing fixes on your 1709 and 1803 devices.
+By popular demand, we have added support for MSIX on more Windows 10 versions. Most notably, this covers versions 1709 and 1803. This support allows users to deploy MSIX packages on earlier Windows versions, while taking advantage of all benefits of MSIX, including containerization and security through certificates. To take advantage of these updates, make sure you have the 1.0.30311 or later version of App Installer and be on Windows 10 1709 update or later. 
 
 Below, we discuss features and limitations of MSIX support on the earlier OS versions.
 
 ##  MSIX double-click support
-One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. With the latest version of the App Installer - 1.0.30311.0 - the ability to install an MSIX package by clicking on it is available on 1709 and 1803 as well. 
+One of the benefits of deploying an MSIX on version 1809 and later is that the user can install the package by clicking on it. With the latest version of the App Installer - 1.0.30311.0 - the ability to install an MSIX package by clicking on it is available on Windows 10 1709 and 1803 updates as well. 
 
 Clicking on the package provides the same installation support as in 1809, namely Microsoft's App Installer application shows UI to the user that guides them through the app installation. The App Installer is pre-installed and gets updates from the store, so we can always bring you the best installation experience. 
 
 App Installer can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/en-us/store/details/app-installer/9NBLGGH4NNS1). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
-Below is a summary of the click-to-install MSIX support available on 1709 and 1803.
+Below is a summary of the click-to-install MSIX support available on Windows 10 1709 and 1803 updates.
 
 ### Support matrix
 
