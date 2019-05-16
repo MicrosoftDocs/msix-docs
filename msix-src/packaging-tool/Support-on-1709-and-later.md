@@ -11,7 +11,7 @@ ms.custom: RS5
 ---
 
 
-# MSIX Package support on 1709 and later
+# MSIX package support on Windows 10 1709 and later
 
 If you've converted an existing app to MSIX, you may want to use the app in earlier versions of Windows than 1809 (build 17701). This blog post discusses how to enable such apps in builds as early as 16299, also known as Windows 10 version 1709. 
  

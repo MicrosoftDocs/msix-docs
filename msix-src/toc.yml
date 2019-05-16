@@ -40,7 +40,7 @@
         href: mpt-overview.md
       - name: Modify package using package editor
         href: packaging-tool/package-editor.md
-      - name: MSIX Package support on 1709 and later
+      - name: MSIX package support on Windows 10 1709 and later
         href: packaging-tool/Support-on-1709-and-later.md
       - name: Best practices for MSIX Packaging Tool
         href: mpt-best-practices.md
