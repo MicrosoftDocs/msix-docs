@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Create an MSIX package with all other installer types
 
-You can use the MSIX Packaging Tool to create an MSIX application package for any installer types. The device or VM that you are using to convert your apps to MSIX must meet the following criteria:
+You can use the MSIX Packaging Tool to create an MSIX application package from any installer types. The device or VM that you are using to convert your apps to MSIX must meet the following criteria:
 
 - It must be configured to receive remote commands (run the Enable-PSRemoting command on the VM).
 - It must be running Windows 10, version 1809, or a later version of Windows.

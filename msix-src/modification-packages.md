@@ -52,5 +52,5 @@ Here are the typical ways to create a .dat file:
 After you’ve made the necessary changes, you can create the modification package like any other MSIX package. Then you can deploy the package with the current deployment set-up. When you relaunch your main app, you can see the changes that the modification package has made. If you choose to remove the modification package, your main app will revert to a state without the modification package. 
 
 ## See also
-- [Modification packages on Windows 10 Version 1809](modification-package-1809-update.md)
-- [Modification packages on Windows 10 Insider Preview Build 18312 and later](modification-package-insider-preview-build-18312.md)
+- [Modification packages on Windows 10 version 1809](modification-package-1809-update.md)
+- [Modification packages on Windows 10 version 1903](modification-package-1903.md)

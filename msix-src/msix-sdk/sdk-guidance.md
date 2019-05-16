@@ -1,5 +1,5 @@
 ---
-title: Developer Guidance to target MSIX SDK
+title: Use the MSIX SDK to distribute an MSIX package on non-Windows 10 platforms
 description: Guidance to developers who are using SDK to pack MSIX packages for cross platform use
 author: mcleanbyron
 ms.author: mcleans
@@ -8,7 +8,7 @@ ms.topic: article
 ms.custom: RS5
 ---
 
-# Use the MSIX SDK to build a package for cross-platform use
+# Use the MSIX SDK to distribute an MSIX package on non-Windows 10 platforms
 
 The MSIX SDK offers developers a universal way to distribute package contents to client devices regardless of the OS platform on the client device. This enables developers to package their app content once instead of having to package for each platform.
 
