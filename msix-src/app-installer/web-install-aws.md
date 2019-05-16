@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Hosting Windows 10 app packages on AWS for web install | Microsoft Docs
+title: Distribute a Windows 10 app from an AWS web service
 description: Tutorial for setting up AWS web server to validate app install via App Installer App
 ms.author: mcleans
 ms.date: 05/30/2018
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Hosting Windows 10 app packages on AWS for web install
+# Distribute a Windows 10 app from an AWS web service
 
 The App Installer app allows developers and IT Pros to distribute Windows 10 apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows 10 packaging and deployment platform.
 

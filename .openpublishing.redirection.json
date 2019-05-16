@@ -4,6 +4,11 @@
       "source_path": "msix-src/sdk-overview.md",
       "redirect_url": "/windows/msix/msix-sdk/sdk-overview",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/modification-package-insider-preview-build-18312.md",
+      "redirect_url": "/windows/msix/modification-package-1903",
+      "redirect_document_id": true
     }
   ]
 }

@@ -14,7 +14,7 @@ ms.custom: RS5
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-You can use the MSIX Packaging Tool to create an MSIX application package for an existing MSI or App-V installer on a Hyper-V virtual machine (VM). The VM must meet these requirements:
+You can use the MSIX Packaging Tool to create an MSIX application package from an existing MSI or App-V installer on a Hyper-V virtual machine (VM). The VM must meet these requirements:
 
 - It must be configured to [receive remote commands](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts) (run the [Enable-PSRemoting](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Enable-PSRemoting?view=powershell-5.1) command on the VM)
 - It must be running Windows 10, version 1809, or a later version of Windows.
