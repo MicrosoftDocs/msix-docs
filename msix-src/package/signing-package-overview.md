@@ -8,3 +8,11 @@ To successfully install a Windows 10 application, the package doesnt just have t
 
 ## Timestamping 
 
+App is signed without timestamping - will install until certfiicate expiration
+App is signed without timestamping - will fail to install after certification expiration
+App is signed without timestamping - If app is already installed on a device, it will continue to run after certificate expiration. 
+
+App is signed with timestamping - will install until certfiicate expiration
+App is signed with timestamping - will install after certificate expiration as the authencity of the cert was verified at signing by timestamping authority
+App is signed with timestamping - If app is already installed on a device, it will continue to run after certificate expiration. 
+
