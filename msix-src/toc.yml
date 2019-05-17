@@ -121,7 +121,7 @@
     - name: Sign an app package 
       items:
         - name: Overview
-          href: package/sign-overview.md
+          href: package/signing-package-overview.md
         - name: Sign an app package using SignTool
           href: https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render
 - name: Validate
