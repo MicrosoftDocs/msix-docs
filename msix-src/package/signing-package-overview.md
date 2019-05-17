@@ -4,6 +4,11 @@ App package signing is a required step in the process of creating a Windows 10 a
 
 To successfully install a Windows 10 application, the package doesnt just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. Be default, Windows 10 trusts certificates from most of the certificate authority that provide code signing certs. 
 
+|Topic| Description |
+|:---|:---|
+|[Prerequisites for signing](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#prerequisites)| This section discusses the prereqs required to sign the Windows 10 app package. | 
+|[Using SignTool](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
+
 ## Timestamping 
 
 Besides signing the app package with a certificate, another important characteristic that dictates the validity of the code signing certificate is **Timestamping**. Timestamping preserves the signature allowing the app package to accepted by app deployment platform even after the certificate has expired. At the package inspection time, the timestamp allows for the package signature to be validated with respect to the time it was signed. This allows for packages to be accepted even after the certificate is no longer valid. Packages that are not timestamped will be evaluated against the current time and if the certificate is no longer valid, Windows will not accept the package. 
@@ -11,12 +16,17 @@ Besides signing the app package with a certificate, another important characteri
 The following are the different scenarios around app signing with/out timestamping:
 
 App is signed without timestamping - will install until the certficate expires
+
 App is signed without timestamping - will fail to install after the certificate expires
+
 App is signed without timestamping - If app is already installed on a device, it will continue to run after certificate expiration. 
 
 App is signed with timestamping - will install until the certificate expires
+
 App is signed with timestamping - will install after the certificate expires as the authenticity of the cert was verified at signing by timestamping authority
+
 App is signed with timestamping - If app is already installed on a device, it will continue to run after certificate expiration. 
+
 
 
 ## Device mode
