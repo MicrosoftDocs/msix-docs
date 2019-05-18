@@ -15,19 +15,12 @@ Besides signing the app package with a certificate, another important characteri
 
 The following are the different scenarios around app signing with/out timestamping:
 
-App is signed without timestamping - will install until the certficate expires
+| |App is signed without timestamping | App is signed with timestamping |
+|---|---------------------------------- | ------------------------------- |
+| Certificate is valid |App will install | App will install |
+| Certificate is invalid(expired) | App will fail to install | App will install as the authenticity of the cert was verified at signing by timestamping authority |
 
-App is signed without timestamping - will fail to install after the certificate expires
-
-App is signed without timestamping - If app is already installed on a device, it will continue to run after certificate expiration. 
-
-App is signed with timestamping - will install until the certificate expires
-
-App is signed with timestamping - will install after the certificate expires as the authenticity of the cert was verified at signing by timestamping authority
-
-App is signed with timestamping - If app is already installed on a device, it will continue to run after certificate expiration. 
-
-
+If the app is successfully installed on a device, it will continue to run even after the certificate expiry regardless of it being timestamped or not. 
 
 ## Device mode
 
