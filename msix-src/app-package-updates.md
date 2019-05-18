@@ -48,6 +48,9 @@ On a larger scale, if an entire file does not change (determined by a full set o
 
 ## App update constraints
 
+#### Updates are performed within the same package family
+The package family is comprised of the Package Name and Publisher. To be able to update, the new package metadata will need to be the same as the previously installed package. 
+
 #### App updates must increment to a higher version
 App updates is general will require the version of the new package to be higher than the current one. General app update process will not allow packages with lower versions to be installed by default. Starting Windows 10 1809 update, *'rollback'* was introduced. It allows lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the ForceUpdateFromAnyVersion switch and in [AppInstaller file](https://docs.microsoft.com/en-us/windows/msix/app-installer/update-settings).  
 
@@ -65,8 +68,5 @@ There are a few ways to ensure that the differential update technology is optimi
 - Keep files in the package small - doing this will ensure that if a change is needed that would impact the full file, the update would still be small.
 - Changes to files should be additive if possible - additive changes will ensure that end-user devices only download those changed blocks.
 - Changes to files should be contained to 64KB blocks if possible - if your app does have large files and requires changes to the middle of a file, containing changes to a set of blocks will help significantly.
-
-Upgrades are performed within the same package family.  The package family is comprised from the Package Name and Publisher.  So they need to stay the same to update.  These are the other considerations:
-
  
 
