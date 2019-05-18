@@ -20,7 +20,8 @@ The following are the different scenarios around app signing with/out timestampi
 | Certificate is valid |App will install | App will install |
 | Certificate is invalid(expired) | App will fail to install | App will install as the authenticity of the cert was verified at signing by timestamping authority |
 
-If the app is successfully installed on a device, it will continue to run even after the certificate expiry regardless of it being timestamped or not. 
+ > [!NOTE]
+ > If the app is successfully installed on a device, it will continue to run even after the certificate expiry regardless of it being timestamped or not. 
 
 ## Device mode
 
