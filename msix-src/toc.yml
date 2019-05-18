@@ -118,8 +118,12 @@
         href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render  
     - name: Manual packaging tools
       href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
-    - name: Sign an app package
-      href: https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render
+    - name: Sign an app package 
+      items:
+        - name: Overview
+          href: package/signing-package-overview.md
+        - name: Sign an app package using SignTool
+          href: https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render
 - name: Validate
   items: 
     - name: Windows app certification kit
