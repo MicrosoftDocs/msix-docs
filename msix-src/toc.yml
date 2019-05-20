@@ -94,20 +94,18 @@
         href: msix-sdk/sdk-guidance.md
 - name: Package
   items: 
-    - name: Create MSIX package with MSI or App-V on a VM
-      href: packaging-tool/create-app-package-MSI-VM.md
-    - name: Create MSIX package with other installer types
-      href: packaging-tool/create-other-installer.md
-    - name: Create MSIX package using Command Line
-      href: packaging-tool/package-conversion-cli.md
-    - name: Automate conversion using Command Line
-      href: packaging-tool/automate-conversion.md
-    - name: Create MSIX package on a remote machine 
-      href: packaging-tool/remote-conversion-setup.md
-    - name: Bundle MSIX packages
-      href: packaging-tool/bundle-msix-packages.md
-    - name: Package an app with Visual Studio
-      href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
+    - name: Convert desktop app installer(.msi/.exe/.appv) into MSIX package
+      items: 
+      - name: Create MSIX package with MSI or App-V on a VM
+        href: packaging-tool/create-app-package-MSI-VM.md
+      - name: Create MSIX package with other installer types
+        href: packaging-tool/create-other-installer.md
+      - name: Create MSIX package using Command Line
+        href: packaging-tool/package-conversion-cli.md
+      - name: Automate conversion using Command Line
+        href: packaging-tool/automate-conversion.md
+      - name: Create MSIX package on a remote machine 
+        href: packaging-tool/remote-conversion-setup.md
     - name: Package a desktop application with source code in Visual Studio
       items: 
       - name: Prepare to package a desktop application
@@ -116,8 +114,12 @@
         href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render
       - name: Package a desktop application manually
         href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render  
+    - name: Package an app with Visual Studio
+      href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
     - name: Manual packaging tools
       href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
+    - name: Bundle MSIX packages
+      href: packaging-tool/bundle-msix-packages.md
     - name: Sign an app package 
       items:
         - name: Overview
