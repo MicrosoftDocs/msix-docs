@@ -94,9 +94,9 @@
         href: msix-sdk/sdk-guidance.md
 - name: Package
   items: 
-    - name: Convert desktop app installer(.msi/.exe/.appv) into MSIX package
+    - name: Create an MSIX package from a Desktop Installer
       items: 
-      - name: Create MSIX package with MSI or App-V on a VM
+      - name: Create an MSIX package from a Desktop installer(MSI, EXE or App-V) on a VM
         href: packaging-tool/create-app-package-MSI-VM.md
       - name: Create MSIX package with other installer types
         href: packaging-tool/create-other-installer.md
