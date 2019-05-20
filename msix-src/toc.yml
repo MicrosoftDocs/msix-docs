@@ -108,11 +108,11 @@
       href: packaging-tool/bundle-msix-packages.md
     - name: Package an app with Visual Studio
       href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
-    - name: Package a desktop application with source code with Visual Studio
+    - name: Package a desktop application with source code in Visual Studio
       items: 
       - name: Prepare to package a desktop application
         href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-prepare?context=/windows/msix/render
-      - name: Package a desktop application with Visual Studio
+      - name: Package a desktop application
         href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?context=/windows/msix/render
       - name: Package a desktop application manually
         href: https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion?context=/windows/msix/render  
