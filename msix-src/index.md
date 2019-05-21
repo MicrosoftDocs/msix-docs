@@ -34,7 +34,7 @@ App Installer allows for installation and updates of any MSIX app package that i
     :::column-end:::
     :::column:::
 	### Package support framework
-PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [Learn more](package-support-framework-overview.md)
+	PSF enables your app to bypass a select number of modern runtime environment limitations, ensuring that your existing solution runs as expected without modifying source code. [Learn more](psf/package-support-framework-overview.md)
     :::column-end:::
 :::row-end:::
 
