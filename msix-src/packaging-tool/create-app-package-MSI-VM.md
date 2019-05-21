@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Create an MSIX package from a Desktop installer(MSI, EXE or App-V) on a VM
+# Create an MSIX package from a desktop installer (MSI, EXE or App-V) on a VM
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
