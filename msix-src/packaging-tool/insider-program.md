@@ -31,21 +31,19 @@ If the tool is already installed on your computer, check the installed version. 
 
 ### Current Insider Preview build 
 
-> [!NOTE]
-> The current insider preview build(1.2019.402.0) is now promoted to be the public release build of MSIX Packaging Tool. 
-
-#### Ver 1.2019.402.0
+#### Ver 1.2019.522.0
 
 New Features:
 
-- Ability to convert on a remote machine - [more info](remote-conversion-setup.md)
-- Improved management experience in package editor
-    - Auto versioning recommendations when saving in package editor
-    - Now supports existing folder addition to package in VFS
-- User can specify known valid exit codes for CLI conversions
-- Added the ability to time stamp your signed package in all of the workflows where signing is currently available 
-    - You can specify your default time stamp URL and type of time stamp server in the tool Settings page
-- Updated [AppID generation logic](release-notes/history.md#appid-generation-logic), and added additional validation for package name and app 
+- Support for desktop installers that require restart
+- Auto-login during restart installs 
+- New options in app settings
+    - Specify a default cert to sign packages with 
+    - Specify exit codes for installers that require restart
+    
+Known Issues:
+
+- 
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
