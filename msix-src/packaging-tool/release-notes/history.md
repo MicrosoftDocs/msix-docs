@@ -28,6 +28,7 @@ Known Issues:
 - If Default cert is specified, each conversion workflow will need to select 'use cert'
 - During remote or VM resarts, there might be an extra login prompt 
 - Restore defaults button doesn't remove certificate password or installer exit codes
+- There are some UI incongruencies
 
 ### **Ver 1.2019.402.0 - Public Release**
 
