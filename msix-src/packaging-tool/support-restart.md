@@ -2,7 +2,7 @@
 
 We now support the ability to restart during your conversion process using the MSIX Packaging Tool! 
 
-Restarts are supported both through our interactive UI and through our Command Line Interface. In addition, through our Command Line, you can also specify you want to auto-login after the restart to have a seamless hands free conversion. 
+Restarts are supported both through our interactive UI and through our Command Line Interface. In addition, through our Command Line, you can also specify you want to auto-login after the restart to have a seamless hands-free conversion. 
 
 Specify which exit codes indicate a restart is needed through the Installer exit codes page in Settings. 
 
