@@ -8,7 +8,7 @@ We now support the ability to restart during your conversion process using the M
 
 Restarts are supported both through our interactive UI and through our Command Line Interface. In addition, through our Command Line, you can also specify you want to auto-login after the restart to have a seamless hands-free conversion. 
 
-You can specify which exit codes indicate a restart in the **Settings(Installer exit codes)**. 
+You can specify which exit codes indicate a restart in the **Settings (Installer exit codes) page**. 
 
 You can trigger a restart through the UI during your conversion workflow or through the start menu of your conversion machine. After the restart has happened, you will return to the same place you were in the tool to continue with your conversion.
 
