@@ -12,5 +12,5 @@ You can specify which exit codes indicate a restart in the **Settings(Installer 
 
 You can trigger a restart through the UI during your conversion workflow or through the start menu of your conversion machine. After the restart has happened, you will return to the same place you were in the tool to continue with your conversion.
 
-Please keep in mind this feature is still in development and there may be some bugs. If you find any, be sure to [file feedback](insider-program#share-your-feedback) so we can fix it!
+Please keep in mind this feature is still in development and there may be some bugs. If you find any, be sure to [file feedback](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/insider-program#share-your-feedback) so we can fix it!
 
