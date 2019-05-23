@@ -26,7 +26,7 @@ Known Issues:
 
 - Negative reboot exit codes are currently not supported
 - If Default cert is specified, each conversion workflow will need to select 'use cert'
-- During remote or VM resarts, there might be an extra login prompt 
+- During remote or VM restarts, there might be an extra login prompt 
 - Restore defaults button doesn't remove certificate password or installer exit codes
 - There are some UI incongruencies
 
