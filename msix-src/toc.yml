@@ -60,8 +60,6 @@
     items: 
       - name: Overview
         href: psf/package-support-framework-overview.md
-      - name: Apply runtime fixes to a desktop app package
-        href: psf/package-support-framework.md
   - name: App Installer
     items: 
       - name: Overview
@@ -106,6 +104,10 @@
         href: packaging-tool/automate-conversion.md
       - name: Create MSIX package on a remote machine 
         href: packaging-tool/remote-conversion-setup.md
+      - name: Package with the Desktop App Converter
+        href: desktop/desktop-to-uwp-run-desktop-app-converter.md
+      - name: Behind the scenes of your packaged desktop app
+        href: desktop/desktop-to-uwp-behind-the-scenes.md 
     - name: Package a desktop app with source code using Visual Studio (Desktop Bridge)
       items: 
         - name: Overview
@@ -113,21 +115,17 @@
         - name: Prepare to package
           href: desktop/desktop-to-uwp-prepare.md
         - name: Package a desktop app with Visual Studio
-          href: desktop/desktop-to-uwp-packaging-dot-net.md
-        - name: Package with the Desktop App Converter
-          href: desktop/desktop-to-uwp-run-desktop-app-converter.md
-        - name: Package manually
-          href: desktop/desktop-to-uwp-manual-conversion.md
+          href: desktop/desktop-to-uwp-packaging-dot-net.md       
         - name: Optimize binaries with native images
-          href: desktop/desktop-to-uwp-r2r.md
-        - name: Behind the scenes of your packaged desktop app
-          href: desktop/desktop-to-uwp-behind-the-scenes.md
-        - name: Known issues
-          href: desktop/desktop-to-uwp-known-issues.md
+          href: desktop/desktop-to-uwp-r2r.md               
     - name: Package an app with Visual Studio
       href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
     - name: Manual packaging tools
-      href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
+      items:
+        - name: Overview
+          href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
+        - name: Package desktop app manually
+          href: desktop/desktop-to-uwp-manual-conversion.md
     - name: Bundle MSIX packages
       href: packaging-tool/bundle-msix-packages.md
     - name: Sign an app package 
@@ -150,6 +148,8 @@
           href: desktop/desktop-to-uwp-debug.md
         - name: Test for Windows 10 in S mode
           href: desktop/desktop-to-uwp-test-windows-s.md
+    - name: Apply runtime fixes to a desktop app package
+      href: psf/package-support-framework.md
 - name: Distribute
   items: 
     - name: Publish to the Microsoft Store
