@@ -45,7 +45,7 @@ MSIX Packaging tool can also be downloaded for offline use in the enterprise fro
 - User can specify known valid exit codes for CLI conversions
 - Added the ability to time stamp your signed package in all of the workflows where signing is currently available 
     - You can specify your default time stamp URL and type of time stamp server in the tool Settings page
-- Updated [AppID generation logic](packaging-tool/release-notes/history.md#appid-generation-logic), and added additional validation for package name and app 
+- Updated AppID generation logic, and added additional validation for package name and app 
 
 You can find the full history of MSIX Packaging Tool release notes [here](packaging-tool/release-notes/history.md).
 
