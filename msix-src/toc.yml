@@ -40,7 +40,7 @@
         href: mpt-overview.md
       - name: Modify package using package editor
         href: packaging-tool/package-editor.md
-      - name: MSIX package support on Windows 10 1709 and later
+      - name: MSIX package support on Windows 10 version 1709 and later
         href: packaging-tool/Support-on-1709-and-later.md
       - name: Best practices for MSIX Packaging Tool
         href: mpt-best-practices.md
@@ -92,33 +92,37 @@
         href: msix-sdk/sdk-guidance.md
 - name: Package
   items: 
-    - name: Create an MSIX package from a desktop installer
-      items: 
-      - name: Create an MSIX package from an MSI, EXE, or App-V on a VM
-        href: packaging-tool/create-app-package-MSI-VM.md
-      - name: Create MSIX package with other installer types
-        href: packaging-tool/create-other-installer.md
-      - name: Create MSIX package using Command Line
-        href: packaging-tool/package-conversion-cli.md
-      - name: Automate conversion using Command Line
-        href: packaging-tool/automate-conversion.md
-      - name: Create MSIX package on a remote machine 
-        href: packaging-tool/remote-conversion-setup.md
-      - name: Package with the Desktop App Converter
-        href: desktop/desktop-to-uwp-run-desktop-app-converter.md
-      - name: Behind the scenes of your packaged desktop app
-        href: desktop/desktop-to-uwp-behind-the-scenes.md 
-    - name: Package a desktop app with source code using Visual Studio (Desktop Bridge)
-      items: 
+    - name: Package desktop apps
+      items:
         - name: Overview
           href: desktop/desktop-to-uwp-root.md
-        - name: Prepare to package
+        - name: Prepare to package a desktop app
           href: desktop/desktop-to-uwp-prepare.md
-        - name: Package a desktop app with Visual Studio
-          href: desktop/desktop-to-uwp-packaging-dot-net.md       
-        - name: Optimize binaries with native images
-          href: desktop/desktop-to-uwp-r2r.md               
-    - name: Package an app with Visual Studio
+        - name: Package a desktop app from an existing installer
+          items:
+            - name: Create an MSIX package from an MSI, EXE, or App-V on a VM
+              href: packaging-tool/create-app-package-MSI-VM.md
+            - name: Create MSIX package with other installer types
+              href: packaging-tool/create-other-installer.md
+            - name: Create an MSIX package using Command Line
+              href: packaging-tool/package-conversion-cli.md
+            - name: Automate conversion using Command Line
+              href: packaging-tool/automate-conversion.md
+            - name: Create an MSIX package on a remote machine 
+              href: packaging-tool/remote-conversion-setup.md
+            - name: Package with the Desktop App Converter
+              href: desktop/desktop-to-uwp-run-desktop-app-converter.md
+        - name: Package a desktop app from source code using Visual Studio
+          items: 
+            - name: Overview
+              href: desktop/desktop-to-uwp-packaging-dot-net.md       
+            - name: Optimize binaries with native images
+              href: desktop/desktop-to-uwp-r2r.md      
+        - name: Behind the scenes of your packaged desktop app
+          href: desktop/desktop-to-uwp-behind-the-scenes.md 
+        - name: Known issues 
+          href: desktop/desktop-to-uwp-known-issues.md         
+    - name: Package a UWP app with Visual Studio
       href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
     - name: Manual packaging tools
       items:

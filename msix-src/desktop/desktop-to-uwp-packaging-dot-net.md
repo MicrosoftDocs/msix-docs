@@ -1,13 +1,13 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
-title: Package a desktop application by using Visual Studio
+title: Package a desktop app from source code using Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ---
-# Package a desktop application by using Visual Studio
+# Package a desktop app from source code using Visual Studio
 
 You can use Visual Studio to generate a package for your desktop app. Then, you can publish that package to the Microsoft Store or sideload it onto one or more PCs.
 
