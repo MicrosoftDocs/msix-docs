@@ -18,7 +18,7 @@ When you create a package for your desktop application, your application will ge
 Aside from the code that you use to light up Windows 10 experiences, your application remains unchanged and you can continue to distribute it to users on previous versions of Windows. On Windows 10, your application continues to run in full-trust user mode just like it’s doing today.
 
 > [!NOTE]
-> Checkout <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">this series</a> of short videos published by the Microsoft Virtual Academy. These videos walk you through the entire process of bringing your desktop application to the Universal Windows Platform (UWP).
+> Check out <a href="https://mva.microsoft.com/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">this series</a> of short videos published by the Microsoft Virtual Academy. These videos walk you through the entire process of bringing your desktop application to the Universal Windows Platform (UWP).
 
 ## Prepare
 
@@ -32,20 +32,28 @@ There are several different ways to create an MSIX package for your desktop app.
 
 ### Build an MSIX from an existing app installer
 
-If you already have an app package (for example, an MSI or App-V Installer), we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) to repackage your existing desktop app to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. To get started using the MSIX Packaging Tool, see these articles:
+If you already have an app package (for example, an MSI or App-V Installer), we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) to repackage your existing desktop app to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. 
+
+An earlier tool named the [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) is also still available for repackaging an existing desktop app package. However, this tool is now deprecated, and we recommend that you use the MSIX Packaging Tool instead.
+
+The following table shows the supported versions of Windows 10 and package formats for these tools.
+
+|  Tool  | Supported OS versions for creating packages  | Supported OS versions for installed packages  |  Supported package formats  |
+|-----------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------|
+|  [MSIX Packaging Tool](../mpt-overview.md)        |  Windows 10, version 1809 and later           | Windows 10, version 1709 and later            |  .msix only                 |
+|  [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)        |  Windows 10, version 1607 and later           | Windows 10, version 1607 and later            |  .appx only    |
+
+To get started using the MSIX Packaging Tool, see these articles:
 
 * [Create an MSIX package from a desktop installer (MSI, EXE or App-V) on a VM](../packaging-tool/create-app-package-msi-vm.md)
 * [Create an MSIX package with all other installer types](../packaging-tool/create-other-installer.md)
 * [Create an MSIX package using the Command Line](../packaging-tool/package-conversion-cli.md)
 
-> [!NOTE]
-> An earlier tool named the [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) is also still available for repackaging an existing desktop app package to the MSIX format. However, this tool is now deprecated, and we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) instead.
-
 ### Build an MSIX from source code using Visual Studio
 
 If you maintain your application by using Visual Studio, and your application doesn't have an installer or your installer doesn't perform too many complicated tasks, consider using Visual Studio instead.
 
-Visual Studio makes it easy to create a package. You'll add a packaging project, reference your desktop project, and then press F5 to debug your app. No manual tweaks necessary. This new streamlined experience is a vast improvement over the experience that was available in the previous version of Visual Studio. Here's a few other things you can do with it.
+Visual Studio makes it easy to create a package. You'll add a **Windows Application Package Project** to your solution, reference your desktop project, and then press F5 to debug your app. Here's a few other things you can do with it.
 
 :heavy_check_mark: Automatically generate visual assets.
 
@@ -55,7 +63,11 @@ Visual Studio makes it easy to create a package. You'll add a packaging project,
 
 :heavy_check_mark: Easily assign an identity to your application from a name that you've already reserved in [Partner Center](https://partner.microsoft.com/dashboard).
 
-See [Package a desktop application by using Visual Studio](desktop-to-uwp-packaging-dot-net.md)
+For instructions, see [Package a desktop application by using Visual Studio](desktop-to-uwp-packaging-dot-net.md). The following table shows the supported versions of Visual Studio, Windows 10, and package formats.
+
+|  Supported versions of Visual Studio | Supported OS versions for creating packages  | Supported OS versions for installed packages  |  Supported package formats  |
+|-----------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------|
+|  Visual Studio 2019<br/>Visual Studio 2017 15.5 and later       |  Windows 10, version 1607 and later           |  Windows 10, version 1607 and later            |  .msix (for Windows 10, version 1709 and later)<br/>.appx (for Windows 10, version 1607 and later)                 |
 
 ### Third-party installer
 

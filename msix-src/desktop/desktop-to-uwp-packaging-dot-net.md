@@ -7,14 +7,18 @@ keywords: windows 10, uwp
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ---
+
 # Package a desktop app from source code using Visual Studio
 
-You can use Visual Studio to generate a package for your desktop app. Then, you can publish that package to the Microsoft Store or sideload it onto one or more PCs.
+You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then, you can publish that package to the Microsoft Store or sideload it onto one or more PCs.
 
-The latest version of Visual Studio provides a new version of the packaging project that eliminates all of the manual steps that used to be necessary to package your app. Just add a packaging project, reference your desktop project, and then press F5 to debug your app. No manual tweaks necessary. This new streamlined experience is a vast improvement over the experience that was available in the previous version of Visual Studio.
+The **Windows Application Packaging Project** project is available in the following versions of Visual Studio. For the best experience, we recommend that you use the latest release.
 
->[!IMPORTANT]
->The ability to create a Windows app package for your desktop application (otherwise known as the Desktop Bridge) was introduced in Windows 10, version 1607, and it can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release in Visual Studio.
+* Visual Studio 2019
+* Visual Studio 2017 15.5 and later
+
+> [!IMPORTANT]
+> The **Windows Application Packaging Project** project in Visual Studio is supported on Windows 10, version 1607, and later. It can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release.
 
 ## First, prepare your application
 
@@ -31,9 +35,6 @@ Review this guide before you begin creating a package for your application: [Pre
    You won't have to add any code to it. It's just there to generate a package for you. We'll refer to this project as the "packaging project".
 
    ![Packaging project](images/packaging-project.png)
-
-   >[!NOTE]
-   >This project appears only in Visual Studio 2017 version 15.5 or higher.
 
 3. Set the **Target Version** of this project to any version that you want, but make sure to set the **Minimum Version** to **Windows 10 Anniversary Update**.
 
