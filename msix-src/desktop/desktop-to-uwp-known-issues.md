@@ -1,70 +1,15 @@
 ---
 Description: This article contains known issues with the Desktop Bridge.
-title: Known Issues (Desktop Bridge)
+title: Known Issues with packaged desktop apps
 ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ---
-# Known Issues with packaged desktop applications
+# Known Issues with packaged desktop apps
 
-This article contains known issues that can occur when you create a Windows app package for your desktop application.
-
-<a id="app-converter" />
-
-## Known Issues with the Desktop App Converter
-
-### E_CREATING_ISOLATED_ENV_FAILED an E_STARTING_ISOLATED_ENV_FAILED errors    
-
-If you receive either of these errors, make sure that you're using a valid base image from the [download center](https://aka.ms/converterimages).
-If you’re using a valid base image, try using ``-Cleanup All`` in your command.
-If that does not work, please send us your logs at converter@microsoft.com to help us investigate.
-
-### New-ContainerNetwork: The object already exists error
-
-You might receive this error when you setup a new base image. This can happen if you have a Windows Insider flight on a developer machine that previously had the Desktop App Converter installed.
-
-To resolve this issue, try running the command `Netsh int ipv4 reset` from an elevated command prompt, and then reboot your machine.
-
-### Your .NET application is compiled with the "AnyCPU" build option and fails to install
-
-This can happen if the main executable or any of the dependencies were placed anywhere in the **Program Files** or **Windows\System32** folder hierarchy.
-
-To resolve this issue, try using your architecture-specific desktop installer (32 bit or 64 bit) to generate a Windows app package.
-
-### Publishing public side-by-side Fusion assemblies won't work
-
- During install, an application can publish public side-by-side Fusion assemblies, accessible to any other process. During process activation context creation, these assemblies are retrieved by a system process named CSRSS.exe. When this is done for a converted process, activation context creation and module loading of these assemblies will fail. The side-by-side Fusion assemblies are registered in the following locations:
-  + Registry: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
-  + File System: %windir%\\SideBySide
-
-This is a known limitation and no workaround currently exists. That said, Inbox assemblies, like ComCtl, are shipped with the OS, so taking a dependency on them is safe.
-
-### Error found in XML. The 'Executable' attribute is invalid - The value 'MyApp.EXE' is invalid according to its datatype
-
-This can happen if the executables in your application have a capitalized **.EXE** extension. Although, the casing of this extension shouldn't affect whether your application runs, this can cause the DAC to generate this error.
-
-To resolve this issue, try specifying the **-AppExecutable** flag when you package, and use the lower case ".exe" as the extension of your main executable (For example: MYAPP.exe).    Alternately you can change the casing for all executables in your application from lowercase to uppercase (For example: from .EXE to .exe).
-
-### Corrupted or malformed Authenticode signatures
-
-This section contains details on how to identify issues with Portable Executable (PE) files in your Windows app package that may contain corrupted or malformed Authenticode signatures. Invalid Authenticode signatures on your PE files, which may be in any binary format (e.g. .exe, .dll, .chm, etc.), will prevent your package from being signed properly, and thus prevent it from being deployable from an Windows app package.
-
-The location of the Authenticode signature of a PE file is specified by the Certificate Table entry in the Optional Header Data Directories and the associated Attribute Certificate Table. During signature verification, the information specified in these structures is used to locate the signature on a PE file. If these values get corrupted then it is possible for a file to appear to be invalidly signed.
-
-For the Authenticode signature to be correct, the following must be true of the Authenticode signature:
-
-- The start of the **WIN_CERTIFICATE** entry in the PE file cannot extend past the end of the executable
-- The **WIN_CERTIFCATE** entry should be located at the end of the image
-- The size of the **WIN_CERTIFICATE** entry must be positive
-- The **WIN_CERTIFICATE**entry must start after the **IMAGE_NT_HEADERS32** structure for 32-bit executables and IMAGE_NT_HEADERS64 structure for 64-bit executables
-
-For more details, please refer to the [Authenticode Portal Executable specification](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) and the [PE file format specification](https://msdn.microsoft.com/windows/hardware/gg463119.aspx).
-
-Note that SignTool.exe can output a list of the corrupted or malformed binaries when attempting to sign an Windows app package. To do this, enable verbose logging by setting the environment variable APPXSIP_LOG to 1 (e.g., ```set APPXSIP_LOG=1``` ) and re-run SignTool.exe.
-
-To fix these malformed binaries, ensure they conform to the requirements above.
+This article contains known issues that can occur when you create an MSIX package for your desktop app.
 
 ## You receive the error	MSB4018	The "GenerateResource" task failed unexpectedly
 

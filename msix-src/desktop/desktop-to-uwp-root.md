@@ -8,37 +8,17 @@ ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
+
 # Package desktop applications (Desktop Bridge)
 
-Take your existing desktop application and add modern experiences for Windows 10 users. Then, achieve greater reach across international markets by distributing it through the Microsoft Store. You can monetize your application in much simpler ways by leveraging features built right into the store. Of course, you don't have to use the store. Feel free to use your existing channels.
-
-![Desktop Bridge](images/desktop-bridge-4.png)
+Take your existing desktop application and add modern experiences for Windows 10 users. Then, achieve greater reach across international markets by distributing it through the Microsoft Store. You can monetize your application in much simpler ways by leveraging features built right into the Store. Of course, you don't have to use the Store. Feel free to use your existing channels.
 
 When you create a package for your desktop application, your application will get an identity and with that identity, your desktop application has access to Windows Universal Platform (UWP) APIs. You can use them to light up modern and engaging experiences such as live tiles and notifications. Use simple conditional compilation and runtime checks to run UWP code only when your application runs on Windows 10.
 
-Aside from the code that you use to light up Windows 10 experiences, your application remains unchanged and you can continue to distribute it to your existing Windows 7, Windows Vista, or Windows XP user base. On Windows 10, your application continues to run in full-trust user mode just like it’s doing today.
-
->[!IMPORTANT]
->The ability to create a Windows app package for your desktop application (otherwise known as the Desktop Bridge) was introduced in Windows 10, version 1607, and it can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release in Visual Studio.
+Aside from the code that you use to light up Windows 10 experiences, your application remains unchanged and you can continue to distribute it to users on previous versions of Windows. On Windows 10, your application continues to run in full-trust user mode just like it’s doing today.
 
 > [!NOTE]
 > Checkout <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">this series</a> of short videos published by the Microsoft Virtual Academy. These videos walk you through the entire process of bringing your desktop application to the Universal Windows Platform (UWP).
-
-## Benefits
-
-Here's some reasons to create a Windows App package for your desktop application:
-
-:heavy_check_mark: **Streamlined deployment**. Apps and games that use the bridge have a great deployment experience. This experience ensures that users can confidently install an application and update it. If a user chooses to uninstall the app, it's removed completely with no trace left behind. This reduces time authoring setup experiences and keeping users up-to-date.
-
-:heavy_check_mark: **Automatic updates and licensing**. Your application can participate in the Microsoft Store's built-in licensing and automatic update facilities. Automatic update is a highly reliable and efficient mechanism, because only the changed parts of files are downloaded.
-
-:heavy_check_mark: **Increased reach and simplified monetization**. Choosing to distribute through the Microsoft Store expands your reach to millions of Windows 10 users, who can acquire apps, games and in-app purchases with local payment options.
-
-:heavy_check_mark: **Add UWP features**.  At your own pace, you can add UWP features to your app's package, like a XAML user-interface, live tile updates, UWP background tasks, app services, and many more.
-
-:heavy_check_mark: **Broadened use-cases across device**. Using the bridge, you can gradually migrate your code to the Universal Windows Platform to reach every Windows 10 device, including phones, Xbox One and HoloLens.
-
-To view a more complete list of benefits, see [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop).
 
 ## Prepare
 
@@ -50,9 +30,13 @@ First, prepare your application by reviewing the article [Prepare to package you
 
 There are several different ways to create an MSIX package for your desktop app.
 
-### Build an MSIX from an existing app package
+### Build an MSIX from an existing app installer
 
-If you already have an app package (for example, an MSI or App-V Installer), we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) to repackage your existing desktop app to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code.
+If you already have an app package (for example, an MSI or App-V Installer), we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) to repackage your existing desktop app to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. To get started using the MSIX Packaging Tool, see these articles:
+
+* [Create an MSIX package from a desktop installer (MSI, EXE or App-V) on a VM](../packaging-tool/create-app-package-msi-vm.md)
+* [Create an MSIX package with all other installer types](../packaging-tool/create-other-installer.md)
+* [Create an MSIX package using the Command Line](../packaging-tool/package-conversion-cli.md)
 
 > [!NOTE]
 > An earlier tool named the [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) is also still available for repackaging an existing desktop app package to the MSIX format. However, this tool is now deprecated, and we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) instead.
@@ -61,7 +45,7 @@ If you already have an app package (for example, an MSI or App-V Installer), we 
 
 If you maintain your application by using Visual Studio, and your application doesn't have an installer or your installer doesn't perform too many complicated tasks, consider using Visual Studio instead.
 
-Visual Studio makes it abundantly easy to create a package. You'll add a packaging project, reference your desktop project, and then press F5 to debug your app. No manual tweaks necessary. This new streamlined experience is a vast improvement over the experience that was available in the previous version of Visual Studio. Here's a few other things you can do with it.
+Visual Studio makes it easy to create a package. You'll add a packaging project, reference your desktop project, and then press F5 to debug your app. No manual tweaks necessary. This new streamlined experience is a vast improvement over the experience that was available in the previous version of Visual Studio. Here's a few other things you can do with it.
 
 :heavy_check_mark: Automatically generate visual assets.
 
@@ -141,7 +125,7 @@ Scan your InstallShield project in seconds to save hours of investigative work b
 
 Prepare for the Microsoft Store and simplify your software’s installation experience on Windows 10 by building UWP app packages from your existing InstallShield projects. Build both Windows Installer and UWP App Packages to support all of your customers’ desired deployment scenarios. Support Nano Server and Windows Server 2016 deployments by building WSA packages from your existing InstallShield projects.
 
-Develop your installation in modules for easier deployment and maintenance, and then merge the components and dependencies at build time into a single UWP app package for the Microsoft Store. For direct distribution outside the store, bundle your UWP App Packages and other dependencies together with a Suite/Advanced UI installer.
+Develop your installation in modules for easier deployment and maintenance, and then merge the components and dependencies at build time into a single UWP app package for the Microsoft Store. For direct distribution outside the Store, bundle your UWP App Packages and other dependencies together with a Suite/Advanced UI installer.
 
 Learn more in this [eBook](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fresources.flexerasoftware.com%2Fweb%2Fpdf%2FeBook-IS-Your-Fast-Track-to-Profit.pdf&data=02%7C01%7Cnormesta%40microsoft.com%7C86b9a00bc8e345c2ac6208d4ba464802%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C1%7C636338258409706554&sdata=IAYNp9nFc8B5ayxwrs%2FQTWowUmOda6p%2Fn%2BjdHea257M%3D&reserved=0).
 
@@ -218,13 +202,13 @@ See [Extend your desktop application with UWP components](https://docs.microsoft
 To test your application in a realistic setting as you prepare for distribution, it's best to sign your application and then install it. See [Test your app](desktop-to-uwp-debug.md#test-your-app).
 
 >[!IMPORTANT]
-> If you plan to publish your application to the Microsoft Store, make sure that your application operates correctly on devices that run Windows 10 in S mode. This is a store requirement. See [Test your Windows app for Windows 10 in S mode](desktop-to-uwp-test-windows-s.md).
+> If you plan to publish your application to the Microsoft Store, make sure that your application operates correctly on devices that run Windows 10 in S mode. This is a Store requirement. See [Test your Windows app for Windows 10 in S mode](desktop-to-uwp-test-windows-s.md).
 
 ## Validate
 
 To give your application the best chance of being published on the Microsoft Store or becoming [Windows Certified](https://go.microsoft.com/fwlink/p/?LinkID=309666), validate and test it locally before you submit it for certification.
 
-If you're using the DAC to package your app, you can use the new ``-Verify`` flag to validate your package against the packaged desktop application and Store requirements. See [Package an app, sign the app, and prepare it for store submission](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
+If you're using the DAC to package your app, you can use the new ``-Verify`` flag to validate your package against the packaged desktop application and Store requirements. See [Package an app, sign the app, and prepare it for Store submission](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
 If you're using Visual Studio, you can validate your application from the **Create App Packages** wizard. See [Create an app package upload file](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps#create-an-app-package-upload-file).
 

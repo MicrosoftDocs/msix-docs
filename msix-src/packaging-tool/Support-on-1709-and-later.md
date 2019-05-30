@@ -10,62 +10,49 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
+# MSIX package support on Windows 10 version 1709 and later
 
-# MSIX package support on Windows 10 1709 and later
+If you've converted an existing app to MSIX, you may want to use the app in versions of the OS before Windows 10, version 1809 (build 17763). This article discusses how to support your MSIX package in Windows 10 version 1709 (build 16299) and later.
 
-If you've converted an existing app to MSIX, you may want to use the app in earlier versions of Windows than 1809 (build 17701). This blog post discusses how to enable such apps in builds as early as 16299, also known as Windows 10 version 1709. 
- 
- 
-## Problem:
-So you converted your existing app to MSIX using the MSIX Packaging Tool and it runs fine on 1809 and later. But now that you know we are adding support for MSIX starting build 16299, you want to run your MSIX app on this or any later build. Currently, if you just try to install your MSIX app on a machine with build 16299 to 17700, you'll get this error message: 
+## Problem
+
+So you converted your existing app to MSIX using the MSIX Packaging Tool and it runs fine on Windows 10, version 1809 and later. But now that you know we are adding support for MSIX starting build Windows 10 version 1709, you want to run your MSIX app on this or any later version of Windows 10. Currently, if you just try to install your MSIX package on a computer with Windows 10 version 1709 or Windows 10 version 1803, you'll get this error message:
 
 ![PowerShell MSIX install](images/mpt_blog_0.jpg)
 
-## Solution:
-We are working to update the MSIX Packaging Tool to handle this, but in the meantime here's what you can to do to set up your app to run on these builds:
- 
-Open the MSIX packaging tool and navigate to the package editor.
+## Solution
 
-![open](images/mpt_blog_1.jpg) 
-![navigate](images/mpt_blog_2.jpg)
+We are working to update the MSIX Packaging Tool to handle this, but in the meantime here's what you can to do to set up your app to run on these builds.
 
+1. Open the MSIX Packaging Tool and click **Package editor**.
+  ![open](images/mpt_blog_1.jpg)
 
-Navigate to your MSIX package. In my case, it is the Test_App.msix package. Click "open package"
+2. Browse to your MSIX package and click **Open package**.
+  ![open package](images/mpt_blog_3.jpg)
 
-![open package](images/mpt_blog_3.jpg)
+3. On the bottom of the **Package Information** tab, under **Manifest file**, click **Open file**.
+  ![open manifest](images/mpt_blog_4.jpg)
 
-On the bottom of the "Package Information" tab, observe the option to open the Manifest file. 
+4. In the manifest file, edit the **MinVersion** to equal 16299 as shown below.
+  ![edit manifest2](images/mpt_blog_7.jpg)
 
-![open manifest](images/mpt_blog_4.jpg)
+5. After you are done editing the manifest, close the file. This will return you to the **Package editor**. Don't forget to re-sign the edited package as shown below:
+  ![sign](images/mpt_blog_9.jpg)
 
-Select "Open file" and edit MinVersion to equal 16299 as shown below:
+6. After you have completed the updates, save your changes.
+  ![save](images/mpt_blog_10.jpg)
 
-![observe manifest](images/mpt_blog_5.jpg)
-![edit manifest](images/mpt_blog_6.jpg)
-![edit manifest2](images/mpt_blog_7.jpg)
+At this point, you can install the app on a computer running Windows 10, version 1709 or later.
 
-Once you are done editing the manifest, close the file. This will return you to the Package Editor.
-Don't forget to re-sign the edited package as shown below:
+## Troubleshooting tips
 
-![sign](images/mpt_blog_9.jpg)
-
-Once the update has been made, save your changes.
-
-![save](images/mpt_blog_10.jpg)
-
-At this point, you can install the app on a device with 16299 build or later.
- 
-
-
- 
-## Troubleshooting tips:
-For now, in devices running builds 16299 to 17700, you can install MSIX apps through PowerShell. 
+For now, on computers running Windows 10, version 1709 (build 16299) to build 17700, you can install MSIX apps through PowerShell.
 Specifically, you need this command in PowerShell:
-add-appxpackage <path to MSIX package>
 
-![PowerPoint command](images/mpt_blog_11.jpg)
+```powershell
+add-appxpackage <path to MSIX package>
+```
+
+![PowerShell command](images/mpt_blog_11.jpg)
 
 You can also use Intune, SCCM or the Packaging Manager API.
-
-
-
