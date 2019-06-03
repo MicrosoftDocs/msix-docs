@@ -31,23 +31,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ### Current Insider Preview build 
 
-#### Ver 1.2019.522.0
+### Ver 1.2019.603.0 
 
-New Features:
-
-- Support for desktop installers that require restart - [learn more](support-restart.md)
-    - Auto-login option for restart 
-- New options in app settings
-    - Specify a default cert to sign packages with 
-    - Specify exit codes for installers that require restart
-    
-Known Issues:
-
-- Negative reboot exit codes are currently not supported
-- If Default cert is specified, each conversion workflow will need to select 'use cert'
-- During remote or VM restarts, there might be an extra login prompt 
-- Restore defaults button doesn't remove certificate password or installer exit codes
-- There are some UI incongruencies
+- Defaults to signing a package if a default signing certificate is specified in the settings
+- Allow negative installer codes to be specified in the settings
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
