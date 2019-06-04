@@ -35,6 +35,8 @@ If the tool is already installed on your computer, check the installed version. 
 
 - Defaults to signing a package if a default signing certificate is specified in the settings
 - Allow negative installer codes to be specified in the settings
+- Honor PowerShell installer exit codes
+- Informs the user when they need a restart for the driver
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
