@@ -16,6 +16,8 @@ ms.custom: Vibranium
 
 - Defaults to signing a package if a default signing certificate is specified in the settings
 - Allow negative installer codes to be specified in the settings
+- Honor PowerShell installer exit codes
+- Informs the user when they need a restart for the driver
 
 #### Ver 1.2019.522.0
 
