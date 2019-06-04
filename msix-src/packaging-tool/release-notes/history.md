@@ -12,7 +12,7 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
-### Ver 1.2019.603.0 
+### Ver 1.2019.604.0 
 
 - Defaults to signing a package if a default signing certificate is specified in the settings
 - Allow negative installer codes to be specified in the settings
