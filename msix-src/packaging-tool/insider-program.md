@@ -31,12 +31,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ### Current Insider Preview build 
 
-### Ver 1.2019.604.0 
-
-- Defaults to signing a package if a default signing certificate is specified in the settings
-- Allow negative installer codes to be specified in the settings
-- Honor PowerShell installer exit codes
-- Informs the user when they need a restart for the driver
+### Ver 1.2019.611.0
+- Restore default settings and exclusion items now also clears signing certificate password and exit codes
+- Fixed an issue where first launch tasks weren't getting properly deleted
+- Will ignore shortcuts to excluded files during package creation
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
