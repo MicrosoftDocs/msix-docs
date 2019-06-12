@@ -17,6 +17,7 @@ The MSIX Packaging Tool Insider Program provides early access to IT pros and dev
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://aka.ms/MSIXPackagingPreviewProgram" data-linktype="external">Click here to join</a></p></div>
 
 ## Prerequisites
+
 - Windows 10, version 1809 (or later).
 - A valid Microsoft account alias to access the app from the Microsoft Store.
 - Administrator privileges on your PC to run the tool.
@@ -27,9 +28,11 @@ After joining the program, you will receive an email confirming your enrollment.
 
 Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf). Make you are logged in with the Microsoft account that you used to sign up for the MSIX Packaging Tool Insider Program. Next, go to the product description page and click **Install** to begin the installation.
 
-If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build). 
+If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build).
 
-## Current Insider Preview build: version 1.2019.611.0
+## Current Insider Preview build
+
+Version 1.2019.611.0:
 
 - Restore default settings and exclusion items now also clears signing certificate password and exit codes.
 - Fixed an issue where first launch tasks weren't getting properly deleted.
