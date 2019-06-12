@@ -10,16 +10,22 @@ ms.localizationpriority: medium
 ms.custom: Vibranium
 ---
 
-# MSIX Packaging Tool Release Notes 
+# MSIX Packaging Tool Release Notes
 
-### Ver 1.2019.604.0 
+## Version 1.2019.611.0
+
+- Restore default settings and exclusion items now also clears signing certificate password and exit codes
+- Fixed an issue where first launch tasks weren't getting properly deleted
+- Will ignore shortcuts to excluded files during package creation
+
+## Version 1.2019.604.0
 
 - Defaults to signing a package if a default signing certificate is specified in the settings
 - Allow negative installer codes to be specified in the settings
 - Honor PowerShell installer exit codes
 - Informs the user when they need a restart for the driver
 
-#### Ver 1.2019.522.0
+## Version 1.2019.522.0
 
 New Features:
 
@@ -36,7 +42,7 @@ Known Issues:
 - During remote or VM restarts, there might be an extra login prompt 
 - Restore defaults button doesn't remove certificate password or installer exit codes
 
-### **Ver 1.2019.402.0 - Public Release**
+## Version 1.2019.402.0 - Public Release
 
  - Ability to convert on a remote machine - [more info](../remote-conversion-setup.md)
  - Validate COM ProgId type values, COM class entries and remove invalid COM registrations
