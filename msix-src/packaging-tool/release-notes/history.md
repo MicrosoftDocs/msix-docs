@@ -12,7 +12,12 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes 
 
-### Ver 1.2019.604.0 
+### Ver 1.2019.611.0
+- Restore default settings and exclusion items now also clears signing certificate password and exit codes
+- Fixed an issue where first launch tasks weren't getting properly deleted
+- Will ignore shortcuts to excluded files during package creation
+
+#### Ver 1.2019.604.0 
 
 - Defaults to signing a package if a default signing certificate is specified in the settings
 - Allow negative installer codes to be specified in the settings
