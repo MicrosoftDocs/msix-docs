@@ -29,18 +29,17 @@ Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.micr
 
 If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build). 
 
-### Current Insider Preview build 
+## Current Insider Preview build: version 1.2019.611.0
 
-### Ver 1.2019.611.0
-- Restore default settings and exclusion items now also clears signing certificate password and exit codes
-- Fixed an issue where first launch tasks weren't getting properly deleted
-- Will ignore shortcuts to excluded files during package creation
+- Restore default settings and exclusion items now also clears signing certificate password and exit codes.
+- Fixed an issue where first launch tasks weren't getting properly deleted.
+- Will ignore shortcuts to excluded files during package creation.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
-## Share your feedback 
+## Share your feedback
 
-If you run into an issue while using the app, press **Windows key + F** to launch **Feedback Hub**. Provide as many details as possible regarding the issue to help us diagnose and resolve the problem. 
+If you run into an issue while using the app, press **Windows key + F** to launch **Feedback Hub**. Provide as many details as possible regarding the issue to help us diagnose and resolve the problem.
 
 You can also share feedback directly from within the app. Click on Settings(gear icon) on the home screen and choose **Feedback** tab and select the button that best represents your issue. This will directly launch **Feedback Hub** and fill the necessary category information on your behalf. 
 
