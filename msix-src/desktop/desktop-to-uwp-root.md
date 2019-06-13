@@ -17,9 +17,6 @@ When you create a package for your desktop application, your application will ge
 
 Aside from the code that you use to light up Windows 10 experiences, your application remains unchanged and you can continue to distribute it to users on previous versions of Windows. On Windows 10, your application continues to run in full-trust user mode just like it’s doing today.
 
-> [!NOTE]
-> Check out <a href="https://mva.microsoft.com/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">this series</a> of short videos published by the Microsoft Virtual Academy. These videos walk you through the entire process of bringing your desktop application to the Universal Windows Platform (UWP).
-
 ## Prepare
 
 First, prepare your application by reviewing the article [Prepare to package your desktop app](desktop-to-uwp-prepare.md), and then addressing any of the issues that apply to your application before you create a Windows app package for it. You might not have to make many changes to your application before you create the package. However, there are some situations that might require you to tweak your application before you create a package for it.
