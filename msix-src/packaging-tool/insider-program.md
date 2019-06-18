@@ -32,11 +32,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-Version 1.2019.611.0:
-
-- Restore default settings and exclusion items now also clears signing certificate password and exit codes.
-- Fixed an issue where first launch tasks weren't getting properly deleted.
-- Will ignore shortcuts to excluded files during package creation.
+### Ver 1.2019.617.0
+- automatically sets MinVersion to 1709 when store versioning requirements are turned off in settings
+- allow new folders to be added under Assets in package editor
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
