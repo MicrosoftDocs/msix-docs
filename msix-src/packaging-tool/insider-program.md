@@ -32,7 +32,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Ver 1.2019.617.0
+### Version 1.2019.617.0
 - Automatically sets MinVersion to 1709 when store versioning requirements are turned off in settings
 - Allow new folders to be added under Assets in package editor
 
