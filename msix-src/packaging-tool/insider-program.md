@@ -33,8 +33,9 @@ If the tool is already installed on your computer, check the installed version. 
 ## Current Insider Preview build
 
 ### Version 1.2019.617.0
-- Automatically sets MinVersion to 1709 when store versioning requirements are turned off in settings
-- Allow new folders to be added under Assets in package editor
+
+- Automatically sets MinVersion to 1709 when Store versioning requirements are turned off in Settings.
+- New folders can be added under Assets in Package editor.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
