@@ -12,7 +12,7 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes
 
-### Version 1.2019.617.0
+### Version 1.2019.618.0
 
 - Automatically sets MinVersion to 1709 when Store versioning requirements are turned off in Settings
 - New folders can be added under Assets in Package editor
