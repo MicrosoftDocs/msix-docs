@@ -118,6 +118,8 @@
               href: desktop/desktop-to-uwp-packaging-dot-net.md       
             - name: Optimize binaries with native images
               href: desktop/desktop-to-uwp-r2r.md      
+        - name: Package a desktop app using third-party installers
+          href: desktop/desktop-to-uwp-third-party-installer.md
         - name: Behind the scenes of your packaged desktop app
           href: desktop/desktop-to-uwp-behind-the-scenes.md 
         - name: Known issues 
