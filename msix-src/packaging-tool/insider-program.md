@@ -3,7 +3,7 @@ title: MSIX packaging tool insider program
 description: learn more about the packaging tool insider program and how to join
 author: c-don
 ms.author: cdon
-ms.date: 02/14/2019
+ms.date: 06/25/2019
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
 ms.localizationpriority: medium
@@ -32,9 +32,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-#### Version 1.2019.621.0
-- Exit code for restarts list in settings includes common default values
-- Ability to add new, unknown, and custom capabilities through the package editor manifest editor
+Version 1.2019.621.0:
+
+- Exit code for restarts list in Settings includes common default values.
+- Ability to add new, unknown, and custom capabilities through the package editor.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
