@@ -12,6 +12,10 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes
 
+### Version 1.2019.621.0
+- Exit code for restarts list in settings includes common default values
+- Ability to add new, unknown, and custom capabilities through the package editor manifest editor
+
 ### Version 1.2019.618.0
 
 - Automatically sets MinVersion to 1709 when Store versioning requirements are turned off in Settings
