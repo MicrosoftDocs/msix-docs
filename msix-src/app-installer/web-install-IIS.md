@@ -1,6 +1,6 @@
 ---
 author: mcleanbyron
-title: Install a Windows 10 app from an IIS server | Microsoft Docs
+title: Distribute a Windows 10 app from an IIS server | Microsoft Docs
 description: This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 ms.author: mcleans
 ms.date: 05/30/2018
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Install a Windows 10 app from an IIS server
+# Distribute a Windows 10 app from an IIS server
 
 This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 

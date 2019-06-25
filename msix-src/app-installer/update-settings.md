@@ -32,9 +32,9 @@ Specifically, the syntax that is available to you is the following:
 
     - **OnLaunch**: Checks for updates on launch. This type of update can show UI and has the following attributes:
 
-        - **ShowPrompt**: A boolean that determines if UI will be shown to the user.
+        - **ShowPrompt**: A boolean that determines if UI will be shown to the user. This value is supported on Windows 10, version 1903 and later.
 
-        - **UpdateBlocksActivation**: A boolean that determines if the UI shown to the user allows the user to launch the app without taking the update, or if the user must take the update before launching the app. This attribute can be set to “true” only if **ShowPrompt** is set to “true”. **UpdateBlocksActivation**=“true” means the UI the user will see, allows the user to take the update or close the app. **UpdateBlocksActivation**="false" means the UI the user will see, allows the user to take the update or start the app without updating. In the latter case, the update will be applied silently at an opportune time. Available in Windows 10, version 1809 and later.
+        - **UpdateBlocksActivation**: A boolean that determines if the UI shown to the user allows the user to launch the app without taking the update, or if the user must take the update before launching the app. This attribute can be set to “true” only if **ShowPrompt** is set to “true”. **UpdateBlocksActivation**=“true” means the UI the user will see, allows the user to take the update or close the app. **UpdateBlocksActivation**="false" means the UI the user will see, allows the user to take the update or start the app without updating. In the latter case, the update will be applied silently at an opportune time. This value is supported on Windows 10, version 1903 and later.
 
         > [!NOTE]
         > ShowPrompt needs to be set to true if UpdateBlocksActivation is set to true.

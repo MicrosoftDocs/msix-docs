@@ -46,8 +46,27 @@ During an update, if the second block of that file is modified, the hash is also
 
 On a larger scale, if an entire file does not change (determined by a full set of blocks not changing), that file can be reused from the existing package, saving time and resources.
 
-There are a couple of ways to employ this differential update technology.
+## App update constraints
+
+#### Updates are performed within the same package family
+The package family is comprised of the Package Name and Publisher. To be able to update, the new package metadata will need to be the same as the previously installed package. 
+
+#### App updates must increment to a higher version
+App updates is general will require the version of the new package to be higher than the current one. General app update process will not allow packages with lower versions to be installed by default. Starting Windows 10 1809 update, *'rollback'* was introduced. It allows lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the ForceUpdateFromAnyVersion switch and in [AppInstaller file](https://docs.microsoft.com/en-us/windows/msix/app-installer/update-settings).  
+
+#### App update package can have a different architecture
+The update package to the currently installed app package can be of a different architecture as long as the new architecture is supported on the OS where it is being deployed to. 
+For example: If you have x86 version of MyFavApp(v1.0.0.0) installed on a x64 Windows 10 device and the update package(v2.0.0.0) is x64 version: MyFavApp(1.0.0.0) will be updated to MyFavApp(v2.0.0.0) successfully. 
+
+#### Packages can update from an MSIX to an MSIXbundle
+An update package can go from MSIX package to an MSIXbundle package but not vice-versa. When an MSIXbundle is installed, the package update will need to remain a bundle. 
+
+## Optimize differential update technology
+    
+There are a few ways to ensure that the differential update technology is optimized to the max.
 
 - Keep files in the package small - doing this will ensure that if a change is needed that would impact the full file, the update would still be small.
-- Modifications to files should be additive if possible - additive changes will ensure that end-user devices only download those changed blocks.
-- Modifications to files should be contained to 64KB blocks if possible - if your app does have large files and requires changes to the middle of a file, containing changes to a set of blocks will help significantly.
+- Changes to files should be additive if possible - additive changes will ensure that end-user devices only download those changed blocks.
+- Changes to files should be contained to 64KB blocks if possible - if your app does have large files and requires changes to the middle of a file, containing changes to a set of blocks will help significantly.
+ 
+
