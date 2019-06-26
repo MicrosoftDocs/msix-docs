@@ -13,7 +13,7 @@ ms.custom: "RS5, seodec18"
 
 # MSIX Core
 
-MSIX Core enlightens previous Windows OS's with MSIX support. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/preview/MSIXCore) on Github currently in preview, but it can already enable earlier Windows OS's to install MSIX packages. 
+MSIX Core enlightens previous Windows OS's with MSIX support. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/preview/MSIXCore) on Github currently in preview, but can already enable earlier Windows OS's to install MSIX packages. 
 
 With MSIX Core, developers and IT pros who need to support users on Windows 7, Windows 8, and Windows 10 versions earlier than 1709 can now also adopt and take advantage of the benefits of MSIX.
 
@@ -25,4 +25,4 @@ MSIX Core is designed for both developers and IT pros. Developers can use the MS
 
 ## Limitations of MSIX Core
 
-The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. The goal of MSIX Core is not to support all of the features of native MSIX. MSIX Core will not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows OS's. MSIX Core also will not support Microsoft Store integration. Developers who are interested in publishing their applications to the Microsoft Store can find documentation to do so [here](https://docs.microsoft.com/en-us/windows/uwp/publish/).
+The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. The goal of MSIX Core is not to support all of the features of native MSIX. MSIX Core will not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows OS's. 
