@@ -136,3 +136,5 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 - Click **Create** to create the MSIX package.
 
 You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select package editor to see and modify the package content and properties.
+
+## App V considerations 
