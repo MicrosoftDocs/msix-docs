@@ -19,11 +19,11 @@ There are several ways you can modify your app package assets during the convers
 
 There are guidelines for icon and assets, so refer to those as you make your modifications.
 
-## Modify your assets during the conversion process
+## Modify assets during the conversion process
 
 During the installation process, we will be capturing any changes that you make to files or folders for your application. If you change your assets during this time what we are monitoring, those changes will be captured in your final package.
 
-## Update your assets after your package has been created
+## Modify assets after your package has been created
 
 To modify your app package assets after you create your MSIX package, open your MSIX package in [Package editor](package-editor.md), and then open the **Package files** page. You can delete existing assets or add new icons or assets.
 
