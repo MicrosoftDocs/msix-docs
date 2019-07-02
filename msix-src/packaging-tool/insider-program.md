@@ -34,7 +34,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 Version 1.2019.701.0:
 
-- Bug fixes for restart scenarios
+- Bug fixes for restart scenarios.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
