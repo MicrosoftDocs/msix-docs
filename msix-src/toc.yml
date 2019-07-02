@@ -7,15 +7,21 @@
     - name: App package formats
       items: 
         - name: Overview
-          href: https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages?context=/windows/msix/render
+          href: app-package-formats.md
         - name: Optional packages
-          href: https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render
+          href: optional-packages.md
+          items:
+            - name: Optional packages with executable code
+              href: optional-packages-with-executable-code.md
         - name: Windows app streaming install
-          href: https://docs.microsoft.com/windows/uwp/packaging/streaming-install?context=/windows/msix/render
+          href: streaming-install.md
+          items:
+            - name: Create and convert a source content group map
+              href: create-cgm.md
         - name: Flat bundle app packages
-          href: https://docs.microsoft.com/windows/uwp/packaging/flat-bundles?context=/windows/msix/render
+          href: flat-bundles.md
         - name: Asset packages
-          href: https://docs.microsoft.com/windows/uwp/packaging/asset-packages?context=/windows/msix/render
+          href: asset-packages.md
         - name: Modification packages
           items: 
             - name: Overview
@@ -25,7 +31,7 @@
             - name: Modification packages on Windows 10 version 1903
               href: modification-package-1903.md
             - name: App package architectures
-              href: https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render
+              href: device-architecture.md
     - name: App package updates
       href: app-package-updates.md
     - name: MSIX support on 1709 and 1803
@@ -127,13 +133,21 @@
         - name: Known issues 
           href: desktop/desktop-to-uwp-known-issues.md         
     - name: Package a UWP app with Visual Studio
-      href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
+      href: packaging-uwp-apps.md
     - name: Manual packaging tools
       items:
         - name: Overview
-          href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
-        - name: Package desktop app manually
+          href: manual-packaging-root.md
+        - name: Package desktop apps manually
           href: desktop/desktop-to-uwp-manual-conversion.md
+        - name: Create an app package with the MakeAppx.exe tool
+          href: ../packaging/create-app-package-with-makeappx-tool.md
+        - name: Create a certificate for package signing
+          href: ../packaging/create-certificate-package-signing.md
+        - name: Developing with asset packages and package folding
+          href: ../packaging/package-folding.md
+        - name: Package creation with the packaging layout
+          href: ../packaging/packaging-layout.md
     - name: Bundle MSIX packages
       href: packaging-tool/bundle-msix-packages.md
     - name: Sign an app package 
@@ -141,7 +155,7 @@
         - name: Overview
           href: package/signing-package-overview.md
         - name: Sign an app package using SignTool
-          href: https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render
+          href: sign-app-package-using-signtool.md
 - name: Validate
   items: 
     - name: Windows app certification kit
