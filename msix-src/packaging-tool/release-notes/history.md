@@ -12,6 +12,9 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes
 
+## Version 1.2019.701.0
+- Bug fixes for restart scenarios
+
 ## Version 1.2019.621.0
 
 - Exit code for restarts list in Settings includes common default values.
