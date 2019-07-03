@@ -93,6 +93,9 @@ When you're done preparing the machine, click **Next**.
 
 At this time, if you did not provide us with an installer, go ahead and run any and all required installers at this time. This includes custom scripts and programs. The tool is monitoring changes on the device, including things that are being installed on the device.
 
+> [!NOTE]
+> During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
+
 ## Manage first launch tasks
 
 This page shows application executables that the tool captured. If there are multiple applications, check the box that corresponds to the main entry point. If you don't see the application .exe here, manually browse to and run it.
@@ -110,4 +113,4 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 - If you'd like to continue to edit the content and properties of the package before saving the MSIX package, you can select **Package editor** and be taken to [package editor]("https://docs.microsoft.com/en-us/windows/msix/packaging-tool/package-editor")
 - Click **Create** to create the MSIX package.
 
-You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, save location of logs and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select package editor to see and modify the package content and properties.
+After the package is created, the tool will display a pop-up window that displays the name, publisher, the save location of logs, and the save location of the newly created package. You can close this pop-up window to be redirected to the welcome page. You can also select **Package editor** to see and modify the package content and properties.

@@ -105,6 +105,9 @@ When you're done preparing the machine, click **Next**.
 
 ![images/pic6](images/pic6.png)
 
+> [!NOTE]
+> During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
+
 - This is installation phase where the tool is monitoring and capturing the application install operations.
 - The tool will launch the installer in the Virtual Machine Window that it opened in an earlier stage and you'll need to go through the installer wizard to install the application.
     - Make sure the installation path matches what was defined earlier in the package information page.
