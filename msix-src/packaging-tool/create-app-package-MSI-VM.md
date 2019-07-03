@@ -19,6 +19,9 @@ You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX appl
 - It must be configured to [receive remote commands](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts) (run the [Enable-PSRemoting](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Enable-PSRemoting?view=powershell-5.1) command on the VM)
 - It must be running Windows 10, version 1809, or a later version of Windows.
 
+> [!NOTE]
+> The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MsIX Packaging tool to convert to MSIX. 
+
 When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
 
 Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by manual installation of application payload.
@@ -102,6 +105,9 @@ When you're done preparing the machine, click **Next**.
 
 ![images/pic6](images/pic6.png)
 
+> [!NOTE]
+> During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
+
 - This is installation phase where the tool is monitoring and capturing the application install operations.
 - The tool will launch the installer in the Virtual Machine Window that it opened in an earlier stage and you'll need to go through the installer wizard to install the application.
     - Make sure the installation path matches what was defined earlier in the package information page.
@@ -136,3 +142,4 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 - Click **Create** to create the MSIX package.
 
 You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select package editor to see and modify the package content and properties.
+

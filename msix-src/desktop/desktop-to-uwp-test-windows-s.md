@@ -3,7 +3,9 @@ Description: Test your app for Windows 10 in S mode.
 title: Test your Windows app for Windows 10 S
 ms.date: 05/11/2017
 ms.topic: article
-keywords: windows 10 S, uwp
+author: dianmsft
+ms.author: diahar
+keywords: windows 10 S, uwp, msix
 ms.localizationpriority: medium
 ---
 # Test your Windows app for Windows 10 in S mode

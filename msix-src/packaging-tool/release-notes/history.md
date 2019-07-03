@@ -12,25 +12,34 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes
 
-### Version 1.2019.618.0
+## Version 1.2019.701.0
+
+- Bug fixes for restart scenarios.
+
+## Version 1.2019.621.0
+
+- Exit code for restarts list in Settings includes common default values.
+- Ability to add new, unknown, and custom capabilities through the package editor.
+
+## Version 1.2019.618.0
 
 - Automatically sets MinVersion to 1709 when Store versioning requirements are turned off in Settings
 - New folders can be added under Assets in Package editor
 
-### Version 1.2019.611.0
+## Version 1.2019.611.0
 
 - Restore default settings and exclusion items now also clears signing certificate password and exit codes
 - Fixed an issue where first launch tasks weren't getting properly deleted
 - Will ignore shortcuts to excluded files during package creation
 
-### Version 1.2019.604.0
+## Version 1.2019.604.0
 
 - Defaults to signing a package if a default signing certificate is specified in the settings
 - Allow negative installer codes to be specified in the settings
 - Honor PowerShell installer exit codes
 - Informs the user when they need a restart for the driver
 
-### Version 1.2019.522.0
+## Version 1.2019.522.0
 
 New Features:
 
