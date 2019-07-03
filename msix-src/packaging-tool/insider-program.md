@@ -3,7 +3,7 @@ title: MSIX packaging tool insider program
 description: learn more about the packaging tool insider program and how to join
 author: c-don
 ms.author: cdon
-ms.date: 02/14/2019
+ms.date: 06/25/2019
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
 ms.localizationpriority: medium
@@ -32,10 +32,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Version 1.2019.618.0
+Version 1.2019.701.0:
 
-- Automatically sets MinVersion to 1709 when Store versioning requirements are turned off in Settings.
-- New folders can be added under Assets in Package editor.
+- Bug fixes for restart scenarios.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

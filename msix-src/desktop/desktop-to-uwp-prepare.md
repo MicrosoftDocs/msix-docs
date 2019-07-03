@@ -1,9 +1,11 @@
 ---
 Description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (Desktop Bridge)
-ms.date: 05/18/20188
+ms.date: 07/03/2019
 ms.topic: article
-keywords: windows 10, uwp
+author: dianmsft
+ms.author: diahar
+keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
 ---
@@ -12,7 +14,7 @@ ms.localizationpriority: medium
 
 This article lists the things you need to know before you package your desktop app. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging. Remember that the Microsoft Store handles licensing and automatic updating for you, so you can remove any features that relate to those tasks from your codebase.
 
-+ __Your application requires a version of .NET earlier than 4.6.2__. You need to make sure your application runs on .NET 4.6.2. You cannot require or redistribute versions earlier than 4.6.2. This is the version of .NET that shipped in the Windows 10 Anniversary Update. Verifying your application works on this version will ensure that your application will continue to be compatible with future updates of Windows 10.  If your application targets the .NET Framework 4.0 or later, it is expected to run on .NET 4.6.2 but you should still test it.
++ __Your application requires a version of .NET earlier than 4.6.1__. You need to make sure that the startup executable for your application targets .NET 4.6.1 or later (other .NET assemblies in your application just need to be able to run on .NET 4.6.1 or later; they can target any version less than or equal to the target version of the startup executable). You cannot require or redistribute versions earlier than 4.6.1. Verifying your application works on this version will ensure that your application will continue to be compatible with future updates of Windows 10. If your application targets the .NET Framework 4.0 or later, it is expected to run on .NET 4.6.1 but you should still test it.
 
 + __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application from the Microsoft Store may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. Apps that require elevation for any part of their functionality won't be accepted in the Microsoft Store.
 
