@@ -34,18 +34,13 @@ To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://w
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
  
-## Latest public version - 1.2019.402.0
+## Latest public version - 1.2019.701.0
 
 ### New features:
 
-- Ability to convert on a remote machine - [more info](packaging-tool/remote-conversion-setup.md)
-- Improved management experience in package editor
-    - Auto versioning recommendations when saving in package editor
-    - Now supports existing folder addition to package in VFS
-- User can specify known valid exit codes for CLI conversions
-- Added the ability to time stamp your signed package in all of the workflows where signing is currently available 
-    - You can specify your default time stamp URL and type of time stamp server in the tool Settings page
-- Updated AppID generation logic, and added additional validation for package name and app 
+- Ability to restart during conversion
+- Allow specifying a default certificate for signing
+- Allow specifying exit codes for restarts
 
 You can find the full history of MSIX Packaging Tool release notes [here](packaging-tool/release-notes/history.md).
 
