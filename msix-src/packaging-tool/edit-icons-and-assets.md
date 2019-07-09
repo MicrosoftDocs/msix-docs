@@ -17,7 +17,7 @@ There are several ways you can modify your app package assets during the convers
 * You can modify your app package assets during the conversion process.
 * After your package has been created, you can modify your app package assets via the [Package editor](package-editor.md).
 
-There are [guidelines for icon and assets](https://docs.microsoft.com/en-us/windows/uwp/design/style/app-icons-and-logos), so refer to those as you make your modifications.
+Refer to the [guidelines for icon and assets](https://docs.microsoft.com/windows/uwp/design/style/app-icons-and-logos) as you make your modifications.
 
 ## Modify assets during the conversion process
 
@@ -30,4 +30,4 @@ To modify your app package assets after you create your MSIX package, open your 
 - To add a new asset file, right-click the assets folder, and select **Add file** or **Add folder**.
 - To delete an existing asset file, right-click the file and select **Delete**.
 
-To verify your asset changes, go to the **Package information** page and open your manifest file. Confirm that the assets you added or removed are represented in the [uap:visualelements](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements) node.
+To verify your asset changes, go to the **Package information** page and open your manifest file. Confirm that the assets you added or removed are represented in the [uap:VisualElements](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements) node.
