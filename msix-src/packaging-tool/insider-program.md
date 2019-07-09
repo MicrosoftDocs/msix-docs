@@ -32,9 +32,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-Version 1.2019.701.0:
+We just released our latest public build version 1.2019.701.0
 
-- Bug fixes for restart scenarios.
+Stay tuned for the first preview build for our next release!
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
