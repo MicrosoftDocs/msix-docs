@@ -27,12 +27,12 @@ Lean more about MSIX from these videos.
 :::row:::
     :::column:::
 	>[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ig2l]
-#### MSIX training overview
+#### MSIX overview
 MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.
     :::column-end:::
     :::column:::
     >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3i5DH]
-#### MSIX training for developers
+#### MSIX for developers
 Learn how developers can take advantage of the benefits of MSIX.
     :::column-end:::
     :::column:::
