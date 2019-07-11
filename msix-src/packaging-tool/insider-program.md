@@ -1,8 +1,6 @@
 ---
 title: MSIX packaging tool insider program
 description: learn more about the packaging tool insider program and how to join
-author: c-don
-ms.author: cdon
 ms.date: 06/25/2019
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool

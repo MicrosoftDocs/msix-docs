@@ -1,8 +1,6 @@
 ---
 title: MSIX SDK 
 description: MSIX SDK is an open source project that allows developers to use MSIX package format universally on all platforms.
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

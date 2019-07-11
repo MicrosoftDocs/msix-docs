@@ -2,8 +2,6 @@
 layout: LandingPage
 title: MSIX videos
 description: conference talks by msix team on topics related to MSIX
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: landing-page
 keywords: windows 10, uwp

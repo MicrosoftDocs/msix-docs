@@ -1,8 +1,6 @@
 ---
-author: dianmsft
 title: MSIX Core
 description: This article provides an overview of MSIX Core.
-ms.author: diahar
 ms.date: 04/12/2019
 ms.topic: article
 keywords: windows 10, windows 7, windows 8, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507

@@ -1,8 +1,6 @@
 ---
-author: mcleanbyron
 title: Optional packages and related sets
 description: This article lists resources for learning about installing related sets via App Installer.
-ms.author: mcleans
 ms.date: 1/4/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages

@@ -1,8 +1,6 @@
 ---
 title: Duplicate MSIX Packaging Tool Settings across multiple devices
 description: Learn how to duplicate your MSIX Packaging Tool Settings across multiple devices 
-author: dianmsft
-ms.author: diahar
 ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, msix

@@ -1,8 +1,6 @@
 ---
 title: MSIX Packaging Tool Overview
 description: Overview doc on getting started with Msix Packaging Tool
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 02/19/2019
 ms.topic: article
 keywords: windows 10, uwp, msix

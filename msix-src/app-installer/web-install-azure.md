@@ -1,8 +1,6 @@
 ---
-author: c-don
 title: Distribute a Windows 10 app from an Azure web app 
 description: This tutorial demonstrates how to set up an Azure web server, verify that your web app can host app packages, and invoke and use App Installer effectively.
-ms.author: cdon
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, Azure web server

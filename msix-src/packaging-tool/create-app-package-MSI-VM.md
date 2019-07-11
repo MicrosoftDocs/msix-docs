@@ -1,8 +1,6 @@
 ---
 title: Create an MSIX package from a Desktop installer(MSI, EXE or App-V) on a VM
 description: Create an MSIX package from a Desktop installer(MSI, EXE or App-V) on a VM
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp

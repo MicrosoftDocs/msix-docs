@@ -3,8 +3,6 @@ Description: This guide provides a list of third-party products and installers t
 title: Package a desktop app using third-party installers
 ms.date: 06/17/2019
 ms.topic: article
-author: dianmsft
-ms.author: diahar
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
