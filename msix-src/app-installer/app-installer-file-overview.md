@@ -1,8 +1,6 @@
 ---
 title: App Installer file overview
 description: Learn about the contents of App Installer files and how they work.
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 12/12/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

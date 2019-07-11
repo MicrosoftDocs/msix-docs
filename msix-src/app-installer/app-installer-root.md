@@ -1,8 +1,6 @@
 ---
-author: mcleanbyron
 title: Install Windows 10 apps with App Installer
 description: This section contains or links to articles about App Installer and how to use the features of App Installer.
-ms.author: mcleans
 ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages

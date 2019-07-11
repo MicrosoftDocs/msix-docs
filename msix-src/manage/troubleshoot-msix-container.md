@@ -1,4 +1,14 @@
-# Troubleshooting runtime issues in a MSIX container 
+---
+Description: This guide explains how to troubleshoot runtime issues in an MSIX container.
+title: Troubleshoot runtime issues in an MSIX container 
+ms.date: 07/11/2019
+ms.topic: article
+keywords: windows 10, uwp, msix
+ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
+ms.localizationpriority: medium
+---
+
+# Troubleshoot runtime issues in an MSIX container 
 
 In this article, we will review how you can troubleshoot runtime issues occurring in a MSIX container. MSIX containers by themselves are relatively simple and straightforward. As more applications are run inside the same package identity with the help of modification packages, the virtual registry and virtual file system will be over-layed in the order in which the applications are installed. 
 

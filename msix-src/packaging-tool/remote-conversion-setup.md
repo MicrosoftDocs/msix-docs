@@ -1,8 +1,6 @@
 ---
 title: Remote conversion setup in MSIX Packaging Tool
 description: Setup instructions for remote conversion
-author: c-don
-ms.author: cdon
 ms.date: 02/26/2019
 ms.topic: article
 keywords: MSIX, MPT, MSIX Packaging Tool, remote IP

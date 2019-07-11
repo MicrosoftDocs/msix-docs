@@ -1,8 +1,6 @@
 ---
-author: joshusto
 title: Related App Installer file documentation
 description: Lists information about App Installer file schema and APIs.
-ms.author: joshusto
 ms.date: 2/20/2019
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API, XML, schema

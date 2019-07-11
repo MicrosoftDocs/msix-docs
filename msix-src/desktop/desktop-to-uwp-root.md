@@ -3,8 +3,6 @@ Description: Create a modern Windows app package for your existing Windows Forms
 title: Package desktop applications
 ms.date: 09/05/2018
 ms.topic: article
-author: dianmsft
-ms.author: diahar
 keywords: windows 10, uwp, msix
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
