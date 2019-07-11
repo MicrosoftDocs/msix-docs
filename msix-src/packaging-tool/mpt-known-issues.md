@@ -1,8 +1,6 @@
 ---
 title: Known issues and troubleshooting 
 description: Describes known issues and provides troubleshooting tips for the MSIX Packaging Tool. 
-author: dianmsft
-ms.author: diahar
 ms.date: 02/26/2019
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting

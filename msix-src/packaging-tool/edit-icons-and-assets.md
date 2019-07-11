@@ -1,8 +1,6 @@
 ---
 title: Edit icons and assets using the MSIX Packaging Tool
 description: Describes how to edit icons and assets using the MSIX Packaging Tool.
-author: sharlaakers
-ms.author: shakers
 ms.date: 06/27/2019
 ms.topic: article
 keywords: windows 10, uwp, msix

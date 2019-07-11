@@ -1,8 +1,6 @@
 ---
 title: MSIX Packaging Tool release notes
 description: Full history of MSIX Packaging Tool release notes
-author: c-don
-ms.author: cdon
 ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, msix, msix packaging tool, insider program

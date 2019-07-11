@@ -1,8 +1,6 @@
 ---
-author: c-don
 title: How to bundle MSIX packages
 description: Bundling MSIX packages of different architectures 
-ms.author: cdon
 ms.date: 10/25/2018
 ms.topic: article
 keywords: windows 10, msix

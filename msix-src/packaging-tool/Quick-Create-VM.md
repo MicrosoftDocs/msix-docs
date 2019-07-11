@@ -1,8 +1,6 @@
 ---
 title: MSIX packaging environment on Hyper-V Quick Create
 description: Create a virtual environment for MSIX packaging projects using the Hyper-V Quick Create feature.
-author: c-don
-ms.author: cdon
 ms.date: 04/04/2019
 ms.topic: article
 keywords: MSIX, MPT, MSIX Packaging Tool, Hyper-V Quick Create
