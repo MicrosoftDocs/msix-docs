@@ -31,12 +31,12 @@ Lean more about MSIX from these videos.
 MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.
     :::column-end:::
     :::column:::
-    >[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3i5DH]
+    >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3i5DH]
 #### MSIX training for developers
 Learn how developers can take advantage of the benefits of MSIX.
     :::column-end:::
     :::column:::
-    >[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE3iiD5]
+    >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3iiD5]
 #### Evolving and enhancing desktop apps with MSIX
 Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls and other features. 
     :::column-end:::
