@@ -1,8 +1,6 @@
 ---
 title: Modify a package using Package editor
 description: Use Package Editor to modify package information
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp

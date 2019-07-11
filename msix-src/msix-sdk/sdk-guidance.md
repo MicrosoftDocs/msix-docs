@@ -1,8 +1,6 @@
 ---
 title: Use the MSIX SDK to distribute an MSIX package on non-Windows 10 platforms
 description: Guidance to developers who are using SDK to pack MSIX packages for cross platform use
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 12/13/2018
 ms.topic: article
 ms.custom: RS5

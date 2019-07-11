@@ -1,8 +1,6 @@
 ---
 title: Automate conversion of Windows installers to MSIX packages
 description: Automate conversion of existing windows installers using the command line interface to generate msix packages
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 07/02/2019
 ms.topic: article
 keywords: windows 10, uwp

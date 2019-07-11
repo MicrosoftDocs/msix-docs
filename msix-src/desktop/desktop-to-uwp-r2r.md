@@ -3,8 +3,6 @@ Description: This guide explains how to configure your Visual Studio Solution to
 title: Optimize your .NET Desktop apps with native images
 ms.date: 07/03/2019
 ms.topic: article
-author: dianmsft
-ms.author: diahar
 keywords: windows 10, uwp, msix, native image Compiler
 ms.localizationpriority: medium
 ---

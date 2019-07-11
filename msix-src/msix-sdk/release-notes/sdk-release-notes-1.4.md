@@ -1,8 +1,6 @@
 ---
 title: MSIX SDK Release 1.4 release notes
 description: Release notes for MSIX SDK release 1.4
-author: c-don
-ms.author: cdon
 ms.date: 09/12/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

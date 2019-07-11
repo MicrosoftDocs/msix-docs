@@ -1,8 +1,6 @@
 ---
-author: c-don
 title: MSIX support on Windows 10 version 1709 and 1803
 description: This article summarizes the support for MSIX with our latest updates as of 1/22/2019.
-ms.author: cdon
 ms.date: 04/04/2019
 ms.topic: article
 keywords: windows 10, uwp, msix, 1709, 1803
