@@ -18,4 +18,4 @@ https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-bus
 4. Obtain your Azure Active Directory Token. To learn more go here https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-protocols-oauth-code
 
 ### Role(s) needed to use Device Guard signing 
-In order to use the Device Guard signing, you will need to have the following roles: AAD Global Administrator, Store for Business Account Billing Owner and Device Guard signer. 
+In order to use the Device Guard signing, you will need to have the Device Guard signer role. This is the least privilage role that has the ability to sign. Other roles such as AAD Global Administrator, Store for Business Account Billing Owner can also sign.  
