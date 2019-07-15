@@ -23,6 +23,27 @@ First, prepare your application by reviewing the article [Prepare to package you
 
 <a id="convert" />
 
+## Update WAP project to support Desktop Bridge
+
+For DotNET core projects, the WAP deployment must match the generated Json manifest file. To make both match manually update your WAP project with the following target: 
+
+```
+  <!-- Stomp the path to application executable.
+    This task will copy the main exe to the appx root folder.
+   -->
+  <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
+    <ItemGroup>
+      <!-- Stomp all "SourceProject" values for all incoming dependencies to flatten the package. -->
+      <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
+      <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
+      <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
+      <!-- Blank the SourceProject here to vend all files into the root of the package. -->
+      <SourceProject></SourceProject>
+      </_FilteredNonWapProjProjectOutput>
+    </ItemGroup>
+  </Target>
+```
+
 ## Package
 
 There are several different ways to create an MSIX package for your desktop app.
