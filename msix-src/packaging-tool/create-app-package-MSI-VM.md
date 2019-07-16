@@ -18,7 +18,7 @@ You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX appl
 - It must be running Windows 10, version 1809, or a later version of Windows.
 
 > [!NOTE]
-> The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MsIX Packaging tool to convert to MSIX. 
+> The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MSIX Packaging tool to convert to MSIX. 
 
 When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
 
