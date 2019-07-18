@@ -20,7 +20,7 @@ The **Windows Application Packaging Project** project is available in the follow
 > [!IMPORTANT]
 > The **Windows Application Packaging Project** project in Visual Studio is supported on Windows 10, version 1607, and later. It can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release.
 
-## First, prepare your application
+## Prepare your application
 
 Review this guide before you begin creating a package for your application: [Prepare to package a desktop application](desktop-to-uwp-prepare.md).
 
@@ -59,8 +59,7 @@ Review this guide before you begin creating a package for your application: [Pre
     2. Add the following XML to the project file, immediately before the closing `</Project>` element.
 
         ``` xml
-        <!-- Stomp the path to application executable. This task will copy the main exe to the appx root folder. 
-        --> 
+        <!-- Stomp the path to application executable. This task will copy the main exe to the appx root folder. -->
         <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
           <ItemGroup>
             <!-- Stomp all "SourceProject" values for all incoming dependencies to flatten the package. -->
@@ -74,7 +73,7 @@ Review this guide before you begin creating a package for your application: [Pre
         </Target>
         ```
 
-    3. Save the project file.
+    3. Save the project file and close it.
 
 7. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
 
