@@ -1,39 +1,43 @@
 ---
 Description: This article describes signing with DGSS
-title: Signing an MSIX package with Device Guard signing
+title: Sign an MSIX package with Device Guard signing
 ms.date: 07/12/2019
-ms.author: diahar
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
-# Signing an MSIX package with Device Guard signing
-We are making it easier for you to sign your app. Device Guard signing (DGSS) is a Device Guard feature that is available in Microsoft Store for Business and Education. Signing allows enterprises to guarantee every app comes from a trusted source. Currently remote signing is convoluted and completely separated from all other processes of app packaging and repackaging. To fix this, our goal is to make signing repackaged MSIX apps easy.
 
-## Before you get started 
-Before getting started ensure that you go through these following documentation. The majority of this effort is to ensure that you are set up with the right permissions and configurations. 
-1. Read background and overview of Device Guard signing go here https://docs.microsoft.com/en-us/microsoft-store/device-guard-signing-portal
-2. To use this feature you will need a Microsoft Store for Business Account. To learn more go here. We will discuss more about the Device Guard signing roles below.  
-https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
-3. Ensure that you have access to the Microsoft store for Business API. To learn more go here https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
-4. Obtain your Azure Active Directory Token. To learn more go here https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-protocols-oauth-code
+# Sign an MSIX package with Device Guard signing
 
-### Role(s) needed to use Device Guard signing 
-In order to use the Device Guard signing, you will need to have the Device Guard signer role. This is the least privilage role that has the ability to sign. Other roles such as AAD Global Administrator, Store for Business Account Billing Owner can also sign. 
+We are making it easier for you to sign your app. Device Guard signing (DGSS) is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Currently, remote signing is a convoluted process that is separated from all other processes of app packaging and repackaging. To fix this, our goal is to make signing repackaged MSIX apps easy.
 
-## Using DGSS with Signtool 
-The first thing you will need is to obtain the AAD token in a json format. Ensure that you have the access token and a refresh token. We recommend obtaining the refresh token since your access token will expire in one hour. 
+## Before you get started
 
-Once you have your AAD token in a json format, use the following command to call singtool to sign your package with DGSS
+Before getting started, ensure that you go through these following documentation. The majority of this effort is to ensure that you are set up with the right permissions and configurations.
 
-<Code>
-signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json  test.msix
+* If you are unfamiliar with Device Guard signing, see [Device Guard signing](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) for an overview of this feature.
+* To use Device Guard signing, you need a Microsoft Store for Business Account. To create an account, follow the instructions in [Sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business). For more information about the permissions needed to perform Device Guard signing, see [this section](#roles-for-device-guard-signing).  
+* Ensure that you have access to the Microsoft Store for Business API. To learn more, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+* Obtain your Azure Active Directory Token. For more information, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code).
+
+### Roles for Device Guard signing
+
+To use Device Guard signing in the Microsoft Store for Business and Education, you need to have the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign. For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+
+## Using DGSS with SignTool
+
+Before using SignTool you must [obtain the AAD token in a JSON format](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). Ensure that you have the access token and a refresh token. We recommend obtaining the refresh token because your access token will expire in one hour.
+
+After you have your AAD token, use the following command to call SignTool to sign your package with DGSS.
+
+`signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json  test.msix`
   
-Note
-1. Ensure that the package that you are signing publisher name matches the certificate you are signing with. Otherwise, signing will fail. You can find this out by going to Microsoft Store for Business and downloading your company's root certificate. 
-2. We only support sha256
+Make note of the following:
 
-## Common Errors 
-Here are a common list of errors that can occur
-1. 0x800700d is a common error type that means that the AAD json file that was obtained format is invalid
+* You should ensure that the publisher name of the package you are signing matches the certificate you are using to sign the package. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business. 
+* Only the SHA256 algorithm is supported.
 
+## Common errors
 
+Here are common errors you might encounter.
+
+* 0x800700d: This common error means that the format of the AAD JSON file is invalid.

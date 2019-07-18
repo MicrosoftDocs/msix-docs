@@ -15,8 +15,8 @@ To successfully install a Windows 10 application, the package doesnt just have t
 
 |Topic| Description |
 |:---|:---|
-|[Prerequisites for signing](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#prerequisites)| This section discusses the prereqs required to sign the Windows 10 app package. | 
-|[Using SignTool](https://docs.microsoft.com/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
+|[Prerequisites for signing](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#prerequisites)| This section discusses the prereqs required to sign the Windows 10 app package. | 
+|[Using SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
 
 ## Timestamping 
 
