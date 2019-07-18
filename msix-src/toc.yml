@@ -7,21 +7,21 @@
     - name: App package formats
       items: 
         - name: Overview
-          href: app-package-formats.md
+          href: package/app-package-formats.md
         - name: Optional packages
-          href: optional-packages.md
+          href: package/optional-packages.md
           items:
             - name: Optional packages with executable code
-              href: optional-packages-with-executable-code.md
+              href: package/optional-packages-with-executable-code.md
         - name: Windows app streaming install
-          href: streaming-install.md
+          href: package/streaming-install.md
           items:
             - name: Create and convert a source content group map
-              href: create-cgm.md
+              href: package/create-cgm.md
         - name: Flat bundle app packages
-          href: flat-bundles.md
+          href: package/flat-bundles.md
         - name: Asset packages
-          href: asset-packages.md
+          href: package/asset-packages.md
         - name: Modification packages
           items: 
             - name: Overview
@@ -139,17 +139,17 @@
     - name: Manual packaging tools
       items:
         - name: Overview
-          href: manual-packaging-root.md
+          href: package/manual-packaging-root.md
         - name: Package desktop apps manually
           href: desktop/desktop-to-uwp-manual-conversion.md
         - name: Create an app package with the MakeAppx.exe tool
-          href: ../packaging/create-app-package-with-makeappx-tool.md
+          href: package/create-app-package-with-makeappx-tool.md
         - name: Create a certificate for package signing
-          href: ../packaging/create-certificate-package-signing.md
+          href: package/create-certificate-package-signing.md
         - name: Developing with asset packages and package folding
-          href: ../packaging/package-folding.md
+          href: package/package-folding.md
         - name: Package creation with the packaging layout
-          href: ../packaging/packaging-layout.md
+          href: package/packaging-layout.md
     - name: Bundle MSIX packages
       href: packaging-tool/bundle-msix-packages.md
     - name: Sign an app package 
@@ -157,7 +157,7 @@
         - name: Overview
           href: package/signing-package-overview.md
         - name: Sign an app package using SignTool
-          href: sign-app-package-using-signtool.md
+          href: package/sign-app-package-using-signtool.md
 - name: Validate
   items: 
     - name: Windows app certification kit
