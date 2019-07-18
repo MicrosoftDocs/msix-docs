@@ -3,7 +3,7 @@ Description: Shows how to manually package a Windows desktop application (like W
 title: Package an application manually (Desktop Bridge)
 ms.date: 05/18/2018
 ms.topic: article
-keywords: windows 10, uwp
+keywords: windows 10, uwp, msix
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5

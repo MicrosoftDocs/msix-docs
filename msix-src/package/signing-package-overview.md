@@ -1,4 +1,13 @@
-# Signing Windows 10 App Package 
+---
+Description: This article describes signing requirements for Windows 10 apps.
+title: Sign a Windows 10 app package 
+ms.date: 07/03/2019
+ms.author: diahar
+keywords: windows 10, uwp, msix
+ms.localizationpriority: medium
+---
+
+# Sign a Windows 10 app package 
 
 App package signing is a required step in the process of creating a Windows 10 app package that can be deployed. Windows 10 requires all applications to be signed with a valid code signing certificate. 
 

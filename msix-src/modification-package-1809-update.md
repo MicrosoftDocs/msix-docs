@@ -1,8 +1,6 @@
 ---
-author: dianmsft
 title: MSIX Modification packages on Windows 10 1809 update
 description: In this section, we will review modification packages in Windows 10 1809 Update
-ms.author: diahar
 ms.date: 01/15/2019
 ms.topic: article
 keywords: windows 10, uwp, msix

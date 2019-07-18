@@ -44,7 +44,48 @@
       "feedback_product_url": "https://aka.ms/msixcommunity",
       "ms.prod": "msix"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.author":
+      {
+       "app-package-updates.md": "diahar",
+       "group-policy-msix.md": "diahar",
+       "index.md": "diahar",
+       "modification-package-1809-update.md": "diahar",
+       "modification-package-1903.md": "diahar",
+       "modification-packages.md": "diahar",
+       "msix-1709-and-1803-support.md": "diahar",
+       "overview.md": "diahar",
+       "partners.md": "diahar",
+       "team-video.md": "diahar",
+       "app-installer/**.md": "diahar",
+       "desktop/**.md": "diahar",
+       "manage/**.md": "diahar",
+       "msix-sdk/**.md": "diahar",
+       "package/**.md": "diahar",
+       "psf/**.md": "diahar",
+       "packaging-tool/**.md": "shakers"
+      },
+      "author":
+      {
+        "app-package-updates.md": "dianmsft",
+        "group-policy-msix.md": "dianmsft",
+        "index.md": "dianmsft",
+        "modification-package-1809-update.md": "dianmsft",
+        "modification-package-1903.md": "dianmsft",
+        "modification-packages.md": "dianmsft",
+        "msix-1709-and-1803-support.md": "dianmsft",
+        "overview.md": "dianmsft",
+        "partners.md": "dianmsft",
+        "team-video.md": "dianmsft",
+        "app-installer/**.md": "dianmsft",
+        "desktop/**.md": "dianmsft",
+        "manage/**.md": "dianmsft",
+        "msix-sdk/**.md": "dianmsft",
+        "package/**.md": "dianmsft",
+        "psf/**.md": "dianmsft",
+        "packaging-tool/**.md": "sharlaakers" 
+      }		 
+    },
     "template": [],
     "dest": "msix",
     "markdownEngineName": "markdig"

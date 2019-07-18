@@ -1,8 +1,6 @@
 ---
 title: Create an MSIX package from a Desktop installer(MSI, EXE or App-V) on a VM
 description: Create an MSIX package from a Desktop installer(MSI, EXE or App-V) on a VM
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -20,7 +18,7 @@ You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX appl
 - It must be running Windows 10, version 1809, or a later version of Windows.
 
 > [!NOTE]
-> The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MsIX Packaging tool to convert to MSIX. 
+> The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MSIX Packaging tool to convert to MSIX. 
 
 When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
 
@@ -104,6 +102,9 @@ When you're done preparing the machine, click **Next**.
 ## Installation
 
 ![images/pic6](images/pic6.png)
+
+> [!NOTE]
+> During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
 
 - This is installation phase where the tool is monitoring and capturing the application install operations.
 - The tool will launch the installer in the Virtual Machine Window that it opened in an earlier stage and you'll need to go through the installer wizard to install the application.

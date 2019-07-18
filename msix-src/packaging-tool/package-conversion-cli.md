@@ -1,8 +1,6 @@
 ---
 title: Create a package using the command line interface
 description: Learn how to create an MSIX package using the command line interface.
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp

@@ -1,8 +1,6 @@
 ---
 title: Known issues and troubleshooting 
 description: Describes known issues and provides troubleshooting tips for the MSIX Packaging Tool. 
-author: dianmsft
-ms.author: diahar
 ms.date: 02/26/2019
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
@@ -50,6 +48,7 @@ Individually-obtained Feature on Demand packages can be installed using DISM com
 - Restarting the machine during application installation is not supported. Ignore the restart request if possible or pass an argument to the installer to not require a restart.
 - Installers may require certain frameworks or drivers to be installed prior to installation. To look up frameworks and drivers on the machine that is being used to convert apps, use the following queries: ```driverquery /v | Out-File```
 or ```driverquery /v | Out-File "path to text file"```
+- During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
 
 # Troubleshooting
 

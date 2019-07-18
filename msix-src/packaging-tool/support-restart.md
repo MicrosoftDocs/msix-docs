@@ -1,3 +1,13 @@
+---
+title: Support for desktop installers that require device restart
+description: Describes how to support desktop installers that require device restart.
+ms.date: 04/04/2019
+ms.topic: article
+keywords: MSIX, MPT, MSIX Packaging Tool, 1709, 16299
+ms.localizationpriority: medium
+ms.custom: RS5
+---
+
 # Support for desktop installers that require device restart
 
  > [!NOTE] 

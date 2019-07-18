@@ -1,8 +1,6 @@
 ---
-title: Best Practices for MSIX Packaging Tool
-description: Best Practices for MSIX Packaging Tool 
-author: mcleanbyron
-ms.author: mcleans
+title: Best practices for the MSIX Packaging Tool
+description: Best practices for the MSIX Packaging Tool 
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
@@ -10,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Best practices for MSIX Packaging Tool
+# Best practices for the MSIX Packaging Tool
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 

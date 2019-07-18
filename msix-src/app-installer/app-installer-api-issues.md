@@ -1,8 +1,6 @@
 ---
-author: joshusto
 title: App Installer file API issues
 description: Lists known issues with the App Installer file APIs.
-ms.author: joshusto
 ms.date: 2/20/2019
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API

@@ -3,7 +3,7 @@ Description: This guide explains how to configure your Visual Studio Solution to
 title: Package a desktop app from source code using Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
-keywords: windows 10, uwp
+keywords: windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ---

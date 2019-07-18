@@ -45,13 +45,15 @@
   - name: MSIX Packaging Tool
     items: 
       - name: Overview
-        href: mpt-overview.md
-      - name: Modify package using package editor
+        href: packaging-tool/mpt-overview.md
+      - name: Modify a package using package editor
         href: packaging-tool/package-editor.md
+      - name: Edit icons and assets
+        href: packaging-tool/edit-icons-and-assets.md
       - name: MSIX package support on Windows 10 version 1709 and later
         href: packaging-tool/Support-on-1709-and-later.md
       - name: Best practices for MSIX Packaging Tool
-        href: mpt-best-practices.md
+        href: packaging-tool/mpt-best-practices.md
       - name: Use Hyper-V Quick Create to package
         href: packaging-tool/Quick-Create-VM.md
       - name: Known issues and troubleshooting

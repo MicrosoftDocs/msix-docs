@@ -1,22 +1,28 @@
 ---
 Description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (Desktop Bridge)
-ms.date: 05/18/20188
+ms.date: 07/03/2019
 ms.topic: article
-keywords: windows 10, uwp
+keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
 ---
 
 # Prepare to package a desktop application
 
-This article lists the things you need to know before you package your desktop app. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging. Remember that the Microsoft Store handles licensing and automatic updating for you, so you can remove any features that relate to those tasks from your codebase.
+This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging. Remember that the Microsoft Store handles licensing and automatic updating for you, so you can remove any features that relate to those tasks from your codebase.
 
-+ __Your application requires a version of .NET earlier than 4.6.2__. You need to make sure your application runs on .NET 4.6.2. You cannot require or redistribute versions earlier than 4.6.2. This is the version of .NET that shipped in the Windows 10 Anniversary Update. Verifying your application works on this version will ensure that your application will continue to be compatible with future updates of Windows 10.  If your application targets the .NET Framework 4.0 or later, it is expected to run on .NET 4.6.2 but you should still test it.
++ __Your .NET application requires a version of the .NET Framework earlier than 4.6.2__. If you are packaging a .NET application, we recommend that your application target .NET Framework 4.6.2 or later. The ability to install and run packaged desktop applications was first introduced in Windows 10, version 1607 (also called the Anniversary Update), and this OS version includes the .NET Framework 4.6.2 by default. Later OS versions include later versions of the .NET Framework. For a full list of what versions of .NET are included in later versions of Windows 10, see [this article](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
+
+  Targeting versions of the .NET Framework earlier than 4.6.2 in packaged desktop applications is expected to work in most cases. However, if you target an earlier version than 4.6.2, you should fully test your packaged desktop application before distributing it to users.
+
+  + 4.0 - 4.6.1: Applications that target these versions of the .NET Framework are expected to run without issues on 4.6.2 or later. Therefore, these applications should install and run without changes on Windows 10, version 1607 or later with the version of the .NET Framework that is included with the OS.
+
+  + 2.0 and 3.5: In our testing, packaged desktop applications that target these versions of the .NET Framework generally work but may exhibit performance issues in some scenarios. In order for these packaged applications to install and run, the [.NET Framework 3.5 feature](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10) must be installed on the target machine (this feature also includes .NET Framework 2.0 and 3.0). You should also test these applications thoroughly after you package them.
 
 + __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application from the Microsoft Store may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. Apps that require elevation for any part of their functionality won't be accepted in the Microsoft Store.
 
-+ __Your application requires a kernel-mode driver or a Windows service__. The bridge is suitable for an app, but it does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
++ __Your application requires a kernel-mode driver or a Windows service__. The Desktop Bridge is suitable for an app, but it does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 + __Your app's modules are loaded in-process to processes that are not in your Windows app package__. This isn't permitted, which means that in-process extensions, like [shell extensions](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx), aren't supported. But if you have two apps in the same package, you can do inter-process communication between them.
 

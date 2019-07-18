@@ -2,8 +2,6 @@
 layout: LandingPage
 title: MSIX Documentation
 description: Find documentation for MSIX, an updated packaging format built to be safe, secure and reliable that is a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
-author: mcleanbyron
-ms.author: mcleans
 ms.date: 09/07/2018
 ms.topic: landing-page
 keywords: windows 10, uwp
@@ -276,27 +274,23 @@ App Installer allows for installation and updates of any MSIX app package that i
 
 <br>
 
-## Conference talks by MSIX team
-***
-
+## MSIX training videos
 :::row:::
     :::column:::
-	>[!VIDEO https://www.youtube.com/embed/sBOTQoi6iXQ]
-        #### MSIX inside and out (Sept 2018)
-MSIX is the future of app installation and a significant step forward in enabling enterprises to modernize their app deployment processes and stay current with Windows, Office and third-party apps. 
+	>[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ig2l]
+#### MSIX overview
+MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.
     :::column-end:::
     :::column:::
-    >[!VIDEO https://www.youtube.com/embed/0kSwCOr7-Ao]
-        #### MSIX – Accelerating Windows 10 and app deployment (Sept 2018)
-MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users. 
+    >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3i5DH]
+#### MSIX for developers
+Learn how developers can take advantage of the benefits of MSIX.
     :::column-end:::
     :::column:::
-    >[!VIDEO https://www.youtube.com/embed/_wCv31TI_30]
-        #### Updating your existing Configuration Manager apps to MSIX (Sept 2018)
-MSIX simplifies and modernizes app deployment. It brings a faster, more reliable, and rot-free deployment for your enterprise. Learn the ins and outs of updating your existing System Center Configuration Manager apps to MSIX along with how it will integrate with Configuration Manager. 
+    >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3iiD5]
+#### Evolving and enhancing desktop apps with MSIX
+Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls and other features. 
     :::column-end:::
-
-    
 :::row-end:::
 
 

@@ -1,24 +1,22 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to optimize the application binaries with native images.
 title: Optimize your .NET Desktop apps with native images
-ms.date: 06/11/2018
+ms.date: 07/03/2019
 ms.topic: article
-keywords: windows 10, native image Compiler
+keywords: windows 10, uwp, msix, native image Compiler
 ms.localizationpriority: medium
 ---
-# Optimize your .NET Desktop apps with native images
 
-> [!NOTE]
-> Some information relates to pre-released product which may be substantially modified before it’s commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+# Optimize your .NET Desktop apps with native images
 
 You can improve the startup time of your .NET Framework application by pre-compiling your binaries. You can use this technology on large applications that you package and distribute through the Microsoft Store. In some cases, we've observed a 20% performance improvement. You can learn more about this technology in the [technical overview](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
 
-We've released a preview version of the native image compiler as a [NuGet package](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler). You can apply this package to any .NET Framework application that targets the .NET Framework version 4.6.2 or later. This package adds a post build step that includes a native payload to all the binaries used by your application. This optimized payload will be loaded when the application runs in .NET 4.7.2 and above while previous versions will still load the MSIL code.
+We've released the native image compiler as a [NuGet package](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler). You can apply this package to any .NET Framework application that targets the .NET Framework version 4.6.2 or later. This package adds a post build step that includes a native payload to all the binaries used by your application. This optimized payload will be loaded when the application runs in .NET 4.7.2 and above while previous versions will still load the MSIL code.
 
-The [.NET framework 4.7.2](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/) is included in the [Windows 10 April 2018 update](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/). You can also install this version of the .NET Framework on PC's that run Windows 7+ and Windows Server 2008 R2+.
+The [.NET framework 4.7.2](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/) is included in the [Windows 10 April 2018 update](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/). You can also install this version of the .NET Framework on PCs that run Windows 7+ and Windows Server 2008 R2+.
 
 > [!IMPORTANT]
-> If you want to produce native images for your application packaged by  the Windows Application Packaging project, make sure to set the Target Platform Minimum version of the project to the Windows Anniversary Update.
+> If you want to produce native images for your application packaged by the Windows Application Packaging project, make sure to set the Target Platform Minimum version of the project to the Windows Anniversary Update.
 
 ## How to produce native images
 
@@ -66,11 +64,8 @@ Repeat this step for `Release/x64` if you want produce x64 binaries.
 The native image compiler is provided as a NuGet package that you need to add to the Visual Studio project that produces the executable file. This is typically your Windows Forms or WPF project. Use this PowerShell command to do that.
 
 ```PS
-PM> Install-Package Microsoft.DotNet.Framework.NativeImageCompiler -Version 0.0.1-prerelease-00002  -PRE
+PM> Install-Package Microsoft.DotNet.Framework.NativeImageCompiler -Version 1.0.0
 ```
-
-> [!NOTE]
-> The preview packages are published in NuGet.org as unlisted. You won’t find them by browsing NuGet.org or by using the Package Manager UI in Visual Studio. However, you can install them from the Package Manager Console, and when you restoring from a different machine. We'll make the packages fully accessible when we publish the first non-preview version.
 
 ## Create a Release Build
 
