@@ -31,7 +31,7 @@
             - name: Modification packages on Windows 10 version 1903
               href: modification-package-1903.md
             - name: App package architectures
-              href: device-architecture.md
+              href: package/device-architecture.md
     - name: App package updates
       href: app-package-updates.md
     - name: MSIX support on 1709 and 1803
@@ -135,7 +135,7 @@
         - name: Known issues 
           href: desktop/desktop-to-uwp-known-issues.md         
     - name: Package a UWP app with Visual Studio
-      href: packaging-uwp-apps.md
+      href: package/packaging-uwp-apps.md
     - name: Manual packaging tools
       items:
         - name: Overview

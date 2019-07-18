@@ -2,8 +2,6 @@
 title: Introduction to asset packages
 description: Asset packages are a type of package that act as a centralized location for an application’s common files – effectively eliminating the necessity for duplicated files throughout its architecture packages.
 ms.date: 07/02/2019
-author: dianmsft
-ms.author: diahar
 ms.topic: article
 keywords: windows 10, msix, packaging, package layout, asset package
 ms.localizationpriority: medium

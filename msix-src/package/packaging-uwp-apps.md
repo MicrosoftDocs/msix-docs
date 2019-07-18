@@ -2,7 +2,7 @@
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Packaging UWP apps
 description: To distribute or sell your Universal Windows Platform (UWP) app, you need to create an app package for it.
-ms.date: 06/10/2019
+ms.date: 07/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Package a UWP app with Visual Studio
 
-To sell your Universal Windows Platform (UWP) app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](installing-UWP-apps-web.md). This article describes the process of configuring, creating, and testing a UWP app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
+To sell your Universal Windows Platform (UWP) app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a UWP app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
 In Windows 10, you can submit an app package, app bundle, or a complete app package upload file to [Partner Center](https://partner.microsoft.com/dashboard). Of these options, submitting an app package upload file will provide the best experience.
 
@@ -37,7 +37,7 @@ After you have completed the steps above, you are ready to distribute your app. 
 
 ## Before packaging your app
 
-1.  **Test your app.** Before you package your app for Partner Center submission, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](../debug-test-perf/deploying-and-debugging-uwp-apps.md).
+1.  **Test your app.** Before you package your app for Partner Center submission, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 2.  **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your UWP app. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
 3.  **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected. Some common debugging issues that can happen with .NET Native are explained in more detail in [Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
 
@@ -100,7 +100,7 @@ To distribute an app through Microsoft Store you must create an app package (.ap
 
 1. Place the following files in a folder:
     - One or more app packages (.msix or .appx) or an app bundle (.msixbundle or .appxbundle).
-    - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](../publish/health-report.md) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
+    - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](https://docs.microsoft.com/windows/uwp/publish/health-report) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
 2. Zip the folder.
 3. Change the zipped folder extension name from .zip to .msixupload or .appxupload.
 
@@ -181,9 +181,9 @@ The submission will start after the WACK test have finished. You can track the s
 
 With UWP app packages, apps aren't installed to a device as they are with desktop apps. Typically, you download UWP apps from Microsoft Store, which also installs the app to your device for you. Apps can be installed without being published in the Store (sideloading). This lets you install and test apps using the app package file that you created. If you have an app that you don’t want to sell in the Store, like a line-of-business (LOB) app, you can sideload that app so that other users in your company can use it.
 
-Before you can sideload your app on a target device, you must [enable your device for development](../get-started/enable-your-device-for-development.md).
+Before you can sideload your app on a target device, you must [enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 
-To sideload your app on a Windows 10 Mobile device, use the [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) tool. For desktops, laptops, and tablets, follow the instructions below.
+To sideload your app on a Windows 10 Mobile device, use the [WinAppDeployCmd.exe](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) tool. For desktops, laptops, and tablets, follow the instructions below.
 
 ### Sideload your app package on Windows 10 Anniversary Update or later
 

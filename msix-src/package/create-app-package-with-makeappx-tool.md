@@ -17,7 +17,7 @@ ms.custom: RS5
 > If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md).
 
 > [!IMPORTANT]
-> Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](../publish/upload-app-packages.md). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#create-an-app-package-upload-file), although it can also be created manually.
+> Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#create-an-app-package-upload-file), although it can also be created manually.
 
 ## Using MakeAppx.exe
 
