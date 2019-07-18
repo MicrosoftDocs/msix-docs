@@ -40,7 +40,7 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Packaging version selector dialog box](images/packaging-version.png)
 
-4. In the packaging project, right-click the **Applications** folder, and then choose **Add Reference**.
+4. In Solution Explorer, right-click the **Applications** folder under the packaging project and choose **Add Reference**.
 
    ![Add Project Reference](images/add-project-reference.png)
 
@@ -52,11 +52,35 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Set entry point](images/entry-point-set.png)
 
-6. Build the packaging project to ensure that no errors appear.  If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
+6. If the application you are packaging targets .NET Core 3, follow these steps to add a new build target to the project file. This is only necessary for applications that target .NET Core 3.  
+
+    1. In Solution Explorer, right-click the packaging project node and select **Edit Project File**.
+
+    2. Add the following XML to the project file, immediately before the closing `</Project>` element.
+
+        ``` xml
+        <!-- Stomp the path to application executable. This task will copy the main exe to the appx root folder. 
+        --> 
+        <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
+          <ItemGroup>
+            <!-- Stomp all "SourceProject" values for all incoming dependencies to flatten the package. -->
+            <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
+            <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
+            <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
+              <!-- Blank the SourceProject here to vend all files into the root of the package. -->
+              <SourceProject></SourceProject>
+            </_FilteredNonWapProjProjectOutput>
+          </ItemGroup>
+        </Target>
+        ```
+
+    3. Save the project file.
+
+7. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
 
    ![Config manager](images/config-manager.png)
 
-7. Use the [Create App Packages](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps) wizard to generate an appxupload file.
+8. Use the [Create App Packages](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps) wizard to generate an .msixupload/.appxupload file.
 
    You can upload that file directly to the Store.
 
