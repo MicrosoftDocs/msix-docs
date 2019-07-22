@@ -144,20 +144,20 @@ The **PrebuiltPackage** element is used to add packages that are not defined in 
 
 Once you have the packaging layout for your app, you can start using MakeAppx.exe to build the packages of your app. To build all of the packages defined in the packaging layout, use the command:
 
-``` example 
+```cmd
 MakeAppx.exe build /f PackagingLayout.xml /op OutputPackages\
 ```
 
 But, if you are updating your app and some packages don't contain any changed files, you can build only the packages that have changed. Using the simple packaging layout example on this page and building the x64 architecture package, this is what our command would look like:
 
-``` example 
+```cmd
 MakeAppx.exe build /f PackagingLayout.xml /id "x64" /ip PreviousVersion\ /op OutputPackages\ /iv
 ```
 
 The `/id` flag can be used to select the packages to be built from the packaging layout, corresponding to the **ID** attribute in the layout. The `/ip` is used to indicate where the previous version of the packages are in this case. The previous version must be provided because the app bundle file still needs to reference the previous version of the **Media** package. The `/iv` flag is used to automatically increment the version of the packages being built (instead of changing the version in the **AppxManifest**). Alternatively, the switches `/pv` and `/bv` can be used to directly provide a package version (for all packages to be created) and a bundle version (for all bundles to be created), respectively.
 Using the advanced packaging layout example on this page, if you want to only build the **Themes** optional bundle and the **Themes.main** app package that it references, you would use this command:
 
-``` example
+```cmd
 MakeAppx.exe build /f PackagingLayout.xml /id "Themes" /op OutputPackages\ /bc /nbp
 ```
 

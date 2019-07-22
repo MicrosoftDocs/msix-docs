@@ -34,20 +34,20 @@ However, it should be cautioned that asset packages are not a means to achieve a
 
 The easiest way to create asset packages is using the packaging layout. However, asset packages can also be created manually using MakeAppx.exe. To specify which files to include in the asset package, you will need to create a “mapping file”. In this example, the only file in the asset package is "Video.mp4”, but all the asset package’s files should be listed here. Note that the **ResourceDimensions** specifier in **ResourceMetadata** is omitted for asset packages (as compared to a mapping file for resource packages).
 
-`
+```cmd
 [ResourceMetadata]
 "ResourceId"        "Videos"
 
 [Files]
 "Video.mp4"         "Video.mp4"
-`
+```
 
 Use one of these commands to create the asset package using MakeAppx.exe (for AppX and MSIX).
 
-`
+```cmd
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.msix
-`
+```
 
 It should be noted here that all of the files referenced in the AppxManifest (the logo files) cannot be moved into asset packages – these files must be duplicated across architecture packages.
 
