@@ -7,13 +7,10 @@ keywords: windows 10, uwp
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ---
+
 # Create a certificate for package signing
 
-
-This article explains how to create and export a certificate for app package signing using PowerShell tools. It's recommended that you use Visual Studio for [Packaging UWP apps](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps), but you can still package a Store ready app manually if you did not use Visual Studio to develop your app.
-
-> [!IMPORTANT] 
-> If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to import a certificate and sign your app package. For more information, see [Package a UWP app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+This article explains how to create and export a certificate for app package signing using PowerShell tools. It's recommended that you use Visual Studio for [packaging UWP apps](packaging-uwp-apps.md) and [packaging desktop apps](../desktop/desktop-to-uwp-packaging-dot-net.md), but you can still package an app manually if you did not use Visual Studio to develop your app.
 
 ## Prerequisites
 

@@ -8,13 +8,13 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# Create an app package with the MakeAppx.exe tool
 
+# Create an app package with the MakeAppx.exe tool
 
 **MakeAppx.exe** creates both app packages (.msix or .appx) and app package bundles (.msixbundle or .appxbundle). **MakeAppx.exe** also extracts files from an app package or bundle and encrypts or decrypts app packages and bundles. This tool is included in the Windows 10 SDK and can be used from a command prompt or a script file.
 
 > [!IMPORTANT]
-> If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md).
+> If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
 > [!IMPORTANT]
 > Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](https://docs.microsoft.com/windows/uwp/publish/upload-app-packages). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#create-an-app-package-upload-file), although it can also be created manually.

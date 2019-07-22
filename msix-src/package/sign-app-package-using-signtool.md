@@ -7,21 +7,23 @@ keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ---
+
 # Sign an app package using SignTool
 
 **SignTool** is a command line tool used to digitally sign an app package or bundle with a certificate. The certificate can either be created by the user (for testing purposes) or issued by a company (for distribution). Signing an app package provides the user with verification that the app's data has not been modified after it was signed while also confirming the identity of the user or company that signed it. **SignTool** can sign encrypted or unencrypted app packages and bundles.
 
 > [!IMPORTANT] 
-> If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create and sign your app package. For more information, see [Package a UWP app with Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+> If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create and sign your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
 For more information about code signing and certificates in general, see [Introduction to Code Signing](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools).
 
 ## Prerequisites
+
 - **A packaged app**  
-    To learn more about manually creating an app package, see [Create an app package with the MakeAppx.exe tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). 
+    To learn more about manually creating an app package, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
 
 - **A valid signing certificate**  
-    For more information about creating or importing a valid signing certificate, see [Create or import a certificate for package signing](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing).
+    For more information about creating or importing a valid signing certificate, see [Create or import a certificate for package signing](create-certificate-package-signing.md).
 
 - **SignTool.exe**  
     Based on your installation path of the SDK, this is where **SignTool** is on your Windows 10 PC:
@@ -30,15 +32,16 @@ For more information about code signing and certificates in general, see [Introd
 
 ## Using SignTool
 
-**SignTool** can be used to sign files, verify signatures or timestamps, remove signatures, and more. For the purpose of signing an app package, we will focus on the **sign** command. For full information on **SignTool**, see the [SignTool](https://docs.microsoft.com/windows/desktop/SecCrypto/signtool) reference page. 
+**SignTool** can be used to sign files, verify signatures or timestamps, remove signatures, and more. For the purpose of signing an app package, we will focus on the **sign** command. For full information on **SignTool**, see the [SignTool](https://docs.microsoft.com/windows/desktop/SecCrypto/signtool) reference page.
 
 ### Determine the hash algorithm
+
 When using **SignTool** to sign your app package or bundle, the hash algorithm used in **SignTool** must be the same algorithm you used to package your app. For example, if you used **MakeAppx.exe** to create your app package with the default settings, you must specify SHA256 when using **SignTool** since that's the default algorithm used by **MakeAppx.exe**.
 
-To find out which hash algorithm was used while packaging your app, extract the contents of the app package and inspect the AppxBlockMap.xml file. To learn how to unpack/extract an app package, see [Extract files from a package or bundle](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). The hash method is in the BlockMap element and has this format:
+To find out which hash algorithm was used while packaging your app, extract the contents of the app package and inspect the AppxBlockMap.xml file. To learn how to unpack/extract an app package, see [Extract files from a package or bundle](create-app-package-with-makeappx-tool.md). The hash method is in the BlockMap element and has this format:
 
 ```xml
-<BlockMap xmlns="http://schemas.microsoft.com/appx/2010/blockmap" 
+<BlockMap xmlns="http://schemas.microsoft.com/appx/2010/blockmap"
 HashMethod="http://www.w3.org/2001/04/xmlenc#sha256">
 ```
 
@@ -131,4 +134,4 @@ The internal error 0x8007000B usually corresponds to one of these values:
 |--------------|--------------------------|----------------|
 | 150          | error 0x8007000B: The app manifest publisher name (CN=Contoso) must match the subject name of the signing certificate (CN=Contoso, C=US). | The app manifest publisher name must exactly match the subject name of the signing.               |
 | 151          | error 0x8007000B: The signature hash method specified (SHA512) must match the hash method used in the app package block map (SHA256).     | The hashAlgorithm specified in the /fd parameter is incorrect. Rerun **SignTool** using hashAlgorithm that matches the app package block map (used to create the app package)  |
-| 152          | error 0x8007000B: The app package contents must validate against its block map.                                                           | The app package is corrupt and needs to be rebuilt to generate a new block map. For more about creating an app package, see [Create an app package with the MakeAppx.exe tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool) |
+| 152          | error 0x8007000B: The app package contents must validate against its block map.                                                           | The app package is corrupt and needs to be rebuilt to generate a new block map. For more about creating an app package, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md) |

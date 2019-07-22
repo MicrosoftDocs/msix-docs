@@ -26,6 +26,7 @@ By default, the flat bundles will reference app package files within the same fo
 A flat bundle can be created using the MakeAppx.exe tool, or by using the packaging layout to define the structure of your bundle.
 
 ### Using MakeAppx.exe
+
 To create a flat bundle using MakeAppx.exe, use the “MakeAppx.exe bundle” command as usual but with the /fb switch to generate the flat app bundle file (which will be extremely small since it only references the app package files and does not contain any actual payloads). 
 
 Here's an example of the command syntax:
@@ -34,13 +35,15 @@ Here's an example of the command syntax:
 MakeAppx bundle [options] /d <content directory> /fb /p <output flat bundle name>
 ```
 
-For more information on using MakeAppx.exe, see [Create an app package with the MakeAppx.exe tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
+For more information on using MakeAppx.exe, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
 
 ### Using packaging layout
+
 Alternatively, you can create a flat bundle using the packing layout. To do this, set the **FlatBundle** attribute to **true** in the **PackageFamily** element of your app bundle manifest. To learn more about the packaging layout, see [Package creation with the packaging layout](packaging-layout.md).
 
 ## How to deploy a flat bundle 
-Before a flat bundle can be deployed, each of the app packages (in addition to the app bundle) must be signed with the same certificate. This is because all of the app package files (.appx/.msix) are now independent files and are no longer contained within the app bundle (.appxbundle/.msixbundle) file. 
+
+Before a flat bundle can be deployed, each of the app packages (in addition to the app bundle) must be signed with the same certificate. This is because all of the app package files (.appx/.msix) are now independent files and are no longer contained within the app bundle (.appxbundle/.msixbundle) file.
 
 After the packages are signed, you can install the app via one of these options:
 * Double click the app bundle file to install with App Installer.
