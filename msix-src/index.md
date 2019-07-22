@@ -179,13 +179,16 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Build</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render" data-linktype="absolute-path">Package an app with Visual Studio</a>
+                                    <a href="/desktop/desktop-to-uwp-packaging-dot-net.md">Package a desktop app with Visual Studio</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render" data-linktype="absolute-path">Manual packaging tools</a>
+                                    <a href="/package/packaging-uwp-apps.md" data-linktype="absolute-path">Package a UWP app with Visual Studio</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing an app package</a>
+                                    <a href="/package/manual-packaging-root.md" data-linktype="absolute-path">Manual packaging tools</a>
+                                </p>
+                                <p>
+                                    <a href="/package/sign-app-package-using-signtool.md" data-linktype="absolute-path">Signing an app package</a>
                                 </p>
                             </div>
                         </div>

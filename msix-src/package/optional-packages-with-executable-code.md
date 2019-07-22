@@ -13,17 +13,18 @@ ms.localizationpriority: medium
 Optional packages with executable code are useful for dividing a large or complex app, or for adding on to an app that's already been published. With Visual Studio 2017, version 15.7 and .NET Native 2.1, you can load executable code from both C++ and C# optional packages.
 
 ## Prerequisites
-- Visual Studio 2017, version 15.7
-- Windows 10, version 1709
-- Windows 10, version 1709 SDK
 
-To get the latest development tools, see [Downloads and tools for Windows 10](https://developer.microsoft.com/windows/downloads). 
+- Visual Studio 2019 or Visual Studio 2017 (version 15.7 or later)
+- Windows 10, version 1709 or later
+- Windows 10, version 1709 SDK or later
+
+To get the latest development tools, see [Downloads and tools for Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
 > To submit an app that uses optional packages and/or related sets to the Store, you will need permission. Optional packages and related sets can be used for Line of Business (LOB) or enterprise apps without Partner Center permission if they are not submitted to the Store. See [Windows developer support](https://developer.microsoft.com/windows/support) to get permission to submit an app that uses optional packages and related sets.
 
 > [!NOTE]
-> Optional packages containing executable code must be part of a [related set](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets). You will not be able to execute code from an optional package unless it is part of a related set.
+> Optional packages containing executable code must be part of a [related set](optional-packages.md#related-sets). You will not be able to execute code from an optional package unless it is part of a related set.
 
 ## C++ Optional packages with executable code
 
@@ -53,7 +54,7 @@ To get started building an optional code package in C#, follow the below steps t
     <uap3:MainPackageDependency Name="12345.MainAppProjectTest" />
     ```
 
-6. Add a `Bundle.mapping.txt` file to the main app. Follow the steps in this [Related sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets) section to create a related set containing both apps. 
+6. Add a `Bundle.mapping.txt` file to the main app. Follow the steps in this [Related sets](optional-packages.md#related-sets) section to create a related set containing both apps.
 
 7. Build the optional package project and then navigate to the package Reference folder in the output from the build found at `..\[PathToOptionalPackageProject]\bin\[architecture]\[configuration]\Reference`. Note that you can choose any architecture in the path to the Reference folder since the `.winmd` file (step 8) is architecture independent.
 
@@ -61,4 +62,4 @@ To get started building an optional code package in C#, follow the below steps t
 
 9. In the main app project, navigate to the project build properties and select **Compile with .NET Native tool chain**. Currently, only debugging in .NET Native is supported for optional code package creation in C#. Go to the project debug properties and select **Deploy optional packages**. This will ensure that both packages are in sync whenever you deploy the main app project.
 
-Once you're finished with these steps, you can add code to the optional package project as if it were a managed WinRT Component project. To access the code in the main app project, call the public methods exposed in the optional package project.
+After you're finished with these steps, you can add code to the optional package project as if it were a managed WinRT Component project. To access the code in the main app project, call the public methods exposed in the optional package project.

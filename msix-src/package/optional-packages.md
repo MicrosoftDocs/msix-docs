@@ -18,19 +18,21 @@ Related sets are an extension of optional packages -- they allow you to enforce 
 
 ## Prerequisites
 
-- Visual Studio 2017, version 15.1
-- Windows 10, version 1703
-- Windows 10, version 1703 SDK
+- Visual Studio 2019 or Visual Studio 2017 (version 15.1 or later)
+- Windows 10, version 1703 or later
+- Windows 10, version 1703 SDK or later
 
 To get all of the latest development tools, see [Downloads and tools for Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
 > To submit an app that uses optional packages and/or related sets to the Microsoft Store, you will need permission. Optional packages and related sets can be used for Line of Business (LOB) or enterprise apps without Partner Center permission if they are not submitted to the Store. See [Windows developer support](https://developer.microsoft.com/windows/support) to get permission to submit an app that uses optional packages and related sets.
 
-### Code sample
+## Code sample
+
 While you're reading this article, it's recommended that you follow along with the [optional package code sample](https://github.com/AppInstaller/OptionalPackageSample) on GitHub for a hands-on understanding of how optional packages and related sets work within Visual Studio.
 
 ## Optional packages
+
 To create an optional package in Visual Studio, you'll need to:
 1. Make sure your app's **Target Platform Min Version** is set to: 10.0.15063.0 or higher.
 2. From your **main package** project, open the `Package.appxmanifest` file. Navigate to the "Packaging" tab and make a note of your **package family name**, which is everything before the "_" character.
@@ -58,9 +60,8 @@ If you want to load code from an optional package into the main package, you wil
 
 1. Right click the main package project, select **Add > New Item...**
 2. From the window, search the Installed Templates for ".txt" and add a new text file.
-> [!IMPORTANT]
-> The new text file must be named: `Bundle.Mapping.txt`.
-
+    > [!IMPORTANT]
+    > The new text file must be named: `Bundle.Mapping.txt`.
 3. In the `Bundle.Mapping.txt` file you'll specify relative paths to any optional package projects or external packages. A sample `Bundle.Mapping.txt` file should look something like this:
 
 ```syntax

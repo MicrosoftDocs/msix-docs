@@ -1,29 +1,29 @@
 ---
 ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
 title: Create and convert a source content group map
-description: To get your Universal Windows Platform (UWP) app ready for UWP App Streaming Install, you'll need to create a content group map. This article will help you with the specifics of creating and converting a content group map while providing some tips and tricks along the way.
+description: To get your app ready for streaming install, you'll need to create a content group map. This article will help you with the specifics of creating and converting a content group map while providing some tips and tricks along the way.
 ms.date: 07/02/2019
 author: dianmsft
 ms.author: diahar
 ms.topic: article
-keywords: windows 10, msix, uwp, content group map, streaming install, uwp app streaming install, source content group map
+keywords: windows 10, msix, uwp, content group map, streaming install, app streaming install, source content group map
 ms.localizationpriority: medium
 ---
 
 # Create and convert a source content group map
 
-To get your Universal Windows Platform (UWP) app ready for UWP App Streaming Install, you'll need to create a content group map. This article will help you with the specifics of creating and converting a content group map while providing some tips and tricks along the way.
+To get your app ready for streaming install, you'll need to create a content group map. This article will help you with the specifics of creating and converting a content group map while providing some tips and tricks along the way.
 
 ## Creating the source content group map
 
 You'll need to create a `SourceAppxContentGroupMap.xml` file, and then either use Visual Studio or the **MakeAppx.exe** tool to convert this file to the final version: `AppxContentGroupMap.xml`. It's possible to skip a step by creating the `AppxContentGroupMap.xml` from scratch, but it's recommended (and generally easier) to create the `SourceAppxContentGroupMap.xml` and convert it, since wildcards are not allowed in the `AppxContentGroupMap.xml` (and they're really helpful). 
 
-Let's walk through a simple scenario where UWP App Streaming Install is beneficial. 
+Let's walk through a simple scenario where app streaming install is beneficial. 
 
-Say you've created a UWP game, but the size of your final app is over 100 GB. That's going to take a long time to download from the Microsoft Store, which can be inconvenient. If you choose to use UWP App Streaming Install, you can specify the order in which your app's files are downloaded. By telling the Store to download essential files first, the user will be able to engage with your app sooner while other non-essential files are downloaded in the background.
+Say you've created a game, but the size of your final app is over 100 GB. That's going to take a long time to download from the Microsoft Store, which can be inconvenient. If you choose to use app streaming install, you can specify the order in which your app's files are downloaded. By telling the Store to download essential files first, the user will be able to engage with your app sooner while other non-essential files are downloaded in the background.
 
 > [!NOTE]
-> Using UWP App Streaming Install heavily relies on your app's file organization. It's recommended that you think about your app's content layout with respect to UWP App Streaming Install as soon as possible to make segmenting your app's files simpler.
+> Using app streaming install heavily relies on your app's file organization. It's recommended that you think about your app's content layout with respect to app streaming install as soon as possible to make segmenting your app's files simpler.
 
 First, we'll create a `SourceAppxContentGroupMap.xml` file.
 
@@ -75,7 +75,7 @@ There are a few important things to notice here:
 An easy way to get started writing this file is to open up a new page in your favorite text editor, do a quick "Save As" of your file to your app's project folder, and name your newly created file: `SourceAppxContentGroupMap.xml`.
 
 > [!IMPORTANT]
-> If you are developing a C++ UWP app, you will need to adjust the file properties of your `SourceAppxContentGroupMap.xml`. Set the `Content` property to **true** and the `File Type` property to **XML File**. 
+> If you are developing a C++ app, you will need to adjust the file properties of your `SourceAppxContentGroupMap.xml`. Set the `Content` property to **true** and the `File Type` property to **XML File**.
 
 When you're creating the `SourceAppxContentGroupMap.xml`, it's helpful to take advantage of using wildcards in file names, for more info, see the [Tips and tricks for using wildcards](#wildcards) section.
 
@@ -163,4 +163,4 @@ For more information about options you can use with **MakeAppx.exe**, open a com
 MakeAppx convertCGM /?
 ```
 
-That's all you'll need to get your final `AppxContentGroupMap.xml` ready for your app! There's still more to do before your app is fully ready for the Microsoft Store. For more information on the complete process of adding UWP App Streaming Install to your app, check out [this blog post](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+That's all you'll need to get your final `AppxContentGroupMap.xml` ready for your app! There's still more to do before your app is fully ready for the Microsoft Store. For more information on the complete process of adding streaming install to your app, check out [this blog post](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).

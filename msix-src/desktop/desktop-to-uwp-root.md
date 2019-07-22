@@ -111,7 +111,7 @@ To give your application the best chance of being published on the Microsoft Sto
 
 If you're using the DAC to package your app, you can use the new ``-Verify`` flag to validate your package against the packaged desktop application and Store requirements. See [Package an app, sign the app, and prepare it for Store submission](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
-If you're using Visual Studio, you can validate your application from the **Create App Packages** wizard. See [Create an app package upload file](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps#create-an-app-package-upload-file).
+If you're using Visual Studio, you can validate your application from the **Create App Packages** wizard. See [Create an app package upload file](../package/packaging-uwp-apps.md#create-an-app-package-upload-file).
 
 To run the tool manually, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 

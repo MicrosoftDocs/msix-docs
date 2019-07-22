@@ -13,7 +13,7 @@
           items:
             - name: Optional packages with executable code
               href: package/optional-packages-with-executable-code.md
-        - name: Windows app streaming install
+        - name: App streaming install
           href: package/streaming-install.md
           items:
             - name: Create and convert a source content group map

@@ -73,7 +73,7 @@ To test your application in a realistic setting as you prepare for distribution,
 
 ### Test an application that you packaged by using Visual Studio
 
-Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted Root Certification Authorities** store on the PC that you want to test your application on. See [Sideload your package](/windows/uwp/packaging/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted Root Certification Authorities** store on the PC that you want to test your application on. See [Sideload your package](../package/packaging-uwp-apps.md#sideload-your-app-package).
 
 ### Test an application that you packaged by using the Desktop App Converter (DAC)
 
