@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Sign an MSIX package with Device Guard signing
 
-We are making it easier for you to sign your app. Device Guard signing (DGSS) is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Our goal is to make signing repackaged MSIX apps easy.
+Device Guard signing (DGSS) is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Our goal is to make signing repackaged MSIX apps easy.
 
 ## Before you get started
 
