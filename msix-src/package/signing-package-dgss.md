@@ -8,16 +8,20 @@ ms.localizationpriority: medium
 
 # Sign an MSIX package with Device Guard signing
 
-We are making it easier for you to sign your app. Device Guard signing (DGSS) is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Currently, remote signing is a convoluted process that is separated from all other processes of app packaging and repackaging. To fix this, our goal is to make signing repackaged MSIX apps easy.
+We are making it easier for you to sign your app. Device Guard signing (DGSS) is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Our goal is to make signing repackaged MSIX apps easy.
 
 ## Before you get started
 
 Before getting started, ensure that you go through these following documentation. The majority of this effort is to ensure that you are set up with the right permissions and configurations.
 
-* If you are unfamiliar with Device Guard signing, see [Device Guard signing](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) for an overview of this feature.
-* To use Device Guard signing, you need a Microsoft Store for Business Account. To create an account, follow the instructions in [Sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business). For more information about the permissions needed to perform Device Guard signing, see [this section](#roles-for-device-guard-signing).  
-* Ensure that you have access to the Microsoft Store for Business API. To learn more, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
-* Obtain your Azure Active Directory Token. For more information, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code).
+|Topic| Description |
+|:---|:---|
+|[Prerequisites for signing](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#prerequisites)| This section discusses the prereqs required to sign the Windows 10 app package. | 
+|[Using SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
+|[Device Guard signing](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal)| This section provides an overview of the Device Guard Signing feature.|
+|[Sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business)| To use Device Guard signing, you need a Microsoft Store for Business Account. For more information about the permissions needed to perform Device Guard signing, see [this section](#roles-for-device-guard-signing). |
+|[Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)| Learn more about gettting access to the Microsoft Store for Business API. |
+|[Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code)| Learn how to obtain your Azure Active Directory Token. |
 
 ### Roles for Device Guard signing
 
