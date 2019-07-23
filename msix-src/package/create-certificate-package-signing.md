@@ -15,7 +15,7 @@ This article explains how to create and export a certificate for app package sig
 ## Prerequisites
 
 - **A packaged or unpackaged app**  
-An app containing an AppxManifest.xml file. You will need to reference the manifest file while creating the certificate that will be used to sign the final app package. For details on how to manually package an app, see [Create an app package with the MakeAppx.exe tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool).
+An app containing an AppxManifest.xml file. You will need to reference the manifest file while creating the certificate that will be used to sign the final app package. For details on how to manually package an app, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
 
 - **Public Key Infrastructure (PKI) Cmdlets**  
 You need PKI cmdlets to create and export your signing certificate. For more information, see [Public Key Infrastructure Cmdlets](https://docs.microsoft.com/powershell/module/pkiclient/).
@@ -91,7 +91,7 @@ Export-PfxCertificate -cert "Cert:\CurrentUser\My\<Certificate Thumbprint>" -Fil
 Export-PfxCertificate -cert Cert:\CurrentUser\My\<Certificate Thumbprint> -FilePath <FilePath>.pfx -ProtectTo <Username or group name>
 ```
 
-After you create and export your certificate, you're ready to sign your app package with **SignTool**. For the next step in the manual packaging process, see [Sign an app package using SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
+After you create and export your certificate, you're ready to sign your app package with **SignTool**. For the next step in the manual packaging process, see [Sign an app package using SignTool](sign-app-package-using-signtool.md).
 
 ## Security considerations
 

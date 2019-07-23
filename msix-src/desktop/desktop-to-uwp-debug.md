@@ -84,11 +84,11 @@ If you package your application by using the Desktop App Converter, you can use 
 
 You can also sign your application manually. Here's how
 
-1. Create a certificate. See [Create a certificate](/windows/uwp/packaging/create-certificate-package-signing.md).
+1. Create a certificate. See [Create a certificate](../package/create-certificate-package-signing.md).
 
 2. Install that certificate into the **Trusted Root** or **Trusted People** certificate store on your system.
 
-3. Sign your application by using that certificate, see [Sign an app package using SignTool](/windows/uwp/packaging/sign-app-package-using-signtool.md).
+3. Sign your application by using that certificate, see [Sign an app package using SignTool](../package/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Make sure that the publisher name on your certificate matches the publisher name of your app.

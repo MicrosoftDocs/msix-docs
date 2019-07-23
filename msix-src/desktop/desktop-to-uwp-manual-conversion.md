@@ -187,7 +187,7 @@ If you create target-based assets as described in the section above, or you modi
 
 Use **MakeAppx.exe** to generate a Windows app package for your project. It's included with the Windows 10 SDK, and if you have Visual Studio installed, it can be easily accessed through the Developer Command Prompt for your Visual Studio version.
 
-See [Create an app package with the MakeAppx.exe tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)
+See [Create an app package with the MakeAppx.exe tool](../package/create-app-package-with-makeappx-tool.md)
 
 ## Run the packaged app
 
