@@ -25,7 +25,13 @@ Before getting started, ensure that you go through these following documentation
 
 ### Roles for Device Guard signing
 
-To use Device Guard signing in the Microsoft Store for Business and Education, you need to have the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign. For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+To use Device Guard signing in the Microsoft Store for Business and Education, you need to have the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign.To check the roles: 
+1. Go to Microsoft Store for Business Portal 
+2. Click Manage 
+3. Click Permissions 
+4. View Roles
+
+For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
 
 #### Accessing DGSS with your app 
 To get DGSS access with your app, your app will need to have the Device Guard signing role. The application will get its own AAD token. To do this, go to the [Azure portal](https://ms.portal.azure.com/) and when you register your app make sure it it has the Device Guard signing role assigned to it. 
