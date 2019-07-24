@@ -40,6 +40,35 @@ To get DGSS access with your app, your app will need to have the Device Guard si
 
 Before using SignTool you must [obtain the AAD token in a JSON format](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). Ensure that you have the access token and a refresh token. We recommend obtaining the refresh token because your access token will expire in one hour.
 
+### Sample of Code to Obtain your AAD Token in JSON format 
+Here is a sample of a function that will obtain your AAD token. Note: depending on how you created your app in Azure AD, you may need to have a client secret. If you set your app as a native app, Public client (mobile & desktop) you do not need a client secret. 
+
+```json
+function GetToken()
+{
+
+$c = Get-Credential -Credential $user
+
+$Credentials = New-Object System.Management.Automation.PSCredential -ArgumentList $c.UserName, $c.password
+$password = $Credentials.GetNetworkCredential().Password
+
+
+#replace <application-id> and <client_secret-id> with the Application ID and Client Secret ID from your Azure AD application registration
+$Body = @{
+  'grant_type' = 'password'
+  'client_id'= '<application-id>'
+  'client_secret' = '<client_secret-id>'
+  'resource' = 'https://onestore.microsoft.com'
+  'username' = $user
+  'password' = $password
+ 
+}
+
+$webpage = Invoke-WebRequest 'https://login.microsoftonline.com/common/oauth2/token' -Method 'POST'  -Body $Body -UseBasicParsing
+$webpage.Content | Out-File $tokenCache -Encoding ascii
+}
+```
+
 After you have your AAD token, use the following command to call SignTool to sign your package with DGSS.
 
 `signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json  test.msix`
