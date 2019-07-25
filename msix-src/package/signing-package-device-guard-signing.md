@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Sign an MSIX package with Device Guard signing
 
-Device Guard signing (DGSS) is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Our goal is to make signing repackaged MSIX apps easy.
+Device Guard signing is a Device Guard feature that is available in the Microsoft Store for Business and Education. Signing enables enterprises to guarantee that every app comes from a trusted source. Our goal is to make signing repackaged MSIX apps easy.
 
 ## Before you get started
 
@@ -33,10 +33,15 @@ To use Device Guard signing in the Microsoft Store for Business and Education, y
 
 For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
 
-#### Accessing DGSS with your app 
-To get DGSS access with your app, your app will need to have the Device Guard signing role. The application will get its own AAD token. To do this, go to the [Azure portal](https://ms.portal.azure.com/) and when you register your app make sure it it has the Device Guard signing role assigned to it. 
+### Register an app 
+Follow the instructions on the screen to register an application that will be using Device Guard Signing. 
+Note: depending on how you created your app, you may need to have a client secret when you obtain your AAD token. If you set your app as a native app, Public client (mobile & desktop) you do not need a client secret. 
 
-## Using DGSS with SignTool
+Once you register your app, go to API persmission and add the Windows Store for Business API. 
+
+Note: to accessing Device Guard signing with your app, your app will need to ahve Device Guard signing role. 
+
+## Using Device Guard signing with SignTool
 
 Before using SignTool you must [obtain the AAD token in a JSON format](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). Ensure that you have the access token and a refresh token. We recommend obtaining the refresh token because your access token will expire in one hour.
 
