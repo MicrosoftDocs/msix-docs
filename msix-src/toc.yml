@@ -145,7 +145,7 @@
         - name: Sign an app package using SignTool
           href: https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render
         - name: Sign an MSIX package with Device Guard signing
-          href: package/signing-package-dgss.md
+          href: package/signing-package-device-guard-signing.md
 - name: Validate
   items: 
     - name: Windows app certification kit
