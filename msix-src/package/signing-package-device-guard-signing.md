@@ -35,18 +35,19 @@ For more information, see [Roles and permissions in the Microsoft Store for Busi
 
 ### Register an app 
 Follow the instructions on the screen to register an application that will be using Device Guard Signing. 
-Note: depending on how you created your app, you may need to have a client secret when you obtain your AAD token. If you set your app as a native app, Public client (mobile & desktop) you do not need a client secret. 
+> [!NOTE]
+> Depending on how you created your app, you may need to have a client secret when you obtain your AAD token. If you set your app as a native app, Public client (mobile & desktop) you do not need a client secret. 
 
-Once you register your app, go to API persmission and add the Windows Store for Business API. 
-
-Note: to accessing Device Guard signing with your app, your app will need to ahve Device Guard signing role. 
+Once you register your app, go to API persmission and add the **Windows Store for Business API**. 
 
 ## Using Device Guard signing with SignTool
 
 Before using SignTool you must [obtain the AAD token in a JSON format](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). Ensure that you have the access token and a refresh token. We recommend obtaining the refresh token because your access token will expire in one hour.
 
 ### Sample of Code to Obtain your AAD Token in JSON format 
-Here is a sample of a function that will obtain your AAD token. Note: depending on how you created your app in Azure AD, you may need to have a client secret. If you set your app as a native app, Public client (mobile & desktop) you do not need a client secret. 
+Here is a sample of a function that will obtain your AAD token. 
+> [!NOTE]
+> Again, depending on how you created your app, you may need to have a client secret when you obtain your AAD token. If you set your app as a native app, Public client (mobile & desktop) you do not need a client secret. 
 
 ```json
 function GetToken()
