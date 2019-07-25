@@ -77,7 +77,7 @@ $webpage.Content | Out-File $tokenCache -Encoding ascii
 
 After you have your AAD token, use the following command to call SignTool to sign your package with DGSS.
 
-`signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json  test.msix`
+`signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json  <Insert your .msix package>`
   
 Make note of the following:
 
