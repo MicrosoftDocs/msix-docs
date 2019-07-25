@@ -13,20 +13,20 @@ ms.localizationpriority: medium
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
 1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business).
-2. In the Microsoft Store for Business Portal, assign yourself a role with permissions necessary to perform Device Guard signing.
+2. In the Microsoft Store for Business (or or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
 3. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business API.
 4. Get an Azure AD access token in JSON format.
 5. Run SignTool to sign your MSIX package with Device Guard signing, and pass the Azure AD access token you obtained in the previous step.
 
 The following sections describes these steps in more detail.
 
-## Configure a Microsoft Store for Business role for Device Guard signing
+## Configure permissions for Device Guard signing
 
-To use Device Guard signing in the Microsoft Store for Business and Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign.
+To use Device Guard signing in the Microsoft Store for Business or Microsoft Store for Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign.
 
 To confirm or reassign roles:
 
-1. Sign in to the [Microsoft Store for Business Portal](https://businessstore.microsoft.com/).
+1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** and then select **Permissions**.
 3. View **Roles**.
 
@@ -45,7 +45,7 @@ To register your app with the proper settings so that you can use Azure AD authe
 
 ## Get an Azure AD access token
 
-Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this in many different types of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). We recomment that you retrieve a [refresh token](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
+Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
 
 > [!NOTE]
 > If you registered your app as a **Web** app in the Azure portal, you must provide a client secret when you request your token. For more information, see the previous section.
