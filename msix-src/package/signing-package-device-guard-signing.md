@@ -14,7 +14,7 @@ Device Guard signing requires permissions in the Microsoft Store for Business an
 
 1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business).
 2. In the Microsoft Store for Business (or or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
-3. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business API.
+3. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business.
 4. Get an Azure AD access token in JSON format.
 5. Run SignTool to sign your MSIX package with Device Guard signing, and pass the Azure AD access token you obtained in the previous step.
 
@@ -34,7 +34,7 @@ For more information, see [Roles and permissions in the Microsoft Store for Busi
 
 ## Register your app in the Azure Portal
 
-To register your app with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business API:
+To register your app with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) to register the app that will use Device Guard signing.
 
