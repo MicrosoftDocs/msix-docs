@@ -41,7 +41,7 @@ To register your app with the proper settings so that you can use Azure AD authe
 1. Sign in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) to register the app that will use Device Guard signing.
 
     > [!NOTE]
-    > If you choose **Web** for the app type in the **Redirect URI** section, you will need to provide a [client secret](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process. Otherwise, if you choose **Public client (mobile & desktop)** for the app type, you do not need to provide a client secret.
+    > Under **Redirect URI** section, we recommend you choose **Public client (mobile & desktop)**. Otherwise, if you choose **Web** for the app type, you will need to provide a [client secret](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process.
 
 2. After you register your app, on the main page for your app in the Azure portal, click **API permissions** and add a permission for the **Windows Store for Business API**.
 
@@ -63,10 +63,12 @@ function GetToken()
 {
 
     $c = Get-Credential -Credential $user
-
+    
     $Credentials = New-Object System.Management.Automation.PSCredential -ArgumentList $c.UserName, $c.password
+    $user = $Credentials.UserName
     $password = $Credentials.GetNetworkCredential().Password
-
+    
+    $tokenCache = "outfile.json"
 
     #replace <application-id> and <client_secret-id> with the Application ID from your Azure AD application registration
     $Body = @{
