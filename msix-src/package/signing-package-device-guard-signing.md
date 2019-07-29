@@ -85,7 +85,7 @@ function GetToken()
 }
 ```
 > [!NOTE]
-> We recommand that you save your JsON file for later use. 
+> We recommand that you save your JSON file for later use. 
 
 ## Sign your package
 
@@ -100,11 +100,10 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 > We recommond using a timestamping. If timestamping is not used these apps will expire in one year and will need to be resigned. 
   
 Make note of the following:
-
-* You should ensure that the publisher name of the package you are signing matches the certificate you are using to sign the package. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business.
-
-* Only the SHA256 algorithm is supported.
-* We are not sending the whole package back and forth over the internet
+> [!NOTE]
+> * Make sure that the publisher name in the package's manifest matches the certificate you are using to sign the package. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business.
+> * Only the SHA256 algorithm is supported.
+> * We are not sending the whole package back and forth over the internet
 
 ### Deploy Device Guard signing certificate to device 
 To test, download your organziation's root certificate from Microsoft Store for Business Portal.
