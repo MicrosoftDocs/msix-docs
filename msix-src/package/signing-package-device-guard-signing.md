@@ -101,7 +101,7 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
   
 Make note of the following:
 > [!NOTE]
-> * Make sure that the publisher name in the package's manifest matches the certificate you are using to sign the package. With this feature, it will be your your leaf certificate. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail. 
+> * Make sure that the publisher name in the package's manifest matches the certificate you are using to sign the package. With this feature, it will be your leaf certificate. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail. 
 > * Only the SHA256 algorithm is supported.
 > * We are not sending the whole package back and forth over the internet
 
