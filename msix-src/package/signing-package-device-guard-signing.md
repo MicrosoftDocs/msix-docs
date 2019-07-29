@@ -8,11 +8,13 @@ ms.localizationpriority: medium
 
 # Sign an MSIX package with Device Guard signing
 
-[Device Guard signing](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your repackaged MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
+[Device Guard signing](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
 1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business).
+> [!NOTE]
+> You only need to use this portal to grant user permission for Device Guard Signing. 
 2. In the Microsoft Store for Business (or or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
 3. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business.
 4. Get an Azure AD access token in JSON format.
@@ -62,11 +64,10 @@ function GetToken()
     $password = $Credentials.GetNetworkCredential().Password
 
 
-    #replace <application-id> and <client_secret-id> with the Application ID and Client Secret ID from your Azure AD application registration
+    #replace <application-id> and <client_secret-id> with the Application ID from your Azure AD application registration
     $Body = @{
       'grant_type' = 'password'
       'client_id'= '<application-id>'
-      'client_secret' = '<client_secret-id>'
       'resource' = 'https://onestore.microsoft.com'
       'username' = $user
       'password' = $password
