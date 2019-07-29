@@ -99,7 +99,7 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 
 > [!NOTE]
 > * We recommend that you use one of the timestamp options when you sign your package. If you do not apply a timestamp, the signing will expire in one year and the app will need to be resigned.
-> * Make sure that the publisher name in your package's manifest matches the certificate you are using to sign the package. This is going to be your leaf certificate. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail.
+> * Make sure that the publisher name in your package's manifest matches the certificate you are using to sign the package. With this feature, it will be your leaf certificate. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail.
 > * Only the SHA256 algorithm is supported.
 > * When you sign your package with Device Guard signing, your package is not being sent over the Internet.
 
