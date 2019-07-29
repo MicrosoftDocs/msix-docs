@@ -112,6 +112,7 @@ To test, download your organziation's root certificate from Microsoft Store for 
 2. Select **Manage** and then select **Settings**.
 3. View **Devices**.
 4. View **Download your organization's root certificate for use with Device Guard**
+5. Click **Download**
 
 Deploy this certificate to your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
