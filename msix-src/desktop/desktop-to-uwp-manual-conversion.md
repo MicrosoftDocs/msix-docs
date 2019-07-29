@@ -8,11 +8,12 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# Package a desktop application manually
 
-This topic shows you how to package your application without using tools such as Visual Studio or the Desktop App Converter (DAC).
+# Package a desktop app manually
 
-To manually package your app, create a package manifest file, and then run a command line tool to generate a Windows app package.
+This article shows you how to package your application without using tools such as Visual Studio or the MSIX Packaging Tool.
+
+To manually package your app, create a package manifest file, and then run the **MakeAppx.exe** command line tool to generate a Windows app package.
 
 Consider manual packaging if you install your application by using the xcopy command, or you're familiar with the changes that your app's installer makes to the system and want more granular control over the process.
 

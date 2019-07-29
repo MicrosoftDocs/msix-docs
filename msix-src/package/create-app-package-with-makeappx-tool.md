@@ -1,7 +1,7 @@
 ---
 title: Create an app package with the MakeAppx.exe tool
 description: MakeAppx.exe creates, encrypts, decrypts, and extracts files from app packages and bundles.
-ms.date: 01/02/2019
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, packaging
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
@@ -12,6 +12,8 @@ ms.custom: RS5
 # Create an app package with the MakeAppx.exe tool
 
 **MakeAppx.exe** creates both app packages (.msix or .appx) and app package bundles (.msixbundle or .appxbundle). **MakeAppx.exe** also extracts files from an app package or bundle and encrypts or decrypts app packages and bundles. This tool is included in the Windows 10 SDK and can be used from a command prompt or a script file.
+
+For information about how to use **MakeApp.exe** to package a desktop app, see [Package a desktop app manually](../desktop/desktop-to-uwp-manual-conversion.md).
 
 > [!IMPORTANT]
 > If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
