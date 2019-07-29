@@ -94,7 +94,7 @@ After you have your Azure AD access token, you are ready to use SignTool to sign
 The following command line example demonstrates how to sign a package with Device Guard signing.
 
 ```cmd
-signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json <your .msix package>
+signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
 ```
 > [!NOTE]
 > We recommond using a timestamping. If timestamping is not used these apps will expire in one year and will need to be resigned. 
