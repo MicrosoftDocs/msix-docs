@@ -78,6 +78,8 @@ function GetToken()
     $webpage.Content | Out-File $tokenCache -Encoding ascii
 }
 ```
+> [!NOTE]
+> We recommand that you save your JsON file for later use. 
 
 ## Sign your package
 
@@ -88,10 +90,16 @@ The following command line example demonstrates how to sign a package with Devic
 ```cmd
 signtool sign /fd sha256 /dlib DgssLib.dll /dmdf D:\temp19\token6b4023f8.json <your .msix package>
 ```
+> [!NOTE]
+> We recommond using a timestamping. If timestamping is not used these apps will expire in one year and will need to be resigned. 
   
 Make note of the following:
 
 * You should ensure that the publisher name of the package you are signing matches the certificate you are using to sign the package. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business.
+1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
+2. Select **Manage** and then select **Settings**.
+3. View **Devices**.
+4. View **Download your organization's root certificate for use with Device Guard**
 * Only the SHA256 algorithm is supported.
 
 ## Common errors
