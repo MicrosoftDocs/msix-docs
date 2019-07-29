@@ -13,8 +13,8 @@ ms.localizationpriority: medium
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
 1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business).
-> [!NOTE]
-> You only need to use this portal to grant user permission for Device Guard Signing. 
+    > [!NOTE]
+    > You only need to use this portal to configure permissions for Device Guard signing.
 2. In the Microsoft Store for Business (or or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
 3. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business.
 4. Get an Azure AD access token in JSON format.
@@ -45,9 +45,9 @@ To register your app with the proper settings so that you can use Azure AD authe
 
 2. After you register your app, on the main page for your app in the Azure portal, click **API permissions** and add a permission for the **Windows Store for Business API**.
 
-3. After, select **Delegated permissions**
+3. Next, select **Delegated permissions** and then select **user_impersonation**.
 
-4. Select **user_impersonation**
+    ![API permissions page](images/api-permissions.png)
 
 ## Get an Azure AD access token
 
@@ -77,15 +77,15 @@ function GetToken()
       'resource' = 'https://onestore.microsoft.com'
       'username' = $user
       'password' = $password
-
     }
 
     $webpage = Invoke-WebRequest 'https://login.microsoftonline.com/common/oauth2/token' -Method 'POST'  -Body $Body -UseBasicParsing
     $webpage.Content | Out-File $tokenCache -Encoding ascii
 }
 ```
+
 > [!NOTE]
-> We recommand that you save your JSON file for later use. 
+> We recommand that you save your JSON file for later use.
 
 ## Sign your package
 
@@ -96,24 +96,24 @@ The following command line example demonstrates how to sign a package with Devic
 ```cmd
 signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
 ```
-> [!NOTE]
-> We recommond using a timestamping. If timestamping is not used these apps will expire in one year and will need to be resigned. 
-  
-Make note of the following:
-> [!NOTE]
-> * Make sure that the publisher name in the package's manifest matches the certificate you are using to sign the package. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business.
-> * Only the SHA256 algorithm is supported.
-> * We are not sending the whole package back and forth over the internet
 
-### Deploy Device Guard signing certificate to device 
-To test, download your organziation's root certificate from Microsoft Store for Business Portal.
+> [!NOTE]
+> * We recommend that you use one of the timestamp options when you sign your package. If you do not apply a timestamp, the signing will expire in one year and the app will need to be resigned.
+> * Make sure that the publisher name in your package's manifest matches the certificate you are using to sign the package. Typically the publisher name in the manifest would be **CN=CompanyName**. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business.
+> * Only the SHA256 algorithm is supported.
+> * When you sign your package with Device Guard signing, your package is not being sent over the Internet.
+
+## Test
+
+To test the Device Guard signing, download your organziation's root certificate from the Microsoft Store for Business Portal.
+
 1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** and then select **Settings**.
 3. View **Devices**.
 4. View **Download your organization's root certificate for use with Device Guard**
 5. Click **Download**
 
-Deploy this certificate to your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
+Deploy this certificate to your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
 
 ## Common errors
 
