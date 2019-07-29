@@ -1,7 +1,7 @@
 ---
 Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monetization.
 title: Package desktop applications
-ms.date: 09/05/2018
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
