@@ -102,12 +102,18 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 Make note of the following:
 
 * You should ensure that the publisher name of the package you are signing matches the certificate you are using to sign the package. Otherwise, the signing operation will fail. To verify the publisher name, you can download your company's root certificate from the Microsoft Store for Business.
+
+* Only the SHA256 algorithm is supported.
+* We are not sending the whole package back and forth over the internet
+
+### Deploy Device Guard signing certificate to device 
+To test, download your organziation's root certificate from Microsoft Store for Business Portal.
 1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** and then select **Settings**.
 3. View **Devices**.
 4. View **Download your organization's root certificate for use with Device Guard**
-* Only the SHA256 algorithm is supported.
-* We are not sending the whole package back and forth over the internet
+
+Deploy this certificate to your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
 ## Common errors
 
