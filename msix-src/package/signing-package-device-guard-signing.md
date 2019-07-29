@@ -45,6 +45,10 @@ To register your app with the proper settings so that you can use Azure AD authe
 
 2. After you register your app, on the main page for your app in the Azure portal, click **API permissions** and add a permission for the **Windows Store for Business API**.
 
+3. After, select **Delegated permissions**
+
+4. Select **user_impersonation**
+
 ## Get an Azure AD access token
 
 Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
@@ -101,6 +105,7 @@ Make note of the following:
 3. View **Devices**.
 4. View **Download your organization's root certificate for use with Device Guard**
 * Only the SHA256 algorithm is supported.
+* We are not sending the whole package back and forth over the internet
 
 ## Common errors
 
