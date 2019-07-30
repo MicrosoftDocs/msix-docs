@@ -190,6 +190,9 @@ App Installer allows for installation and updates of any MSIX app package that i
                                 <p>
                                     <a href="/windows/msix/package/sign-app-package-using-signtool" data-linktype="absolute-path">Signing an app package</a>
                                 </p>
+                                <p>
+                                    <a href="/windows/msix/package/streaming-install" data-linktype="absolute-path">App streaming install</a>
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -9,13 +9,15 @@
         - name: Overview
           href: package/app-package-formats.md
         - name: Optional packages
-          href: package/optional-packages.md
           items:
+            - name: Overview
+              href: package/optional-packages.md
             - name: Optional packages with executable code
               href: package/optional-packages-with-executable-code.md
         - name: App streaming install
-          href: package/streaming-install.md
           items:
+            - name: Overview
+              href: package/streaming-install.md
             - name: Create and convert a source content group map
               href: package/create-cgm.md
         - name: Flat bundle app packages
