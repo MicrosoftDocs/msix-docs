@@ -158,6 +158,8 @@
           href: package/signing-package-overview.md
         - name: Sign an app package using SignTool
           href: package/sign-app-package-using-signtool.md
+        - name: Sign an MSIX package with Device Guard signing
+          href: package/signing-package-device-guard-signing.md
 - name: Validate
   items: 
     - name: Windows app certification kit

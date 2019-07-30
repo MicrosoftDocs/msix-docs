@@ -6,9 +6,9 @@ keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
 
-# Sign a Windows 10 app package 
+# Sign a Windows 10 app package
 
-App package signing is a required step in the process of creating a Windows 10 app package that can be deployed. Windows 10 requires all applications to be signed with a valid code signing certificate. 
+App package signing is a required step in the process of creating a Windows 10 app package that can be deployed. Windows 10 requires all applications to be signed with a valid code signing certificate.
 
 To successfully install a Windows 10 application, the package doesnt just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. Be default, Windows 10 trusts certificates from most of the certificate authority that provide code signing certs. 
 
@@ -17,7 +17,7 @@ To successfully install a Windows 10 application, the package doesnt just have t
 |[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prereqs required to sign the Windows 10 app package. | 
 |[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
 
-## Timestamping 
+## Timestamping
 
 Besides signing the app package with a certificate, another important characteristic that dictates the validity of the code signing certificate is **Timestamping**. Timestamping preserves the signature allowing the app package to accepted by app deployment platform even after the certificate has expired. At the package inspection time, the timestamp allows for the package signature to be validated with respect to the time it was signed. This allows for packages to be accepted even after the certificate is no longer valid. Packages that are not timestamped will be evaluated against the current time and if the certificate is no longer valid, Windows will not accept the package. 
 
