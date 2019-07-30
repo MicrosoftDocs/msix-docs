@@ -140,7 +140,7 @@
           href: desktop/desktop-to-uwp-known-issues.md         
     - name: Package a UWP app with Visual Studio
       href: package/packaging-uwp-apps.md
-    - name: Manual packaging tools
+    - name: Manual app packaging
       items:
         - name: Overview
           href: package/manual-packaging-root.md
