@@ -7,15 +7,23 @@
     - name: App package formats
       items: 
         - name: Overview
-          href: https://docs.microsoft.com/windows/uwp/launch-resume/extend-your-app-with-services-extensions-packages?context=/windows/msix/render
+          href: package/app-package-formats.md
         - name: Optional packages
-          href: https://docs.microsoft.com/windows/uwp/packaging/optional-packages?context=/windows/msix/render
-        - name: Windows app streaming install
-          href: https://docs.microsoft.com/windows/uwp/packaging/streaming-install?context=/windows/msix/render
+          items:
+            - name: Overview
+              href: package/optional-packages.md
+            - name: Optional packages with executable code
+              href: package/optional-packages-with-executable-code.md
+        - name: App streaming install
+          items:
+            - name: Overview
+              href: package/streaming-install.md
+            - name: Create and convert a source content group map
+              href: package/create-cgm.md
         - name: Flat bundle app packages
-          href: https://docs.microsoft.com/windows/uwp/packaging/flat-bundles?context=/windows/msix/render
+          href: package/flat-bundles.md
         - name: Asset packages
-          href: https://docs.microsoft.com/windows/uwp/packaging/asset-packages?context=/windows/msix/render
+          href: package/asset-packages.md
         - name: Modification packages
           items: 
             - name: Overview
@@ -25,7 +33,7 @@
             - name: Modification packages on Windows 10 version 1903
               href: modification-package-1903.md
             - name: App package architectures
-              href: https://docs.microsoft.com/windows/uwp/packaging/device-architecture?context=/windows/msix/render
+              href: package/device-architecture.md
     - name: App package updates
       href: app-package-updates.md
     - name: MSIX support on 1709 and 1803
@@ -121,7 +129,9 @@
             - name: Overview
               href: desktop/desktop-to-uwp-packaging-dot-net.md       
             - name: Optimize binaries with native images
-              href: desktop/desktop-to-uwp-r2r.md      
+              href: desktop/desktop-to-uwp-r2r.md     
+        - name: Package a desktop app manually
+          href: desktop/desktop-to-uwp-manual-conversion.md 
         - name: Package a desktop app using third-party installers
           href: desktop/desktop-to-uwp-third-party-installer.md
         - name: Behind the scenes of your packaged desktop app
@@ -129,13 +139,19 @@
         - name: Known issues 
           href: desktop/desktop-to-uwp-known-issues.md         
     - name: Package a UWP app with Visual Studio
-      href: https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render
-    - name: Manual packaging tools
+      href: package/packaging-uwp-apps.md
+    - name: Manual app packaging
       items:
         - name: Overview
-          href: https://docs.microsoft.com/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render
-        - name: Package desktop app manually
-          href: desktop/desktop-to-uwp-manual-conversion.md
+          href: package/manual-packaging-root.md
+        - name: Create an app package with the MakeAppx.exe tool
+          href: package/create-app-package-with-makeappx-tool.md
+        - name: Create a certificate for package signing
+          href: package/create-certificate-package-signing.md
+        - name: Developing with asset packages and package folding
+          href: package/package-folding.md
+        - name: Package creation with the packaging layout
+          href: package/packaging-layout.md
     - name: Bundle MSIX packages
       href: packaging-tool/bundle-msix-packages.md
     - name: Sign an app package 
@@ -143,7 +159,7 @@
         - name: Overview
           href: package/signing-package-overview.md
         - name: Sign an app package using SignTool
-          href: https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render
+          href: package/sign-app-package-using-signtool.md
         - name: Sign an MSIX package with Device Guard signing
           href: package/signing-package-device-guard-signing.md
 - name: Validate

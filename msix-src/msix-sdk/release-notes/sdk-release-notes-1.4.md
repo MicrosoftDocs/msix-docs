@@ -10,7 +10,7 @@ ms.custom: RS5
 
 # MSIX SDK 1.4 update
 
-With the SDK release (1.4), we are continuing to add more functionality and make performance improvements to our SDK.  With the release of 1.4, developers can use the SDK to now unpack and extract app bundles and [flat bundles](https://docs.microsoft.com/en-us/windows/uwp/packaging/flat-bundles?context=/windows/msix/render). 
+With the SDK release (1.4), we are continuing to add more functionality and make performance improvements to our SDK.  With the release of 1.4, developers can use the SDK to now unpack and extract app bundles and [flat bundles](../../package/flat-bundles.md). 
 
 With the support of bundles, client apps can now extract app bundles and only download and extract the packages inside the bundle that are applicable. In this release, the bundle support extends to flat bundles as well. This means that the client app that consuming the bundle can access the bundle manifest and specify the app packages that it wants to extract - leaving the choice and control to the developer. The SDK calls the native OS for language and locale information and provides that info to the client app which it can use to make the choice of appropriate package from the bundle as well.
 

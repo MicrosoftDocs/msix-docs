@@ -14,7 +14,7 @@ Optional packages contain content that can be integrated with a main package. Th
 
 Related sets are an extension of optional packages. They allow you to enforce a strict set of versions across main and optional packages. They also let you load native code (C++) from optional packages.
 
-For more information about these types of packages, see [Optional packages and related set authoring](https://docs.microsoft.com/windows/uwp/packaging/optional-packages). If you're just starting out with optional packages or related sets, the following additional blog posts are good resources to get started:
+For more information about these types of packages, see [Optional packages and related set authoring](../package/optional-packages.md). If you're just starting out with optional packages or related sets, the following additional blog posts are good resources to get started:
 
 1.  [Extend your application using optional packages](https://blogs.msdn.microsoft.com/appinstaller/2017/04/05/uwpoptionalpackages/)
 2.  [Build your first optional package](https://blogs.msdn.microsoft.com/appinstaller/2017/05/09/build-your-first-optional-package/)

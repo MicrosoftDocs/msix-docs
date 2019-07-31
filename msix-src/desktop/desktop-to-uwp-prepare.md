@@ -1,7 +1,7 @@
 ---
 Description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (Desktop Bridge)
-ms.date: 07/03/2019
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e

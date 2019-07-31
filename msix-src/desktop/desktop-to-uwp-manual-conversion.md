@@ -1,18 +1,19 @@
 ---
 Description: Shows how to manually package a Windows desktop application (like Win32, WPF, and Windows Forms) for Windows 10.
 title: Package an application manually (Desktop Bridge)
-ms.date: 05/18/2018
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# Package a desktop application manually
 
-This topic shows you how to package your application without using tools such as Visual Studio or the Desktop App Converter (DAC).
+# Package a desktop app manually
 
-To manually package your app, create a package manifest file, and then run a command line tool to generate a Windows app package.
+This article shows you how to package your application without using tools such as Visual Studio or the MSIX Packaging Tool.
+
+To manually package your app, create a package manifest file, and then run the **MakeAppx.exe** command line tool to generate a Windows app package.
 
 Consider manual packaging if you install your application by using the xcopy command, or you're familiar with the changes that your app's installer makes to the system and want more granular control over the process.
 
@@ -187,7 +188,7 @@ If you create target-based assets as described in the section above, or you modi
 
 Use **MakeAppx.exe** to generate a Windows app package for your project. It's included with the Windows 10 SDK, and if you have Visual Studio installed, it can be easily accessed through the Developer Command Prompt for your Visual Studio version.
 
-See [Create an app package with the MakeAppx.exe tool](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool)
+See [Create an app package with the MakeAppx.exe tool](../package/create-app-package-with-makeappx-tool.md)
 
 ## Run the packaged app
 
