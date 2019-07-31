@@ -54,7 +54,7 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Get started</h3>                                
 				<p>
-                                    <a href="/en-us/windows/msix/packaging-tool/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
+                                    <a href="/windows/msix/packaging-tool/create-app-package-msi-vm" data-linktype="absolute-path">Update existing installers to MSIX</a>
                                 </p>
                             </div>
                         </div>
@@ -73,13 +73,13 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Package</h3>
                                 <p>
-                                    <a href="/en-us/windows/msix/mpt-overview" data-linktype="absolute-path">Use MSIX Packaging Tool</a>
+                                    <a href="/windows/msix/mpt-overview" data-linktype="absolute-path">Use MSIX Packaging Tool</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/msix/packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
+                                    <a href="/windows/msix/packaging-tool/package-conversion-cli" data-linktype="absolute-path">Use command line</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing packages</a>
+                                    <a href="/windows/msix/package/sign-app-package-using-signtool" data-linktype="absolute-path">Signing packages</a>
                                 </p>
                             </div>
                         </div>
@@ -98,10 +98,10 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Validate</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store flighting</a>
+                                    <a href="/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store flighting</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render#first-download-the-policies-and-then-choose-one" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
+                                    <a href="/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render#first-download-the-policies-and-then-choose-one" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
                                 </p>
                             </div>
                         </div>
@@ -120,19 +120,19 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Distribute</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/app-submissions?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store</a>
+                                    <a href="/windows/uwp/publish/app-submissions?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store for Business</a>
+                                    <a href="/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store for Business</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/sccm/apps/understand/introduction-to-application-management?context=/windows/msix/render" data-linktype="absolute-path">System Center Configuration Manager</a>
+                                    <a href="/sccm/apps/understand/introduction-to-application-management?context=/windows/msix/render" data-linktype="absolute-path">System Center Configuration Manager</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/intune/introduction-intune?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Intune</a>
+                                    <a href="/intune/introduction-intune?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Intune</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/msix/app-installer/app-installer-file-overview" data-linktype="absolute-path">Non-Store Distribution</a>
+                                    <a href="/windows/msix/app-installer/app-installer-file-overview" data-linktype="absolute-path">Non-Store Distribution</a>
                                 </p>
                             </div>
                         </div>
@@ -157,10 +157,10 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Get started</h3>
                                 <p>
-                                    <a href="/en-us/windows/msix/overview">What is MSIX?</a>
+                                    <a href="/windows/msix/overview">What is MSIX?</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/msix/app-package-updates?context=/windows/msix/render">MSIX app updates</a>
+                                    <a href="/windows/msix/app-package-updates?context=/windows/msix/render">MSIX app updates</a>
                                 </p>
                             </div>
                         </div>
@@ -179,13 +179,19 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Build</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/packaging-uwp-apps?context=/windows/msix/render" data-linktype="absolute-path">Package an app with Visual Studio</a>
+                                    <a href="/windows/msix/desktop/desktop-to-uwp-packaging-dot-net">Package a desktop app with Visual Studio</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/manual-packaging-root?context=/windows/msix/render" data-linktype="absolute-path">Manual packaging tools</a>
+                                    <a href="/windows/msix/package/packaging-uwp-apps" data-linktype="absolute-path">Package a UWP app with Visual Studio</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render" data-linktype="absolute-path">Signing an app package</a>
+                                    <a href="/windows/msix/package/manual-packaging-root" data-linktype="absolute-path">Manual packaging tools</a>
+                                </p>
+                                <p>
+                                    <a href="/windows/msix/package/sign-app-package-using-signtool" data-linktype="absolute-path">Signing an app package</a>
+                                </p>
+                                <p>
+                                    <a href="/windows/msix/package/streaming-install" data-linktype="absolute-path">App streaming install</a>
                                 </p>
                             </div>
                         </div>
@@ -204,16 +210,16 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Validate</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render" data-linktype="absolute-path">Windows App Certification Kit</a>
+                                    <a href="/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render" data-linktype="absolute-path">Windows App Certification Kit</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render" data-linktype="absolute-path">Windows Device Portal</a>
+                                    <a href="/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render" data-linktype="absolute-path">Windows Device Portal</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Package flighting</a>
+                                    <a href="/windows/uwp/publish/package-flights?context=/windows/msix/render" data-linktype="absolute-path">Package flighting</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
+                                    <a href="/windows/uwp/porting/desktop-to-uwp-test-windows-s?context=/windows/msix/render" data-linktype="absolute-path">Test for Windows 10 in S mode</a>
                                 </p>
                             </div>
                         </div>
@@ -232,13 +238,13 @@ App Installer allows for installation and updates of any MSIX app package that i
                             <div class="cardText">
                                 <h3>Distribute</h3>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store</a>
+                                    <a href="/windows/uwp/publish/?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store for Business</a>
+                                    <a href="/windows/uwp/publish/distribute-lob-apps-to-enterprises?context=/windows/msix/render" data-linktype="absolute-path">Microsoft Store for Business</a>
                                 </p>
                                 <p>
-                                    <a href="/en-us/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render" data-linktype="absolute-path">Non-Store Distribution</a>
+                                    <a href="/windows/uwp/packaging/create-appinstallerfile-vs?context=/windows/msix/render" data-linktype="absolute-path">Non-Store Distribution</a>
                                 </p>
                             </div>
                         </div>

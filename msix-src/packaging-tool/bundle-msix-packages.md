@@ -82,7 +82,7 @@ C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" 
 /f c:\private-cert.pfx /p aaabbb123 c:\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
 
-For more information about signing app packages with SignTool.exe, see [this article](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool). 
+For more information about signing app packages with SignTool.exe, see [this article](../package/sign-app-package-using-signtool.md). 
 
 After successfully signing the bundle, you are ready to host it on a network share or on any content distribution network to distribute it to your users. 
 

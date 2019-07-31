@@ -1,7 +1,7 @@
 ---
 Description: Run your packaged app and see how it looks without having to sign it. Then, set breakpoints and step through code. When you're ready to test your app in a production environment, sign your app and then install it.
 title: Run, debug, and test a packaged desktop app (Desktop Bridge)
-ms.date: 08/31/2017
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
@@ -73,7 +73,7 @@ To test your application in a realistic setting as you prepare for distribution,
 
 ### Test an application that you packaged by using Visual Studio
 
-Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted Root Certification Authorities** store on the PC that you want to test your application on. See [Sideload your package](/windows/uwp/packaging/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted Root Certification Authorities** store on the PC that you want to test your application on. See [Sideload your package](../package/packaging-uwp-apps.md#sideload-your-app-package).
 
 ### Test an application that you packaged by using the Desktop App Converter (DAC)
 
@@ -84,11 +84,11 @@ If you package your application by using the Desktop App Converter, you can use 
 
 You can also sign your application manually. Here's how
 
-1. Create a certificate. See [Create a certificate](/windows/uwp/packaging/create-certificate-package-signing.md).
+1. Create a certificate. See [Create a certificate](../package/create-certificate-package-signing.md).
 
 2. Install that certificate into the **Trusted Root** or **Trusted People** certificate store on your system.
 
-3. Sign your application by using that certificate, see [Sign an app package using SignTool](/windows/uwp/packaging/sign-app-package-using-signtool.md).
+3. Sign your application by using that certificate, see [Sign an app package using SignTool](../package/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Make sure that the publisher name on your certificate matches the publisher name of your app.
