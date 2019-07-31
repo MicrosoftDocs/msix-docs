@@ -1,7 +1,7 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
-ms.date: 08/30/2017
+ms.date: 07/18/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
@@ -79,7 +79,7 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Config manager](images/config-manager.png)
 
-8. Use the [Create App Packages](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps) wizard to generate an .msixupload/.appxupload file.
+8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an .msixupload/.appxupload file.
 
    You can upload that file directly to the Store.
 
