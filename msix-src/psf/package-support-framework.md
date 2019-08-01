@@ -221,6 +221,9 @@ powershell Add-AppPackage .\PSFSamplePackageFixup.msix
 
 Run the application and observe the behavior with runtime fix applied.  Repeat the diagnostic and packaging steps as necessary.
 
+### Check Package Support Frameworking running 
+You can check whether your runtime fix is running. A way to do this is to open **Task Manager** and view your app. 
+
 ### Use the Trace Fixup
 
 An alternative technique to diagnosing packaged application compatibility issues is to use the Trace Fixup. This DLL is included with the PSF and provides a detailed diagnostic view of the app's behavior, similar to Process Monitor.  It is specially designed to reveal application compatibility issues.  To use the Trace Fixup, add the DLL to the package, add the following fragment to your config.json, and then package and install your application.
