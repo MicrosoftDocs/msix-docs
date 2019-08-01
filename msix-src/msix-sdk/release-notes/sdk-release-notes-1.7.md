@@ -11,3 +11,8 @@ ms.custom: 19H1
 # MSIX SDK 1.7 update
 
 With the SDK release (1.7), we heard the feedback from our partners and added more APIs to provide developers with more options and flexibility in handling MSIX packages. 
+
+### Makemsix 
+When typing in ``` makemsix pack /``` in command line, it will display the same information as makeappx commands. 
+
+### PackPackage entrypoint 
