@@ -222,7 +222,7 @@ powershell Add-AppPackage .\PSFSamplePackageFixup.msix
 Run the application and observe the behavior with runtime fix applied.  Repeat the diagnostic and packaging steps as necessary.
 
 ### Check Package Support Frameworking running 
-You can check whether your runtime fix is running. A way to do this is to open **Task Manager** and view your app. 
+You can check whether your runtime fix is running. A way to do this is to open **Task Manager** and click **More details**. Find the app that the package support framework was applied to and expand the app detail to veiw more details. You should be able to view that the Package Support Framework is running. 
 
 ### Use the Trace Fixup
 
