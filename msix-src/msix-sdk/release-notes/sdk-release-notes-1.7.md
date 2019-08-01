@@ -16,3 +16,7 @@ With the SDK release (1.7), we heard the feedback from our partners and added mo
 When typing in ``` makemsix pack /``` in command line, it will display the same information as makeappx commands. 
 
 ### PackPackage entrypoint 
+
+You can get the latest SDK on GitHub. 
+
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://github.com/Microsoft/msix-packaging/tree/release_v1.6" data-linktype="external">MSIX SDK on GitHub</a></p></div>
