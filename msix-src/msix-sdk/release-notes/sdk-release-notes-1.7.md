@@ -17,7 +17,6 @@ When typing in ``` makemsix pack /``` in command line, it will display the same 
 
 ### PackPackage entrypoint 
 
-You can get the latest SDK on GitHub. 
 
 ## UTF8 API Variants
 
@@ -29,5 +28,7 @@ The following are the new UTF8 interfaces:
 
 ## Update Test Infrastructure to use Catch2
 
+
+You can get the latest SDK on GitHub. 
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://github.com/Microsoft/msix-packaging/tree/release_v1.6" data-linktype="external">MSIX SDK on GitHub</a></p></div>
