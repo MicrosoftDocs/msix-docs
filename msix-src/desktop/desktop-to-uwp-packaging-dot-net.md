@@ -56,24 +56,33 @@ Review this guide before you begin creating a package for your application: [Pre
 
     1. In Solution Explorer, right-click the packaging project node and select **Edit Project File**.
 
-    2. Add the following XML to the project file, immediately before the closing `</Project>` element.
+    2. Locate the `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` element in the file.
+
+    3. Replace this element with the following XML.
 
         ``` xml
-        <!-- Stomp the path to application executable. This task will copy the main exe to the appx root folder. -->
+        <ItemGroup>
+          <SDKReference Include="Microsoft.VCLibs,Version=14.0">
+            <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
+            <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
+            <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
+            <Implicit>true</Implicit>
+          </SDKReference>
+        </ItemGroup>
+        <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
         <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
           <ItemGroup>
-            <!-- Stomp all "SourceProject" values for all incoming dependencies to flatten the package. -->
             <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
             <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
             <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-              <!-- Blank the SourceProject here to vend all files into the root of the package. -->
-              <SourceProject></SourceProject>
+              <SourceProject>
+              </SourceProject>
             </_FilteredNonWapProjProjectOutput>
           </ItemGroup>
         </Target>
         ```
 
-    3. Save the project file and close it.
+    4. Save the project file and close it.
 
 7. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
 
