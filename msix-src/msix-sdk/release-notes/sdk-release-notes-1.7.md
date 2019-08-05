@@ -24,7 +24,7 @@ This release adds the following interfaces to msix.dll:
 
 - IAppxManifestReader4
 - IAppxPackageWriter
-- IAppxPackageWriter3 
+- IAppxPackageWriter3
 - IAppxManifestOptionalPackageInfo
 
 ## UTF8 API Variants
@@ -39,7 +39,7 @@ The following are the new UTF8 interfaces:
 
 ## Updates to test infrastructure
 
-This release updates the test infrastructure to use Catch2. Before this release, the SDK provided three different test implementations:
+This release updates the test infrastructure to use [Catch2](https://github.com/catchorg/Catch2). Before this release, the SDK provided three different test implementations:
 
 - Powershell script for Windows.
 - Shell script for Linux and macOS.
@@ -49,4 +49,4 @@ This change removes the overhead of adding a test three times by simplifying the
 
 You can get the latest SDK on GitHub.
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://github.com/Microsoft/msix-packaging/tree/release_v1.6" data-linktype="external">MSIX SDK on GitHub</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://github.com/Microsoft/msix-packaging/tree/release_v1.7" data-linktype="external">MSIX SDK on GitHub</a></p></div>
