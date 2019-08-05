@@ -25,7 +25,7 @@ Here are the parameters that can be passed as command line arguments:
 
 Examples:
 
-``` command prompt
+```console
 
     MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml -v
 
