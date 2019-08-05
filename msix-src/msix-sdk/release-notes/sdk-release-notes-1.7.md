@@ -13,12 +13,16 @@ ms.custom: 19H1
 With the SDK release (1.7), we heard the feedback from our partners and added more APIs to provide developers with more options and flexibility in handling MSIX packages. 
 
 ### Makemsix 
-When typing in ``` makemsix pack /``` in command line, it will display the same information as makeappx commands. 
+When typing in ``` makemsix pack -?``` or ```makemsix.exe pack -d <directory> -p <package> [options]```.  in command line, it will display the same information as makeappx commands.
+
+With this release you can now pack your pacakge, you can now using the command ``` makemsix pack``` or use the IAppxPackageWriter interfaces
 
 ### Update to msix.dll 
 Added the following interfaces to msix.dll 
 - Implement the IAppxManifestReader4 interface
-- Implement IAppxManifestReader5 interface 
+- IAppxPackageWriter
+- IAppxPackageWriter3 
+- IAppxManifestOptionalPackageInfo
 
 ### UTF8 API Variants
 
@@ -27,6 +31,7 @@ In this SDK release, we add about 2 new UTF8 API variants for existing API calls
 The following are the new UTF8 interfaces:
 - IAppxPackageWriterUtf8
 - IAppxPackageWriter3Utf8
+- IAppxManifestOptionalPackageInfoUtf8
 
 ### Updates to test infrastructure to use Catch2
 Before, we had three different implementations to perform our tests:
@@ -35,8 +40,6 @@ Before, we had three different implementations to perform our tests:
 3. Common shared library used for Android and iOS apps
 
 The change removes the overhead of adding a test in three times by creating a single implementation by using Catch2.
-```msixtest``` is either an executable or a shared library, depending on the platform. It has a single entrypoint msixtest_main that takes argc and argv, as main, plus the path were the test packages are located. The shared library is used for our mobile test apps, while non-mobile just forwards the arguments to ```msixtest_main```.
-There is no custom command added, so msixtest has the same commands as Catch2
 
 You can get the latest SDK on GitHub. 
 
