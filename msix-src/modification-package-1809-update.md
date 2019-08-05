@@ -26,7 +26,7 @@ You can create a modification package with the MSIX Packaging Tool:
 
 ## Create a modification package using MakeAppx.exe
 
-You can create a modification package manually by using the [MakeAppX.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool) tool that is included in the Windows 10 SDK:
+You can create a modification package manually by using the [MakeAppX.exe](package/create-app-package-with-makeappx-tool.md) tool that is included in the Windows 10 SDK:
 * In the manifest, specify the main package. Include the publisher and the main package name.
 
     ```xml

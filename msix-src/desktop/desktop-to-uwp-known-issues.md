@@ -1,7 +1,7 @@
 ---
 Description: This article contains known issues with the Desktop Bridge.
 title: Known Issues with packaged desktop apps
-ms.date: 06/20/2018
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e

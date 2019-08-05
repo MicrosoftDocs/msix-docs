@@ -1,7 +1,7 @@
 ---
 Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monetization.
 title: Package desktop applications
-ms.date: 09/05/2018
+ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
@@ -111,7 +111,7 @@ To give your application the best chance of being published on the Microsoft Sto
 
 If you're using the DAC to package your app, you can use the new ``-Verify`` flag to validate your package against the packaged desktop application and Store requirements. See [Package an app, sign the app, and prepare it for Store submission](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
-If you're using Visual Studio, you can validate your application from the **Create App Packages** wizard. See [Create an app package upload file](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps#create-an-app-package-upload-file).
+If you're using Visual Studio, you can validate your application from the **Create App Packages** wizard. See [Create an app package upload file](../package/packaging-uwp-apps.md#create-an-app-package-upload-file).
 
 To run the tool manually, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
