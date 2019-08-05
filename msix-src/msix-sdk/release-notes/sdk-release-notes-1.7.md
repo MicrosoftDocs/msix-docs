@@ -20,7 +20,7 @@ Added the following interfaces to msix.dll
 - Implement the IAppxManifestReader4 interface
 - Implement IAppxManifestReader5 interface 
 
-## UTF8 API Variants
+### UTF8 API Variants
 
 In this SDK release, we add about 2 new UTF8 API variants for existing API calls. With the inclusion of these new APIs, developers can choose to use the Utf8 variant for string manipulation according to their environment/platform. As with AppxPackaging APIs, the caller is responsible for deallocating the memory used by LPSTR* out parameters.
 
@@ -28,7 +28,7 @@ The following are the new UTF8 interfaces:
 - IAppxPackageWriterUtf8
 - IAppxPackageWriter3Utf8
 
-## Updates to test infrastructure to use Catch2
+### Updates to test infrastructure to use Catch2
 Before, we had three different implementations to perform our tests:
 1. Powershell script, for windows
 2. Shell script for Linux and macOS
