@@ -15,8 +15,10 @@ With the SDK release (1.7), we heard the feedback from our partners and added mo
 ### Makemsix 
 When typing in ``` makemsix pack /``` in command line, it will display the same information as makeappx commands. 
 
-### PackPackage entrypoint 
-
+### Update to msix.dll 
+Added the following interfaces to msix.dll 
+- Implement the IAppxManifestReader4 interface
+- Implement IAppxManifestReader5 interface 
 
 ## UTF8 API Variants
 
@@ -26,8 +28,15 @@ The following are the new UTF8 interfaces:
 - IAppxPackageWriterUtf8
 - IAppxPackageWriter3Utf8
 
-## Update Test Infrastructure to use Catch2
+## Updates to test infrastructure to use Catch2
+Before, we had three different implementations to perform our tests:
+1. Powershell script, for windows
+2. Shell script for Linux and macOS
+3. Common shared library used for Android and iOS apps
 
+The change removes the overhead of adding a test in three times by creating a single implementation by using Catch2.
+```msixtest``` is either an executable or a shared library, depending on the platform. It has a single entrypoint msixtest_main that takes argc and argv, as main, plus the path were the test packages are located. The shared library is used for our mobile test apps, while non-mobile just forwards the arguments to ```msixtest_main```.
+There is no custom command added, so msixtest has the same commands as Catch2
 
 You can get the latest SDK on GitHub. 
 
