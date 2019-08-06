@@ -12,11 +12,16 @@ ms.custom: 19H1
 
 With the SDK release (1.7), we heard the feedback from our partners and added more APIs to provide developers with more options and flexibility in handling MSIX packages.
 
-## Makemsix
+## Create MSIX package using the MSIX SDK 
+In this release you can now create a MSIX package using the MSIX SDK for Windows, MacOS and Linux. 
+
+There are two ways to create a package
+1.	Using the makemsix tool and specifying an input directory and the name of the output package. ```makemsix.exe pack -d <directory> -p <package> [options]```
+2.	Programmatically by using the IAppxPackaging APIs. Specifically IAppxPackageWriter IAppxPackageWriter3, IAppPackageWriterUtf8 and IAppxPackageWriter3Utf8. There is a **PackSample** under the sample directory that illustrates how to use [this](https://github.com/microsoft/msix-packaging/tree/master/sample/PackSample)
+
+#### Updates to makemsix
 
 When typing ``` makemsix pack -?``` or ```makemsix.exe pack -d <directory> -p <package> [options]``` on the command line, the ```makemsix``` command now displays the same information as ```makeappx``` commands.
-
-With this release you can now pack your package, you can now using the command ``` makemsix pack``` or use the IAppxPackageWriter interfaces.
 
 ## Update to msix.dll
 
