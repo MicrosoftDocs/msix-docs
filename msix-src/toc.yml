@@ -100,6 +100,8 @@
             href: msix-sdk/release-notes/sdk-release-notes-1.5.md
           - name: MSIX SDK Release 1.6
             href: msix-sdk/release-notes/sdk-release-notes-1.6.md
+          - name: MSIX SDK Release 1.7
+            href: msix-sdk/release-notes/sdk-release-notes-1.7.md
       - name: Use the MSIX SDK to distribute a MSIX package on non-Windows 10 platforms
         href: msix-sdk/sdk-guidance.md
 - name: Package
