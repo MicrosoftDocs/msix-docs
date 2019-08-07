@@ -28,7 +28,7 @@ Creating an application package is the most commonly used option. This is where 
 
 ## Choose the installer you want to package
 
-![pic2](images/pic2.png)
+![pic2](images/pic2.jpg)
 
 Navigate to your MSI or App-V installer by clicking **Browse** and selecting the installer in the file picker. Then, click **Next**.
 
@@ -38,7 +38,7 @@ Optionally:
 
 ## Packaging method
 
-![images/pic3](images/pic3.png)
+![images/pic3](images/pic3.jpg)
 
 - Select the virtual machine for packaging environment.
   - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM. 
