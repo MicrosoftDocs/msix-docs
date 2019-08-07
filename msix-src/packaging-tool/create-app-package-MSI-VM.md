@@ -24,7 +24,7 @@ When the tool is first launched, you will be prompted to provide consent to send
 
 Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by manual installation of application payload.
 
-![pic1](images/pic1.png)
+![pic1](images/pic1.PNG)
 
 ## Choose the installer you want to package
 
