@@ -43,6 +43,9 @@ Otherwise, if you have access to enterprise or OEM channels you can obtain the d
 
 Individually-obtained Feature on Demand packages can be installed using DISM command-line options.
 
+## Add-ins consideration
+Add-ins that rely on the registry of the parent app to be installed can be installed. However, we do advise that the state of the machine that the conversion is happening is the prepared properly. For example, if an add-in installer requires that the parent application is installed prior to the add-in installing, please do that. Also, we advise that you test the add-in functionality after conversion.  
+
 ## Other known issues
 
 - Restarting the machine during application installation is not supported. Ignore the restart request if possible or pass an argument to the installer to not require a restart.
