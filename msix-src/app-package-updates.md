@@ -50,7 +50,7 @@ On a larger scale, if an entire file does not change (determined by a full set o
 The package family is comprised of the Package Name and Publisher. To be able to update, the new package metadata will need to be the same as the previously installed package. 
 
 #### App updates must increment to a higher version
-App updates is general will require the version of the new package to be higher than the current one. General app update process will not allow packages with lower versions to be installed by default. Starting Windows 10 1809 update, ForceUpdateToAnyVersion was introduced. It allows lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the ForceUpdateFromAnyVersion switch and in [AppInstaller file](https://docs.microsoft.com/en-us/windows/msix/app-installer/update-settings).  
+In general, app updates require the version of the new package to be higher than the current one. The app update process will not allow packages with lower versions to be installed by default. Starting in Windows 10 version 1809, you can use ForceUpdateToAnyVersion to allow lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the ForceUpdateFromAnyVersion switch and in the [AppInstaller file](https://docs.microsoft.com/windows/msix/app-installer/update-settings).  
 
 #### App update package can have a different architecture
 The update package to the currently installed app package can be of a different architecture as long as the new architecture is supported on the OS where it is being deployed to. 
