@@ -20,7 +20,7 @@ You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX appl
 > [!NOTE]
 > The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MSIX Packaging tool to convert to MSIX. 
 
-When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
+When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you.
 
 Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by manual installation of application payload.
 
@@ -33,9 +33,8 @@ Creating an application package is the most commonly used option. This is where 
 Navigate to your MSI or App-V installer by clicking **Browse** and selecting the installer in the file picker. Then, click **Next**.
 
 Optionally:
-- Check the box under **Use existing MSIX package**, browse, and select an existing MSIX package you'd like to update.
+- Check the box under **Sign package**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box. You can also set this as a default in your settings, which will save you some steps each time you convert. 
 - Check the box under **Use installer arguments** and enter the desired argument in the provided field. This field accepts any string.
-- Check the box under **Sign package for testing**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
 
 ## Packaging method
 
