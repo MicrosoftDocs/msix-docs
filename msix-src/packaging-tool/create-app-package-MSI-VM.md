@@ -40,9 +40,12 @@ Optionally:
 
 ![images/pic3](images/pic3.jpg)
 
-- Select the virtual machine for packaging environment.
-  - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM. 
-  - Click **Next**.
+Select an option your conversion machine:
+- If you are already working in a clean environment, select **Create package on this machine**
+- If you want to connect to an existing VM or remote machine, select **Create package on a remote machine**
+  - You will need to set up your remote machine before you are able to convert on it
+- If you have a local VM on your machine you want to convert on, select **Create package on a local virtual machine**
+  - Click **Next**
 
 ## Package information
 
