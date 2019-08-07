@@ -42,7 +42,7 @@ Optionally:
 ![images/pic3](images/pic3.png)
 
 - Select the virtual machine for packaging environment.
-  - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM if there are any.
+  - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM. 
   - Click **Next**.
 
 ## Package information
