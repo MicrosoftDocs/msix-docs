@@ -20,7 +20,7 @@ You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX appl
 > [!NOTE]
 > The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MSIX Packaging tool to convert to MSIX. 
 
-When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you. This just helps us fix things faster for you.
+When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you.
 
 Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by manual installation of application payload.
 
@@ -33,17 +33,19 @@ Creating an application package is the most commonly used option. This is where 
 Navigate to your MSI or App-V installer by clicking **Browse** and selecting the installer in the file picker. Then, click **Next**.
 
 Optionally:
-- Check the box under **Use existing MSIX package**, browse, and select an existing MSIX package you'd like to update.
+- Check the box under **Sign package**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box. You can also set this as a default in your settings, which will save you some steps each time you convert. 
 - Check the box under **Use installer arguments** and enter the desired argument in the provided field. This field accepts any string.
-- Check the box under **Sign package for testing**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
 
 ## Packaging method
 
 ![images/pic3](images/pic3.png)
 
-- Select the virtual machine for packaging environment.
-  - Select **Create package on an existing virtual machine** and from the drop down select an existing virtual Machine name. You will be presented with user and password fields to provide credentials for the VM if there are any.
-  - Click **Next**.
+Select an option your conversion machine:
+- If you are already working in a clean environment, select **Create package on this machine**
+- If you want to connect to an existing VM or remote machine, select **Create package on a remote machine**
+  - You will need to set up your remote machine before you are able to convert on it
+- If you have a local VM on your machine you want to convert on, select **Create package on a local virtual machine**
+  - Click **Next**
 
 ## Package information
 
