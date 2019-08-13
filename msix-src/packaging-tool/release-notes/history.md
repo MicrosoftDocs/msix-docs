@@ -10,6 +10,14 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes
 
+### Version 1.2019.808.0
+- Settings improvements
+    - Separated out the tool defaults from other settings
+    - Added the ability to import and export settings
+- Signing improvements
+    - You can now choose a default signing option for workflows
+- Updated the steps during packaging to improve the experience
+
 ## Version 1.2019.701.0 - Public Release
 
 - Support for desktop installers that require restart - [learn more](../support-restart.md)
