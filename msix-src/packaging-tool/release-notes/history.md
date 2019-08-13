@@ -16,7 +16,7 @@ ms.custom: Vibranium
     - Added the ability to import and export settings
 - Signing improvements
     - You can now choose a default signing option for workflows
-- Re-worked the steps during packaging to improve the experience
+- Updated the steps during packaging to improve the experience
 
 ## Version 1.2019.701.0 - Public Release
 
