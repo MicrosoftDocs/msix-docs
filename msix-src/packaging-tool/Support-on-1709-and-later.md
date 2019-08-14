@@ -12,9 +12,26 @@ ms.custom: RS5
 
 If you've converted an existing app to MSIX, you may want to use the app in versions of the OS before Windows 10, version 1809 (build 17763). This article discusses how to support your MSIX package in Windows 10 version 1709 (build 16299) and later.
 
+## MSIX Packaging Tool version 1.2019.701.0 and later
+
+When converting an app with the MSIX Packaging Tool on version 1.2019.701.0 and later, the packaging tool has the option to set the minimum version to 1709.  This can be enabled by setting the following tool default.
+
+1. Launch the MSIX Packaging Tool
+
+2. Click the **Settings** gear in the upper right corner
+
+3. Select **Tool defaults** in the navigation pane
+
+4. Uncheck **Enforce Microsoft Store versioning requirements**
+
+5. Click **Save Settings**
+
+This will set the minimum version to Windows 1709 to future conversions.  It will not change the minimum version when editing a package in package editor.  
+
+
 ## Problem
 
-So you converted your existing app to MSIX using the MSIX Packaging Tool and it runs fine on Windows 10, version 1809 and later. But now that you know we are adding support for MSIX starting build Windows 10 version 1709, you want to run your MSIX app on this or any later version of Windows 10. Currently, if you just try to install your MSIX package on a computer with Windows 10 version 1709 or Windows 10 version 1803, you'll get this error message:
+You converted your existing app to MSIX using the MSIX Packaging Tool prior to 1.2019.701.0, had Enforce Microsoft Store versioning requiremnts on, or used another tool to create your package that did not set the minimum version to 10.0.16299.0 (Windows 10 1709 build number).  You want to run your MSIX app on Windows 10 1709 or any later version of Windows 10. Currently, if you just try to install your MSIX package on a computer with Windows 10 version 1709 or Windows 10 version 1803, you'll get this error message:
 
 ![PowerShell MSIX install](images/mpt_blog_0.jpg)
 
