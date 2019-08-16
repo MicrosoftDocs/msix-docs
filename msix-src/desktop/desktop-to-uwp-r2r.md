@@ -76,6 +76,8 @@ To verify that the tool has processed the binaries you can review the build outp
 Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
 ```
 
+Native image compilation can be triggered on non-release builds by setting the property `NgenR2R` to `true` in the project file.
+
 ## FAQ
 
 **Q. Do the new binaries work on machines without .NET Framework 4.7.2?**
