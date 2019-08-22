@@ -1,7 +1,7 @@
 ---
 Description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (Desktop Bridge)
-ms.date: 07/29/2019
+ms.date: 08/22/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
@@ -74,17 +74,29 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application uses a dependency in the System32/SysWOW64 folder__. To get these DLLs to work, you must include them in the virtual file system portion of your Windows app package. This ensures that the application behaves as if the DLLs were installed in the **System32**/**SysWOW64** folder. In the root of the package, create a folder called **VFS**. Inside that folder create a **SystemX64** and **SystemX86** folder. Then, place the 32-bit version of your DLL in the **SystemX86** folder, and place the 64-bit version in the **SystemX64** folder.
 
-+ __Your app uses a VCLibs framework package__. The VCLibs libraries can be directly installed from the Microsoft Store if they are defined as a dependency in the Windows app package. For example, if your application uses Dev11 VCLibs packages, make the following change to your application package manifest: Under the `<Dependencies>` node, add:  
-`<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
-During installation from the Microsoft Store, the appropriate version (x86 or x64) of the VCLibs framework will get installed prior to the installation of the app.  
-The dependencies will not get installed if the application is installed by sideloading. To install the dependencies manually on your machine, you must download and install the appropriate VCLibs framework package for Desktop Bridge. For more information about these scenarios, see [Using Visual C++ Runtime in a Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/).
++ __Your app uses a VCLibs framework package__. If you are converting a C++ Win32 app, you must handle the deployment of the Visual C++ Runtime. Visual Studio 2019 and the Windows SDK include the latest framework packages for version 11.0, 12.0 and 14.0 of the Visual C++ Runtime in the following folders:
 
-  **Framework Packages**:
+    * **VC 14.0 framework packages**: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0
 
-  * [VC 14.0 framework packages for Desktop Bridge](https://www.microsoft.com/download/details.aspx?id=53175)
-  * [VC 12.0 framework packages for Desktop Bridge](https://www.microsoft.com/download/details.aspx?id=53176)
-  * [VC 11.0 framework packages for Desktop Bridge](https://www.microsoft.com/download/details.aspx?id=53340)
+    * **VC 12.0 framework packages**: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop.120\14.0
 
+    * **VC 11.0 framework packages**: C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop.110\14.0
+
+    To use one of these packages, you must reference the package as a dependency in your package manifest. When customers install the retail version of your app from the Microsoft Store, the package will be installed from the Store along with your app. The dependencies will not get installed if you side load your app. To install the dependencies manually, you must install the appropriate framework package using the appropriate .appx package for x86, x64, or ARM located in the installation folders listed above.
+
+    To reference a Visual C++ Runtime framework package in your app:
+
+    1. Go to the framework package install folder listed above for the version of the Visual C++ Runtime used by your app.
+
+    2. Open the SDKManifest.xml file in that folder, locate the `FrameworkIdentity-Debug` or `FrameworkIdentity-Retail` attribute (depending on whether you're using the debug or retail version of the runtime), and copy the `Name` and `MinVersion` values from that attribute. For example, here's the `FrameworkIdentity-Retail` attribute for the current VC 14.0 framework package.
+        ```xml
+        FrameworkIdentity-Retail = "Name = Microsoft.VCLibs.140.00.UWPDesktop, MinVersion = 14.0.27323.0, Publisher = 'CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US'"
+        ```
+
+    3. In the package manifest for your app, add the following `<PackageDependency>` element under the `<Dependencies>` node. Make sure you replace the `Name` and `MinVersion` values with the values you copied in the previous step. The following example specifies a dependency for the current version of the VC 14.0 framework package.
+        ```xml
+        <PackageDependency Name="Microsoft.VCLibs.140.00.UWPDesktop" MinVersion="14.0.27323.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+        ```
 
 + __Your application contains a custom jump list__. There are several issues and caveats to be aware of when using jump lists.
 
