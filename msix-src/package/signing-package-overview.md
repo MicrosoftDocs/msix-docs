@@ -2,6 +2,7 @@
 Description: This article describes signing requirements for Windows 10 apps.
 title: Sign a Windows 10 app package 
 ms.date: 07/03/2019
+ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
