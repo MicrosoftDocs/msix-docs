@@ -2,6 +2,7 @@
 Description: This article describes signing with Device Guard signing
 title: Sign an MSIX package with Device Guard signing
 ms.date: 07/12/2019
+ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
 ---
