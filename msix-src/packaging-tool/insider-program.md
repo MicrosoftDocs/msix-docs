@@ -28,11 +28,14 @@ Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.micr
 
 If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build).
 
-## Current Insider Preview build
+## Current Insider Preview build (1.2019.808.0)
 
-We just released our latest public build version 1.2019.701.0
-
-Stay tuned for the first preview build for our next release!
+- Settings improvements
+    - Separated out the tool defaults from other settings
+    - Added the ability to import and export settings
+- Signing improvements
+    - You can now choose a default signing option for workflows
+- Updated the steps during packaging to improve the experience
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
