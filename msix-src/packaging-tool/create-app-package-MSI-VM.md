@@ -34,6 +34,7 @@ Navigate to your MSI or App-V installer by clicking **Browse** and selecting the
 
 Optionally:
 - Check the box under **Sign package**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box. You can also set this as a default in your settings, which will save you some steps each time you convert. 
+  - When signing, you can optionally add a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool). 
 - Check the box under **Use installer arguments** and enter the desired argument in the provided field. This field accepts any string.
 
 ## Packaging method
