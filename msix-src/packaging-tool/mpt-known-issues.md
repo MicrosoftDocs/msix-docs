@@ -43,9 +43,13 @@ Otherwise, if you have access to enterprise or OEM channels you can obtain the d
 
 Individually-obtained Feature on Demand packages can be installed using DISM command-line options.
 
+### Getting the MSIX Packaging Tool Offline
+The MSIX Packaging Tool can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/en-us/store). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps). If you are encountering issues with the offline copy of the packaging tool, ensure that you have the [offline copy of the license](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) for the tool. 
+
+
+
 ## Other known issues
 
-- Restarting the machine during application installation is not supported. Ignore the restart request if possible or pass an argument to the installer to not require a restart.
 - Installers may require certain frameworks or drivers to be installed prior to installation. To look up frameworks and drivers on the machine that is being used to convert apps, use the following queries: ```driverquery /v | Out-File```
 or ```driverquery /v | Out-File "path to text file"```
 - During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
