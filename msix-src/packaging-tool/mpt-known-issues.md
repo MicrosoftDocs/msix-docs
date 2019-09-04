@@ -45,7 +45,7 @@ Individually-obtained Feature on Demand packages can be installed using DISM com
 
 ### Getting the MSIX Packaging Tool for offline use
 
-The MSIX Packaging Tool can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](https://docs.microsoft.com/microsoft-store/distribute-offline-apps). If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) for the tool. 
+The MSIX Packaging Tool can be downloaded for offline use in the enterprise from the Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](https://docs.microsoft.com/microsoft-store/distribute-offline-apps). If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) for the tool. 
 
 After you have the offline version of the application, you can use [PowerShell](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine.
 
