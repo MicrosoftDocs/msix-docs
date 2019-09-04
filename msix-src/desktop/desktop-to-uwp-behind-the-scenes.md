@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 This article provides a deeper dive on what happens to files and registry entries when you create a Windows app package for your desktop application.
 
-A key goal of a modern package is to separate application state from system state as much as possible while maintaining compatibility with other apps. Windows 10 accomplishes this by placing the application inside a Universal Windows Platform (UWP) package, and then detecting and redirecting some changes  it makes to the file system and registry at runtime.
+A key goal of a modern package is to separate application state from system state as much as possible while maintaining compatibility with other apps. Windows 10 accomplishes this by placing the application inside a MSIX package, and then detecting and redirecting some changes it makes to the file system and registry at runtime.
 
 Packages that you create for your desktop application are desktop-only, full-trust applications and are not virtualized or sandboxed. This allows them to interact with other apps the same way classic desktop applications do.
 
