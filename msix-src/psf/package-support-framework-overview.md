@@ -38,6 +38,9 @@ After you find an issue, you can check our [GitHub](https://github.com/Microsoft
 
 If you can't find a runtime fix that addresses your issue, you can create one. To do that, you'll identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
 
+## Limitation of Package Support Framework 
+The Package Support Framework does not support registry overrides. It will resolve issues related to runtime. Pick the following dlls that would fit your needs. 
+
 ## Get started with the Package Support Framework
 
 If you're ready to begin using the Package Support Framework to resolve compatibility issues, see our step-by-step guide at [Apply runtime fixes to an MSIX package by using the Package Support Framework](https://docs.microsoft.com/windows/uwp/porting/package-support-framework).
