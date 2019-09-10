@@ -30,9 +30,13 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-We just released our latest public build version 1.2019.701.0
-
-Stay tuned for the first preview build for our next release!
+### Version 1.2019.808.0
+- Settings improvements
+    - Separated out the tool defaults from other settings
+    - Added the ability to import and export settings
+- Signing improvements
+    - You can now choose a default signing option for workflows
+- Updated the steps during packaging to improve the experience
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
