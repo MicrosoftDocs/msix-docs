@@ -30,13 +30,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Version 1.2019.808.0
-- Settings improvements
-    - Separated out the tool defaults from other settings
-    - Added the ability to import and export settings
-- Signing improvements
-    - You can now choose a default signing option for workflows
-- Updated the steps during packaging to improve the experience
+### Version 1.2019.919.0
+- Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
+- The **Package editor** now supports the ability to select multiple items on which to perform an action.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
