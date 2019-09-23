@@ -28,18 +28,23 @@ In Windows 10, you can submit an app package, app bundle, or a complete app pack
 
 Here is an overview of the steps to prepare and create an app package:
 
-1.  [Before packaging your app](#before-packaging-your-app). Follow these steps to ensure your app is ready to be packaged for Partner Center submission.
-2.  [Configure an app package](#configure-an-app-package). Use the Visual Studio manifest designer to configure the package. For example, add tile images and choose the orientations your app supports.
-3.  [Create an app package upload file](#create-an-app-package-upload-file). Use the Visual Studio app package wizard to create an app package, then certify your package with the Windows App Certification Kit.
-4.  [Sideload your app package](#sideload-your-app-package). After sideloading your app to a device, you can test that it works as you expect it to.
+1. [Before packaging your app](#before-packaging-your-app). Follow these steps to ensure your app is ready to be packaged for Partner Center submission.
+
+2. [Configure an app package](#configure-an-app-package). Use the Visual Studio manifest designer to configure the package. For example, add tile images and choose the orientations your app supports.
+
+3. [Create an app package upload file](#create-an-app-package-upload-file). Use the Visual Studio app package wizard to create an app package, then certify your package with the Windows App Certification Kit.
+
+4. [Sideload your app package](#sideload-your-app-package). After sideloading your app to a device, you can test that it works as you expect it to.
 
 After you have completed the steps above, you are ready to distribute your app. If you have a line-of-business (LOB) app that you don't plan to sell because it's for internal users only, you can sideload this app to install it on any Windows 10 device.
 
 ## Before packaging your app
 
-1.  **Test your app.** Before you package your app for Partner Center submission, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
-2.  **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your UWP app. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
-3.  **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected. Some common debugging issues that can happen with .NET Native are explained in more detail in [Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
+1. **Test your app.** Before you package your app for Partner Center submission, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+
+2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your UWP app. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
+
+3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected. Some common debugging issues that can happen with .NET Native are explained in more detail in [Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
 
 ## Configure an app package
 
@@ -49,9 +54,12 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
 ### Configure a package with the manifest designer
 
-1.  In **Solution Explorer**, expand the project node of your UWP app.
-2.  Double-click the **Package.appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
-3.  Now you can decide how to configure your app. Each tab contains information that you can configure about your app and links to more information if necessary.  
+1. In **Solution Explorer**, expand the project node of your UWP app.
+
+2. Double-click the **Package.appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
+
+3. Now you can decide how to configure your app. Each tab contains information that you can configure about your app and links to more information if necessary.
+
     ![Manifest designer in Visual Studio](images/packaging-screen1.jpg)
 
     Check that you have all the images that are required for a UWP app on the **Visual Assets** tab.
@@ -66,7 +74,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
     If you are not publishing your app and simply want to sideload an app package, you first need to trust the package. To trust the package, the certificate must be installed on the user's device. For more information about sideloading, see [Enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 
-4.  Save your **Package.appxmanifest** file after you have made the necessary edits for your app.
+4. Save your **Package.appxmanifest** file after you have made the necessary edits for your app.
 
 If you are distributing your app via the Microsoft Store, Visual Studio can associate your package with the Store. To do this, right-click your project name in Solution Explorer and choose **Publish**->**Associate App with the Store** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**). You can also do this in the **Create App Packages** wizard, which is described in the following section. When you associate your app, some of the fields in the Packaging tab of the manifest designer are automatically updated.
 
@@ -82,32 +90,47 @@ To distribute an app through Microsoft Store you must create an app package (.ap
 > [!NOTE]
 > The following instructions and screenshots describe the process as of Visual Studio 2019 version 16.3. If you're using an earlier version, some of the UI might look different.
 
-1.  In **Solution Explorer**, open the solution for your UWP app project.
-2.  Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**). If this option is disabled or does not appear at all, check that the project is a Universal Windows project.  
+1. In **Solution Explorer**, open the solution for your UWP app project.
+
+2. Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**). If this option is disabled or does not appear at all, check that the project is a Universal Windows project.  
+
     ![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)
 
     The **Create App Packages** wizard appears.
 
-3.  Select **Microsoft Store using a new app name** in the first dialog and then click **Next**.  
+3. Select **Microsoft Store using a new app name** in the first dialog and then click **Next**.  
+
     ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
 
     If you have already associated your project with an app in the Store, you also have an option to create packages for the associated Store app. If you choose **Sideloading**, Visual Studio will not generate the app package upload (.msixupload or .appxupload) file for Partner Center submissions. If you only want to sideload your app to run it on internal devices or for testing purposes, then you can select this option. For more information, see [Sideload your app package](#sideload-your-app-package).
-4.  On the next page, sign in with your developer account to Partner Center. If you don't have a developer account yet, the wizard will help you create one.
+
+4. On the next page, sign in with your developer account to Partner Center. If you don't have a developer account yet, the wizard will help you create one.
+
     ![Create App Packages window with app name selection shown](images/packaging-screen4.jpg)
-5.  Select the app name for your package from the list of apps currently registered to your account, or reserve a new one if you have not already reserved one in Partner Center.  
-6.  Make sure you select all three architecture configurations (x86, x64, and ARM) in the **Select and Configure Packages** dialog to ensure that your app can be deployed to the widest range of devices. In the **Generate app bundle** listbox, select **Always**. An app bundle (.appxbundle or .msixbundle) is preferred over a single app package file because it contains a collection of app packages configured for each type of processor architecture. When you choose to generate the app bundle, the app bundle will be included in the final app package upload (.appxupload or .msixupload) file along with debugging and crash analytic information. If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](device-architecture.md).  
+
+5. Select the app name for your package from the list of apps currently registered to your account, or reserve a new one if you have not already reserved one in Partner Center.  
+
+6. Make sure you select all three architecture configurations (x86, x64, and ARM) in the **Select and Configure Packages** dialog to ensure that your app can be deployed to the widest range of devices. In the **Generate app bundle** listbox, select **Always**. An app bundle (.appxbundle or .msixbundle) is preferred over a single app package file because it contains a collection of app packages configured for each type of processor architecture. When you choose to generate the app bundle, the app bundle will be included in the final app package upload (.appxupload or .msixupload) file along with debugging and crash analytic information. If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](device-architecture.md).  
+
     ![Create App Packages window with package configuration shown](images/packaging-screen5.jpg)
-7.  Include public symbol files to [Analyze app performance](https://docs.microsoft.com/windows/uwp/publish/analytics) from Partner Center after your app has been published. Configure any additional details such as version numbering or the package output location.
-8.  Click **Create** to generate the app package. If you selected one of the **I want to create packages to upload to the Microsoft Store** options in step 3 and are creating a package for Partner Center submission, the wizard will create a package upload (.appxupload or .msixupload) file. If you selected **I want to create packages for sideloading** in step 3, the wizard will create either a single app package or an app bundle based on your selections in step 6.
+
+7. Include public symbol files to [Analyze app performance](https://docs.microsoft.com/windows/uwp/publish/analytics) from Partner Center after your app has been published. Configure any additional details such as version numbering or the package output location.
+
+8. Click **Create** to generate the app package. If you selected one of the **I want to create packages to upload to the Microsoft Store** options in step 3 and are creating a package for Partner Center submission, the wizard will create a package upload (.appxupload or .msixupload) file. If you selected **I want to create packages for sideloading** in step 3, the wizard will create either a single app package or an app bundle based on your selections in step 6.
+
 9. When your app has been successfully packaged, you will see this dialog and you can retrieve your app package upload file from the specified output location. At this point, you can [validate your app package on the local machine or a remote machine](#validate-your-app-package) and [automate store submissions](#automate-store-submissions).
+
     ![Package creation completed window with validation options shown](images/packaging-screen6.jpg)
 
 ### Create your app package upload file manually
 
 1. Place the following files in a folder:
+
     - One or more app packages (.msix or .appx) or an app bundle (.msixbundle or .appxbundle).
     - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](https://docs.microsoft.com/windows/uwp/publish/health-report) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
+
 2. Zip the folder.
+
 3. Change the zipped folder extension name from .zip to .msixupload or .appxupload.
 
 ## Validate your app package
@@ -129,13 +152,19 @@ Validate your app before you submit it to Partner Center for certification on a 
 1. Enable your Windows 10 device for development by following the [Enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) instructions.
     >[!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
+
 2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run UWP apps on a remote machine](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
+
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
+
 4. On the **Package Creation Completed** page of the wizard, choose the **Remote Machine** option button, and then choose the ellipsis button next to the **Test Connection** button.
     >[!NOTE]
     > The **Remote Machine** option button is available only if you selected at least one solution configuration that supports validation. For more information about testing your app with the WACK, see [Windows App Certification Kit](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit).
+
 5. Specify a device form inside your subnet, or provide the Domain Name Server (DNS) name or IP address of a device that's outside of your subnet.
+
 6. In the **Authentication Mode** list, choose **None** if your device doesn't require you to log onto it by using your Windows credentials.
+
 7. Choose the **Select** button, and then choose the **Launch Windows App Certification Kit** button. If the remote tools are running on that device, Visual Studio connects to the device and then performs the validation tests. See [Windows App Certification Kit tests](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests).
 
 ## Automate Store submissions
@@ -195,15 +224,17 @@ Before you can sideload your app on a target device, you must [enable your devic
 > The following instructions and screenshots describe the process as of Visual Studio 2019 version 16.3. If you're using an earlier version, some of the UI might look different.
 
 1. In **Solution Explorer**, open the solution for your UWP app project.
-2. Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**). 
+
+2. Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**).
+
     ![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)
 
-    The **Create App Packages** wizard appears.
+3. Select **Sideloading** in the first page of the wizard and then click **Next**.
 
-3. Select **Sideloading** in the first page and then click **Next**.  
     ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
 
 4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.
+
     ![Create Your Packages dialog window shown](images/package-signing.png)
 
 5. Complete the **Select and configure packages** page as described in the [Create your app package upload file using Visual Studio](#create-your-app-package-upload-file-using-visual-studio) section.
