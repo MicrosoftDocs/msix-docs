@@ -180,6 +180,8 @@
           href: desktop/desktop-to-uwp-test-windows-s.md
     - name: Apply runtime fixes to a desktop app package
       href: psf/package-support-framework.md
+    - name: Run scripts with the Package Support Framework
+      href: psf/run-scripts-with-package-support-framework.md
 - name: Distribute
   items: 
     - name: Publish to the Microsoft Store
