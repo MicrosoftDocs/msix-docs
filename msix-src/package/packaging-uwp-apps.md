@@ -218,7 +218,7 @@ With UWP app packages, apps aren't installed to a device as they are with deskto
 
 Before you can sideload your app on a target device, you must [enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 
-### Create an app package for slideloading
+### Create an app package for sideloading
 
 > [!NOTE]
 > The following instructions and screenshots describe the process as of Visual Studio 2019 version 16.3. If you're using an earlier version, some of the UI might look different.
