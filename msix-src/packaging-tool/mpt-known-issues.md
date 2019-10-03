@@ -1,5 +1,5 @@
 ---
-title: Known issues and troubleshooting 
+title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips for the MSIX Packaging Tool. 
 ms.date: 02/26/2019
 ms.topic: article
@@ -7,11 +7,13 @@ keywords: msix packaging tool, known issues, troubleshooting
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# Known issues and troubleshooting
+# MSIX Packaging Tool Known Issues and Troubleshooting Tips
 
 This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool.
 
-## Known issues
+## MSIX Packaging Tool Known Issues
+### Acquiring the MSIX Packaging Tool 
+If you have opted into our flighting group, make sure you have the correct version of the MSIX Packaging Tool. 
 
 ### MSIX Packaging Tool driver considerations
 
