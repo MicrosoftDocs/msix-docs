@@ -1,26 +1,28 @@
 ---
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips for the MSIX Packaging Tool. 
-ms.date: 02/26/2019
+ms.date: 10/04/2019
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
-# MSIX Packaging Tool Known Issues and Troubleshooting Tips
+# Known issues and troubleshooting tips for the MSIX Packaging Tool
 
 This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool.
 
-## MSIX Packaging Tool Known Issues
-### Acquiring the MSIX Packaging Tool - Insider Flight
-If you have opted into our flighting group, make sure you have the correct version of the MSIX Packaging Tool. To do this, please do the following 
-- Release notes – go to our Release Notes page to double check that the MSIX Packaging Tool app you have installed is the latest version that is available. 
-- Manually update through Microsoft Store app. If this option if available to you open the Microsoft Store app. Go to Downloads and Updates and click Get updates. 
-- Acquiring MSIX Packaging Tool offline – please follow the instructions highlighted on [this page]( https://docs.microsoft.com/en-us/windows/msix/packaging-tool/mpt-known-issues#getting-the-msix-packaging-tool-for-offline-use) to ensure you get the latest app through our offline process. 
-- Check whether you are in WSUS – see below 
-- Check the [Release Notes]( https://docs.microsoft.com/en-us/windows/msix/packaging-tool/release-notes/history) to check the latest Release 
+## Known issues
 
-If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram) for more information.
+### Getting the latest Insider Preview build of the MSIX Packaging Tool
+
+If you have opted into our [Insider Program](insider-program.md), make sure you have the correct version of the MSIX Packaging Tool:
+
+- Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed.
+- Manually update the MSIX Packaging tool through the Microsoft Store on your development computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
+- To install the MSIX Packaging Tool for offline use, follow [these instructions](#getting-the-msix-packaging-tool-for-offline-use) to ensure you get the latest app through our offline process.
+- Check whether you are in an organization that uses Windows Server Update Services. If you are, follow [these instructions](#installing-msix-packaging-tool-driver-fod-in-wsus).
+
+If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram).
 
 ### MSIX Packaging Tool driver considerations
 
@@ -58,67 +60,81 @@ The MSIX Packaging Tool can be downloaded for offline use in the enterprise from
 
 After you have the offline version of the application, you can use [PowerShell](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine.
 
-## Frameworks and Drivers
-If the app requires a framework, make sure the framework is installed during the monitoring phase of the conversion. Go through the logs to ensure this is happening. If your app requires a driver to install, you need to evaluate whether this is absolutely required for your app to run properly. MSIX currently does not support driver installation. 
+### Frameworks and Drivers
 
-## Issues that may come up during conversion
+If the app requires a framework, make sure the framework is installed during the monitoring phase of the conversion. Go through the logs to ensure this is happening. If your app requires a driver to install, you need to evaluate whether this is required for your app to run properly. MSIX currently does not support driver installation.
+
+### Issues during conversion
+
 - During conversion, installers may run services. Services are not captured during conversion. As a result, your app may install but it may run with issues.
-- Some installers might fail to convert with exit code 259. This indicates that the installer spawned a thread and did not wait for it to complete. In other words, the main thread finished installing but it exited with error 259 because it spawned a thread that is still running. We recommend that you use the appropriate install option for setup.exe. 
+- Some installers might fail to convert with exit code 259. This indicates that the installer spawned a thread and did not wait for it to complete. In other words, the main thread finished installing but it exited with error 259 because it spawned a thread that is still running. We recommend that you use the appropriate install option for setup.exe.
 
-## Issue with Signing
-### Bad PE certificate (0x800700C1) 
-This occurs when the package contains binary that has a corrupt certificate. To resolve this issue, use a dumpbin.exe /headers to dump the file headers and inspect for bad elements. Manually rewrite the headers to fix the issue. In general, MSIX Packaging tool automatically detects bad headers. If this issue persists please file feedback. More information can be found [here](https://docs.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-known-issues#bad-pe-certificate-0x800700c1).
+### Issues during signing
 
-### Device Guard Signing 
-Make sure to follow [these steps](https://docs.microsoft.com/en-us/windows/msix/package/signing-package-device-guard-signing). The key thing here is to make sure you are assigning the appropriate roles. 
+#### Bad PE certificate (0x800700C1)
 
-### Expire Certification 
-- Use a timestamp when you sign your package 
-- You can resign with a valid sign or timestamp certification 
+This problem occurs when the package contains a binary file that has a corrupt certificate. To resolve this issue, use the `dumpbin.exe /headers` command to dump the file headers and inspect for bad elements. Manually rewrite the headers to fix the issue. In general, the MSIX Packaging tool automatically detects bad headers. If this issue persists,  file feedback. More information can be found [here](../desktop/desktop-to-uwp-known-issues.md#bad-pe-certificate-0x800700c1).
 
-You can resign your app using the [Bach Conversion script](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts). 
+#### Device Guard signing
 
-# Troubleshooting
+Make sure to follow [these steps](https://docs.microsoft.com/en-us/windows/msix/package/signing-package-device-guard-signing). Make sure you are assigning the appropriate roles.
 
-## Log files
+#### Expired certificate
 
-Whether or not your conversion was successful, log files are generated for every conversion. They can be found here: 
+- Use a timestamp when you sign your package.
+- You can resign with a valid sign or timestamp certificate.
+
+You can resign your app using the [batch conversion script](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts).
+
+## Troubleshooting
+
+### Log files
+
+Whether or not your conversion was successful, log files are generated for every conversion. They can be found here:
 
 `%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\`
 
 Failure codes are written and indicate any point of failure during the conversion process. The error codes are meant to be user friendly.
 
-### Log files from remote devices or VMs
+#### Log files from remote devices or VMs
 
-If the conversion is performed on a remote device or a VM, we recommend that you copy the log files from that device and attach them as part of the feedback item. This will help us diagnose and resolve issues more efficiently. 
+If the conversion is performed on a remote device or a VM, we recommend that you copy the log files from that device and attach them as part of the feedback item. This will help us diagnose and resolve issues more efficiently.
 
 You will find the logs from the remote conversions here:
 `%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\<Logs_#>\RemoteServer\Log.txt`
 
 It would even more beneficial if you can share the whole Logs folder that will include the operations occuring on the local client as well the remote server.
 
-## Common Problems
-### MakePri/Manifest translation errors
-This error occurs when there is an issue with the package’s manifest. In order to identify the issue, go to Package Editor and open the manifest. When you open the manifest, you can identify the issue and provide the proper fix. 
+### Common problems
 
-### File not found
-The file may either be open or non-existent. To resolve this issue, add the appropriate file or close the file that is currently in use. Note: you will not get a File not Found error if it is open, you’ll get an Access Denied or File in Use error. 
+#### MakePri/Manifest translation errors
 
-### File Type Associations
-The issues regarding File Type Associations (FTA) are varies from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See this [document](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) for example.
+This error occurs when there is an issue with the package’s manifest. To identify the issue, go to Package Editor and open the manifest. When you open the manifest, you can identify the issue and provide the proper fix.
 
-### Shortcuts with arguments 
-At this time shortcuts with arguments are not currently supported with MSIX. If we detect that the installer, MSIX will create a tile with no arguments. 
+#### File not found
 
-### Install Directory 
-This is more common for those who use a secondary driver to do app conversions. Make sure the tool knows to look at the secondary driver during conversion.
+The file may either be open or non-existent. To resolve this issue, add the appropriate file or close the file that is currently in use. Note that you will not get a `File not Found` error if it is open. Instead, you’ll get an `Access Denied` or `File in Use` error.
 
-### Remote Machine 
-If you are running into issues with using a remote VM for your conversions, please read the following [documentation](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/remote-conversion-setup) 
+#### File Type Associations
+
+The issues regarding File Type Associations (FTA) vary from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See the [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) manifest element for an example.
+
+#### Shortcuts with arguments
+
+Shortcuts with arguments are not currently supported with MSIX. If we detect that the installer includes these, MSIX will create a tile with no arguments.
+
+#### Install directory
+
+This is more common for those who use a secondary driver to perform app conversions. Make sure the tool knows to look at the secondary driver during conversion.
+
+#### Remote Machine
+
+If you are running into issues with using a remote VM for your conversions, see [Setup instructions for remote machine conversions](remote-conversion-setup.md).
 
 ## Sending feedback
 
 The best way to send your feedback is through the **Feedback Hub**.
+
 1. Open **Feedback Hub** or type **Windows + F**.
 2. Provide a title and necessary steps to reproduce the issue.
 3. Under **Category**, select **Apps** and select **MSIX Packaging Tool**.
@@ -129,4 +145,4 @@ The best way to send your feedback is through the **Feedback Hub**.
 You can also send us feedback directly from the MSIX Packaging Tool by going to the **Feedback** tab under **Settings**. 
 
 > [!NOTE]
-> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert your package, you may want to keep your VM on and in its current state for 24 hours after conversion. 
+> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert your package, you may want to keep your VM on and in its current state for 24 hours after conversion.
