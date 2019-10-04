@@ -15,7 +15,7 @@ This article describes known issues and provides troubleshooting tips to conside
 
 ### Getting the latest Insider Preview build of the MSIX Packaging Tool
 
-If you have opted into our [Insider Program](insider-program.md), make sure you have the correct version of the MSIX Packaging Tool:
+If you have opted in to our [Insider Program](insider-program.md), make sure you have the correct version of the MSIX Packaging Tool:
 
 - Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed.
 - Manually update the MSIX Packaging tool through the Microsoft Store on your development computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
@@ -26,7 +26,7 @@ If you are interested in joining our Insider Program, click [here](https://aka.m
 
 ### MSIX Packaging Tool driver considerations
 
-MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if the Windows Update service is disabled on the machine or Windows Insider flight ring settings do no match the OS build of the machine.
+The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if the Windows Update service is disabled on the machine or Windows Insider flight ring settings do not match the OS build of the computer.
 
 ### Installing MSIX Packaging Tool driver FOD on Windows Insider builds
 
@@ -60,7 +60,7 @@ The MSIX Packaging Tool can be downloaded for offline use in the enterprise from
 
 After you have the offline version of the application, you can use [PowerShell](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine.
 
-### Frameworks and Drivers
+### Frameworks and drivers
 
 If the app requires a framework, make sure the framework is installed during the monitoring phase of the conversion. Go through the logs to ensure this is happening. If your app requires a driver to install, you need to evaluate whether this is required for your app to run properly. MSIX currently does not support driver installation.
 
@@ -77,7 +77,7 @@ This problem occurs when the package contains a binary file that has a corrupt c
 
 #### Device Guard signing
 
-Make sure to follow [these steps](https://docs.microsoft.com/en-us/windows/msix/package/signing-package-device-guard-signing). Make sure you are assigning the appropriate roles.
+Make sure to follow [these steps](https://docs.microsoft.com/en-us/windows/msix/package/signing-package-device-guard-signing) and that you are assigning the appropriate roles in the Microsoft Store for Business.
 
 #### Expired certificate
 
