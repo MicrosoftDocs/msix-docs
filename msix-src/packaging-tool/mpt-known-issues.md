@@ -12,8 +12,15 @@ ms.custom: RS5
 This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool.
 
 ## MSIX Packaging Tool Known Issues
-### Acquiring the MSIX Packaging Tool 
-If you have opted into our flighting group, make sure you have the correct version of the MSIX Packaging Tool. 
+### Acquiring the MSIX Packaging Tool - Insider Flight
+If you have opted into our flighting group, make sure you have the correct version of the MSIX Packaging Tool. To do this, please do the following 
+- Release notes – go to our Release Notes page to double check that the MSIX Packaging Tool app you have installed is the latest version that is available. 
+- Manually update through Microsoft Store app. If this option if available to you open the Microsoft Store app. Go to Downloads and Updates and click Get updates. 
+- Acquiring MSIX Packaging Tool offline – please follow the instructions highlighted on [this page]( https://docs.microsoft.com/en-us/windows/msix/packaging-tool/mpt-known-issues#getting-the-msix-packaging-tool-for-offline-use) to ensure you get the latest app through our offline process. 
+- Check whether you are in WSUS – see below 
+- Check the [Release Notes]( https://docs.microsoft.com/en-us/windows/msix/packaging-tool/release-notes/history) to check the latest Release 
+
+If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram) for more information.
 
 ### MSIX Packaging Tool driver considerations
 
