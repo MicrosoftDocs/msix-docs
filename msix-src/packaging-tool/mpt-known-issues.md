@@ -98,8 +98,23 @@ You will find the logs from the remote conversions here:
 It would even more beneficial if you can share the whole Logs folder that will include the operations occuring on the local client as well the remote server.
 
 ## Common Problems
+### MakePri/Manifest translation errors
+This error occurs when there is an issue with the package’s manifest. In order to identify the issue, go to Package Editor and open the manifest. When you open the manifest, you can identify the issue and provide the proper fix. 
 
+### File not found
+The file may either be open or non-existent. To resolve this issue, add the appropriate file or close the file that is currently in use. Note: you will not get a File not Found error if it is open, you’ll get an Access Denied or File in Use error. 
 
+### File Type Associations
+The issues regarding File Type Associations (FTA) are varies from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See this [document](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) for example.
+
+### Shortcuts with arguments 
+At this time shortcuts with arguments are not currently supported with MSIX. If we detect that the installer, MSIX will create a tile with no arguments. 
+
+### Install Directory 
+This is more common for those who use a secondary driver to do app conversions. Make sure the tool knows to look at the secondary driver during conversion.
+
+### Remote Machine 
+If you are running into issues with using a remote VM for your conversions, please read the following [documentation](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/remote-conversion-setup) 
 
 ## Sending feedback
 
