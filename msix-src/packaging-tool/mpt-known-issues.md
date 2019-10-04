@@ -58,12 +58,25 @@ The MSIX Packaging Tool can be downloaded for offline use in the enterprise from
 
 After you have the offline version of the application, you can use [PowerShell](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine.
 
+## Frameworks and Drivers
+If the app requires a framework, make sure the framework is installed during the monitoring phase of the conversion. Go through the logs to ensure this is happening. If your app requires a driver to install, you need to evaluate whether this is absolutely required for your app to run properly. MSIX currently does not support driver installation. 
 
-## Other known issues
+## Issues that may come up during conversion
+- During conversion, installers may run services. Services are not captured during conversion. As a result, your app may install but it may run with issues.
+- Some installers might fail to convert with exit code 259. This indicates that the installer spawned a thread and did not wait for it to complete. In other words, the main thread finished installing but it exited with error 259 because it spawned a thread that is still running. We recommend that you use the appropriate install option for setup.exe. 
 
-- Installers may require certain frameworks or drivers to be installed prior to installation. To look up frameworks and drivers on the machine that is being used to convert apps, use the following queries: ```driverquery /v | Out-File```
-or ```driverquery /v | Out-File "path to text file"```
-- During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
+## Issue with Signing
+### Bad PE certificate (0x800700C1) 
+This occurs when the package contains binary that has a corrupt certificate. To resolve this issue, use a dumpbin.exe /headers to dump the file headers and inspect for bad elements. Manually rewrite the headers to fix the issue. In general, MSIX Packaging tool automatically detects bad headers. If this issue persists please file feedback. More information can be found [here](https://docs.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-known-issues#bad-pe-certificate-0x800700c1).
+
+### Device Guard Signing 
+Make sure to follow [these steps](https://docs.microsoft.com/en-us/windows/msix/package/signing-package-device-guard-signing). The key thing here is to make sure you are assigning the appropriate roles. 
+
+### Expire Certification 
+- Use a timestamp when you sign your package 
+- You can resign with a valid sign or timestamp certification 
+
+You can resign your app using the [Bach Conversion script](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts). 
 
 # Troubleshooting
 
@@ -84,17 +97,9 @@ You will find the logs from the remote conversions here:
 
 It would even more beneficial if you can share the whole Logs folder that will include the operations occuring on the local client as well the remote server.
 
-## Examples of failures during conversions
+## Common Problems
 
-### Uninstallation Error - Exit Code 259
 
-Some installers might fail to convert with exit code 259. This indicates that the installer spawned a thread and did not wait for it to complete. In other words, the main thread finished installing but it exited with error 259 because it spawned a thread that is still running. We recommend that you use the appropriate install option for setup.exe.
-
-### Internal warning messages
-
-You may encounter warning messages such as:
-**[Warning] W_COM_PUBFAIL_INPROC_SERVER_NOT_SUPPORTED**.
-This indicates that the MSIX Packaging Tool detected a COM registration that does not have a match with MSIX today. If you convert an app and it works, chances are these were unnecessary COM entries. However, if you see missing behavior, that means that this COM behavior was not captured during the conversion.
 
 ## Sending feedback
 
