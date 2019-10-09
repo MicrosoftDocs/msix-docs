@@ -20,7 +20,6 @@ If you have opted in to our [Insider Program](insider-program.md), make sure you
 - Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed.
 - Manually update the MSIX Packaging tool through the Microsoft Store on your development computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
 - To install the MSIX Packaging Tool for offline use, follow [these instructions](#getting-the-msix-packaging-tool-for-offline-use) to ensure you get the latest app through our offline process.
-- Check whether you are in an organization that uses Windows Server Update Services. If you are, follow [these instructions](#installing-msix-packaging-tool-driver-fod-in-wsus).
 
 If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram).
 
