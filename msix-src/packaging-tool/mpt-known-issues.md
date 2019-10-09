@@ -133,7 +133,7 @@ If you are running into issues with using a remote VM for your conversions, see 
 
 ## Sending feedback
 
-The best way to send your feedback is through the **Feedback Hub**.
+The best way to send your feedback is through the [**Feedback Hub**](https://www.microsoft.com/en-us/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab).
 
 1. Open **Feedback Hub** or type **Windows + F**.
 2. Provide a title and necessary steps to reproduce the issue.
