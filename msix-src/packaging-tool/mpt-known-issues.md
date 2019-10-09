@@ -64,8 +64,10 @@ After you have the offline version of the application, you can use [PowerShell](
 
 If the app requires a framework, make sure the framework is installed during the monitoring phase of the conversion. Go through the logs to ensure this is happening. If your app requires a driver to install, you need to evaluate whether this is required for your app to run properly. MSIX currently does not support driver installation.
 
-### Issues during conversion
+### Remote Machine
+If you are running into issues with using a remote VM for your conversions, see [Setup instructions for remote machine conversions](remote-conversion-setup.md).
 
+### Issues during conversion
 - During conversion, installers may run services. Services are not captured during conversion. As a result, your app may install but it may run with issues.
 - Some installers might fail to convert with exit code 259. This indicates that the installer spawned a thread and did not wait for it to complete. In other words, the main thread finished installing but it exited with error 259 because it spawned a thread that is still running. We recommend that you use the appropriate install option for setup.exe.
 
@@ -126,10 +128,6 @@ Shortcuts with arguments are not currently supported with MSIX. If we detect tha
 #### Install directory
 
 This is more common for those who use a secondary driver to perform app conversions. Make sure the tool knows to look at the secondary driver during conversion.
-
-#### Remote Machine
-
-If you are running into issues with using a remote VM for your conversions, see [Setup instructions for remote machine conversions](remote-conversion-setup.md).
 
 ## Sending feedback
 
