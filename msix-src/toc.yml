@@ -92,6 +92,8 @@
     items: 
       - name: Overview
         href: msix-sdk/sdk-overview.md
+      - name: Use the MSIX SDK to distribute an MSIX package
+        href: msix-sdk/sdk-guidance.md
       - name: Release notes
         items: 
           - name: MSIX SDK Release 1.4
@@ -102,8 +104,6 @@
             href: msix-sdk/release-notes/sdk-release-notes-1.6.md
           - name: MSIX SDK Release 1.7
             href: msix-sdk/release-notes/sdk-release-notes-1.7.md
-      - name: Use the MSIX SDK to distribute a MSIX package on non-Windows 10 platforms
-        href: msix-sdk/sdk-guidance.md
 - name: Package
   items: 
     - name: Package desktop apps
