@@ -126,7 +126,7 @@ Shortcuts with arguments are not currently supported with MSIX. If we detect tha
 
 #### Install directory
 
-This is more common for those who use a secondary driver to perform app conversions. Make sure the tool knows to look at the secondary driver during conversion.
+This is more common for those who use a secondary drive to perform app conversions. If you choose to change the installation location , it changes the root of where all of the files go. This means that the MSIX Packaging tool will need to know where all these files go and will be captured during conversion. 
 
 ## Sending feedback
 
