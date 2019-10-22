@@ -108,6 +108,8 @@ Install the Nuget command line tool from this location: https://www.nuget.org/do
 nuget install Microsoft.PackageSupportFramework
 ```
 
+Alternatively, you can rename the package extension to .zip and unzip it. All the files you need will be under the /bin folder.
+
 #### Get the package by using Visual Studio
 
 In Visual Studio, right-click your solution or project node and pick one of the Manage Nuget Packages commands.  Search for **Microsoft.PackageSupportFramework** or **PSF** to find the package on Nuget.org. Then, install it.

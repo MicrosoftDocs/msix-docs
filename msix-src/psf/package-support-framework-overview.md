@@ -12,6 +12,12 @@ ms.custom: RS5
 
 The Package Support Framework is an open source kit that helps you apply fixes to your existing win32 application when you don't have access to the source code, so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
+Here are some common examples where you can find the Package Support Framework useful:
+
+* Your app can't find some DLLs when launched. You may need to set your current working directory. You can learn about the required current working directory in the original shortcut before you converted to MSIX.
+* The app writes into the install folder. You will typically see it by "Access Denied" errors in [Process Monitor](https://docs.microsoft.com/windows/msix/psf/package-support-framework).
+* Your app needs to pass parameters to the executable on launch. You can learn more about how to identify this issue [here](package-support-framework.md#identify-packaged-application-compatibility-issues) and learn more about the available configurations [here](https://github.com/microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher).
+
 To create the Package Support Framework, we leveraged the [Detours](https://www.microsoft.com/en-us/research/project/detours) technology which is an open source framework developed by Microsoft Research (MSR) and helps with API redirection and hooking.
 
 This framework is open source, lightweight, and you can use it to address application issues quickly. It also gives you the opportunity to consult with the community around the globe, and to build on top of the investments of others.
