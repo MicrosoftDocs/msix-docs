@@ -32,13 +32,13 @@ To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://w
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](https://docs.microsoft.com/en-us/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
  
-## Latest public version - 1.2019.701.0
+## Latest public version - 1.2019.1018.0
 
 ### New features:
-
-- Ability to restart during conversion
-- Allow specifying a default certificate for signing
-- Allow specifying exit codes for restarts
+- Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
+- The **Package editor** now supports the ability to select multiple items on which to perform an action.
+- Right-click to edit an MSIX package is now supported.
+- Ux improvements for the packaging workflow.
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
