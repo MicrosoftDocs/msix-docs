@@ -10,7 +10,10 @@ ms.custom: Vibranium
 
 # MSIX Packaging Tool Release Notes
 
-## Version 1.2019.926.0 - Public release
+## Version 1.2019.1018.0 public release
+- Updated strings for public release
+
+## Version 1.2019.926.0 
 - Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
 - The **Package editor** now supports the ability to select multiple items on which to perform an action.
 - Right-click to edit an MSIX package is now supported.
