@@ -30,7 +30,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Version 1.2019.926.0 (public)
+### Version 1.2019.1018.0 (public)
 - Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
 - The **Package editor** now supports the ability to select multiple items on which to perform an action.
 - Right-click to edit an MSIX package is now supported.
