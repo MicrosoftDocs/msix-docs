@@ -143,4 +143,4 @@ The best way to send your feedback is through the [**Feedback Hub**](https://www
 You can also send us feedback directly from the MSIX Packaging Tool by going to the **Feedback** tab under **Settings**. 
 
 > [!NOTE]
-> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert your package, you may want to keep your VM on and in its current state for 24 hours after conversion.
+> It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert your package, you may want to keep your VM on and in its current state for 24 hours after conversion. Also, you can manually attach conversion logs to the feedback.
