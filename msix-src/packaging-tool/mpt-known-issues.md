@@ -19,7 +19,7 @@ If you have opted in to our [Insider Program](insider-program.md), make sure you
 - Go to the **About** section in the MSIX Packaging Tool to view which version you are on.
 
 - Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed. Make sure the MSA that's signed up for flighting is the account that is signed into the Microsoft Store. 
-- Manually update the MSIX Packaging tool through the Microsoft Store on your development computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
+- Manually update the MSIX Packaging tool through the Microsoft Store on your computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
 - To install the MSIX Packaging Tool for offline use, follow [these instructions](#getting-the-msix-packaging-tool-for-offline-use) to ensure you get the latest app through our offline process.
 
 If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram).
