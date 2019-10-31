@@ -1,7 +1,7 @@
 ---
 ms.assetid: df4d227c-21f9-4f99-9e95-3305b149d9c5
 title: App streaming install
-description: App streaming install enables you to specify which parts of your app you would like the Microsoft Store to download first. When the essential files of the app are downloaded first, the user can launch and interact with the app while the rest of it finishes downloading in the background.
+description: App streaming install enables you to specify which parts of your app you would like the Microsoft Store to download first. 
 ms.date: 07/02/2019
 author: dianmsft
 ms.author: diahar

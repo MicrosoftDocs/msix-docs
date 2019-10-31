@@ -33,7 +33,7 @@ Here are the locations of each executable.
 * 32-bit computer:
   * 32-bit executable: %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
 
-For more information about PowerShell execution policies, see [this article](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6).
+For more information about PowerShell execution policies, see [this article](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6).
 
 Make sure to include the following "StartingScriptWrapper.ps1" in your package, and locate it in the same folder where your executable is. You can copy it from the package support framework NuGet package (https://www.nuget.org/packages/Microsoft.PackageSupportFramework/).
 

@@ -1,7 +1,7 @@
 ---
 layout: LandingPage
 title: MSIX videos
-description: conference talks by msix team on topics related to MSIX
+description: This article presents conference talks by the MSIX engineering team about topics related to MSIX packaging and deployment.
 ms.date: 09/07/2018
 ms.topic: landing-page
 keywords: windows 10, uwp

@@ -1,5 +1,5 @@
 ---
-Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monetization.
+description: This article describes the end-to-end process for creating a modern Windows 10 app package for your existing Windows Forms, WPF, or Win32 app or game. 
 title: Package desktop applications
 ms.date: 07/29/2019
 ms.topic: article

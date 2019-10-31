@@ -1,12 +1,13 @@
 ---
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
-description: Describes known issues and provides troubleshooting tips for the MSIX Packaging Tool. 
+description: Describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. 
 ms.date: 10/04/2019
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
+
 # Known issues and troubleshooting tips for the MSIX Packaging Tool
 
 This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool.
@@ -79,7 +80,7 @@ This problem occurs when the package contains a binary file that has a corrupt c
 
 #### Device Guard signing
 
-Make sure to follow [these steps](https://docs.microsoft.com/en-us/windows/msix/package/signing-package-device-guard-signing) and that you are assigning the appropriate roles in the Microsoft Store for Business.
+Make sure to follow [these steps](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing) and that you are assigning the appropriate roles in the Microsoft Store for Business.
 
 #### Expired certificate
 
@@ -131,7 +132,7 @@ This is more common for those who use a secondary drive to perform app conversio
 
 ## Sending feedback
 
-The best way to send your feedback is through the [**Feedback Hub**](https://www.microsoft.com/en-us/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab).
+The best way to send your feedback is through the [**Feedback Hub**](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab).
 
 1. Open **Feedback Hub** or type **Windows + F**.
 2. Provide a title and necessary steps to reproduce the issue.

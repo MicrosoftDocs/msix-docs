@@ -1,6 +1,6 @@
 ---
 title: Related App Installer file documentation
-description: Lists information about App Installer file schema and APIs.
+description: This article provides links to documentation about the App Installer file schema and related APIs provided by the Windows SDK.
 ms.date: 2/20/2019
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API, XML, schema
@@ -23,4 +23,4 @@ The [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deplo
 
 ## App Installer file schema
 
-For more information about how to manually format an App Installer file, see [App installer file schema reference](https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/app-installer-file).
+For more information about how to manually format an App Installer file, see [App installer file schema reference](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file).

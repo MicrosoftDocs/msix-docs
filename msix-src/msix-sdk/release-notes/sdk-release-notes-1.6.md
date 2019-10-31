@@ -1,6 +1,6 @@
 ---
 title: MSIX SDK Release 1.6 release notes
-description: Release notes for MSIX SDK release 1.6
+description: This article provides release notes for version 1.6 of the MSIX SDK. This SDK is available on GitHub.
 ms.date: 02/06/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

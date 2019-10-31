@@ -1,6 +1,6 @@
 ---
 title: How Group Policy work with MSIX packaged apps
-description: Describes how Group Policy works with apps Converted to MSIX
+description: This article describes how apps that are packaged in MSIX packages can leverage group policy similar to any other installer types. 
 ms.date: 04/12/2019
 ms.topic: article
 keywords: msix
