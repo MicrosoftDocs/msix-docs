@@ -1,5 +1,5 @@
 ---
-Description: This article describes signing requirements for Windows 10 apps.
+description: This article describes signing requirements for Windows 10 apps. Signing is a required step in the process of creating an app package that can be deployed.
 title: Sign a Windows 10 app package 
 ms.date: 07/03/2019
 ms.topic: article
@@ -38,4 +38,4 @@ Windows 10 allows users to select the mode in which to run their device on in th
 
 **Microsoft Store apps** is the most secure as it only allows the installation of apps from the Microsoft Store. Apps in the Microsoft Store go through certification process to ensure that the apps are safe for use. 
 
-**Sideload apps**  and **Developer mode** are more permissive of apps that are signed by other certificates as long as those certificates are trusted and chain to one of the trusted roots on the device. Only select Developer mode if you are a developer and building or debugging Windows 10 apps. More info about Developer mode and what it provides can be found [here](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development). 
+**Sideload apps**  and **Developer mode** are more permissive of apps that are signed by other certificates as long as those certificates are trusted and chain to one of the trusted roots on the device. Only select Developer mode if you are a developer and building or debugging Windows 10 apps. More info about Developer mode and what it provides can be found [here](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). 

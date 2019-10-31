@@ -1,6 +1,6 @@
 ---
 title: Create an App Installer file manually
-description: This article describes how to install a related set via App Installer. We will also go through the steps to construct a *.appinstaller file that will define your related set.
+description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
 ms.date: 1/4/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
@@ -210,7 +210,7 @@ In the dependencies element, you can specify the required framework packages for
 
 ### Step 6: Add Update setting
 
-The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](https://docs.microsoft.com/en-us/uwp/schemas/appinstallerschema/element-onlaunch)
+The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-onlaunch)
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>

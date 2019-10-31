@@ -1,11 +1,12 @@
 ---
-Description: Test your app for Windows 10 in S mode.
+description: This article describes how to test your Windows app to ensure that it will operate correctly on devices that run Windows 10 in S mode.
 title: Test your Windows app for Windows 10 S
 ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10 S, uwp, msix
 ms.localizationpriority: medium
 ---
+
 # Test your Windows app for Windows 10 in S mode
 
 You can test your Windows app to ensure that it will operate correctly on devices that run Windows 10 in S mode. In fact, if you plan to publish your app to the Microsoft Store, you must do this because it is a store requirement. To test your app, you can apply a Device Guard Code Integrity policy on a device that is running Windows 10 Pro.

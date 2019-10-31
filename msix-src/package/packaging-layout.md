@@ -1,6 +1,6 @@
 ---
 title: Package creation with the packaging layout
-description: The packaging layout is a single document that describes packaging structure of the app. It specifies the bundles of an app (primary and optional), the packages in the bundles, and the files in the packages.
+description: The packaging layout is a single document that describes packaging structure of the app, such as the bundles of an app (primary and optional).
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, packaging, package layout, asset package

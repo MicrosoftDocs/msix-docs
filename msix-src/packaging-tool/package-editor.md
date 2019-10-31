@@ -1,6 +1,6 @@
 ---
 title: Modify a package using Package editor
-description: Use Package Editor to modify package information
+description: This article describes how to use Package Editor in the MSIX Package Toolto modify package information such as the properties in the manifest.
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp

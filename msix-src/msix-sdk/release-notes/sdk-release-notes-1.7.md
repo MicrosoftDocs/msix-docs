@@ -1,6 +1,6 @@
 ---
 title: MSIX SDK Release 1.7 release notes
-description: Release notes for MSIX SDK release 1.7
+description: This article provides release notes for version 1.7 of the MSIX SDK. This SDK is available on GitHub.
 ms.date: 08/05/2019
 ms.topic: article
 keywords: windows 10, uwp, msix

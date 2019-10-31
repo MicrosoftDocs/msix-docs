@@ -1,6 +1,6 @@
 ---
 title: Best practices for the MSIX Packaging Tool
-description: Best practices for the MSIX Packaging Tool 
+description: This article covers best practices for repackaging your app to MSIX and using the MSIX Packaging Tool.
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

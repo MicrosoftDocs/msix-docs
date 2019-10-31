@@ -1,6 +1,6 @@
 ---
 title: Edit icons and assets using the MSIX Packaging Tool
-description: Describes how to edit icons and assets using the MSIX Packaging Tool.
+description: Describes how to edit icons and assets during the app conversion process while using the MSIX Packaging Tool.
 ms.date: 06/27/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
@@ -28,4 +28,4 @@ To modify your app package assets after you create your MSIX package, open your 
 - To add a new asset file, right-click the assets folder, and select **Add file** or **Add folder**.
 - To delete an existing asset file, right-click the file and select **Delete**.
 
-To verify your asset changes, go to the **Package information** page and open your manifest file. Confirm that the assets you added or removed are represented in the [uap:VisualElements](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements) node. The manifest reference needs to be specific, but the asset files can be named whatever you like. 
+To verify your asset changes, go to the **Package information** page and open your manifest file. Confirm that the assets you added or removed are represented in the [uap:VisualElements](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements) node. The manifest reference needs to be specific, but the asset files can be named whatever you like. 
