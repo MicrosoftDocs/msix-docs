@@ -80,10 +80,12 @@ If you are distributing your app via the Microsoft Store, Visual Studio can asso
 
 ## Create an app package upload file
 
-To distribute an app through Microsoft Store you must create an app package (.appx or .msix), app bundle (.appxbundle or .msixbundle), or an app package upload file (.appxupload or .msixupload) and [submit the packaged app to Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an app package upload file. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles.
+To distribute an app through Microsoft Store you must create an app package (.appx or .msix), app bundle (.appxbundle or .msixbundle), or an app package upload file (.appxupload or .msixupload) and [submit the packaged app to Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions). 
 
->[!NOTE]
+> [!NOTE]
 > If you want to create an app package (.appx or .msix) or app bundle (.appxbundle or .msixbundle) manually, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
+
+Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles, see [create your app package upload file manually](#create-your-app-package-upload-file-manually).
 
 ### Create your app package upload file using Visual Studio
 
@@ -129,9 +131,12 @@ To distribute an app through Microsoft Store you must create an app package (.ap
     - One or more app packages (.msix or .appx) or an app bundle (.msixbundle or .appxbundle).
     - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](https://docs.microsoft.com/windows/uwp/publish/health-report) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
 
-2. Zip the folder.
+2. Select all the files within the folder, right-click, and select Send to -> Compressed (zipped) folder.
 
-3. Change the zipped folder extension name from .zip to .msixupload or .appxupload.
+> [!NOTE]
+> This should create a zip file with the files above within the root of the zipfile.
+
+3. Change the new zip file's extension name from .zip to .msixupload or .appxupload.
 
 ## Validate your app package
 
