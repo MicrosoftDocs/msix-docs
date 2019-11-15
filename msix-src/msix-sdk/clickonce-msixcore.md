@@ -30,7 +30,23 @@ To get started go to the [Azure portal page](https://portal.azure.com/) and foll
 Once the web app had been created, click on the app. Under **Development Tools**, click on **App Service Editor**
 In the editor, there is a default **hostingstart.html** file. Right-click in the empty space of file explorer and select **Upload Files** to begin uploading your app packages. Right click in the empty space of the file explorer panel and select **New Files** to create a new file. Name the file what you want your default html page to be.
 ### Configure the web app for app package MIME types
-
+Add a new file to the web app named: Web.config. Open the Web.config file from the explorer and add the following lines.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<system.webServer>
+	<!--This is to allow the web server to serve resources with the appropriate file extensions-->
+		<staticContent>
+			<mimeMap fileExtension=".appx" mimeType="application/appx" />
+			<mimeMap fileExtension=".msix" mimeType="application/msix" />
+			<mimeMap fileExtension=".appxbundle" mimeType="application/appxbundle" />
+			<mimeMap fileExtension=".msixbundle" mimeType="application/msixbundle" />
+			<mimeMap fileExtension=".appinstaller" mimeType="application/appinstaller" />
+		</staticContent>
+	
+	</system.webServer>
+</configuration>
+```
 
 
 
