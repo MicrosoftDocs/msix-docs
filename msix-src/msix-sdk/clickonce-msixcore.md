@@ -20,4 +20,8 @@ To get your app ready for bootstrapping with the MSIX Core installer, you’ll n
 ## Azure 
 ### Prerequisite
 You will need an Azure subscription. To obtain one, visit the [Azure account page](https://azure.microsoft.com/en-us/free/)
+### Create an Azure Web App
+To get started go to the [Azure portal page](https://portal.azure.com/) and follow the steps below. 
+1. Click Create a Resource
+2. Click Web and select Web App
 
