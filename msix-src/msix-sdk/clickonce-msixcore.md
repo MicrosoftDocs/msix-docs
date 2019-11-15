@@ -47,6 +47,41 @@ Add a new file to the web app named: Web.config. Open the Web.config file from t
 	</system.webServer>
 </configuration>
 ```
+Now you are done hosting your web app on Azure. 
+
+## Internet Information Services (IIS)
+### Prerequisite
+**Internet Information Services** is a Windows feature that can be installed via the **Start** menu. In **Start** menu search for **Turn Windows features on or off**. Find and select **Internet Information Services**. You will also need to install **ASP.NET 4.5** or greater. To install it, locate **Internet Information Services** -> **World Wide Web Services** -> **Application Development Features**. Select a version of **ASP.NET** that is greater than or equal to **ASP.NET 4.5**.
+
+Installing Visual Studio 2017 (or greater) and Web Development Tools are required. If you already have VS 2017, ensure that you have the following workloads: ASP.NET and Web development. Otherwise, [install Visual Studio 2017 from here](https://docs.microsoft.com/visualstudio/install/install-visual-studio). 
+
+### Build a web app
+Launch Visual Studios as **Administrator** and create a new **Visual C# Web Application** project with an empty project template.
+
+### Configure IIS with our Web App
+From the Solution Explorer, right click on the root project and select **Properties**. In the web app properties, select the **Web** tab. In the **Servers** section, choose **Local IIS** from the dropdown menu and click **Create Virtual Directory**.
+
+### Add an app package to a web application
+Add the app package that you are going to distribute into the web application. To create the folder in Visual Studio, right click on the project node in **Solution Explorer**, select* **Add** -> **New Folder** and name it **packages**. To add app packages to the folder, right click on the packages folder and select **Add** -> **Existing Item** and browse to the app package location.
+
+### Create a Web Page 
+Create an HTML page or any other web app as required per your needs. Just add the link of your new setup.exe.
+
+### Configure the web app for app package MIME types
+Open the **Web.config** file from the solution explorer and add the following lines within the <configuration> element.
+```xml
+<system.webServer>
+	<!--This is to allow the web server to serve resources with the appropriate file extensions-->
+	<staticContent>
+		<mimeMap fileExtension=".appx" mimeType="application/appx" />
+		<mimeMap fileExtension=".msix" mimeType="application/msix" />
+		<mimeMap fileExtension=".appxbundle" mimeType="application/appxbundle" />
+		<mimeMap fileExtension=".msixbundle" mimeType="application/msixbundle" />
+		<mimeMap fileExtension=".appinstaller" mimeType="application/appinstaller" />
+	</staticContent>
+</system.webServer>
+```
+Now you are done with setting up your web app with IIS
 
 
 
