@@ -103,5 +103,15 @@ Navigate to **Tools** and select **Default HTTP Headers.** Default HTTP Headers 
 **Header name**: Content-Type
 **Header value**: application/msix
 ```
+# Set Up - MSIX Core With ClickOnce
+[Download](https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe) the MSIX Core provided ClickOnce setup.exe. All the source code can be found on GitHub. 
+
+## Run URL command to create new setup.exe
+Navigate to the directory where the setup.exe was downloaded, then run this command: setup-exe - url=<location of your msix in the webservice> 
+
+## Sign the application 
+Since the command created a new setup.exe, you will need to sign the app again here to verify that you’re a trusted publisher of the application and establishes the integrity of the application. You can use the command line [SignTool](https://docs.microsoft.com/en-us/dotnet/framework/tools/signtool-exe) and provide your certificate.
+
+
 
 
