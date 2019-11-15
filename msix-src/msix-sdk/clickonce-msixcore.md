@@ -8,4 +8,15 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# MSIX Core
+# Create a ClickOnce Solution MSIX Core
+For those of you who have existing Win32 apps and want to support your customers that have earlier versions of Windows, you can leverage MSIXCore boostrapper which will create an application using ClikcOnce. This will allow your users to download a setup.exe and install the MSIX app through the MSIXCore Installer. 
+
+# Set up 
+To get your app ready for bootstrapping with the MSIX Core installer, you’ll need to host your app package on a web server. This article will help you with the specifics of setting up a web app on Azure, Internet Information Services (IIS), or Amazon Web Services (AWS). This article will go through these three seperate options. 
+1. Azure 
+2. Internet Information Services 
+3. Amazon Web Services (AWS)
+
+## Azure 
+
+
