@@ -22,6 +22,15 @@ To get your app ready for bootstrapping with the MSIX Core installer, you’ll n
 You will need an Azure subscription. To obtain one, visit the [Azure account page](https://azure.microsoft.com/en-us/free/)
 ### Create an Azure Web App
 To get started go to the [Azure portal page](https://portal.azure.com/) and follow the steps below. 
-1. Click Create a Resource
-2. Click Web and select Web App
+1. Click **Create a Resource**
+2. Click **Web** and select **Web App**
+3. Under **Instance Details** create a unique app name and select the approperiate settings for your app. For example, you will need to choose between **Code or Docker Container** and the **Runtime Stack**. Otherwise, leave everything else default. 
+4. Click **Create** and finish the wizard. 
+### Hosting the app package and the web page
+Once the web app had been created, click on the app. Under **Development Tools**, click on **App Service Editor**
+In the editor, there is a default **hostingstart.html** file. Right-click in the empty space of file explorer and select **Upload Files** to begin uploading your app packages. Right click in the empty space of the file explorer panel and select **New Files** to create a new file. Name the file what you want your default html page to be.
+### Configure the web app for app package MIME types
+
+
+
 
