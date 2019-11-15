@@ -112,6 +112,29 @@ Navigate to the directory where the setup.exe was downloaded, then run this comm
 ## Sign the application 
 Since the command created a new setup.exe, you will need to sign the app again here to verify that you’re a trusted publisher of the application and establishes the integrity of the application. You can use the command line [SignTool](https://docs.microsoft.com/en-us/dotnet/framework/tools/signtool-exe) and provide your certificate.
 
+## Distribute the new setup.exe to your users. 
+You can now point to the new setup.exe with a link or download button on their website. MSIX Core is targeted towards consumers on Windows 10 1709 or lower. The [App Installer](https://docs.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web) is the ideal installation process for MSIX packages on Windows >= 1709. App Installer optimizes for disk space on the consumer side and can directly install apps from http locations. MSIX Core will detect if a consumer is on Windows >= 1709 and redirect them to App Installer, but ideally, developers would detect what version of Windows a consumer is running on before any downloads so consumers don’t have to download MSIX Core Installer and the entire app package. To do so, you can add JavaScript to your web page: 
 
+```javascript
+<html>
+<header>
+	<meta charset="utf-8" />
+	<title %Title of installation webpage% </title>
+</header>
+<script type="text/Javascript">
+	function installRedirect(){
+		if(window.navigator.userAgent.indexOf("Windows NT 6.2") != -1 || window.navigator.userAgent.indexOf("Windows NT 6.1") != -1){
+			return "%PATH_TO_YOUR_MODIFIED_SETUP.EXE%";
+		}
+	}
+</script>
+<body> 
+	<a href="installRedirect()"> %Message to prompt downloading of your app% </a>
+</body>
+</html>
+```
+On Edge, you can just call the [getHostEnvironmentValue()](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399%28v%3dvs.85%29) method from the platform API and “os-build” in the return value will give you the exact OS version the consumer has. From there, you can then prompt the appropriate installation process: MSIX Core for Windows <1709, App Installer for Windows >= 1709.
 
+# End User Experience 
+Users simply download the setup.exe from the developer’s webpage. If they don’t have the MSIX Core Installer installed, then when the user clicks on the setup.exe, the user would be shown the ClickOnce prompt and click on **Install** to install the MSIX Core Installer. The installer automatically launches and shows the install screen for the MSIX package specified in the developer’s query string so the users can install the app. If the user already has MSIX Core Installer installed, then when they double click on the setup.exe, MSIX Core Installer automatically launches and shows the install screen for the MSIX package specified in the query string for users to install the app. 
 
