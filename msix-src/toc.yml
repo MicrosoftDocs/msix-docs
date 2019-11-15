@@ -39,7 +39,11 @@
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
     - name: MSIX Core
-      href: msix-sdk/msixcore.md
+      items:
+        - name: Overview
+          href: msix-sdk/msixcore.md
+        - name: Create a ClickOnce solution with MSIX Core
+          href: msix-sdk/clickonce-msixcore.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
 - name: Tools
