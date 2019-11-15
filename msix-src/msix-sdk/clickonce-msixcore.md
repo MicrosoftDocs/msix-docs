@@ -83,5 +83,25 @@ Open the **Web.config** file from the solution explorer and add the following li
 ```
 Now you are done with setting up your web app with IIS
 
+##  Amazon Web Services (AWS)
+### Prerequisite
+You will need to have an AWS membership. For more information visit, [AWS account details](https://aws.amazon.com/free/)
+### Create an Amazon S3 bucket and Upload your MSIX Package(s) and web page(s)
+Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing and analyzing data. S3 buckets are a convenient way to host Windows 10 app packages and web pages for distribution.
+
+After logging in to AWS with your credentials, under Services find S3.
+
+Select **Create bucket**, and enter a **Bucket name** for your website. Follow the dialog prompts for setting properties and permissions. To ensure that your Windows 10 app can be distributed from your website, enable **Read** and **Write** permissions for your bucket and select Grant public read access to this bucket. Click Create bucket to finish this step.
+
+When you are finished, upload your MSIX package(s) and web page(s) to an S3 Bucket 
+
+### Configure the web app for app package MIME types
+Navigate to **Tools** and select **Default HTTP Headers.** Default HTTP Headers dialog will open, and click the Add button. An Add New Default HTTP Headers dialog will appear. Specify the Bucket, File Name, Header name, and Header Value, and click **Add new header.**
+```
+**Bucket name**: msix-packages
+**File name**: *.msix
+**Header name**: Content-Type
+**Header value**: application/msix
+```
 
 
