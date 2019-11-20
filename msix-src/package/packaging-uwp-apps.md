@@ -1,17 +1,17 @@
 ---
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
-title: Packaging UWP apps
-description: To distribute or sell your Universal Windows Platform (UWP) app, you need to create an app package for it.
+title: Packaging MSIX apps
+description: To distribute or sell your Windows app, you need to create an app package for it.
 ms.date: 07/18/2019
 ms.topic: article
-keywords: windows 10, uwp
+keywords: windows 10, uwp, msix
 f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
 ms.localizationpriority: medium
 ---
 
-# Package a UWP app with Visual Studio
+# Package an MSIX app with Visual Studio
 
-To sell your Universal Windows Platform (UWP) app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a UWP app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
+To sell your Windows app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a MSIX app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
 In Windows 10, you can submit an app package, app bundle, or a complete app package upload file to [Partner Center](https://partner.microsoft.com/dashboard). Of these options, submitting an app package upload file will provide the best experience.
 
@@ -46,6 +46,7 @@ After you have completed the steps above, you are ready to distribute your app. 
 
 3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected. Some common debugging issues that can happen with .NET Native are explained in more detail in [Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
 
+
 ## Configure an app package
 
 The app manifest file (Package.appxmanifest) is an XML file that contains the properties and settings required to create your app package. For example, properties in the app manifest file describe the image to use as the tile of your app and the orientations that your app supports when a user rotates the device.
@@ -60,14 +61,15 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
 3. Now you can decide how to configure your app. Each tab contains information that you can configure about your app and links to more information if necessary.
 
+
     ![Manifest designer in Visual Studio](images/packaging-screen1.jpg)
 
-    Check that you have all the images that are required for a UWP app on the **Visual Assets** tab.
+    Check that you have all the images that are required for an app on the **Visual Assets** tab.
 
-    From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All UWP apps must be signed with a certificate.
+    From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
     > [!NOTE]
-    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
+    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in MSIX or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
 
     > [!IMPORTANT]
     > If you're publishing your app in Microsoft Store, your app will be signed with a trusted certificate for you. This allows the user to install and run your app without installing the associated app signing certificate.
@@ -214,7 +216,7 @@ The submission will start after the WACK test have finished. You can track the s
 
 ## Sideload your app package
 
-With UWP app packages, apps aren't installed to a device as they are with desktop apps. Typically, you download UWP apps from Microsoft Store, which also installs the app to your device for you. Apps can be installed without being published in the Store (sideloading). This lets you install and test apps using the app package file that you created. If you have an app that you don’t want to sell in the Store, like a line-of-business (LOB) app, you can sideload that app so that other users in your company can use it.
+With MSIX app packages, apps aren't installed to a device as they are with desktop apps. Typically, you download MSIX packaged apps from Microsoft Store, which also installs the app to your device for you. Apps can be installed without being published in the Store (sideloading). This lets you install and test apps using the app package file that you created. If you have an app that you don’t want to sell in the Store, like a line-of-business (LOB) app, you can sideload that app so that other users in your company can use it.
 
 Before you can sideload your app on a target device, you must [enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 
