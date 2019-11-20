@@ -9,11 +9,12 @@ ms.localizationpriority: medium
 
 # Apply runtime fixes to an MSIX package by using the Package Support Framework
 
-The Package Support Framework is an open source kit that helps you apply fixes to your existing win32 application when you don't have access to the source code, so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
+The [Package Support Framework](package-support-framework-overview.md) is an open source kit that helps you apply fixes to your existing desktop application (without modifying the code) so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
-To learn more, see [Package Support Framework](package-support-framework-overview.md).
+This article helps you to identify application compatibility issues, and to find, apply, and extend runtime fixes that address them. Sections of this article are intended for different roles:
 
-This guide will help you to identify application compatibility issues, and to find, apply, and extend runtime fixes that address them.
+* IT professionals or administrators: The most relevant sections are [Identify packaged application compatibility issues](#identify-packaged-application-compatibility-issues), [Find a runtime fix](#find-a-runtime-fix), and [Apply a runtime fix](#apply-a-runtime-fix).
+* Developers: Although developers may find the entire article useful, the most relevant sections are [Debug, extend, or create a runtime fix](#debug-extend-or-create-a-runtime-fix), [Create a runtime fix](#create-a-runtime-fix), and [Other debugging techniques](#other-debugging-techniques).d
 
 <a id="identify" />
 
@@ -101,11 +102,12 @@ You can get the PSF Nuget package by using the standalone Nuget command line too
 
 #### Get the package by using the command line tool
 
-Install the Nuget command line tool from this location: https://www.nuget.org/downloads. Then, from the Nuget command line, run this command:
+Install the Nuget command line tool from this location: https://www.nuget.org/downloads. Then, from the Nuget command line, run the command below; 
 
 ```powershell
 nuget install Microsoft.PackageSupportFramework
 ```
+Alternativly, you can rename it to .zip and unzip it, all the files you need will be under the /bin folder.
 
 #### Get the package by using Visual Studio
 
@@ -113,7 +115,7 @@ In Visual Studio, right-click your solution or project node and pick one of the 
 
 ### Add the Package Support Framework files to your package
 
-Add the required 32-bit and 64-bit PSF  DLLs and executable files to the package directory. Use the following table as a guide. You'll also want to include any runtime fixes that you need. In our example, we need the file redirection runtime fix.
+Add the required 32-bit and 64-bit PSF DLLs and executable files to the package directory. Use the following table as a guide. You'll also want to include any runtime fixes that you need. In our example, we need the file redirection runtime fix.
 
 | Application executable is x64 | Application executable is x86 |
 |-------------------------------|-----------|
@@ -127,7 +129,7 @@ Your package content should now look something like this.
 
 ### Modify the package manifest
 
-Open your package manifest in a text editor, and then set the `Executable` attribute of the `Application` element to the name of the PSF launcher executable file.  If you know the architecture of your target application, select the appropriate version, PSFLauncher32.exe or PSFLauncher64.exe.  If not, PSFLauncher32.exe will work in all cases.  Here's an example.
+Open your package manifest in a text editor, and then set the `Executable` attribute of the `Application` element to the name of the PSF Launcher executable file.  If you know the architecture of your target application, select the appropriate version, PSFLauncher32.exe or PSFLauncher64.exe.  If not, PSFLauncher32.exe will work in all cases.  Here's an example.
 
 ```xml
 <Package ...>
@@ -189,11 +191,11 @@ Following is a guide for the config.json schema:
 | applications | workingDirectory | (Optional) A package-relative path to use as the working directory of the application that starts. If you don't set this value, the operating system uses the `System32` directory as the application's working directory. |
 | processes | executable | In most cases, this will be the name of the `executable` configured above with the path and file extension removed. |
 | fixups | dll | Package-relative path to the fixup, .msix/.appx  to load. |
-| fixups | config | (Optional) Controls how the fixup dl behaves. The exact format of this value varies on a fixup-by-fixup basis as each fixup can interpret this "blob" as it wants. |
+| fixups | config | (Optional) Controls how the fixup dll behaves. The exact format of this value varies on a fixup-by-fixup basis as each fixup can interpret this "blob" as it wants. |
 
 The `applications`, `processes`, and `fixups` keys are arrays. That means that you can use the config.json file to specify more than one application, process, and fixup DLL.
 
-### Package and test the App
+### Package and test the app
 
 Next, create a package.
 
@@ -339,7 +341,7 @@ Add the **PSF** Nuget package to this project by using the same guidance describ
 
 Open the property pages for the project, and in the **General** settings page, set the **Target Name** property to ``PSFLauncher32`` or ``PSFLauncher64`` depending on the architecture of your application.
 
-![PSF launcher reference](images/shim-exe-reference.png)
+![PSF Launcher reference](images/shim-exe-reference.png)
 
 Add a project reference to the runtime fix project in your solution.
 
@@ -361,14 +363,14 @@ In the packaging project, right-click the **Applications** folder, and then choo
 
 ![Add Project Reference](images/add-reference-packaging-project.png)
 
-Choose the PSF launcher project and your desktop application project, and then choose the **OK** button.
+Choose the PSF Launcher project and your desktop application project, and then choose the **OK** button.
 
 ![Desktop project](images/package-project-references.png)
 
 >[!NOTE]
-> If you don't have the source code to your application, just choose the PSF launcher project. We'll show you how to reference your executable when you create a configuration file.
+> If you don't have the source code to your application, just choose the PSF Launcher project. We'll show you how to reference your executable when you create a configuration file.
 
-In the **Applications** node, right-click the PSF launcher application, and then choose **Set as Entry Point**.
+In the **Applications** node, right-click the PSF Launcher application, and then choose **Set as Entry Point**.
 
 ![Set entry point](images/set-startup-project.png)
 
@@ -435,7 +437,7 @@ When you're done, your ``config.json`` file will look something like this.
 
 ### Debug a runtime fix
 
-In Visual Studio, press F5 to start the debugger.  The first thing that starts is the PSF launcher application, which in turn, starts your target desktop application.  To debug the target desktop application, you'll have to manually attach to the desktop application process by choosing **Debug**->**Attach to Process**, and then selecting the application process. To permit the debugging of a .NET application with a native runtime fix DLL, select managed and native code types (mixed mode debugging).  
+In Visual Studio, press F5 to start the debugger.  The first thing that starts is the PSF Launcher application, which in turn, starts your target desktop application.  To debug the target desktop application, you'll have to manually attach to the desktop application process by choosing **Debug**->**Attach to Process**, and then selecting the application process. To permit the debugging of a .NET application with a native runtime fix DLL, select managed and native code types (mixed mode debugging).  
 
 Once you've set this up, you can set break points next to lines of code in the desktop application code and the runtime fix project. If you don't have the source code to your application, you'll be able to set break points only next to lines of code in your runtime fix project.
 
@@ -508,6 +510,17 @@ if (auto configRoot = ::FixupQueryCurrentDllConfig())
     }
 }
 ```
+
+### Fixup metadata
+
+Each fixup and the PSF Launcher application has an XML metadata file that contains the following information:
+
+* Version: The version of the PSF is in MAJOR.MINOR.PATCH format according to [Sem Version 2](https://semver.org/).
+* Minimum Windows Platform: The minimum windows version required for the fixup or PSF Launcher.
+* Description: A short description of the fixup.
+* WhenToUse: Heuristics on when you should apply the fixup.
+
+For an example, see the [FileRedirectionFixupMetadata.xml](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/master/fixups/FileRedirectionFixup/FileRedirectionFixupMetadata.xml) metadata file for the redirection fixup. The metadata schema is available [here](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/master/MetadataSchema.xsd).
 
 ## Other debugging techniques
 

@@ -108,7 +108,7 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 - Provide a location to save the MSIX package.
 - The default save location is the desktop.
 - You can define the default save location in Settings menu.
-- If you'd like to continue to edit the content and properties of the package before saving the MSIX package, you can select **Package editor** and be taken to [package editor]("https://docs.microsoft.com/en-us/windows/msix/packaging-tool/package-editor")
+- If you'd like to continue to edit the content and properties of the package before saving the MSIX package, you can select **Package editor** and be taken to [package editor](https://docs.microsoft.com/windows/msix/packaging-tool/package-editor)
 - Click **Create** to create the MSIX package.
 
 After the package is created, the tool will display a pop-up window that displays the name, publisher, the save location of logs, and the save location of the newly created package. You can close this pop-up window to be redirected to the welcome page. You can also select **Package editor** to see and modify the package content and properties.
