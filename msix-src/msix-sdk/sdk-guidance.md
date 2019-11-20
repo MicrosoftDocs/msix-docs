@@ -1,6 +1,6 @@
 ---
-title: Use the MSIX SDK to distribute an MSIX package on non-Windows 10 platforms
-description: Guidance to developers who are using SDK to pack MSIX packages for cross platform use
+title: Use the MSIX SDK to distribute an MSIX package
+description: This article provides guidance to developers who are using the MSIX SDK to build MSIX packages for use on non-Windows 10 platforms.
 ms.date: 12/13/2018
 ms.topic: article
 ms.custom: RS5
@@ -215,9 +215,11 @@ In the app package manifest file, you will need to include the appropriate targe
 ```
 
 ## Platform version
+
 In the above sample manifest file, along with the platform name, there are also parameters to specify the **MinVersion** and **MaxVersionTested** These parameters are used on Windows 10 platforms. On Windows 10, the package will only be deployed on Windows 10 OS versions greater than the MinVersion. On other non-Windows 10 platforms, the MinVersion and MaxVersionTested parameters aren't used to make the declaration of whether to extract the package contents.
 
-If you would like to use the package for all platforms(Windows 10 and non-Windows 10), we recommend that you use the MinVersion and MaxVersionTested parameters to specify the Windows 10 OS Versions where you would like your app to work. So your manifest's **Dependencies** section would look like this:
+If you would like to use the package for all platforms (Windows 10 and non-Windows 10), we recommend that you use the MinVersion and MaxVersionTested parameters to specify the Windows 10 OS Versions where you would like your app to work. So your manifest's **Dependencies** section would look like this:
+
 ```xml
   <Dependencies>
     <TargetDeviceFamily Name="Platform.All" MinVersion="0.0.0.0" MaxVersionTested="0.0.0.0"/>

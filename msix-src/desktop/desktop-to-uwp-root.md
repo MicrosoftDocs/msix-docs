@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Package desktop applications (Desktop Bridge)
+# Package desktop applications (MSIX)
 
 Take your existing desktop application and add modern experiences for Windows 10 users. Then, achieve greater reach across international markets by distributing it through the Microsoft Store. You can monetize your application in much simpler ways by leveraging features built right into the Store. Of course, you don't have to use the Store. Feel free to use your existing channels.
 
-When you create a package for your desktop application, your application will get an identity and with that identity, your desktop application has access to Windows Universal Platform (UWP) APIs. You can use them to light up modern and engaging experiences such as live tiles and notifications. Use simple conditional compilation and runtime checks to run UWP code only when your application runs on Windows 10.
+When you create an MSIX package for your desktop application, your application will get an identity and with that identity, your desktop application has access to Windows Universal Platform (UWP) APIs. You can use them to light up modern and engaging experiences such as live tiles and notifications. Use simple conditional compilation and runtime checks to run UWP code only when your application runs on Windows 10.
 
 Aside from the code that you use to light up Windows 10 experiences, your application remains unchanged and you can continue to distribute it to users on previous versions of Windows. On Windows 10, your application continues to run in full-trust user mode just like it’s doing today.
 
