@@ -16,11 +16,10 @@ You can use the Package Support Framework (PSF) to run one PowerShell script bef
 
 ## Prerequisites
 
-To enable scripts to run, you need to set the PowerShell execution policy to `Unrestricted` or `RemoteSigned`. You can do this by running one of these commands:
+To enable scripts to run, you need to set the PowerShell execution policy to `RemoteSigned`. You can do this by running this command:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
 The execution policy needs to be set for both the 64-bit PowerShell executable and the 32-bit PowerShell executable. Make sure to open each version of PowerShell and run one of the commands shown above.
