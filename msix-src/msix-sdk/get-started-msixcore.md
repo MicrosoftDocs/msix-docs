@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-## Get started with MSIX Core
+# Get started with MSIX Core
 There are multiple ways to get started with MSIX Core. The first thing to do is to ensure that your Windows device supports MSIX as an installer.
 
 To do this download the **Assets** in from our [release page](https://github.com/microsoft/msix-packaging/releases). You will have the following files: 
