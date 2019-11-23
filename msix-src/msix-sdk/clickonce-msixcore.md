@@ -48,9 +48,6 @@ Add a new file named Web.config to the web app. Open the Web.config file and add
 		<staticContent>
 			<mimeMap fileExtension=".appx" mimeType="application/appx" />
 			<mimeMap fileExtension=".msix" mimeType="application/msix" />
-			<mimeMap fileExtension=".appxbundle" mimeType="application/appxbundle" />
-			<mimeMap fileExtension=".msixbundle" mimeType="application/msixbundle" />
-			<mimeMap fileExtension=".appinstaller" mimeType="application/appinstaller" />
 		</staticContent>
 	
 	</system.webServer>
@@ -100,9 +97,6 @@ Open the **Web.config** file from the solution explorer and add the following XM
 	<staticContent>
 		<mimeMap fileExtension=".appx" mimeType="application/appx" />
 		<mimeMap fileExtension=".msix" mimeType="application/msix" />
-		<mimeMap fileExtension=".appxbundle" mimeType="application/appxbundle" />
-		<mimeMap fileExtension=".msixbundle" mimeType="application/msixbundle" />
-		<mimeMap fileExtension=".appinstaller" mimeType="application/appinstaller" />
 	</staticContent>
 </system.webServer>
 ```
@@ -129,9 +123,9 @@ Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing an
     * **Header name**: Content-Type
     * **Header value**: application/msix
 
-## Use the MSIX Core installer build the ClickOnce application
+## Use the MSIX Core installer to build the ClickOnce application
 
-Download the ClickOnce setup.exe provided by MSIX Core from [https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe](https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe). All the source code can be found on GitHub.
+Find your application application ClickOnce setup.exe. For an example, you can download the the ClickOnce setup.exe provided by MSIX Core from [https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe](https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe) from our demo. Note the current source code can be found on GitHub.
 
 ### Run URL command to create new setup.exe
 
@@ -143,28 +137,8 @@ Because the previous step created a new setup.exe, you will need to sign the app
 
 ### Distribute the application to your users
 
-You can now point to the new setup.exe with a link or download button on their website. MSIX Core is targeted towards users on Windows 10, version 1703 and earlier. The [App Installer](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web) is the ideal installation process for MSIX packages on Windows 1709 or a later version. App Installer optimizes for disk space on the consumer side and can directly install apps from HTTP locations.
+You can now point to the new setup.exe with a link or download button on their website. MSIX Core is targeted towards users on Windows 10, version 1703 and earlier. The [App Installer](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web) is the ideal installation process for MSIX packages on Windows 1709 or a later version. App Installer optimizes for disk space on the consumer side and can directly install apps from HTTP locations. MSIX Core will detect if a consumer is on Windows 1709 or a later version and redirect them to App Installer. 
 
-MSIX Core will detect if a consumer is on Windows 1709 or a later version and redirect them to App Installer. However, we recommend that you detect what version of Windows your users are running before they download your installer so they don’t have to download the MSIX Core installer and the entire app package unless it is necessary. To do so, you can add JavaScript to your web page as shown in this example.
-
-```html
-<html>
-<header>
-    <meta charset="utf-8" />
-    <title> %Title of installation webpage% </title>
-</header>
-<script type="text/Javascript">
-    function installRedirect(){
-        if(window.navigator.userAgent.indexOf("Windows NT 6.2") != -1 || window.navigator.userAgent.indexOf("Windows NT 6.1") != -1){
-            return "%PATH_TO_YOUR_MODIFIED_SETUP.EXE%";
-        }
-    }
-</script>
-<body>
-    <a href="installRedirect()"> %Message to prompt downloading of your app% </a>
-</body>
-</html>
-```
 
 On Microsoft Edge, you can call the [getHostEnvironmentValue()](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399%28v%3dvs.85%29) method and the *os-build* field in the return value will specify the OS version of the user. From there, you can then prompt the installation process to use MSIX Core (for Windows 10, version 1703 and earlier) or App Installer (for Windows 10, version 1709 and later).
 
