@@ -128,6 +128,8 @@ Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing an
 Find your application application ClickOnce setup.exe. For an example, you can download the the ClickOnce setup.exe provided by MSIX Core from [https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe](https://appinstallerdemo.azurewebsites.net/MSIXCore/setup.exe) from our demo. Note the current source code can be found on GitHub.
 
 ### Run URL command to create new setup.exe
+#### Prerequisite 
+Make sure you have followed the instructions to clone, build and publish the MSIX Core solution in Visual Studios. 
 
 Navigate to the directory where you downloaded the setup.exe file and then run this command: `setup-exe - url=<location of your msix in the webservice>`.
 
