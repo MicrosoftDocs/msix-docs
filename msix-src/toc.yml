@@ -42,7 +42,7 @@
       items:
         - name: Overview
           href: msix-sdk/msixcore.md 
-          name: Get Started
+        - name: Get Started
           href: msix-sdk/get-started-msixcore.md
         - name: ClickOnce solution with MSIX Core
           href: msix-sdk/clickonce-msixcore.md
