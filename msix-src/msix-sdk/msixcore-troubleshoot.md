@@ -16,4 +16,7 @@ Here are some common error messages that you may encounter.
 | 0x8bad0042 | This typically means that the certificate the app was signed with is not installed. To solve this install the certificate and retry| 
 | 0x80070032 | The package is not supported on the device. This can be that the device you are currently on is not one of the target device(s) the package has listed in it's manifest. To resolve this open the package and verify that the device you are on is a target device. This can also occur if the package is targeting a higher version.  | 
 
-For a full list, visit your [MSIX Core Error Code]("https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp") page. 
+For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
+
+## Running MSIX Tracing 
+Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/preview/MsixCore/Tests/msixtrace.ps1) to identify what is currently happening when installing an MSIX app with MSIX Core. 
