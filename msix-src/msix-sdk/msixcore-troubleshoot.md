@@ -19,6 +19,7 @@ Here are some common error messages that you may encounter.
 |0x8BAD0071 | This error means that you are attempting to install a bundle. MSIX Core currently does not support bundles.|
 
 The following errors occur when there is an issue with the package format. 
+
 | Error Code |Description |
 |------------|------------|
 | 0x8BAD0031 | MissingAppxSignatureP7X|
