@@ -44,7 +44,7 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application uses the Current Working Directory__. At runtime, your packaged desktop application won't get the same Working Directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
 
-<Insert note about PSF>
+You can also consider adding a [Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework) to your package if you require your app to write tot he install directory or use the Current Working Directory. 
 
 + __Your application requires UIAccess__. If your application specifies `UIAccess=true` in the `requestedExecutionLevel` element of the UAC manifest, conversion to UWP isn't supported currently. For more info, see [UI Automation Security Overview](https://msdn.microsoft.com/library/ms742884.aspx).
 
