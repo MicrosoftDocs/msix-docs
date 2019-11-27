@@ -21,7 +21,7 @@ Here are some common error messages that you may encounter.
 The following errors occur when there is an issue with the package format. 
 
 | Error Code |Description |
-|------------|------------|
+|------------|:------------|
 | 0x8BAD0031 | MissingAppxSignatureP7X|
 | 0x8BAD0032 | MissingContentTypesXML|
 | 0x8BAD0033 | MissingAppxBlockMapXML|
@@ -30,6 +30,13 @@ The following errors occur when there is an issue with the package format.
 | 0x8BAD0036 | UnknownFileNameEncoding |
 | 0x8BAD0037 | DuplicateFile | 
 
+The following errors occur when there is an issue with the certificate the package was signed with. 
+
+| Error Code |Description |
+|------------|:------------|
+| 0x8BAD0041 | SignatureInvalid| 
+| 0x8BAD0042 | CertNotTrusted|
+| 0x8BAD0043 | PublisherMismatch|
 
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
