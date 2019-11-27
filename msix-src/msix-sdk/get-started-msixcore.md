@@ -19,7 +19,7 @@ To do this download the **Assets** in from our [release page](https://github.com
 
 Take the **msixmgrSetup.msi** and deploy and install it onto your Windows Device. 
 
-If you would like to create your own MSI Core msi to support MSIX as an installer on your devices follow the steps below. 
+If you would like to create your own MSIX Core msi to support MSIX as an installer on your devices follow the steps below. 
 
 ## Using the Command Line
 The executables can also be manually deployed to a Windows 7 SP1 or higher machine without using the MSI setup project. Place the msix.dll and msixmgr.exe in the same location. 
@@ -28,6 +28,9 @@ Sample packages can be found at msix-packaging/preview/MsixCore/tests; these can
 ```
 certutil -addstore root APPX_TEST_ROOT.cer
 ```
+
+> [!NOTE]
+> Replace APPX_TEST_ROOT.cer with your own certificate when you are deploying your own MSIX packages. 
 
 Installation - Using command prompt or PowerShell, navigate to the directory that contains the executables and run the following command to install notepadplus.msix. The -quietUX parameter can also be added at the end of the command so that users don't see the installer UI.
 ```
