@@ -40,11 +40,12 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application writes to the install directory for your app__. For example, your application writes to a log file that you put in the same directory as your exe. This isn't supported, so you'll need to find another location, like the local app data store.
 
++ __Your application uses the current working directory__. At runtime, your packaged desktop application won't get the same working directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
+
+  > [!NOTE]
+  > If your app needs to write to the installation directory or use the current working directory, you can also consider adding a runtime fixup using the [Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework) to your package. For more details, see [this article](../psf/package-support-framework.md). 
+
 + __Your application installation requires user interaction__. Your application installer must be able to run silently, and it must install all of its prerequisites that aren't on by default on a clean OS image.
-
-+ __Your application uses the Current Working Directory__. At runtime, your packaged desktop application won't get the same Working Directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
-
-You can also consider adding a [Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework) to your package if you require your app to write tot he install directory or use the Current Working Directory. 
 
 + __Your application requires UIAccess__. If your application specifies `UIAccess=true` in the `requestedExecutionLevel` element of the UAC manifest, conversion to UWP isn't supported currently. For more info, see [UI Automation Security Overview](https://msdn.microsoft.com/library/ms742884.aspx).
 
