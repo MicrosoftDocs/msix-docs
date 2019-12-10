@@ -30,6 +30,16 @@ The following errors occur when there is an issue with the package format.
 | 0x8BAD0036 | UnknownFileNameEncoding |
 | 0x8BAD0037 | DuplicateFile | 
 
+The following errors are related to file issues
+ | Error Code |Description |
+|------------|:------------|
+| 0x8BAD0001 | FileOpen|
+| 0x8BAD0002 | FileSeek|
+| 0x8BAD0003 | FileRead|
+| 0x8BAD0003 | FileWrite|
+| 0x8BAD0004 | FileCreateDirectory  |
+| 0x8BAD0005 | FileSeekOutOfRange  |
+
 The following errors occur when there is an issue with the certificate the package was signed with. 
 
 | Error Code |Description |
@@ -37,6 +47,37 @@ The following errors occur when there is an issue with the certificate the packa
 | 0x8BAD0041 | SignatureInvalid| 
 | 0x8BAD0042 | CertNotTrusted|
 | 0x8BAD0043 | PublisherMismatch|
+
+Other issues you may encounter
+
+| Error Code |Description |
+|------------|:------------|
+| 0x8BAD0011 | ZipCentralDirectoryHeader|
+| 0x8BAD0012 | ZipLocalFileHeader|
+| 0x8BAD0013 | Zip64EOCDRecord|
+| 0x8BAD0014 | Zip64EOCDLocator |
+| 0x8BAD0015 | ZipEOCDRecord |
+| 0x8BAD0016 | ZipHiddenData |
+| 0x8BAD0017 | ZipBadExtendedData | 
+
+| Error Code |Description |
+|------------|:------------|
+| 0x8BAD0051 | BlockMapSemanticError|
+| 0x8BAD0052 | BlockMapInvalidData|
+
+| Error Code |Description |
+|------------|:------------|
+| 0x8BAD0061 | AppxManifestSemanticError |
+| 0x8BAD0082 | DeflateInitialize |
+| 0x8BAD0081 | DeflateWrite |
+| 0x8BAD0083 | DeflateRead  |
+
+| Error Code |Description |
+|------------|:------------|
+| 0x8BAD1001 | XmlWarning  |
+| 0x8BAD1002 | XmlError|
+| 0x8BAD1003 | XmlFatal |
+| 0x8BAD1004 | XmlInvalidData |
 
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
