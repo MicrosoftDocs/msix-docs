@@ -13,13 +13,14 @@ ms.custom: "RS5, seodec18"
 You may encounter some issues while installing .msix packages with MSIX Core on various versions of Windows. This article lists error codes and troubleshooting tips to use. 
 
 ## Error codes 
-Here are some common error messages that you may encounter. 
+Here are common error messages that you may encounter. 
 
 | Error Code |Description |
 |------------|------------|
 | 0x8BAD0042 | This typically means that the certificate the app was signed with is not installed. To solve this install the certificate and retry| 
-| 0x80070032 | The package is not supported on the device. This can be that the device you are currently on is not one of the target device(s) the package has listed in it's manifest. To resolve this open the package and verify that the device you are on is a target device. This can also occur if the package is targeting a higher version.  | 
+| 0x80070032 | The package contains comments that MSIX Core does not support. For example, some functionalities of package support framework is not supported. These are package support framework that calls a script that runs at the end of the installation, scripts that are set to run ones equals to false or badly formatted package support frameworks. | 
 |0x8BAD0071 | This error means that you are attempting to install a bundle. MSIX Core currently does not support bundles.|
+
 
 The following errors occur when there is an issue with the package format. 
 
@@ -83,7 +84,22 @@ Other issues you may encounter
 | 0x8BAD1003 | XmlFatal |
 | 0x8BAD1004 | XmlInvalidData |
 
+To search for other error codes go [here](https://docs.microsoft.com/en-us/windows/win32/debug/system-error-codes). 
+
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
 ## Running MSIX Tracing 
-Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/preview/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation
+Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/preview/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation.
+
+Use the following commands
+```
+msixtrace.ps1 -wait
+``` 
+Follow the prompt the script present to generate the logs. Or use the following commands.  
+```
+msixtrace.ps1 -start
+```
+Install the MSIX package. When complete finish with the following command. 
+```
+msixtrace.ps1 -stop
+```
