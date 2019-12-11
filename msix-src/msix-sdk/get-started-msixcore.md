@@ -32,7 +32,7 @@ certutil -addstore root APPX_TEST_ROOT.cer
 > [!NOTE]
 > Replace APPX_TEST_ROOT.cer with your own certificate when you are deploying your own MSIX packages. 
 
-Installation - Using command prompt or PowerShell, navigate to the directory that contains the executables and run the following command to install notepadplus.msix. The -quietUX parameter can also be added at the end of the command so that users don't see the installer UI.
+Installation - Using command prompt or PowerShell, navigate to the directory that contains the executables and run the following command to install notepadplus.msix. The -quietUX parameter can also be added at the end of the command so that users don't see the installer UI. For example: 
 ```
 msixmgr.exe -AddPackage C:\SomeDirectory\notepadplus.msix
 ```
@@ -50,7 +50,7 @@ msixmgr.exe -RemovePackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
 
 The following commands depend on ApplyACLs.dll and msix.dll. Please place these next to msixmgr.exe.
 
-Unpacking - Extracts contents of .appx, .msix, .appxbundle, or .msixbundle into a folder. Folder will be named according to the package full name of the package and will be placed in the given destination directory. The -applyacls option can be optionally specified to apply ACLs to the resulting folder.
+Unpacking - Extracts contents of .msix into a folder. Folder will be named according to the package full name of the package and will be placed in the given destination directory. The -applyacls option can be optionally specified to apply ACLs to the resulting folder.
 ```
 msixmgr.exe -Unpack -packagepath C:\SomeDirectory\notepadplus.msix -destination C:\output [-applyacls]
 ```
@@ -72,9 +72,8 @@ Open the msix-packaging/preview/MsixCore/msixmgr.sln file in Visual Studio 2017.
 
 ## Using a MSI Setup Project
 Once the msixmgr project has been built, the MsixMgrWix project can be built. The MsixMgrWix project has an additional dependency on the GetMsixmgrProducts project, which builds a custom action for the MSI package.
+
 The msixmgrSetup Project creates a .msi package to deploy the msix.dll and msixmgr.exe onto a Windows 7 SP1 or higher machine. The MSI Setup Project will register the specific file type association for the .msix and .appx extensions such that the installer is initiated directly from double-clicking a MSIX or APPX package.
-
-
 
 ## Build Status
 [![Build status](https://microsoft.visualstudio.com/xPlatAppx/_apis/build/status/CIGitHub-for-MsixCoreInstaller)](https://github.com/Microsoft/msix-packaging/releases/tag/MsixCoreInstaller-preview)
