@@ -9,6 +9,9 @@ ms.custom: "RS5, seodec18"
 ---
 
 # Troubleshooting Tips for MSIX Core 
+
+You may encounter some issues while installing .msix packages with MSIX Core on various versions of Windows. This article lists error codes and troubleshooting tips to use. 
+
 ## Error codes 
 Here are some common error messages that you may encounter. 
 
@@ -31,6 +34,7 @@ The following errors occur when there is an issue with the package format.
 | 0x8BAD0037 | DuplicateFile | 
 
 The following errors are related to file issues
+
  | Error Code |Description |
 |------------|:------------|
 | 0x8BAD0001 | FileOpen|
@@ -82,4 +86,4 @@ Other issues you may encounter
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
 ## Running MSIX Tracing 
-Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/preview/MsixCore/Tests/msixtrace.ps1) to identify what is currently happening when installing an MSIX app with MSIX Core. 
+Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/preview/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation

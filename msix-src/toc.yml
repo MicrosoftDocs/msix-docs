@@ -46,7 +46,7 @@
           href: msix-sdk/get-started-msixcore.md
         - name: ClickOnce solution with MSIX Core
           href: msix-sdk/clickonce-msixcore.md
-        - name: Troubleshoot 
+        - name: Troubleshooting tips
           href: msix-sdk/msixcore-troubleshoot.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
