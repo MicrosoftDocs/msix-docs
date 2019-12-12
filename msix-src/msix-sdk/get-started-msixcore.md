@@ -9,28 +9,34 @@ ms.custom: "RS5, seodec18"
 ---
 
 # Get started with MSIX Core
-There are multiple ways to get started with MSIX Core. The first thing to do is to ensure that your Windows device supports MSIX as an installer.
+As mentioned in the overview, MSIX Core brings MSIX support to your downlevel OS. In order to get started, you must ensure that MSIX Core is installed on the OS.
+For your convenience, we provide MSI installers, or ZIP files depending on your preference. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
 
-To do this, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following: 
 1. msixmgr.zip
 2. msixmgrSetup-x64.msi
 3. msixmgrSetup-86.msi
-5. Source code (zip)
-6. Source code (tar.gz) 
 
+## MSI installation 
+We recommend the MSI installation because it automatically adds msixmgr.exe to your search path and associates the MSIX extension with the installer.
 Download either **msixmgrSetup-x64.msi** or **msixmgrSetup-x86.msi** (depending on your architecture) and install it on your Windows Device. 
 
-## Using the Command Line
-The executables can also be manually deployed to a Windows 7 SP1 or higher machine without using the MSI setup project. Download **msixmgr.zip** under **Assets**] on our [release page](https://github.com/microsoft/msix-packaging/releases) and you can find **msix.dll** and **msixmgr.exe**. Place the **msix.dll** and **msixmgr.exe** in the same location as if you were to install MSIX Core with our .msi. 
+## Zip file or XCopy installation
+Extract the files from **msixmgr.zip** to a known location. Place the **msix.dll** and **msixmgr.exe** in the same location. Then add the path to the search path. 
+Example: Set path=%path%;c:\program files\msixmgr”
 
-We've provided [sample packages](https://github.com/microsoft/msix-packaging/tree/master/preview/MsixCore/Tests) in our GitHub for testing purposes. These can be copied over to a Windows 7 SP1 or higher machine and installed, although they will require adding the APPX_TEST_ROOT.cer (in the same tests folder) to the trusted store in order to install. Some of these packages are large and are stored using git lfs (Large File Storage).
+## Installing your certificate
+MSIX packages are required to be signed. Before installing any .msix packages, make sure you have installed the certificate you used to sign your packages. 
 
+We've provide you with [sample packages](https://github.com/microsoft/msix-packaging/tree/master/preview/MsixCore/Tests), along with a test certificate in our GitHub for testing purposes. Install the certificate with the following commands: 
 ```
 certutil -addstore root APPX_TEST_ROOT.cer
 ```
 
 > [!NOTE]
 > Replace APPX_TEST_ROOT.cer with your own certificate when you are deploying your own MSIX packages. 
+
+## Using the Command Line
+Once the tool msixmgr.exe is installed, it can be used to manage your MSIX packages on this machine by searching, installing, and removing. The command line utility msixmgr.exe is intended for system administrators. It is most useful when run from administrative prompt. Not all commands when run from a regular command prompt will display to the console. See below for more details.
 
 ### Install
 Using command prompt or PowerShell, navigate to the directory that contains the executables and run the following command to install notepadplus.msix. The -quietUX parameter can also be added at the end of the command so that users don't see the installer UI. For example: 
