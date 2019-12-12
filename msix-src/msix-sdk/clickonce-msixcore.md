@@ -115,6 +115,7 @@ Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing an
 
 #### Configure the web app for app package MIME types
 
+Using a web service interface like [S3 browser](https://s3browser.com/features-content-mime-types-editor.aspx) to add a new **Default HTTP Headers**. 
 1. Navigate to **Tools** and select **Default HTTP Headers**.
 2. In the **Default HTTP Headers** dialog, click **Add**.
 3. In the **Add New Default HTTP Headers** dialog, specify the bucket name, file name, header name, and header value, and then click **Add new header**.
@@ -122,6 +123,9 @@ Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing an
     * **File name**: *.msix
     * **Header name**: Content-Type
     * **Header value**: application/msix
+
+> [!NOTE]
+> AWS have some strict guidelines you will have to follow. For example, Bucket names are required to be unique and therefore if you are using the example above, you will need to change the Bucket name. 
 
 ## Use the MSIX Core installer to build the ClickOnce application
 
