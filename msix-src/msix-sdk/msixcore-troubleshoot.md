@@ -89,7 +89,7 @@ To search for other error codes go [here](https://docs.microsoft.com/en-us/windo
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
 ## Running MSIX Tracing 
-Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/preview/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation.
+Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation.
 
 Use the following commands
 ```
