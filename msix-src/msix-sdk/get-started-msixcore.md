@@ -12,17 +12,12 @@ ms.custom: "RS5, seodec18"
 As mentioned in the overview, MSIX Core brings MSIX support to your downlevel OS. In order to get started, you must ensure that MSIX Core is installed on the OS.
 For your convenience, we provide MSI installers, or ZIP files depending on your preference. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
 
-1. msixmgr.zip
-2. msixmgrSetup-x64.msi
-3. msixmgrSetup-86.msi
+1. msixmgrSetup-x64.msi
+2. msixmgrSetup-86.msi
 
 ## MSI installation 
 We recommend the MSI installation because it automatically adds msixmgr.exe to your search path and associates the MSIX extension with the installer.
 Download either **msixmgrSetup-x64.msi** or **msixmgrSetup-x86.msi** (depending on your architecture) and install it on your Windows Device. 
-
-## Zip file or XCopy installation
-Extract the files from **msixmgr.zip** to a known location. Place the **msix.dll** and **msixmgr.exe** in the same location. Then add the path to the search path. 
-Example: Set path=%path%;c:\program files\msixmgr”
 
 ## Installing your certificate
 MSIX packages are required to be signed. Before installing any .msix packages, make sure you have installed the certificate you used to sign your packages. 
@@ -56,15 +51,6 @@ The -quietUX parameter can also be used here.
 ```
 msixmgr.exe -RemovePackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
 ```
-
-The following commands depend on ApplyACLs.dll and msix.dll. Please place these next to msixmgr.exe.
-
-### Unpacking
-Extracts contents of .msix into a folder. Folder will be named according to the package full name of the package and will be placed in the given destination directory. The -applyacls option can be optionally specified to apply ACLs to the resulting folder.
-```
-msixmgr.exe -Unpack -packagepath C:\SomeDirectory\notepadplus.msix -destination C:\output [-applyacls]
-```
-
 > [!NOTE]
 > The commands above uses **notepadplus.msix** is one of our [sample packages](https://github.com/microsoft/msix-packaging/tree/master/MsixCore/Tests).
 
