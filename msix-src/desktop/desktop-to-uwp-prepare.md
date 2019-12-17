@@ -1,6 +1,6 @@
 ---
 Description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
-title: Prepare to package a desktop application (Desktop Bridge)
+title: Prepare to package a desktop application (MSIX)
 ms.date: 08/22/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
@@ -32,7 +32,7 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application uses a ddeexec registry subkey as a means of launching another app__. Instead, use one of the DelegateExecute verb handlers as configured by the various Activatable* extensions in your [app package manifest](https://msdn.microsoft.com/library/windows/apps/br211474.aspx).
 
-+ __Your application writes to the AppData folder or to the registry with the intention of sharing data with another app__. After conversion, AppData is redirected to the local app data store, which is a private store for each UWP app.
++ __Your application writes to the AppData folder or to the registry with the intention of sharing data with another app__. After conversion, AppData is redirected to the local app data store, which is a private store for each app.
 
   All entries that your application writes to the HKEY_LOCAL_MACHINE registry hive are redirected to an isolated binary file and any entries that your application writes to the HKEY_CURRENT_USER registry hive are placed into a private per-user, per-app location. For more details about file and registry redirection, see [Behind the scenes of the Desktop Bridge](desktop-to-uwp-behind-the-scenes.md).  
 
@@ -40,11 +40,14 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application writes to the install directory for your app__. For example, your application writes to a log file that you put in the same directory as your exe. This isn't supported, so you'll need to find another location, like the local app data store.
 
++ __Your application uses the current working directory__. At runtime, your packaged desktop application won't get the same working directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
+
+  > [!NOTE]
+  > If your app needs to write to the installation directory or use the current working directory, you can also consider adding a runtime fixup using the [Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework) to your package. For more details, see [this article](../psf/package-support-framework.md). 
+
 + __Your application installation requires user interaction__. Your application installer must be able to run silently, and it must install all of its prerequisites that aren't on by default on a clean OS image.
 
-+ __Your application uses the Current Working Directory__. At runtime, your packaged desktop application won't get the same Working Directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
-
-+ __Your application requires UIAccess__. If your application specifies `UIAccess=true` in the `requestedExecutionLevel` element of the UAC manifest, conversion to UWP isn't supported currently. For more info, see [UI Automation Security Overview](https://msdn.microsoft.com/library/ms742884.aspx).
++ __Your application requires UIAccess__. If your application specifies `UIAccess=true` in the `requestedExecutionLevel` element of the UAC manifest, conversion to MSIX isn't supported currently. For more info, see [UI Automation Security Overview](https://msdn.microsoft.com/library/ms742884.aspx).
 
 + __Your application exposes COM objects__. Processes and extensions from within the package can register and use COM & OLE servers, both in-process and out-of-process (OOP).  The Creators Update adds Packaged COM support which provides the ability to register OOP COM & OLE servers that are now visible outside the package.  See [COM Server and OLE Document support for Desktop Bridge](https://blogs.windows.com/windowsdeveloper/2017/04/13/com-server-ole-document-support-desktop-bridge).
 

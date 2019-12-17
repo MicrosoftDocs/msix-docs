@@ -47,7 +47,7 @@ The minimum supported OS version of an MSIX package is listed in the manifest fi
 
 On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterprise deployment scenarios. These include installation through SCCM, Microsoft Intune, PowerShell or double-click installation.
 
-Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1809.
+Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1803.
 
 ## Packaging and signing
 

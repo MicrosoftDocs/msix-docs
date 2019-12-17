@@ -81,8 +81,8 @@ When using **Export-PfxCertificate**, you must either create and use a password 
 ### Password usage
 
 ```powershell
-$pwd = ConvertTo-SecureString -String <Your Password> -Force -AsPlainText 
-Export-PfxCertificate -cert "Cert:\CurrentUser\My\<Certificate Thumbprint>" -FilePath <FilePath>.pfx -Password $pwd
+$password = ConvertTo-SecureString -String <Your Password> -Force -AsPlainText 
+Export-PfxCertificate -cert "Cert:\CurrentUser\My\<Certificate Thumbprint>" -FilePath <FilePath>.pfx -Password $password
 ```
 
 ### ProtectTo usage

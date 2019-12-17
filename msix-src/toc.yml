@@ -25,7 +25,7 @@
         - name: Asset packages
           href: package/asset-packages.md
         - name: Modification packages
-          items: 
+          items:
             - name: Overview
               href: modification-packages.md
             - name: Modification packages on Windows 10 version 1809
