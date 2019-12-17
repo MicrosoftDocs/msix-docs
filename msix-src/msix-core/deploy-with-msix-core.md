@@ -9,7 +9,8 @@ ms.custom: "RS5, seodec18"
 ---
 
 # Deploying package app with MSIX Core
-As mentioned in the overview, MSIX Core brings MSIX support to your downlevel OS. In order to get started, you must ensure that MSIX Core is installed on the OS.
+As mentioned in the overview, Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update). In order to get started, you must ensure that MSIX Core is installed on the OS.
+
 For your convenience, we provide MSI installers, or ZIP files depending on your preference. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
 
 1. msixmgrSetup-x64.msi
@@ -54,6 +55,3 @@ msixmgr.exe -RemovePackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
 ```
 > [!NOTE]
 > The commands above uses **notepadplus.msix** is one of our [sample packages](https://github.com/microsoft/msix-packaging/tree/master/MsixCore/Tests).
-
-
-
