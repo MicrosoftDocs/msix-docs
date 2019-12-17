@@ -41,13 +41,13 @@
     - name: MSIX Core
       items:
         - name: Overview
-          href: msix-sdk/msixcore.md 
+          href: msix-core/msixcore.md 
         - name: Get Started
-          href: msix-sdk/get-started-msixcore.md
+          href: msix-core/get-started-msixcore.md
         - name: ClickOnce solution with MSIX Core
-          href: msix-sdk/clickonce-msixcore.md
+          href: msix-core/clickonce-msixcore.md
         - name: Troubleshooting tips
-          href: msix-sdk/msixcore-troubleshoot.md
+          href: msix-core/msixcore-troubleshoot.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
 - name: Tools
