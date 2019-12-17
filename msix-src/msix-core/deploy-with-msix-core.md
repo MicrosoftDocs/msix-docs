@@ -1,5 +1,5 @@
 ---
-title: Deploying package app with MSIX Core
+title: Deploy an MSIX package with MSIX Core
 description: This article provides a step by step instruction on how to leverage the MSIX Core bootstrapper, which creates an application using ClickOnce that will allow your users to just download a setup.exe and install their MSIX app through the MSIX Core Installer.
 ms.date: 11/15/2019
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Deploying package app with MSIX Core
+# Deploy an MSIX package with MSIX Core
 As mentioned in the overview, MSIX Core brings MSIX deployment support to Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update). In order to get started, you must ensure that MSIX Core is installed on the OS.
 
 For your convenience, we provide MSI installers, or ZIP files depending on your preference. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
@@ -25,9 +25,9 @@ Download either **msixmgrSetup-x64.msi** or **msixmgrSetup-x86.msi** (depending 
 > It is important that you pick the correct installer for your architecture. This will impact where the installer will store important files. The name of the file may change based on the version of the installer. 
 
 ## Installing your certificate
-MSIX packages are required to be signed. Before installing any .msix packages, make sure you have installed the certificate you used to sign your packages. 
+MSIX packages are required to be signed. Before installing any .msix packages, make sure you have installed the certificate you used to sign your packages. You can do this using you normal workflows for installing certificate from your management tool. 
 
-We've provide you with [sample packages](https://github.com/microsoft/msix-packaging/tree/master/MsixCore/Tests), along with a test certificate in our GitHub for testing purposes. Install the certificate with the following commands: 
+If you want to manually install a certificate you can run this command from an elevated command prompt: 
 ```
 certutil -addstore root <insert certificate.cert>
 ```
@@ -43,10 +43,9 @@ msixmgr.exe -AddPackage C:\SomeDirectory\notepadplus.msix
 ### Querying for a specific MSIX Package
 Searching for a specific package is possible by packageFullName, packageFamilyName and/or using wildcards as well. Supported wildcards are *(match any character) and ?(match single character). -
 ```
-msixmgr.exe -FindPackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
-msixmgr.exe -FindPackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
+msixmgr.exe -FindPackage notepadplus_0.0.0.1_???__8wekyb3d8bbwe
 msixmgr.exe -FindPackage *padplus_0.0.*
-msixmgr.exe -FindPackage *adplus_8wekyb3d8bbw?
+msixmgr.exe -FindPackage *epadplus_8wekyb3d8bbw?
 ```
 ### Uninstall
 The -quietUX parameter can also be used here.
