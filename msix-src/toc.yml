@@ -25,7 +25,7 @@
         - name: Asset packages
           href: package/asset-packages.md
         - name: Modification packages
-          items: 
+          items:
             - name: Overview
               href: modification-packages.md
             - name: Modification packages on Windows 10 version 1809
@@ -42,11 +42,11 @@
       items:
         - name: Overview
           href: msix-core/msixcore.md 
-        - name: Get Started
+        - name: Get started
           href: msix-core/get-started-msixcore.md
-        - name: ClickOnce solution with MSIX Core
+        - name: Create a ClickOnce solution with MSIX Core
           href: msix-core/clickonce-msixcore.md
-        - name: Troubleshooting tips
+        - name: Troubleshooting
           href: msix-core/msixcore-troubleshoot.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
