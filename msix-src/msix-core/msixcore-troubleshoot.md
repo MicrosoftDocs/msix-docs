@@ -84,7 +84,7 @@ Other issues you may encounter
 | 0x8BAD1003 | XmlFatal |
 | 0x8BAD1004 | XmlInvalidData |
 
-To search for other error codes go [here](https://docs.microsoft.com/en-us/windows/win32/debug/system-error-codes). 
+To search for other error codes go [here](https://docs.microsoft.com/windows/win32/debug/system-error-codes). 
 
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 

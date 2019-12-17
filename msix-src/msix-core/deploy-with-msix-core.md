@@ -17,18 +17,19 @@ For your convenience, we provide MSI installers, or ZIP files depending on your 
 
 ## MSI installation 
 We recommend the MSI installation because it automatically adds msixmgr.exe to your search path and associates the MSIX extension with the installer.
+
 Download either **msixmgrSetup-x64.msi** or **msixmgrSetup-x86.msi** (depending on your architecture) and install it on your Windows Device. 
+
+> [!NOTE]
+> It is important that you pick the correct installer for your architecture. This will impact where the installer will store important files. The name of the file may change based on the version of the installer. 
 
 ## Installing your certificate
 MSIX packages are required to be signed. Before installing any .msix packages, make sure you have installed the certificate you used to sign your packages. 
 
 We've provide you with [sample packages](https://github.com/microsoft/msix-packaging/tree/master/MsixCore/Tests), along with a test certificate in our GitHub for testing purposes. Install the certificate with the following commands: 
 ```
-certutil -addstore root APPX_TEST_ROOT.cer
+certutil -addstore root <insert certificate.cert>
 ```
-
-> [!NOTE]
-> Replace APPX_TEST_ROOT.cer with your own certificate when you are deploying your own MSIX packages. 
 
 ## Using the Command Line
 Once the tool msixmgr.exe is installed, it can be used to manage your MSIX packages on this machine by searching, installing, and removing. The command line utility msixmgr.exe is intended for system administrators. It is most useful when run from administrative prompt. Not all commands when run from a regular command prompt will display to the console. See below for more details.

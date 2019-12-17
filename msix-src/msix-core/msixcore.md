@@ -1,6 +1,6 @@
 ---
 title: MSIX Core
-description: This article provides an overview of MSIX Core, which brings MSIX support to Windows 7, Windows 8, and Windows 10 versions earlier than 1709.
+description: This article provides an overview of MSIX Core, which brings MSIX support to Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update).
 ms.date: 04/12/2019
 ms.topic: article
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
@@ -10,7 +10,7 @@ ms.custom: "RS5, seodec18"
 
 # MSIX Core
 
-MSIX Core brings MSIX support to Windows 7, Windows 8, and Windows 10 versions earlier than 1709. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/MsixCore) on GitHub currently in preview, but it already enables these earlier Windows versions to install MSIX packages.
+MSIX Core brings MSIX support to Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update). MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/MsixCore) on GitHub that enables these earlier Windows versions to install MSIX packages.
 
 With MSIX Core, developers and IT pros who need to support users on these earlier Windows versions can now adopt and take advantage of the benefits of MSIX.
 
@@ -20,7 +20,7 @@ MSIX Core enables the installation of MSIX apps on previous versions of Windows,
 
 MSIX Core is designed for both developers and IT pros. Developers can use the MSIX Core Library to enable their existing installers to install their MSIX packaged apps on previous Windows versions, so they can produce just one MSIX package to target all Windows users. IT pros can download the MSIX Core Installer.  MSIX Core installer enables command line installation of MSIX along with the ability for users to install MSIX packages simply by double clicking them.
 
-## Limitations of MSIX Core
+## Considerations of MSIX Core
 
 The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types. MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows versions. 
 

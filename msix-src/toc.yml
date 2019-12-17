@@ -43,9 +43,9 @@
         - name: Overview
           href: msix-core/msixcore.md 
         - name: Get Started
-          href: msix-core/get-started-msixcore.md
-        - name: ClickOnce solution with MSIX Core
-          href: msix-core/clickonce-msixcore.md
+          href: msix-core/deploy-with-msix-core.md
+        - name: Creating MSIX package with MSIX Core from source code 
+          href: msix-core/msixcore-clickonce-solution.md
         - name: Troubleshooting tips
           href: msix-core/msixcore-troubleshoot.md
     - name: Group policy and MSIX packaged apps

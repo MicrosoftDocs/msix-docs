@@ -1,5 +1,5 @@
 ---
-title: Create a ClickOnce Solution with MSIX Core
+title: Creating MSIX package with MSIX Core from source code 
 description: This article provides a step by step instruction on how to leverage the MSIX Core bootstrapper, which creates an application using ClickOnce that will allow your users to just download a setup.exe and install their MSIX app through the MSIX Core Installer.
 ms.date: 11/15/2019
 ms.topic: article
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Create a ClickOnce solution with MSIX Core
+# Creating MSIX package with MSIX Core from source code 
 
-If you have existing desktop apps and want to support your customers that are using Windows 10, version 1703 or earlier versions, you can leverage the MSIX Core installer to create an application using ClickOnce. This will allow your users to download a setup.exe and install the MSIX app through the MSIX Core installer.
+If you have existing desktop apps and want to support your customers that are using Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update), you can leverage the MSIX Core installer to create an application using ClickOnce. This will allow your users to download a setup.exe and install the MSIX app through the MSIX Core installer.
 
 ## Host your app on a web server
 
