@@ -119,3 +119,4 @@ Deploy this certificate to your device. Install your newly signed app to verify 
 Here are common errors you might encounter.
 
 * 0x800700d: This common error means that the format of the Azure AD JSON file is invalid.
+* You may need to accept the terms and condition of Microsoft Store for Business before downloadidng the root certificate of Device Guard Signing. This can be done by aquiring a free app in the portal.
