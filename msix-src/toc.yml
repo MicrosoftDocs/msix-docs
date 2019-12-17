@@ -42,9 +42,9 @@
       items:
         - name: Overview
           href: msix-core/msixcore.md 
-        - name: Get Started
+        - name: Deploying package app with MSIX Core
           href: msix-core/deploy-with-msix-core.md
-        - name: Creating MSIX package with MSIX Core from source code 
+        - name: Creating MSIX package with MSIX Core from source code
           href: msix-core/msixcore-clickonce-solution.md
         - name: Troubleshooting tips
           href: msix-core/msixcore-troubleshoot.md

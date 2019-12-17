@@ -1,5 +1,5 @@
 ---
-title: Get started with MSIX Core
+title: Deploying package app with MSIX Core
 description: This article provides a step by step instruction on how to leverage the MSIX Core bootstrapper, which creates an application using ClickOnce that will allow your users to just download a setup.exe and install their MSIX app through the MSIX Core Installer.
 ms.date: 11/15/2019
 ms.topic: article
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Get started with MSIX Core
+# Deploying package app with MSIX Core
 As mentioned in the overview, MSIX Core brings MSIX support to your downlevel OS. In order to get started, you must ensure that MSIX Core is installed on the OS.
 For your convenience, we provide MSI installers, or ZIP files depending on your preference. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
 
@@ -55,20 +55,5 @@ msixmgr.exe -RemovePackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
 > [!NOTE]
 > The commands above uses **notepadplus.msix** is one of our [sample packages](https://github.com/microsoft/msix-packaging/tree/master/MsixCore/Tests).
 
-## Creating MSIX Core MSIX from source code
-### Prerequisite
-In order to create the MSIX Core MSI project in Visual Studio, the WiX Toolset and WiX Visual Studio Extensions must be [installed](https://wixtoolset.org/releases/). 
 
-### Build your MSIX Core MSI 
-Clone the msix-packaging repository to a local workspace and build it x64 or x86 (see documentation on [MSIX SDK](https://github.com/Microsoft/msix-packaging for prerequisites) using the -mt flag, which is necessary to avoid vclibs dependency; this should output the msix.dll, which is consumed by MSIXCore project.
-
-```
-Makewin.cmd x64 -mt
-```
-Open the msix-packaging/preview/MsixCore/msixmgr.sln file in Visual Studio. Build the msixmgr project in release/x64 to create the msixmgr.exe
-
-## Using a MSI Setup Project
-Once the msixmgr project has been built, the MsixMgrWix project can be built. The MsixMgrWix project has an additional dependency on the GetMsixmgrProducts project, which builds a custom action for the MSI package.
-
-The msixmgrSetup Project creates a .msi package to deploy the msix.dll and msixmgr.exe onto a Windows 7 SP1 or higher machine. The MSI Setup Project will register the specific file type association for the .msix and .appx extensions such that the installer is initiated directly from double-clicking a MSIX or APPX package.
 
