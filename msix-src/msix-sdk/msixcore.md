@@ -11,7 +11,7 @@ ms.custom: "RS5, seodec18"
 
 # MSIX Core
 
-MSIX Core brings MSIX support to Windows 7, Windows 8, and Windows 10 versions earlier than 1709. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/preview/MsixCore) on GitHub currently in preview, but it already enables these earlier Windows versions to install MSIX packages.
+MSIX Core brings MSIX support to Windows 7, Windows 8, and Windows 10 versions earlier than 1709. MSIX Core is an [open source project](https://github.com/microsoft/msix-packaging/tree/master/MsixCore) on GitHub currently in preview, but it already enables these earlier Windows versions to install MSIX packages.
 
 With MSIX Core, developers and IT pros who need to support users on these earlier Windows versions can now adopt and take advantage of the benefits of MSIX.
 
