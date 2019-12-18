@@ -40,19 +40,19 @@ Once the tool msixmgr.exe is installed, it can be used to manage your MSIX packa
 ### Install
 Using command prompt or PowerShell, navigate to the directory that contains the executables and run the following command to install notepadplus.msix. The -quietUX parameter can also be added at the end of the command so that users don't see the installer UI. For example: 
 ```
-msixmgr.exe -AddPackage C:\SomeDirectory\notepadplus.msix
+msixmgr.exe -AddPackage C:\SomeDirectory\notepadplus.msix -quietUX
 ```
 ### Querying for a specific MSIX Package
-Searching for a specific package is possible by packageFullName, packageFamilyName and/or using wildcards as well. Supported wildcards are *(match any character) and ?(match single character). -
+Searching for a specific package is possible by packageFullName, packageFamilyName and/or using wildcards as well. Supported wildcards are *(match any character) and ?(match single character). 
 ```
-msixmgr.exe -FindPackage notepadplus_0.0.0.1_???__8wekyb3d8bbwe -quiet
+msixmgr.exe -FindPackage notepadplus_0.0.0.1_???__8wekyb3d8bbwe
 msixmgr.exe -FindPackage *padplus_0.0.*
 msixmgr.exe -FindPackage *epadplus_8wekyb3d8bbw?
 ```
 ### Uninstall
-The -quietUX parameter can also be used here.
+To uninstall use the following command: 
 ```
-msixmgr.exe -RemovePackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe
+msixmgr.exe -RemovePackage notepadplus_0.0.0.1_x64__8wekyb3d8bbwe -quietUX
 ```
 > [!NOTE]
 > The commands above uses **notepadplus.msix** is one of our [sample packages](https://github.com/microsoft/msix-packaging/tree/master/MsixCore/Tests).
