@@ -20,4 +20,17 @@ Example for Windows 7 SP1 as a minimum version:
   </Dependencies>
 ```
 
-All MSIXCore.Desktop apps will deploy to the server (with a gui) based operating systems with the same build number.  If the app is intended only for a server operating system then use the TargetDeviceFamily of MSIXCore.Server.  Deployment to Windows Server Core is not supported.
+All MSIXCore.Desktop apps will deploy to Windows Server with Desktop experience based operating systems with the same build number.  If the app is intended only for a server operating system then use the TargetDeviceFamily of MSIXCore.Server.  Deployment to Windows Server Core is not supported.
+
+## Supported Versions of Windows with MSIX Core 
+
+| Name | Version |
+|------|---------|
+| Windows 7, service pack 1| 6.1.7601.0|
+| Windows 8.1 (Update 1) |6.3.9600.0|
+| Windows 10 2015 LTSB (1507)|10.0.10240.0|
+| Windows 10 2016 LTSB (1607)|10.0.14393.0|
+| Windows Server 2008 R2| 6.1.7601.0|
+| Windows Server 2012| 6.2.9200.0|
+| Windows Server 2012 R2| 6.3.9600.0|
+| Windows Server 2016 | 10.0.14393.0|
