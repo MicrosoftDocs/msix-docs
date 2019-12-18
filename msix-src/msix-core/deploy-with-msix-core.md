@@ -11,7 +11,7 @@ ms.custom: "RS5, seodec18"
 # Deploy an MSIX package with MSIX Core
 As mentioned in the overview, MSIX Core brings MSIX deployment support to Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update). In order to get started, you must ensure that MSIX Core is installed on the OS.
 
-For your convenience, we provide MSI installers, or ZIP files depending on your preference. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
+For your convenience, we provide MSI installers. To locate the installer of your choice, go to our [release page](https://github.com/microsoft/msix-packaging/releases) and under **Assets** you will find the following:
 
 1. msixmgrSetup-x64.msi
 2. msixmgrSetup-86.msi
@@ -31,6 +31,8 @@ If you want to manually install a certificate you can run this command from an e
 ```
 certutil -addstore root <insert certificate.cert>
 ```
+> [!NOTE]
+> You should add your trusted certificate under Trusted Root Certification Authority in all scenarios.
 
 ## Using the Command Line
 Once the tool msixmgr.exe is installed, it can be used to manage your MSIX packages on this machine by searching, installing, and removing. The command line utility msixmgr.exe is intended for system administrators. It is most useful when run from administrative prompt. Not all commands when run from a regular command prompt will display to the console. See below for more details.
@@ -43,7 +45,7 @@ msixmgr.exe -AddPackage C:\SomeDirectory\notepadplus.msix
 ### Querying for a specific MSIX Package
 Searching for a specific package is possible by packageFullName, packageFamilyName and/or using wildcards as well. Supported wildcards are *(match any character) and ?(match single character). -
 ```
-msixmgr.exe -FindPackage notepadplus_0.0.0.1_???__8wekyb3d8bbwe
+msixmgr.exe -FindPackage notepadplus_0.0.0.1_???__8wekyb3d8bbwe -quiet
 msixmgr.exe -FindPackage *padplus_0.0.*
 msixmgr.exe -FindPackage *epadplus_8wekyb3d8bbw?
 ```
