@@ -25,7 +25,7 @@
         - name: Asset packages
           href: package/asset-packages.md
         - name: Modification packages
-          items: 
+          items:
             - name: Overview
               href: modification-packages.md
             - name: Modification packages on Windows 10 version 1809
@@ -39,7 +39,17 @@
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
     - name: MSIX Core
-      href: msix-sdk/msixcore.md
+      items:
+        - name: Overview
+          href: msix-core/msixcore.md
+        - name: Update your existing MSIX to support MSIX Core
+          href: msix-core/support-msix-core.md
+        - name: Deploy an MSIX package with MSIX Core
+          href: msix-core/deploy-with-msix-core.md
+        - name: Creating MSIX package with MSIX Core from source code
+          href: msix-core/msixcore-clickonce-solution.md
+        - name: Troubleshooting tips
+          href: msix-core/msixcore-troubleshoot.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
 - name: Tools

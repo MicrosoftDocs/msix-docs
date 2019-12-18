@@ -24,6 +24,11 @@
       "source_path": "msix-src/mpt-best-practices.md",
       "redirect_url": "/windows/msix/packaging-tool/mpt-best-practices",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/msix-sdk/msixcore.md",
+      "redirect_url": "/windows/msix/msix-core/msixcore",
+      "redirect_document_id": true
     }
   ]
 }
