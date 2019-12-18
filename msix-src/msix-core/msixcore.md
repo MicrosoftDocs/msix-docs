@@ -27,4 +27,6 @@ The goal of MSIX Core is to enable the install, query, and removal of MSIX packa
 MSIX Core also will not support Microsoft Store integration. Developers who want to publish their applications to the Microsoft Store can follow the documentation [here](https://docs.microsoft.com/windows/uwp/publish/).
 
 ### Get Started 
+In order to deploy your MSIX packages to Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update) with MSIX Core, you will need to [update your existing MSIX manifest](https://docs.microsoft.com/windows/msix/msix-core/support-msix-core). 
+
 To leverage the benefits of MSIX on Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update), [deploy MSIX packages with MSIX Core](https://docs.microsoft.com/windows/msix/msix-core/deploy-with-msix-core) or if you have the source code, [creating MSIX package with MSIX Core from your source code](https://docs.microsoft.com/windows/msix/msix-core/msixcore-clickonce-solution).
