@@ -88,8 +88,8 @@ To search for other error codes go [here](https://docs.microsoft.com/windows/win
 
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
-## Running MSIX Tracing 
-Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation.
+## MSIX Tracing PowerShell Script
+Go to our [release page](https://github.com/microsoft/msix-packaging/releases/tag/MSIX-Core-1.1-release) and download **msixtrace.ps1**. This is the MSIX Tracing PowerShell script that will generate logs to help if you are running into an issue with your MSIX installation.
 
 Use the following commands
 ```
