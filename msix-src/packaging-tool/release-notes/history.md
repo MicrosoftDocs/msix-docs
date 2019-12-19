@@ -17,12 +17,12 @@ ms.custom: Vibranium
 
 ## Version 1.2019.1028.0 
 - Support for converting an existing installer with services is now available
-	- See all detected services and modify them in the new Services Report page
+	- See all detected services and modify them in the new [Services Report page](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/Converting-an-installer-with-services)
 - New setting to specify the default conversion environment
 - New setting to specify the default installer browse location
 - Add run and remove buttons to first launch tasks page
 
-## Version 1.2019.1018.0 public release
+## Version 1.2019.1018.0 - Public Release
 
 - Updated strings for public release
 - Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
