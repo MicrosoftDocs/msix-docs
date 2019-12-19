@@ -10,12 +10,21 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2019.1218.0
+- Added the ability to drag and drop files to move them in package editor
+- New setting to add Package Integrity to apps
+- Show default save location on the create package page
+
+## Version 1.2019.1028.0 
+- Support for converting an existing installer with services is now available
+	- See all detected services and modify them in the new Services Report page
+- New setting to specify the default conversion environment
+- New setting to specify the default installer browse location
+- Add run and remove buttons to first launch tasks page
+
 ## Version 1.2019.1018.0 public release
 
 - Updated strings for public release
-
-## Version 1.2019.926.0
-
 - Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
 - The **Package editor** now supports the ability to select multiple items on which to perform an action.
 - Right-click to edit an MSIX package is now supported.
