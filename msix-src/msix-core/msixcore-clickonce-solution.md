@@ -1,16 +1,16 @@
 ---
 title: Creating MSIX package with MSIX Core from source code 
-description: This article provides a step by step instruction on how to leverage the MSIX Core bootstrapper, which creates an application using ClickOnce that will allow your users to just download a setup.exe and install their MSIX app through the MSIX Core Installer.
-ms.date: 11/15/2019
+description: Describes how to build an MSIX package from source code with MSIX Core.
+ms.date: 12/19/2019
 ms.topic: article
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Creating MSIX package with MSIX Core from source code 
+# Create an MSIX package with MSIX Core from source code
 
-If you have existing desktop apps and want to support your customers that are using Windows 7 SP1, Windows 8.1, currently supported Windows Server (with desktop experience), and Windows 10 versions prior to 1709 (Fall Anniversary Update), you can leverage the MSIX Core installer to create an application using ClickOnce. This will allow your users to download a setup.exe and install the MSIX app through the MSIX Core installer.
+[MSIX Core](msixcore.md) brings MSIX deployment to select previous versions of Windows. You can leverage the MSIX Core installer to create an application using ClickOnce. This will allow your users to download a setup.exe and install the MSIX app through the MSIX Core installer.
 
 ## Host your app on a web server
 
@@ -43,14 +43,13 @@ Add a new file named Web.config to the web app. Open the Web.config file and add
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
-	<system.webServer>
-	<!--This is to allow the web server to serve resources with the appropriate file extensions-->
-		<staticContent>
-			<mimeMap fileExtension=".appx" mimeType="application/appx" />
-			<mimeMap fileExtension=".msix" mimeType="application/msix" />
-		</staticContent>
-	
-	</system.webServer>
+  <system.webServer>
+    <!--This is to allow the web server to serve resources with the appropriate file extensions-->
+    <staticContent>
+      <mimeMap fileExtension=".appx" mimeType="application/appx" />
+      <mimeMap fileExtension=".msix" mimeType="application/msix" />
+    </staticContent>
+  </system.webServer>
 </configuration>
 ```
 
@@ -83,7 +82,7 @@ Add the app package that you want to distribute to the web application:
 2. Select **Add** -> **New Folder** and name the folder **packages**. 
 3. To add app packages to the folder, right-click the packages folder and select **Add** -> **Existing Item**. Browse to the app package location.
 
-#### Create a Web Page
+#### Create a web page
 
 Create an HTML page or any other web app as required per your needs. Add the link of your new setup.exe.
 
@@ -93,11 +92,11 @@ Open the **Web.config** file from the solution explorer and add the following XM
 
 ```xml
 <system.webServer>
-	<!--This is to allow the web server to serve resources with the appropriate file extensions-->
-	<staticContent>
-		<mimeMap fileExtension=".appx" mimeType="application/appx" />
-		<mimeMap fileExtension=".msix" mimeType="application/msix" />
-	</staticContent>
+  <!--This is to allow the web server to serve resources with the appropriate file extensions-->
+  <staticContent>
+    <mimeMap fileExtension=".appx" mimeType="application/appx" />
+    <mimeMap fileExtension=".msix" mimeType="application/msix" />
+  </staticContent>
 </system.webServer>
 ```
 
@@ -114,7 +113,9 @@ Amazon Simple Storage Service (S3) is an AWS offering for collecting, storing an
 3. When you are finished, upload your MSIX packages and web pages to the S3 bucket.
 
 #### Configure the web app for app package MIME types
-Using a web service interface like [S3 browser](https://s3browser.com/features-content-mime-types-editor.aspx) to add a new **Default HTTP Headers**. 
+
+Using a web service interface like [S3 browser](https://s3browser.com/features-content-mime-types-editor.aspx) to add a new **Default HTTP Headers**.
+
 1. Navigate to **Tools** and select **Default HTTP Headers**.
 2. In the **Default HTTP Headers** dialog, click **Add**.
 3. In the **Add New Default HTTP Headers** dialog, specify the bucket name, file name, header name, and header value, and then click **Add new header**.
@@ -124,17 +125,19 @@ Using a web service interface like [S3 browser](https://s3browser.com/fea
     * **Header value**: application/msix
 
 > [!NOTE]
-> AWS have some strict guidelines you will have to follow. For example, Bucket names are required to be unique and therefore if you are using the example above, you will need to change the Bucket name. 
+> AWS have some strict guidelines you will have to follow. For example, Bucket names are required to be unique and therefore if you are using the example above, you will need to change the Bucket name.
 
 ## Use the MSIX Core installer to build the ClickOnce application
 
-Find your application application ClickOnce setup.exe. 
-### Run URL command to create new setup.exe
-#### Prerequisite 
-Make sure you have followed the instructions to clone, build and publish the MSIX Core solution in Visual Studios. 
+Find your application application ClickOnce setup.exe.
 
-Navigate to the directory where you downloaded the setup.exe file and then run this command: 
-```
+### Run URL command to create new setup.exe
+
+Make sure you have followed the instructions to clone, build and publish the MSIX Core solution in Visual Studio.
+
+Navigate to the directory where you downloaded the setup.exe file and then run this command:
+
+```PowerShell
 setup-exe - url=<location of your msix in the webservice>
 ```
 
@@ -145,7 +148,6 @@ Because the previous step created a new setup.exe, you will need to sign the app
 ### Distribute the application to your users
 
 You can now point to the new setup.exe with a link or download button on their website. MSIX Core is targeted towards users on Windows 10, version 1703 and earlier. The [App Installer](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web) is the ideal installation process for MSIX packages on Windows 1709 or a later version. App Installer optimizes for disk space on the consumer side and can directly install apps from HTTP locations. MSIX Core will detect if a consumer is on Windows 1709 or a later version and redirect them to App Installer. 
-
 
 On Microsoft Edge, you can call the [getHostEnvironmentValue()](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399%28v%3dvs.85%29) method and the *os-build* field in the return value will specify the OS version of the user. From there, you can then prompt the installation process to use MSIX Core (for Windows 10, version 1703 and earlier) or App Installer (for Windows 10, version 1709 and later).
 

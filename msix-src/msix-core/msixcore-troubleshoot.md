@@ -8,12 +8,13 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Troubleshooting Tips for MSIX Core 
+# Troubleshooting issues for MSIX Core
 
-You may encounter some issues while installing .msix packages with MSIX Core on various versions of Windows. This article lists error codes and troubleshooting tips to use. 
+This article describes error codes you may encounter while installing MSIX packages with MSIX Core and troubleshooting tips.
 
-## Error codes 
-Here are common error messages that you may encounter. 
+## Error codes
+
+Here are common error messages that you may encounter.
 
 | Error Code |Description |
 |------------|------------|
@@ -21,8 +22,7 @@ Here are common error messages that you may encounter.
 | 0x80070032 | The package contains comments that MSIX Core does not support. For example, some functionalities of package support framework is not supported. These are package support framework that calls a script that runs at the end of the installation, scripts that are set to run ones equals to false or badly formatted package support frameworks. | 
 |0x8BAD0071 | This error means that you are attempting to install a bundle. MSIX Core currently does not support bundles.|
 
-
-The following errors occur when there is an issue with the package format. 
+The following errors occur when there is an issue with the package format.
 
 | Error Code |Description |
 |------------|:------------|
@@ -32,7 +32,7 @@ The following errors occur when there is an issue with the package format.
 | 0x8BAD0034 | MissingAppxManifestXML|
 | 0x8BAD0035 | DuplicateFootprintFile |
 | 0x8BAD0036 | UnknownFileNameEncoding |
-| 0x8BAD0037 | DuplicateFile | 
+| 0x8BAD0037 | DuplicateFile |
 
 The following errors are related to file issues
 
@@ -84,22 +84,28 @@ Other issues you may encounter
 | 0x8BAD1003 | XmlFatal |
 | 0x8BAD1004 | XmlInvalidData |
 
-To search for other error codes go [here](https://docs.microsoft.com/windows/win32/debug/system-error-codes). 
+To search for other error codes go [here](https://docs.microsoft.com/windows/win32/debug/system-error-codes).
 
 For a full list, visit your [MSIX Core Error Code](https://github.com/microsoft/msix-packaging/blob/master/src/inc/public/MsixErrors.hpp) page. 
 
-## Running MSIX Tracing 
-Run the [MSIX Tracing Powershell script](https://github.com/microsoft/msix-packaging/blob/master/MsixCore/Tests/msixtrace.ps1) to generate logs to help if you are running into an issue with your MSIX installation.
+## MSIX tracing PowerShell script
+
+Go to our [release page](https://github.com/microsoft/msix-packaging/releases/tag/MSIX-Core-1.1-release) and download **msixtrace.ps1**. This is the MSIX Tracing PowerShell script that will generate logs to help if you are running into an issue with your MSIX installation.
 
 Use the following commands
-```
+
+```PowerShell
 msixtrace.ps1 -wait
 ``` 
-Follow the prompt the script present to generate the logs. Or use the following commands.  
-```
+
+Follow the prompt the script present to generate the logs. Or use the following commands.
+
+```PowerShell
 msixtrace.ps1 -start
 ```
-Install the MSIX package. When complete finish with the following command. 
-```
+
+Install the MSIX package. When complete finish with the following command.
+
+```PowerShell
 msixtrace.ps1 -stop
 ```
