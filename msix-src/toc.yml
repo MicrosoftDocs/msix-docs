@@ -68,6 +68,8 @@
         href: packaging-tool/mpt-best-practices.md
       - name: Use Hyper-V Quick Create to package
         href: packaging-tool/Quick-Create-VM.md
+      - name: Converting an installer with services
+      - href: packaging-tool/Converting-an-installer-with-services.md
       - name: Known issues and troubleshooting
         href: packaging-tool/mpt-known-issues.md      
       - name: Duplicate MSIX Packaging Tool settings across multiple devices
