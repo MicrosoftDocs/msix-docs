@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool release notes
 description: This article provides the full history of release notes for different versions of the MSIX Packaging Tool.
-ms.date: 03/05/2019
+ms.date: 12/19/2019
 ms.topic: article
 keywords: windows 10, uwp, msix, msix packaging tool, insider program
 ms.localizationpriority: medium
@@ -11,13 +11,15 @@ ms.custom: Vibranium
 # Release notes for the MSIX Packaging Tool
 
 ## Version 1.2019.1218.0
+
 - Added the ability to drag and drop files to move them in package editor
 - New setting to add Package Integrity to apps
 - Show default save location on the create package page
 
-## Version 1.2019.1028.0 
+## Version 1.2019.1028.0
+
 - Support for converting an existing installer with services is now available
-	- See all detected services and modify them in the new [Services Report page](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/Converting-an-installer-with-services)
+  - See all detected services and modify them in the new [Services report page](../convert-an-installer-with-services.md)
 - New setting to specify the default conversion environment
 - New setting to specify the default installer browse location
 - Add run and remove buttons to first launch tasks page
