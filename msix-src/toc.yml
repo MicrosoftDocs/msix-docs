@@ -68,8 +68,10 @@
         href: packaging-tool/mpt-best-practices.md
       - name: Use Hyper-V Quick Create to package
         href: packaging-tool/Quick-Create-VM.md
+      - name: Convert an installer that includes services
+        href: packaging-tool/convert-an-installer-with-services.md
       - name: Known issues and troubleshooting
-        href: packaging-tool/mpt-known-issues.md      
+        href: packaging-tool/mpt-known-issues.md
       - name: Duplicate MSIX Packaging Tool settings across multiple devices
         href: packaging-tool/duplicate-mpt-settings-across-devices.md
       - name: MSIX Packaging Tool Insider Program
@@ -87,7 +89,7 @@
       - name: Overview
         href: app-installer/app-installer-root.md
       - name: AppInstaller file overview
-        href: app-installer/app-installer-file-overview.md         
+        href: app-installer/app-installer-file-overview.md
       - name: Known Issues
         items:
           - name: Troubleshoot installation issues with the App Installer file
