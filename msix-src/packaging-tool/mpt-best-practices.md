@@ -16,17 +16,19 @@ This article covers best practices for repackaging your app to MSIX and using th
 
 ## Best practices during setup
  
-To begin with, you make sure you have the [latest version of the MSIX Packaging Tool](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/mpt-overview#latest-public-version---1201910180). For the conversion process, there are a few other things that we recommend you consider before you start. 
+To begin with, you make sure you have the [latest version of the MSIX Packaging Tool](mpt-overview.md#latest-public-version---1201910180). For the conversion process, there are a few other things that we recommend you consider before you start.
 
-- The minimum OS version requirement for the MSIX Packaging Tool is Windows 10 1809. We understand that not everyone is on the Windows 10 October 2018 Update or even Windows 10. Therefore, we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX. If this isn't something you have we also offer a Quick Create VM, the [MSIX Packaging Tool Environment](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/quick-create-vm) in Hyper-V, which is ready to go for conversion. 
+- The minimum OS version requirement for the MSIX Packaging Tool is Windows 10 1809. We understand that not everyone is on the Windows 10 October 2018 Update or even Windows 10. Therefore, we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX. If this isn't something you have we also offer a Quick Create VM, the [MSIX Packaging Tool Environment](quick-create-vm.md) in Hyper-V, which is ready to go for conversion. 
 
 - Another reason this is a recommendation is that during the interactive GUI conversion using the MSIX Packaging Tool, we will be listening to everything on the device, and it will help to prevent extraneous data in your package. 
 
 - Its also good to know what kind of dependencies you have so that you can understand which ones you should run with your app and which should be packaged as a modification package. For example, if you have runtime dependencies, it’s a good idea to include those in your main application. If you have a plug in, you should package that as a modification package to associate with your main application. 
 
 
-## Best practices during repackaging 
+## Best practices during repackaging
+
 When you are using the MSIX Packaging Tool, there are a few things that we also recommend you do as best practice:
+
 - When packaging ClickOnce installers, it is necessary to send a shortcut to desktop if the installer is not doing so already. In general, it is good practice to always remember to send a shortcut to desktop for the main app executable.
 - When creating modification packages, you need to declare the package Name (identity name) of the parent application in the tool UI so that the tool sets the correct package dependency in the manifest of the modification package.
 - Performing the preparation steps in the **Prepare computer** page is optional but highly recommended, as this will help reduce any extraneous data in your package. 
