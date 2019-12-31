@@ -22,7 +22,7 @@ Make sure you have the [latest version of the MSIX Packaging Tool](mpt-overview.
 
 - A clean machine for conversion is important because during the interactive GUI conversion using the MSIX Packaging Tool, we will be listening to everything on the machine, and it will help to prevent extraneous data in your package. 
 
-- If this isn't something you have we offer a **Quick Create VM**, the [MSIX Packaging Tool Environment](quick-create-vm.md) in Hyper-V, which is ready to go with conversion with Windows 10 1809 and the latest version of the MSIX Packaging Tool. 
+- If this isn't something you have we offer a **Quick Create VM**, the [MSIX Packaging Tool Environment](quick-create-vm.md) in Hyper-V, which is ready to go with conversion with Windows 10 1809 and the latest version of the MSIX Packaging Tool. Follow the best practices recommendations for setting up the MSIX Packaging Tool, then create a checkpoint for the VM. This way you can use the VM to convert, revert to your previous checkpoint, and it will be a clean, configured machine ready for conversion again.
 
 - Its also good to know what kind of dependencies you have so that you can understand which ones you should run with your app and which should be packaged as a modification package. For example, if you have runtime dependencies, it’s a good idea to include those in your main application. If you have a plug in, you should package that as a modification package to associate with your main application. 
 
