@@ -132,8 +132,6 @@
               href: packaging-tool/create-other-installer.md
             - name: Create an MSIX package using Command Line
               href: packaging-tool/package-conversion-cli.md
-            - name: Automate conversion using Command Line
-              href: packaging-tool/automate-conversion.md
             - name: Create an MSIX package on a remote machine 
               href: packaging-tool/remote-conversion-setup.md
             - name: Package with the Desktop App Converter
