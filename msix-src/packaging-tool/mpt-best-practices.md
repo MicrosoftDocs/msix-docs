@@ -40,10 +40,10 @@ Before you start any conversions we recommend configuring your settings in the M
 - **Server port number** Specify the server port number for the MSIX Packaging Tool. This is relevant if you are planning to convert using a [remote machine](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/remote-conversion-setup). 
 - **Environment preference** Specify the default environment for each conversion.
 - **Signing preference** Specify the default option for signing when you are converting applications. It is required to sign your MSIX package in order to install it. You can choose from a few options for your signing preference.
- - Sign with Device Guard signing - we recommend this option if you don't have a trusted certificate in your enterprise. You can learn more about setting up Device Guard signing here. 
- - Sign with a certificate (.pfx) - We recommend this option if you already have a trusted certificate that you are using in your enterprise.
- - Specify a .cer file (does not sign) - If you do not wish to sign at the time of conversion, but want to ensure that the publisher information will be valid at the time of signing you can choose this option.
- - Do not sign package. - If you wish to sign your package using another method or at a later time after the package has been generated you can choose this option.
+    - Sign with Device Guard signing - we recommend this option if you don't have a trusted certificate in your enterprise. You can learn more about setting up Device Guard signing here. 
+    - Sign with a certificate (.pfx) - We recommend this option if you already have a trusted certificate that you are using in your enterprise.
+    - Specify a .cer file (does not sign) - If you do not wish to sign at the time of conversion, but want to ensure that the publisher information will be valid at the time of signing you can choose this option.
+    - Do not sign package. - If you wish to sign your package using another method or at a later time after the package has been generated you can choose this option.
 We also recommend that you add a timestamp server url to your siging preference (when applicable), so that your application can be installed, even if your certificate expires.
  
  ### Other Settings
