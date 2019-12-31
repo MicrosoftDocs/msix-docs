@@ -44,6 +44,7 @@ Before you start any conversions we recommend configuring your settings in the M
     - Sign with a certificate (.pfx) - We recommend this option if you already have a trusted certificate that you are using in your enterprise.
     - Specify a .cer file (does not sign) - If you do not wish to sign at the time of conversion, but want to ensure that the publisher information will be valid at the time of signing you can choose this option.
     - Do not sign package. - If you wish to sign your package using another method or at a later time after the package has been generated you can choose this option.
+
 We also recommend that you add a timestamp server url to your siging preference (when applicable), so that your application can be installed, even if your certificate expires.
  
  ### Other Settings
