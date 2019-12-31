@@ -69,7 +69,7 @@ ms.custom: RS5
 
 We recommend that you bundle MSIX packages when there are different installers available for different processor architectures such as x86, x64, and ARM for your application. By bundling the installers together, you can allow the Windows 10 OS to determine the applicability of the appropriate installer instead of the user having to make the correct selection. 
 
-While bundling MSIX packages, you will need to have already converted your Win32 installers into MSIX packages. 
+While [bundling MSIX packages](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/bundle-msix-packages), you will need to have already converted your Win32 installers into MSIX packages. 
 
 - The MSIX Packaging Tool will assume the processor architecture of the Windows 10 OS version that the conversion is taking place. For example, if you are on a x64 version of Windows 10, and you are converting a x86 version of an installers, the resulting MSIX package will be x64. 
 - If you plan to bundle MSIX packages, you will need to convert your installers in the same environment where you expect to deploy them. That way, the MSIX Packaging Tool will build the appropriate MSIX package for that environment. 
