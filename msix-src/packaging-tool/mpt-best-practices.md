@@ -39,7 +39,7 @@ Before you start any conversions we recommend configuring your settings in the M
 - **Add Package Integrity when generating a package** If this option is selected, Package Integrity will be automatically added to all packages generated. However, it will only apply to packages when Package Integrity is supported on the OS they are deployed on. 
 - **Default save location** Specify the default save location where the generated packages and associated files will be saved.
 - **Default installer browse location** Specify the default location to find installers to convert.
-- **Server port number** Specify the server port number for the MSIX Packaging Tool. This is relevant if you are planning to convert using a [remote machine](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/remote-conversion-setup). 
+- **Server port number** Specify the server port number for the MSIX Packaging Tool. This is relevant if you are planning to convert using a [remote machine](https://docs.microsoft.com/windows/msix/packaging-tool/remote-conversion-setup). 
 - **Environment preference** Specify the default environment for each conversion.
 - **Signing preference** Specify the default option for signing when you are converting applications. It is required to sign your MSIX package in order to install it. You can choose from a few options for your signing preference.
     - Sign with Device Guard signing - we recommend this option if you don't have a trusted certificate in your enterprise. You can learn more about setting up Device Guard signing here. 
@@ -53,7 +53,7 @@ We also recommend that you add a timestamp server url to your siging preference 
  - **File and registry exlusions** While we have a default set of exclusion items, we recommend taking a look and adding or removing any exclusion items for your specific needs. 
  - **Installer exit codes** If you have specific installer exit codes that you want to trigger a restart during conversion, you can specify those here. By default we have common ones already added, but you can remove those if you never want restarts to be triggered. To note, a restart will never be triggered automatically by the Packaging Tool if you are using the UI, but it will if you are using the command line option. 
  
- You can also import or export your settings for sharing or ensuring conformity among peers, using these [instructions](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/duplicate-mpt-settings-across-devices). 
+ You can also import or export your settings for sharing or ensuring conformity among peers, using these [instructions](https://docs.microsoft.com/windows/msix/packaging-tool/duplicate-mpt-settings-across-devices). 
 
 ## Best practices during repackaging
 
@@ -69,7 +69,7 @@ When you are using the MSIX Packaging Tool, there are a few things that we also 
 
 We recommend that you bundle MSIX packages when there are different installers available for different processor architectures such as x86, x64, and ARM for your application. By bundling the installers together, you can allow the Windows 10 OS to determine the applicability of the appropriate installer instead of the user having to make the correct selection. 
 
-While [bundling MSIX packages](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/bundle-msix-packages), you will need to have already converted your Win32 installers into MSIX packages. 
+While [bundling MSIX packages](https://docs.microsoft.com/windows/msix/packaging-tool/bundle-msix-packages), you will need to have already converted your Win32 installers into MSIX packages. 
 
 - The MSIX Packaging Tool will assume the processor architecture of the Windows 10 OS version that the conversion is taking place. For example, if you are on a x64 version of Windows 10, and you are converting a x86 version of an installers, the resulting MSIX package will be x64. 
 - If you plan to bundle MSIX packages, you will need to convert your installers in the same environment where you expect to deploy them. That way, the MSIX Packaging Tool will build the appropriate MSIX package for that environment. 
