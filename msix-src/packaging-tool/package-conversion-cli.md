@@ -10,7 +10,15 @@ ms.custom: RS5
 
 # Conversion with Command Line Interface (CLI)
 
+## Automate conversion of Windows installers to MSIX packages using scripts
+
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+
+The MSIX Packaging Tool supports a command-line interface for creating MSIX application packages. This enables you to automate the process of repackaging app installers and perform bulk conversions.
+
+For sample PowerShell and Bash scripts that demonstrate how to automate the process of packaging, signing, managing and distributing MSIX packages, see the [scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts) folder of the MSIX Toolkit.
+
+## Use the Command Line Interface (CLI) with the Command Prompt
 
 To create a new MSIX package for your application, run the `MsixPackagingTool.exe create-package` command in an administrator Command prompt window.
 
