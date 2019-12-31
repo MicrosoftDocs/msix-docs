@@ -18,11 +18,13 @@ This article covers best practices for repackaging your app to MSIX and using th
  
 Make sure you have the [latest version of the MSIX Packaging Tool](mpt-overview.md#latest-public-version---1201910180). For the conversion process, there are a few other things that we recommend you consider before you start.
 
-- The minimum OS version requirement for the MSIX Packaging Tool is Windows 10 1809. We understand that not everyone is on the Windows 10 October 2018 Update or even Windows 10. Therefore, we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX. 
+- The minimum OS version requirement for the MSIX Packaging Tool is Windows 10 1809. We understand that not everyone is on the Windows 10 October 2018 Update or even Windows 10. Therefore, we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX.
 
-- A clean machine for conversion is important because during the interactive GUI conversion using the MSIX Packaging Tool, we will be listening to everything on the machine, and it will help to prevent extraneous data in your package. 
+- A clean machine for conversion is important because during the installation step of conversion using the MSIX Packaging Tool, we will be listening to everything on the machine to capture what the installer is doing, and it will help to prevent extraneous data in your package. A clean machine means that there aren't extraneous apps or services running on your machine. We recommend configuring the conversion machine to mimic the environment where the MSIX package will be run, so if there are services or policies that will be there, you can test that the package will actually work.
 
-- If this isn't something you have we offer a **Quick Create VM**, the [MSIX Packaging Tool Environment](quick-create-vm.md) in Hyper-V, which is ready to go with conversion with Windows 10 1809 and the latest version of the MSIX Packaging Tool. Follow the best practices recommendations for setting up the MSIX Packaging Tool, then create a checkpoint for the VM. This way you can use the VM to convert, revert to your previous checkpoint, and it will be a clean, configured machine ready for conversion again.
+- If this isn't something you have we offer a **Quick Create VM**, the [MSIX Packaging Tool Environment](quick-create-vm.md) in Hyper-V, which is ready to go with conversion with Windows 10 1809 and the latest version of the MSIX Packaging Tool. 
+
+- Follow the best practices recommendations for setting up the MSIX Packaging Tool, then create a checkpoint for the VM. This way you can use the VM to convert, revert to your previous checkpoint, and it will be a clean, configured machine ready for conversion again or for verifying your MSIX package converted successfully.
 
 - Its also good to know what kind of dependencies you have so that you can understand which ones you should run with your app and which should be packaged as a modification package. For example, if you have runtime dependencies, it’s a good idea to include those in your main application. If you have a plug in, you should package that as a modification package to associate with your main application. 
 
@@ -62,8 +64,6 @@ When you are using the MSIX Packaging Tool, there are a few things that we also 
 - Performing the preparation steps in the **Prepare computer** page is optional but highly recommended, as this will help reduce any extraneous data in your package. 
 - It is required that you sign your package in order to install it, but we also recommend that you timestamp your certificate so that your application can be installed, even if your certificate expires. 
 - Declaring an installation location field in the **Package information** page is optional. Make sure that this path matches the installation location of application installer.
-ms.custom: RS5
-
 
 ## Best practices while bundling MSIX packages
 
@@ -74,5 +74,7 @@ While [bundling MSIX packages](https://docs.microsoft.com/en-us/windows/msix/pac
 - The MSIX Packaging Tool will assume the processor architecture of the Windows 10 OS version that the conversion is taking place. For example, if you are on a x64 version of Windows 10, and you are converting a x86 version of an installers, the resulting MSIX package will be x64. 
 - If you plan to bundle MSIX packages, you will need to convert your installers in the same environment where you expect to deploy them. That way, the MSIX Packaging Tool will build the appropriate MSIX package for that environment. 
 
+## Best practices for testing your MSIX package
 
+We recommend that you also test your MSIX package after conversion on a clean environment, as we specified above during environment setup. You should test your MSIX package on a different machine that has not installed the previous installer on it, so that you can ensure when you deploy your MSIX package, it has all of the components it needs and it isn't picking anything up from the previous installer. This can be achieved through a new VM, such as the Quick Create VM, or by reverting your conversion machine if you followed our checkpoint recommendation from above.
 
