@@ -1,5 +1,5 @@
 ---
-Description: This article contains known issues with the Desktop Bridge.
+description: This article describes known issues that can occur when you create an MSIX package for your desktop app.
 title: Known Issues with packaged desktop apps
 ms.date: 07/29/2019
 ms.topic: article
@@ -7,6 +7,7 @@ keywords: windows 10, uwp, msix
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ---
+
 # Known Issues with packaged desktop apps
 
 This article contains known issues that can occur when you create an MSIX package for your desktop app.
@@ -98,12 +99,7 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 
 ...   
 ```
+
 ## Next Steps
 
-**Find answers to your questions**
-
 Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Give feedback or make feature suggestions**
-
-See [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

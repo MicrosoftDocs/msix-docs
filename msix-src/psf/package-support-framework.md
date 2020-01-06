@@ -102,12 +102,14 @@ You can get the PSF Nuget package by using the standalone Nuget command line too
 
 #### Get the package by using the command line tool
 
-Install the Nuget command line tool from this location: https://www.nuget.org/downloads. Then, from the Nuget command line, run the command below; 
+Install the Nuget command line tool from this location: https://www.nuget.org/downloads. Then, from the Nuget command line, run this command: 
 
 ```powershell
 nuget install Microsoft.PackageSupportFramework
 ```
 Alternativly, you can rename it to .zip and unzip it, all the files you need will be under the /bin folder.
+
+Alternatively, you can rename the package extension to .zip and unzip it. All the files you need will be under the /bin folder.
 
 #### Get the package by using Visual Studio
 

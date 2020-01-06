@@ -1,6 +1,6 @@
 ---
 title: App package formats
-description: Describes different types of MSIX packages for Windows apps.
+description: This article describes the different types of MSIX package formats that are useful for certain scenarios.
 ms.date: 07/02/2019
 ms.topic: article
 keywords: windows 10, msix, uwp, desktop, package

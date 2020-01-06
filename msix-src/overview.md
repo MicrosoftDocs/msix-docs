@@ -1,6 +1,6 @@
 ---
 title: What is MSIX?
-description: Learn the basics of the MSIX packaging format.
+description: This article introduces the basics of the MSIX packaging format, a modern packaging experience to all Windows apps.
 ms.date: 09/12/2018
 ms.topic: article
 keywords: windows 10, uwp, msix

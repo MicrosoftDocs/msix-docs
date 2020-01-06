@@ -11,17 +11,16 @@ ms.custom: RS5
 # Run scripts with the Package Support Framework
 
 
-Scripts enable IT Pros to customize the application dynamically to the user's environment once packaged as MSIX. For example: you can use scripts to configure your database, set up a VPN, mount a shared drive or perform a license check dynamically. Scripts provide a lot of flexibility, they may change registry keys or perform file modifications based on the machine or server configuration.
+Scripts enable IT Pros to customize an application dynamically to the user's environment after it is packaged using MSIX. For example, you can use scripts to configure your database, set up a VPN, mount a shared drive, or perform a license check dynamically. Scripts provide a lot of flexibility. They may change registry keys or perform file modifications based on the machine or server configuration.
 
-You can use the Package Support Framework (PSF) to run one PowerShell script before a packaged application executable runs and one PowerShell script after the application executable runs to clean up. Each application executable defined in the application manifest can have its own scripts. You can configure the script to runOnce only on the first app launch and without showing the powershell window so users in the enterprise won't abort it by mistake. There are other options to configure the way scripts would run, shown below.
+You can use the Package Support Framework (PSF) to run one PowerShell script before a packaged application executable runs and one PowerShell script after the application executable runs to clean up. Each application executable defined in the application manifest can have its own scripts. You can configure the script to run once only on the first app launch and without showing the PowerShell window so users won't end the script prematurely by mistake. There are other options to configure the way scripts can run, shown below.
 
 ## Prerequisites
 
-To enable scripts to run, you need to set the PowerShell execution policy to `Unrestricted` or `RemoteSigned`. You can do this by running one of these commands:
+To enable scripts to run, you need to set the PowerShell execution policy to `RemoteSigned`. You can do this by running this command:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
 The execution policy needs to be set for both the 64-bit PowerShell executable and the 32-bit PowerShell executable. Make sure to open each version of PowerShell and run one of the commands shown above.
@@ -34,7 +33,9 @@ Here are the locations of each executable.
 * 32-bit computer:
   * 32-bit executable: %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
 
-For more information about PowerShell execution policies, see [this article](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6).
+For more information about PowerShell execution policies, see [this article](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6).
+
+Make sure to include the following "StartingScriptWrapper.ps1" in your package, and locate it in the same folder where your executable is. You can copy it from the package support framework NuGet package (https://www.nuget.org/packages/Microsoft.PackageSupportFramework/).
 
 Make sure to include the following "StartingScriptWrapper.ps1" in your package, and locate it in the same folder where your executable is. You can copy it from the package support framework NuGet package (https://www.nuget.org/packages/Microsoft.PackageSupportFramework/).
 

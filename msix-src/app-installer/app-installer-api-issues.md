@@ -1,12 +1,13 @@
 ---
 title: App Installer file API issues
-description: Lists known issues with the App Installer file APIs.
+description: This article lists known issues with the PackageManager and Package APIs for managing App Installer files.
 ms.date: 2/20/2019
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API
 ms.localizationpriority: medium
 ms.custom: 19H1
 ---
+
 # App Installer file API issues
 
 ## JavaScript support for App Installer file APIs

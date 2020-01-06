@@ -1,6 +1,6 @@
 ---
 title: Create a package using the command line interface
-description: Learn how to create an MSIX package using the command line interface.
+description: This article describes how to create an MSIX package using the command line interface for the MSIX Packaging Tool.
 ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -11,8 +11,8 @@ ms.custom: RS5
 # Conversion with Command Line Interface (CLI)
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
-      
-To create a new MSIX package for your application, run the MsixPackagingTool.exe create-package command in an administrator Command prompt window. 
+
+To create a new MSIX package for your application, run the `MsixPackagingTool.exe create-package` command in an administrator Command prompt window.
 
 Here are the parameters that can be passed as command line arguments:
 
@@ -32,6 +32,7 @@ Examples:
     MSIXPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml --virtualMachinePassword pswd112893
     
 ```
+
 > [!NOTE]
 > App-V 5.x conversion is currently supported to be converted throught the command line. This includes capabilities. 
 

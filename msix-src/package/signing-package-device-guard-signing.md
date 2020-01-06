@@ -1,5 +1,5 @@
 ---
-Description: This article describes signing with Device Guard signing
+description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
 ms.date: 07/12/2019
 ms.topic: article
@@ -119,3 +119,4 @@ Deploy this certificate to your device. Install your newly signed app to verify 
 Here are common errors you might encounter.
 
 * 0x800700d: This common error means that the format of the Azure AD JSON file is invalid.
+* You may need to accept the terms and condition of Microsoft Store for Business before downloadidng the root certificate of Device Guard Signing. This can be done by aquiring a free app in the portal.

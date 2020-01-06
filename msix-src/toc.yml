@@ -25,7 +25,7 @@
         - name: Asset packages
           href: package/asset-packages.md
         - name: Modification packages
-          items: 
+          items:
             - name: Overview
               href: modification-packages.md
             - name: Modification packages on Windows 10 version 1809
@@ -39,7 +39,17 @@
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
     - name: MSIX Core
-      href: msix-sdk/msixcore.md
+      items:
+        - name: Overview
+          href: msix-core/msixcore.md
+        - name: Update your MSIX package to support MSIX Core
+          href: msix-core/support-msix-core.md
+        - name: Deploy an MSIX package with MSIX Core
+          href: msix-core/deploy-with-msix-core.md
+        - name: Create an MSIX package with MSIX Core from source code
+          href: msix-core/msixcore-clickonce-solution.md
+        - name: Troubleshooting
+          href: msix-core/msixcore-troubleshoot.md
     - name: Group policy and MSIX packaged apps
       href: group-policy-msix.md
 - name: Tools
@@ -58,8 +68,10 @@
         href: packaging-tool/mpt-best-practices.md
       - name: Use Hyper-V Quick Create to package
         href: packaging-tool/Quick-Create-VM.md
+      - name: Convert an installer that includes services
+        href: packaging-tool/convert-an-installer-with-services.md
       - name: Known issues and troubleshooting
-        href: packaging-tool/mpt-known-issues.md      
+        href: packaging-tool/mpt-known-issues.md
       - name: Duplicate MSIX Packaging Tool settings across multiple devices
         href: packaging-tool/duplicate-mpt-settings-across-devices.md
       - name: MSIX Packaging Tool Insider Program
@@ -77,7 +89,7 @@
       - name: Overview
         href: app-installer/app-installer-root.md
       - name: AppInstaller file overview
-        href: app-installer/app-installer-file-overview.md         
+        href: app-installer/app-installer-file-overview.md
       - name: Known Issues
         items:
           - name: Troubleshoot installation issues with the App Installer file

@@ -40,9 +40,12 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application writes to the install directory for your app__. For example, your application writes to a log file that you put in the same directory as your exe. This isn't supported, so you'll need to find another location, like the local app data store.
 
-+ __Your application installation requires user interaction__. Your application installer must be able to run silently, and it must install all of its prerequisites that aren't on by default on a clean OS image.
++ __Your application uses the current working directory__. At runtime, your packaged desktop application won't get the same working directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
 
-+ __Your application uses the Current Working Directory__. At runtime, your packaged desktop application won't get the same Working Directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
+  > [!NOTE]
+  > If your app needs to write to the installation directory or use the current working directory, you can also consider adding a runtime fixup using the [Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework) to your package. For more details, see [this article](../psf/package-support-framework.md). 
+
++ __Your application installation requires user interaction__. Your application installer must be able to run silently, and it must install all of its prerequisites that aren't on by default on a clean OS image.
 
 + __Your application requires UIAccess__. If your application specifies `UIAccess=true` in the `requestedExecutionLevel` element of the UAC manifest, conversion to MSIX isn't supported currently. For more info, see [UI Automation Security Overview](https://msdn.microsoft.com/library/ms742884.aspx).
 
@@ -128,10 +131,6 @@ Starting a utility can often provide a convenient way to obtain information from
 **Find answers to your questions**
 
 Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Give feedback or make feature suggestions**
-
-See [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).
 
 **Create a Windows app package for your desktop app**
 

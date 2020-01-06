@@ -1,6 +1,6 @@
 ---
 title: MSIX packaging tool insider program
-description: learn more about the packaging tool insider program and how to join
+description: This article introduces the MSIX Packaging Tool Insider Program, which provides early access releases of the MSIX Packaging Tool.
 ms.date: 06/25/2019
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
@@ -30,9 +30,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Version 1.2019.919.0
-- Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
-- The **Package editor** now supports the ability to select multiple items on which to perform an action.
+## Version 1.2019.1218.0
+- Added the ability to drag and drop files to move them in package editor
+- New setting to add Package Integrity to apps
+- Show default save location on the create package page
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

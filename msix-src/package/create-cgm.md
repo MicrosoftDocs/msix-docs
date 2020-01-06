@@ -1,7 +1,7 @@
 ---
 ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
 title: Create and convert a source content group map
-description: To get your app ready for streaming install, you'll need to create a content group map. This article will help you with the specifics of creating and converting a content group map while providing some tips and tricks along the way.
+description: This article describes how to create a content group map. A content group map necessary to get your app ready for streaming install.
 ms.date: 07/02/2019
 author: dianmsft
 ms.author: diahar

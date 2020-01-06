@@ -1,5 +1,5 @@
 ---
-Description: Create a modern Windows app package for your existing Windows Forms, WPF, or Win32 app or game. Add modern experiences for Windows 10 users and simplify deployment and monetization.
+description: This article describes the end-to-end process for creating a modern Windows 10 app package for your existing Windows Forms, WPF, or Win32 app or game. 
 title: Package desktop applications
 ms.date: 07/29/2019
 ms.topic: article
@@ -123,12 +123,6 @@ You can distribute your application by publishing it the Microsoft Store or by s
 
 See [Distribute a packaged desktop app](/windows/apps/desktop/modernize/desktop-to-uwp-distribute).
 
-## Support and feedback
-
-**Find answers to your questions**
+## Find answers to your questions
 
 Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Give feedback or make feature suggestions**
-
-See [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).

@@ -61,6 +61,7 @@
        "desktop/**.md": "diahar",
        "manage/**.md": "diahar",
        "msix-sdk/**.md": "diahar",
+       "msix-core/**.md": "diahar",
        "package/**.md": "diahar",
        "psf/**.md": "diahar",
        "packaging-tool/**.md": "shakers"
@@ -81,6 +82,7 @@
         "desktop/**.md": "dianmsft",
         "manage/**.md": "dianmsft",
         "msix-sdk/**.md": "dianmsft",
+        "msix-core/**.md": "dianmsft",
         "package/**.md": "dianmsft",
         "psf/**.md": "dianmsft",
         "packaging-tool/**.md": "sharlaakers" 
