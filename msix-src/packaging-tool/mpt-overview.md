@@ -31,6 +31,12 @@ To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://w
 
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
+After you have the offline version of the application, you can use [PowerShell](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine. 
+
+### Example of offline installation
+```
+PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
+```
  
 ## Latest public version - 1.2019.1018.0
 
@@ -57,7 +63,6 @@ The following articles are tutorials on how to use MSIX Packaging Tool to conver
 | Article | Description |
 |-------|-------------|
 | [Create MSIX package from a MSI/App-V file](create-app-package-MSI-VM.md) | This tutorial will go through how to use MSIX Packaging Tool's UI to convert your desktop applications(particularly installers like MSI, EXE or App-V) to a MSIX Package. |
-| [Create MSIX package from other installer type](create-other-installer.md) | This tutorial will go through how to use MSIX Packaging Tool's UI to convert your desktop application(installers like batch scripts, PowerShell etc) to a MSIX Package. |
+| [Create MSIX package from other installer type](create-other-installer.md) | This tutorial will go through how to use MSIX Packaging Tool's UI to convert your desktop application(installers like bulk conversion scripts, PowerShell etc) to a MSIX Package. |
 | [Create MSIX package using MSIX Packaging Tool's command line interface](package-conversion-cli.md) | This tutorial will go through how to use MSIX Packaging Tool's command line interface to convert your desktop application to a MSIX Package. |
-| [Automate MSIX package conversion](automate-conversion.md) | This tutorial will discuss how you can use the command line interface to automate the conversion of desktop applications to MSIX Packages. |
 | [Create MSIX package on a remote device](remote-conversion-setup.md) | This article will provide the instructions required to perform the conversion of desktop applications to MSIX packages on a remote device. |

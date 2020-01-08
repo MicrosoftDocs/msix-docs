@@ -8,49 +8,71 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Create an MSIX package from a desktop installer (MSI, EXE or App-V) on a VM
+# Create an MSIX package from a desktop installer (MSI, EXE,ClickOnce, or App-V)
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX application package from an existing MSI, EXE or App-V installer on a Hyper-V virtual machine (VM). The VM must meet these requirements:
+You can use the [MSIX Packaging Tool](../mpt-overview.md) to create an MSIX application package from an existing MSI, EXE, ClickOnce, or App-V installer on a Hyper-V virtual machine (VM). The VM must meet these requirements:
 
-- It must be configured to [receive remote commands](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/remotely-manage-hyper-v-hosts) (run the [Enable-PSRemoting](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Enable-PSRemoting?view=powershell-5.1) command on the VM)
-- It must be running Windows 10, version 1809, or a later version of Windows.
+We recommend following the [best practices](https://docs.microsoft.com/windows/msix/packaging-tool/mpt-best-practices) to configure your environment and the MSIX Packaging Tool for conversion. 
 
 > [!NOTE]
 > The MSIX Packaging Tool currently supports App-V 5.1. If you have a package with App-V 4.x, we recommend that you convert it to App-V 5.1 before using the MSIX Packaging tool to convert to MSIX. 
 
 When the tool is first launched, you will be prompted to provide consent to sending telemetry data. It's important to note that the diagnostic data you share only comes from the app and is never used to identify or contact you.
 
-Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by manual installation of application payload.
+Creating an application package is the most commonly used option. This is where you will create an MSIX package from an installer, or by [manual installation](https://docs.microsoft.com/windows/msix/packaging-tool/create-other-installer) of the application payload.
 
 ![pic1](images/pic1.PNG)
 
-## Choose the installer you want to package
-
-![pic2](images/pic2.jpg)
-
-Navigate to your MSI or App-V installer by clicking **Browse** and selecting the installer in the file picker. Then, click **Next**.
-
-Optionally:
-- Check the box under **Sign package**, browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box. You can also set this as a default in your settings, which will save you some steps each time you convert. 
-  - When signing, you can optionally add a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/windows/win32/seccrypto/signtool). 
-- Check the box under **Use installer arguments** and enter the desired argument in the provided field. This field accepts any string.
-
 ## Packaging method
 
-![images/pic3](images/pic3.jpg)
-
 Select an option your conversion machine:
-- If you are already working in a clean environment, select **Create package on this machine**
+- If you are already working in a clean environment, select **Create package on this computer**
 - If you want to connect to an existing VM or remote machine, select **Create package on a remote machine**
-  - You will need to set up your remote machine before you are able to convert on it
+  - You will need to [set up your remote machine](https://docs.microsoft.com/windows/msix/packaging-tool/remote-conversion-setup) before you are able to convert on it
 - If you have a local VM on your machine you want to convert on, select **Create package on a local virtual machine**
   - Click **Next**
+  
+## Prepare computer
+
+Next, the **Prepare computer** page provides options to prepare the computer for packaging.
+
+The **MSIX Packaging Tool Driver** is required and the tool will automatically try to enable it if it is not enabled. The tool will first check with DISM to see if the driver is installed. If you run into an issue, try checking our [troubleshooting documentation](https://docs.microsoft.com/windows/msix/packaging-tool/mpt-known-issues), then filing a [Feedback Hub issue](https://docs.microsoft.com/windows/msix/packaging-tool/mpt-known-issues#sending-feedback) if the problem persists. 
+
+> [!NOTE]
+> The MSIX Packaging Tool Driver monitors the system to capture the changes that an installer is making on the system which allows MSIX Packaging Tool to create a package based on those changes.
+
+**Windows Update is Active** We will temporarily disable Windows Update for the duration of packaging so that we don't collect any extraneous data. 
+
+- The **Pending reboot** checkbox is disabled by default. You'll need to manually restart the machine and then launch the tool again if you are prompted that pending operations need a reboot. This not required, only recommended.
+
+- [Optional] Check the box for **Windows Search is Active** and select **Disable selected** if you choose to disable the search service.
+    - This is not required, only recommended.
+    - Once disabled, the tool will update the status field to **Disabled**.
+
+- [Optional] Check the box for **SMS Host is Active** and select **Disable selected** if you choose to disable the host service.
+    - This is not required, only recommended.
+    - Once disabled, the tool will update the status field to **Disabled**.
+
+When you're done preparing the machine, click **Next**.
+
+## Choose the installer you want to package
+
+Navigate to your MSI, App-V, or other Win 32 installer by clicking **Browse** and selecting the installer in the file picker.
+
+If you have any installer arguments, you can enter the desired argument in the provided field. This field accepts any string.
+
+Under **Signing preference**, select a signing option. You can also set this as a default in your settings, which will save you some steps each time you convert. 
+- **Sign with Device Guard signing** This option allows you to sign in to your Microsoft Active Directory account that you have configured to use with Device Guard signing, which is a signing service that Microsoft provides where you don't need to provide your own certificate. Learn more about how to set up your account and about Device Guard signing [here](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing). 
+- **Sign with a certificate(.pfx)** Browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
+- **Specify a .cer file (does note sign)** This option allows you to specify a .cer file. This is useful when you don't want to sign the package, but you want to ensure that the publisher information matches the subject of the certificate that will be used for signing. 
+- **Do not sign package** Select this option if you will be signing your package at a later time. NOTE: You cannot install an MSIX package if it is not signed
+- When signing, we highly recommend adding a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/windows/win32/seccrypto/signtool). 
+
+Click **Next** to proceed.
 
 ## Package information
-
-![images/pic4](images/pic4.png)
 
 After you choose to package your application on an existing virtual machine, you must provide information about to the app. The tool will try to auto-fill these fields based on the information available from the installer. You will always have a choice to update the entries as needed. If the field as an asterisk*, it's required, but you already knew that. Inline help is provided if the entry is not valid.
 - Package name:
@@ -78,36 +100,10 @@ After you choose to package your application on an existing virtual machine, you
     - This field is optional but recommended specially when app payload is being installed outside of the Program Files folders.
     - Browse to and select a folder path.
     - Make sure this file matches the installer's install location while you go through the application install operation.
-
-## Prepare computer
-
-![images/pic5](images/pic5.png)
-
-Next, the **Prepare computer** page provides options to prepare the computer for packaging.
-
-The MSIX Packaging Tool Driver is required and the tool will automatically try to enable it if it is not enabled. The tool will first check with DISM to see if the driver is installed.
-
-> [!NOTE]
-> The MSIX Packaging Tool Driver monitors the system to capture the changes that an installer is making on the system which allows MSIX Packaging Tool to create a package based on those changes.
-
-- [Optional] Check the box for **Windows Search is Active** and select **Disable selected** if you choose to disable the search service.
-    - This is not required, only recommended.
-    - Once disabled, the tool will update the status field to “disabled”
-
-- [Optional] Check the box for **Windows Update is Active** and select **Disable selected** if you choose to disable the Update service.
-    - This is not required, only recommended.
-    - Once disabled, the tool will update the status field to **Disabled**.
-
-- The **Pending reboot** checkbox is disabled by default. You'll need to manually restart the machine and then launch the tool again if you are prompted that pending operations need a reboot. This not required, only recommended.
-
-When you're done preparing the machine, click **Next**.
+- Description:
+    - This field is optional. 
 
 ## Installation
-
-![images/pic6](images/pic6.png)
-
-> [!NOTE]
-> During conversion, installers may run services. Services are not captured during conversion. As a result your app may install but it may run with issues.
 
 - This is installation phase where the tool is monitoring and capturing the application install operations.
 - The tool will launch the installer in the Virtual Machine Window that it opened in an earlier stage and you'll need to go through the installer wizard to install the application.
@@ -117,11 +113,10 @@ When you're done preparing the machine, click **Next**.
     - If you need to run multiple installers you can do that manually at this point.
     - If the app needs other pre-reqs, you need to install them now.
     - If the application needs .Net 3.5/20, add the optional feature to Windows.
+- If your installer requires a restart, you can perform a manual restart, or use the 'restart' button to perform the restart, and you will return to this point in the conversion process after the restart.
 - When you've completed installing the application, click **Next**.
 
 ## Manage first launch tasks
-
-![images/pic7](images/pic7.png)
 
 This page shows application executables that the tool captured. We recommended launching the application at least once to capture any first launch tasks.
 
@@ -133,14 +128,11 @@ Click **Next** You'll be prompted with a pop up asking for confirmation that you
 
 ## Create package
 
-![images/pic8](images/pic8.png)
-
 - Provide a location to save the MSIX package.
 - By default, packages are saved in local app data folder.
 - You can define the default save location in Settings menu.
 - If you'd like to continue to edit the content and properties of the package before saving the MSIX package, you can select “Package editor” and be taken to package editor.
-- If you prefer to sign the package with a pre-made certificate for testing, browse to and select the certificate.
 - Click **Create** to create the MSIX package.
 
-You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select package editor to see and modify the package content and properties.
+You'll be presented with the pop up when the package is created. This pop up will include the name, publisher, and save location of the newly created package. You can close this pop up and get redirected to the welcome page. You can also select [Package editor](https://docs.microsoft.com/windows/msix/packaging-tool/package-editor) to see and modify the package content and properties.
 
