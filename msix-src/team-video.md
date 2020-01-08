@@ -54,4 +54,4 @@ Learn you can use MSIX for dynamic delivery of applications in virtual environme
 
 <br/>
 
->[!VIDEO https://www.youtube.com/watch?v=6kkPLFgPaN8]
+> [!VIDEO https://www.youtube.com/embed/6kkPLFgPaN8]
