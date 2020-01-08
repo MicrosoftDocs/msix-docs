@@ -29,6 +29,8 @@ MSIX Core is designed for both developers and IT pros. Developers can use the MS
 
 The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types. MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows versions.
 
+When using MSIX Core on downlevel OS, **App Execution Aliases** will only work from **Win+R** and not from Command Prompt or PowerShell. 
+
 MSIX Core also will not support Microsoft Store integration. Developers who want to publish their applications to the Microsoft Store can follow the documentation [here](https://docs.microsoft.com/windows/uwp/publish/).
 
 ## Get started
