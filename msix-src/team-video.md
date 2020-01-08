@@ -50,7 +50,7 @@ Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls 
 
 ### MSIX App Attach in Windows Virtual Desktop
 
-Learn you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.
+Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.
 
 <br/>
 
