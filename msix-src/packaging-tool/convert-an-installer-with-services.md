@@ -36,4 +36,4 @@ The services executable path (also called the image path) is currently not edita
 
 The **Services** report is currently not available in the **Package Editor**. You must manually edit the manifest to make changes to the services included in your MSIX package.
 
-We currently do not support services with dependecies outside the package.
+We currently do not support services with dependencies outside the package.
