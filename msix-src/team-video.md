@@ -48,20 +48,10 @@ Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls 
 
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3iiD5]
 
-<!-- :::row:::
-    :::column:::
-	>[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ig2l]
-#### MSIX overview
-MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.
-    :::column-end:::
-    :::column:::
-    >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3i5DH]
-#### MSIX for developers
-Learn how developers can take advantage of the benefits of MSIX.
-    :::column-end:::
-    :::column:::
-    >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE3iiD5]
-#### Evolving and enhancing desktop apps with MSIX
-Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls and other features. 
-    :::column-end:::
-:::row-end::: -->
+### MSIX App Attach in Windows Virtual Desktop
+
+Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.
+
+<br/>
+
+> [!VIDEO https://www.youtube.com/embed/6kkPLFgPaN8]

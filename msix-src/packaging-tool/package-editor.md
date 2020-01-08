@@ -16,6 +16,8 @@ To make changes to an existing MSIX package, such as modifying the properties in
 
 From the main page of the MSIX Packaging Tool, select the **Package editor** icon, browse for your MSIX package and select **Open package**.
 
+You can unpack your MSIX package from the package editor through the 'unpack' button on the bottom. You can then select the location where you would like to unpack your MSIX package. 
+
 ## Package information page
 
 On the **Package information** page, you can change your package information through the fields in the UI or choose to open the MSIX manifest file manually in the editor of your choice to make changes to the manifest fields. While you are editing the manifest the package editor page is not editable. Once you save the manifest, the UI will get updated.
@@ -67,4 +69,3 @@ Right-click on a file to perform the these operations:
 - Move: Rename or move the file to a new location.
 
 ![pic13](images/pic13.png)
-
