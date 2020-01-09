@@ -27,10 +27,12 @@ MSIX Core is designed for both developers and IT pros. Developers can use the MS
 
 ## Considerations of MSIX Core
 
-The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types. MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows versions.
+The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types.
 
-MSIX Core also will not support Microsoft Store integration. Developers who want to publish their applications to the Microsoft Store can follow the documentation [here](https://docs.microsoft.com/windows/uwp/publish/).
+* MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows versions.
+* When using MSIX Core on a down-level OS, [app execution aliases](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-an-alias) will only work from **Win+R** and not from Command Prompt or PowerShell.
+* MSIX Core does not support Microsoft Store integration. Developers who want to publish their applications to the Store can follow the documentation [here](https://docs.microsoft.com/windows/uwp/publish/).
 
 ## Get started
 
-To deploy your MSIX package with MSIX Core, you must first [update your existing MSIX manifest](https://docs.microsoft.com/windows/msix/msix-core/support-msix-core). Then, you can [deploy your MSIX package with MSIX Core](https://docs.microsoft.com/windows/msix/msix-core/deploy-with-msix-core) (if you only have the package) or you can [create an MSIX package with MSIX Core from source code](https://docs.microsoft.com/windows/msix/msix-core/msixcore-clickonce-solution) (if you have the source code).
+To deploy your MSIX package with MSIX Core, you must first [update your existing MSIX manifest](support-msix-core.md). Then, you can [deploy your MSIX package with MSIX Core](deploy-with-msix-core.md) (if you only have the package) or you can [create an MSIX package with MSIX Core from source code](msixcore-clickonce-solution.md) (if you have the source code).
