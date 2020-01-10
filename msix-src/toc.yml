@@ -1,7 +1,7 @@
 - name: MSIX
   items: 
     - name: Overview
-      href: index.md
+      href: index.yml
     - name: What is MSIX?
       href: overview.md
     - name: App package formats
