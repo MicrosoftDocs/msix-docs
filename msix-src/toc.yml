@@ -36,6 +36,8 @@
               href: package/device-architecture.md
     - name: App package updates
       href: app-package-updates.md
+    - name: MSIX support on Server 2019
+      href: msix-server-2019.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
     - name: MSIX Core
