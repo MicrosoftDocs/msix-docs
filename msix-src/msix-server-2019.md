@@ -35,5 +35,6 @@ The support allows you to distribute the same MSIX packages within your enterpri
 - Windows.comInterface
 - Windows.posPaymentConnector
 - Windows.dataProtection.
- 
-As Windows Server 2019 with the Desktop Experience does not support all features of Windows 10 client skus, we recommend you test applications on server before deploying in production.
+
+> [!NOTE]
+> As Windows Server 2019 with the Desktop Experience does not support all features of Windows 10 client skus, we recommend you test applications on server before deploying in production.
