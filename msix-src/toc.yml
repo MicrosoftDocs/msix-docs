@@ -142,8 +142,6 @@
               href: desktop/desktop-to-uwp-packaging-dot-net.md       
             - name: Optimize binaries with native images
               href: desktop/desktop-to-uwp-r2r.md     
-        - name: Package a desktop app manually
-          href: desktop/desktop-to-uwp-manual-conversion.md 
         - name: Package a desktop app using third-party installers
           href: desktop/desktop-to-uwp-third-party-installer.md
         - name: Behind the scenes of your packaged desktop app
@@ -156,6 +154,8 @@
       items:
         - name: Overview
           href: package/manual-packaging-root.md
+        - name: Generating package
+          href: desktop/desktop-to-uwp-manual-conversion.md 
         - name: Create an app package with the MakeAppx.exe tool
           href: package/create-app-package-with-makeappx-tool.md
         - name: Create a certificate for package signing
