@@ -42,7 +42,7 @@ PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPacka
 
 ### New features:
 - Support for converting an existing installer with services is now available
-  - See all detected services and modify them in the new [Services report page](../convert-an-installer-with-services.md)
+  - See all detected services and modify them in the new [Services report page](https://docs.microsoft.com/windows/msix/packaging-tool/convert-an-installer-with-services)
 - New setting to add Package Integrity to apps
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
