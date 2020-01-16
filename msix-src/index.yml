@@ -95,7 +95,7 @@ additionalContent:
             - text: Microsoft Endpoint Configuration Manager
               url: https://docs.microsoft.com/configmgr/apps/understand/introduction-to-application-management
             - text: Microsoft Intune
-              url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+              url: https://docs.microsoft.com/intune/apps/lob-apps-windows
             - text: Install MSIX packages using App Installer
               url: app-installer/app-installer-file-overview.md
         # Card
