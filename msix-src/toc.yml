@@ -152,7 +152,7 @@
           href: desktop/desktop-to-uwp-behind-the-scenes.md 
         - name: Known issues 
           href: desktop/desktop-to-uwp-known-issues.md         
-    - name: Package a UWP app with Visual Studio
+    - name: Package an MSIX app with Visual Studio
       href: package/packaging-uwp-apps.md
     - name: Manual app packaging
       items:
