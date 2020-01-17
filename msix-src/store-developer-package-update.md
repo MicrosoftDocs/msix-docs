@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Developer controlled app updates
+# Developer controlled updates for apps in the Store
 
 Keeping apps up to date is a somewhat tedious task; it requires extra work on developers to check versions, guide the user to the store and hope they install the update - the result is lots of user confusion causing old apps to continue existing in the wild. We've heard this feedback from developers and are super excited to announce that starting at build 14393 and beyond, Windows 10 allows developers to make stronger guarantees around app updates!
 Doing this requires a few simple APIs, creates a consistent and predictable user experience and lets developers to focus on what they do best while allowing Windows to do the heavy lifting. 
