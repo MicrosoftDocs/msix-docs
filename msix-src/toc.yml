@@ -35,7 +35,11 @@
             - name: App package architectures
               href: package/device-architecture.md
     - name: App package updates
-      href: app-package-updates.md
+      items: 
+        - name: Overview
+          href: app-package-updates.md
+        - name: Store only developer package updates
+          href: store-developer-package-update.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
     - name: MSIX Core
