@@ -1,0 +1,170 @@
+### YamlMime:Hub
+title: MSIX documentation
+summary: MSIX is a Windows app package format that combines the best features of MSI, AppX, App-V, and ClickOnce to provide a modern and reliable packaging experience.
+metadata:
+  title: MSIX documentation
+  description: MSIX is a packaging format for Windows apps that is built to be safe and reliable. It is based on a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
+  ms.topic: hub-page
+  ms.date: 11/06/2019
+  keywords: windows 10, uwp, MSIX
+  ms.localizationpriority: medium
+  ms.custom: "RS5, seodec18"
+
+highlightedContent:
+  # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+   items:
+   - title: What is MSIX?
+     itemType: overview
+     url: overview.md
+   - title: Get the MSIX Packaging Tool
+     itemType: download
+     url: https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf
+   - title: MSIX videos
+     itemType: video
+     url: team-video.md
+   - title: MSIX Tech Community
+     itemType: overview
+     url: https://techcommunity.microsoft.com/t5/MSIX/ct-p/MSIX
+
+additionalContent:
+  sections:
+    # Section
+    - title: Top tasks
+      items:
+        # Card
+        - title: Create MSIX packages from existing installers
+          summary: The MSIX Packaging Tool enables you to update existing desktop application packages to the MSIX format.
+          url: packaging-tool/mpt-overview.md
+        # Card
+        - title: Create MSIX packages from source code
+          summary: Use Visual Studio to package desktop apps from source code.
+          url: desktop/desktop-to-uwp-packaging-dot-net.md
+        # Card
+        - title: Use MSIX on any platform
+          summary: The MSIX SDK provides all of the APIs needed to verify, validate, and unpack an MSIX package on any platform, including non-Windows 10 platforms.
+          url: msix-sdk/sdk-overview.md
+        # Card
+        - title: Install MSIX packages with App Installer
+          summary: Update or install any MSIX app package that is locally available or on any content distribution network.
+          url: app-installer/app-installer-root.md
+        # Card
+        - title: Learn about MSIX from hands-on-labs
+          summary: The MSIX Labs repo provides tutorials for creating, packaging, distributing and installing MSIX packages.
+          url: https://github.com/microsoft/MSIX-Labs
+
+    # Section
+    - title: MSIX for IT pros 
+      #summary: The following articles cover features and tasks for IT pros who have access to existing installers for the apps that need to be packaged using MSIX, but not necessarily the source code.
+      items:
+        #Card
+        - title: Get started
+          links:
+            - text: Create packages using the MSIX Packaging Tool
+              url: packaging-tool/create-app-package-msi-vm.md
+            - text: Automate the creation of MSIX packages
+              url: packaging-tool/package-conversion-cli.md
+        # Card
+        - title: Package
+          links:
+            - text: Package desktop applications overview
+              url: desktop/desktop-to-uwp-root.md
+            - text: MSIX Packaging Tool overview
+              url: packaging-tool/mpt-overview.md
+            - text: Modify an MSIX package
+              url: packaging-tool/package-editor.md
+            - text: Best practices for MSIX package tool
+              url: packaging-tool/mpt-best-practices.md
+            - text: Sign an MSIX package
+              url: package/sign-app-package-using-signtool.md
+        # Card
+        - title: Validate
+          links:
+            - text: Package flighting
+              url: https://docs.microsoft.com/windows/uwp/publish/package-flights
+            - text: Test for Windows 10 in S mode
+              url: https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s
+            - text: Create run time fixes for packaged apps
+              url: psf/package-support-framework-overview.md
+        # Card
+        - title: Distribute
+          links:
+            - text: Microsoft Store
+              url: https://docs.microsoft.com/windows/uwp/publish/app-submissions
+            - text: Microsoft Store for Business
+              url: https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises
+            - text: Microsoft Endpoint Configuration Manager
+              url: https://docs.microsoft.com/configmgr/apps/understand/introduction-to-application-management
+            - text: Microsoft Intune
+              url: https://docs.microsoft.com/intune/apps/lob-apps-windows
+            - text: Install MSIX packages using App Installer
+              url: app-installer/app-installer-file-overview.md
+        # Card
+        - title: Related resources
+          links:
+            - text: MSIX Toolkit
+              url: https://github.com/microsoft/MSIX-Toolkit
+            - text: MSIX labs
+              url: https://github.com/microsoft/MSIX-Labs
+
+    # Section
+    - title: MSIX for developers
+      #summary: The following articles cover features and tasks for developers who typically have access to source code for the apps that need to packaged using MSIX.
+      items:
+        # Card
+        - title: Get started
+          links:
+            - text: Package a desktop app with Visual Studio
+              url: desktop/desktop-to-uwp-packaging-dot-net.md
+            - text: Package a UWP app with Visual Studio
+              url: package/packaging-uwp-apps.md
+        # Card
+        - title: Build
+          links:
+            - text: Package desktop applications overview
+              url: desktop/desktop-to-uwp-root.md
+            - text: Prepare to package a desktop application
+              url: desktop/desktop-to-uwp-prepare.md
+            - text: Create a package manually
+              url: package/manual-packaging-root.md
+            - text: Sign an MSIX package
+              url: package/sign-app-package-using-signtool.md
+            - text: App streaming install
+              url: package/streaming-install.md
+        # Card
+        - title: Validate
+          links:
+            - text: Windows App Certification Kit
+              url: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit
+            - text: Windows Device Portal
+              url: https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal
+            - text: Package flighting
+              url: https://docs.microsoft.com/windows/uwp/publish/package-flights
+            - text: Test for Windows 10 in S mode
+              url: https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s
+        # Card
+        - title: Distribute
+          links:
+            - text: Microsoft Store
+              url: https://docs.microsoft.com/windows/uwp/publish/app-submissions
+            - text: Microsoft Store for Business
+              url: https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises
+            - text: Install MSIX packages using App Installer
+              url: app-installer/app-installer-file-overview.md
+        # Card
+        - title: API and schema reference
+          links:
+            - text: Package Manager API
+              url: https://docs.microsoft.com/uwp/api/windows.management.deployment
+            - text: App manifest schema
+              url: https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest
+            - text: App Installer file schema
+              url: https://docs.microsoft.com/uwp/schemas/appinstallerschema/schema-root
+        # Card
+        - title: Related resources
+          links:
+            - text: MSIX partners
+              url: partners.md
+            - text: MSIX SDK
+              url: https://github.com/microsoft/msix-packaging/
+            - text: Package Support Framework
+              url: https://github.com/Microsoft/MSIX-PackageSupportFramework

@@ -16,7 +16,7 @@ This article covers best practices for repackaging your app to MSIX and using th
 
 ## Best practices for environment setup
  
-Make sure you have the [latest version of the MSIX Packaging Tool](mpt-overview.md#latest-public-version---1201910180). For the conversion process, there are a few other things that we recommend you consider before you start.
+Make sure you have the [latest version of the MSIX Packaging Tool](mpt-overview.md#latest-public-version---1201912200). For the conversion process, there are a few other things that we recommend you consider before you start.
 
 - The minimum OS version requirement for the MSIX Packaging Tool is Windows 10 1809. We understand that not everyone is on the Windows 10 October 2018 Update or even Windows 10. Therefore, we recommend that you create a clean VM that is pre-configured for the min version of support for MSIX.
 

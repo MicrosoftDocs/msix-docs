@@ -133,10 +133,7 @@ Although it is possible to submit an app package or app bundle to Partner Center
     - One or more app packages (.msix or .appx) or an app bundle (.msixbundle or .appxbundle).
     - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](https://docs.microsoft.com/windows/uwp/publish/health-report) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
 
-2. Select all the files within the folder, right-click, and select Send to -> Compressed (zipped) folder.
-
-> [!NOTE]
-> This should create a zip file with the files above within the root of the zipfile.
+2. Select all the files within the folder, right-click the files, and select **Send to** -> **Compressed (zipped) folder**.
 
 3. Change the new zip file's extension name from .zip to .msixupload or .appxupload.
 

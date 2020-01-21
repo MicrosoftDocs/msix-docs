@@ -38,13 +38,12 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
  
-## Latest public version - 1.2019.1018.0
+## Latest public version - 1.2019.1220.0
 
 ### New features:
-- Device Guard signing is now available. This signing option requires an active Microsoft Azure Active Directory account configured for the Microsoft Store for Business. For more information, see [this article](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing).
-- The **Package editor** now supports the ability to select multiple items on which to perform an action.
-- Right-click to edit an MSIX package is now supported.
-- Ux improvements for the packaging workflow.
+- Support for converting an existing installer with services is now available
+  - See all detected services and modify them in the new [Services report page](https://docs.microsoft.com/windows/msix/packaging-tool/convert-an-installer-with-services)
+- New setting to add Package Integrity to apps
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
