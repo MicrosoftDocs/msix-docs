@@ -10,7 +10,7 @@ ms.custom: "RS5, seodec18"
 
 # Updating non-Store Distributed apps from your code
 
-Windows 10 allows you to programmatically check for new versions of your MSIX packages distributed outside the Store. You can do so by taking advantage of the [PackageManager.UpdatePackageAsync() API](https://docs.microsoft.com/en-us/uwp/api/windows.management.deployment.packagemanager.updatepackageasync). Doing so requires that your app declares the packageManagement capability. Below is some sample C# code.
+Windows 10 allows you to programmatically check for new versions of your MSIX packages distributed outside the Store. You can do so by taking advantage of the [PackageManager.UpdatePackageAsync()] API(https://docs.microsoft.com/en-us/uwp/api/windows.management.deployment.packagemanager.updatepackageasync). Doing so requires that your app declares the packageManagement capability. Below is some sample C# code.
 
 ## Check for updates on your server 
 
