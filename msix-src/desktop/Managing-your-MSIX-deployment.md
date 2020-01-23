@@ -8,7 +8,7 @@ ms.assetid:
 ms.localizationpriority: medium
 ---
 
-# Managing your MSIX deployment [kevin] byte nme
+# Managing your MSIX deployment [kevin]
 
 
 Packaging your application is only half the battle.  Next you need to be able to deploy your application to your users.  How you deploy it depends on who your customer is.  For enterprise customers, a software management system is used.  If you are targeting retail users, then deployment happens though the web and resources like the Windows Store.
