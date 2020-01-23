@@ -26,6 +26,9 @@ Here are a list of required components needed to create and install an MSIX Pack
 | AppxManifest.xml | The package manifest is an XML document that contains the info the system needs to deploy, display, or update a Windows app. This info includes package identity, package dependencies, required capabilities, visual elements, and extensibility points. | 
 | AppxSignature.p7x | Generated when the package is signed. All MSIX Package are required to be signed before install. |
 
+## MSIX Container 
+All MSIX apps share the global registry for reading. An MSIX package will write to its own virtual registry and App Data folder. This will be deleted when the app is uninstall or a reset. Other apps will not have access to it's virtual registry or virtual file system. 
+
 ## Highlights of MSIX
 
 * **Package existing Windows apps.** Use the [MSIX Packaging Tool](packaging-tool/mpt-overview.md) to create an MSIX package for any Windows app, old or new. The MSIX packaging tool streamlines the packaging experience, offering an interactive user interface or command line to convert and package Windows apps.
