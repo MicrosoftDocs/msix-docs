@@ -18,12 +18,12 @@ MSIX enables enterprises to stay current and ensure their applications are alway
 MSIX provides a reliable install. MSIX has a 99.96% success rate for installs over millions of installs. There is also a 100% guaranteed uninstalled. MSIX improves network bandwidth by only downloading what is needed. MSIX is designed for modern systems and the cloud. With MSIX there is no duplication of files across apps and Windows manages the shared files across apps.
 
 ## What makes up an MSIX package 
-Here are a list of required components needed to create an MSIX Package. 
+Here are a list of required components needed to create and install an MSIX Package. 
 | Name |Description|
 |:-------------:|:--------:|
-| AppxBlockMap.xml | The package block map file is an XML document that contains a list of the app’s files along with indexes and cryptographic hashes for each block of data that is stored in the package. | 
+| AppxBlockMap.xml | The package block map file is an XML document that contains a list of the app’s files along with indexes and cryptographic hashes for each block of data that is stored in the package. The block map file itself is verified and secured with a digital signature when the package is signed. The block map file allows MSIX packages to be downloaded and validated incrementally, and also works to support diff updates to the app files after they’re installed.| 
 | AppxManifest.xml | The package manifest is an XML document that contains the info the system needs to deploy, display, or update a Windows app. This info includes package identity, package dependencies, required capabilities, visual elements, and extensibility points. | 
-| AppxSignature.p7x | Generated when the package is signed. |
+| AppxSignature.p7x | Generated when the package is signed. All MSIX Package are required to be signed before install. |
 
 ## Highlights of MSIX
 
