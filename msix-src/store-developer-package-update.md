@@ -10,7 +10,7 @@ ms.custom: "RS5, seodec18"
 
 # Developer controlled updates for apps in the Store
 
-Keeping apps up to date is a somewhat tedious task; it requires extra work on developers to check versions, guide the user to the store and hope they install the update - the result is lots of user confusion causing old apps to continue existing in the wild. We've heard this feedback from developers and are super excited to announce that starting at build 14393 and beyond, Windows 10 allows developers to make stronger guarantees around app updates!
+Starting at Build 14393 and beyond, Windows 10 allows developers to make stronger guarantees around Store app updates.
 Doing this requires a few simple APIs, creates a consistent and predictable user experience and lets developers to focus on what they do best while allowing Windows to do the heavy lifting. 
 
 ## Implementing in app
@@ -38,7 +38,7 @@ private async void GetEasyUpdates()
 At this point the user has two options they can choose from; apply now or defer the update. Whatever choice the user makes will be returned back to via the StorePackageUpdateResult object allowing developers to take further actions such as closing down the app if the update is required to continue or simply trying again later.
 
 ## Finer controlled updates
-For developers who are looking to have a completely customized experience, we have a solution for you as well! Additional APIs are provided which enable more control over the update process; this control is a dial that you as a developer can control. The platform enables you to do the following
+For developers who are looking to have a completely customized experience, additional APIs are provided which enable more control over the update process. The platform enables you to do the following:
 
 1. Get progress events on an individual package download or on the whole update
 2. Apply updates at the user's and app's convenience rather than one or the other
@@ -92,12 +92,12 @@ Developers are able to download updates in the background (while app is in use) 
 ```
 
 ### Making updates mandatory
-In some cases, it might actually be desirable to have an update that must be installed to a user's device - making it truly mandatory (e.g. a critical fix to an app that can't wait). In these cases, there are additional measure that you can take to make the update mandatory.
+In some cases, it might actually be desirable to have an update that must be installed to a user's device - making it truly mandatory (e.g. a critical fix to an app that can't wait). In these cases, there are additional measures that you can take to make the update mandatory.
 1. Implement the mandatory update logic in your app code (would need to be done before mandatory update itself)
 2. During submission to the Dev Center, ensure the "Make this update mandatory" box is selected
 
 ### Implementing app code
-n order to take full advantage of mandatory updates, you'll need to make some slight modifications to the code above. You'll need to use the [StorePackageUpdate object](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StorePackageUpdate) to determine if the update is mandatory.
+In order to take full advantage of mandatory updates, you'll need to make some slight modifications to the code above. You'll need to use the [StorePackageUpdate object](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StorePackageUpdate) to determine if the update is mandatory.
 
 ```
  private async bool CheckForMandatoryUpdates()
