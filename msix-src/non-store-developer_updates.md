@@ -12,8 +12,25 @@ ms.custom: "RS5, seodec18"
 
 When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you're shipping outside the Store, all you need to do is check your server for a new version of your app and install the new version. You can update to a new version by taking advantage of the [PackageManager.UpdatePackageAsync()] API(https://docs.microsoft.com/en-us/uwp/api/windows.management.deployment.packagemanager.updatepackageasync). Doing so requires that your app declares the packageManagement capability. Below is sample C# code of what that can look like:
 
+
+## Add the PackageManagement Capability to your package manifest
+
+To use the PackageManager APIs your app will need to declare the packageManagement capability in your manifest file. 
+
+```
+<Package>
+...
+
+ <Capabilities>
+    <rescap:Capability Name="packageManagement" />
+  </Capabilities>
+  
+ ...
+ </Package>
+```
 ## Check for updates on your server 
 
+The first step is to check your server if ther's a new version of your application available. In this example we check to see of the version of the package on our server is greater than the current version of the app.
 ```
 using Windows.Management.Deployment;
 
@@ -48,10 +65,13 @@ private async void CheckUpdate(object sender, TappedRoutedEventArgs e)
         }
     }
 ```
-Once you have determined that an update is available, you can queue it up. 
 
 
-### Download an update
+
+## Download an update
+
+Once you've determined that an update is available, you can queue it up. The update will be applied the next time your app is shut down and upon restartng the app the new version will be available to the user.
+
 ```
 //queue up the update and close the current app instance
     private async void CommandInvokedHandler(IUICommand command)
@@ -67,17 +87,3 @@ Once you have determined that an update is available, you can queue it up.
         }
     }
 ```
-
-### Add the PackageManagement Capability to your package manifest
-```
-<Package>
-...
-
- <Capabilities>
-    <rescap:Capability Name="packageManagement" />
-  </Capabilities>
-  
- ...
- </Package>
-```
-
