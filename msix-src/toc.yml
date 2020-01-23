@@ -4,17 +4,17 @@
       href: index.yml  
     - name: What is MSIX?
       href: overview.md
-    - name: Supported Platforms
+    - name: Supported platforms
       items: 
         - name: Overview 
           href: 
-        - name: Windows Server 2019
+        - name: MSIX support on Windows Server 2019
           href: 
-        - name: MSIX package support on Windows 10 Version 1709 and later 
+        - name: MSIX support on Windows 10 Version 1709 and later 
           href: packaging-tool/Support-on-1709-and-later.md
-        - name: How MSIX package run on Windows
+        - name: Understanding how MSIX packages run on Windows
           href: desktop/desktop-to-uwp-behind-the-scenes.md
-    - name: Signing 
+    - name: MSIX package signing
       items:
         - name: Overview
           href: package/signing-package-overview.md
@@ -60,7 +60,7 @@
           href: https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render
         - name: App Installer file schema
           href: https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
-    - name: Get Started 
+    - name: Get started
       items: 
         - name: Overview 
           href:
@@ -80,25 +80,25 @@
                   href: msix-sdk/release-notes/sdk-release-notes-1.6.md
                 - name: MSIX SDK Release 1.7
                   href: msix-sdk/release-notes/sdk-release-notes-1.7.md
-            - name: MSIX Labs 
+            - name: MSIX hands-on-labs 
               href: 
-            - name: MSIX Toolkit 
+            - name: MSIX Toolkit
               href:
             - name: MSIX videos
               href: team-video.md
-- name: Create an MSIX from an existing installer 
+- name: Create an MSIX package from an existing installer
   items: 
-    - name: Overview 
+    - name: Overview
       href: 
-    - name: Environment set up
+    - name: Set up your environment
       items: 
         - name: Conversion environment best practices
           href: 
         - name: MSIX Packaging Environment on Hyper-V Quick Create
           href: packaging-tool/Quick-Create-VM.md
         - name: Set up instructions for remote desktop machine conversions
-          href: packaging-tool/remote-conversion-setup.md       
-    - name: MSIX Packaging Tool set up
+          href: packaging-tool/remote-conversion-setup.md
+    - name: Set up the MSIX Packaging Tool
       items: 
         - name: MSIX Packaging Tool overview
           href: packaging-tool/mpt-overview.md
@@ -118,7 +118,7 @@
           href: packaging-tool/release-notes/history.md
         - name: How to create a conversion template file for command line conversions 
           href: 
-    - name: Using the MSIX Packaging Tool
+    - name: Use the MSIX Packaging Tool
       items: 
         - name: Create an MSIX package from a desktop installer (msi, exe, ClickOnce, or App-V) 
           href: packaging-tool/create-app-package-MSI-VM.md
@@ -134,9 +134,9 @@
           href: packaging-tool/package-editor.md
         - name: Edit icons and assets using the MSIX Packaging Tool
           href: packaging-tool/edit-icons-and-assets.md
-    - name: After Creating an MSIX 
+    - name: Tasks for after you create an MSIX package
       items: 
-        - name: Package Support Framework 
+        - name: Package Support Framework
           items:
             - name: Overview
               href: psf/package-support-framework-overview.md
@@ -144,23 +144,23 @@
               href: psf/package-support-framework.md
             - name: Run scripts with the Package Support Framework
               href: psf/run-scripts-with-package-support-framework.md
-- name: Build an MSIX with source code  
+- name: Build an MSIX package with source code
   items: 
-    - name: What to know before you package 
+    - name: Key concepts to know before you package your app
       items:
         - name: Overview
           href: 
         - name: Prepare to package a desktop app 
           href: desktop/desktop-to-uwp-prepare.md
-        - name: MSIX Bundles
+        - name: MSIX bundles
           href: packaging-tool/bundle-msix-packages.md
-    - name: Packaging in Visual Studio 
+    - name: Packaging in Visual Studio
       items: 
         - name: Overview
           href: 
-        - name: Creating a Package in Visual Studio 
+        - name: Creating a Package in Visual Studio
           href: package/packaging-uwp-apps.md
-        - name: Using Azure Dev Ops Pipeline 
+        - name: Using an Azure DevOps pipeline
           href: 
     - name: Packaging from the command line 
       items:  
@@ -174,23 +174,23 @@
           href: package/package-folding.md
         - name: Package creation with the packaging layout
           href: package/packaging-layout.md
-    - name: Expand your app
+    - name: Extend your app
       items:  
-        - name: App Extensions
+        - name: App extensions
           href: 
-        - name: Optional Packages
+        - name: Optional packages
           href: package/optional-packages-with-executable-code.md
-        - name: Modification Packages
+        - name: Modification packages
           href: 
-- name: Managing your MSIX deployment
+- name: Manage your MSIX deployment
   items: 
     - name: Overview
       items: 
-        - name: Know your customer 
+        - name: Know your customer
           href: 
-        - name: MSIX Service support 
+        - name: MSIX service support
           href: 
-        - name: MSIX Native support 
+        - name: MSIX native support
           href: 
         - name: MSIX Core
           items:
@@ -204,21 +204,21 @@
             href: msix-core/msixcore-clickonce-solution.md
           - name: Troubleshooting
             href: msix-core/msixcore-troubleshoot.md
-    - name: Create your MSIX
+    - name: Create your MSIX package
       items: 
         - name: Visual Studio 
           href: 
         - name: Converting your installer 
           href: 
-        - name: Bulk Operations 
+        - name: Bulk operations 
           href: 
-    - name: Distributing through enterprise 
+    - name: Distribute your MSIX in an enterprise environment
       items: 
         - name: Microsoft Endpoint Management
           items: 
-            - name: Configuration Manager 
+            - name: Microsoft Endpoint Configuration Manager
               href: 
-            - name: Microsoft Intune 
+            - name: Microsoft Intune
               href: 
         - name: Web 
           href: 
@@ -238,29 +238,29 @@
               href: app-installer/how-to-create-appinstaller-file.md
             - name: Configure update settings in the App Installer file
               href: app-installer/update-settings.md
-        - name: Updating MSIX 
+        - name: Update MSIX packages
           href: app-package-updates.md
-        - name: Using Group Policy 
+        - name: Use Group Policy
           href: group-policy-msix.md
-        - name: DISM and Provisioning 
+        - name: DISM and provisioning
           href: https://docs.microsoft.com/windows-hardware/manufacture/desktop/what-is-dism?context=/windows/msix/render
-        - name: Targeting special group
+        - name: Targeting special groups
           href: 
         - name: Known Issues 
           href: 
-- name: MSIX Validation and Troubleshoot
+- name: MSIX validation and troubleshooting
   items: 
-    - name: Windows Device Portal 
+    - name: Windows Device Portal
       href: https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render
-    - name: Debug and test a packaged app 
+    - name: Debug and test a packaged app
       items:
         - name: Overview
           href: desktop/desktop-to-uwp-debug.md
         - name: Test for Windows 10 in S mode
           href: desktop/desktop-to-uwp-test-windows-s.md
-    - name: Troubleshoot MSIX Container 
+    - name: Troubleshoot MSIX containers
       href: manage/troubleshoot-msix-container.md
-    - name: Store Validation 
+    - name: Store validation
       items: 
         - name: Windows App certification 
           href: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render
