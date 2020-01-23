@@ -15,16 +15,26 @@ MSIX is a Windows app package format that provides a modern packaging experience
 MSIX enables enterprises to stay current and ensure their applications are always up to date. It allows IT Pros and developers to deliver a user centric solution while stile reducing the cost of ownership of application by reducing the need to repackage. 
 
 ## Reliability with MSIX 
-MSIX provides a reliable install. MSIX has a 99.96% success rate for installs over millions of installs. There is also a 100% guaranteed uninstalled. MSIX improves network bandwidth by only downloading what is needed. MSIX is designed for modern systems and the cloud. With MSIX there is no duplication of files across apps and Windows manages the shared files across apps.
+MSIX provides a reliable install. MSIX has a 99.96% success rate for installs over millions of installs. There is also a 100% guaranteed uninstalled. MSIX improves network bandwidth by only downloading what is needed. This is done by leveraging the AppxBlockMap.xml that is in the package (see below for more details). MSIX is designed for modern systems and the cloud. With MSIX there is no duplication of files across apps and Windows manages the shared files across apps. A clean uninstall is guaranteed even if the platform manages shared files across apps. 
 
 ## What makes up an MSIX package 
 Here are a list of required components needed to create and install an MSIX Package. 
 
-| Name | Description |
-|------|---------|
-| AppxBlockMap.xml | The package block map file is an XML document that contains a list of the app’s files along with indexes and cryptographic hashes for each block of data that is stored in the package. The block map file itself is verified and secured with a digital signature when the package is signed. The block map file allows MSIX packages to be downloaded and validated incrementally, and also works to support diff updates to the app files after they’re installed.| 
-| AppxManifest.xml | The package manifest is an XML document that contains the info the system needs to deploy, display, or update a Windows app. This info includes package identity, package dependencies, required capabilities, visual elements, and extensibility points. | 
-| AppxSignature.p7x | Generated when the package is signed. All MSIX Package are required to be signed before install. |
+### AppxBlockMap.xml
+The package block map file is an XML document that contains a list of the app’s files along with indexes and cryptographic hashes for each block of data that is stored in the package. The block map file itself is verified and secured with a digital signature when the package is signed. The block map file allows MSIX packages to be downloaded and validated incrementally, and also works to support diff updates to the app files after they’re installed.
+
+### AppxManifest.xml 
+The package manifest is an XML document that contains the info the system needs to deploy, display, or update a Windows app. This info includes package identity, package dependencies, required capabilities, visual elements, and extensibility points. 
+
+### AppxSignature.p7x
+The AppxSignature.p7x is generated when the package is signed. All MSIX Package are required to be signed before install. With the AppxBlockmap.xml, the platform is able to deploy the package and be validated. 
+
+### MSIX Platform Support
+The MSIX package format applications can be installed on currently supported Windows platforms. Currently, [Windows 10 1803](msix-1709-and-1803-support.md) and newer support the installation provided the system has the required App Installer installed, and configured to allow the side loading of apps. Previous versions of Windows do support the installation of MSIX applications, but require [MSIX Core](msixcore.md) .
+
+For more information on this, and other supportability details please click on the following link: <Link> 
+
+
 
 ## MSIX Container 
 All MSIX apps share the global registry for reading. An MSIX package will write to its own virtual registry and App Data folder. This will be deleted when the app is uninstall or a reset. Other apps will not have access to it's virtual registry or virtual file system. 
