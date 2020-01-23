@@ -19,8 +19,9 @@ MSIX provides a reliable install. MSIX has a 99.96% success rate for installs ov
 
 ## What makes up an MSIX package 
 Here are a list of required components needed to create and install an MSIX Package. 
+
 | Name |Description|
-|:-------------:|:--------:|
+|:-------------:|:--------------------------:|
 | AppxBlockMap.xml | The package block map file is an XML document that contains a list of the app’s files along with indexes and cryptographic hashes for each block of data that is stored in the package. The block map file itself is verified and secured with a digital signature when the package is signed. The block map file allows MSIX packages to be downloaded and validated incrementally, and also works to support diff updates to the app files after they’re installed.| 
 | AppxManifest.xml | The package manifest is an XML document that contains the info the system needs to deploy, display, or update a Windows app. This info includes package identity, package dependencies, required capabilities, visual elements, and extensibility points. | 
 | AppxSignature.p7x | Generated when the package is signed. All MSIX Package are required to be signed before install. |
