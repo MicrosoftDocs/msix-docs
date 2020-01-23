@@ -8,7 +8,8 @@ ms.assetid:
 ms.localizationpriority: medium
 ---
 
-# Managing your MSIX deployment [kevin]
+# Managing your MSIX deployment [kevin] byte nme
+
 
 Packaging your application is only half the battle.  Next you need to be able to deploy your application to your users.  How you deploy it depends on who your customer is.  For enterprise customers, a software management system is used.  If you are targeting retail users, then deployment happens though the web and resources like the Windows Store.
 This section will discuss deployment for both enterprise and retail markets.  It will provide links and tips and tricks to ensuring a successful experience.
@@ -37,13 +38,14 @@ Most developers using Visual Studio 2019 <link> today will build their installer
 For those that are not writing new code, but instead deploying existing applications, the tool to help you do this is the MSIX Packaging Tool.  With the use of this tool, you can convert your existing MSI or installer to MSIX for installation on the above supported operating systems.  See conversions made easy by someone <link>.
 ### 	bulk operations - toolkit
 
-##	Distributing through enterprise
-### Microsoft Endpoint Management
+##	Distributing through enterprise [roy]
+### Microsoft Endpoint Management [roy]
 ####	Configmanager 
 ####	Intune
 ###	Web
 ###	Updating MSIX
-###	Using Group policy
+###	Using Group policy [roy]
+
 ###	DISM and Provisioning
 [Dian] No matter who logs on, the apps is there. Be strict that if a user removes an app, provisioning again does not bring back the app. 1903 override this behavior. 
 ###	Targeting special groups
@@ -54,20 +56,20 @@ For those that are not writing new code, but instead deploying existing applicat
 ### Microsoft Store for Business
 ### App Center
 #### Known Issues
-## Managing your app
+## Managing your app [kevinla ]
+###	prevent app installs through AppLocker [roy]
 ### Force update
 ### delay registration
 ### rollback
 ### force takedown 
  
-## Uninstall
+## Uninstall [kevinla]
 When a package is uninstalled by the user, all files and folders located under *C:\Program Files\WindowsApps\package_name* are removed, as well as any redirected writes to AppData or the registry that were captured during the packaging process.
 [Dian] take it off the box. 
 ## Troubleshooting
 
 ### device portal 
-
-### appx logs 
+### appx logs [kevinla]
 [Dian] john to send the name of the name of logs. 
             
 
