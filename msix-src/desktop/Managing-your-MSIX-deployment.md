@@ -14,7 +14,7 @@ Packaging your application is only half the battle.  Next you need to be able to
 This section will discuss deployment for both enterprise and retail markets.  It will provide links and tips and tricks to ensuring a successful experience.
 
 
-## Know your customer [kevin]
+## Know your client [kevin]
 
 may not support certain API calls your application is built using.   The following table will hope all developers understand their MSIX needs. 
 Operating System	Version	Consideration
@@ -63,8 +63,10 @@ For those that are not writing new code, but instead deploying existing applicat
 ## Uninstall
 When a package is uninstalled by the user, all files and folders located under *C:\Program Files\WindowsApps\package_name* are removed, as well as any redirected writes to AppData or the registry that were captured during the packaging process.
 [Dian] take it off the box. 
-## Trouble shooting
+## Troubleshooting
+
 ### device portal 
+
 ### appx logs 
 [Dian] john to send the name of the name of logs. 
             
