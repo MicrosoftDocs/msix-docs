@@ -9,7 +9,7 @@
         - name: Overview 
           href: 
         - name: MSIX support on Windows Server 2019
-          href: 
+          href: msix-server-2019.md
         - name: MSIX support on Windows 10 Version 1709 and later 
           href: packaging-tool/Support-on-1709-and-later.md
         - name: Understanding how MSIX packages run on Windows
@@ -158,14 +158,16 @@
       items: 
         - name: Overview
           href: 
-        - name: Creating a Package in Visual Studio
+        - name: Create an MSIX package in Visual Studio
           href: package/packaging-uwp-apps.md
-        - name: Using an Azure DevOps pipeline
+        - name: Use an Azure DevOps pipeline
           href: 
-    - name: Packaging from the command line 
+    - name: Packaging from the command line
       items:  
         - name: Manual app packaging
           href: package/manual-packaging-root.md
+        - name: Generating package
+          href: desktop/desktop-to-uwp-manual-conversion.md 
         - name: Create an app package with the MakeAppx.exe tool
           href: package/create-app-package-with-makeappx-tool.md
         - name: Create a certificate for package signing
@@ -238,8 +240,14 @@
               href: app-installer/how-to-create-appinstaller-file.md
             - name: Configure update settings in the App Installer file
               href: app-installer/update-settings.md
-        - name: Update MSIX packages
-          href: app-package-updates.md
+        - name: App package updates
+          items: 
+            - name: Overview
+              href: app-package-updates.md
+            - name: Update Store-published apps from your code
+              href: store-developer-package-update.md
+            - name: Update non-Store published apps from your code
+              href: non-store-developer_updates.md
         - name: Use Group Policy
           href: group-policy-msix.md
         - name: DISM and provisioning
@@ -258,6 +266,8 @@
           href: desktop/desktop-to-uwp-debug.md
         - name: Test for Windows 10 in S mode
           href: desktop/desktop-to-uwp-test-windows-s.md
+        - name: Detect package identity and runtime context
+          href: detect-package-identity.md
     - name: Troubleshoot MSIX containers
       href: manage/troubleshoot-msix-container.md
     - name: Store validation
