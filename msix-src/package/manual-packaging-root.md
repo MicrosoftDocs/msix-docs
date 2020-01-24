@@ -21,6 +21,7 @@ This section contains or links to articles about manually packaging Windows apps
 
 | Topic | Description |
 |-------|-------------|
+| [Generating package artifacts ](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-manual-conversion) | Create a package manifest and add Target-based unplated assets (optional) |
 | [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md) | MakeAppx.exe creates, encrypts, decrypts, and extracts files from app packages and bundles. |
 | [Package a desktop app manually](../desktop/desktop-to-uwp-manual-conversion.md) | Learn how to use **MakeApp.exe** to package a desktop app. |
 | [Create a certificate for package signing](create-certificate-package-signing.md) | Create and export a certificate for app package signing with PowerShell tools. |
