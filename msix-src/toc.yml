@@ -44,6 +44,10 @@
           href: non-store-developer_updates.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
+
+    - name: MSIX support on Windows Server 2019
+      href: msix-server-2019.md
+    - name: MSIX support on Windows 10 version 1709 and 1803
     - name: MSIX Core
       items:
         - name: Overview
@@ -154,7 +158,7 @@
           href: desktop/desktop-to-uwp-behind-the-scenes.md 
         - name: Known issues 
           href: desktop/desktop-to-uwp-known-issues.md         
-    - name: Package a UWP app with Visual Studio
+    - name: Package an MSIX app with Visual Studio
       href: package/packaging-uwp-apps.md
     - name: Manual app packaging
       items:
