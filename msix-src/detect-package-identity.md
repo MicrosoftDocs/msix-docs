@@ -1,5 +1,5 @@
 ---
-title: Detecting Package Identity and Runtime Context
+title: Detect package identity and runtime context
 description: Describes how an app can determine whether its shipped as an MSIX package on Win 1709 or later. 
 author: Huios
 ms.date: 01/23/2020
@@ -9,19 +9,21 @@ ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
-# Detecting Package Identity and Runtime Context
- 
-You may have some versions of your app that was not distributed as an MSIX. At runtime your app can detect whether it was deployed as an MSIX using the Windows Package Manager, or your own custom installer. You may want to change the app behavior such as update settings or you may want to take advantage of functionality only available to MSIX packages.
+# Detect package identity and runtime context
 
-To determine whether your application is running as an MSIX package on a Windows with the full MSIX feature set, you can use the [GetCurrentPackageFullName]( https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) native Windows API included in the kernel32.dll System library. When a desktop application is running as a non-packaged application without package identity, the API will return an error which can help you infer the context in which the app is running. 
+You may have some versions of your app that were not distributed in an MSIX package. At runtime your app can detect whether it was deployed as an MSIX package by using the Windows Package Manager API, or your own custom installer. You may want to change the app behavior such as update settings or you may want to take advantage of functionality only available to MSIX packages.
 
-If the API call succeeds, it means:
-1.	Your desktop app is packages as an MSIX
-2.	Your app is running on Windows 10, version 1709 (build 16299) or later with full MSIX support
+To determine whether your application is running as an MSIX package on a version of Windows that supports the full MSIX feature set, you can use the [GetCurrentPackageFullName](https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) native function in kernel32.dll. When a desktop application is running as a non-packaged application without package identity, this function returns an error which can help you infer the context in which the app is running.
 
-## Using GetCurrentPackageFullName( ) in native code
+If the function succeeds, it means:
 
-Below is some sample C++ code using GetCurrentPackageFullName( ) to determine the context of an app:
+* Your app is packaged in an MSIX package.
+* Your app is running on Windows 10, version 1709 (build 16299) or later with full MSIX support.
+
+## Use GetCurrentPackageFullName in native code
+
+The following code example demonstrates how to use [GetCurrentPackageFullName](https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) to determine the context of an app.
+
 ```cpp
 #define _UNICODE 1
 #define UNICODE 1
@@ -63,18 +65,15 @@ int __cdecl wmain()
 
     return 0;
 }
-
 ```
-## Using GetCurrentPackageFullName function in managed code
 
-If you are working on a C# application based on the .NET framework, the API isn’t directly exposed by the .NET framework, it’s a native C++ method offered directly by System. To take advantage of the API in managed code you need to make use of interop, similar to using the P/Invoke feature or C++ / CLI libraries. 
+## Use GetCurrentPackageFullName function in managed code
 
-To make development easier you can use a .NET library (works with .NET 4+ applications), which leverages:
-- The P/Invoke approach to invoke the GetPackageFullName() native method
-- The native .NET Framework APIs to check if the app is running on an operating system where this API isn’t supported e.g. Windows 7.
+To call [GetCurrentPackageFullName](https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) in a managed .NET Framework app, you'll need to use [Platform Invoke (P/Invoke)](https://docs.microsoft.com/dotnet/standard/native-interop/pinvoke) or some other form of interop.
 
-The library is open source and available on [Github]( https://github.com/qmatteoq/DesktopBridgeHelpers/). It’s also available as a [NuGet Package](https://www.nuget.org/packages/DesktopBridge.Helpers/).
-Once installed in your .NET project you can create a new instance of the DesktopBridge.Helpers class and call the IsRunningAsUwp() method. It will return true if your desktop application is running as an MSIX package on Windows 10, version 1709 (build 16299) or later and false if either of those are not true. Below is sample C# code making use of the NuGet package: 
+To simplify this process, you can use the [DesktopBridgeHelpers](https://github.com/qmatteoq/DesktopBridgeHelpers/) library. This library supports .NET Framework 4 and later, and it uses P/Invoke internally to provide a helper class that determines whether the app is running on a version of Windows that supports the full MSIX feature set. This library is also available as a [NuGet Package](https://www.nuget.org/packages/DesktopBridge.Helpers/).
+
+After you install the package in your project, you can create a new instance of the `DesktopBridge.Helpers` class and call the `IsRunningAsUwp` method. This method returns true if your app is running as an MSIX package on Windows 10, version 1709 (build 16299) or later and false if either of those are not true. The following sample demonstrates how to call this method.
 
 ```csharp
 private bool IsRunningAsUwp()
@@ -94,5 +93,4 @@ private void Form1_Load(object sender, EventArgs e)
        txtUwp.Text = "I'm running as a native desktop app";
    }
 }
-
 ```
