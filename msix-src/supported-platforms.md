@@ -60,11 +60,5 @@ Here is a breakdown of supported features of Microsoft Store on Windows 10 versi
 ## Down level OS compatibility 
 For MSIX support on  Windows earlier than Windows 10, version 1709. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/MsixCore) on GitHub that enables these earlier Windows versions to install MSIX packages. 
 
-Windows 7 
-
-Windows 8 
-
-
-
-image --> 
+Visit the [MSIX Core](msix-core/msixcore.md) articles for more information. 
 
