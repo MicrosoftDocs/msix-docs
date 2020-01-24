@@ -38,13 +38,12 @@
       items: 
         - name: Overview
           href: app-package-updates.md
-        - name: Updating Store apps from your code
+        - name: Update Store-published apps from your code
           href: store-developer-package-update.md
-        - name: Updating non-Store apps from your code
+        - name: Update non-Store published apps from your code
           href: non-store-developer_updates.md
     - name: MSIX support on 1709 and 1803
       href: msix-1709-and-1803-support.md
-
     - name: MSIX support on Windows Server 2019
       href: msix-server-2019.md
     - name: MSIX support on Windows 10 version 1709 and 1803
@@ -198,7 +197,7 @@
           href: desktop/desktop-to-uwp-debug.md
         - name: Test for Windows 10 in S mode
           href: desktop/desktop-to-uwp-test-windows-s.md
-        - name: Detect Identity and Runtime context
+        - name: Detect package identity and runtime context
           href: detect-package-identity.md
     - name: Apply runtime fixes to a desktop app package
       href: psf/package-support-framework.md
