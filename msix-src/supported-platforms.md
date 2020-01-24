@@ -9,11 +9,52 @@ ms.custom: RS5
 ---
 
 # Overview 
-This article describes key features of MSIX and what verison of Windows is suported. 
+This article describes key features of MSIX and what version of Windows is supported. 
 
 # Windows 10 
-MSIX is supporte on Windows 10 1809 and later. Here is breakdown of key features
+## Feature Breakdown
+MSIX is supported on Windows 10 1809 and later. Here is breakdown of key features that are supported on Windows 10. 
 
+> [!div class="mx-tableFixed"]
+| Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
+|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Native MSIX install and uninstall              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| App Installer File Support| :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| Identity for Packaged Win32 apps | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| allowElevation Permissions | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| Modification Package Support | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| ForceUpdateFromAnyVersion Downgrade | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| Package Support Framework (PSF) | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+
+Native MSIX File Support
+App Installer File Support
+App Installer File Blocking Updates
+Identity for Packaged Win32 Apps
+
+Modification Package Support
+ForceUpdateFromAnyVersion Downgrade
+Package Support Framework (PSF)
+
+## Format support 
+Here is a breakdown of supported formats on Windows 10 versions. 
+
+| Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
+|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| .msix              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| .msixbundle| :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| .appx | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| .appxbundle | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+
+## Microsoft Store 
+Here is a breakdown of supported features of Microsoft Store on Windows 10 versions
+
+| Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
+|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Publishing             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| Update Notification| :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| Update Distribution | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| Streaming Install | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
+| Delta Updates | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
 
 
 ## Down level OS compatibility 
