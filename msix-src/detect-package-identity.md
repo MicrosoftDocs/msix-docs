@@ -16,7 +16,7 @@ To determine whether your application is running as an MSIX package on a Windows
 
 If the API call succeeds, it means:
 1.	Your desktop app is packages as an MSIX
-2.	Your app is running on Windows 10, version 1709 (build 16299) or later with full MSIX support.
+2.	Your app is running on Windows 10, version 1709 (build 16299) or later with full MSIX support
 
 ## Using GetCurrentPackageFullName( ) in Native code
 
