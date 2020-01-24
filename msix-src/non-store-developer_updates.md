@@ -11,7 +11,7 @@ ms.custom: "RS5, seodec18"
 
 # Updating non-Store Distributed apps from your code
 
-When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you're shipping outside the Store, all you need to do is check your server for a new version of your app and install the new version. You can update to a new version by taking advantage of the [PackageManager.UpdatePackageAsync( )](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.updatepackageasync) API. Doing so requires that your app declares the packageManagement capability. Below is a manifest snipet of of the packageManagement capability declaration and sample C# code of what checking for an update and then using ```PackageManager.UpdatePackageAsync( )``` to install the update can look like:
+When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you're shipping outside the Store, all you need to do is check your server for a new version of your app and install the new version. You can update to a new version by taking advantage of the [PackageManager.UpdatePackageAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.updatepackageasync) API. Doing so requires that your app declares the packageManagement capability. Below is a manifest snipet of of the packageManagement capability declaration and sample C# code of what checking for an update and then using ```PackageManager.UpdatePackageAsync( )``` to install the update can look like:
 
 
 ## Add the PackageManagement Capability to your package manifest
