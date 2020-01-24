@@ -18,7 +18,7 @@ If the API call succeeds, it means:
 1.	Your desktop app is packages as an MSIX
 2.	Your app is running on Windows 10, version 1709 (build 16299) or later with full MSIX support
 
-## Using GetCurrentPackageFullName( ) in Native code
+## Using GetCurrentPackageFullName( ) in native code
 
 Below is some sample C++ code using GetCurrentPackageFullName( ) to determine the context of an app:
 ```
