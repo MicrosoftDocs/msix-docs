@@ -1,6 +1,7 @@
 ---
 title: Detecting Package Identity and Runtime Context
 description: Describes how an app can determine whether its shipped as an MSIX package on Win 1709 or later. 
+author: Huios
 ms.date: 01/23/2020
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx
