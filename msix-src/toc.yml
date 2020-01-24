@@ -194,8 +194,8 @@
           href: desktop/desktop-to-uwp-debug.md
         - name: Test for Windows 10 in S mode
           href: desktop/desktop-to-uwp-test-windows-s.md
-        - name: Detect Identity and Runtime context
-          href: detect-package-identity.md
+    - name: Detect Identity and Runtime context
+      href: detect-package-identity.md
     - name: Apply runtime fixes to a desktop app package
       href: psf/package-support-framework.md
     - name: Run scripts with the Package Support Framework
