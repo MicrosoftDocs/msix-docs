@@ -68,8 +68,9 @@ int __cdecl wmain()
 
 If you are working on a C# application based on the .NET framework (the API isn’t directly exposed by the .NET framework, it’s a native C++ method offered directly by System. To take advantage of the API in managed code you need to make use of interop, similar to using the P/Invoke feature or C++ / CLI libraries. 
 To make development easier you can use a .NET library (works with .NET 4+ applications), which leverages:
-•	The P/Invoke approach to invoke the GetPackageFullName() native method
-•	The native .NET Framework APIs to check if the app is running on an operating system where this API isn’t supported e.g. Windows 7.
+- The P/Invoke approach to invoke the GetPackageFullName() native method
+- The native .NET Framework APIs to check if the app is running on an operating system where this API isn’t supported e.g. Windows 7.
+
 The library is open source and available on [Github]( https://github.com/qmatteoq/DesktopBridgeHelpers/). It’s also available as a [NuGet Package](https://www.nuget.org/packages/DesktopBridge.Helpers/).
 Once installed in your .NET project you can create a new instance of the DesktopBridge.Helpers class and call the IsRunningAsUwp() method. It will return true if your desktop application is running as an MSIX package on Windows 10, version 1709 (build 16299) or later and false if either of those are not true. Below is sample C# code making use of the NuGet package: 
 
