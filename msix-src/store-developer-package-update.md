@@ -1,6 +1,7 @@
 ---
 title: Store only Developer Package Update 
 description: Describes how MSIX packages can be updated by developers in code. 
+author: Huios
 ms.date: 09/10/2018
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx
@@ -119,7 +120,7 @@ In order to take full advantage of mandatory updates, you'll need to make some s
 Then you'll need to create a custom in app dialog to inform the user that there is a mandatory update and that they must install it to continue full use of the app. If the user declines the update, the app could either degrade functionality (e.g. prevent online access) or terminate completely (e.g. online only games)
 
 ### Partner Center 
-To ensure the [StorePackageUpdate](https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Store.StorePackageUpdate) shows true for a mandatory update, you will need to mark the update as mandatory in the Partner Center in the Packages page.
+To ensure the [StorePackageUpdate](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StorePackageUpdate) shows true for a mandatory update, you will need to mark the update as mandatory in the Partner Center in the Packages page.
 
 A couple of things to note: 
 1. If a device comes back online after a mandatory update has been superseded with another non-mandatory update, the non-mandatory update will still show up on the device as mandatory given the missed update before it was mandatory.
