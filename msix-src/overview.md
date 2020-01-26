@@ -40,7 +40,7 @@ The package manifest is an XML document that contains the info the system needs 
 The AppxSignature.p7x is generated when the package is signed. All MSIX Package are required to be signed before install. With the AppxBlockmap.xml, the platform is able to deploy the package and be validated. 
 
 ### MSIX Platform Support
-The MSIX package format applications can be installed on currently supported Windows platforms. Currently, [Windows 10 1803](msix-1709-and-1803-support.md) and newer support the installation provided the system has the required App Installer installed, and configured to allow the side loading of apps. Previous versions of Windows do support the installation of MSIX applications, but require [MSIX Core](msixcore.md) .
+The MSIX package format applications can be installed on currently supported Windows platforms. Currently, [Windows 10 1803](msix-1709-and-1803-support.md) and newer support the installation provided the system has the required App Installer installed, and configured to allow the side loading of apps. Previous versions of Windows do support the installation of MSIX applications, but require [MSIX Core](msix-core/msixcore.md) .
 
 For more information, visit the [Supported Platform Overview](supported-platforms.md)
 
