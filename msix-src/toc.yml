@@ -7,7 +7,7 @@
     - name: Supported Platforms
       items: 
         - name: Overview 
-          href: 
+          href: supported-platforms.md
         - name: Windows Server 2019
           href: 
         - name: MSIX package support on Windows 10 Version 1709 and later 
