@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Overview 
+# MSIX Supported Platform Overview 
 This article describes key features of MSIX and what version of Windows is supported. 
 
 # Windows 10 
@@ -18,7 +18,7 @@ MSIX is supported on Windows 10 1809 and later. Here is breakdown of key feature
 > [!div class="mx-tableFixed"]
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
 |------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| Native MSIX install and uninstall              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| Native MSIX install and uninstall              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:                | :heavy_check_mark: | :heavy_check_mark:                 | 
 | App Installer File Support| :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
 | Identity for Packaged Win32 apps | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
 | allowElevation Permissions | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
