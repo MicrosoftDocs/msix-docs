@@ -1,6 +1,7 @@
 ---
 title: Supported Platform 
 description: This article describes supported platform for MSIX. 
+author: dianmsft
 ms.date: 12/02/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
@@ -11,8 +12,7 @@ ms.custom: RS5
 # MSIX Supported Platform Overview 
 This article describes key features of MSIX and what version of Windows is supported. 
 
-# Windows 10 
-## Feature Breakdown
+## Winodws 10 Feature Breakdown
 MSIX is supported on Windows 10 1809 and later. Here is breakdown of key features that are supported on Windows 10. 
 
 > [!div class="mx-tableFixed"]
@@ -26,7 +26,7 @@ MSIX is supported on Windows 10 1809 and later. Here is breakdown of key feature
 | ForceUpdateFromAnyVersion Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 
-## Format support 
+## Windows 10 Format support 
 Here is a breakdown of supported formats on Windows 10 versions. 
 
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
