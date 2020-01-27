@@ -13,7 +13,7 @@ ms.custom: RS5
 This article describes key features of MSIX and what version of Windows is supported. 
 
 ## Winodws 10 Feature Breakdown
-MSIX is supported on Windows 10 1809 and later. Here is breakdown of key features that are supported on Windows 10. 
+MSIX is supported on Windows 10 1709 and later. Here is breakdown of key features that are supported on Windows 10. 
 
 > [!div class="mx-tableFixed"]
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
@@ -49,7 +49,7 @@ Here is a breakdown of supported features of Microsoft Store on Windows 10 versi
 | Publishing             | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 | Update Notification| :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 | Streaming Install | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| 
-| Delta Updates | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
+| Delta Updates | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 
 ### Microsoft Store submission 
 The minimum supported OS version of an MSIX package is listed in the manifest file of the package as `MinVersion` in the `TargetDeviceFamily` element. For example an MSIX package may list `MinVersion="10.0.17701.0"` as the minimum supported version, which means that the MSIX package can run on this and later versions of the OS.
