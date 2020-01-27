@@ -149,7 +149,7 @@
     - name: Key concepts to know before you package your app
       items:
         - name: Overview
-          href: 
+          href: desktop/source-code-overview.md
         - name: Prepare to package a desktop app 
           href: desktop/desktop-to-uwp-prepare.md
         - name: MSIX bundles
