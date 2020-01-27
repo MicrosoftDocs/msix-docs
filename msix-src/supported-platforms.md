@@ -13,7 +13,7 @@ ms.custom: RS5
 This article describes key features of MSIX and what version of Windows is supported. 
 
 ## Windows 10 Feature Breakdown
-MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key features on Windows 10. 
+MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key features on Windows 10. For versions of  Windows earlier than Windows 10 version 1709, use [MSIX Core](msix-core/msixcore.md) to install MSIX packages. 
 
 > [!div class="mx-tableFixed"]
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 2004| Windows Server 2019 (LTSC) | Windows Enterprise 2019 LTSC| 
@@ -26,8 +26,8 @@ MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key fea
 | ForceUpdateFromAnyVersion Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  
 | Windows Services | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| 
-| Differ registration flag | 
-| Force
+| Differ registration flag |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| 
+| Force provisioning | 
 
 flag to differ registration - vb 
 force reprovision - ?? 
@@ -46,8 +46,6 @@ Here is a breakdown of supported formats on Windows 10 versions.
 | .msixbundle| :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:|
 | .appx | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 | .appxbundle | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-
-
 
 ## Microsoft Store 
 Here is a breakdown of supported features of Microsoft Store on Windows 10 versions
