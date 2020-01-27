@@ -24,7 +24,7 @@ MSIX provides a reliable install. MSIX has a 99.96% success rate for installs ov
 * **Apply run time fixes to packaged apps.** The [Package Support Framework](psf/package-support-framework-overview.md) is an open source kit that helps you apply fixes to your existing desktop app when you don't have access to the source code, so that it can run in an MSIX container.
 * **Use MSIX anywhere.** With the open source [MSIX SDK](msix-sdk/sdk-overview.md), MSIX packages are more versatile, and platform independent. The SDK provides all of the APIs needed to verify, validate, and unpack an app package on any platform, including Windows 10 and non-Windows 10 platforms.
 
-## What makes up an MSIX package 
+## Inside an MSIX package 
 Here are a list of required components needed to create and install an MSIX Package. 
 
 ### App payload 
