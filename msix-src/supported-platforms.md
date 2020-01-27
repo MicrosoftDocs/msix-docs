@@ -12,8 +12,8 @@ ms.custom: RS5
 # MSIX Supported Platform Overview 
 This article describes key features of MSIX and what version of Windows is supported. 
 
-## Winodws 10 Feature Breakdown
-MSIX is supported on Windows 10 1709 and later. Here is breakdown of key features that are supported on Windows 10. 
+## Windows 10 Feature Breakdown
+MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key features on Windows 10. 
 
 > [!div class="mx-tableFixed"]
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1

@@ -14,8 +14,10 @@ MSIX is a Windows app package format that provides a modern packaging experience
 
 MSIX enables enterprises to stay current and ensure their applications are always up to date. It allows IT Pros and developers to deliver a user centric solution while stile reducing the cost of ownership of application by reducing the need to repackage. 
 
-## MSIX Reliability
-MSIX provides a reliable install. MSIX has a 99.96% success rate for installs over millions of installs. There is also a 100% guaranteed uninstalled. MSIX improves network bandwidth by only downloading what is needed. This is done by leveraging the AppxBlockMap.xml that is in the package (see below for more details). MSIX is designed for modern systems and the cloud. With MSIX there is no duplication of files across apps and Windows manages the shared files across apps. A clean uninstall is guaranteed even if the platform manages shared files across apps. 
+# Key features of MSIX
+* **Reliability** MSIX provides a reliable install. MSIX has a 99.96% success rate for installs over millions of installs. There is also a 100% guaranteed uninstalled. 
+* **Network bandwidth optimization** MSIX improves network bandwidth by only downloading what is needed. This is done by leveraging the AppxBlockMap.xml that is in the package (see below for more details). MSIX is designed for modern systems and the cloud.
+* **Disk space optimizations** With MSIX there is no duplication of files across apps and Windows manages the shared files across apps. A clean uninstall is guaranteed even if the platform manages shared files across apps.
 
 ## Highlights of MSIX
 
