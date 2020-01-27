@@ -25,6 +25,7 @@ MSIX is supported on Windows 10 1709 and later. Here is breakdown of key feature
 | Modification Package Support | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | ForceUpdateFromAnyVersion Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  
+| Services | :x: | :x: | :x:: | :x:| :x: | :heavy_check_mark:| 
 
 ### Auto elevation
 Users running an MSIX package on Windows 10 version 1809 and later can use elevated privileges just by clicking on the app tile. The platform detects that elevation is needed and automatically provides it when the user has the necessary credentials.
