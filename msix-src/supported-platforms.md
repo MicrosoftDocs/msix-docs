@@ -24,7 +24,12 @@ MSIX is supported on Windows 10 1809 and later. Here is breakdown of key feature
 | allowElevation Permissions | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Modification Package Support | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | ForceUpdateFromAnyVersion Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
-| Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
+| Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  
+
+### Auto elevation
+Users running an MSIX package on Windows 10 version 1809 and later can use elevated privileges just by clicking on the app tile. The platform detects that elevation is needed and automatically provides it when the user has the necessary credentials.
+
+On Windows 10 versions 1709 and 1803, users can still run apps with elevated privileges. However, they need to explicitly select to run the app as an administrator. One way to do that is by right-clicking on the app's tile and selecting the "Run as administrator" option.
 
 ## Windows 10 Format support 
 Here is a breakdown of supported formats on Windows 10 versions. 
@@ -41,12 +46,23 @@ Here is a breakdown of supported features of Microsoft Store on Windows 10 versi
 
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 20H1
 |------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| Publishing             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| Update Notification| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| Update Distribution | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
+| Publishing             | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
+| Update Notification| :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 | Streaming Install | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| 
 | Delta Updates | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 
+### Microsoft Store submission 
+The minimum supported OS version of an MSIX package is listed in the manifest file of the package as `MinVersion` in the `TargetDeviceFamily` element. For example an MSIX package may list `MinVersion="10.0.17701.0"` as the minimum supported version, which means that the MSIX package can run on this and later versions of the OS.
+
+On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterprise deployment scenarios. These include installation through SCCM, Microsoft Intune, PowerShell or double-click installation.
+
+Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1803.
+
+## MDM support
+Microsoft Intune and System Center Configuration Manger supports MSIX installation on Windows 10 version as early as 1709 MSIX packages can be installed on these versions in the same way as it can in Windows 10 version 1809 and later.
+
+## Packaging and signing
+Currently, to package and sign an MSIX file, you need the Windows 10 version 1809 SDK. Packaging and signing can be done via the Windows 10 SDK command line tools (MakeAppx.exe and SignTool.exe), the MSIX Packaging Tool, or Visual Studio.
 
 ## Down level OS compatibility 
 For MSIX support on  Windows earlier than Windows 10, version 1709. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/MsixCore) on GitHub that enables these earlier Windows versions to install MSIX packages. 
