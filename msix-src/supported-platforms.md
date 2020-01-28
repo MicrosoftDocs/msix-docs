@@ -26,16 +26,8 @@ MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key fea
 | ForceUpdateFromAnyVersion Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  
 | Windows Services | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| 
-| Differ registration flag |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| 
-| Force provisioning | 
-
-flag to differ registration - vb 
-force reprovision - ?? 
-
-### Auto elevation
-Users running an MSIX package on Windows 10 version 1809 and later can use elevated privileges just by clicking on the app tile. The platform detects that elevation is needed and automatically provides it when the user has the necessary credentials.
-
-On Windows 10 versions 1709 and 1803, users can still run apps with elevated privileges. However, they need to explicitly select to run the app as an administrator. One way to do that is by right-clicking on the app's tile and selecting the **Run as administrator** option.
+| Differ registration flag |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
+| Force provisioning |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
 
 ## Windows 10 Format support 
 Here is a breakdown of supported formats on Windows 10 versions. 
