@@ -179,7 +179,7 @@
     - name: Extend your app
       items:  
         - name: App extensions
-          href: 
+          href: https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-an-extension?context=/windows/msix/render
         - name: Optional packages
           href: package/optional-packages-with-executable-code.md
         - name: Modification packages
