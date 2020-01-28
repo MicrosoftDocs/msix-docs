@@ -10,18 +10,18 @@ ms.custom: "RS5, seodec18"
 ---
 
 # Getting Started with MSIX 
-There are a number of ways to test out MSIX. This depends on your scenarios and what suits your needs. 
+Whether you are an IT Pro or a developer, you can get started with packaging your application. There are a number of resources that are available to you that suit different use cases. 
 
 ## MSIX Packaging Tool
+If you have an existing installer. You can use our MSIX Packaging Tool or one of our partner's tool to convert your existing installer into an MSIX. For more information, visit the [Create an MSIX package from an existing installer]() to get started. 
 
 ## MSIX Tool kit 
-The [MSIX Toolkit](http://aka.ms/msixtoolkit) is a collection of tools and scripts focused on assisting IT Professionals and Developers to enhance their app package modernization journey. The toolkit will be open sourced on GitHub to allow customers and enthusiasts to contribute directly and provide suggestions and feedback on the content that is available.
+The [MSIX Toolkit](http://aka.ms/msixtoolkit) is a collection of tools and scripts focused on assisting IT Professionals and developers to enhance their app package modernization journey. The toolkit will be open sourced on GitHub to allow customers and enthusiasts to contribute directly and provide suggestions and feedback on the content that is available.
 
 ## MSIX Labs 
-MSIX Labs project is an effort to offer hands-on labs to help people become familiar the different areas of MSIX. The content can also be customized and become a basis for internal training.
-
+The [MSIX Labs](https://github.com/microsoft/MSIX-Labs) project is an effort to offer hands-on labs to help people become familiar the different areas of MSIX. The content can also be customized and become a basis for internal training. 
 
 ## MSIX SDK 
-he MSIX SDK is an open source project that allows developers to use the MSIX package format universally on all platforms. This allows developers to build consistent experiences for their users on all platforms and distribute the experiences using the same package. The SDK provides guidance for developers to package their app content and build an app package manifest in a way that it can target the platforms of their choice. This enables developers to package their app content once instead of having to package for each platform.
+The MSIX SDK is an open source project that allows developers to use the MSIX package format universally on all platforms. This allows developers to build consistent experiences for their users on all platforms and distribute the experiences using the same package. The SDK provides guidance for developers to package their app content and build an app package manifest in a way that it can target the platforms of their choice. This enables developers to package their app content once instead of having to package for each platform.
 
-The SDK provides the APIs required to verify, validate and unpack the package contents from the MSIX package. Using the project, app developers don't have to worry about whether the package has been tampered with or if it can be trusted. It will perform tamper protection and signature validation checks before the app contents are unpacked.
+For more information visit our [MSIX SDK page](msix-sdk/sdk-overview.md).
