@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Build an MSIX package with source code overview
+# Key concepts to know before you package your app overview 
 Before packaging your application there are a few things to consider when packaging your application. 
 
-1. knowing what your application does 
-the first thing to do is understand what your application is going to do. This is important to ensure that functionalities still work when you package your app as an MsIX 
+* **Know what your application** The first thing to do is understand what your application is going to do. This is important to ensure that functionalities still work when you package your app as an MSIX. 
 
-2. what type of package format you are going to package your apps. A consideration to think about is whether you intend to have different app architectures in the same package. .msixbundles allow you to bundle multiple architecture versions of your installer in the same page. There are some caveats to this approach. Visit [MSIX Bundles](.../packaging-tool/bunle-msix-packages.md) to see your options. 
+* **Package format**  A consideration to think about is whether you intend to have different app architectures in the same package. .msixbundles allow you to bundle multiple architecture versions of your installer in the same page. There are some caveats to this approach. Visit [MSIX Bundles](.../packaging-tool/bunle-msix-packages.md) to see your options. 
 
-3. are you planning to extend your application. if you are go here - 
-4. working with enterprises - know about modification packages and what IT Pros will do with them 
+* **Extend your application** Application that are packaged as an MSIX package have the ability to extend their apps. Depending on the scenario, application that are still in active developement can create app extensions and optional pacakges 
+
+* **Allowing Enterprises to customize apps** Modification packages allow IT Pros to customize their application without having to repackage apps. That means that they can take a package directly from a developer without opening the package and go through the process of packaging their application. This is something to keep in mind when developing and packing your application. In the modification package it declare the your packaged app as its main app such that when your app launches it can view the virtual registry and virtual file system of the modification package such that the customization lights up. 
 
