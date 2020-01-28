@@ -262,12 +262,12 @@
       href: https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render
     - name: Debug and test a packaged app
       items:
-        - name: Overview
+        - name: Run, debug, and test a packaged desktop application
           href: desktop/desktop-to-uwp-debug.md
-        - name: Test for Windows 10 in S mode
-          href: desktop/desktop-to-uwp-test-windows-s.md
         - name: Detect package identity and runtime context
           href: detect-package-identity.md
+        - name: Test for Windows 10 in S mode
+          href: desktop/desktop-to-uwp-test-windows-s.md
     - name: Troubleshoot MSIX containers
       href: manage/troubleshoot-msix-container.md
     - name: Store validation
