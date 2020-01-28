@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Key concepts to know before you package your app overview 
+# Key concepts to know before you package your app 
 Before packaging your application there are a few things to consider when packaging your application. 
 
 * **Know what your application** The first thing to do is understand what your application is going to do. This is important to ensure that functionalities still work when you package your app as an MSIX. 
