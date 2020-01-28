@@ -16,7 +16,7 @@ Before packaging your application there are a few things to consider when packag
 
 * **Package format**  A consideration to think about is whether you intend to have different app architectures in the same package. .msixbundles allow you to bundle multiple architecture versions of your installer in the same page. There are some caveats to this approach. Visit [MSIX Bundles](.../packaging-tool/bunle-msix-packages.md) to see your options. 
 
-* **Extend your application** Application that are packaged as an MSIX package have the ability to extend their apps. Depending on the scenario, application that are still in active developement can create app extensions and optional pacakges 
+* **Extend your application** Applications that are packaged as an MSIX package have the ability to extend their apps. Depending on the scenario, application that are still in active developement can create app extensions and optional pacakges 
 
 * **Allowing Enterprises to customize apps** Modification packages allow IT Pros to customize their application without having to repackage apps. That means that they can take a package directly from a developer without opening the package and go through the process of packaging their application. This is something to keep in mind when developing and packing your application. In the modification package it declare the your packaged app as its main app such that when your app launches it can view the virtual registry and virtual file system of the modification package such that the customization lights up. 
 
