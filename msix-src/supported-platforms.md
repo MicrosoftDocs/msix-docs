@@ -1,5 +1,5 @@
 ---
-title: Supported Platform 
+title: MSIX Supported Platform 
 description: This article describes supported platform for MSIX. 
 author: dianmsft
 ms.date: 12/02/2019
@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# MSIX Supported Platform Overview 
+# MSIX Supported Platform 
 This article describes key features of MSIX and what version of Windows is supported. 
 
 ## Windows Feature Breakdown
-MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key features on Windows 10. For versions of Windows earlier than Windows 10 version 1709, use [MSIX Core](msix-core/msixcore.md) to install MSIX packages. 
+MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key features on Windows 10. For versions of Windows earlier than Windows 10 version 1709, use [MSIX Core](msix-core/msixcore.md) to install MSIX packages. Please see the following table for a breakdown of the key features on Windows 10:
 
 > [!div class="mx-tableFixed"]
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 2004| Windows Server 2019 LTSC | Windows Enterprise 2019 LTSC| 
@@ -21,19 +21,19 @@ MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key fea
 | Native MSIX install and uninstall | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
 | [App Installer File Support](app-installer/installing-windows10-apps-web.md)| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 | Identity for Packaged Win32 apps | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| allowElevation Permissions | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
+| Allow Elevation | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Modification Package Support | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
-| ForceUpdateFromAnyVersion Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
+| Force Update From Any Version Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
 | Windows Services | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
 | Differ registration flag |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
 | Force provisioning |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
 
 > [!NOTE]
-> Windows Server 2019 LTSC and Windows Enterprise 2019 LTSC require App Installer app to be installed to support MSIX features such as installing a .msix or .msixbundle package. 
+> Windows Server 2019 LTSC and Windows Enterprise 2019 LTSC requires the App Installer app to be installed to support MSIX features such as installing a .msix, .msixbundle package, .appx or .appxbundle. 
 
 ## Windows 10 Format support 
-Here is a breakdown of supported formats on Windows 10 versions. 
+Here is a breakdown of the supported installation formats on the different Windows 10 versions:
 
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 2004
 |------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
@@ -43,7 +43,7 @@ Here is a breakdown of supported formats on Windows 10 versions.
 | .appxbundle | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
 
 ## Microsoft Store 
-Here is a breakdown of supported features of Microsoft Store on Windows 10 versions
+The following is a breakdown of the supported features in Microsoft Store for each Windows 10 version:
 
 | Features | Windows 1709 | Windows 1803 | Windows 1809 | Windows 1903 | Windows 1909 | Windows 2004
 |------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
@@ -58,7 +58,7 @@ Here is a breakdown of supported features of Microsoft Store on Windows 10 versi
 ### Microsoft Store submission 
 The minimum supported OS version of an MSIX package is listed in the manifest file of the package as `MinVersion` in the `TargetDeviceFamily` element. For example an MSIX package may list `MinVersion="10.0.17701.0"` as the minimum supported version, which means that the MSIX package can run on this and later versions of the OS.
 
-On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterprise deployment scenarios. These include installation through SCCM, Microsoft Intune, PowerShell or double-click installation.
+On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterprise deployment scenarios. These include installation through Microsoft Endpoint Configuration Manager, Microsoft Intune, PowerShell or double-click installation.
 
 Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1803.
 
