@@ -61,11 +61,7 @@
         - name: App Installer file schema
           href: https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
     - name: Get started
-      items: 
-        - name: Overview
-          href: get-started.md
-        - name: MSIX videos
-          href: team-video.md
+      href: get-started.md
     - name: MSIX SDK
       items: 
         - name: Overview
