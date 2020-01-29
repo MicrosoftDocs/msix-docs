@@ -185,6 +185,7 @@
         - name: Modification packages
           href: 
 - name: Manage your MSIX deployment
+  href: desktop\Managing-your-MSIX-deployment-Overview.md
   items: 
     - name: Overview
       href: desktop\Managing-your-MSIX-deployment-Overview.md
@@ -209,13 +210,7 @@
           - name: Troubleshooting
             href: msix-core/msixcore-troubleshoot.md
     - name: Create your MSIX package
-      items: 
-        - name: Visual Studio 
-          href: desktop\Managing-your-MSIX-deployment-Create.md
-        - name: Converting your installer 
-          href: desktop\Managing-your-MSIX-deployment-Create.md
-        - name: Bulk operations 
-          href: desktop\Managing-your-MSIX-deployment-Create.md
+      href: desktop\Managing-your-MSIX-deployment-Create.md
     - name: Distribute your MSIX in an enterprise environment
       items: 
         - name: Microsoft Endpoint Management
