@@ -62,8 +62,12 @@ On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterpris
 
 Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business require Windows 10 version 1803.
 
-## Down level OS compatibility 
-For MSIX support on  Windows earlier than Windows 10, version 1709. MSIX Core is an [open source project](https://github.com/Microsoft/msix-packaging/tree/master/MsixCore) on GitHub that enables these earlier Windows versions to install MSIX packages. 
+## MSIX Packaging Tool considerations
+If you convert your existing installer using the MSIX Packaging Tool **version prior to 1.2019.701.0**, the tool had Enforce Microsoft Store versioning requirements on, or used another tool to create your package that did not set the minimum version to 10.0.16299.0 (Windows 10 1709 build number). This will cause an error message when deploying your app to Windows 10 version 1709 or greater. To solve this go to MSIX Packaging Tool and edit your app through Package Editor. Open your manifest and set your TargetDeviceFamily MinVersion to "10.0.16299.0". See below: 
+```
+<Dependencies>
+    <TargetDeviceFamily> Name="Windows.Desktop" MinVersion="10.0.16299.0" MaxVersionTested = "10.0.17763.0" />
+</Dependencies>
+```
 
-Visit the [MSIX Core](msix-core/msixcore.md) articles for more information. 
 
