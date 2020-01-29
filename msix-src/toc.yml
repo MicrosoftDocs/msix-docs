@@ -187,9 +187,10 @@
 - name: Manage your MSIX deployment
   items: 
     - name: Overview
+      href: desktop\Managing-your-MSIX-deployment-Overview.md
       items: 
         - name: Know your customer
-          href: 
+          href: desktop\Managing-your-MSIX-deployment.md
         - name: MSIX service support
           href: 
         - name: MSIX native support
