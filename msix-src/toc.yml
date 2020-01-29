@@ -190,7 +190,7 @@
       items: 
           href: desktop\Managing-your-MSIX-deployment-Overview.md
         - name: Know your target devices
-          href: desktop\Managing-your-MSIX-deployment-Overview.md#Know your target devices 
+          href: desktop\Managing-your-MSIX-deployment-Overview.md?context=Know your target devices 
         - name: MSIX service support
           href: 
         - name: MSIX native support
