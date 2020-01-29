@@ -19,7 +19,7 @@ The [MSIX Toolkit](https://github.com/microsoft/MSIX-Toolkit) is a collection of
 The [MSIX Labs](https://github.com/microsoft/MSIX-Labs) project is an effort to offer hands-on labs to help people become familiar with the different areas of MSIX. The content found within the MSIX Labs can be customized and become the basis for internal training.
 
 ## MSIX SDK 
-The MSIX SDK is an open source project that allows developers to use the MSIX package format universally on all platforms. This allows developers to build experiences which are consistent for users on all platforms, and distribution methods. The SDK provides guidance for developers to package their app content and build an app package manifest in a way that it can target the platforms of their choice. This enables developers to package their app content once instead of having to package for each platform.
+The [MSIX SDK](https://github.com/Microsoft/msix-packaging) is an open source project that allows developers to use the MSIX package format universally on all platforms. This allows developers to build experiences which are consistent for users on all platforms, and distribution methods. The SDK provides guidance for developers to package their app content and build an app package manifest in a way that it can target the platforms of their choice. This enables developers to package their app content once instead of having to package for each platform.
 
 For more information visit our [MSIX SDK page](msix-sdk/sdk-overview.md).
 
