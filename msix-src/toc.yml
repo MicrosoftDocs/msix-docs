@@ -187,16 +187,14 @@
 - name: Manage your MSIX deployment
   items: 
     - name: Overview
-      href: desktop\Managing-your-MSIX-deployment-Overview.md
       items: 
-        - name: Know your target devices
-          href: desktop\Managing-your-MSIX-deployment.md
+        - name: Know your customer
+          href: 
         - name: MSIX service support
-          href: desktop\Managing-your-MSIX-deployment.md
+          href: 
         - name: MSIX native support
-          href: desktop\Managing-your-MSIX-deployment.md
+          href: 
         - name: MSIX Core
-          href: desktop\Managing-your-MSIX-deployment.md
           items:
           - name: Overview
             href: msix-core/msixcore.md
@@ -211,21 +209,21 @@
     - name: Create your MSIX package
       items: 
         - name: Visual Studio 
-          href: desktop\Managing-your-MSIX-deployment-Create.md
+          href: 
         - name: Converting your installer 
-          href: desktop\Managing-your-MSIX-deployment-Create.md
+          href: 
         - name: Bulk operations 
-          href: desktop\Managing-your-MSIX-deployment-Create.md
+          href: 
     - name: Distribute your MSIX in an enterprise environment
       items: 
         - name: Microsoft Endpoint Management
           items: 
             - name: Microsoft Endpoint Configuration Manager
-              href: desktop\Managing-your-MSIX-deployment-Enterprise.md
+              href: 
             - name: Microsoft Intune
-              href: desktop\Managing-your-MSIX-deployment-Enterprise.md
+              href: 
         - name: Web 
-          href: desktop\Managing-your-MSIX-deployment-Enterprise.md
+          href: 
         - name: Distribute a Windows 10 app from the web using App Installer
           items: 
             - name: Overview
@@ -260,24 +258,21 @@
           href: 
 - name: MSIX validation and troubleshooting
   items: 
-    - name: Overview
-      href: desktop\Managing-your-MSIX-deployment-Troubleshooting.md
+    - name: Windows Device Portal
+      href: https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render
+    - name: Debug and test a packaged app
+      items:
+        - name: Run, debug, and test a packaged desktop application
+          href: desktop/desktop-to-uwp-debug.md
+        - name: Detect package identity and runtime context
+          href: detect-package-identity.md
+        - name: Test for Windows 10 in S mode
+          href: desktop/desktop-to-uwp-test-windows-s.md
+    - name: Troubleshoot MSIX containers
+      href: manage/troubleshoot-msix-container.md
+    - name: Store validation
       items: 
-          - name: Windows Device Portal
-            href: https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render
-          - name: Debug and test a packaged app
-            items:
-              - name: Run, debug, and test a packaged desktop application
-                href: desktop/desktop-to-uwp-debug.md
-              - name: Detect package identity and runtime context
-                href: detect-package-identity.md
-              - name: Test for Windows 10 in S mode
-                href: desktop/desktop-to-uwp-test-windows-s.md
-          - name: Troubleshoot MSIX containers
-            href: manage/troubleshoot-msix-container.md
-          - name: Store validation
-            items: 
-              - name: Windows App certification 
-                href: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render
-              - name: Package flighting
-                href: https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render
+        - name: Windows App certification 
+          href: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render
+        - name: Package flighting
+          href: https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render
