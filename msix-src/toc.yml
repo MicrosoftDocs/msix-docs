@@ -60,8 +60,8 @@
           href: https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render
         - name: App Installer file schema
           href: https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
-    - name: Get started
-      href: get-started.md
+    - name: MSIX Resources
+      href: resources.md
     - name: MSIX SDK
       items: 
         - name: Overview
