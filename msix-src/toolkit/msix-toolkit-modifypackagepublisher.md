@@ -114,7 +114,3 @@ Required: False
 Position: Named
 Default Value: False
 ```
-
-## INPUTS
-## OUTPUTS
-## NOTES
