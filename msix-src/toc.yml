@@ -60,7 +60,7 @@
           href: https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render
         - name: App Installer file schema
           href: https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
-    - name: MSIX Resources
+    - name: MSIX resources
       href: resources.md
     - name: MSIX SDK
       items: 
@@ -78,7 +78,6 @@
               href: msix-sdk/release-notes/sdk-release-notes-1.6.md
             - name: MSIX SDK Release 1.7
               href: msix-sdk/release-notes/sdk-release-notes-1.7.md
-
 - name: Create an MSIX package from an existing installer
   items: 
     - name: Overview
@@ -265,7 +264,7 @@
       href: manage/troubleshoot-msix-container.md
     - name: Store validation
       items: 
-        - name: Windows App certification 
+        - name: Windows app certification 
           href: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render
         - name: Package flighting
           href: https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render
