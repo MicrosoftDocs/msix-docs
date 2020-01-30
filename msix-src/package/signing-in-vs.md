@@ -1,4 +1,4 @@
-#Signing your MSIX Package in Visual Studio
+# Signing an MSIX Package in Visual Studio
 
 Digital Signing The packaging project includes a default password-protected personal information exchange (PFX) format file that you probably want to replace with your own. If your enterprise doesn’t provide you with a code-signing certificate, you can either buy one from a trusted authority or create a self-signed certificate. There’s a “Create test certificate” option and an import wizard in Visual Studio, which you’ll find if you open the Package.appxmanifest file in the default app manifest designer and look under the Packaging tab. If you’re not that into wizards and dialogs, you can use the New-SelfSignedCertificate PowerShell cmdlet to create a certificate:
 ```
