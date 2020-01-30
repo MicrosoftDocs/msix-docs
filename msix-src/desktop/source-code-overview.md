@@ -1,7 +1,7 @@
 ---
-Description: This guide provides a list of third-party products and installers to package desktop applications.
-title: Package a desktop app using third-party installers
-author: dianmsft
+Description: An overview of topics for creating an MSIX package from source code
+title: Building an MSIX package from your code 
+author: Huios (tajimha)
 ms.date: 01/27/2020
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Building an MSIX from your code 
+# Building an MSIX package from your code 
 If your desktop application is in active development we recommend building an MSIX package in your build environment instead of generating an installer and running it through the MSIX Packaging Tool. In Visual Studio 2017 version 15.5 and later (including Visual Studio 2019) you can use the App Packaging Project to generate an MSIX for your application. If you're not developing in Visual Studio we also have command line tools you can integrate into your custom build system to package your app binaries as MSIX.
 If you're developing a UWP application, Visual Studio will default to MSIX as the packaging format for your application.
 
