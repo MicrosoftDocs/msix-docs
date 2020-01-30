@@ -32,7 +32,7 @@
     },
      {
       "source_path": "msix-src/team-video.md",
-      "redirect_url": "msix-src/resources.md",
+      "redirect_url": "/windows/msix/resources",
       "redirect_document_id": true
     }
   ]
