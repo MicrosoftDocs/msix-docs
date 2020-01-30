@@ -1,4 +1,4 @@
-#DevOps for MSIX Packaging and Deployment 
+# Continuous Integration & Deployment for MSIX  
 
 ## Continuous Integration
 
