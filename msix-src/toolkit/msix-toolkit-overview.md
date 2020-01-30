@@ -9,7 +9,7 @@ ms.custom: 19H1
 ---
 
 # MSIX Toolkit
-The [MSIX Toolkit](http://aka.ms/msixtoolkit) is a collection of tools and scripts focused on assisting IT Professionals and Developers to enhance their app package modernization journey. The toolkit will be open sourced on GitHub to allow customers and enthusiasts to contribute directly and provide suggestions and deefback on the content that is available.
+The [MSIX Toolkit](https://aka.ms/msixtoolkit) is a collection of tools and scripts focused on assisting IT Professionals and Developers to enhance their app package modernization journey. The toolkit will be open sourced on GitHub to allow customers and enthusiasts to contribute directly and provide suggestions and deefback on the content that is available.
 
 ### Principles
 1. MSIX toolkit is a community led space where customers can freely contribute source code along with binaries and executables.

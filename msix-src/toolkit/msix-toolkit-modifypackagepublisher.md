@@ -72,7 +72,7 @@ Default Value: None
 ```
 
 ### -Redist
-The path to the redistributable file retrieved from within the [MSIX Toolkit](http://aka.ms/msixtoolkit). This file is used to re-package the application into the MSIX package format. Must point to either the 32-bit or 64-bit architecture redistributable.
+The path to the redistributable file retrieved from within the [MSIX Toolkit](https://aka.ms/msixtoolkit). This file is used to re-package the application into the MSIX package format. Must point to either the 32-bit or 64-bit architecture redistributable.
 
 ```YAML
 Type: String
