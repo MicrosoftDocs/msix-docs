@@ -147,15 +147,15 @@
     - name: MSIX Tool Kit
       items: 
         - name: Overview
-          href: tool-kit/msix-toolkit-overview.md
+          href: toolkit/msix-toolkit-overview.md
         - name: MSIX Modify Package Publisher Script
-          href: tool-kit/msix-toolkit-modifypackagepublisher.md
+          href: toolkit/msix-toolkit-modifypackagepublisher.md
         - name: MSIX Batch Conversion Script
-          href: tool-kit/msix-toolkit-msixbatchconversion.md
+          href: toolkit/msix-toolkit-msixbatchconversion.md
         - name: MSIX Connect Script
-          href: tool-kit/msix-toolkit-msixconnect.md
+          href: toolkit/msix-toolkit-msixconnect.md
         - name: MSIX App Installer Builder
-          href: tool-kit/msix-toolkit-appinstallerfilebuilder.md
+          href: toolkit/msix-toolkit-appinstallerfilebuilder.md
 - name: Build an MSIX package with source code
   items: 
     - name: Key concepts to know before you package your app
