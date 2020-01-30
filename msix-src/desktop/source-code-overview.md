@@ -9,21 +9,17 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Building an MSIX from your source code 
-If your desktop app is in active development we recommend building an MSIX package in your build environment instead of generating an installer and running it through the MSIX packaging tool. Visual Studio 2017 version 15.4 and later (including Visual Studio 2019) you can use the App Packaging Project to package your desktop applications as an MSIX. For those not developing in Visual Studio we also have command line tools you can integrate into your build system to package your app binaries as an MSIX package.
+# Building an MSIX from your code 
+If your desktop application is in active development we recommend building an MSIX package in your build environment instead of generating an installer and running it through the MSIX Packaging Tool. In Visual Studio 2017 version 15.4 and later (including Visual Studio 2019) you can use the App Packaging Project to generate an MSIX for your application. If you're not developing in Visual Studio we also have command line tools you can integrate into your custom build system to package your app binaries as MSIX.
 If you're developing a UWP application, Visual Studio will default to MSIX as the packaging format for your application.
 
-# Sign a Windows 10 app package
-
-App package signing is a required step in the process of creating a Windows 10 app package that can be deployed. Windows 10 requires all applications to be signed with a valid code signing certificate.
-
-To successfully install a Windows 10 application, the package doesn't just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. By default, Windows 10 trusts certificates from most of the certificate authorities that provide code signing certificates.
 
 |Topic| Description |
 |:---|:---|
-|[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prerequisites required to sign the Windows 10 app package. | 
-|[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
-|[Sign an MSIX package with Device Guard signing](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how to sign your app with Device Guard signing.|
+|[What to know before packaging](sign-app-package-using-signtool.md#prerequisites)| Things to know before building an MSIX package for your app | 
+|[Packaging your Desktop app in Visual Studio](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to package your Desktop app (e.g. Winforms, WPF, Win32) as an MSIX in Visual Studio.|
+|[Packaging your UWP app in Visual Studio](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how to package your UWP app as an MSIX in Visual Studio.|
+|[Extending your MSIX application](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how you can to extend your application using extensions and optional packages.|
 
 
 * **Know what your application** The first thing to do is understand what your application is going to do. This is important to ensure that functionalities still work when you package your app as an MSIX. 
