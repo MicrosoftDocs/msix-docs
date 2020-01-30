@@ -144,9 +144,11 @@
               href: psf/package-support-framework.md
             - name: Run scripts with the Package Support Framework
               href: psf/run-scripts-with-package-support-framework.md
-- name: Build an MSIX package with source code
+- name: Building an MSIX package from your code
   items: 
-    - name: Key concepts to know before you package your app
+    - name: Overview
+          href: desktop/source-code-overview.md
+    - name: Key concepts to know before packaging
       items:
         - name: Overview
           href: desktop/source-code-overview.md
