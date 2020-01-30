@@ -60,32 +60,24 @@
           href: https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render
         - name: App Installer file schema
           href: https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
-    - name: Get started
+    - name: MSIX resources
+      href: resources.md
+    - name: MSIX SDK
       items: 
-        - name: Overview 
-          href:
-        - name: MSIX SDK
+        - name: Overview
+          href: msix-sdk/sdk-overview.md
+        - name: Use the MSIX SDK to distribute an MSIX package
+          href: msix-sdk/sdk-guidance.md
+        - name: Release notes
           items: 
-            - name: Overview
-              href: msix-sdk/sdk-overview.md
-            - name: Use the MSIX SDK to distribute an MSIX package
-              href: msix-sdk/sdk-guidance.md
-            - name: Release notes
-              items: 
-                - name: MSIX SDK Release 1.4
-                  href: msix-sdk/release-notes/sdk-release-notes-1.4.md
-                - name: MSIX SDK Release 1.5
-                  href: msix-sdk/release-notes/sdk-release-notes-1.5.md
-                - name: MSIX SDK Release 1.6
-                  href: msix-sdk/release-notes/sdk-release-notes-1.6.md
-                - name: MSIX SDK Release 1.7
-                  href: msix-sdk/release-notes/sdk-release-notes-1.7.md
-            - name: MSIX hands-on-labs 
-              href: 
-            - name: MSIX Toolkit
-              href:
-            - name: MSIX videos
-              href: team-video.md
+            - name: MSIX SDK Release 1.4
+              href: msix-sdk/release-notes/sdk-release-notes-1.4.md
+            - name: MSIX SDK Release 1.5
+              href: msix-sdk/release-notes/sdk-release-notes-1.5.md
+            - name: MSIX SDK Release 1.6
+              href: msix-sdk/release-notes/sdk-release-notes-1.6.md
+            - name: MSIX SDK Release 1.7
+              href: msix-sdk/release-notes/sdk-release-notes-1.7.md
 - name: Create an MSIX package from an existing installer
   items: 
     - name: Overview
@@ -272,7 +264,7 @@
       href: manage/troubleshoot-msix-container.md
     - name: Store validation
       items: 
-        - name: Windows App certification 
+        - name: Windows app certification 
           href: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit?context=/windows/msix/render
         - name: Package flighting
           href: https://docs.microsoft.com/windows/uwp/publish/package-flights?context=/windows/msix/render
