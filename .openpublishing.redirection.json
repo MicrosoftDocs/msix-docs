@@ -29,6 +29,11 @@
       "source_path": "msix-src/msix-sdk/msixcore.md",
       "redirect_url": "/windows/msix/msix-core/msixcore",
       "redirect_document_id": true
+    },
+     {
+      "source_path": "msix-src/team-video.md",
+      "redirect_url": "msix-src/resource.md",
+      "redirect_document_id": true
     }
   ]
 }
