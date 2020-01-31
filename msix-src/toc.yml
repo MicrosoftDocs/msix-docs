@@ -136,6 +136,16 @@
               href: psf/package-support-framework.md
             - name: Run scripts with the Package Support Framework
               href: psf/run-scripts-with-package-support-framework.md
+    - name: MSIX Toolkit
+      items: 
+        - name: Overview
+          href: toolkit/msix-toolkit-overview.md
+        - name: Modify package publisher script
+          href: toolkit/msix-toolkit-modifypackagepublisher.md
+        - name: Batch conversion scripts
+          href: toolkit/msix-toolkit-msixbatchconversion.md
+        - name: AppInstaller File Builder tool
+          href: toolkit/msix-toolkit-appinstallerfilebuilder.md
 - name: Build an MSIX package with source code
   items: 
     - name: Key concepts to know before you package your app
