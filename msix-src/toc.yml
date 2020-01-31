@@ -151,11 +151,11 @@
     - name: Key concepts to know before packaging
       items:
         - name: Overview
-          href: desktop/source-code-overview.md
+          href: desktop/before-packaging-overview.md
         - name: Prepare to package a desktop app 
           href: desktop/desktop-to-uwp-prepare.md
-        - name: MSIX bundles
-          href: packaging-tool/bundle-msix-packages.md
+        - name: How packaged Desktop apps run on Windows
+          href: desktop-to-uwp-behind-the-scenes.md
     - name: Packaging in Visual Studio
       items: 
         - name: Overview
