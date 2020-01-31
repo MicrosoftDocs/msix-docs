@@ -26,7 +26,7 @@ MSIX is supported on Windows 10 1709 and later. Here is the breakdown of key fea
 | Force Update From Any Version Downgrade |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
 | Windows Services | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
-| Differ registration flag |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
+| Defer registration flag |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
 | Force provisioning |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
 
 > [!NOTE]
