@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Prepare to package a desktop application
 
-This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging. Remember that the Microsoft Store handles licensing and automatic updating for you, so you can remove any features that relate to those tasks from your codebase.
+This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below apply to your application, you need to address it before packaging.
 
 + __Your .NET application requires a version of the .NET Framework earlier than 4.6.2__. If you are packaging a .NET application, we recommend that your application target .NET Framework 4.6.2 or later. The ability to install and run packaged desktop applications was first introduced in Windows 10, version 1607 (also called the Anniversary Update), and this OS version includes the .NET Framework 4.6.2 by default. Later OS versions include later versions of the .NET Framework. For a full list of what versions of .NET are included in later versions of Windows 10, see [this article](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
@@ -130,10 +130,11 @@ Starting a utility can often provide a convenient way to obtain information from
 
 ## Next steps
 
-**Find answers to your questions**
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
 **Create a Windows app package for your desktop app**
 
 See [Create a Windows app package](desktop-to-uwp-root.md#convert)
+
+**Find answers to your questions**
+
+Have questions? Ask us on the [MSIX Tech Community forum](https://techcommunity.microsoft.com/t5/msix/ct-p/MSIX).
+
