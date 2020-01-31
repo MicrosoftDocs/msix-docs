@@ -29,6 +29,12 @@
       "source_path": "msix-src/msix-sdk/msixcore.md",
       "redirect_url": "/windows/msix/msix-core/msixcore",
       "redirect_document_id": true
+
+    }, 
+    {
+      "source_path": "msix-src/msix-sdk/msix-1709-and-1803-support.md",
+      "redirect_url": "/windows/msix/supported-platforms",
+      "redirect_document_id": true
     },
      {
       "source_path": "msix-src/team-video.md",
