@@ -155,7 +155,7 @@
         - name: Prepare to package a desktop app 
           href: desktop/desktop-to-uwp-prepare.md
         - name: How packaged Desktop apps run on Windows
-          href: desktop-to-uwp-behind-the-scenes.md
+          href: desktop/desktop-to-uwp-behind-the-scenes.md
     - name: Packaging in Visual Studio
       items: 
         - name: Overview
