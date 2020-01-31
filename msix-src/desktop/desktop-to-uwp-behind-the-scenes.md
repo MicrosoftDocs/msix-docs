@@ -8,7 +8,7 @@ ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ---
 
-# Behind the scenes of your packaged Desktop application
+# How packaged Desktop apps run on Windows
 
 This article provides a deeper dive on what happens to files and registry entries when you create a Windows app package for your desktop application.
 
