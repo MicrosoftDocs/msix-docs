@@ -14,5 +14,5 @@ This section contains requirements for a desktop app to run successfully as an M
 
 |Topic| Description |
 |:---|:---|
-|[Preparing to package your Desktop application](desktop/desktop-to-uwp-prepare.md)| A list of requirements for a desktop application  to run successfully  once packaged as MSIX. | 
-|[How packaged Desktop apps run on Windows](desktop/desktop-to-uwp-behind-the-scenes.md)| A deeper dive into what happens to file system and registry entries when you package your Desktop application as MSIX |
+|[Preparing to package your Desktop application](desktop-to-uwp-prepare.md)| A list of requirements for a desktop application  to run successfully  once packaged as MSIX. | 
+|[How packaged Desktop apps run on Windows](desktop-to-uwp-behind-the-scenes.md)| A deeper dive into what happens to file system and registry entries when you package your Desktop application as MSIX |
