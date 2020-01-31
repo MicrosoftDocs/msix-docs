@@ -144,8 +144,6 @@
           href: toolkit/msix-toolkit-modifypackagepublisher.md
         - name: MSIX Batch Conversion Script
           href: toolkit/msix-toolkit-msixbatchconversion.md
-        - name: MSIX Connect Script
-          href: toolkit/msix-toolkit-msixconnect.md
         - name: MSIX App Installer Builder
           href: toolkit/msix-toolkit-appinstallerfilebuilder.md
 - name: Build an MSIX package with source code
