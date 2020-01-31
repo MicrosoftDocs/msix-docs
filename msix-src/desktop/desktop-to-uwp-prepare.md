@@ -22,7 +22,7 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. If you plan on publishing your app to the Mcirosoft Store, apps that require elevation for any part of their functionality won't be accepted into the Store.
 
-+ __Your application requires a kernel-mode driver or a Windows service__. The Desktop Bridge is suitable for an app, but it does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
++ __Your application requires a kernel-mode driver or a Windows service__. MSIX does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 + __Your app's modules are loaded in-process to processes that are not in your Windows app package__. This isn't permitted, which means that in-process extensions, like [shell extensions](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx), aren't supported. But if you have two apps in the same package, you can do inter-process communication between them.
 
