@@ -1,9 +1,9 @@
-# Build an MSIX from source code using Visual Studio
+# Package your app as an MSIX using Visual Studio
 
 
-If you maintain your application by using Visual Studio, and your application doesn't have an installer or your installer doesn't perform too many complicated tasks, consider using Visual Studio instead.
+Visual studio makes it easy to generate MSIX packages and is the recommended approach for applications in development. Desktop apps (Winfors, WPF, Win32 etc.) can use the Application Packaging Project to generate an MSIX package. UWP appshave MSIX generation built into their default project type. 
 
-Visual Studio makes it easy to create a package. You'll add a **Windows Application Package Project** to your solution, reference your desktop project, and then press F5 to debug your app. Here's a few other things you can do with it.
+Here are a few other things you can do from Visual Studio:
 
 :heavy_check_mark: Automatically generate visual assets.
 
@@ -19,10 +19,3 @@ Visual Studio makes it easy to create a package. You'll add a **Windows Applicat
 |[Packaging your Desktop app in Visual Studio](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to package your Desktop app (e.g. Winforms, WPF, Win32) as an MSIX in Visual Studio.|
 |[Packaging your UWP app in Visual Studio](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how to package your UWP app as an MSIX in Visual Studio.|
 |[Extending your MSIX application](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how you can to extend your application using extensions and optional packages.|
-
-
-For instructions, see [Package a desktop application by using Visual Studio](desktop-to-uwp-packaging-dot-net.md). The following table shows the supported versions of Visual Studio, Windows 10, and package formats.
-
-|  Supported versions of Visual Studio | Supported OS versions for creating packages  | Supported OS versions for installed packages  |  Supported package formats  |
-|-----------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------|
-|  Visual Studio 2019<br/>Visual Studio 2017 15.5 and later       |  Windows 10, version 1607 and later           |  Windows 10, version 1607 and later            |  .msix (for Windows 10, version 1709 and later)<br/>.appx (for Windows 10, version 1607 and later)                 |
