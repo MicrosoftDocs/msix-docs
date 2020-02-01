@@ -1,6 +1,6 @@
 ---
 Description: An overview of topics to know before building an MSIX package
-title: Key concepts to know before packing  
+title: Key concepts to know before packing to MSIX 
 author: Huios (tajimha)
 ms.date: 01/27/2020
 ms.topic: article
