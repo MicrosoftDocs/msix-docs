@@ -9,7 +9,7 @@ f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
 ms.localizationpriority: medium
 ---
 
-# Package an MSIX app with Visual Studio
+# Package a UWP app with Visual Studio
 
 To sell your Windows app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a MSIX app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
