@@ -8,22 +8,19 @@ keywords: windows 10, uwp, packaging
 ms.localizationpriority: medium
 ---
 
-# Manual app packaging
+# Packaging from the command line
 
-If you want to create and sign a Windows app package, but you didn't use Visual Studio to develop your app, you'll need to use the manual app packaging tools.
+If you don't use develop your app in Visual Studio, you can use the MSIX command line tools to package and sign your apps.
 
-> [!IMPORTANT] 
-> If you used Visual Studio to develop your Windows app, it's recommended that you use the Visual Studio wizard to create and sign your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
 ## Purpose
 
-This section contains or links to articles about manually packaging Windows apps.
+This section links to articles about manually packaging your app as an MSIX using command line tools.
 
 | Topic | Description |
 |-------|-------------|
-| [Generating package artifacts ](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-manual-conversion) | Create a package manifest and add Target-based unplated assets (optional) |
-| [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md) | MakeAppx.exe creates, encrypts, decrypts, and extracts files from app packages and bundles. |
-| [Package a desktop app manually](../desktop/desktop-to-uwp-manual-conversion.md) | Learn how to use **MakeApp.exe** to package a desktop app. |
+| [Generating package artifacts ](../desktop/desktop-to-uwp-manual-conversion.md) | Create a package manifest and add Target-based unplated assets (optional) |
+| [Create an MSIX package or bundle with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md) | MakeAppx.exe creates, encrypts, decrypts, and extracts files from app packages and bundles. |
 | [Create a certificate for package signing](create-certificate-package-signing.md) | Create and export a certificate for app package signing with PowerShell tools. |
 | [Sign an app package using SignTool](sign-app-package-using-signtool.md) | Use SignTool to manually sign an app package with a certificate. |
 
