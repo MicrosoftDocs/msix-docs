@@ -102,20 +102,22 @@ Review this guide before you begin creating a package for your application: [Pre
 8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle (for sideloading) or an .msixupload/.appxupload file to distribute to the Store.
 
 
-**Video**
-
-&nbsp;
-> [!VIDEO https://www.youtube-nocookie.com/embed/fJkbYPyd08w]
-
 ## Next steps
 
-**Find answers to your questions**
+**Package your Desktop app in Visual Studio**
 
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+See [Package a Desktop or UWP app in Visual Studio](../package/packaging-uwp-apps.md)
 
 **Run, debug or test your desktop application**
 
 See [Run, debug, and test a packaged desktop application](desktop-to-uwp-debug.md)
+
+## Additional resources
+
+**Video**
+
+&nbsp;
+> [!VIDEO https://www.youtube-nocookie.com/embed/fJkbYPyd08w]
 
 **Enhance your desktop application by adding UWP APIs**
 

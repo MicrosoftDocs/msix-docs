@@ -165,7 +165,7 @@
         - name: Package a Desktop or UWP app in Visual Studio
           href: package/packaging-uwp-apps.md
         - name: Using CI/CD Pipelines in Azure DevOps
-          href: azure-dev-ops.md
+          href: desktop/azure-dev-ops.md
         - name: Extending your packaged application
           items:
         - name: Overview
