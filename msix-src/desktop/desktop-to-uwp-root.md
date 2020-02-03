@@ -23,30 +23,7 @@ First, prepare your application by reviewing the article [Prepare to package you
 
 <a id="convert" />
 
-## Package
-
-There are several different ways to create an MSIX package for your desktop app.
-
-### Build an MSIX from an existing app installer
-
-If you already have an app package (for example, an MSI or App-V Installer), we recommend that you use the [MSIX Packaging Tool](../mpt-overview.md) to repackage your existing desktop app to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. 
-
-An earlier tool named the [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md) is also still available for repackaging an existing desktop app package. However, this tool is now deprecated, and we recommend that you use the MSIX Packaging Tool instead.
-
-The following table shows the supported versions of Windows 10 and package formats for these tools.
-
-|  Tool  | Supported OS versions for creating packages  | Supported OS versions for installed packages  |  Supported package formats  |
-|-----------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------|
-|  [MSIX Packaging Tool](../mpt-overview.md)        |  Windows 10, version 1809 and later           | Windows 10, version 1709 and later            |  .msix only                 |
-|  [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)        |  Windows 10, version 1607 and later           | Windows 10, version 1607 and later            |  .appx only    |
-
-To get started using the MSIX Packaging Tool, see these articles:
-
-* [Create an MSIX package from a desktop installer (MSI, EXE or App-V) on a VM](../packaging-tool/create-app-package-msi-vm.md)
-* [Create an MSIX package with all other installer types](../packaging-tool/create-other-installer.md)
-* [Create an MSIX package using the Command Line](../packaging-tool/package-conversion-cli.md)
-
-### Build an MSIX from source code using Visual Studio
+## Build an MSIX from source code using Visual Studio
 
 If you maintain your application by using Visual Studio, and your application doesn't have an installer or your installer doesn't perform too many complicated tasks, consider using Visual Studio instead.
 
@@ -66,15 +43,6 @@ For instructions, see [Package a desktop application by using Visual Studio](des
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------|
 |  Visual Studio 2019<br/>Visual Studio 2017 15.5 and later       |  Windows 10, version 1607 and later           |  Windows 10, version 1607 and later            |  .msix (for Windows 10, version 1709 and later)<br/>.appx (for Windows 10, version 1607 and later)                 |
 
-### Third-party installers
-
-Several popular third-party products and installers now support the ability to package a desktop application. For more details and a list of these third-party products, see [Package a desktop application using third-party installers](desktop-to-uwp-third-party-installer.md).
-
-### Manual packaging
-
-As a final option, you can convert your application without using any of these tools. If you want that granular control over your conversion, you can create a manifest file, and then run the **MakeAppx.exe** tool to create your Windows app package.
-
-See [Package a desktop application manually](desktop-to-uwp-manual-conversion.md).
 
 ## Add modern Windows 10 experiences
 
@@ -123,6 +91,3 @@ You can distribute your application by publishing it the Microsoft Store or by s
 
 See [Distribute a packaged desktop app](/windows/apps/desktop/modernize/desktop-to-uwp-distribute).
 
-## Find answers to your questions
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).

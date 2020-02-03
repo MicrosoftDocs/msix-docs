@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Package a desktop app manually
+# Generating MSIX package components
 
 This article shows you how to package your application without using tools such as Visual Studio or the MSIX Packaging Tool.
 

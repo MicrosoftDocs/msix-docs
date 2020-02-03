@@ -159,11 +159,21 @@
     - name: Packaging in Visual Studio
       items: 
         - name: Overview
-          href: 
-        - name: Create an MSIX package in Visual Studio
+          href: desktop/vs-package-overview.md
+        - name: Setup your Desktop app for packaging in Visual Studio
+          href: desktop/desktop-to-uwp-packaging-dot-net.md
+        - name: Package a Desktop or UWP app in Visual Studio
           href: package/packaging-uwp-apps.md
-        - name: Use an Azure DevOps pipeline
-          href: 
+        - name: Using CI/CD Pipelines in Azure DevOps
+          href: azure-dev-ops.md
+        - name: Extending your packaged application
+          items:
+        - name: Overview
+          href: desktop/extend-overview.md
+        - name: App Extensions 
+          href: https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-an-extension?context=/windows/msix/render
+        - name: Optional Packages
+          href: package/optional-packages-with-executable-code.md
     - name: Packaging from the command line
       items:  
         - name: Overview
@@ -174,10 +184,14 @@
           href: package/create-app-package-with-makeappx-tool.md
         - name: Create a certificate for package signing
           href: package/create-certificate-package-signing.md
-        - name: Developing with asset packages and package folding
-          href: package/package-folding.md
+        - name: Sign an MSIX package using SignTool
+          href: package/sign-app-package-using-signtool.md
         - name: Package creation with the packaging layout
           href: package/packaging-layout.md
+        - name: Developing with asset packages and package folding
+          href: package/package-folding.md
+    - name: CI/CD Pipelines for MSIX Builds
+      href: desktop/azure-dev-ops.md
     - name: Extend your app
       items:  
         - name: App extensions

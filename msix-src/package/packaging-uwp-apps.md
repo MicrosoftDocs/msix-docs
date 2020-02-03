@@ -9,9 +9,9 @@ f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
 ms.localizationpriority: medium
 ---
 
-# Package a UWP app with Visual Studio
+# Package a Desktop or UWP app in Visual Studio
 
-To sell your Windows app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a MSIX app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
+Before distributing your app, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a MSIX app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
 In Windows 10, you can submit an app package, app bundle, or a complete app package upload file to [Partner Center](https://partner.microsoft.com/dashboard). Of these options, submitting an app package upload file will provide the best experience.
 
@@ -42,7 +42,7 @@ After you have completed the steps above, you are ready to distribute your app. 
 
 1. **Test your app.** Before you package your app for Partner Center submission, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
-2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your UWP app. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
+2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your packaged application. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
 
 3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected. Some common debugging issues that can happen with .NET Native are explained in more detail in [Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
 
@@ -55,7 +55,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
 ### Configure a package with the manifest designer
 
-1. In **Solution Explorer**, expand the project node of your UWP app.
+1. In **Solution Explorer**, expand the project node of your  application project.
 
 2. Double-click the **Package.appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
 
@@ -69,7 +69,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
     > [!NOTE]
-    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in MSIX or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
+    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in packaged Desktop or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
 
     > [!IMPORTANT]
     > If you're publishing your app in Microsoft Store, your app will be signed with a trusted certificate for you. This allows the user to install and run your app without installing the associated app signing certificate.
@@ -80,7 +80,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
 If you are distributing your app via the Microsoft Store, Visual Studio can associate your package with the Store. To do this, right-click your project name in Solution Explorer and choose **Publish**->**Associate App with the Store** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**). You can also do this in the **Create App Packages** wizard, which is described in the following section. When you associate your app, some of the fields in the Packaging tab of the manifest designer are automatically updated.
 
-## Create an app package upload file
+## Create an app package upload file (Optional)
 
 To distribute an app through Microsoft Store you must create an app package (.appx or .msix), app bundle (.appxbundle or .msixbundle), or an app package upload file (.appxupload or .msixupload) and [submit the packaged app to Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions). 
 
@@ -106,7 +106,7 @@ Although it is possible to submit an app package or app bundle to Partner Center
 
     ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
 
-    If you have already associated your project with an app in the Store, you also have an option to create packages for the associated Store app. If you choose **Sideloading**, Visual Studio will not generate the app package upload (.msixupload or .appxupload) file for Partner Center submissions. If you only want to sideload your app to run it on internal devices or for testing purposes, then you can select this option. For more information, see [Sideload your app package](#sideload-your-app-package).
+    If you have already associated your project with an app in the Store, you also have an option to create packages for the associated Store app. If you choose **Sideloading**, Visual Studio will not generate the app package upload (.msixupload or .appxupload) file for Partner Center submissions. If you only want to create an MSIX packge or bundle for non-Store distribution, then you can select this option. For more information, see [Sideload your app package](#sideload-your-app-package).
 
 4. On the next page, sign in with your developer account to Partner Center. If you don't have a developer account yet, the wizard will help you create one.
 
@@ -157,7 +157,7 @@ Validate your app before you submit it to Partner Center for certification on a 
     >[!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
 
-2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run UWP apps on a remote machine](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
+2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applicationss on a remote machine](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
 
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
 
@@ -227,7 +227,7 @@ Before you can sideload your app on a target device, you must [enable your devic
 > [!NOTE]
 > The following instructions and screenshots describe the process as of Visual Studio 2019 version 16.3. If you're using an earlier version, some of the UI might look different.
 
-1. In **Solution Explorer**, open the solution for your UWP app project.
+1. In **Solution Explorer**, open the solution for your application project.
 
 2. Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**).
 
@@ -237,7 +237,7 @@ Before you can sideload your app on a target device, you must [enable your devic
 
     ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
 
-4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.
+4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. 
 
     ![Create Your Packages dialog window shown](images/package-signing.png)
 

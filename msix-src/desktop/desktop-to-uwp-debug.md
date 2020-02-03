@@ -8,7 +8,7 @@ ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ---
 
-# Run, debug, and test a packaged desktop application
+# Run, debug, and test an MSIX package
 
 Run your packaged application and see how it looks without having to sign it. Then, set breakpoints and step through code. When you're ready to test your application in a production environment, sign your application and then install it. This topic shows you how to do each of these things.
 
