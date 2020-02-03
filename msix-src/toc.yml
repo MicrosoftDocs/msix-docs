@@ -168,14 +168,6 @@
           href: package/packaging-uwp-apps.md
         - name: Using CI/CD Pipelines in Azure DevOps
           href: desktop/azure-dev-ops.md
-        - name: Extending your packaged application
-          items:
-        - name: Overview
-          href: desktop/extend-overview.md
-        - name: App Extensions 
-          href: https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-an-extension?context=/windows/msix/render
-        - name: Optional Packages
-          href: package/optional-packages-with-executable-code.md
     - name: Packaging from the command line
       items:  
         - name: Overview
@@ -199,9 +191,7 @@
         - name: App extensions
           href: https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-an-extension?context=/windows/msix/render
         - name: Optional packages
-          href: package/optional-packages-with-executable-code.md
-        - name: Modification packages
-          href: 
+          href: package/optional-packages-with-executable-code.md 
 - name: Manage your MSIX deployment
   items: 
     - name: Overview
