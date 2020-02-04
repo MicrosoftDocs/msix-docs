@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Create an app package with the MakeAppx.exe tool
+# Create an MSIX package or bundle with MakeAppx.exe 
 
 **MakeAppx.exe** creates both app packages (.msix or .appx) and app package bundles (.msixbundle or .appxbundle). **MakeAppx.exe** also extracts files from an app package or bundle and encrypts or decrypts app packages and bundles. This tool is included in the Windows 10 SDK and can be used from a command prompt or a script file.
 

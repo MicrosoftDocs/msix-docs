@@ -1,14 +1,14 @@
 ---
 Description: This article provides a deeper dive on how the Desktop Bridge works under the covers.
 title: Behind the scenes of the Desktop Bridge
-ms.date: 04/25/2019
+ms.date: 01/30/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ---
 
-# Behind the scenes of your packaged desktop application
+# How packaged Desktop apps run on Windows
 
 This article provides a deeper dive on what happens to files and registry entries when you create a Windows app package for your desktop application.
 

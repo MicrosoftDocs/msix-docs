@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Prepare to package a desktop application
 
-This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging. Remember that the Microsoft Store handles licensing and automatic updating for you, so you can remove any features that relate to those tasks from your codebase.
+This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below apply to your application, you need to address it before packaging.
 
 + __Your .NET application requires a version of the .NET Framework earlier than 4.6.2__. If you are packaging a .NET application, we recommend that your application target .NET Framework 4.6.2 or later. The ability to install and run packaged desktop applications was first introduced in Windows 10, version 1607 (also called the Anniversary Update), and this OS version includes the .NET Framework 4.6.2 by default. Later OS versions include later versions of the .NET Framework. For a full list of what versions of .NET are included in later versions of Windows 10, see [this article](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
@@ -20,13 +20,13 @@ This article lists the things you need to know before you package your desktop a
 
   + 2.0 and 3.5: In our testing, packaged desktop applications that target these versions of the .NET Framework generally work but may exhibit performance issues in some scenarios. In order for these packaged applications to install and run, the [.NET Framework 3.5 feature](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10) must be installed on the target machine (this feature also includes .NET Framework 2.0 and 3.0). You should also test these applications thoroughly after you package them.
 
-+ __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application from the Microsoft Store may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. Apps that require elevation for any part of their functionality won't be accepted in the Microsoft Store.
++ __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. If you plan on publishing your app to the Mcirosoft Store, apps that require elevation for any part of their functionality won't be accepted into the Store.
 
-+ __Your application requires a kernel-mode driver or a Windows service__. The Desktop Bridge is suitable for an app, but it does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
++ __Your application requires a kernel-mode driver or a Windows service__. MSIX does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 + __Your app's modules are loaded in-process to processes that are not in your Windows app package__. This isn't permitted, which means that in-process extensions, like [shell extensions](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx), aren't supported. But if you have two apps in the same package, you can do inter-process communication between them.
 
-+ __Ensure that any extensions installed by the application will install where the application is installed__. Windows allows users and IT managers to change the default install location for packages.  See "Settings->System->Storage->More Storage Settings-> Change where new content is saved to -> New Apps will save to".  If you are installing an extension with your application, make sure that the extension does not have additional installation folder restrictions.  For example, some extensions may disable installing their extenion to non-system drives.  This will result in an error 0x80073D01 (ERROR_DEPLOYMENT_BLOCKED_BY_POLICY) if the default location has been changed. 
++ __Ensure that any extensions installed by the application will install where the application is installed__. Windows allows users and IT managers to change the default install location for packages.  See "Settings->System->Storage->More Storage Settings-> Change where new content is saved to -> New Apps will save to".  If you are installing an extension with your application, make sure that the extension does not have additional installation folder restrictions.  For example, some extensions may disable installing their extension to non-system drives.  This will result in an error 0x80073D01 (ERROR_DEPLOYMENT_BLOCKED_BY_POLICY) if the default location has been changed. 
 
 + __Your application uses a custom Application User Model ID (AUMID)__. If your process calls [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx) to set its own AUMID, then it may only use the AUMID generated for it by the application model environment/Windows app package. You can't define custom AUMIDs.
 
@@ -130,10 +130,11 @@ Starting a utility can often provide a convenient way to obtain information from
 
 ## Next steps
 
-**Find answers to your questions**
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
 **Create a Windows app package for your desktop app**
 
 See [Create a Windows app package](desktop-to-uwp-root.md#convert)
+
+**Find answers to your questions**
+
+Have questions? Ask us on the [MSIX Tech Community forum](https://techcommunity.microsoft.com/t5/msix/ct-p/MSIX).
+

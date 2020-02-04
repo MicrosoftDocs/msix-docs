@@ -2,28 +2,25 @@
 ms.assetid: ee51eae3-ed55-419e-ad74-6adf1e1fb8b9
 title: Manual app packaging
 description: This section contains or links to articles about manually packaging Windows apps.
-ms.date: 07/30/2019
+ms.date: 01/30/2020
 ms.topic: article
 keywords: windows 10, uwp, packaging
 ms.localizationpriority: medium
 ---
 
-# Manual app packaging
+# Packaging from the command line
 
-If you want to create and sign a Windows app package, but you didn't use Visual Studio to develop your app, you'll need to use the manual app packaging tools.
+If you don't develop your app in Visual Studio, you can use the MSIX command line tools to package and sign your applications.
 
-> [!IMPORTANT] 
-> If you used Visual Studio to develop your Windows app, it's recommended that you use the Visual Studio wizard to create and sign your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
 ## Purpose
 
-This section contains or links to articles about manually packaging Windows apps.
+This section links to articles about manually packaging your app as an MSIX using command line tools.
 
 | Topic | Description |
 |-------|-------------|
-| [Generating package artifacts ](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-manual-conversion) | Create a package manifest and add Target-based unplated assets (optional) |
-| [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md) | MakeAppx.exe creates, encrypts, decrypts, and extracts files from app packages and bundles. |
-| [Package a desktop app manually](../desktop/desktop-to-uwp-manual-conversion.md) | Learn how to use **MakeApp.exe** to package a desktop app. |
+| [Generating package components ](../desktop/desktop-to-uwp-manual-conversion.md) | Create a package manifest and add Target-based unplated assets (optional) |
+| [Create an MSIX package or bundle with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md) | MakeAppx.exe creates, encrypts, decrypts, and extracts files from app packages and bundles. |
 | [Create a certificate for package signing](create-certificate-package-signing.md) | Create and export a certificate for app package signing with PowerShell tools. |
 | [Sign an app package using SignTool](sign-app-package-using-signtool.md) | Use SignTool to manually sign an app package with a certificate. |
 
@@ -37,7 +34,8 @@ This section contains more advanced topics for componentizing a large and/or com
 
 | Topic | Description |
 |-------|-------------|
+| [Package creation with the packaging layout](packaging-layout.md) | The packaging layout is a single document that describes packaging structure of the app. It specifies the bundles of an app (primary and optional), the packages in the bundles, and the files in the packages. |
 | [Introduction to asset packages](asset-packages.md) | Asset packages are a type of package that act as a centralized location for an application’s common files – effectively eliminating the necessity for duplicated files throughout its architecture packages. |
 | [Developing with asset packages and package folding](package-folding.md) | Learn how to efficiently organize your app with asset packages and package folding. |
 | [Flat bundle app packages](flat-bundles.md) | Describes how to create a flat bundle for your app’s package files. |
-| [Package creation with the packaging layout](packaging-layout.md) | The packaging layout is a single document that describes packaging structure of the app. It specifies the bundles of an app (primary and optional), the packages in the bundles, and the files in the packages. |
+

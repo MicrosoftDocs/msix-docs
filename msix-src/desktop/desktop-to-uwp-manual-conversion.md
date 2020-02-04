@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Package a desktop app manually
+# Generating MSIX package components
 
 This article shows you how to package your application without using tools such as Visual Studio or the MSIX Packaging Tool.
 
@@ -19,8 +19,6 @@ Consider manual packaging if you install your application by using the xcopy com
 
 If you're uncertain about what changes your installer makes to the system, or if you'd rather use automated tools to generate your package manifest, consider any of [these](desktop-to-uwp-root.md#convert) options.
 
-> [!IMPORTANT]
-> The ability to create a Windows app package for your desktop application (otherwise known as the Desktop Bridge) was introduced in Windows 10, version 1607, and it can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release in Visual Studio.
 
 ## First, prepare your application
 
@@ -166,19 +164,23 @@ Target-based assets are for icons and tiles that appear on the Windows taskbar, 
 
 <a id="make-pri" />
 
-### Generate a Package Resource Index (PRI) file
+### Generate a Package Resource Index (PRI) file using MakePri
 
 If you create target-based assets as described in the section above, or you modify any of the visual assets of your application after you've created the package, you'll have to generate a new PRI file.
 
-1.	Open a **Developer Command Prompt for VS 2017**.
+Based on your installation path of the SDK, this is where **MakePri.exe** is on your Windows 10 PC:
+- x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x86\makepri.exe
+- x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x64\makepri.exe
 
-    ![developer command prompt](images/developer-command-prompt.png)
+There is no ARM version of this tool.
 
-2.  Change directory to the package's root folder, and then create a priconfig.xml file by running the command ``makepri createconfig /cf priconfig.xml /dq en-US``.
+1.	Open a Command Prompt or PowerShell window.
 
-5.	Create the resources.pri file(s) by using the command ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
+2.  Change directory to the package's root folder, and then create a priconfig.xml file by running the command ``<path>\makepri.exe createconfig /cf priconfig.xml /dq en-US``.
 
-    For example, the command for your application might look like this: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+5.	Create the resources.pri file(s) by using the command ``<path>\makepri.exe new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
+
+    For example, the command for your application might look like this: ``<path>\makepri.exe new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
 
 6.	Package your Windows app package by using the instructions in the next step.
 

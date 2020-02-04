@@ -1,14 +1,14 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
-ms.date: 07/18/2019
+ms.date: 02/02/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ---
 
-# Package a desktop app from source code using Visual Studio
+# Setup your Desktop application for MSIX packaging in Visual Studio
 
 You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then, you can publish that package to the Microsoft Store or sideload it onto one or more PCs.
 
@@ -20,13 +20,24 @@ The **Windows Application Packaging Project** project is available in the follow
 > [!IMPORTANT]
 > The **Windows Application Packaging Project** project in Visual Studio is supported on Windows 10, version 1607, and later. It can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release.
 
+Here are a few other things you can do from the Visual Studio Application Packaging Project:
+
+:heavy_check_mark: Automatically generate visual assets.
+
+:heavy_check_mark: Make changes to your manifest using a visual designer.
+
+:heavy_check_mark: Generate your package or bundle using a wizard.
+
+:heavy_check_mark: (If publishing to the Microsoft Store) Easily assign an identity to your application from a name that you've already reserved in [Partner Center](https://partner.microsoft.com/dashboard).
+
+
 ## Prepare your application
 
 Review this guide before you begin creating a package for your application: [Prepare to package a desktop application](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
-## Create a package
+## Setup the Windows Application Packaging Project in your solution
 
 1. In Visual Studio, open the solution that contains your desktop application project.
 
@@ -88,24 +99,25 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Config manager](images/config-manager.png)
 
-8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an .msixupload/.appxupload file.
+8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
 
-   You can upload that file directly to the Store.
+
+## Next steps
+
+**Package your Desktop app in Visual Studio**
+
+See [Package a Desktop or UWP app in Visual Studio](../package/packaging-uwp-apps.md)
+
+**Run, debug or test your desktop application**
+
+See [Run, debug, and test a packaged application](desktop-to-uwp-debug.md)
+
+## Additional resources
 
 **Video**
 
 &nbsp;
 > [!VIDEO https://www.youtube-nocookie.com/embed/fJkbYPyd08w]
-
-## Next steps
-
-**Find answers to your questions**
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Run, debug or test your desktop application**
-
-See [Run, debug, and test a packaged desktop application](desktop-to-uwp-debug.md)
 
 **Enhance your desktop application by adding UWP APIs**
 
