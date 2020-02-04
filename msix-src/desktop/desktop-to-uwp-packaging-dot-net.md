@@ -1,7 +1,7 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
-ms.date: 07/18/2019
+ms.date: 02/02/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
@@ -24,11 +24,11 @@ Here are a few other things you can do from the Visual Studio Application Packag
 
 :heavy_check_mark: Automatically generate visual assets.
 
-:heavy_check_mark: Make changes to your manifest by using a visual designer.
+:heavy_check_mark: Make changes to your manifest using a visual designer.
 
-:heavy_check_mark: Generate your package by using a wizard.
+:heavy_check_mark: Generate your package or bundle using a wizard.
 
-:heavy_check_mark: Easily assign an identity to your application from a name that you've already reserved in [Partner Center](https://partner.microsoft.com/dashboard).
+:heavy_check_mark: (If publishing to the Microsoft Store) Easily assign an identity to your application from a name that you've already reserved in [Partner Center](https://partner.microsoft.com/dashboard).
 
 
 ## Prepare your application
@@ -99,7 +99,7 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Config manager](images/config-manager.png)
 
-8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle (for sideloading) or an .msixupload/.appxupload file to distribute to the Store.
+8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
 
 
 ## Next steps
@@ -110,7 +110,7 @@ See [Package a Desktop or UWP app in Visual Studio](../package/packaging-uwp-app
 
 **Run, debug or test your desktop application**
 
-See [Run, debug, and test a packaged desktop application](desktop-to-uwp-debug.md)
+See [Run, debug, and test a packaged application](desktop-to-uwp-debug.md)
 
 ## Additional resources
 

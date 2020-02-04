@@ -1,7 +1,7 @@
 ---
 description: This article provides guidance on how to run, debug, and test your packaged desktop application to get it ready for deployment.
 title: Run, debug, and test a packaged desktop app (Desktop Bridge)
-ms.date: 07/29/2019
+ms.date: 02/03/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
@@ -20,7 +20,7 @@ You can run your application to test it out locally without having to obtain a c
 
 ### You created the package by using Visual Studio
 
-Set the packaging project as the startup project, and then press CTRL+F5 to start your app.
+Set the packaging project as the startup project, and then press F5 to start your app.
 
 ### You created the package using a different tool
 

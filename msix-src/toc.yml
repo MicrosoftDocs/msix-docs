@@ -166,8 +166,8 @@
           href: desktop/desktop-to-uwp-packaging-dot-net.md
         - name: Package a Desktop or UWP app in Visual Studio
           href: package/packaging-uwp-apps.md
-        - name: Using CI/CD Pipelines in Azure DevOps
-          href: desktop/azure-dev-ops.md
+    - name: CI/CD Pipelines for MSIX Builds
+      href: desktop/azure-dev-ops.md
     - name: Packaging from the command line
       items:  
         - name: Overview
@@ -184,8 +184,6 @@
           href: package/packaging-layout.md
         - name: Developing with asset packages and package folding
           href: package/package-folding.md
-    - name: CI/CD Pipelines for MSIX Builds
-      href: desktop/azure-dev-ops.md
     - name: Extend your app
       items:  
         - name: App extensions
