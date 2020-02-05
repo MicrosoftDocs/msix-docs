@@ -30,8 +30,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2019.1220.0
-- The MSIX Packaging Tool just released the public version of the application. Preview releases will return soon.
+## Version 1.2020.203.0
+
+-Package Integrity setting is on by default
+- Ability to export your registry files(.reg)
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
