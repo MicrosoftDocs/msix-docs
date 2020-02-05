@@ -11,9 +11,9 @@ ms.custom: "RS5, seodec18"
 
 # Update non-Store published apps from your code
 
-When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. You can update to a new version by taking advantage of the [PackageManager.UpdatePackageAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.updatepackageasync) method. Doing so requires that your app declares the `packageManagement` capability.
+When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. You can update to a new version by taking advantage of the [PackageManager.AddPackageAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackageasync) method. Doing so requires that your app declares the `packageManagement` capability.
 
-This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to use the [PackageManager.UpdatePackageAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.updatepackageasync) method to check for and install an update.
+This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to use the [PackageManager.AddPackageAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackageasync) method to check for and install an update.
 
 ## Add the PackageManagement Capability to your package manifest
 
@@ -82,7 +82,7 @@ private async void CommandInvokedHandler(IUICommand command)
     if (command.Label == "Update")
     {
         PackageManager packagemanager = new PackageManager();
-        await packagemanager.UpdatePackageAsync(
+        await packagemanager.AddPackageAsync(
             new Uri("https://trial3.azurewebsites.net/HRApp/HRApp.msix"),
             null,
             DeploymentOptions.ForceApplicationShutdown
