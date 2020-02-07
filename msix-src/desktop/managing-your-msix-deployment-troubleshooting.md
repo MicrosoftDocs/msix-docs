@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 Though MSIX has a 99% successful install rate, sometimes you need to be able to trouble shoot an installation.
 
 ## Know the application
-Understanding the application that you are installing and how it works can go a long ways to troubleshooting the user experience.  For example does the application have certain limiations that could be causing the issues?  Does the user have access to the resources needed by the application?  Were there dependencies the application had, that were not met by the current operating system?
+Understanding the application that you are installing and how it works can go a long way to troubleshooting the user experience.  For example, does the application have certain limitations that could be causing the issues?  Does the user have access to the resources needed by the application?  Were there dependencies the application had, that were not met by the current operating system?
 
 ## Test your application
 Before deploying your application, make sure you have tested your application.  The Windows SDK provides a tool, the Windows App Certification kit that can identify common issues before publication.  
@@ -34,7 +34,7 @@ When there are issues with the installation, you can investigate the artifacts p
 You can use the Event Viewer or Powershell to access those events. 
 To learn more about how to view the events, see [Troubleshooting packaging, deployment, and query of Windows apps.](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting)
 
-To learn more about AppInstaller troubleshooting, see [Troubleshoot Appinstaller Issues.])https://docs.microsoft.com/windows/msix/app-installer/troubleshoot-appinstaller-issues)
+To learn more about AppInstaller troubleshooting, see [Troubleshoot Appinstaller Issues.](https://docs.microsoft.com/windows/msix/app-installer/troubleshoot-appinstaller-issues)
 
 
 ## Next steps

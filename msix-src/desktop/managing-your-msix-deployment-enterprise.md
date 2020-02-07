@@ -9,10 +9,10 @@ ms.localizationpriority: medium
 ---
 
 #	MSIX App Distribution
-The MSIX packaging format can be delivered to client devices through the use of device and application management tools such as Microsoft Intune, and Microsoft Microsoft Endpoint Configuration Manager. 
+The MSIX packaging format can be delivered to client devices through the use of device and application management tools such as Microsoft Intune, and Microsoft Endpoint Configuration Manager. 
 
 ##	Microsoft Endpoint Configuration Manager 
-For details on the Microsoft Store for Business, see Microsoft Microsoft Endpoint Configuration Manager (current branch) supports the deployment of MSIX applications to client devices through the Application model. As MSIX is a stanadardized installation packaging format, the details regarding the application (Publisher, Application Name, and Version) will be automatically retrieved and presented for review through the create application wizard within Microsoft Endpoint Configuration Manager. Similarily, the install string and detection methods used with MSIX applications is consistent and automatically configured by the Microsoft Endpoint Configuration Manager create application wizard.
+For details on the Microsoft Store for Business, see Microsoft Endpoint Configuration Manager (current branch) supports the deployment of MSIX applications to client devices through the Application model. As MSIX is a standardized installation packaging format, the details regarding the application (Publisher, Application Name, and Version) will be automatically retrieved and presented for review through the create application wizard within Microsoft Endpoint Configuration Manager. Similarly, the install string and detection methods used with MSIX applications is consistent and automatically configured by the Microsoft Endpoint Configuration Manager create application wizard.
 
 When creating an application in Microsoft Endpoint Configuration Manager, select application type: <b>Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)</b>. For guidance on creating and deploying an application through [Microsoft Endpoint Configuration Manager.](https://docs.microsoft.com/configmgr/apps/get-started/create-and-deploy-an-application)
 
@@ -48,7 +48,7 @@ To learn more about provisioning, see [Deployment Image Servicing and Management
 
 ## Managing your MSIX app
 
-MSIX Packages have a comprehensiv set of controls that IT Pros can use to control their installation.  IT Pros can dictate how and when MSIX apps can upgrade, downgrade or uninstall.  MSIX packages also can be limited with inbox Windows services like AppLocker and Group Policies. 
+MSIX Packages have a comprehensive set of controls that IT Pros can use to control their installation.  IT Pros can dictate how and when MSIX apps can upgrade, downgrade or uninstall.  MSIX packages also can be limited with inbox Windows services like AppLocker and Group Policies. 
 
 ###	Prevent MSIX app installs through AppLocker
 
