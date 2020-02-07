@@ -24,12 +24,11 @@ To get started on publishing an app to the Microsoft App Store and its capabilit
 ## App Center
 
 [App Center](https://appcenter.ms/) enables you to automatically build your app, test it on real devices, and distribute it to beta testers.  App Center lets you ship apps more frequently, at higher-quality, and with greater confidence.  With App Center you can connect your repo and within minutes automate your builds, test on real devices in the cloud, distribute apps to beta testers, and monitor real-world usage with crash and analytics data. All in one place.
-For more information on App Center[App Center Documentation](https://docs.microsoft.com/appcenter/)
-ng, see [Create Windows applications in Configuration Manager.](https://docs.microsoft.com/configmgr/apps/get-started/creating-windows-applications)
+For more information on App Center see [App Center](https://docs.microsoft.com/appcenter/).
 
 ## Web Install
 
-While a MSIX file can be hosted on any IIS server.  You can dramatically improve the experience by enabling direct install with App Installer.  Direct install will allow the AppInstaller to lauch immedately and run the install from the web server rather than downloading it first.  For more details on Web install, see 
+While a MSIX file can be hosted on any IIS server.  You can dramatically improve the experience by enabling direct install with App Installer.  Direct install will allow the AppInstaller to launch immediately and run the install from the web server rather than downloading it first.  For more details on Web install, see 
 [Installing Windows 10 apps from a web page.](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web)
 
  

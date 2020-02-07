@@ -10,7 +10,7 @@ ms.localizationpriority: medium
   
 # Plan for your deployment
 
-No matter if you are targeting the consumer market or enterprise, the key to successful distribution is knowing the devices your deployment is targeting. Depending on the platform you are targetting, you may have additional dependencies that need to be resolved. Some enterprise companies have a single operating system distributed through out the organization. Others have a mixed collection of hardware and operating systems. Inorder to be succcesful in an mixed environment it is important to create a solution that will install easily on all operating systems while limiting the variations in installer technologies. 
+No matter if you are targeting the consumer market or enterprise, the key to successful distribution is knowing the devices your deployment is targeting. Depending on the platform you are targeting, you may have additional dependencies that need to be resolved. Some enterprise companies have a single operating system distributed through out the organization. Others have a mixed collection of hardware and operating systems. In order to be successful in an mixed environment it is important to create a solution that will install easily on all operating systems while limiting the variations in installer technologies. 
 
 All developers also need to know the minimum supported operating system they want to target.  Targeting the lowest common denominator of the operating system, may get you the best potential reach, but often earlier releases of the operating system may not support certain API calls your application is built using.
 
