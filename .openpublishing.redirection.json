@@ -29,6 +29,72 @@
       "source_path": "msix-src/msix-sdk/msixcore.md",
       "redirect_url": "/windows/msix/msix-core/msixcore",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/duplicate-mpt-settings-across-devices.md",
+      "redirect_url": "/windows/msix/packaging-tool/duplicate-tool-settings-across-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/create-app-package-msi-vm.md",
+      "redirect_url": "/windows/msix/packaging-tool/create-app-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/mpt-best-practices.md",
+      "redirect_url": "/windows/msix/packaging-tool/tool-best-practices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/mpt-known-issues.md",
+      "redirect_url": "/windows/msix/packaging-tool/tool-known-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/mpt-overview.md",
+      "redirect_url": "/windows/msix/packaging-tool/tool-overview",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "msix-src/msix-1709-and-1803-support.md",
+      "redirect_url": "/windows/msix/supported-platforms",
+      "redirect_document_id": true
+    },
+     {
+      "source_path": "msix-src/team-video.md",
+      "redirect_url": "/windows/msix/resources",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/Support-on-1709-and-later.md",
+      "redirect_url": "/windows/msix/supported-platforms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msix-src/modification-package-1809-update.md",
+      "redirect_url": "/windows/msix/modification-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/modification-package-1903.md",
+      "redirect_url": "/windows/msix/modification-packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msix-src/packaging-tool/package-conversion-command-prompt.md",
+      "redirect_url": "/windows/msix/packaging-tool/package-conversion-command-line",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/packaging-tool/create-other-installer.md",
+      "redirect_url": "/windows/msix/packaging-tool/create-app-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msix-src/app-installer/install-related-set.md",
+      "redirect_url": "/windows/msix/package/optional-packages",
+      "redirect_document_id": true
     }
+
   ]
 }

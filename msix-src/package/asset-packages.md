@@ -42,7 +42,7 @@ The easiest way to create asset packages is using the packaging layout. However,
 "Video.mp4"         "Video.mp4"
 ```
 
-Use one of these commands to create the asset package using MakeAppx.exe (for AppX and MSIX).
+Use one of these commands to create the asset package using MakeAppx.exe (for MSIX and .appx).
 
 ```cmd
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx

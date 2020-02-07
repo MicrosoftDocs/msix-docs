@@ -9,45 +9,43 @@ f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
 ms.localizationpriority: medium
 ---
 
-# Package an MSIX app with Visual Studio
+# Package a desktop or UWP app in Visual Studio
 
-To sell your Windows app or distribute it to other users, you need to package it. If you don't want to distribute your app through Microsoft Store, you can sideload the app package directly to a device or distribute it via [Web Install](../app-installer/installing-windows10-apps-web.md). This article describes the process of configuring, creating, and testing a MSIX app package using Visual Studio. For more information about managing and deploying line-of-business (LOB) apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
-
-In Windows 10, you can submit an app package, app bundle, or a complete app package upload file to [Partner Center](https://partner.microsoft.com/dashboard). Of these options, submitting an app package upload file will provide the best experience.
+Before distributing your app, you need to package it. This article describes the process of configuring, creating, and testing an MSIX package using Visual Studio.
 
 ## Types of app packages
 
 - **App Package (.msix or .appx)**  
-    A file that contains your app in a format that can be sideloaded on a device. Any single app package file created by Visual Studio is **not** intended to be submitted to Partner Center and should be used for sideloading and testing purposes only. If you want to submit your app to Partner Center, use the app package upload file.  
+    A single package that contains your application and its resources, targeted at a single device architecture. For example, an x64 or x86 application package. To target multiple architectures with an app bundle you'd need to generate one for each architecture. 
 
 - **App Bundle (.msixbundle or .appxbundle)**  
     An app bundle is a type of package that can contain multiple app packages, each of which is built to support a specific device architecture. For example, an app bundle can contain three separate app packages for the x86, x64, and ARM configurations. App bundles should be generated whenever possible because they allow your app to be available on the widest possible range of devices.  
 
-- **App Package Upload File (.msixupload or .appxupload)**  
-    A single file that can contain multiple app packages or an app bundle to support various processor architectures. The app package upload file also contains a symbol file to [Analyze app performance](https://docs.microsoft.com/windows/uwp/publish/analytics) after your app has been published in the Microsoft Store. This file will be automatically created for you if you are packaging your app with Visual Studio with the intention of submitting it to Partner Center for publishing.
+- **App Package Upload File (.msixupload or .appxupload) - for Store Submission only**  
+    A single file that can contain multiple app packages or an app bundle to support various processor architectures. The app package upload file also contains a symbol file to [Analyze app performance](https://docs.microsoft.com/windows/uwp/publish/analytics) after your app has been published in the Microsoft Store. This file will be automatically created for you if you are packaging your app with Visual Studio with the intention of submitting it to Partner Center for publishing to the Microsoft Store.
 
 Here is an overview of the steps to prepare and create an app package:
 
-1. [Before packaging your app](#before-packaging-your-app). Follow these steps to ensure your app is ready to be packaged for Partner Center submission.
+1. [Before packaging your app](#before-packaging-your-app). Follow these steps to ensure your app is ready to be packaged.
 
-2. [Configure an app package](#configure-an-app-package). Use the Visual Studio manifest designer to configure the package. For example, add tile images and choose the orientations your app supports.
+2. [Configure your project](#configure-your-project). Use the Visual Studio manifest designer to configure the package. For example, add tile images and choose the orientations your app supports.
 
-3. [Create an app package upload file](#create-an-app-package-upload-file). Use the Visual Studio app package wizard to create an app package, then certify your package with the Windows App Certification Kit.
+3. [Generate an app package](#generate-an-app-package). Use the Visual Studio packaging wizard to create an app package.
 
-4. [Sideload your app package](#sideload-your-app-package). After sideloading your app to a device, you can test that it works as you expect it to.
 
-After you have completed the steps above, you are ready to distribute your app. If you have a line-of-business (LOB) app that you don't plan to sell because it's for internal users only, you can sideload this app to install it on any Windows 10 device.
+4. [Run, debug, and test a packaged application](../desktop/desktop-to-uwp-debug.md). Run and debug your app package from Visual Studio or by installing the package directly.
+
 
 ## Before packaging your app
 
-1. **Test your app.** Before you package your app for Partner Center submission, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+1. **Test your app.** Before you package your application, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps) (also applies to packaged desktop apps).
 
-2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your UWP app. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
+2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your packaged application. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
 
-3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected. Some common debugging issues that can happen with .NET Native are explained in more detail in [Debugging .NET Native Windows Universal Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
+3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected.
 
 
-## Configure an app package
+## Configure your project
 
 The app manifest file (Package.appxmanifest) is an XML file that contains the properties and settings required to create your app package. For example, properties in the app manifest file describe the image to use as the tile of your app and the orientations that your app supports when a user rotates the device.
 
@@ -55,7 +53,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
 ### Configure a package with the manifest designer
 
-1. In **Solution Explorer**, expand the project node of your UWP app.
+1. In **Solution Explorer**, expand the project node of your  application project.
 
 2. Double-click the **Package.appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
 
@@ -69,25 +67,73 @@ The Visual Studio manifest designer allows you to update the manifest file witho
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
     > [!NOTE]
-    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in MSIX or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
+    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in packaged desktop or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
 
     > [!IMPORTANT]
     > If you're publishing your app in Microsoft Store, your app will be signed with a trusted certificate for you. This allows the user to install and run your app without installing the associated app signing certificate.
 
-    If you are not publishing your app and simply want to sideload an app package, you first need to trust the package. To trust the package, the certificate must be installed on the user's device. For more information about sideloading, see [Enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
+    If you are installing the app package on your device, you first need to trust the package. To trust the package, the certificate must be installed on the user's device.
 
 4. Save your **Package.appxmanifest** file after you have made the necessary edits for your app.
 
 If you are distributing your app via the Microsoft Store, Visual Studio can associate your package with the Store. To do this, right-click your project name in Solution Explorer and choose **Publish**->**Associate App with the Store** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**). You can also do this in the **Create App Packages** wizard, which is described in the following section. When you associate your app, some of the fields in the Packaging tab of the manifest designer are automatically updated.
 
-## Create an app package upload file
+## Generate an app package
 
-To distribute an app through Microsoft Store you must create an app package (.appx or .msix), app bundle (.appxbundle or .msixbundle), or an app package upload file (.appxupload or .msixupload) and [submit the packaged app to Partner Center](https://docs.microsoft.com/windows/uwp/publish/app-submissions). 
+Apps can be installed without being published in the Store by publishing them on your Website, using application management tools such as Microsoft Intune and Configuration Manager, etc. You can also directly install an MSIX package for testing on your local or remote machine.
+
+### Create an app package using the packaging wizard
 
 > [!NOTE]
-> If you want to create an app package (.appx or .msix) or app bundle (.appxbundle or .msixbundle) manually, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
+> The following instructions and screenshots describe the process as of Visual Studio 2019 version 16.3. If you're using an earlier version, some of the UI might look different.
+> If  you're packaging a desktop application, right click on the the Windows Application Packaging Project node.
 
-Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles, see [create your app package upload file manually](#create-your-app-package-upload-file-manually).
+1. In **Solution Explorer**, open the solution for your application project.
+
+2. Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**).
+
+    ![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)
+
+3. Select **Sideloading** in the first page of the wizard and then click **Next**.
+
+    ![Create Your Packages dialog window shown](images/packaging-screen10.png
+)
+
+4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. 
+
+    ![Create Your Packages dialog window shown](images/package-signing2.png)
+
+5. Complete the **Select and configure packages** page as described in the [Create your app package upload file using Visual Studio](#create-your-app-package-upload-file-using-visual-studio) section.
+
+### Install your app package by double clicking
+
+App packages can be installed simply by double clicking the app package file. To do so, navigate to your app package or app bundle file, and double click it. [App Installer](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) launches and provides the basic app information as well as an install button, installation progress bar, and any relevant error messages.
+
+> [!NOTE]
+> App Installer assumes that the package was signed with a cert trusted on the device. If it wasn't, you will need to install the signing certificate to the Trusted People or Trusted Publishers Certification Authorities store on the device. If you're not sure how to do this, see [Installing Test Certificates](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
+
+### Install your app package using an install script
+
+1. Open the `*_Test` folder.
+2. Right-click on the **Add-AppDevPackage.ps1** file. Choose **Run with PowerShell** and follow the prompts.  
+    ![File explorer navigated to PowerShell script shown](images/packaging-screen7.jpg)
+
+    When the app package has been installed, the PowerShell window displays this message: **Your app was successfully installed.**
+
+3. Click the Start button to search for the app by name, and then launch it.
+
+### Next Steps: Debug and test your app package
+
+See [Run, debug, and test an app package](../desktop/desktop-to-uwp-debug.md) for how you can debug your application in Visual Studio or using Windows debugging tools.
+
+## Generate an app package upload file for Store Submission
+
+To distribute your app to the Microsoft Store, it is recommended that you generate an app package upload file (.msixupload or .appxupload).
+
+> [!NOTE]
+> If you want to create an app package (.msix or.appx) or app bundle (.msixbundle or .appxbundle) manually, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
+
+Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles.
 
 ### Create your app package upload file using Visual Studio
 
@@ -106,7 +152,7 @@ Although it is possible to submit an app package or app bundle to Partner Center
 
     ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
 
-    If you have already associated your project with an app in the Store, you also have an option to create packages for the associated Store app. If you choose **Sideloading**, Visual Studio will not generate the app package upload (.msixupload or .appxupload) file for Partner Center submissions. If you only want to sideload your app to run it on internal devices or for testing purposes, then you can select this option. For more information, see [Sideload your app package](#sideload-your-app-package).
+    If you have already associated your project with an app in the Store, you also have an option to create packages for the associated Store app. If you choose **Sideloading**, Visual Studio will not generate the app package upload (.msixupload or .appxupload) file for Partner Center submissions. If you only want to create an MSIX packge or bundle for non-Store distribution, then you can select this option.
 
 4. On the next page, sign in with your developer account to Partner Center. If you don't have a developer account yet, the wizard will help you create one.
 
@@ -157,7 +203,7 @@ Validate your app before you submit it to Partner Center for certification on a 
     >[!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
 
-2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run UWP apps on a remote machine](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
+2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applicationss on a remote machine](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
 
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
 
@@ -216,62 +262,3 @@ The submission will start after the WACK test have finished. You can track the s
 
 ![Verify and Publish progress](images/packaging-screen9.jpg)
 
-## Sideload your app package
-
-With MSIX app packages, apps aren't installed to a device as they are with desktop apps. Typically, you download MSIX packaged apps from Microsoft Store, which also installs the app to your device for you. Apps can be installed without being published in the Store (sideloading). This lets you install and test apps using the app package file that you created. If you have an app that you don’t want to sell in the Store, like a line-of-business (LOB) app, you can sideload that app so that other users in your company can use it.
-
-Before you can sideload your app on a target device, you must [enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
-
-### Create an app package for sideloading
-
-> [!NOTE]
-> The following instructions and screenshots describe the process as of Visual Studio 2019 version 16.3. If you're using an earlier version, some of the UI might look different.
-
-1. In **Solution Explorer**, open the solution for your UWP app project.
-
-2. Right-click the project and choose **Publish**->**Create App Packages** (before Visual Studio 2019 version 16.3, the **Publish** menu is named **Store**).
-
-    ![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)
-
-3. Select **Sideloading** in the first page of the wizard and then click **Next**.
-
-    ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
-
-4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.
-
-    ![Create Your Packages dialog window shown](images/package-signing.png)
-
-5. Complete the **Select and configure packages** page as described in the [Create your app package upload file using Visual Studio](#create-your-app-package-upload-file-using-visual-studio) section.
-
-### Sideload your app package on Windows 10 Anniversary Update or later
-
-Introduced in the Windows 10 Anniversary Update (Windows 10, version 1607), app packages can be installed simply by double clicking the app package file. To use this, navigate to your app package or app bundle file, and double click it. [App Installer](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) launches and provides the basic app information as well as an install button, installation progress bar, and any relevant error messages.
-
-![App Installer display for installing a sample app called Contoso](images/appinstaller-screen.png)
-
-> [!NOTE]
-> App Installer assumes that the app is trusted by the device. If you are sideloading a developer or enterprise app, you will need to install the signing certificate to the Trusted People or Trusted Publishers Certification Authorities store on the device. If you're not sure how to do this, see [Installing Test Certificates](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
-
-### Sideload your app package on previous versions of Windows
-
-1.  Copy the folders for the app version to install on the target device.
-
-    If you've created an app bundle, then you will have a folder based on the version number and a `*_Test` folder. For example these two folders (where the version to install is 1.0.2.0):
-
-    -   `C:\Projects\MyApp\MyApp\AppPackages\MyApp_1.0.2.0`
-    -   `C:\Projects\MyApp\MyApp\AppPackages\MyApp_1.0.2.0_Test`
-
-    If you don't have an app bundle, copy the folder for the correct architecture and its corresponding `*_Test` folder. These two folders are an example of an app package with the x64 architecture and its `*_Test` folder:
-
-    -   `C:\Projects\MyApp\MyApp\AppPackages\MyApp_1.0.2.0_x64`
-    -   `C:\Projects\MyApp\MyApp\AppPackages\MyApp_1.0.2.0_x64_Test`
-
-2.  On the target device, open the `*_Test` folder.
-3.  Right-click on the **Add-AppDevPackage.ps1** file. Choose **Run with PowerShell** and follow the prompts.  
-    ![File explorer navigated to PowerShell script shown](images/packaging-screen7.jpg)
-
-    When the app package has been installed, the PowerShell window displays this message: **Your app was successfully installed.**
-    >[!TIP]
-    > To open the shortcut menu on a tablet, touch the screen where you want to right-click, hold until a complete circle appears, then lift your finger. The shortcut menu opens once you lift your finger.
-
-4.  Click the Start button to search for the app by name, and then launch it.

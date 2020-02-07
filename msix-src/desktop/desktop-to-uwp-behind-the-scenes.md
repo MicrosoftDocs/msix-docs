@@ -1,14 +1,14 @@
 ---
 Description: This article provides a deeper dive on how the Desktop Bridge works under the covers.
 title: Behind the scenes of the Desktop Bridge
-ms.date: 04/25/2019
+ms.date: 01/30/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ---
 
-# Behind the scenes of your packaged desktop application
+# Understanding how packaged desktop apps run on Windows
 
 This article provides a deeper dive on what happens to files and registry entries when you create a Windows app package for your desktop application.
 
@@ -28,7 +28,7 @@ The OS supports different levels of file system operations for packaged desktop 
 
 ### AppData operations on Windows 10, version 1903 and later
 
-All newly created files and folders in the user's AppData folder (e.g., *C:\Users\user_name\AppData*) are written to a private per-user, per-app location but merged at runtime to appear in the real AppData location. This allows some degree of state separation for artifacts that are only used by the application itself, and this enables the system to clean up those files when the application is uninstalled. Modifications to existing files under the user's AppData folder is allowed to prevent a higher degree of compatibility and interactivity between applications and the OS. This reduces filesystem “rot” because the OS is aware of every file or directory change made by an application. State separation also allows packaged desktop applications to pick up where a non-packaged version of the same application left off. Note that the OS does not support a virtual file system (VFS) folder for the user's AppData folder.
+All newly created files and folders in the user's AppData folder (e.g., *C:\Users\user_name\AppData*) are written to a private per-user, per-app location but merged at runtime to appear in the real AppData location. This allows some degree of state separation for artifacts that are only used by the application itself, and this enables the system to clean up those files when the application is uninstalled. Modifications to existing files under the user's AppData folder is allowed to provide a higher degree of compatibility and interactivity between applications and the OS. This reduces filesystem “rot” because the OS is aware of every file or directory change made by an application. State separation also allows packaged desktop applications to pick up where a non-packaged version of the same application left off. Note that the OS does not support a virtual file system (VFS) folder for the user's AppData folder.
 
 ### AppData operations on Windows 10, version 1809 and earlier
 
@@ -96,7 +96,3 @@ Writes outside the package | Ignored by the OS. Allowed if the user has permissi
 ## Uninstallation
 
 When a package is uninstalled by the user, all files and folders located under *C:\Program Files\WindowsApps\package_name* are removed, as well as any redirected writes to AppData or the registry that were captured during the packaging process.
-
-## Next steps
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).

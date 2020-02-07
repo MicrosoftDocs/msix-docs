@@ -10,7 +10,7 @@ ms.custom: RS5
 
 # Package Support Framework
 
-The Package Support Framework is an open source kit that helps you apply fixes to your existing win32 application when you don't have access to the source code, so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
+The Package Support Framework is an open source kit that helps you apply fixes to your existing desktop application when you don't have access to the source code, so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
 Here are some common examples where you can find the Package Support Framework useful:
 

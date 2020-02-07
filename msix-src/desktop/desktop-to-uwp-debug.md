@@ -1,14 +1,14 @@
 ---
 description: This article provides guidance on how to run, debug, and test your packaged desktop application to get it ready for deployment.
 title: Run, debug, and test a packaged desktop app (Desktop Bridge)
-ms.date: 07/29/2019
+ms.date: 02/03/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ---
 
-# Run, debug, and test a packaged desktop application
+# Run, debug, and test an MSIX package
 
 Run your packaged application and see how it looks without having to sign it. Then, set breakpoints and step through code. When you're ready to test your application in a production environment, sign your application and then install it. This topic shows you how to do each of these things.
 
@@ -20,7 +20,7 @@ You can run your application to test it out locally without having to obtain a c
 
 ### You created the package by using Visual Studio
 
-Set the packaging project as the startup project, and then press CTRL+F5 to start your app.
+Set the packaging project as the startup project, and then press F5 to start your app.
 
 ### You created the package using a different tool
 
@@ -74,7 +74,7 @@ To deploy your packaged application for end-to-end production testing as you pre
 
 ### Test an application that you packaged by using Visual Studio
 
-Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted People** certificate store on the PC that you want to test your application on. See [Sideload your package](../package/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted People** certificate store on the PC that you want to test your application on. See [Package a desktop or UWP app in Visual Studio](../package/packaging-uwp-apps.md#generate-an-app-package).
 
 ### Test an application that you packaged using a different tool
 
