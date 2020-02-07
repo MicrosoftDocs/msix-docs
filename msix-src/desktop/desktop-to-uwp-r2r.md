@@ -1,13 +1,13 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to optimize the application binaries with native images.
-title: Optimize your .NET Desktop apps with native images
+title: Optimize your .NET desktop apps with native images
 ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix, native image Compiler
 ms.localizationpriority: medium
 ---
 
-# Optimize your .NET Desktop apps with native images
+# Optimize your .NET desktop apps with native images
 
 You can improve the startup time of your .NET Framework application by pre-compiling your binaries. You can use this technology on large applications that you package and distribute through the Microsoft Store. In some cases, we've observed a 20% performance improvement. You can learn more about this technology in the [technical overview](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
 

@@ -1,6 +1,6 @@
 ---
-title: Modify a package using Package editor
-description: This article describes how to use Package Editor in the MSIX Package Toolto modify package information such as the properties in the manifest.
+title: Edit a package using Package editor
+description: This article describes how to use Package Editor in the MSIX Package Tool to edit package information such as the properties in the manifest.
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,13 +8,13 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Modify a package using Package editor
+# Edit a package using Package editor
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-To make changes to an existing MSIX package, such as modifying the properties in the manifest or the contents of the package without having to package the installer again, you can use **Package editor** in the MSIX Packaging Tool.
+To make changes to an existing MSIX package, such as editing the properties in the manifest or the contents of the package without having to package the installer again, you can use **Package editor** in the MSIX Packaging Tool.
 
-From the main page of the MSIX Packaging Tool, select the **Package editor** icon, browse for your MSIX package and select **Open package**.
+From the welcome page of the MSIX Packaging Tool, select the **Package editor** icon, browse for your MSIX package and select **Open package**. You can also right-click on an MSIX package, and select **Edit with MSIX Packaging Tool** (Available on versions 1.2019.1018.0 and later).
 
 You can unpack your MSIX package from the package editor through the 'unpack' button on the bottom. You can then select the location where you would like to unpack your MSIX package. 
 
@@ -22,7 +22,7 @@ You can unpack your MSIX package from the package editor through the 'unpack' bu
 
 On the **Package information** page, you can change your package information through the fields in the UI or choose to open the MSIX manifest file manually in the editor of your choice to make changes to the manifest fields. While you are editing the manifest the package editor page is not editable. Once you save the manifest, the UI will get updated.
 
-You can navigate to other sections of the package editor to modify your capabilities, virtual registry, or package files. When you are finished editing your package, be sure to sign your package and update your version before saving your changes.
+You can navigate to other sections of the package editor to edit your capabilities, virtual registry, or package files. When you are finished editing your package, be sure to sign your package and update your version before saving your changes.
 
 ![pic10](images/pic10.png)
 

@@ -12,7 +12,7 @@ ms.custom: "RS5, seodec18"
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-The MSIX Packaging Tool enables you to repackage your existing Win32 applications to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. We want to enable IT Pros to convert their existing assets to MSIX, to give them a better way to do packaging and app management.
+The MSIX Packaging Tool enables you to repackage your existing desktop applications to the MSIX format. It offers both an interactive UI and a command line for conversions, and gives you the ability to convert an application without having the source code. We want to enable IT Pros to convert their existing assets to MSIX, to give them a better way to do packaging and app management.
 
 MSIX Packaging Tool is now available from the Microsoft Store. You can run your desktop installers through this tool and obtain an MSIX package that you can install on your machine.
 
@@ -62,6 +62,5 @@ The following articles are tutorials on how to use MSIX Packaging Tool to conver
 | Article | Description |
 |-------|-------------|
 | [Create MSIX package from a MSI/App-V file](create-app-package-MSI-VM.md) | This tutorial will go through how to use MSIX Packaging Tool's UI to convert your desktop applications(particularly installers like MSI, EXE or App-V) to a MSIX Package. |
-| [Create MSIX package from other installer type](create-other-installer.md) | This tutorial will go through how to use MSIX Packaging Tool's UI to convert your desktop application(installers like bulk conversion scripts, PowerShell etc) to a MSIX Package. |
-| [Create MSIX package using MSIX Packaging Tool's command line interface](package-conversion-cli.md) | This tutorial will go through how to use MSIX Packaging Tool's command line interface to convert your desktop application to a MSIX Package. |
+| [Create MSIX package using the command line](package-conversion-command-line.md) | This tutorial will go through how to use MSIX Packaging Tool and the command line to convert your desktop application to a MSIX Package. |
 | [Create MSIX package on a remote device](remote-conversion-setup.md) | This article will provide the instructions required to perform the conversion of desktop applications to MSIX packages on a remote device. |

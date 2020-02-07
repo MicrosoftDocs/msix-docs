@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Prepare to package a desktop application
 
-This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging. Remember that the Microsoft Store handles licensing and automatic updating for you, so you can remove any features that relate to those tasks from your codebase.
+This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below apply to your application, you need to address it before packaging.
 
 + __Your .NET application requires a version of the .NET Framework earlier than 4.6.2__. If you are packaging a .NET application, we recommend that your application target .NET Framework 4.6.2 or later. The ability to install and run packaged desktop applications was first introduced in Windows 10, version 1607 (also called the Anniversary Update), and this OS version includes the .NET Framework 4.6.2 by default. Later OS versions include later versions of the .NET Framework. For a full list of what versions of .NET are included in later versions of Windows 10, see [this article](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
@@ -20,13 +20,13 @@ This article lists the things you need to know before you package your desktop a
 
   + 2.0 and 3.5: In our testing, packaged desktop applications that target these versions of the .NET Framework generally work but may exhibit performance issues in some scenarios. In order for these packaged applications to install and run, the [.NET Framework 3.5 feature](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10) must be installed on the target machine (this feature also includes .NET Framework 2.0 and 3.0). You should also test these applications thoroughly after you package them.
 
-+ __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application from the Microsoft Store may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. Apps that require elevation for any part of their functionality won't be accepted in the Microsoft Store.
++ __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. If you plan on publishing your app to the Mcirosoft Store, apps that require elevation for any part of their functionality won't be accepted into the Store.
 
-+ __Your application requires a kernel-mode driver or a Windows service__. The Desktop Bridge is suitable for an app, but it does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
++ __Your application requires a kernel-mode driver or a Windows service__. MSIX does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 + __Your app's modules are loaded in-process to processes that are not in your Windows app package__. This isn't permitted, which means that in-process extensions, like [shell extensions](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx), aren't supported. But if you have two apps in the same package, you can do inter-process communication between them.
 
-+ __Ensure that any extensions installed by the application will install where the application is installed__. Windows allows users and IT managers to change the default install location for packages.  See "Settings->System->Storage->More Storage Settings-> Change where new content is saved to -> New Apps will save to".  If you are installing an extension with your application, make sure that the extension does not have additional installation folder restrictions.  For example, some extensions may disable installing their extenion to non-system drives.  This will result in an error 0x80073D01 (ERROR_DEPLOYMENT_BLOCKED_BY_POLICY) if the default location has been changed. 
++ __Ensure that any extensions installed by the application will install where the application is installed__. Windows allows users and IT managers to change the default install location for packages.  See "Settings->System->Storage->More Storage Settings-> Change where new content is saved to -> New Apps will save to".  If you are installing an extension with your application, make sure that the extension does not have additional installation folder restrictions.  For example, some extensions may disable installing their extension to non-system drives.  This will result in an error 0x80073D01 (ERROR_DEPLOYMENT_BLOCKED_BY_POLICY) if the default location has been changed. 
 
 + __Your application uses a custom Application User Model ID (AUMID)__. If your process calls [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx) to set its own AUMID, then it may only use the AUMID generated for it by the application model environment/Windows app package. You can't define custom AUMIDs.
 
@@ -55,7 +55,7 @@ This article lists the things you need to know before you package your desktop a
 
    Packaged COM support works with existing COM APIs, but will not work for application extensions that rely upon directly reading the registry, as the location for Packaged COM is in a private location.
 
-+ __Your application exposes GAC assemblies for use by other processes__. In the current release, your application cannot expose GAC assemblies for use by processes originating from executables external to your Windows app package. Processes from within the package can register and use GAC assemblies as normal, but they will not be visible externally. This means interop scenarios like OLE will not function if invoked by external processes.
++ __Your application exposes GAC assemblies for use by other processes__. Your application cannot expose GAC assemblies for use by processes originating from executables external to your Windows app package. Processes from within the package can register and use GAC assemblies as normal, but they will not be visible externally. This means interop scenarios like OLE will not function if invoked by external processes.
 
 + __Your application is linking C runtime libraries (CRT) in an unsupported manner__. The Microsoft C/C++ runtime library provides routines for programming for the Microsoft Windows operating system. These routines automate many common programming tasks that are not provided by the C and C++ languages. If your application utilizes C/C++ runtime library, you need to ensure it is linked in a supported manner.
 
@@ -115,25 +115,15 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application starts a utility to perform tasks__. Avoid starting command utilities such as PowerShell and Cmd.exe. In fact, if users install your application onto a system that runs the Windows 10 S, then your application won’t be able to start them at all. This could block your application from submission to the Microsoft Store because all apps submitted to the Microsoft Store must be compatible with Windows 10 S.
 
-Starting a utility can often provide a convenient way to obtain information from the operating system, access the registry, or access system capabilities. However, you can use UWP APIs to accomplish these sorts of tasks instead. Those APIs are more performant because they don’t need a separate executable to run, but more importantly, they keep the application from reaching outside of the package. The app’s design stays consistent with the isolation, trust, and security that comes with an application that you've packaged, and your application will behave as expected on systems running Windows 10 S.
+     Starting a utility can often provide a convenient way to obtain information from the operating system, access the registry, or access system capabilities. However, you can use UWP APIs to accomplish these sorts of tasks instead. Those APIs are more performant because they don’t need a separate executable to run, but more importantly, they keep the application from reaching outside of the package. The app’s design stays consistent with the isolation, trust, and security that comes with an application that you've packaged, and your application will behave as expected on systems running Windows 10 S.
 
 + __Your application hosts add-ins, plug-ins, or extensions__.   In many cases, COM-style extensions will likely continue to work as long as the extension has not been packaged, and it installs as full trust. That's because those installers can use their full-trust capabilities to modify the registry and place extension files wherever your host application expects to find them.
 
    However, if those extensions are packaged, and then installed as a Windows app package, they won't work because each package (the host application and the extension) will be isolated from one another. To read more about how applications are isolated from the system, see [Behind the scenes of the Desktop Bridge](desktop-to-uwp-behind-the-scenes.md).
 
- All applications and extensions that users install to a system running Windows 10 S must be installed as Windows App packages. So if you intend to package your extensions, or you plan to encourage your contributors to package them, consider how you might facilitate communication between the host application package and any extension packages. One way that you might be able to do this is by using an [app service](https://docs.microsoft.com/windows/uwp/launch-resume/app-services).
+     All applications and extensions that users install to a system running Windows 10 S must be installed as Windows App packages. So if you intend to package your extensions, or you plan to encourage your contributors to package them, consider how you might facilitate communication between the host application package and any extension packages. One way that you might be able to do this is by using an [app service](https://docs.microsoft.com/windows/uwp/launch-resume/app-services).
 
 + __Your application generates code__. Your application can generate code that it consumes in memory, but avoid writing generated code to disk because the Windows App Certification process can't validate that code prior to app submission. Also, apps that write code to disk won’t run properly on systems running Windows 10 S. This could block your application from submission to the Microsoft Store because all apps submitted to the Microsoft Store must be compatible with Windows 10 S.
 
 >[!IMPORTANT]
 > After you've created your Windows app package, please test your application to ensure that it works correctly on systems that run Windows 10 S. All apps submitted to the Microsoft Store must be compatible with Windows 10 S. Apps that aren't compatible won't be accepted in the store. See [Test your Windows app for Windows 10 S](desktop-to-uwp-test-windows-s.md).
-
-## Next steps
-
-**Find answers to your questions**
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Create a Windows app package for your desktop app**
-
-See [Create a Windows app package](desktop-to-uwp-root.md#convert)

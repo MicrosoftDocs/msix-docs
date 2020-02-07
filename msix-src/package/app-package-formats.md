@@ -53,6 +53,9 @@ Windows app services enable app-to-app communication by allowing your app to pro
 
 App services are analogous to web services on a device. An app service runs as a background task in the host app and can provide its service to other apps. For example, an app service might provide a bar code scanner service that other apps could use. Or perhaps an Enterprise suite of apps has a common spell checking app service that is available to the other apps in the suite.
 
+## Modification packages 
+Modification packages allow IT Pros to customize apps without having to repackage. In Windows 10 version 1809 we introduced a new type of MSIX package called a *modification package*. Modification packages can also be plugins/add-ons that may not have an activation point. IT professionals can use this feature to flexibly change MSIX containers so that applications are overlaid by their enterprise's customizations. 
+
 ## See Also
 
 [Create and consume an app service](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  

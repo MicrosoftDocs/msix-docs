@@ -8,9 +8,7 @@ ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 
-# Related App Installer file documentation
-
-## App Installer file APIs
+# App Installer file APIs
 
 The [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) and [Package](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package) classes in the Windows SDK provide methods you can use to add or modify packages via App Installer files, or to retrieve information about apps with an App Installer association.
 
