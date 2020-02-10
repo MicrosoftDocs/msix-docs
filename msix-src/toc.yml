@@ -92,14 +92,14 @@
           href: packaging-tool/Quick-Create-VM.md
         - name: Set up instructions for remote desktop machine conversions
           href: packaging-tool/remote-conversion-setup.md
-        - name: Using the MSIX Packaging Tool in a disconnected environment
-          href: packaging-tool/disconnected-environment.md
     - name: Set up the MSIX Packaging Tool
       items: 
         - name: MSIX Packaging Tool overview
           href: packaging-tool/tool-overview.md
         - name: Best practices for the MSIX Packaging Tool 
           href: packaging-tool/tool-best-practices.md
+        - name: Using the MSIX Packaging Tool in a disconnected environment
+          href: packaging-tool/disconnected-environment.md
         - name: Known issues and troubleshooting tips for the MSIX Packaging Tool 
           href: packaging-tool/tool-known-issues.md
         - name: Duplicate MSIX Packaging Tool settings across devices

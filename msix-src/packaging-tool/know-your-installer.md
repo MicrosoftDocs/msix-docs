@@ -29,7 +29,7 @@ This article lists the things you need to know before you convert your existing 
 
   All entries that your application writes to the HKEY_LOCAL_MACHINE registry hive are redirected to an isolated binary file and any entries that your application writes to the HKEY_CURRENT_USER registry hive are placed into a private per-user, per-app location. For more details about file and registry redirection, see [Behind the scenes of the Desktop Bridge](../desktop/desktop-to-uwp-behind-the-scenes.md). 
 
- + __Your application writes to the install directory for your app__. For example, your application writes to a log file that you put in the same directory as your exe. This isn't supported because the folder is protected.We recommend writing to another location like the local app data store. We have added a capability that allows this in 1809 and later.
+ + __Your application writes to the install directory for your app__. For example, your application writes to a log file that you put in the same directory as your exe. This isn't supported because the folder is protected. We recommend writing to another location like the local app data store. We have added a capability that allows this in 1809 and later.
 
 + __Your application uses the current working directory__. At runtime, your packaged desktop application won't get the same working directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
 
