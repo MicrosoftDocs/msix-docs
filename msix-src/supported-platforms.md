@@ -20,7 +20,7 @@ MSIX is currently supported on the following versions of Windows:
 This article describes how key features of MSIX are supported in these versions of Windows.
 
 > [!NOTE]
-> Windows Server 2019 LTSC and Windows Enterprise 2019 LTSC requires the **App Installer** app to be installed to support MSIX features such as installing an .msix, .msixbundle, .appx or .appxbundle. For more considerations about Windows Server 2019 LTSC, see [this article](msix-server-2019.md).
+> Windows Server 2019 LTSC and Windows Enterprise 2019 LTSC requires the **App Installer** app is only needed to support double click install or install directly from a website for .msix, .msixbundle, .appx or .appxbundle. Without the app, packages can be installed via PowerShell, API, or use a supported systems management product. For more considerations about Windows Server 2019 LTSC, see [this article](msix-server-2019.md).
 
 > [!NOTE]
 > For versions of Windows earlier than Windows 10 version 1709, use [MSIX Core](msix-core/msixcore.md) to install MSIX packages.
