@@ -41,7 +41,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | Package Support Framework (PSF) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
 | Windows services | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
 | Defer registration flag |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
-| Force provisioning |  :x: | :x: | :x: | :x:| :heavy_check_mark: | :heavy_check_mark:| :x: | :x: |
+| Force provisioning |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
 
 ## Package format support
 
