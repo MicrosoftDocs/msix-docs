@@ -10,7 +10,7 @@ ms.custom: 19H1
 
 # Setup instructions for remote machine conversions
 
-Connecting with a remote machine is one option to ensure that you are following the [best practices](prepare-your-environment.md)recommendation for your conversion environment as it can be a cleaner environment than your local machine. There are a few steps that you will need to take before getting started with remote conversions.  
+Connecting with a remote machine is one option to ensure that you are following the [best practices](prepare-your-environment.md) recommendation for your conversion environment as it can be a cleaner environment than your local machine. There are a few steps that you will need to take before getting started with remote conversions.  
 
 PowerShell remoting must be enabled on the remote machine for secure access. You must also have an administrator account for your remote machine.  If you would like to connect using an IP address, follow the instructions for connecting to a non-domain joined remote machine.
 
