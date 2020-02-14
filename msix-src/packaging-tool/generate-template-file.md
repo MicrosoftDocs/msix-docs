@@ -20,7 +20,7 @@ There are two ways that you can get a template file that works for you:
 
 - Launch the MSIX Packaging Tool
 - Go to the settings in the top right corner of the application
-- Ensure that the 'generate conversion template file for each package'
+- Ensure that the 'generate a command line file with each package'
 - Make any other changes or modifications to your settings that you need (e.g. exclusion items, exit codes)
 - Save the settings
 
