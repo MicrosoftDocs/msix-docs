@@ -24,14 +24,16 @@ The MSIX Packaging Tool Insider Program provides early access to IT pros and dev
 
 After joining the program, you will receive an email confirming your enrollment. 
 
-Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf). Make you are logged in with the Microsoft account that you used to sign up for the MSIX Packaging Tool Insider Program. Next, go to the product description page and click **Install** to begin the installation.
+Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf). Make you are logged in with the Microsoft account that you used to sign up for the MSIX Packaging Tool Insider Program. Next, go to the product description page and click **Install** to begin the installation. Insider builds are not available for offline distribution.
 
 If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build).
 
 ## Current Insider Preview build
 
-## Version 1.2019.1220.0
-- The MSIX Packaging Tool just released the public version of the application. Preview releases will return soon.
+## Version 1.2020.203.0
+
+-Package Integrity setting is on by default
+- Ability to export your registry files(.reg)
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

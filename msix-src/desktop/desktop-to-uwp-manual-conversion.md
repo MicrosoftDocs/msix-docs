@@ -9,22 +9,15 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Package a desktop app manually
+# Generating MSIX package components
 
-This article shows you how to package your application without using tools such as Visual Studio or the MSIX Packaging Tool.
+This article shows you how to generate MSIX package components for packaging your application using command line tools (without using Visual Studio or the MSIX Packaging Tool).
 
-To manually package your app, create a package manifest file, and then run the **MakeAppx.exe** command line tool to generate a Windows app package.
+To manually package your app, you need to create a package manifest file, add your package components and then run the **MakeAppx.exe** command line tool to generate an MSIX package.
 
-Consider manual packaging if you install your application by using the xcopy command, or you're familiar with the changes that your app's installer makes to the system and want more granular control over the process.
+## First, prepare to package
 
-If you're uncertain about what changes your installer makes to the system, or if you'd rather use automated tools to generate your package manifest, consider any of [these](desktop-to-uwp-root.md#convert) options.
-
-> [!IMPORTANT]
-> The ability to create a Windows app package for your desktop application (otherwise known as the Desktop Bridge) was introduced in Windows 10, version 1607, and it can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release in Visual Studio.
-
-## First, prepare your application
-
-Review this guide before you begin creating a package for your application: [Prepare to package a desktop application](desktop-to-uwp-prepare.md).
+If you haven't yet, review this section on [what you need to know before packaging your application](../desktop/before-packaging-overview.md).
 
 ## Create a package manifest
 
@@ -158,59 +151,53 @@ Target-based assets are for icons and tiles that appear on the Windows taskbar, 
 2. For each 44x44 image, create a copy in the same folder and append **.targetsize-44_altform-unplated** to the file name. You should have two copies of each icon, each named in a specific way. For example, after completing the process, your assets folder might contain **MYAPP_44x44.png** and **MYAPP_44x44.targetsize-44_altform-unplated.png**.
 
    > [!NOTE]
-   > In this example, the icon named **MYAPP_44x44.png** is the icon that you'll reference in the ``Square44x44Logo`` logo attribute of your Windows app package.
+   > In this example, the icon named **MYAPP_44x44.png** is the icon that you'll reference in the ``Square44x44Logo`` logo attribute of your MSIX package.
 
-3.	In the Windows app package, set the ``BackgroundColor`` for every icon you are making transparent.
+3. In the manifest file,  set the ``BackgroundColor`` for every icon you are making transparent.
 
 4. Continue to the next subsection to generate a new Package Resource Index file.
 
 <a id="make-pri" />
 
-### Generate a Package Resource Index (PRI) file
+### Generate a Package Resource Index (PRI) file using MakePri
 
 If you create target-based assets as described in the section above, or you modify any of the visual assets of your application after you've created the package, you'll have to generate a new PRI file.
 
-1.	Open a **Developer Command Prompt for VS 2017**.
+Based on your installation path of the SDK, this is where **MakePri.exe** is on your Windows 10 PC:
+- x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x86\makepri.exe
+- x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x64\makepri.exe
 
-    ![developer command prompt](images/developer-command-prompt.png)
+There is no ARM version of this tool.
 
-2.  Change directory to the package's root folder, and then create a priconfig.xml file by running the command ``makepri createconfig /cf priconfig.xml /dq en-US``.
+1.	Open a Command Prompt or PowerShell window.
 
-5.	Create the resources.pri file(s) by using the command ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
+2.  Change directory to the package's root folder, and then create a priconfig.xml file by running the command ``<path>\makepri.exe createconfig /cf priconfig.xml /dq en-US``.
 
-    For example, the command for your application might look like this: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+5.	Create the resources.pri file(s) by using the command ``<path>\makepri.exe new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
 
-6.	Package your Windows app package by using the instructions in the next step.
+    For example, the command for your application might look like this: ``<path>\makepri.exe new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+
+6.	Package your application by using the instructions in the next step.
 
 <a id="make-appx" />
 
-## Generate a Windows app package
+## Test your application before packaging
 
-Use **MakeAppx.exe** to generate a Windows app package for your project. It's included with the Windows 10 SDK, and if you have Visual Studio installed, it can be easily accessed through the Developer Command Prompt for your Visual Studio version.
-
-See [Create an app package with the MakeAppx.exe tool](../package/create-app-package-with-makeappx-tool.md)
-
-## Run the packaged app
-
-You can run your application to test it out locally without having to obtain a certificate and sign it. Just run this PowerShell cmdlet:
+You can deploy your non-packaged application and test it before packaging or signing. To do so, run the cmdlet below from a PowerShell window. Make sure to pass in your application's manifest file located in the root of your package directory with all your other package components:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
-To update your app's .exe or .dll files, replace the existing files in your package with the new ones, increase the version number in AppxManifest.xml, and then run the above command again.
+Once this is done. Your app should be deployed on the system and you can test it to make sure everything works before packaging. To update your app's .exe or .dll files, replace the existing files in your package with the new ones, increase the version number in AppxManifest.xml, and then run the above command again.
+
+## Package your components into an MSIX
+
+The next step is to use **MakeAppx.exe** to generate an MSIX package for your application. Makeappx.exe is included with the Windows 10 SDK, and if you have Visual Studio installed, it can be easily accessed through the Developer Command Prompt for Visual Studio.
+
+See [Create an MSIX package or bundle with the MakeAppx.exe tool](../package/create-app-package-with-makeappx-tool.md)
+
+
 
 > [!NOTE]
 > A packaged application always runs as an interactive user, and any drive that you install your packaged application on to must be formatted to NTFS format.
 
-## Next steps
 
-**Find answers to your questions**
-
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
-
-**Step through code / find and fix issues**
-
-See [Run, debug, and test a packaged desktop application](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-debug)
-
-**Sign your application and then distribute it**
-
-See [Distribute a packaged desktop application](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-distribute)

@@ -1,14 +1,14 @@
 ---
 description: This article provides guidance on how to run, debug, and test your packaged desktop application to get it ready for deployment.
 title: Run, debug, and test a packaged desktop app (Desktop Bridge)
-ms.date: 07/29/2019
+ms.date: 02/03/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ---
 
-# Run, debug, and test a packaged desktop application
+# Run, debug, and test an MSIX package
 
 Run your packaged application and see how it looks without having to sign it. Then, set breakpoints and step through code. When you're ready to test your application in a production environment, sign your application and then install it. This topic shows you how to do each of these things.
 
@@ -20,11 +20,11 @@ You can run your application to test it out locally without having to obtain a c
 
 ### You created the package by using Visual Studio
 
-Set the packaging project as the startup project, and then press CTRL+F5 to start your app.
+Set the packaging project as the startup project, and then press F5 to start your app.
 
-### You created the package manually or by using the Desktop App Converter
+### You created the package using a different tool
 
-Open a Windows PowerShell command prompt, and from the **PackageFiles** subfolder of your output folder, run this cmdlet:
+Open a Windows PowerShell command prompt, and from the root directory of your package files, run this cmdlet:
 
 ```
 Add-AppxPackage –Register AppxManifest.xml
@@ -40,9 +40,9 @@ To start your app, find it in the Windows Start menu.
 
 How you debug the application depends on what tool you used to create the package.
 
-If you created your package by using the [new packaging project](desktop-to-uwp-packaging-dot-net.md#new-packaging-project) available in the 15.4 release of Visual Studio 2017, Just set the packaging project as the startup project, and then press F5 to debug your app.
+If you created your package by using the [new packaging project](desktop-to-uwp-packaging-dot-net.md#new-packaging-project) available in Visual Studio 2017 version 15.4 and later (including Visual Studio 2019), just set the packaging project as the startup project, and then press F5 to debug your app.
 
-If you created your package by using any other tool, follow these steps.
+If you created your package using any other tool, follow these steps:
 
 1. Make sure that you start your packaged application at least one time so that it's installed on your local machine.
 
@@ -70,24 +70,23 @@ You can use [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680
 
 ## Test your app
 
-To test your application in a realistic setting as you prepare for distribution, it's best to sign your application and then install it.
+To deploy your packaged application for end-to-end production testing as you prepare for distribution, you need to sign your package with a certificate that is trusted on the machine you're deploying the app.
 
 ### Test an application that you packaged by using Visual Studio
 
-Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted Root Certification Authorities** store on the PC that you want to test your application on. See [Sideload your package](../package/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio signs your application by using a test certificate. You'll find that certificate in the output folder that the **Create App Packages** wizard generates. The certificate file has the *.cer* extension and you'll have to install that certificate into the **Trusted People** certificate store on the PC that you want to test your application on. See [Package a desktop or UWP app in Visual Studio](../package/packaging-uwp-apps.md#generate-an-app-package).
 
-### Test an application that you packaged by using the Desktop App Converter (DAC)
+### Test an application that you packaged using a different tool
 
-If you package your application by using the Desktop App Converter, you can use the ``sign`` parameter to automatically sign your application by using a generated certificate. You'll have to install that certificate, and then install the app. See [Run the packaged app](desktop-to-uwp-run-desktop-app-converter.md#run-app).
+If you package your application outside of Visual Studio you can sign your application package using the Sign Tool. If the cert you used for signing is not trusted on the machine you're testing on, you'll need to install the cert to Trusted People certificate store before installing the app package. 
 
+#### Sign your application package
 
-### Manually sign apps (Optional)
-
-You can also sign your application manually. Here's how
+To manually sign your application package:
 
 1. Create a certificate. See [Create a certificate](../package/create-certificate-package-signing.md).
 
-2. Install that certificate into the **Trusted Root** or **Trusted People** certificate store on your system.
+2. Install that certificate into the **Trusted People** certificate store on your system.
 
 3. Sign your application by using that certificate, see [Sign an app package using SignTool](../package/sign-app-package-using-signtool.md).
 
@@ -116,4 +115,4 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [
 
 ## Next steps
 
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Have questions? Ask us on the [MSIX Tech Community](https://techcommunity.microsoft.com/t5/msix/ct-p/MSIX).

@@ -37,8 +37,6 @@ For more information about PowerShell execution policies, see [this article](htt
 
 Make sure to also include the StartingScriptWrapper.ps1 file in your package and place it in the same folder as your executable. You can copy this file from the [PSF NuGet package](https://www.nuget.org/packages/Microsoft.PackageSupportFramework/).
 
-Make sure to include the following "StartingScriptWrapper.ps1" in your package, and locate it in the same folder where your executable is. You can copy it from the package support framework NuGet package (https://www.nuget.org/packages/Microsoft.PackageSupportFramework/).
-
 ## Enable scripts
 
 To specify what scripts will run for each packaged application executable, you need to modify the [config.json file](package-support-framework.md#create-a-configuration-file). To tell PSF to run a script before the execution of the packaged application, add a configuration item called `startScript`. To tell PSF to run a script after the packaged application finishes add a configuration item called `endScript`.

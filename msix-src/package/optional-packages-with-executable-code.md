@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Optional packages with executable code
  
-Optional packages with executable code are useful for dividing a large or complex app, or for adding on to an app that's already been published. With Visual Studio 2017, version 15.7 and .NET Native 2.1, you can load executable code from both C++ and C# optional packages.
+[Optional packages](optional-packages.md) with executable code are useful for dividing a large or complex app, or for adding on to an app that's already been published. With Visual Studio 2017, version 15.7 and .NET Native 2.1, you can load executable code from both C++ and C# optional packages.
 
 ## Prerequisites
 

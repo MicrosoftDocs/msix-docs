@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. 
-ms.date: 10/04/2019
+ms.date: 02/03/2020
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ ms.custom: RS5
 
 # Known issues and troubleshooting tips for the MSIX Packaging Tool
 
-This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool.
+This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. Check out our other docs if you need to acquire the MSIX Packaging Tool or driver in a [disconnected environments](disconnected-environment.md).
 
 ## Known issues
 
@@ -18,48 +18,23 @@ This article describes known issues and provides troubleshooting tips to conside
 
 If you have opted in to our [Insider Program](insider-program.md), make sure you have the correct version of the MSIX Packaging Tool:
 - Go to the **About** section in the MSIX Packaging Tool to view which version you are on.
-
 - Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed. Make sure the MSA that's signed up for flighting is the account that is signed into the Microsoft Store. 
 - Manually update the MSIX Packaging tool through the Microsoft Store on your computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
-- To install the MSIX Packaging Tool for offline use, follow [these instructions](#getting-the-msix-packaging-tool-for-offline-use) to ensure you get the latest app through our offline process.
+- To install the MSIX Packaging Tool for offline use, follow [these instructions](disconnected-environment.md#get-the-msix-packaging-tool) to ensure you get the latest app through our offline process.
 
 If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram).
 
-### MSIX Packaging Tool driver considerations
+### Minimum version
 
-The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if the Windows Update service is disabled on the machine or Windows Insider flight ring settings do not match the OS build of the computer.
+If you convert your existing installer using a version of the [MSIX Packaging Tool](tool-overview.md) earlier than **1.2019.701.0**, the tool had Enforce Microsoft Store versioning requirements on, or used another tool to create your package that did not set the minimum version to 10.0.16299.0 (Windows 10, version 1709). This will cause an error message when deploying your app to Windows 10, version 1709 or a later version.
 
-### Installing MSIX Packaging Tool driver FOD on Windows Insider builds
+To fix this issue, open the **MSIX Packaging Tool** and edit your app through **Package Editor**. Open your manifest and set the `MinVersion` attribute of the `TargetDeviceFamily` element to "10.0.16299.0".
 
-If you are having issues installing the driver on a Windows 10 Insider Preview build:
-
-- Navigate to **Settings** > **Updates & Security** > **Windows Insider Program**.
-- If you see a message that Insider Preview build settings need attention, click on the **Fix me** button to log in again. You might have to go to Windows Update page and check for update before settings change takes effect.
-- Try to run the tool again to download the MSIX Packaging Tool driver. If you are still encountering issues, try changing your flight ring to Insider Fast, install the latest Windows updates and try again.
-
-### Installing MSIX Packaging Tool driver FOD in WSUS
-
-Organizations that use Windows Server Update Services (WSUS) must take action to manually install the driver:
-
-- [Check your version of Windows](https://support.microsoft.com/help/13443/windows-which-operating-system). You must be on at least Windows 10, version 1809 (build 17763).
-- Download the FOD .cab file for [Windows 10, version 1809](https://download.microsoft.com/download/8/4/3/8436215A-42DB-4FD2-966D-60D436D6EEFC/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab).
-- Individually-obtained Feature on Demand (FOD) packages can be installed using [DISM command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options). In an elevated PowerShell window type: ```Dism /Online /add-package /packagepath:(path)```
-
-IT admins can also create [Side by side feature store (shared folder)](https://docs.microsoft.com/windows-server/administration/server-manager/configure-features-on-demand-in-windows-server) to allow access to the MSIX Packaging tool driver FOD. You can find additional details at the bottom of this [blog post](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Language-pack-acquisition-and-retention-for-enterprise-devices/ba-p/275404).
-
-Otherwise, if you have access to enterprise or OEM channels you can obtain the driver from Windows 10 Features on Demand media from one of the following sources:
-
-- [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/servicecenter/default.aspx): Volume License access is required.
-- [OEM Portal](https://www.microsoftoem.com): OEM access is required.
-- [MSDN Download](https://my.visualstudio.com/Downloads/Featured): MSDN subscription is required.
-
-Individually-obtained Feature on Demand packages can be installed using DISM command-line options.
-
-### Getting the MSIX Packaging Tool for offline use
-
-The MSIX Packaging Tool can be downloaded for offline use in the enterprise from the Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](https://docs.microsoft.com/microsoft-store/distribute-offline-apps). If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) for the tool. 
-
-After you have the offline version of the application, you can use [PowerShell](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine.
+```xml
+<Dependencies>
+    <TargetDeviceFamily> Name="Windows.Desktop" MinVersion="10.0.16299.0" MaxVersionTested = "10.0.17763.0" />
+</Dependencies>
+```
 
 ### Frameworks and drivers
 
@@ -69,7 +44,6 @@ If the app requires a framework, make sure the framework is installed during the
 If you are running into issues with using a remote VM for your conversions, see [Setup instructions for remote machine conversions](remote-conversion-setup.md).
 
 ### Issues during conversion
-- During conversion, installers may run services. Services are not captured during conversion. As a result, your app may install but it may run with issues.
 - Some installers might fail to convert with exit code 259. This indicates that the installer spawned a thread and did not wait for it to complete. In other words, the main thread finished installing but it exited with error 259 because it spawned a thread that is still running. We recommend that you use the appropriate install option for setup.exe.
 
 ### Issues during signing
@@ -80,7 +54,7 @@ This problem occurs when the package contains a binary file that has a corrupt c
 
 #### Device Guard signing
 
-Make sure to follow [these steps](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing) and that you are assigning the appropriate roles in the Microsoft Store for Business.
+Make sure to follow [these steps](../package/signing-package-device-guard-signing.md) and that you are assigning the appropriate roles in the Microsoft Store for Business.
 
 #### Expired certificate
 
@@ -106,7 +80,7 @@ If the conversion is performed on a remote device or a VM, we recommend that you
 You will find the logs from the remote conversions here:
 `%localappdata%\packages\Microsoft.MsixPackagingTool_8wekyb3d8bbwe\LocalState\DiagOutputDir\<Logs_#>\RemoteServer\Log.txt`
 
-It would even more beneficial if you can share the whole Logs folder that will include the operations occuring on the local client as well the remote server.
+It would even more beneficial if you can share the whole Logs folder that will include the operations occurring on the local client as well the remote server.
 
 ### Common problems
 
@@ -128,7 +102,9 @@ Shortcuts with arguments are not currently supported with MSIX. If we detect tha
 
 #### Install directory
 
-This is more common for those who use a secondary drive to perform app conversions. If you choose to change the installation location , it changes the root of where all of the files go. This means that the MSIX Packaging tool will need to know where all these files go and will be captured during conversion. 
+This is more common for those who use a secondary drive to perform app conversions. If you choose to change the installation location, it changes the root of where all of the files go. This means that the MSIX Packaging tool will need to know where all these files go and will be captured during conversion. 
+
+You can fix this by using the Package Support Framework write to install directory fix. We have added this as a capability by default in the MSIX Tool, which allows this down to 1809. If your application isn't working in 1709 and is in 1809, this is likely the issue.
 
 ## Sending feedback
 
