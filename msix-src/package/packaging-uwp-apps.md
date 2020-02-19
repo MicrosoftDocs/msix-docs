@@ -135,6 +135,8 @@ To distribute your app to the Microsoft Store, it is recommended that you genera
 
 Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles.
 
+Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles, see [create your app package upload file manually](#create-your-app-package-upload-file-manually).
+
 ### Create your app package upload file using Visual Studio
 
 > [!NOTE]
