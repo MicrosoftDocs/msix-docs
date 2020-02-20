@@ -39,9 +39,9 @@ You can find the full history of MSIX Packaging Tool release notes [here](releas
 
 ## Share your feedback
 
-If you run into an issue while using the app, press **Windows key + F** to launch **Feedback Hub**. Provide as many details as possible regarding the issue to help us diagnose and resolve the problem.
+If you run into an issue while using the app, press **Windows key + F** to launch **Feedback Hub**. Provide as many details as possible regarding the issue to help us diagnose and resolve the problem. Use the category **Applications** > **MSIX Packaging Tool** to get the feedback to us directly.
 
-You can also share feedback directly from within the app. Click on Settings(gear icon) on the home screen and choose **Feedback** tab and select the button that best represents your issue. This will directly launch **Feedback Hub** and fill the necessary category information on your behalf. 
+You can also share feedback from within the app. Click on Settings(gear icon) on the home screen and choose **Feedback** tab and select the button that best represents your issue. This will directly launch **Feedback Hub** and fill the necessary category information on your behalf. 
 
 **Feedback Hub** is also a great way to share ideas and suggestions for new features that you would like to see in the app.  
 
