@@ -18,16 +18,16 @@ There are two ways that you can get a template file that works for you:
 
 ## Generate a conversion template file from the MSIX Packaging Tool
 
-- Launch the MSIX Packaging Tool
-- Go to the settings in the top right corner of the application
-- Ensure that the 'generate conversion template file for each package'
-- Make any other changes or modifications to your settings that you need (e.g. exclusion items, exit codes)
-- Save the settings
+1. Launch the MSIX Packaging Tool.
+2. Go to the settings in the top right corner of the application.
+3. Make sure that the 'Generate a command line file with each package' option is selected.
+4. Make any other changes or modifications to your settings that you need (e.g. exclusion items, exit codes).
+5. Save the settings
 
-- Go through the Application Package workflow using an installer
+6. Go through the Application Package workflow using an installer.
     - If you don't select an installer, you will not be able to generate a conversion template file
     - If you are using an exe, you will need to pass a silent flag to your installer to generate the conversion template file
-- At the end of the conversion, you will have a template file configured based on the installer you chose, and your current settings which you can now re-use for future conversions
+7. At the end of the conversion, you will have a template file configured based on the installer you chose, and your current settings which you can now re-use for future conversions.
     - By default, the conversion template file will be saved in the same location as your MSIX package, but you can specify a separate save location for your template file on the Create package page
     - You will still need to make some modifications based on what MSIX you want output at the end of each conversion
 
