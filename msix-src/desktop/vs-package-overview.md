@@ -9,7 +9,7 @@ ms.custom: RS5
 ---
 
 # Package your app as an MSIX in Visual Studio
-Visual studio makes it easy to generate MSIX packages and is the recommended tool for packaging applications in development. Desktop apps (Windows Forms, WPF, Win32 etc.) can use the Windows Application Packaging Project to generate an MSIX package. Also, Universal Windows Platform (UWP) apps have the ability to generate MSIX packages built into their default project type. To generate an MSIX package for a desktop application you first need to add the Windows Application Packaging Project to your solution, this step is not required for UWP apps.
+Visual studio makes it easy to generate MSIX packages and is the recommended tool for packaging applications in development. Desktop apps (Windows Forms, WPF, Win32 etc.) can use the Windows Application Packaging Project to generate an MSIX package. Universal Windows Platform (UWP) apps have the ability to generate MSIX packages built into their default project type. To generate an MSIX package for a desktop application, you first need to add the Windows Application Packaging Project to your solution. This step is not required for UWP apps.
 
 |Topic| Description |
 |:---|:---|
