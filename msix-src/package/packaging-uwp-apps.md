@@ -96,8 +96,7 @@ Apps can be installed without being published in the Store by publishing them on
 
 3. Select **Sideloading** in the first page of the wizard and then click **Next**.
 
-    ![Create Your Packages dialog window shown](images/packaging-screen10.png
-)
+    ![Create Your Packages dialog window shown](images/packaging-screen10.png)
 
 4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. 
 
@@ -126,16 +125,14 @@ App packages can be installed simply by double clicking the app package file. To
 
 See [Run, debug, and test an app package](../desktop/desktop-to-uwp-debug.md) for how you can debug your application in Visual Studio or using Windows debugging tools.
 
-## Generate an app package upload file for Store Submission
+## Generate an app package upload file for Store submission
 
-To distribute your app to the Microsoft Store, it is recommended that you generate an app package upload file (.msixupload or .appxupload).
+To distribute your app to the Microsoft Store, we recommend that you generate an **app package upload file** (.msixupload or .appxupload) and submit this file to Partner Center. Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an app package upload file instead.
+
+You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles.
 
 > [!NOTE]
 > If you want to create an app package (.msix or.appx) or app bundle (.msixbundle or .appxbundle) manually, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
-
-Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles.
-
-Although it is possible to submit an app package or app bundle to Partner Center alone, we recommend that you submit an **app package upload file**. You can create an app package upload file by using the **Create App Packages** wizard in Visual Studio, or you can create one manually from existing app packages or app bundles, see [create your app package upload file manually](#create-your-app-package-upload-file-manually).
 
 ### Create your app package upload file using Visual Studio
 
@@ -263,4 +260,3 @@ After you complete the previous steps, you can configure automatic Store submiss
 The submission will start after the WACK test have finished. You can track the submission progress in the **Verify and Publish** window.
 
 ![Verify and Publish progress](images/packaging-screen9.jpg)
-
