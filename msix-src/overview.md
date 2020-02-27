@@ -16,7 +16,7 @@ MSIX enables enterprises to stay current and ensure their applications are alway
 
 ## Key features
 
-* **Reliability.** MSIX provides a reliable install boasting a 99.96% success rate over millions of installs with a guaranteed uninstalled.
+* **Reliability.** MSIX provides a reliable install boasting a 99.96% success rate over millions of installs with a guaranteed uninstall.
 * **Network bandwidth optimization.** MSIX decreases the impact to network bandwidth through downloading only the 64k block. This is done by leveraging the AppxBlockMap.xml file contained in the MSIX app package (see below for more details). MSIX is designed for modern systems and the cloud.
 * **Disk space optimizations.** With MSIX there is no duplication of files across apps and Windows manages the shared files across apps. The apps are still independent of each other so updates will not impact other apps that share the file. A clean uninstall is guaranteed even if the platform manages shared files across apps.
 
