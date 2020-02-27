@@ -94,7 +94,11 @@
       "source_path": "msix-src/app-installer/install-related-set.md",
       "redirect_url": "/windows/msix/package/optional-packages",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/desktop/desktop-to-uwp-root.md",
+      "redirect_url": "/windows/msix/desktop/source-code-overview",
+      "redirect_document_id": true
     }
-
   ]
 }
