@@ -11,7 +11,7 @@ ms.custom: Vibranium
 # Release notes for the MSIX Packaging Tool
 ## Version 1.2020.225.0
 - Ability to import registry files (.reg) in Package Editor
-- Ability to automatically add [MSIX Core support](../msix-core/msixcore.md) to an MSIX
+- Ability to automatically add [MSIX Core support](../../msix-core/msixcore.md) to an MSIX
 - Add InstalledLocationVirtualization extension
 Fixed bugs:
 - Validate manifest format after editing 
