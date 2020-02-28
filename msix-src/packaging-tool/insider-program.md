@@ -33,7 +33,7 @@ If the tool is already installed on your computer, check the installed version. 
 ## Version 1.2020.225.0
 
 - MSIX Core support can be automatically added to generated packages
-- Ability to import your registry files(.reg) in Package Editor
+- Ability to import your registry files (.reg) in Package Editor
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
