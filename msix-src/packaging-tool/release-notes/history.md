@@ -9,6 +9,16 @@ ms.custom: Vibranium
 ---
 
 # Release notes for the MSIX Packaging Tool
+## Version 1.2020.225.0
+- Ability to import registry files (.reg) in Package Editor
+- Ability to automatically add [MSIX Core support](../../msix-core/msixcore.md) to an MSIX
+- Add InstalledLocationVirtualization extension
+Fixed bugs:
+- Validate manifest format after editing 
+- Make message when First Launch Task fails clearer 
+- Forbid relative paths for Unpack 
+- Updated file filters so they show what formats are valid (e.g., for installers it used to say *.* and now `*.msi, *.exe, ...`) 
+- Fixed when Unpack would convert spaces in paths into "%20"
 
 ## Version 1.2020.203.0
 - Package Integrity setting is on by default
