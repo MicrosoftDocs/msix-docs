@@ -39,8 +39,8 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Modification packages](modification-packages.md) | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | [Force update from any version downgrade] (desktop/managing-your-msix-deployment-targetdevices.md) |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 | [Package Support Framework (PSF)](psf/package-support-framework-overview.md) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
-| Windows services | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
-| Defer registration flag |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
+| [Windows services](packaging-tool/convert-an-installer-with-services.md) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
+| [Defer registration flag](desktop/managing-your-msix-deployment-update.md) |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
 | Force provisioning |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
 
 ## Package format support
