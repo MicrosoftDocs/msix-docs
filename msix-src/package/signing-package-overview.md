@@ -17,10 +17,11 @@ To successfully install a Windows 10 application, the package doesn't just have 
 |:---|:---|
 |[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prerequisites required to sign the Windows 10 app package. | 
 |[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
+|[Sign an MSIX package with Device Guard signing](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how to sign your app with Device Guard signing.|
 
 ## Timestamping
 
-Besides signing the app package with a certificate, another important characteristic that dictates the validity of the code signing certificate is **Timestamping**. Timestamping preserves the signature allowing the app package to accepted by app deployment platform even after the certificate has expired. At the package inspection time, the timestamp allows for the package signature to be validated with respect to the time it was signed. This allows for packages to be accepted even after the certificate is no longer valid. Packages that are not timestamped will be evaluated against the current time and if the certificate is no longer valid, Windows will not accept the package. 
+It is highly recommended that **Timestamping** is used when signing your app with a certificate. Timestamping preserves the signature allowing the app package to accepted by app deployment platform even after the certificate has expired. At the package inspection time, the timestamp allows for the package signature to be validated with respect to the time it was signed. This allows for packages to be accepted even after the certificate is no longer valid. Packages that are not timestamped will be evaluated against the current time and if the certificate is no longer valid, Windows will not accept the package. 
 
 The following are the different scenarios around app signing with/out timestamping:
 

@@ -14,7 +14,9 @@ ms.localizationpriority: medium
 
 Optional packages contain content that can be integrated with a main package. These are useful for downloadable content (DLC), dividing a large app for size restraints, or for shipping any additional content separate from your original app.
 
-Related sets are an extension of optional packages -- they allow you to enforce a strict set of versions across main and optional packages. They also let you load native code (C++) from optional packages. 
+Related sets are an extension of optional packages -- they allow you to enforce a strict set of versions across main and optional packages. They also let you load native code (C++) from optional packages. Related sets can be have different publishers from the main app if it is deployed outside of the store.
+
+Optional packages and related sets all run inside the main app's MSIX container.
 
 ## Prerequisites
 
@@ -76,6 +78,28 @@ If you want to load code from an optional package into the main package, you wil
 When your solution is configured this way, Visual Studio will create a bundle manifest for the main package with all of the required metadata for related sets. 
 
 Note that like optional packages, a `Bundle.Mapping.txt` file for related sets will only work on Windows 10, version 1703 or higher. Additionally, your app's Target Platform Min Version should be set to 10.0.15063.0 or higher.
+
+## Removing Optional Packages 
+Users can go into their **Settings** app and remove the optional packages. Similarly, developers can use the [RemoveOptionalPackageAsync](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.PackageCatalog) to remove a list of optional packages. 
+
+```
+ 
+    PackageCatalog catalog = PackageCatalog.OpenForCurrentPackage();
+    List<string> optionalList = new List<string>();
+    optionalList.Add("FabrikamAgeAnalysis_kwpnjs8c36mz0");
+    
+     //Warn user that application will be restarted. 
+    var result = await catalog.RemoveOptionalPackagesAsync(optionalList);
+    if(result.ExtendedError != null)
+    {
+        throw removalResult.ExtendedError;
+    }
+    
+```
+> [!NOTE]
+> In the case of a related set the platform will need to restart the main application to finalize the removal to avoid situations where the app has content that is loaded from the package that is being removed. The apps must notify the users that the application will need to be restarted before the app calls the API.
+
+If the optional package is content only then, the developer should explicitly tell the platform that the package that is about to remove is 'not in use' by the application before the developer removes the optional package. This also allows the developer to remove the package without a restart.
 
 ## Known issues<a name="known_issues"></a>
 
