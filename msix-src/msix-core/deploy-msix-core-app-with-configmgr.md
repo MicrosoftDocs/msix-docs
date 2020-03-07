@@ -14,8 +14,8 @@ The delivery of MSIX applications using the Microsoft Endpoint Configuration Man
 ## Get started
 The following steps will guide you through setting up an MSIX Core deployment strategy by using Microsoft Endpoint Configuration Manager:
 
-1. [Deploy MSIX Core with Microsoft Endpoint Configuration Manager](deploy-msix-core-with-configmgr)
-1. [Update your existing MSIX package to support MSIX Core](support-msix-core)
+1. [Deploy MSIX Core with Microsoft Endpoint Configuration Manager](deploy-msix-core-with-configmgr.md)
+1. [Update your existing MSIX package to support MSIX Core](support-msix-core.md)
 1. Deploy MSIX Core Apps with Microsoft Endpoint Configuration Manager
 
 ## Creating the MSIX Core Microsoft Endpoint Configuration Manager application
