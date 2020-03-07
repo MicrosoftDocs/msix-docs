@@ -274,8 +274,12 @@
       items: 
         - name: Overview
           href: msix-core/msixcore.md
+        - name: Deploy MSIX Core with Microsoft Endpoint Configuration Manager
+          href: msix-core/deploy-msix-core-with-configmgr.md
         - name: Update your MSIX package to support MSIX Core
           href: msix-core/support-msix-core.md
+        - name: Deploy MSIX Core app with Microsoft Endpoint Configuration Manager
+          href: msix-core/deploy-msix-core-app-with-configmgr.md
         - name: Deploy an MSIX package with MSIX Core
           href: msix-core/deploy-with-msix-core.md
         - name: Create an MSIX package with MSIX Core from source code

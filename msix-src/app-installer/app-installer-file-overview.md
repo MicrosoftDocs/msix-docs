@@ -31,6 +31,11 @@ Here's an example showing how this works:
 
 Starting in the Windows 10 Fall Creators Update (version 1709, build 16299) and later releases, the Windows SDK also provides several APIs that you can use to programmatically modify packages via App Installer files or to retrieve information about apps with an App Installer association. For more information, see [Related documentation](app-installer-documentation.md).
 
+## Hosting the App Installer file for downloads and updates
+
+You can use the App Installer file to download or update your app from the web, a network share or local file share. App Installer file downloads and updates support https, http and smb protocols.
+
+
 ## Contents of the App Installer file
 
 The following image shows an example App Installer file. For full details about the XML elements in the App Installer file, see the [App Installer file schema reference](https://docs.microsoft.com/uwp/schemas/appinstallerschema/schema-root). For more information about how to configure update settings in the App Installer file, see [Configure update settings in the App Installer file](update-settings.md).
