@@ -73,6 +73,7 @@ function GetToken()
     $Body = @{
       'grant_type' = 'password'
       'client_id'= '<application-id>'
+      'client_secret' = '<client_secret>'
       'resource' = 'https://onestore.microsoft.com'
       'username' = $user
       'password' = $password
