@@ -25,7 +25,10 @@ The following sections describes these steps in more detail.
 
 ## Configure permissions for Device Guard signing
 
-To use Device Guard signing in the Microsoft Store for Business or Microsoft Store for Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign.
+To use Device Guard signing in the Microsoft Store for Business or Microsoft Store for Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign. 
+
+ > [!NOTE]
+ > Device Guard Signer role is used when you are signing as an app. Global Administrator and Billing Account Owner is used when you sign as a logged in person.
 
 To confirm or reassign roles:
 
@@ -73,6 +76,7 @@ function GetToken()
     $Body = @{
       'grant_type' = 'password'
       'client_id'= '<application-id>'
+      'client_secret' = '<client_secret>'
       'resource' = 'https://onestore.microsoft.com'
       'username' = $user
       'password' = $password
