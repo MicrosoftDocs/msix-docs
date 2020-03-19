@@ -45,9 +45,9 @@ Assuming you followed the previous guides (See the list of guides in the Get Sta
 ```
 1. Set the Uninstall program field to be: 
 ```batch
-"C:\Program Files\msixmgr\msixmgr.exe" -RemovePackage [Application Family Name] -quietUX
+"C:\Program Files\msixmgr\msixmgr.exe" -RemovePackage [Package Family Name] -quietUX
 ```
-1. Replace [Application Family Name] with the application family name of the MSIX application.
+1. Replace [Package Family Name] with the package family name of the MSIX application.
 1. Select the **Next** button.
 1. Select the **Use a custom script to detect the presence of this deployment type** radio button.
 1. Select the **Edit** button.
@@ -58,7 +58,7 @@ Set-Location "C:\Program Files\msixmgr"
 
 IF([Boolean]$(get-item "msixmgr.exe"))
 {
-    $Result = $(.\msixmgr.exe -FindPackage [Application Family Name]*)
+    $Result = $(.\msixmgr.exe -FindPackage [Package Family Name]*)
 
     IF($($Result.GetType().Name) -eq "Object[]")
     {
@@ -66,7 +66,7 @@ IF([Boolean]$(get-item "msixmgr.exe"))
     }
 }
 ```
-1. Update [Application Family Name] with the MSIX package family name of the application.
+1. Update [Package Family Name] with the MSIX package family name of the application.
 1. Select the **Ok** button.
 1. Select the **Next** button.
 1. Set the Installation behavior to **Install for User**.
