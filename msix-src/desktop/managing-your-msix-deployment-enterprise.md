@@ -17,7 +17,6 @@ As MSIX is a standardized installation packaging format, the details regarding t
 
 When creating an application in Microsoft Endpoint Configuration Manager, select application type: **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**. For guidance about how to create and deploy an application through Microsoft Endpoint Configuration Manager, see [create and deploy an application](https://docs.microsoft.com/configmgr/apps/get-started/create-and-deploy-an-application).
 
-
 ## Microsoft Intune
 
 Microsoft Intune supports the deployment of MSIX applications to client devices through the client app model. As MSIX is a standardized installation packaging format, the details regarding the application (Application Name, Description, and Publisher) are automatically populated within the App information.
