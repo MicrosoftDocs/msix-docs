@@ -30,10 +30,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.225.0
+## Version 1.2020.319.0
 
-- MSIX Core support can be automatically added to generated packages
-- Ability to import your registry files (.reg) in Package Editor
+- Improved quality of icons extracted
+- Improved icon extraction from shortcuts
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
