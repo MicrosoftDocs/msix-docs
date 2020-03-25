@@ -1,7 +1,7 @@
 ---
 title: MSIX packaging tool insider program
 description: This article introduces the MSIX Packaging Tool Insider Program, which provides early access releases of the MSIX Packaging Tool.
-ms.date: 06/25/2019
+ms.date: 02/27/2020
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
 ms.localizationpriority: medium
