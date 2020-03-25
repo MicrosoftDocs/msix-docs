@@ -30,6 +30,11 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
+## Version 1.2020.225.0
+
+- MSIX Core support can be automatically added to generated packages
+- Ability to import your registry files (.reg) in Package Editor
+
 ## Version 1.2020.203.0
 
 -Package Integrity setting is on by default

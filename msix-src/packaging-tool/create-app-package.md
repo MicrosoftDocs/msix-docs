@@ -111,6 +111,9 @@ Under **Signing preference**, select a signing option. You can also set this as 
 - **Do not sign package** Select this option if you will be signing your package at a later time. NOTE: You cannot install an MSIX package if it is not signed
 - When signing, we highly recommend adding a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/windows/win32/seccrypto/signtool).
 
+> [!NOTE]
+> Signing an MSIX package format application with a SHA1 certificate is not supported.
+
 Click **Next** to proceed.
 
 ## Package information

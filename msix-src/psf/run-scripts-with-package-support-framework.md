@@ -47,7 +47,7 @@ The following are the configuration items available for the scripts. The ending 
 
 | Key name                | Value type | Required? | Default  | Description
 |-------------------------|------------|-----------|----------|---------|
-| `scriptPath`              | string     | Yes       | N/A      | The path to the script including the name and extension. The path starts from the root directory of the application.
+| `scriptPath`              | string     | Yes       | N/A      | The path to the script including the name and extension. The path is relative to the application's working directory if specified, otherwise, it starts at the root directory of the package.
 | `scriptArguments`         | string     | No        | empty    | Space delimited argument list. The format is the same for a PowerShell script call. This string gets appended to `scriptPath` to make a valid PowerShell.exe call.
 | `runInVirtualEnvironment` | boolean    | No        | true     | Specifies whether the script should run in the same virtual environment that the packaged application runs in.
 | `runOnce`                 | boolean    | No        | true     | Specifies whether the script should run once per user, per version.

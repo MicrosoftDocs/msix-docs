@@ -26,7 +26,7 @@ The [Modify package publisher script](https://github.com/microsoft/MSIX-Toolkit/
 PS C:\> .\modify-package-publisher.ps1 -directory "C:\MSIX" -redist "C:\MSIX-Toolkit\Redist" -certPath "C:\cert\mycert.cer"
 ```
 
-This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer.
+This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Signing an MSIX package format application with a SHA1 certificate is unsupported.
 
 ### Update the publisher and sign the MSIX app
 
@@ -34,7 +34,7 @@ This command recursively searches the contents of C:\MSIX for all MSIX packages 
 PS C:\> .\modify-package-publisher.ps1 -directory "C:\MSIX" -redist "C:\MSIX-Toolkit\Redist" -certPath "C:\cert\mycert.cer" -pfxPath "C:\cert\CertKey.pfx"
 ```
 
-This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Then, the command re-signs the identified MSIX packages using the certificate located at C:\cert\CertKey.pfx.
+This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Then, the command re-signs the identified MSIX packages using the certificate located at C:\cert\CertKey.pfx. Signing the MSIX package format application with a SHA1 certificate is unsupported.
 
 ### Update the publisher and sign the MSIX app with a password-protected PFX certificate
 
@@ -42,7 +42,7 @@ This command recursively searches the contents of C:\MSIX for all MSIX packages 
 PS C:\> .\modify-package-publisher.ps1 -directory "C:\MSIX" -redist "C:\MSIX-Toolkit\Redist" -certPath "C:\cert\mycert.cer" -pfxPath "C:\cert\CertKey.pfx" -password "aaabbbccc"
 ```
 
-This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Then, the command re-signs the identified MSIX packages using the certificate located at C:\cert\CertKey.pfx using the password *aaabbbccc* to unlock the password protected certificate.
+This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Then, the command re-signs the identified MSIX packages using the certificate located at C:\cert\CertKey.pfx using the password *aaabbbccc* to unlock the password protected certificate. Signing the MSIX package format application with a SHA1 certificate is unsupported.
 
 ### Update the publisher, sign the MSIX app, and force continue to next MSIX app
 
@@ -50,7 +50,7 @@ This command recursively searches the contents of C:\MSIX for all MSIX packages 
 PS C:\> .\modify-package-publisher.ps1 -directory "C:\MSIX" -redist "C:\MSIX-Toolkit\Redist" -certPath "C:\cert\mycert.cer" -pfxPath "C:\cert\CertKey.pfx" -forceContinue -pfxPath "C:\cert\CertKey.pfx"
 ```
 
-This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Then, the command re-signs the identified MSIX packages using the certificate located at C:\cert\CertKey.pfx. If any errors occur while processing an MSIX package, the script will continue to update the publisher and re-sign the identified MSIX packages.
+This command recursively searches the contents of C:\MSIX for all MSIX packages and updates the MSIX app publisher to match the publisher of the certificate located at C:\cert\mycert.cer. Then, the command re-signs the identified MSIX packages using the certificate located at C:\cert\CertKey.pfx. If any errors occur while processing an MSIX package, the script will continue to update the publisher and re-sign the identified MSIX packages. Signing the MSIX package format application with a SHA1 certificate is unsupported.
 
 ## Parameters
 
