@@ -89,7 +89,7 @@ Include the following HTML code in your web page. The key to successfully invoki
     <title> Install Page </title>
 </head>
 <body>
-    <a href="ms-appinstaller:?source=http://localhost/SampleWebApp/packages/MySampleApp.appxbundle"> Install My Sample App</a>
+    <a href="ms-appinstaller:?source=http://localhost/SampleWebApp/packages/MySampleApp.msixbundle"> Install My Sample App</a>
 </body>
 </html>
 ```

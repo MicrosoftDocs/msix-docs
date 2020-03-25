@@ -65,9 +65,7 @@ If you would like to test uploading a web page, but don't have one, you can use 
 
 To get the app package reference, upload the app package first and copy the app package URL. Edit the html web page to reflect the correct app package path. See the code example for more details. 
 
-Select the uploaded app package file to get the reference link to the app package, it should be similar to this example.
-
-![Screenshot of uploaded package path](images/aws-package-path.png)
+Select the uploaded app package file to get the reference link to the app package. 
 
 **Copy** the link to the app package and add the reference in your web page. 
 
@@ -78,7 +76,7 @@ Select the uploaded app package file to get the reference link to the app packag
         <title> Install My Sample App</title>
     </head>
     <body>
-        <a href="ms-appinstaller:?source=https://s3-us-west-2.amazonaws.com/appinstaller-aws-demo/MySampleApp.appxbundle"> Install My Sample App</a>
+        <a href="ms-appinstaller:?source=https://s3-us-west-2.amazonaws.com/appinstaller-aws-demo/MySampleApp.msixbundle"> Install My Sample App</a>
     </body>
 </html>
 ```

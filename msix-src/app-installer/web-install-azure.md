@@ -60,7 +60,7 @@ If you're using the app package provided in the [Starter Project](https://github
     <title> Install My Sample App</title>
 </head>
 <body>
-    <a href="ms-appinstaller:?source=https://appinstaller-azure-demo.azurewebsites.net/MySampleApp.appxbundle"> Install My Sample App</a>
+    <a href="ms-appinstaller:?source=https://appinstaller-azure-demo.azurewebsites.net/MySampleApp.msixbundle"> Install My Sample App</a>
 </body>
 </html>
 ```

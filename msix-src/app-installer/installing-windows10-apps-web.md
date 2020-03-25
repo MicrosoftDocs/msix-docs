@@ -37,8 +37,8 @@ Prefix your app package URIs with the activation scheme `'ms-appinstaller:?sourc
 <html>
     <body>
         <h1> MyApp Web Page </h1>
-        <a href="ms-appinstaller:?source=http://mywebservice.azureedge.net/HubApp.appx"> Install app package </a>
-        <a href="ms-appinstaller:?source=http://mywebservice.azureedge.net/HubAppBundle.appxbundle"> Install app bundle  </a>
+        <a href="ms-appinstaller:?source=http://mywebservice.azureedge.net/HubApp.msix"> Install app package </a>
+        <a href="ms-appinstaller:?source=http://mywebservice.azureedge.net/HubAppBundle.msixbundle"> Install app bundle  </a>
         <a href="ms-appinstaller:?source=http://mywebservice.azureedge.net/HubAppSet.appinstaller"> Install related set </a>
     </body>
 </html>
