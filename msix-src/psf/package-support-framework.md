@@ -107,6 +107,7 @@ Install the Nuget command line tool from this location: https://www.nuget.org/do
 ```powershell
 nuget install Microsoft.PackageSupportFramework
 ```
+Alternativly, you can rename it to .zip and unzip it, all the files you need will be under the /bin folder.
 
 Alternatively, you can rename the package extension to .zip and unzip it. All the files you need will be under the /bin folder.
 

@@ -12,15 +12,16 @@ ms.localizationpriority: medium
 The MSIX packaging format can be delivered to client devices through the use of device and application management tools such as Microsoft Intune, and Microsoft Endpoint Configuration Manager. 
 
 ##	Microsoft Endpoint Configuration Manager 
-For details on the Microsoft Store for Business, see Microsoft Endpoint Configuration Manager (current branch) supports the deployment of MSIX applications to client devices through the Application model. As MSIX is a standardized installation packaging format, the details regarding the application (Publisher, Application Name, and Version) will be automatically retrieved and presented for review through the create application wizard within Microsoft Endpoint Configuration Manager. Similarly, the install string and detection methods used with MSIX applications is consistent and automatically configured by the Microsoft Endpoint Configuration Manager create application wizard.
 
-When creating an application in Microsoft Endpoint Configuration Manager, select application type: <b>Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)</b>. For guidance on creating and deploying an application through [Microsoft Endpoint Configuration Manager.](https://docs.microsoft.com/configmgr/apps/get-started/create-and-deploy-an-application)
+As MSIX is a standardized installation packaging format, the details regarding the application (Publisher, Application Name, and Version) will be automatically retrieved and presented for review through the create application wizard within Microsoft Endpoint Configuration Manager. Similarly, the install string and detection methods used with MSIX applications is consistent and automatically configured by the Microsoft Endpoint Configuration Manager create application wizard.
+
+When creating an application in Microsoft Endpoint Configuration Manager, select application type: **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**. For guidance about how to create and deploy an application through Microsoft Endpoint Configuration Manager, see [create and deploy an application](https://docs.microsoft.com/configmgr/apps/get-started/create-and-deploy-an-application).
 
 ## Microsoft Intune
 
 Microsoft Intune supports the deployment of MSIX application to client devices through the client app model. As MSIX is a standardized installation packaging format, the details regarding the application (Application Name, Description, and Publisher) are automatically populated within the App information.
 
-Installation of an MSIX application is standardized, as such, when adding a new <b>Line-of-business app</b> to Microsoft Intune, there is no requirement to configure the silent installation parameters required for install. For guidance on creating and deploying an application through Microsoft Intune: 
+Installation of an MSIX application is standardized. As such, when adding a new line-of-business app to Microsoft Intune, there is no requirement to configure the silent installation parameters required for install. For guidance about how to create and deploy an application through Microsoft Intune, see [Creating line of business apps in Intune](https://docs.microsoft.com/en-us/mem/intune/apps/lob-apps-windows).
 
 ## Web (App Installer)
 

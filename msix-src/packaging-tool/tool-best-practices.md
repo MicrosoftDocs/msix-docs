@@ -31,7 +31,7 @@ If you haven't already configured your environment for conversion, you can follo
     - Do not sign package. - If you wish to sign your package using another method or at a later time after the package has been generated you can choose this option.
     We also recommend that you add a timestamp server url to your signing preference (when applicable), so that your application can be installed, even if your certificate expires.   
 
-> [!Note]
+> [!NOTE]
 > Signing an MSIX package format application with a SHA1 certificate is unsupported.
 
 ### Other Settings
