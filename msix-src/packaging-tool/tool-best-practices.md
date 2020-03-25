@@ -14,7 +14,7 @@ ms.custom: RS5
 
 If you haven't already configured your environment for conversion, you can follow our [environment best practices](prepare-your-environment.md) recommendations and then come back here to set up the MSIX Packaging Tool. Before you start any conversions we recommend configuring your settings in the MSIX Packaging Tool to simplify your workflow each time.
 
-### Tool Defaults
+### Tool defaults
 
 - **Generate a command line with each package** This setting will make it so you automatically generate a command line template file so that if you are repackaging the same application (such as a new version) through the command line later, you can have a pre-configured command line template file for that application. You will need to provide an installer in order to generate a template file during the workflow.
 - **Select all fixes by default for prepare computer** This setting allows you to have all of the recommended fixes pre-selected so that during the prepare computer stage, you can simply choose to disable all without having to select them individually.
@@ -31,8 +31,8 @@ If you haven't already configured your environment for conversion, you can follo
     - Do not sign package. - If you wish to sign your package using another method or at a later time after the package has been generated you can choose this option.
     We also recommend that you add a timestamp server url to your signing preference (when applicable), so that your application can be installed, even if your certificate expires.   
 
-> [!Note]
-> Signing an MSIX package format application with a SHA1 certificate is unsupported.
+> [!NOTE]
+> Signing an MSIX package format application with a SHA1 certificate is not supported.
 
 ### Other Settings
 

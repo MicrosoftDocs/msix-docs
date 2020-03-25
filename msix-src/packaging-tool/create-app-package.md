@@ -1,7 +1,7 @@
 ---
 title: Create an MSIX package from any desktop installer
 description: Create an MSIX package from any desktop installer(MSI, EXE, ClickOnce, or App-V)
-ms.date: 02/11/2019
+ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -111,8 +111,8 @@ Under **Signing preference**, select a signing option. You can also set this as 
 - **Do not sign package** Select this option if you will be signing your package at a later time. NOTE: You cannot install an MSIX package if it is not signed
 - When signing, we highly recommend adding a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/windows/win32/seccrypto/signtool).
 
-> [Note]
-> Signing an MSIX package format application with a SHA1 certificate is unsupported.
+> [!NOTE]
+> Signing an MSIX package format application with a SHA1 certificate is not supported.
 
 Click **Next** to proceed.
 
