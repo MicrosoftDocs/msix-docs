@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool release notes
 description: This article provides the full history of release notes for different versions of the MSIX Packaging Tool.
-ms.date: 02/27/2020
+ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix, msix packaging tool, insider program
 ms.localizationpriority: medium
@@ -9,6 +9,11 @@ ms.custom: Vibranium
 ---
 
 # Release notes for the MSIX Packaging Tool
+
+## Version 1.2020.319.0
+- Improved quality of icons extracted
+- Improved icon extraction from shortcuts
+- general bug fixes
 
 ## Version 1.2020.225.0
 - Ability to import registry files (.reg) in Package Editor
