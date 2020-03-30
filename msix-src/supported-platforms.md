@@ -2,7 +2,7 @@
 title: Supported platforms 
 description: This article describes supported platform for MSIX. 
 author: dianmsft
-ms.date: 12/02/2019
+ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -42,7 +42,6 @@ The following table shows which MSIX features and scenarios are supported in dif
 | Native MSIX install and uninstall | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark: |
 | [Package Support Framework (PSF)](psf/package-support-framework-overview.md) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
 | [Windows services](packaging-tool/convert-an-installer-with-services.md) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
-
 
 ## Package format support
 
