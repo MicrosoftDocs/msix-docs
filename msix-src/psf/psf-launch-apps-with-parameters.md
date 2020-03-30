@@ -56,17 +56,15 @@ The applications, processes, and fixups keys are arrays. That means that you can
 An entry in processes has a value named executable, the value for which should be formed as a RegEx string to match the name of an executable process without path or file extension. The launcher will expect Windows SDK std:: library RegEx ECMAList syntax for the RegEx string.
 
 ``` json
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-    <applications>
-        <application>
-            <id>PSFLAUNCHERSixFour</id>
-            <executable>[PrimaryApp.exe]</executable>
-            <arguments>[AddedArg]</arguments>
-            <workingDirectory></workingDirectory>
-        </application>
-    </applications>
-</configuration>
+{
+    "applications": [
+      {
+        "id": "PSFExampleID",
+        "executable": "VFS\\ThisPCDesktopFolder\\IG-Bentley.exe",
+        "workingDirectory": "",
+      }
+    ],
+}
 ```
 
 ## Inject the Package Support Framework files to the Application package
