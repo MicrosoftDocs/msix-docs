@@ -12,12 +12,12 @@ ms.custom: RS5
 The Package Support Framework uses a config.json file to configure the behavior of an application.
 
 ## Proceedure
-To configure the application execution to receive paramter values passed into it during application launch, the following steps must be completed. 
+To configure the application execution to receive parameter values passed into it during application launch, the following steps must be completed. 
 
 1. Download the Package Support Framework
 1. Configure the Package Support Framework (config.json)
-1. Inject the Package Support Framework files to the Application package
-1. Update the application's manifest
+1. Inject the Package Support Framework files into the Application package
+1. Update the application's manifest file
 1. Re-package the application
 
 ## Download the Package Support Framework
@@ -36,7 +36,7 @@ In Visual Studio, right-click on your solution/project node and pick one of the 
 
 ## Create the config.json file
 
-To specify the arguements required to launch the applicaiton, you must modify the config.json file specifying the application executable, and parameters. Prior to configuring the config.json file, review the following table to understand the JSON strucuture.
+To specify the arguements required to launch the application, you must modify the config.json file specifying the application executable, and parameters. Prior to configuring the config.json file, review the following table to understand the JSON strucuture.
 
 ### Json Schema
 
@@ -49,7 +49,7 @@ To specify the arguements required to launch the applicaiton, you must modify th
 | applications	| monitor	        | (Optional) If present, the monitor identifies a secondary program that is to be launched prior to starting the primary application. |
 | processes 	| executable        | In most cases, this will be the name of the executable configured above with the path and file extension removed. |
 | fixups	    | dll   	        | Package-relative path to the fixup, .msix/.appx to load. |
-| fixups	    | config	        | (Optional) Controls how the fixup dl behaves. The exact format of this value varies on a fixup-by-fixup basis as each fixup can interpret this "blob" as it wants.|
+| fixups	    | config	        | (Optional) Controls how the fixup dll will behave. The exact format of this value varies on a fixup-by-fixup basis as each fixup can interpret this "blob" as it wants.|
 
 The applications, processes, and fixups keys are arrays. That means that you can use the config.json file to specify more than one application, process, and fixup DLL.
 
@@ -76,8 +76,8 @@ MakeAppx tool can be found in its default location:
 
 | OS Architecture | Directory                                                   |
 |-----------------|-------------------------------------------------------------|
-| Windows 10 x86  | C:\Program Files\Windows Kits\10\bin\x86\makeappx.exe       |
-| Windows 10 x64  | C:\Program Files (x86)\Windows Kits\10\bin\x64\makeappx.exe |
+| Windows 10 x86  | C:\Program Files\Windows Kits\10\bin\[**Version**]\x86\makeappx.exe       |
+| Windows 10 x64  | C:\Program Files (x86)\Windows Kits\10\bin\[**Version**]\x64\makeappx.exe |
 
 ```powershell
 makeappx unpack /p PrimaryApp.msix /d PackageContents
@@ -86,7 +86,7 @@ makeappx unpack /p PrimaryApp.msix /d PackageContents
 The above PowerShell command will export the contents of the application into a local directory.
 
 ### Inject required files
-Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide, you'll also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](https://docs.microsoft.com/en-us/windows/msix/psf/package-support-framework) Docs article for guidance on using the Package Support Framework for runtime fixes.
+Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide. You will also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](https://docs.microsoft.com/en-us/windows/msix/psf/package-support-framework) Docs article for guidance on using the Package Support Framework for runtime fixes.
 
 | Application executable is x64 | Application executable is x86     |
 |-------------------------------|-----------------------------------|
