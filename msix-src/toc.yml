@@ -132,6 +132,8 @@
               href: psf/package-support-framework.md
             - name: Run scripts with the Package Support Framework
               href: psf/run-scripts-with-package-support-framework.md
+            - name: Current working directory
+              href: psf\psf-current-working-directory.md
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
     - name: MSIX Toolkit
