@@ -73,6 +73,7 @@ An entry in processes has a value named executable, the value for which should b
 If you have a .msix (or .appx) file already, you can unpack its contents into a layout folder that will serve as the staging area for your package. You can do this from a command prompt using the MakeAppx tool.
 
 MakeAppx tool can be found in its default location:
+
 | OS Architecture | Directory                                                   |
 |-----------------|-------------------------------------------------------------|
 | Windows 10 x86  | C:\Program Files\Windows Kits\10\bin\x86\makeappx.exe       |
