@@ -86,7 +86,7 @@ makeappx unpack /p PrimaryApp.msix /d PackageContents
 The above PowerShell command will export the contents of the application into a local directory.
 
 ### Inject required files
-Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide. You will also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](https://docs.microsoft.com/en-us/windows/msix/psf/package-support-framework) Docs article for guidance on using the Package Support Framework for runtime fixes.
+Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide. You will also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](https://docs.microsoft.com/windows/msix/psf/package-support-framework) Docs article for guidance on using the Package Support Framework for runtime fixes.
 
 | Application executable is x64 | Application executable is x86     |
 |-------------------------------|-----------------------------------|
