@@ -70,19 +70,7 @@ An entry in processes has a value named executable, the value for which should b
             "executable": "PSFSample",
             "fixups": [
                 {
-                    "dll": "FileRedirectionFixup.dll",
-                    "config": {
-                        "redirectedPaths": {
-                            "packageRelative": [
-                                {
-                                    "base": "PSFSampleApp/",
-                                    "patterns": [
-                                        ".*\\/log"
-                                    ]
-                                }
-                            ]
-                        }
-                    }
+                    "dll": "FileRedirectionFixup.dll"
                 }
             ]
         }
@@ -99,6 +87,7 @@ In the above example config.json file, the PrimaryApp.exe will have the working 
 If you have a .msix (or .appx) file already, you can unpack its contents into a layout folder that will serve as the staging area for your package. You can do this from a command prompt using the MakeAppx tool.
 
 MakeAppx tool can be found in its default location:
+
 | OS Architecture | Directory                                                   |
 |-----------------|-------------------------------------------------------------|
 | Windows 10 x86  | C:\Program Files\Windows Kits\10\bin\x86\makeappx.exe       |
