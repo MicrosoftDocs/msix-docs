@@ -49,7 +49,7 @@ To specify the arguements required to launch the applicaiton, you must modify th
 | applications	| workingDirectory	| (Optional) A package-relative path to use as the working directory of the application that starts. If you don't set this value, the operating system uses the System32 directory as the application's working directory. If you supply a value in the form of an empty string, it will use the directory of the referenced executable. |
 | applications	| monitor	        | (Optional) If present, the monitor identifies a secondary program that is to be launched prior to starting the primary application. |
 | processes 	| executable        | In most cases, this will be the name of the executable configured above with the path and file extension removed. |
-| fixups	    | dll   	        | Package-relative path to the fixup, .msix/.appx to load. |
+| fixups	    | dll   	        | (Optional) Package-relative path to the fixup, .msix/.appx to load. |
 | fixups	    | config	        | (Optional) Controls how the fixup dl behaves. The exact format of this value varies on a fixup-by-fixup basis as each fixup can interpret this "blob" as it wants.|
 
 The applications, processes, and fixups keys are arrays. That means that you can use the config.json file to specify more than one application, process, and fixup DLL.
@@ -68,11 +68,6 @@ An entry in processes has a value named executable, the value for which should b
     "processes": [
         {
             "executable": "PSFSample",
-            "fixups": [
-                {
-                    "dll": "FileRedirectionFixup.dll"
-                }
-            ]
         }
     ]
 }
@@ -90,8 +85,8 @@ MakeAppx tool can be found in its default location:
 
 | OS Architecture | Directory                                                   |
 |-----------------|-------------------------------------------------------------|
-| Windows 10 x86  | C:\Program Files\Windows Kits\10\bin\x86\makeappx.exe       |
-| Windows 10 x64  | C:\Program Files (x86)\Windows Kits\10\bin\x64\makeappx.exe |
+| Windows 10 x86  | C:\Program Files\Windows Kits\10\bin\[**version**]\x86\makeappx.exe       |
+| Windows 10 x64  | C:\Program Files (x86)\Windows Kits\10\bin\[**version**]\x64\makeappx.exe |
 
 ```powershell
 makeappx unpack /p PrimaryApp.msix /d PackageContents
@@ -107,7 +102,6 @@ Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executab
 | PSFLauncher64.exe             | PSFLauncher32.exe                 |
 | PSFRuntime64.dll              | PSFLauncher32.dll                 |
 | PSFRunDll64.exe               | PSFRunDll32.exe                   |
-| FileRedirectionFixup64.dll    | FileRedirectionFixup32.dll        |
 
 These above identified files, as well as the **config.json** file must be placed within the root of your application package directory. These files can be found within the installed Package Support Framework directory inside of the **bin** directory.
 
