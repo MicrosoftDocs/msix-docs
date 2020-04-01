@@ -108,7 +108,7 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 
 ## Test
 
-To test the Device Guard signing, download your organziation's root certificate from the Microsoft Store for Business Portal.
+To test the Device Guard signing, download your organization's root certificate from the Microsoft Store for Business Portal.
 
 1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** and then select **Settings**.
@@ -123,4 +123,4 @@ Deploy this certificate to your device. Install your newly signed app to verify 
 Here are common errors you might encounter.
 
 * 0x800700d: This common error means that the format of the Azure AD JSON file is invalid.
-* You may need to accept the terms and condition of Microsoft Store for Business before downloadidng the root certificate of Device Guard Signing. This can be done by aquiring a free app in the portal.
+* You may need to accept the terms and conditions of Microsoft Store for Business before downloading the root certificate of Device Guard Signing. This can be done by acquiring a free app in the portal.
