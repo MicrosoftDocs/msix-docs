@@ -42,7 +42,7 @@ Here is an overview of the steps to prepare and create an app package:
 
 2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your packaged application. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
 
-3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the .NET native toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected.
+3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the [].NET native](https://docs.microsoft.com/en-us/dotnet/framework/net-native/) toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected.
 
 
 ## Configure your project
@@ -62,7 +62,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
     ![Manifest designer in Visual Studio](images/packaging-screen1.jpg)
 
-    Check that you have all the images that are required for an app on the **Visual Assets** tab.
+    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](https://docs.microsoft.com/en-us/windows/uwp/design/style/app-icons-and-logos).
 
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
