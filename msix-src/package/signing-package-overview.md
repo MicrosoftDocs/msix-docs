@@ -32,6 +32,24 @@ The following are the different scenarios around app signing with/out timestampi
 
  > [!NOTE]
  > If the app is successfully installed on a device, it will continue to run even after the certificate expiry regardless of it being timestamped or not. 
+ 
+ ## Package Integrity Enforcement
+ 
+In addition to ensuring only trusted applications are installed on a device, an additional benefit of signing an MSIX package is that it enables Windows to enforce the integrity of your package and its contents after it is deployed on a device. By chaining to the [AppxBlockMap.xml](https://docs.microsoft.com/en-us/windows/msix/overview#appxblockmapxml) and [AppxSignature.p7x](https://docs.microsoft.com/en-us/windows/msix/overview#appxsignaturep7x) in a signed package, Windows is able to perform validation checks on the integrity of a package and its contents at runtime, and during Windows Defender scans. If a package is deemed to be tampered Windows will block application launch and kick-off a remediation workflow to get the package repaired or reinstalled. For packages not distributed through the Microsoft Store, package integrity is enforced if the package declares the [<uap10:PackageIntegrity>](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-packageintegrity) element and is deployed on Windows 2004 and later builds. Below is an example declaration of package integrity enforcement in the AppxManifest.xml:
+
+```xml
+<Package ...
+xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"  
+IgnorableNamespaces="uap10">
+...
+  <Properties>
+    <uap10:PackageIntegrity>
+      <uap10:Content Enforcement="on" />
+    </uap10:PackageIntegrity>
+  </Properties>
+...
+</Package>
+```
 
 ## Device mode
 
