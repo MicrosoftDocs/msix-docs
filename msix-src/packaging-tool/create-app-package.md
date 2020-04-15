@@ -107,7 +107,7 @@ Under **Signing preference**, select a signing option. You can also set this as 
 
 - **Sign with Device Guard signing** This option allows you to sign in to your Microsoft Active Directory account that you have configured to use with Device Guard signing, which is a signing service that Microsoft provides where you don't need to provide your own certificate. Learn more about how to set up your account and about Device Guard signing [here](../package/signing-package-device-guard-signing.md). 
 - **Sign with a certificate(.pfx)** Browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
-- **Specify a .cer file (does note sign)** This option allows you to specify a .cer file. This is useful when you don't want to sign the package, but you want to ensure that the publisher information matches the subject of the certificate that will be used for signing. 
+- **Specify a .cer file (does not sign)** This option allows you to specify a .cer file. This is useful when you don't want to sign the package, but you want to ensure that the publisher information matches the subject of the certificate that will be used for signing. 
 - **Do not sign package** Select this option if you will be signing your package at a later time. NOTE: You cannot install an MSIX package if it is not signed
 - When signing, we highly recommend adding a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/windows/win32/seccrypto/signtool).
 
@@ -122,7 +122,6 @@ After you choose to package your application on an existing virtual machine, you
 
 - Package name:
     - Required and corresponds to package identity Name in the manifest to describe the contents of the package.
-    - Must match the Name subject information of the certificate used to sign a package.
     - Is not shown to the end user.
     - Is case-sensitive and cannot have a space.
     - Can accept string between 3 and 50 characters in length that consists of alpha-numeric, period, and dash characters.
@@ -140,13 +139,13 @@ After you choose to package your application on an existing virtual machine, you
 - Version:
     - Required and corresponds to the package in the manifest to describe the version number of the package.
     - This field accepts a version string in quad notation: "Major.Minor.Build.Revision".
+- Description:
+    - This field is optional.
 - Install location:
     - This is the location that the installer is going to copy the application payload to (usually Programs Files folder).
     - This field is optional but recommended when the app payload is being installed outside of the Program Files folders.
     - Browse to and select a folder path.
-    - Make sure this file matches the installer's install location while you go through the application install operation.
-- Description:
-    - This field is optional. 
+    - Make sure this file matches the installer's install location while you go through the application install operation. 
 
 ## Installation
 
