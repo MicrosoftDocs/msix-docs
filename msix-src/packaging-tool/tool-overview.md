@@ -37,6 +37,8 @@ After you have the offline version of the application, you can use [PowerShell](
 ```
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
+> [!NOTE]
+> The latest version of the MSIX Packaging Tool is not available through the store. Read our [blog post](https://techcommunity.microsoft.com/t5/msix-blog/msix-packaging-tool-april-2020-release-is-now-available/ba-p/1307502) to learn more.
  
 ## Latest public version - 1.2020.402.0
 - Package Integrity setting is on by default
