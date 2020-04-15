@@ -42,7 +42,7 @@ PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPacka
  
 ## Latest public version - 1.2020.402.0
 - Package Integrity setting is on by default
-- Ability to automatically add [MSIX Core support](msix-src/msix-core/msixcore.md) to an MSIX
+- Ability to automatically add [MSIX Core support](.../.../msix-core/msixcore.md) to an MSIX
 - Ability to import or export registry files (.reg) in Package Editor
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
