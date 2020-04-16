@@ -134,6 +134,8 @@
               href: psf/run-scripts-with-package-support-framework.md
             - name: Current working directory
               href: psf\psf-current-working-directory.md
+            - name: Launch apps with parameters
+              href: psf\psf-launch-apps-with-parameters.md
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
     - name: MSIX Toolkit
@@ -222,10 +224,8 @@
           href: desktop/powershell-msix-cmdlets.md
         - name: Using Group Policy
           href: group-policy-msix.md
-        - name: Deploying preinstalled apps
+        - name: Preinstalling packaged apps
           href: desktop/deploy-preinstalled-apps.md
-        - name: Install your app for all users
-          href: desktop/managing-your-msix-deployment-dism-provisioning.md
         - name: Install earlier versions of an MSIX app package
           href: desktop/managing-your-msix-deployment-downgrading.md
     - name: Deploy MSIX with App Installer file

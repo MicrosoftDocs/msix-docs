@@ -42,7 +42,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | Native MSIX install and uninstall | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark: |
 | [Package Support Framework (PSF)](psf/package-support-framework-overview.md) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
 | [Windows services](packaging-tool/convert-an-installer-with-services.md) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
-
+| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
 ## Package format support
 
 The following table shows which package formats are supported in different versions of Windows 10.
