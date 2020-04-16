@@ -296,6 +296,8 @@
       href: manage/troubleshoot-msix-container.md
     - name: Debug and test a packaged app
       items:
+        - name: Troubleshooting packaging, deployment, and query of Windows apps
+          href: https://docs.microsoft.com/en-us/windows/win32/appxpkg/troubleshooting/?context=/windows/msix/render
         - name: Run, debug, and test a packaged desktop application
           href: desktop/desktop-to-uwp-debug.md
         - name: Detect package identity and runtime context
