@@ -26,6 +26,9 @@ If you are interested in joining our Insider Program, click [here](https://aka.m
 
 ### Minimum version
 
+There are a few features to be aware of that automatically change the minimun version support in your MSIX Package. 
+
+#### Enforce Microsoft store versioning requirements
 If you convert your existing installer using a version of the [MSIX Packaging Tool](tool-overview.md) earlier than **1.2019.701.0**, the tool had Enforce Microsoft Store versioning requirements on, or used another tool to create your package that did not set the minimum version to 10.0.16299.0 (Windows 10, version 1709). This will cause an error message when deploying your app to Windows 10, version 1709 or a later version.
 
 To fix this issue, open the **MSIX Packaging Tool** and edit your app through **Package Editor**. Open your manifest and set the `MinVersion` attribute of the `TargetDeviceFamily` element to "10.0.16299.0".
@@ -35,6 +38,9 @@ To fix this issue, open the **MSIX Packaging Tool** and edit your app through **
     <TargetDeviceFamily> Name="Windows.Desktop" MinVersion="10.0.16299.0" MaxVersionTested = "10.0.17763.0" />
 </Dependencies>
 ```
+
+#### MSIX with services
+In version 1.2019.1220.0 of the MSIX Packaging Tool, we added support for creating an [MSIX package with Services](convert-an-installer-with-services.md). Due to the OS restrictions with services support, we automatically change the min version supported in an MSIX package with services to 10.0.19025.0. This means that you cannot install an MSIX with services on an OS lower than the Windows 10 2004, but you can create that MSIX using the MSIX Packaging Tool down to Windows 10 1809. 
 
 ### Frameworks and drivers
 
