@@ -36,16 +36,15 @@ For IIS distribution of a MSIX file, and how to configure your IIS server to sup
 
 [App Center](https://appcenter.ms/) enables you to automatically build your app, test it on real devices, and distribute it to beta testers.  App Center lets you ship apps more frequently, at higher-quality, and with greater confidence.  With App Center you can connect your repo and within minutes automate your builds, test on real devices in the cloud, distribute apps to beta testers, and monitor real-world usage with crash and analytics data. All in one place.
 
-
 ## Deployment Image Servicing and Management (DISM.exe) and Provisioning
 
 ### DISM
 IT Pros can use the Deployment Image Servicing and Management (DISM) cmdlets to install, uninstall, and configure MSIX packages on a Windows image before deployment.  
-To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](managing-your-msix-deployment-dism-provisioning.md)
+To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](deploy-preinstalled-apps.md)
 
 ### Provisioning
 IT Pros use provisioning to configure end-user devices without re-imaging.  IT Pros can pre-install MSIX packages on their end-users systems.
-To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](managing-your-msix-deployment-dism-provisioning.md)
+To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](deploy-preinstalled-apps.md)
 
 ## Managing your MSIX app
 
