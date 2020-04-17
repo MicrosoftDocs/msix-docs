@@ -17,6 +17,8 @@ MSIX is currently supported on the following versions of Windows:
 * Windows Server 2019 LTSC and later.
 * Windows Enterprise 2019 LTSC and later.
 
+For more details on Windows lifecycle support such as end of service dates, please visit [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+
 This article describes how key features of MSIX are supported in these versions of Windows.
 
 > [!NOTE]
