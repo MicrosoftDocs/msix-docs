@@ -1,6 +1,6 @@
 ---
-title: MSIX batch conversion scripts
-description: This article provides details about the batch conversion scripts in the MSIX Toolkit.
+title: MSIX Bulk conversion scripts
+description: This article provides details about the bulk conversion scripts in the MSIX Toolkit.
 ms.date: 1/23/2020
 ms.topic: article
 keywords: windows 10, msix
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 
-# MSIX batch conversion scripts
+# MSIX Bulk conversion scripts
 
-The [batch conversion scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts/BatchConversion) in the MSIX Toolkit can be used to automate the conversion of Windows apps to the MSIX package format. The list of apps and their details are provided in the **entry.ps1** script.
+The [Bulk conversion scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts/BatchConversion) in the MSIX Toolkit can be used to automate the conversion of Windows apps to the MSIX package format. The list of apps and their details are provided in the **entry.ps1** script.
 
 ## Syntax
 
