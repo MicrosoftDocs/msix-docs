@@ -31,8 +31,10 @@ The Host Machine must meet the following requirements:
         * WinRM must be enabled - `winrm quickconfig`.
     * Device exists in a Workgroup or to another Domain:
         * Enable PowerShell remoting - `Enable-PSRemoting -force`
-        * WinRM must be enabled - `winrm quickconfig`.
-        * WinRM Trusted Host must contain the device name or IP address of the Remote Machine - `winrm set winrm/config/client '@{TrustedHosts="<RemoteMachineName(s)>"}'`.
+        * WinRM must be enabled - 
+        `winrm quickconfig`.
+        * WinRM Trusted Host must contain the device name or IP address of the Remote Machine - 
+        `winrm set winrm/config/client '@{TrustedHosts="<RemoteMachineName(s)>"}'`.
 
 ### Remote Machine
 The Remote Machine must meet the following requirements:
