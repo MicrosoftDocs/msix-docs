@@ -3,7 +3,7 @@ title: MSIX Bulk conversion scripts
 description: This article provides details about the bulk conversion scripts in the MSIX Toolkit.
 ms.date: 1/23/2020
 ms.topic: article
-keywords: windows 10, msix
+keywords: windows 10, msix, msixtoolkit, msix toolkit, toolkit, batch, conversion, bulk, bulk conversion
 ms.localizationpriority: medium
 ms.custom: 19H1
 ---
@@ -11,6 +11,44 @@ ms.custom: 19H1
 # MSIX Bulk conversion scripts
 
 The [Bulk conversion scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts/BatchConversion) in the MSIX Toolkit can be used to automate the conversion of Windows apps to the MSIX package format. The list of apps and their details are provided in the **entry.ps1** script.
+
+## Prepare machines for conversion
+Prior to running the MSIX Toolkit's Bulk Conversion script, to automate the conversion of your application to the MSIX packaging format the devices that you will be using (virtual, or remote) must be configured to allow remote communication, and have the MSIX Packaging Tool installed.
+
+| Term            | Description                                                        |
+|-----------------|--------------------------------------------------------------------|
+| Host Machine    | This is the device executing the Bulk Conversion scripts.          |
+| Virtual Machine | This is a device existing in Hyper-V, hosted on the Host Machine.  |
+| Remote Machine  | This is a physical or virtual machine accessible over the network. |
+
+### Host Machine
+The Host Machine must meet the following requirements:
+* [MSIX Packaging Tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
+* If Virtual Machines are being used, Hyper-V must be installed.
+* If Remote Machines are being used:
+    * Device exists in the same Domain:
+        * Enable PowerShell Remoting - `Enable-PSRemoting -force`
+        * WinRM must be enabled - `winrm quickconfig`.
+    * Device exists in a Workgroup or to another Domain:
+        * Enable PowerShell remoting - `Enable-PSRemoting -force`
+        * WinRM must be enabled - `winrm quickconfig`.
+        * WinRM Trusted Host must contain the device name or IP address of the Remote Machine - `winrm set winrm/config/client '@{TrustedHosts="<RemoteMachineName(s)>"}'`.
+
+### Remote Machine
+The Remote Machine must meet the following requirements:
+* [MSIX Packaging Tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
+* If the device exists within the same domain as the Host Machine:
+    * WinRM must be enabled - `winrm quickconfig`.
+* If the device exists within a workgroup or an alternate domain as the Host Machine:
+    * WinRM must be enabled - `winrm quickconfig`.
+    * WinRM Trusted Host must contain the device name or the IP address of the Host Machine -
+     `winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'`.
+
+### Virtual Machine
+It is recommended that the Hyper-V Quick Create "MSIX Packaging Tools Environment" image be used, as it is pre-configured to meet all requirements. The virtual machine must be hosted on the Host Machine and running within Microsoft Hyper-V.
+
+The Virtual Machine must meet the following requirements:
+* [MSIX Packaging Tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
 
 ## Syntax
 
