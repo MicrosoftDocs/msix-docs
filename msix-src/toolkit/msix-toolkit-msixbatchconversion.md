@@ -28,16 +28,18 @@ The Host Machine must meet the following requirements:
 * If Remote Machines are being used:
     * Device exists in the same Domain:
         * Enable PowerShell Remoting 
-             `Enable-PSRemoting -force`
-        * WinRM must be enabled 
-            * `winrm quickconfig`
+            ```PowerShell
+            # Enables PowerShell Remoting
+            Enable-PSRemoting -force
+            ```
     * Device exists in a Workgroup or to another Domain:
         * Enable PowerShell remoting 
-            * `Enable-PSRemoting -force`
-        * WinRM must be enabled 
-            * `winrm quickconfig`.
         * WinRM Trusted Host must contain the device name or IP address of the Remote Machine 
-            * `winrm set winrm/config/client '@{TrustedHosts="<RemoteMachineName(s)>"}'`.
+            ```PowerShell
+            # Enables PowerShell Remoting
+            Enable-PSRemoting -force
+            Set-Item WSMan:\localhost\Client\TrustedHosts -Value <RemoteMachineName>,[<RemoteMachineName>,...]
+            ```
 
 ### Remote Machine
 The Remote Machine must meet the following requirements:
@@ -46,34 +48,18 @@ The Remote Machine must meet the following requirements:
     * Enable PowerShell Remoting 
     * WinRM must be enabled 
         ```PowerShell
-        Enable-PSRemoting -force
-        ```
-        ```CMD
-        winrm quickconfig
+        # Enables PowerShell Remoting
+        PowerShell Enable-PSRemoting -force
         ```
 
 * If the device exists within a workgroup or an alternate domain as the Host Machine:
     * Enable PowerShell Remoting 
-        * `Enable-PSRemoting -force`
-    * WinRM must be enabled 
-        * `winrm quickconfig`.
     * WinRM Trusted Host must contain the device name or the IP address of the Host Machine
-        * `winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'`.
         ```PowerShell
+        # Enables PowerShell Remoting
         Enable-PSRemoting -force
+        Set-Item WSMan:\localhost\Client\TrustedHosts -Value <HostMachineName>
         ```
-        ```CMD
-        winrm quickconfig
-        winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'
-        ```
-
-```PowerShell
-Enable-PSRemoting -force
-```
-```CMD
-winrm quickconfig
-winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'
-```
 
 ### Virtual Machine
 It is recommended that the Hyper-V Quick Create "MSIX Packaging Tools Environment" image be used, as it is pre-configured to meet all requirements. The virtual machine must be hosted on the Host Machine and running within Microsoft Hyper-V.
