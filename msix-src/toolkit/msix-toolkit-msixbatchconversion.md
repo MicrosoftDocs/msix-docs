@@ -139,6 +139,7 @@ The `conversionsParameters` parameter is an array that contains information abou
 
 ```powershell
 $conversionsParameters = @(
+    ## Use for MSI applications:
     @{
         InstallerPath = "Path\To\Your\Installer\YourInstaller.msi"; # Full path to the installation media (local or remote paths).
         PackageName = "YourApp";                                    # Application Display Name - name visible in the start menu.
@@ -146,6 +147,16 @@ $conversionsParameters = @(
         PublisherName = "CN=YourCompany";                           # Certificate Publisher information
         PublisherDisplayName = "YourCompany";                       # Application Publisher name
         PackageVersion = "1.0.0.0"                                  # MSIX Application version (must contain 4 octets).
+    },
+    ## Use for EXE or other applications:
+    @{
+        InstallerPath = "Path\To\Your\Installer\YourInstaller.exe"; # Full path to the installation media (local or remote paths).
+        PackageName = "YourApp";                                    # Application Display Name - name visible in the start menu.
+        PackageDisplayName = "Your App";                            # Application Name - Can not contain special characters.
+        PublisherName = "CN=YourCompany";                           # Certificate Publisher information
+        PublisherDisplayName = "YourCompany";                       # Application Publisher name
+        PackageVersion = "1.0.0.0";                                 # MSIX Application version (must contain 4 octets).
+        InstallerArguments = "/SilentInstallerArguement"            # Arguements required by the installer to provide a silent installation of the application.
     }
 )
 ```
