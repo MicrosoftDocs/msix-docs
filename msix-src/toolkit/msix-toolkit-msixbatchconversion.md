@@ -43,13 +43,37 @@ The Host Machine must meet the following requirements:
 The Remote Machine must meet the following requirements:
 * [MSIX Packaging Tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
 * If the device exists within the same domain as the Host Machine:
+    * Enable PowerShell Remoting 
     * WinRM must be enabled 
-        * `winrm quickconfig`.
+        ```PowerShell
+        Enable-PSRemoting -force
+        ```
+        ```CMD
+        winrm quickconfig
+        ```
+
 * If the device exists within a workgroup or an alternate domain as the Host Machine:
+    * Enable PowerShell Remoting 
+        * `Enable-PSRemoting -force`
     * WinRM must be enabled 
         * `winrm quickconfig`.
     * WinRM Trusted Host must contain the device name or the IP address of the Host Machine
         * `winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'`.
+        ```PowerShell
+        Enable-PSRemoting -force
+        ```
+        ```CMD
+        winrm quickconfig
+        winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'
+        ```
+
+```PowerShell
+Enable-PSRemoting -force
+```
+```CMD
+winrm quickconfig
+winrm set winrm/config/client '@{TrustedHosts="<HostMachineName>"}'
+```
 
 ### Virtual Machine
 It is recommended that the Hyper-V Quick Create "MSIX Packaging Tools Environment" image be used, as it is pre-configured to meet all requirements. The virtual machine must be hosted on the Host Machine and running within Microsoft Hyper-V.
