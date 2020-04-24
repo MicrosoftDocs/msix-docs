@@ -107,7 +107,7 @@ $virtualMachines = @(
 )
 ```
 
-The specified virtual machine will be used to package apps into the MSIX format. This virtual machine will be connected to using the credentials entered when prompted (prompt appears directly after script **entry.ps1** execution).
+The specified virtual machine will be used to package apps into the MSIX format. This virtual machine will be connected to using the credentials entered when prompted (prompt appears directly after script **entry.ps1** execution). Prior to packaging an application to the MSIX packaging format, the script will create a snapshot of the Hyper-V VM, and then restored to this snapshot after application has been packaged.
 
 ### remoteMachines
 
@@ -162,3 +162,9 @@ $conversionsParameters = @(
 ```
 
 The app information provided in the `conversionsParameters` variable will be used to generate an XML file with all of the required application details. After creating the XML file, the script will then pass the XML file to the [MSIX Packaging Tool](..\packaging-tool\mpt-overview.md) (MsixPackagingTool.exe) to be packaged.
+
+## Logging
+
+The script will generate a log file which outlines what has transpired throughout the script execution. The log file will provide details related to the packaging of applications to the MSIX packaging format, and information related to script progression. The logs have been configured to be read using the Trace32 log reader. Errors in the script execution will be highlighted as Red, and Warnings as yellow.
+
+The log file is created within the script's directory `.\logs\BulkConversion.log`.
