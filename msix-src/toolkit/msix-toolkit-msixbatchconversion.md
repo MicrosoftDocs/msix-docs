@@ -27,8 +27,10 @@ The Host Machine must meet the following requirements:
 * If Virtual Machines are being used, Hyper-V must be installed.
 * If Remote Machines are being used:
     * Device exists in the same Domain:
-        * Enable PowerShell Remoting - `Enable-PSRemoting -force`
-        * WinRM must be enabled - `winrm quickconfig`.
+        * Enable PowerShell Remoting 
+            * `Enable-PSRemoting -force`
+        * WinRM must be enabled 
+            * `winrm quickconfig`
     * Device exists in a Workgroup or to another Domain:
         * Enable PowerShell remoting - `Enable-PSRemoting -force`
         * WinRM must be enabled - 
