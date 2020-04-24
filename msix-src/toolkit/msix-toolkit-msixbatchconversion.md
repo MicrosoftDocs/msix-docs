@@ -98,8 +98,6 @@ The `virtualMachines` parameter is an array that contains the name and credentia
 * **Type:** Array
 * **Required:** No
 
-```
-
 ```powershell
 $virtualMachines = @(
     @{
