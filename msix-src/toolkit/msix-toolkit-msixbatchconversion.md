@@ -26,13 +26,13 @@ The Host Machine must meet the following requirements:
 * [MSIX Packaging Tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
 * If Virtual Machines are being used, Hyper-V must be installed.
 * If Remote Machines are being used:
-    * Device exists in the same Domain:
+    * Device exists in the same Domain as the Remote Machine(s):
         * Enable PowerShell Remoting 
             ```PowerShell
             # Enables PowerShell Remoting
             Enable-PSRemoting -force
             ```
-    * Device exists in a Workgroup or to another Domain:
+    * Device exists in a Workgroup or to an alternate Domain as the Remote Machine(s):
         * Enable PowerShell remoting 
         * WinRM Trusted Host must contain the device name or IP address of the Remote Machine 
             ```PowerShell
