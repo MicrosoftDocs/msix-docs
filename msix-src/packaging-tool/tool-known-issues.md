@@ -40,7 +40,7 @@ To fix this issue, open the **MSIX Packaging Tool** and edit your app through **
 ```
 
 #### MSIX with services
-In version 1.2019.1220.0 of the MSIX Packaging Tool, we added support for creating an [MSIX package with Services](convert-an-installer-with-services.md). Due to the OS restrictions with services support, we automatically change the min version supported in an MSIX package with services to 10.0.19025.0. This means that you cannot install an MSIX with services on an OS lower than the Windows 10 2004, but you can create that MSIX using the MSIX Packaging Tool down to Windows 10 1809. 
+In version 1.2019.1220.0 of the MSIX Packaging Tool, we added support for creating an [MSIX package with Services](convert-an-installer-with-services.md). Due to the OS restrictions with services support, the MSIX Packaging Tool automatically changes the min version supported in an MSIX package with services to 10.0.19025.0. This means that you cannot install an MSIX with services on an OS lower than the Windows 10 version 2004, but you can create that MSIX using the MSIX Packaging Tool down to Windows 10 1809. If you need to install this app on a lower OS, update the min version appropriately but note that support for services will not work.
 
 ### Frameworks and drivers
 
