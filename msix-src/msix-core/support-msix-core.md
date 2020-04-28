@@ -26,7 +26,7 @@ The following example specifies Windows 7 SP1 as a minimum version:
 All **MSIXCore.Desktop** apps will deploy to Windows Server with Desktop Experience based operating systems with the same build number. If the app is intended only for a server operating system, specify a **TargetDeviceFamily** with the name **MSIXCore.Server**. Deployment to Windows Server Core is not supported.
 
 ## Update Manifest using the MSIX Packaging Tool Package Editor
-If you have an MSIX package, you can use the MSIX Package Tool to update your package to support MSIX Core. You can do it two ways through the Package Editor:
+If you have an MSIX package, you can use the MSIX Package Tool to update your existing package to support MSIX Core without repackaging. You can do it two ways through the Package Editor:
 
 1. Open **MSIX Packaging Tool** app
 2. Select **Package editor** 
