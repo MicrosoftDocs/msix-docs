@@ -47,18 +47,23 @@ The Remote Machine must meet the following requirements:
 * If the device exists within the same domain as the Host Machine:
     * Enable PowerShell Remoting 
     * WinRM must be enabled 
+    * Allow ICMPv4 through client firewall
         ```PowerShell
         # Enables PowerShell Remoting
         PowerShell Enable-PSRemoting -force
+        New-NetFirewallRule -DisplayName “ICMPv4” -Direction Inbound -Action Allow -Protocol icmpv4 -Enabled True
         ```
 
 * If the device exists within a workgroup or an alternate domain as the Host Machine:
     * Enable PowerShell Remoting 
     * WinRM Trusted Host must contain the device name or the IP address of the Host Machine
+    * Allow ICMPv4 through client firewall
         ```PowerShell
         # Enables PowerShell Remoting
         Enable-PSRemoting -force
+        New-NetFirewallRule -DisplayName “ICMPv4” -Direction Inbound -Action Allow -Protocol icmpv4 -Enabled True
         Set-Item WSMan:\localhost\Client\TrustedHosts -Value <HostMachineName>
+        
         ```
 
 ### Virtual Machine
@@ -130,6 +135,15 @@ The specified remote machine will be used to package a single app into the MSIX 
 
 Ensure that the fully qualified domain name or externally facing alias of the device is resolvable prior to execution of the **entry.ps1** script.
 
+### signingCertificate
+The `signingCertificate` parameter is an array that contains information related to the code signing certificate that will be used to sign the MSIX packaged application. This certificate must have an encryption level of at minimum SHA256.
+
+```powershell
+$SigningCertificate = @{
+    Password = "Password"; 
+    Path = "C:\Temp\ContosoLab.pfx"
+}
+```
 ### conversionsParameters
 
 The `conversionsParameters` parameter is an array that contains information about the apps you want to convert to MSIX format. Each app in the array will be parsed individually and run through the MSIX package conversion on either a remote machine or virtual machine. The apps will be converted in the order that they appear in the script. If the conversion to MSIX format fails, the script will not re-attempt to convert the application on a different remote machine or virtual machine.
@@ -141,22 +155,34 @@ The `conversionsParameters` parameter is an array that contains information abou
 $conversionsParameters = @(
     ## Use for MSI applications:
     @{
-        InstallerPath = "Path\To\Your\Installer\YourInstaller.msi"; # Full path to the installation media (local or remote paths).
-        PackageName = "YourApp";                                    # Application Display Name - name visible in the start menu.
-        PackageDisplayName = "Your App";                            # Application Name - Can not contain special characters.
-        PublisherName = "CN=YourCompany";                           # Certificate Publisher information
-        PublisherDisplayName = "YourCompany";                       # Application Publisher name
-        PackageVersion = "1.0.0.0"                                  # MSIX Application version (must contain 4 octets).
+        InstallerPath = "C:\Path\To\YourInstaller.msi";    # Full path to the installation media (local or remote paths).
+        PackageName = "YourApp";                           # Application Display Name - name visible in the start menu.
+        PackageDisplayName = "Your App";                   # Application Name - Can not contain special characters.
+        PublisherName = "CN=YourCompany";                  # Certificate Publisher information - must match signing certificate
+        PublisherDisplayName = "YourCompany";              # Application Publisher name
+        PackageVersion = "1.0.0.0"                         # MSIX Application version (must contain 4 octets).
     },
     ## Use for EXE or other applications:
     @{
-        InstallerPath = "Path\To\Your\Installer\YourInstaller.exe"; # Full path to the installation media (local or remote paths).
-        PackageName = "YourApp";                                    # Application Display Name - name visible in the start menu.
-        PackageDisplayName = "Your App";                            # Application Name - Can not contain special characters.
-        PublisherName = "CN=YourCompany";                           # Certificate Publisher information
-        PublisherDisplayName = "YourCompany";                       # Application Publisher name
-        PackageVersion = "1.0.0.0";                                 # MSIX Application version (must contain 4 octets).
-        InstallerArguments = "/SilentInstallerArguement"            # Arguements required by the installer to provide a silent installation of the application.
+        InstallerPath = "Path\To\YourInstaller.exe";       # Full path to the installation media (local or remote paths).
+        PackageName = "YourApp";                           # Application Display Name - name visible in the start menu.
+        PackageDisplayName = "Your App";                   # Application Name - Can not contain special characters.
+        PublisherName = "CN=YourCompany";                  # Certificate Publisher information - must match signing certificate
+        PublisherDisplayName = "YourCompany";              # Application Publisher name
+        PackageVersion = "1.0.0.0";                        # MSIX Application version (must contain 4 octets).
+        InstallerArguments = "/SilentInstallerArguement"   # Arguements required by the installer to provide a silent installation of the application.
+    },
+    ## Creating the Packaged app and Template file in a specific folder path:
+    @{
+        InstallerPath = "Path\To\YourInstaller.exe";       # Full path to the installation media (local or remote paths).
+        PackageName = "YourApp";                           # Application Display Name - name visible in the start menu.
+        PackageDisplayName = "Your App";                   # Application Name - Can not contain special characters.
+        PublisherName = "CN=YourCompany";                  # Certificate Publisher information - must match signing certificate
+        PublisherDisplayName = "YourCompany";              # Application Publisher name
+        PackageVersion = "1.0.0.0";                        # MSIX Application version (must contain 4 octets).
+        InstallerArguments = "/SilentInstallerArguement";  # Arguements required by the installer to provide a silent installation of the application.
+        SavePackagePath = "Custom\folder\Path";            # Specifies a custom folder path where the MSIX app will be created.
+        SaveTemplatePath = "Custom\folder\Path"            # Specifies a custom folder path where the MSIX Template XML will be created.
     }
 )
 ```
