@@ -138,6 +138,9 @@ Ensure that the fully qualified domain name or externally facing alias of the de
 ### signingCertificate
 The `signingCertificate` parameter is an array that contains information related to the code signing certificate that will be used to sign the MSIX packaged application. This certificate must have an encryption level of at minimum SHA256.
 
+* **Type:** Array
+* **Required:** No
+
 ```powershell
 $SigningCertificate = @{
     Password = "Password"; 
