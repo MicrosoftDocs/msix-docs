@@ -50,7 +50,7 @@ The Remote Machine must meet the following requirements:
     * Allow ICMPv4 through client firewall
         ```PowerShell
         # Enables PowerShell Remoting
-        PowerShell Enable-PSRemoting -force
+        Enable-PSRemoting -force
         New-NetFirewallRule -DisplayName “ICMPv4” -Direction Inbound -Action Allow -Protocol icmpv4 -Enabled True
         ```
 
