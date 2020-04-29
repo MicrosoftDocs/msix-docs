@@ -24,7 +24,9 @@ On the **Package information** page, you can change your package information thr
 
 You can navigate to other sections of the package editor to edit your capabilities, virtual registry, or package files. When you are finished editing your package, be sure to sign your package and update your version before saving your changes.
 
-![pic10](images/pic10.png)
+![packageeditorpkginfo1](images/PackageEditorPkgInfo1.png)
+
+![packageeditorpkginfo2](images/PackageEditorPkgInfo2.png)
 
 ## Capabilities page
 
