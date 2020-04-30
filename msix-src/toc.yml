@@ -132,6 +132,8 @@
               href: psf/package-support-framework.md
             - name: Run scripts with the Package Support Framework
               href: psf/run-scripts-with-package-support-framework.md
+            - name: Launch apps with parameters
+              href: psf\psf-launch-apps-with-parameters.md
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
     - name: MSIX Toolkit
@@ -220,10 +222,8 @@
           href: desktop/powershell-msix-cmdlets.md
         - name: Using Group Policy
           href: group-policy-msix.md
-        - name: Deploying preinstalled apps
+        - name: Preinstalling packaged apps
           href: desktop/deploy-preinstalled-apps.md
-        - name: Install your app for all users
-          href: desktop/managing-your-msix-deployment-dism-provisioning.md
         - name: Install earlier versions of an MSIX app package
           href: desktop/managing-your-msix-deployment-downgrading.md
     - name: Deploy MSIX with App Installer file
@@ -298,6 +298,8 @@
       href: manage/troubleshoot-msix-container.md
     - name: Debug and test a packaged app
       items:
+        - name: Troubleshooting packaging, deployment, and query of Windows apps
+          href: https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
         - name: Run, debug, and test a packaged desktop application
           href: desktop/desktop-to-uwp-debug.md
         - name: Detect package identity and runtime context

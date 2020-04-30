@@ -30,10 +30,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.319.0
-
-- Improved quality of icons extracted
-- Improved icon extraction from shortcuts
+## Version 1.2020.423.0
+- Ability to exclude items from the package editor
+- Use ctrl to multi-select options in package editor
+- Added a prompt when overwriting files
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

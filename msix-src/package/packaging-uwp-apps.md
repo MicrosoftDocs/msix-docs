@@ -45,6 +45,7 @@ Here is an overview of the steps to prepare and create an app package:
 3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the [.NET native](https://docs.microsoft.com/dotnet/framework/net-native/) toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected.
 
 
+
 ## Configure your project
 
 The app manifest file (Package.appxmanifest) is an XML file that contains the properties and settings required to create your app package. For example, properties in the app manifest file describe the image to use as the tile of your app and the orientations that your app supports when a user rotates the device.
