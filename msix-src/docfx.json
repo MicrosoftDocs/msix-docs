@@ -42,7 +42,8 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/msix-docs",
       "feedback_product_url": "https://aka.ms/msixcommunity",
-      "ms.prod": "msix"
+      "ms.prod": "msix",
+      "searchScope": ["MSIX"]
     },
     "fileMetadata": {
       "ms.author":
