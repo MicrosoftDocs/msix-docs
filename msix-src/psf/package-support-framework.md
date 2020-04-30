@@ -14,7 +14,7 @@ The [Package Support Framework](package-support-framework-overview.md) is an ope
 This article helps you to identify application compatibility issues, and to find, apply, and extend runtime fixes that address them. Sections of this article are intended for different roles:
 
 * IT professionals or administrators: The most relevant sections are [Identify packaged application compatibility issues](#identify-packaged-application-compatibility-issues), [Find a runtime fix](#find-a-runtime-fix), and [Apply a runtime fix](#apply-a-runtime-fix).
-* Developers: Although developers may find the entire article useful, the most relevant sections are [Debug, extend, or create a runtime fix](#debug-extend-or-create-a-runtime-fix), [Create a runtime fix](#create-a-runtime-fix), and [Other debugging techniques](#other-debugging-techniques).d
+* Developers: Although developers may find the entire article useful, the most relevant sections are [Debug, extend, or create a runtime fix](#debug-extend-or-create-a-runtime-fix), [Create a runtime fix](#create-a-runtime-fix), and [Other debugging techniques](#other-debugging-techniques).
 
 <a id="identify" />
 
