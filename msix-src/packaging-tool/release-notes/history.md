@@ -10,6 +10,11 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2020.423.0
+- Ability to add items from the package editor to the exclusion list
+- Use ctrl to multi-select options in package editor
+- Added a prompt when overwriting files when moving or adding
+
 ## Version 1.2020.402.0 - Public Release
 - Package Integrity setting is on by default
 - Ability to automatically add [MSIX Core support](../../msix-core/msixcore.md) to an MSIX

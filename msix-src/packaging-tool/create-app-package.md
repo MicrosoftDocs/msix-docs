@@ -146,6 +146,8 @@ After you choose to package your application on an existing virtual machine, you
     - This field is optional but recommended when the app payload is being installed outside of the Program Files folders.
     - Browse to and select a folder path.
     - Make sure this file matches the installer's install location while you go through the application install operation. 
+- Add support for MSIX Core to this package. 
+    - When selected, this checkbox will then reveal a drop down that will aloow you to select a Windows version for [MSIX Core](../msix-core/msixcore.md) support for the package you are generating.
 
 ## Installation
 
