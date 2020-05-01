@@ -81,10 +81,9 @@ variables:
 steps:
  - powershell: |
      # Update appxmanifest. This must be done before the build.
-     $path = "Msix/Package.appxmanifest"
-     [xml]$manifest= get-content ".\HeadTraxPackage\Package.appxmanifest"
+     [xml]$manifest= get-content ".\Msix\Package.appxmanifest"
      $manifest.Package.Identity.Version = "$(major).$(minor).$(build).$(revision)"    
-     $manifest.save($path)
+     $manifest.save("Msix/Package.appxmanifest")
   displayName: 'Version Package Manifest'
   
 - task: MSBuild@1
