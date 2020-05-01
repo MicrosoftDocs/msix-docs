@@ -69,6 +69,7 @@ Sample YAML File that defines the MSIX Build Pipeline
 ```yml
 pool: 
   vmImage: windows-2019
+  
 variables:
   buildPlatform: 'x86'
   buildConfiguration: 'release'
@@ -76,18 +77,16 @@ variables:
   minor: 0
   build: 0
   revision: $[counter('rev', 0)]
+  
 steps:
-- powershell: |
-   [Reflection.Assembly]::LoadWithPartialName("System.Xml.Linq")
-   $path = "Msix/Package.appxmanifest"
-   $doc = [System.Xml.Linq.XDocument]::Load($path)
-   $xName =
-     [System.Xml.Linq.XName]
-       "{http://schemas.microsoft.com/appx/manifest/foundation/windows10}Identity"
-   $doc.Root.Element($xName).Attribute("Version").Value =
-     "$(major).$(minor).$(build).$(revision)";
-   $doc.Save($path)
+ - powershell: |
+     # Update appxmanifest. This must be done before the build.
+     $path = "Msix/Package.appxmanifest"
+     [xml]$manifest= get-content ".\HeadTraxPackage\Package.appxmanifest"
+     $manifest.Package.Identity.Version = "$(major).$(minor).$(build).$(revision)"    
+     $manifest.save($path)
   displayName: 'Version Package Manifest'
+  
 - task: MSBuild@1
   inputs:
     solution: Msix/Msix.wapproj
@@ -96,14 +95,17 @@ steps:
     msbuildArguments: '/p:OutputPath=NonPackagedApp
      /p:UapAppxPackageBuildMode=SideLoadOnly  /p:AppxBundle=Never /p:AppxPackageOutput=$(Build.ArtifactStagingDirectory)\MsixDesktopApp.msix /p:AppxPackageSigningEnabled=false'
   displayName: 'Package the App'
+  
 - task: DownloadSecureFile@1
   inputs:
     secureFile: 'certificate.pfx'
   displayName: 'Download Secure PFX File'
+  
 - script: '"C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\signtool"
     sign /fd SHA256 /f $(Agent.TempDirectory)/certificate.pfx /p secret $(
     Build.ArtifactStagingDirectory)/MsixDesktopApp.msix'
   displayName: 'Sign MSIX Package'
+  
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
 ```
