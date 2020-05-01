@@ -119,7 +119,7 @@ Below are breakdowns of the different Build tasks defined in the YAMl file:
 The definition below sets the directory of Build components, the platform and defines whether to build a bundle or not. 
 
 ```powershell
-/p:AppxPackageDir="$(Build.ArtifactStagingDirectory)\AppxPackages\\"
+/p:AppxPackageDir="$(Build.ArtifactStagingDirectory)\AppxPackages\"
 /p:UapAppxPackageBuildMode=SideLoadOnly
 /p:AppxBundlePlatforms="$(Build.BuildPlatform)"
 /p:AppxBundle=Never
