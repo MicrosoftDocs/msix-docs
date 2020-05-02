@@ -10,12 +10,22 @@ ms.localizationpriority: medium
 
 # Set up your desktop application for MSIX packaging in Visual Studio
 
-You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then, you can publish that package to the Microsoft Store or sideload it onto one or more PCs.
+You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then you can distribute your package to the Microsoft Store, on the Web, in your enterprise or any other distribution mechanism you're using.
 
-The **Windows Application Packaging Project** project is available in the following versions of Visual Studio. For the best experience, we recommend that you use the latest release.
+## Required Visual Studio version and workload
+
+The **Windows Application Packaging Project** project is available in the following versions of Visual Studio:
 
 * Visual Studio 2019
 * Visual Studio 2017 15.5 and later
+
+To see the Windows Application Packaging Project template in the 'Add New Project' menu, you need to make sure you have **at least one** of the following the Visual Studio workloads installed:
+
+* The 'Universal Windows Platform development' workload
+* The Optional Component 'MSIX Packaging Tools' in the NET Core workload.
+* The Optional Component 'MSIX Packaging Tools' in the .NET desktop development workload.
+
+ For the best experience we recommend that you use the latest Visual Studio release.
 
 > [!IMPORTANT]
 > The **Windows Application Packaging Project** project in Visual Studio is supported on Windows 10, version 1607, and later. It can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release.
@@ -63,11 +73,43 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Set entry point](images/entry-point-set.png)
 
-6. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
+6. If the application you are packaging targets .NET Core 3, follow these steps to add a new build target to the project file. This is only necessary for applications that target .NET Core 3.  
+
+    1. In Solution Explorer, right-click the packaging project node and select **Edit Project File**.
+
+    2. Locate the `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` element in the file.
+
+    3. Replace this element with the following XML.
+
+        ``` xml
+        <ItemGroup>
+          <SDKReference Include="Microsoft.VCLibs,Version=14.0">
+            <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
+            <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
+            <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
+            <Implicit>true</Implicit>
+          </SDKReference>
+        </ItemGroup>
+        <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
+        <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
+          <ItemGroup>
+            <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
+            <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
+            <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
+              <SourceProject>
+              </SourceProject>
+            </_FilteredNonWapProjProjectOutput>
+          </ItemGroup>
+        </Target>
+        ```
+
+    4. Save the project file and close it.
+
+7. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
 
    ![Config manager](images/config-manager.png)
 
-7. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
+8. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
 
 
 ## Next steps
