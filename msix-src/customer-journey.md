@@ -47,6 +47,9 @@ DB system is integrating MSIX into the build process as a container format. Most
 *The MSIX technology allows us to adopt the DevOps approach even though we provide client software rather than cloud software. This was inconceivable until very recently.*-Markus Thomann, Software Consultant in the Modern Deployment team at DB
 
 ## ECNO 
+
+![ECNO logo](images/ECNO_masterlogo.png)
+
 The Educational Computing Network of Ontario (ECNO) is an organization that collaboratively finds and executes effective IT solutions for Ontario’s 72 K-12 school boards (2 million students). TECNO is tasked with keeping up on the latest computing technologies as they relate to the education goals of province of Ontario. They make IT infrastructure recommendations to and share best practices with the member school boards. 
 
 The school boards are autonomous and are free to implement their own IT strategies for what works best for them. For example, one school board uses Configuration Manager exclusively to distribute applications, while another uses it only for machine imaging and a small percentage of apps. 
@@ -71,6 +74,8 @@ What benefits ECNO is getting by leveraging MSIX?
 -Sean Heuchert, Manager of Information, Peterborough Victoria Northumberland Clarington Catholic District School Board
 
 ## Schneider Electric
+![Schneider Electric](images/Logo_SE_Green_RGB-Screen.png)
+
 Schneider Electric develops GIS software to support both small and large utilities (electric, gas, water, fiber, coax) within the US and internationally.
 
 In working with Microsoft, we wanted to bring our WPF applications to the latest installer technology, MSIX.  We have a specific client driven use case; we need to release and deploy frequently as a dev-ops minded software company, but each utility company wants to manage changes and individually determine what version of the application will be released to their users and when.  We have been working closely with Microsoft to meet this customer requirement.  Once we complete our upgrade to MSIX we will be able to remove some 3rd party dependencies and be a step closer to updating our applications to .NET Core 3.0. 
