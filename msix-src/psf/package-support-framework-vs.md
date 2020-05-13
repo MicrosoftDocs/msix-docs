@@ -3,7 +3,7 @@ Description: If you have a packaging project in Visual Studios and want to apply
 title: Apply Package Support Framework in Visual Studios
 ms.date: 08/07/2019
 ms.topic: article
-keywords: windows 10, uwp
+keywords: windows 10, uwp, psf
 ms.localizationpriority: medium
 ---
 
@@ -29,7 +29,7 @@ If you don't already have a **Windows Application Packaging Project**, create on
 
 For more information on Windows Application Packaging project, see [Package your application by using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
-In **Solution Explorer**, right-click the packaging project, select **Edit**, and then add this to the bottom of the project file:
+In **Solution Explorer**, right-click the packaging project, select **Edit**, and then include the following code snippet to the bottom of the project file:
 
 ```xml
 <Target Name="PSFRemoveSourceProject" AfterTargets="ExpandProjectReferences" BeforeTargets="_ConvertItems">
@@ -42,6 +42,8 @@ In **Solution Explorer**, right-click the packaging project, select **Edit**, an
 </ItemGroup>
 </Target>
 ```
+
+Be sure to update the **<your runtime fix project name goes here>** with the name of your runtime fix project.
 
 ### Add project for the runtime fix
 
