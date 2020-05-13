@@ -33,7 +33,7 @@ additionalContent:
       items:
         # Card
         - title: Learn about our customers' journeys with MSIX 
-          summary: Read about our customers' journey on how MSIX has improved their packaging process.
+          summary: Read about our customers' journeys on how MSIX has improved their packaging process.
           url: customer-journey.md
         # Card
         - title: Create MSIX packages from existing installers
