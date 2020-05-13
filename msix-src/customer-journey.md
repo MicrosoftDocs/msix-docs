@@ -10,7 +10,7 @@ ms.custom: RS5
 ---
 
 # MSIX Customer Journeys 
-* [How DB Systel is using Microsoft technology to enable agile deployment of Windows Applications](customer-journey.md#DB-Systel) 
+* [How DB Systel is using Microsoft technology to enable agile deployment of Windows Applications](customer-journey.md#db-systel) 
 * [How ECNO is using Microsoft technology for improving the Desktop App delivery and install experience for Ontario students](customer-journey.md#ecno)
 * [How Schneider Electric is using Microsoft technology for developing and deploying WPF Desktop Applications](customer-journey.md#schneider-electric) 
 
