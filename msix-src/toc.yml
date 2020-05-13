@@ -128,7 +128,7 @@
           items:
             - name: Overview
               href: psf/package-support-framework-overview.md
-            - name: Apply runtime fixes to a desktop app package
+            - name: Get started with Package Support Framework
               href: psf/package-support-framework.md
             - name: Run scripts with the Package Support Framework
               href: psf/run-scripts-with-package-support-framework.md

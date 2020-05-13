@@ -13,7 +13,7 @@ ms.custom: RS5
 The Package Support Framework uses a config.json file to configure the behavior of an application.
 
 ## Proceedure
-To configure the application execution to receive paramter values passed into it during application launch, the following steps must be completed. 
+To configure the application execution to receive parameter values passed into it during application launch, the following steps must be completed. 
 
 1. Download the Package Support Framework
 1. Configure the Package Support Framework (config.json)
