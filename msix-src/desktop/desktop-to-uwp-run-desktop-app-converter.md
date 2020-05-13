@@ -1,5 +1,5 @@
 ---
-Description: Run the Desktop Converter App to package a Windows desktop application (like Win32, WPF, and Windows Forms).
+Description: Run the Desktop App Converter to package a Windows desktop application (like Win32, WPF, and Windows Forms).
 title: Package an app using the Desktop App Converter (Desktop Bridge)
 ms.date: 07/29/2019
 ms.topic: article
@@ -362,7 +362,7 @@ The Desktop App Converter does not support Unicode; thus, no Chinese characters 
 
 ## Known issues with the Desktop App Converter
 
-### E_CREATING_ISOLATED_ENV_FAILED an E_STARTING_ISOLATED_ENV_FAILED errors    
+### E_CREATING_ISOLATED_ENV_FAILED and E_STARTING_ISOLATED_ENV_FAILED errors    
 
 If you receive either of these errors, make sure that you're using a valid base image from the [download center](https://aka.ms/converterimages).
 If you’re using a valid base image, try using ``-Cleanup All`` in your command.
@@ -392,7 +392,7 @@ This is a known limitation and no workaround currently exists. That said, Inbox 
 
 This can happen if the executables in your application have a capitalized **.EXE** extension. Although, the casing of this extension shouldn't affect whether your application runs, this can cause the DAC to generate this error.
 
-To resolve this issue, try specifying the **-AppExecutable** flag when you package, and use the lower case ".exe" as the extension of your main executable (For example: MYAPP.exe).    Alternately you can change the casing for all executables in your application from lowercase to uppercase (For example: from .EXE to .exe).
+To resolve this issue, try specifying the **-AppExecutable** flag when you package, and use the lower case ".exe" as the extension of your main executable (For example: MYAPP.exe).    Alternately you can change the casing for all executables in your application from uppercase to lowercase (For example: from .EXE to .exe).
 
 ### Corrupted or malformed Authenticode signatures
 
