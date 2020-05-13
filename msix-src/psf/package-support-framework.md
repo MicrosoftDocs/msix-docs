@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ---
 
-# Apply runtime fixes to an MSIX package by using the Package Support Framework
+# Get Started with Package Support Framework 
 
 The [Package Support Framework](package-support-framework-overview.md) is an open source kit that helps you apply fixes to your existing desktop application (without modifying the code) so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
@@ -15,6 +15,20 @@ This article helps you to identify application compatibility issues, and to find
 
 * IT professionals or administrators: The most relevant sections are [Identify packaged application compatibility issues](#identify-packaged-application-compatibility-issues), [Find a runtime fix](#find-a-runtime-fix), and [Apply a runtime fix](#apply-a-runtime-fix).
 * Developers: Although developers may find the entire article useful, the most relevant sections are [Debug, extend, or create a runtime fix](#debug-extend-or-create-a-runtime-fix), [Create a runtime fix](#create-a-runtime-fix), and [Other debugging techniques](#other-debugging-techniques).
+
+## Understand what is inside a Package Support Framework
+
+The Package Support Framework contains an executable, a runtime manager  DLL, and a set of runtime fixes.
+
+![Package Support Framework](images/package-support-framework.png)
+
+Here is the process: 
+1. Create a configuration file that specifies the fixes that you want to apply to your application. 
+1. Modify your package to point to the Package Support Framework (PSF) launcher executable file.
+
+When users the your application, the Package Support Framework launcher is the first executable that runs. It reads your configuration file and injects the runtime fixes and the runtime manager DLL into the application process. The runtime manager applies the fix when it's needed by the application to run inside of an MSIX container.
+
+![Package Support Framework  DLL Injection](images/package-support-framework-2.png)
 
 <a id="identify" />
 
