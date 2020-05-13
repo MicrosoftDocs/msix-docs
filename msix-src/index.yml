@@ -32,6 +32,10 @@ additionalContent:
     - title: Top tasks
       items:
         # Card
+        - title: Learn about our customers' journeys with MSIX 
+          summary: Read about our customers' journey on how MSIX has improved their packaging process.
+          url: customer-journey.md
+        # Card
         - title: Create MSIX packages from existing installers
           summary: The MSIX Packaging Tool enables you to update existing desktop application packages to the MSIX format.
           url: packaging-tool/create-an-msix-overview.md
