@@ -1,7 +1,7 @@
 ---
 Description: The Package Support Framework helps you fix issues that prevent your desktop application from running in an MSIX container.
 title: Package Support Framework
-ms.date: 09/05/2018
+ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -28,7 +28,7 @@ Here are the tools you will need:
 1. [The Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework/releases) 
 1. Get [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to identify issues
 
-You can check our [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework/) page for all the latest fix. If you find one, you can apply it to your package. Our [step-by-step guide](https://docs.microsoft.com/windows/uwp/porting/package-support-framework) shows you how to do this. It will also show you how to use the Visual Studio debugger to step through your application and verify that the fix is working and that it has resolved the compatibility issue.
+You can check our [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework/) for all the available fixes. If you find one, you can apply it to your package. Our [step-by-step guide](https://docs.microsoft.com/windows/uwp/porting/package-support-framework) shows you how to do this. It will also show you how to use the Visual Studio debugger to step through your application and verify that the fix is working and that it has resolved the compatibility issue.
 
 If you can't find a runtime fix that addresses your issue, you can [create one](package-support-framework.md#create-a-runtime-fix). To do that, you'll identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
 

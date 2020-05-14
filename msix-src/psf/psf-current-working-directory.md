@@ -1,7 +1,7 @@
 ---
 Description: The Package Support Framework helps work with the working directory.
 title: Package Support Framework current working directory
-ms.date: 09/05/2018
+ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp, msix, psf
 ms.localizationpriority: medium
