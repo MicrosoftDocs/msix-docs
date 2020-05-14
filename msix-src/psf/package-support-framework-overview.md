@@ -22,20 +22,6 @@ This framework is open source, lightweight, and you can use it to address applic
 
 For a step-by-step guide, see [Apply runtime fixes to an MSIX package by using the Package Support Framework](https://docs.microsoft.com/windows/uwp/porting/package-support-framework).
 
-## Inside a Package Support Framework
-
-The Package Support Framework contains an executable, a runtime manager  DLL, and a set of runtime fixes.
-
-![Package Support Framework](images/package-support-framework.png)
-
-Here is the process: 
-1. Create a configuration file that specifies the fixes that you want to apply to your application. 
-1. Modify your package to point to the Package Support Framework (PSF) launcher executable file.
-
-When users the your application, the Package Support Framework launcher is the first executable that runs. It reads your configuration file and injects the runtime fixes and the runtime manager DLL into the application process. The runtime manager applies the fix when it's needed by the application to run inside of an MSIX container.
-
-![Package Support Framework  DLL Injection](images/package-support-framework-2.png)
-
 ## Get started using the Package Support Framework
 Here are the tools you will need: 
 

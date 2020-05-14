@@ -32,7 +32,7 @@ When users the your application, the Package Support Framework launcher is the f
 
 <a id="identify" />
 
-## Identify packaged application compatibility issues
+## Step 1: Identify packaged application compatibility issues
 
 First, create a package for your application. Then, install it, run it, and observe its behavior. You might receive error messages that can help you identify a compatibility issue. You can also use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to identify issues.  Common issues relate to application assumptions regarding the working directory and program path permissions.
 
@@ -66,7 +66,7 @@ In this issue, the application is failing to write a .log file to its package pa
 
 <a id="find" />
 
-## Find a runtime fix
+## Step 2: Find a runtime fix
 
 The PSF contains runtime fixes that you can use right now, such as the file redirection fixup.
 
@@ -80,7 +80,7 @@ For example, if your application writes to a log file that is in the same direct
 
 Make sure to review the community contributions to our [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework) page. It's possible that other developers have resolved an issue similar to yours and have shared a runtime fix.
 
-## Apply a runtime fix
+## Step 3: Apply a runtime fix
 
 You can apply an existing runtime fix with a few simple tools from the Windows SDK, and by following these steps.
 
@@ -458,84 +458,6 @@ Once you've set this up, you can set break points next to lines of code in the d
 
 >[!NOTE]
 > While Visual Studio gives you the simplest development and debugging experience, there are some limitations, so later in this guide, we'll discuss other debugging techniques that you can apply.
-
-## Create a runtime fix
-
-If there isn't yet a runtime fix for the issue that you want to resolve, you can create a new runtime fix by writing replacement functions and including any configuration data that makes sense. Let's look at each part.
-
-### Replacement functions
-
-First, identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
-
-In Visual Studio, open the runtime fix project that you created earlier in this guide.
-
-Declare the ``FIXUP_DEFINE_EXPORTS`` macro and then add a include statement for the `fixup_framework.h` at the top of each .CPP file where you intend to add the functions of your runtime fix.
-
-```c++
-#define FIXUP_DEFINE_EXPORTS
-#include <fixup_framework.h>
-```
-
->[!IMPORTANT]
->Make sure that the `FIXUP_DEFINE_EXPORTS` macro appears before the include statement.
-
-Create a function that has the same signature of the function who's behavior you want to modify. Here's an example function that replaces the `MessageBoxW` function.
-
-```c++
-auto MessageBoxWImpl = &::MessageBoxW;
-int WINAPI MessageBoxWFixup(
-    _In_opt_ HWND hwnd,
-    _In_opt_ LPCWSTR,
-    _In_opt_ LPCWSTR caption,
-    _In_ UINT type)
-{
-    return MessageBoxWImpl(hwnd, L"SUCCESS: This worked", caption, type);
-}
-
-DECLARE_FIXUP(MessageBoxWImpl, MessageBoxWFixup);
-```
-
-The call to `DECLARE_FIXUP` maps the `MessageBoxW` function to your new replacement function. When your application attempts to call the `MessageBoxW` function, it will call the replacement function instead.
-
-#### Protect against recursive calls to functions in runtime fixes
-
-You can optionally apply the `reentrancy_guard` type to your functions that protect against recursive calls to functions in runtime fixes.
-
-For example, you might produce a replacement function for the `CreateFile` function. Your implementation might call the `CopyFile` function, but the implementation of the `CopyFile` function might call the `CreateFile` function. This may lead to an infinite recursive cycle of calls to the `CreateFile` function.
-
-For more information on `reentrancy_guard` see [authoring.md](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/Authoring.md)
-
-### Configuration data
-
-If you want to add configuration data to your runtime fix, consider adding it to the ``config.json``. That way, you can use the `FixupQueryCurrentDllConfig` to easily parse that data. This example parses a boolean and string value from that configuration file.
-
-```c++
-if (auto configRoot = ::FixupQueryCurrentDllConfig())
-{
-    auto& config = configRoot->as_object();
-
-    if (auto enabledValue = config.try_get("enabled"))
-    {
-        g_enabled = enabledValue->as_boolean().get();
-    }
-
-    if (auto logPathValue = config.try_get("logPath"))
-    {
-        g_logPath = logPathValue->as_string().wstring();
-    }
-}
-```
-
-### Fixup metadata
-
-Each fixup and the PSF Launcher application has an XML metadata file that contains the following information:
-
-* Version: The version of the PSF is in MAJOR.MINOR.PATCH format according to [Sem Version 2](https://semver.org/).
-* Minimum Windows Platform: The minimum windows version required for the fixup or PSF Launcher.
-* Description: A short description of the fixup.
-* WhenToUse: Heuristics on when you should apply the fixup.
-
-For an example, see the [FileRedirectionFixupMetadata.xml](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/master/fixups/FileRedirectionFixup/FileRedirectionFixupMetadata.xml) metadata file for the redirection fixup. The metadata schema is available [here](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/master/MetadataSchema.xsd).
 
 ## Other debugging techniques
 
