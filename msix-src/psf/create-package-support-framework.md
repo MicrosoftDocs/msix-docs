@@ -9,13 +9,11 @@ ms.localizationpriority: medium
 
 # Create a Package Support Framework fixup 
 
-If there isn't yet a runtime fix for the issue that you want to resolve, you can create a new runtime fix by writing replacement functions and including any configuration data that makes sense. Let's look at each part.
+If there is no runtime fix for your issue, you can create a new runtime fix by writing replacement functions and including any configuration data that makes sense. Let's look at each part.
 
 ### Replacement functions
 
 First, identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
-
-In Visual Studio, open the runtime fix project that you created earlier in this guide.
 
 Declare the ``FIXUP_DEFINE_EXPORTS`` macro and then add a include statement for the `fixup_framework.h` at the top of each .CPP file where you intend to add the functions of your runtime fix.
 
@@ -47,7 +45,7 @@ The call to `DECLARE_FIXUP` maps the `MessageBoxW` function to your new replacem
 
 #### Protect against recursive calls to functions in runtime fixes
 
-You can optionally apply the `reentrancy_guard` type to your functions that protect against recursive calls to functions in runtime fixes.
+The `reentrancy_guard` type can be added to your functions to protect them against recursive function calls.
 
 For example, you might produce a replacement function for the `CreateFile` function. Your implementation might call the `CopyFile` function, but the implementation of the `CopyFile` function might call the `CreateFile` function. This may lead to an infinite recursive cycle of calls to the `CreateFile` function.
 
