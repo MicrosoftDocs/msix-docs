@@ -9,7 +9,7 @@ ms.custom: RS5
 ---
 
 
-# Package Support Framework - current working directory
+# Current working directory PSF
 The Package Support Framework uses a config.json file to configure the behavior of an application.
 
 ## Proceedure

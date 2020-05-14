@@ -1,7 +1,7 @@
 ---
 Description: Fix issues that prevent your desktop application from running in an MSIX container
 title: Fix issues that prevent your desktop application from running in an MSIX container
-ms.date: 08/07/2019
+ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium

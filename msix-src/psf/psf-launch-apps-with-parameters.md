@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Package Support Framework - Launch Apps with Parameters
+# Launch Apps with Parameters through Package Support Framework
 The Package Support Framework uses a config.json file to configure the behavior of an application.
 
 ## Proceedure
