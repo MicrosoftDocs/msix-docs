@@ -124,7 +124,7 @@
           href: packaging-tool/edit-icons-and-assets.md
     - name: Tasks for after you create an MSIX package
       items: 
-        - name: Package Support Framework
+        - name: Package Support Framework (PSF)
           items:
             - name: Overview
               href: psf/package-support-framework-overview.md
