@@ -11,10 +11,7 @@ ms.localizationpriority: medium
 
 The [Package Support Framework](package-support-framework-overview.md) is an open source kit that helps you apply fixes to your existing desktop application (without modifying the code) so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
-This article helps you to identify application compatibility issues, and to find, apply, and extend runtime fixes that address them. Sections of this article are intended for different roles:
-
-* IT professionals or administrators: The most relevant sections are [Identify packaged application compatibility issues](#identify-packaged-application-compatibility-issues), [Find a runtime fix](#find-a-runtime-fix), and [Apply a runtime fix](#apply-a-runtime-fix).
-* Developers: Although developers may find the entire article useful, the most relevant sections are [Debug, extend, or create a runtime fix](#debug-extend-or-create-a-runtime-fix), [Create a runtime fix](#create-a-runtime-fix), and [Other debugging techniques](#other-debugging-techniques).
+This article provides an indepth look at each component of Package Support Framework and step by step guide to using it.
 
 ## Understand what is inside a Package Support Framework
 
@@ -29,8 +26,6 @@ Here is the process:
 When users starts your application, the Package Support Framework launcher is the first executable that runs. It reads your configuration file and injects the runtime fixes and the runtime manager DLL into the application process. The runtime manager applies the fix when it's needed by the application to run inside of an MSIX container.
 
 ![Package Support Framework  DLL Injection](images/package-support-framework-2.png)
-
-<a id="identify" />
 
 ## Step 1: Identify packaged application compatibility issues
 
@@ -452,20 +447,13 @@ When you're done, your ``config.json`` file will look something like this.
 
 ### Debug a runtime fix
 
-In Visual Studio, press F5 to start the debugger.  The first thing that starts is the PSF Launcher application, which in turn, starts your target desktop application.  To debug the target desktop application, you'll have to manually attach to the desktop application process by choosing **Debug**->**Attach to Process**, and then selecting the application process. To permit the debugging of a .NET application with a native runtime fix DLL, select managed and native code types (mixed mode debugging).  
+In Visual Studio, press F5 to start the debugger.  The first thing that starts is the PSF Launcher application, which in turn, starts your target desktop application.  To debug the target desktop application, you'll have to manually attach to the desktop application process by choosing **Debug->Attach to Process**, and then selecting the application process. To permit the debugging of a .NET application with a native runtime fix DLL, select managed and native code types (mixed mode debugging).  
 
 Once you've set this up, you can set break points next to lines of code in the desktop application code and the runtime fix project. If you don't have the source code to your application, you'll be able to set break points only next to lines of code in your runtime fix project.
 
->[!NOTE]
-> While Visual Studio gives you the simplest development and debugging experience, there are some limitations, so later in this guide, we'll discuss other debugging techniques that you can apply.
+Because F5 debugging runs the application by deploying loose files from the package layout folder path, rather than installing from a .msix/.appx package, the layout folder typically does not have the same security restrictions as an installed package folder. As a result, it may not be possible to reproduce package path access denial errors prior to applying a runtime fix.
 
-## Other debugging techniques
-
-While Visual Studio gives you the simplest development and debugging experience, there are some limitations.
-
-First, F5 debugging runs the application by deploying loose files from the package layout folder path, rather than installing from a .msix / .appx package.  The layout folder typically does not have the same security restrictions as an installed package folder. As a result, it may not be possible to reproduce package path access denial errors prior to applying a runtime fix.
-
-To address this issue, use .msix / .appx package deployment rather than F5 loose file deployment.  To create a .msix / .appx package file, use the [MakeAppx](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) utility from the Windows SDK, as described above. Or, from within Visual Studio, right-click your application project node and select **Store**->**Create App Packages**.
+To address this issue, use .msix / .appx package deployment rather than F5 loose file deployment.  To create a .msix / .appx package file, use the [MakeAppx](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) utility from the Windows SDK, as described above. Or, from within Visual Studio, right-click your application project node and select **Store -> Create App Packages**.
 
 Another issue with Visual Studio is that it does not have built-in support for attaching to any child processes launched by the debugger.   This makes it difficult to debug logic in the startup path of the target application, which must be manually attached by Visual Studio after launch.
 
