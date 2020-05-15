@@ -1,7 +1,7 @@
 ---
 Description: The Package Support Framework helps work with the working directory.
 title: Package Support Framework current working directory
-ms.date: 09/05/2018
+ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp, msix, psf
 ms.localizationpriority: medium
@@ -9,11 +9,11 @@ ms.custom: RS5
 ---
 
 
-# Package Support Framework - current working directory
+# Current working directory PSF
 The Package Support Framework uses a config.json file to configure the behavior of an application.
 
 ## Proceedure
-To configure the application execution to receive paramter values passed into it during application launch, the following steps must be completed. 
+To configure the application execution to receive parameter values passed into it during application launch, the following steps must be completed. 
 
 1. Download the Package Support Framework
 1. Configure the Package Support Framework (config.json)
