@@ -32,8 +32,8 @@ additionalContent:
     - title: Top tasks
       items:
         # Card
-        - title: Learn about our customers' journeys with MSIX 
-          summary: Read about our customers' journeys on how MSIX has improved their deployment of Windows applications.
+        - title: Learn about customer journeys with MSIX 
+          summary: Read about how MSIX has improved customer deployments of Windows applications.
           url: customer-journey.md
         # Card
         - title: Create MSIX packages from existing installers
