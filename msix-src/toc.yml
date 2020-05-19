@@ -54,7 +54,7 @@
           href: https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
     - name: MSIX resources
       href: resources.md
-    - name: MSIX Customers' Journeys
+    - name: Customer journeys
       href: customer-journey.md
     - name: MSIX SDK
       items: 
