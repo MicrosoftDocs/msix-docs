@@ -79,4 +79,4 @@ On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterpris
 Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business requires Windows 10, version 1809 and later.
 
 ### Non Windows Platform
-The MSIX SDK is an open source project that allows developers to use the MSIX package format universally on all platforms. The SDK can be used by any cross platform client app that allows for third parties to build plugins or extensions. The client app developers can use the app extension model that is available on Windows 10 platform and use the MSIX SDK on the non-Windows 10 platforms such as macOS, iOS, Android and Linux. 
+The [MSIX SDK](https://github.com/Microsoft/msix-packaging) is an open source project that allows developers to use the MSIX package format universally on all platforms. The SDK can be used by any cross platform client app that allows for third parties to build plugins or extensions. The client app developers can use the app extension model that is available on Windows 10 platform and use the MSIX SDK on the non-Windows 10 platforms such as macOS, iOS, Android and Linux. 
