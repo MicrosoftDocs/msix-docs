@@ -17,6 +17,7 @@ You can test your Windows app to ensure that it will operate correctly on device
 
 The HVCI policy enforces the rules that apps must conform to in order to run on Windows 10 S.
 
+
 > [!IMPORTANT]
 >We recommend that you apply these policies to a virtual machine, but if you want to apply them to your local machine, make sure to review our best practice guidance in the "Next, install the policy and restart your system" section of this topic before you apply a policy.
 
