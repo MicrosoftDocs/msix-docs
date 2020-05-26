@@ -33,5 +33,7 @@ This article lists the things you need to know before you convert your existing 
 
 + __Your application uses the current working directory__. At runtime, your packaged desktop application won't get the same working directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your application to function correctly.
 
++ __Your application installs and loads assemblies from the Windows side-by-side folder__. For example, your application uses C runtime libraries VC8 or VC9 and is dynamically linking them from Windows side-by-side folder, meaning your code is using the common DLL files from a shared folder, such as C:\Windows\WinSxS. This is not supported. You will need to statically link them by linking to the redistributable library files directly into your code. 
+
   > [!NOTE]
   > If your app needs to write to the installation directory or use the current working directory, you can also consider adding a runtime fixup using the [Package Support Framework](https://github.com/microsoft/MSIX-PackageSupportFramework) to your package. For more details, see [this article](../psf/package-support-framework.md).  

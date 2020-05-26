@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool release notes
 description: This article provides the full history of release notes for different versions of the MSIX Packaging Tool.
-ms.date: 12/19/2019
+ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix, msix packaging tool, insider program
 ms.localizationpriority: medium
@@ -10,22 +10,26 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2020.225.0
-- Ability to import registry files (.reg) in Package Editor
+## Version 1.2020.423.0
+- Ability to add items from the package editor to the exclusion list
+- Use ctrl to multi-select options in package editor
+- Added a prompt when overwriting files when moving or adding
+
+## Version 1.2020.402.0 - Public Release
+- Package Integrity setting is on by default
 - Ability to automatically add [MSIX Core support](../../msix-core/msixcore.md) to an MSIX
+- Ability to import or export registry files (.reg) in Package Editor
+- Create package page now shows the default save location
 - Add InstalledLocationVirtualization extension
+- Improved quality of icons extracted
+- Improved icon extraction from shortcuts
 Fixed bugs:
 - Validate manifest format after editing 
 - Make message when First Launch Task fails clearer 
 - Forbid relative paths for Unpack 
 - Updated file filters so they show what formats are valid (e.g., for installers it used to say *.* and now `*.msi, *.exe, ...`) 
 - Fixed when Unpack would convert spaces in paths into "%20"
-
-## Version 1.2020.203.0
-- Package Integrity setting is on by default
-- Create package page now shows the default save location
-- Ability to export your registry files(.reg)
-- General bug fix improvements
+- general bug fixes
 
 ## Version 1.2019.1220.0 - Public Release
 - Support for converting an existing installer with services is now available

@@ -10,12 +10,22 @@ ms.localizationpriority: medium
 
 # Set up your desktop application for MSIX packaging in Visual Studio
 
-You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then, you can publish that package to the Microsoft Store or sideload it onto one or more PCs.
+You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then you can distribute your package to the Microsoft Store, on the Web, in your enterprise or any other distribution mechanism you're using.
 
-The **Windows Application Packaging Project** project is available in the following versions of Visual Studio. For the best experience, we recommend that you use the latest release.
+## Required Visual Studio version and workload
+
+The **Windows Application Packaging Project** project is available in the following versions of Visual Studio:
 
 * Visual Studio 2019
 * Visual Studio 2017 15.5 and later
+
+To see the Windows Application Packaging Project template in the 'Add New Project' menu, you need to make sure you have **at least one** of the following the Visual Studio workloads installed:
+
+* The 'Universal Windows Platform development' workload
+* The Optional Component 'MSIX Packaging Tools' in the NET Core workload.
+* The Optional Component 'MSIX Packaging Tools' in the .NET desktop development workload.
+
+ For the best experience we recommend that you use the latest Visual Studio release.
 
 > [!IMPORTANT]
 > The **Windows Application Packaging Project** project in Visual Studio is supported on Windows 10, version 1607, and later. It can only be used in projects that target Windows 10 Anniversary Update (10.0; Build 14393) or a later release.

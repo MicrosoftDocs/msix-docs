@@ -1,7 +1,7 @@
 ---
 title: MSIX packaging tool insider program
 description: This article introduces the MSIX Packaging Tool Insider Program, which provides early access releases of the MSIX Packaging Tool.
-ms.date: 06/25/2019
+ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
 ms.localizationpriority: medium
@@ -30,15 +30,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.225.0
-
-- MSIX Core support can be automatically added to generated packages
-- Ability to import your registry files (.reg) in Package Editor
-
-## Version 1.2020.203.0
-
--Package Integrity setting is on by default
-- Ability to export your registry files(.reg)
+## Version 1.2020.423.0
+- Ability to exclude items from the package editor
+- Use ctrl to multi-select options in package editor
+- Added a prompt when overwriting files
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

@@ -1,24 +1,33 @@
 ---
 Description: Fix issues that prevent your desktop application from running in an MSIX container
 title: Fix issues that prevent your desktop application from running in an MSIX container
-ms.date: 08/07/2019
+ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ---
 
-# Apply runtime fixes to an MSIX package by using the Package Support Framework
+# Get Started with Package Support Framework 
 
 The [Package Support Framework](package-support-framework-overview.md) is an open source kit that helps you apply fixes to your existing desktop application (without modifying the code) so that it can run in an MSIX container. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
-This article helps you to identify application compatibility issues, and to find, apply, and extend runtime fixes that address them. Sections of this article are intended for different roles:
+This article provides an indepth look at each component of Package Support Framework and step by step guide to using it.
 
-* IT professionals or administrators: The most relevant sections are [Identify packaged application compatibility issues](#identify-packaged-application-compatibility-issues), [Find a runtime fix](#find-a-runtime-fix), and [Apply a runtime fix](#apply-a-runtime-fix).
-* Developers: Although developers may find the entire article useful, the most relevant sections are [Debug, extend, or create a runtime fix](#debug-extend-or-create-a-runtime-fix), [Create a runtime fix](#create-a-runtime-fix), and [Other debugging techniques](#other-debugging-techniques).d
+## Understand what is inside a Package Support Framework
 
-<a id="identify" />
+The Package Support Framework contains an executable, a runtime manager  DLL, and a set of runtime fixes.
 
-## Identify packaged application compatibility issues
+![Package Support Framework](images/package-support-framework.png)
+
+Here is the process: 
+1. Create a configuration file that specifies the fixes that you want to apply to your application. 
+1. Modify your package to point to the Package Support Framework (PSF) launcher executable file.
+
+When users starts your application, the Package Support Framework launcher is the first executable that runs. It reads your configuration file and injects the runtime fixes and the runtime manager DLL into the application process. The runtime manager applies the fix when it's needed by the application to run inside of an MSIX container.
+
+![Package Support Framework  DLL Injection](images/package-support-framework-2.png)
+
+## Step 1: Identify packaged application compatibility issues
 
 First, create a package for your application. Then, install it, run it, and observe its behavior. You might receive error messages that can help you identify a compatibility issue. You can also use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to identify issues.  Common issues relate to application assumptions regarding the working directory and program path permissions.
 
@@ -52,7 +61,7 @@ In this issue, the application is failing to write a .log file to its package pa
 
 <a id="find" />
 
-## Find a runtime fix
+## Step 2: Find a runtime fix
 
 The PSF contains runtime fixes that you can use right now, such as the file redirection fixup.
 
@@ -66,7 +75,7 @@ For example, if your application writes to a log file that is in the same direct
 
 Make sure to review the community contributions to our [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework) page. It's possible that other developers have resolved an issue similar to yours and have shared a runtime fix.
 
-## Apply a runtime fix
+## Step 3: Apply a runtime fix
 
 You can apply an existing runtime fix with a few simple tools from the Windows SDK, and by following these steps.
 
@@ -438,98 +447,13 @@ When you're done, your ``config.json`` file will look something like this.
 
 ### Debug a runtime fix
 
-In Visual Studio, press F5 to start the debugger.  The first thing that starts is the PSF Launcher application, which in turn, starts your target desktop application.  To debug the target desktop application, you'll have to manually attach to the desktop application process by choosing **Debug**->**Attach to Process**, and then selecting the application process. To permit the debugging of a .NET application with a native runtime fix DLL, select managed and native code types (mixed mode debugging).  
+In Visual Studio, press F5 to start the debugger.  The first thing that starts is the PSF Launcher application, which in turn, starts your target desktop application.  To debug the target desktop application, you'll have to manually attach to the desktop application process by choosing **Debug->Attach to Process**, and then selecting the application process. To permit the debugging of a .NET application with a native runtime fix DLL, select managed and native code types (mixed mode debugging).  
 
 Once you've set this up, you can set break points next to lines of code in the desktop application code and the runtime fix project. If you don't have the source code to your application, you'll be able to set break points only next to lines of code in your runtime fix project.
 
->[!NOTE]
-> While Visual Studio gives you the simplest development and debugging experience, there are some limitations, so later in this guide, we'll discuss other debugging techniques that you can apply.
+Because F5 debugging runs the application by deploying loose files from the package layout folder path, rather than installing from a .msix/.appx package, the layout folder typically does not have the same security restrictions as an installed package folder. As a result, it may not be possible to reproduce package path access denial errors prior to applying a runtime fix.
 
-## Create a runtime fix
-
-If there isn't yet a runtime fix for the issue that you want to resolve, you can create a new runtime fix by writing replacement functions and including any configuration data that makes sense. Let's look at each part.
-
-### Replacement functions
-
-First, identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
-
-In Visual Studio, open the runtime fix project that you created earlier in this guide.
-
-Declare the ``FIXUP_DEFINE_EXPORTS`` macro and then add a include statement for the `fixup_framework.h` at the top of each .CPP file where you intend to add the functions of your runtime fix.
-
-```c++
-#define FIXUP_DEFINE_EXPORTS
-#include <fixup_framework.h>
-```
-
->[!IMPORTANT]
->Make sure that the `FIXUP_DEFINE_EXPORTS` macro appears before the include statement.
-
-Create a function that has the same signature of the function who's behavior you want to modify. Here's an example function that replaces the `MessageBoxW` function.
-
-```c++
-auto MessageBoxWImpl = &::MessageBoxW;
-int WINAPI MessageBoxWFixup(
-    _In_opt_ HWND hwnd,
-    _In_opt_ LPCWSTR,
-    _In_opt_ LPCWSTR caption,
-    _In_ UINT type)
-{
-    return MessageBoxWImpl(hwnd, L"SUCCESS: This worked", caption, type);
-}
-
-DECLARE_FIXUP(MessageBoxWImpl, MessageBoxWFixup);
-```
-
-The call to `DECLARE_FIXUP` maps the `MessageBoxW` function to your new replacement function. When your application attempts to call the `MessageBoxW` function, it will call the replacement function instead.
-
-#### Protect against recursive calls to functions in runtime fixes
-
-You can optionally apply the `reentrancy_guard` type to your functions that protect against recursive calls to functions in runtime fixes.
-
-For example, you might produce a replacement function for the `CreateFile` function. Your implementation might call the `CopyFile` function, but the implementation of the `CopyFile` function might call the `CreateFile` function. This may lead to an infinite recursive cycle of calls to the `CreateFile` function.
-
-For more information on `reentrancy_guard` see [authoring.md](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/Authoring.md)
-
-### Configuration data
-
-If you want to add configuration data to your runtime fix, consider adding it to the ``config.json``. That way, you can use the `FixupQueryCurrentDllConfig` to easily parse that data. This example parses a boolean and string value from that configuration file.
-
-```c++
-if (auto configRoot = ::FixupQueryCurrentDllConfig())
-{
-    auto& config = configRoot->as_object();
-
-    if (auto enabledValue = config.try_get("enabled"))
-    {
-        g_enabled = enabledValue->as_boolean().get();
-    }
-
-    if (auto logPathValue = config.try_get("logPath"))
-    {
-        g_logPath = logPathValue->as_string().wstring();
-    }
-}
-```
-
-### Fixup metadata
-
-Each fixup and the PSF Launcher application has an XML metadata file that contains the following information:
-
-* Version: The version of the PSF is in MAJOR.MINOR.PATCH format according to [Sem Version 2](https://semver.org/).
-* Minimum Windows Platform: The minimum windows version required for the fixup or PSF Launcher.
-* Description: A short description of the fixup.
-* WhenToUse: Heuristics on when you should apply the fixup.
-
-For an example, see the [FileRedirectionFixupMetadata.xml](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/master/fixups/FileRedirectionFixup/FileRedirectionFixupMetadata.xml) metadata file for the redirection fixup. The metadata schema is available [here](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/master/MetadataSchema.xsd).
-
-## Other debugging techniques
-
-While Visual Studio gives you the simplest development and debugging experience, there are some limitations.
-
-First, F5 debugging runs the application by deploying loose files from the package layout folder path, rather than installing from a .msix / .appx package.  The layout folder typically does not have the same security restrictions as an installed package folder. As a result, it may not be possible to reproduce package path access denial errors prior to applying a runtime fix.
-
-To address this issue, use .msix / .appx package deployment rather than F5 loose file deployment.  To create a .msix / .appx package file, use the [MakeAppx](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) utility from the Windows SDK, as described above. Or, from within Visual Studio, right-click your application project node and select **Store**->**Create App Packages**.
+To address this issue, use .msix / .appx package deployment rather than F5 loose file deployment.  To create a .msix / .appx package file, use the [MakeAppx](https://docs.microsoft.com/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) utility from the Windows SDK, as described above. Or, from within Visual Studio, right-click your application project node and select **Store -> Create App Packages**.
 
 Another issue with Visual Studio is that it does not have built-in support for attaching to any child processes launched by the debugger.   This makes it difficult to debug logic in the startup path of the target application, which must be manually attached by Visual Studio after launch.
 

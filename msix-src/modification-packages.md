@@ -113,5 +113,3 @@ You can create a modification package manually by using the [MakeAppX.exe](packa
 * Create Registry.dat, User.dat and Userclass.dat to create whatever registry keys are needed to load your modification package. This is only required if you need your main application to view custom registry keys. Remember that since everything is running inside a container, at runtime the main package and the modification package virtual registry will merge such that main package can view the modification packages virtual registry.  
 
 This process also supports file system plug-ins and customizations, as long as the executable of the main application is not in a virtual file system (VFS). This is to ensure that the main package will get all the VFS of the main package and the modification package.
-
-Support for file system plug-ins and customizations while the executable of the main application is in a VFS is planned for the next major release of Windows. You can preview this support starting in Windows 10 Insider Preview Build 18312 or later. For more information, see [this article](modification-package-1903.md). 

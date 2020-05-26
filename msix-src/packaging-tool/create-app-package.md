@@ -1,7 +1,7 @@
 ---
 title: Create an MSIX package from any desktop installer
 description: Create an MSIX package from any desktop installer(MSI, EXE, ClickOnce, or App-V)
-ms.date: 02/11/2019
+ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -122,7 +122,6 @@ After you choose to package your application on an existing virtual machine, you
 
 - Package name:
     - Required and corresponds to package identity Name in the manifest to describe the contents of the package.
-    - Must match the Name subject information of the certificate used to sign a package.
     - Is not shown to the end user.
     - Is case-sensitive and cannot have a space.
     - Can accept string between 3 and 50 characters in length that consists of alpha-numeric, period, and dash characters.
@@ -140,13 +139,15 @@ After you choose to package your application on an existing virtual machine, you
 - Version:
     - Required and corresponds to the package in the manifest to describe the version number of the package.
     - This field accepts a version string in quad notation: "Major.Minor.Build.Revision".
+- Description:
+    - This field is optional.
 - Install location:
     - This is the location that the installer is going to copy the application payload to (usually Programs Files folder).
     - This field is optional but recommended when the app payload is being installed outside of the Program Files folders.
     - Browse to and select a folder path.
-    - Make sure this file matches the installer's install location while you go through the application install operation.
-- Description:
-    - This field is optional. 
+    - Make sure this file matches the installer's install location while you go through the application install operation. 
+- Add support for MSIX Core to this package. 
+    - When selected, this checkbox will then reveal a drop down that will aloow you to select a Windows version for [MSIX Core](../msix-core/msixcore.md) support for the package you are generating.
 
 ## Installation
 

@@ -19,9 +19,9 @@ When creating an application in Microsoft Endpoint Configuration Manager, select
 
 ## Microsoft Intune
 
-Microsoft Intune supports the deployment of MSIX application to client devices through the client app model. As MSIX is a standardized installation packaging format, the details regarding the application (Application Name, Description, and Publisher) are automatically populated within the App information.
+Microsoft Intune supports the deployment of MSIX applications to client devices through the client app model. As MSIX is a standardized installation packaging format, the details regarding the application (Application Name, Description, and Publisher) are automatically populated within the App information.
 
-Installation of an MSIX application is standardized. As such, when adding a new line-of-business app to Microsoft Intune, there is no requirement to configure the silent installation parameters required for install. For guidance about how to create and deploy an application through Microsoft Intune, see [Creating line of business apps in Intune](https://docs.microsoft.com/en-us/mem/intune/apps/lob-apps-windows).
+Installation of an MSIX application is standardized. As such, when adding a new line-of-business app to Microsoft Intune, there is no requirement to configure the silent installation parameters required for install. For guidance about how to create and deploy an application through Microsoft Intune, see [Creating line of business apps in Intune](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows).
 
 ## Web (App Installer)
 
@@ -36,16 +36,15 @@ For IIS distribution of a MSIX file, and how to configure your IIS server to sup
 
 [App Center](https://appcenter.ms/) enables you to automatically build your app, test it on real devices, and distribute it to beta testers.  App Center lets you ship apps more frequently, at higher-quality, and with greater confidence.  With App Center you can connect your repo and within minutes automate your builds, test on real devices in the cloud, distribute apps to beta testers, and monitor real-world usage with crash and analytics data. All in one place.
 
-
 ## Deployment Image Servicing and Management (DISM.exe) and Provisioning
 
 ### DISM
 IT Pros can use the Deployment Image Servicing and Management (DISM) cmdlets to install, uninstall, and configure MSIX packages on a Windows image before deployment.  
-To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](managing-your-msix-deployment-dism-provisioning.md)
+To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](deploy-preinstalled-apps.md)
 
 ### Provisioning
 IT Pros use provisioning to configure end-user devices without re-imaging.  IT Pros can pre-install MSIX packages on their end-users systems.
-To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](managing-your-msix-deployment-dism-provisioning.md)
+To learn more about provisioning, see [Deployment Image Servicing and Management and Provisioning.](deploy-preinstalled-apps.md)
 
 ## Managing your MSIX app
 

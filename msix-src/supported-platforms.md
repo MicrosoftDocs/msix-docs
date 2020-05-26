@@ -2,7 +2,7 @@
 title: Supported platforms 
 description: This article describes supported platform for MSIX. 
 author: dianmsft
-ms.date: 12/02/2019
+ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -16,6 +16,8 @@ MSIX is currently supported on the following versions of Windows:
 * Windows 10, version 1709, and later.
 * Windows Server 2019 LTSC and later.
 * Windows Enterprise 2019 LTSC and later.
+
+For more details on Windows lifecycle support such as end of service dates, please visit [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 This article describes how key features of MSIX are supported in these versions of Windows.
 
@@ -42,7 +44,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | Native MSIX install and uninstall | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark: |
 | [Package Support Framework (PSF)](psf/package-support-framework-overview.md) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
 | [Windows services](packaging-tool/convert-an-installer-with-services.md) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
-
+| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
 ## Package format support
 
 The following table shows which package formats are supported in different versions of Windows 10.
@@ -75,3 +77,6 @@ The minimum supported OS version of an MSIX package is listed in the manifest fi
 On Windows 10 versions 1709, 1803, and 1809, we support the mainstream enterprise deployment scenarios. These include installation through Microsoft Endpoint Configuration Manager, Microsoft Intune, PowerShell or double-click installation.
 
 Currently, MSIX installation through the Microsoft Store and Microsoft Store for Business requires Windows 10, version 1809 and later.
+
+### Non-Windows Platform
+The [MSIX SDK](https://github.com/Microsoft/msix-packaging) is an open source project that allows developers to use the MSIX package format universally on all platforms. The SDK can be used by any cross platform client app that allows for third parties to build plugins or extensions. The client app developers can use the app extension model that is available on Windows 10 platform and use the MSIX SDK on the non-Windows 10 platforms such as macOS, iOS, Android and Linux. 
