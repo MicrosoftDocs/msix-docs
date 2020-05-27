@@ -9,13 +9,13 @@ ms.localizationpriority: medium
 
 # Test your Windows app for Windows 10 in S mode
 
-You can test your Windows app to ensure that it will operate correctly on devices that run Windows 10 in S mode. In fact, if you plan to publish your app to the Microsoft Store, you must do this because it is a store requirement. To test your app, you can apply a Hypervisor-Protected Code Integrity (HVCI) policy on a device that is running Windows 10 Pro.
+You can test your Windows app to ensure that it will operate correctly on devices that run Windows 10 in S mode. In fact, if you plan to publish your app to the Microsoft Store, you must do this because it is a store requirement. To test your app, you can apply a Windows Defender Application Control (WDAC) policy on a device that is running Windows 10 Pro.
 
 > [!NOTE]
-> The device on which you apply the You can test your Windows app to ensure that it will operate correctly on devices that run Windows 10 in S mode. In fact, if you plan to publish your app to the Microsoft Store, you must do this because it is a store requirement. To test your app, you can apply a HVCI policy on a device that is running Windows 10 Pro.
+> The device on which you apply the You can test your Windows app to ensure that it will operate correctly on devices that run Windows 10 in S mode. In fact, if you plan to publish your app to the Microsoft Store, you must do this because it is a store requirement. To test your app, you can apply a WDAC policy on a device that is running Windows 10 Pro.
 
 
-The HVCI policy enforces the rules that apps must conform to in order to run on Windows 10 S.
+The WDAC policy enforces the rules that apps must conform to in order to run on Windows 10 S.
 
 
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ The HVCI policy enforces the rules that apps must conform to in order to run on 
 
 ## First, download the policies and then choose one
 
-Download the HVCI policies [here](https://go.microsoft.com/fwlink/?linkid=849018).
+Download the WDAC policies [here](https://go.microsoft.com/fwlink/?linkid=849018).
 
 Then, choose the one that makes the most sense to you. Here's summary of each policy.
 
