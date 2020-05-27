@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Optional packages contain content that can be integrated with a main package. These are useful for downloadable content (DLC), dividing a large app for size restraints, or for shipping any additional content separate from your original app.
 
-Related sets are an extension of optional packages -- they allow you to enforce a strict set of versions across main and optional packages. They also let you load native code (C++) from optional packages. Related sets can be have different publishers from the main app if it is deployed outside of the store.
+Related sets are an extension of optional packages -- they allow you to enforce a strict set of versions across main and optional packages. They also let you load native code (C++) from optional packages. Related sets can have different publishers from the main app if it is deployed outside of the store.
 
 Optional packages and related sets all run inside the main app's MSIX container.
 

@@ -42,7 +42,6 @@ If you have an MSIX package, you can use the MSIX Package Tool to update your ex
 5. Under **Manifest file**, click **Open File**
 6. You are viewing the package's manifest. Under **Dependency** add MSIX Core as a Target Device Family (see above)
 7. Save and Close the manifest 
-
 8. Re-sign the package 
 9. Click **Save** and select whether you would like your package to increment 
 
