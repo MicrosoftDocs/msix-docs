@@ -42,6 +42,33 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row-end:::
 :::row:::
     :::column:::
+        <h3>MSIX App Attach in Windows Virtual Desktop</h3>
+        <p>Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/embed/6kkPLFgPaN8" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        <h3>Application security and deployment</h3>
+        <p>Learn how to improve you app distribution.  We will talk about using code signing to improve authenticity of your application and improvements we are doing to reduce developer friction.  We also dive into how to improve your app packaging and deployment with MSIX.  We will cover the benefits, features and moving your existing app to MSIX.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/watch?v=iju9KAAIUCM" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        <h3>Building apps for 1 billion Windows 10 Desktops and expanding reach w/ Windows Virtual Desktop</h3>
+        <p>Learn how to take advantage of incredible Windows technologies like WinUI3 and MSIX to target the 1 billion+ in-market Windows 10 devices, and to reach billions of other devices via Windows Virtual Desktop.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/watch?v=W2aL8mgJU2M" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
         <h3>MSIX for developers</h3>
         <p>Learn how developers can take advantage of the benefits of MSIX.</p>
     :::column-end:::
@@ -56,14 +83,5 @@ This article provides a list of GitHub repositories, videos, and other resources
     :::column-end:::
     :::column:::
         <iframe src="https://www.microsoft.com/videoplayer/embed/RE3iiD5" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        <h3>MSIX App Attach in Windows Virtual Desktop</h3>
-        <p>Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.</p>
-    :::column-end:::
-    :::column:::
-        <iframe src="https://www.youtube.com/embed/6kkPLFgPaN8" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
     :::column-end:::
 :::row-end:::
