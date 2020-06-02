@@ -16,7 +16,7 @@ ms.custom: Vibranium
 - Improved support for converting any installer type
 - Bug fixes:
 	- Disable selecting local vm machine when Hyper-V is not present
-- When enforce store requirements checkbox is selected, prevent creation of icons not accepted by store
+	- When enforce store requirements checkbox is selected, prevent creation of icons not accepted by store
 
 ## Version 1.2020.423.0
 - Ability to add items from the package editor to the exclusion list
