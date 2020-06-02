@@ -10,6 +10,14 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2020.528.0
+- Ability to add multiple files to the package editor
+- Ability to import multiple .reg files to the package editor
+- Improved support for converting any installer type
+- Bug fixes:
+	- Disable selecting local vm machine when Hyper-V is not present
+- When enforce store requirements checkbox is selected, prevent creation of icons not accepted by store
+
 ## Version 1.2020.423.0
 - Ability to add items from the package editor to the exclusion list
 - Use ctrl to multi-select options in package editor
