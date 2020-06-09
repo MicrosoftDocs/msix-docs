@@ -10,6 +10,9 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2020.603.0
+- Fixed an issue with App-V registry values during conversion
+
 ## Version 1.2020.528.0
 - Ability to add multiple files to the package editor
 - Ability to import multiple .reg files to the package editor
