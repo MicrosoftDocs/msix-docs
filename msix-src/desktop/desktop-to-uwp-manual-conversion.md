@@ -140,7 +140,7 @@ Here is an example [VisualElements](https://docs.microsoft.com/uwp/schemas/appxp
 	Square44x44Logo="images\small_icon.png"
 	Description="A useful description" />
 ```
-<a id="target-based-assets" />
+<a id="target-based-assets"></a>
 
 ## (Optional) Add Target-based unplated assets
 
@@ -157,7 +157,7 @@ Target-based assets are for icons and tiles that appear on the Windows taskbar, 
 
 4. Continue to the next subsection to generate a new Package Resource Index file.
 
-<a id="make-pri" />
+<a id="make-pri"></a>
 
 ### Generate a Package Resource Index (PRI) file using MakePri
 
@@ -179,7 +179,7 @@ There is no ARM version of this tool.
 
 6.	Package your application by using the instructions in the next step.
 
-<a id="make-appx" />
+<a id="make-appx"></a>
 
 ## Test your application before packaging
 
