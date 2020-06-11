@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 Run your packaged application and see how it looks without having to sign it. Then, set breakpoints and step through code. When you're ready to test your application in a production environment, sign your application and then install it. This topic shows you how to do each of these things.
 
-<a id="run-app" />
+<a id="run-app"></a>
 
 ## Run your application
 

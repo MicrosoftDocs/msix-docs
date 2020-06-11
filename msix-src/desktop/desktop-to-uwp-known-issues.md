@@ -64,7 +64,7 @@ Run **certutil** from the command line on the PFX file and copy the *Subject* fi
 certutil -dump <cert_file.pfx>
 ```
 
-<a id="bad-pe-cert" />
+<a id="bad-pe-cert"></a>
 
 ### Bad PE certificate (0x800700C1)
 

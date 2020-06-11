@@ -59,7 +59,7 @@ The second issue appears in the following image.
 
 In this issue, the application is failing to write a .log file to its package path. This would suggest that a file redirection fixup might help.
 
-<a id="find" />
+<a id="find"></a>
 
 ## Step 2: Find a runtime fix
 
