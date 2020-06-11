@@ -68,7 +68,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
     > [!NOTE]
-    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in packaged desktop or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md).
+    > Starting in Visual Studio 2019, a temporary certificate is no longer generated in packaged desktop or UWP projects. To create or export certificates, use the PowerShell cmdlets described in [this article](create-certificate-package-signing.md). In recent versions of Visual Studio, you can also [sign your app with a certificate stored in Azure Key Vault](../desktop/sign-with-akv-cert.md) for development and test scenarios.
 
     > [!IMPORTANT]
     > If you're publishing your app in Microsoft Store, your app will be signed with a trusted certificate for you. This allows the user to install and run your app without installing the associated app signing certificate.
