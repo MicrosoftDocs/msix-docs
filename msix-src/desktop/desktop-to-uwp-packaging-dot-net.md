@@ -40,12 +40,11 @@ Here are a few other things you can do from the Visual Studio Application Packag
 
 :heavy_check_mark: (If publishing to the Microsoft Store) Easily assign an identity to your application from a name that you've already reserved in [Partner Center](https://partner.microsoft.com/dashboard).
 
-
 ## Prepare your application
 
 Review this guide before you begin creating a package for your application: [Prepare to package a desktop application](desktop-to-uwp-prepare.md).
 
-<a id="new-packaging-project"/>
+<a id="new-packaging-project"></a>
 
 ## Setup the Windows Application Packaging Project in your solution
 
