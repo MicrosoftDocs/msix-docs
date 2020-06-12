@@ -1,7 +1,7 @@
 ---
 title: App Installer file update settings
 description: This article describes options for how to configure the behavior of app updates by using the App Installer file.
-ms.date: 12/12/2018
+ms.date: 06/12/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -24,9 +24,18 @@ Additionally, you can choose to apply updates in two different ways:
 
 Finally, when you inform the user of an update, you can either force them to take the update before allowing them to launch the app, or you can allow them to launch the app and apply the update at an opportune time.
 
-Specifically, the syntax that is available to you is the following:
 
-- The [UpdateSettings](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-update-settings) element can have the following elements:
+- The [UpdateSettings](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-update-settings) element can have the following child elements:
+
+| App Installer file update setting | Min Windows 10 Version
+|------------------|--------------------|
+|  OnLaunch| 1709                |
+|  HoursBetweenUpdateChecks| 1803                |
+| AutomaticBackgroundTask | 1803 |
+|  ForceUpdateFromAnyVersion | 1903 |
+|  ShowPrompt | 1903 |
+|  UpdateBlocksActivation | 1903 |
+
 
     - **OnLaunch**: Checks for updates on launch. This type of update can show UI and has the following attributes:
 
