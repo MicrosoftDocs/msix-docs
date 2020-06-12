@@ -138,12 +138,12 @@ If your application is a UWP app, passing in AddPackageByAppInstallerOptions.For
 
 You must call RegisterApplicationRestart before your app begins to shut down. Below is an example of doing so using interop services to call the native method in C#:
 
-```chsharp
+```csharp
  // Register the active instance of an application for restart in your Update method
  uint res = RelaunchHelper.RegisterApplicationRestart(null, RelaunchHelper.RestartFlags.NONE);
 ```
 
-An example helper class to call the native method from C#:
+An example of the helper class to call the native RegisterApplicationRestart method in C#:
 
 ```csharp
 using System;
