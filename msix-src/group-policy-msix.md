@@ -19,7 +19,7 @@ Group Policy does not have native support to install MSIX applications.
 
 ## Policies for blocking Microsoft Store and MSIX 
 
-You may have your own requirements on how you want to configure app udpates from the Microsoft Store app. The Store app triggers updates for apps, including third-party apps as well as first-party apps such as Calculater and Photos. If the Store app is removed from a computer, that can lead to no app updates on that computer. 
+You may have your own requirements on how you want to configure app updates from the Microsoft Store app. The Store app triggers updates for apps, including third-party apps as well as first-party apps such as Calculator and Photos. If the Store app is removed from a computer, that can lead to no app updates on that computer. 
 
 Here is the list of Store policies and how it impacts your MSIX packages. 
 
