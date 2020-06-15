@@ -28,7 +28,7 @@ Here is the list of Store policies and how it impacts your MSIX packages.
 This policy enables or disables the automatic download and installation of app updates. If you enable this setting, the automatic download and installation of app updates is turned off. If you disable this setting, the automatic download and installation of app updates is turned on. If you don't configure this setting, the automatic download and installation of app updates is determined by a registry setting that the user can change using **Settings** in the Store.
 
 * **GPO:** `Computer Configuration\Administrative Templates\Windows Components\Store`
-* **Registry:** `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStoreAutoDownload REG_DWORD` (NB: enable = 2 = apps will not be updated, disable = 4 = app will be automatically updated)
+* **Registry:** `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore AutoDownload REG_DWORD` (Data: enable = 2 = apps will not be updated, disable = 4 = app will be automatically updated)
 * **App updates:** If enabled, the automatic download and install of app updates will be turned off. If disabled, the automatic download and install of app updates will be turned on. 
 
 ### Turn off Store application
