@@ -23,7 +23,7 @@ Prior to running the MSIX Toolkit's Bulk Conversion script, to automate the conv
 
 ### Host Machine
 The Host Machine must meet the following requirements:
-* [MSIX Packaging Tool](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
+* [MSIX Packaging Tool](https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf?activetab=pivot:overviewtab) must be installed.
 * If Virtual Machines are being used, Hyper-V must be installed.
 * If Remote Machines are being used:
     * Device exists in the same Domain as the Remote Machine(s):
