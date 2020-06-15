@@ -29,7 +29,7 @@ This policy enables or disables the automatic download and installation of app u
 
 * **GPO:** `Computer Configuration\Administrative Templates\Windows Components\Store`
 * **Registry:** `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStoreAutoDownload REG_DWORD` (NB: enable = 2 = apps will not be updated, disable = 4 = app will be automatically updated)
-* **App updates:** Yes and No, Keyword here is automatic, the **Get Updates** button in the Store app will not be disabled.
+* **App updates:** If enabled, the automatic download and install of app updates will be turned off. If disabled, the automatic download and install of app updates will be turned on. 
 
 ### Turn off Store application
 
