@@ -150,7 +150,7 @@
           href: toolkit/msix-toolkit-overview.md
         - name: Modify package publisher script
           href: toolkit/msix-toolkit-modifypackagepublisher.md
-        - name: Batch conversion scripts
+        - name: Bulk conversion scripts
           href: toolkit/msix-toolkit-msixbatchconversion.md
         - name: AppInstaller File Builder tool
           href: toolkit/msix-toolkit-appinstallerfilebuilder.md

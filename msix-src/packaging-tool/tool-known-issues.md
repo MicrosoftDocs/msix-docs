@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. 
-ms.date: 02/03/2020
+ms.date: 06/11/2020
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
 ms.localizationpriority: medium
@@ -18,11 +18,38 @@ This article describes known issues and provides troubleshooting tips to conside
 
 If you have opted in to our [Insider Program](insider-program.md), make sure you have the correct version of the MSIX Packaging Tool:
 - Go to the **About** section in the MSIX Packaging Tool to view which version you are on.
-- Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed. Make sure the MSA that's signed up for flighting is the account that is signed into the Microsoft Store. 
-- Manually update the MSIX Packaging tool through the Microsoft Store on your computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**.
+- Go [here](insider-program.md#current-insider-preview-build) to determine the latest Insider Preview version, and confirm you have that version of the MSIX Packaging Tool installed. 
+- Make sure the MSA that's signed up for flighting is the account that is signed into the Microsoft Store. 
+- Manually update the MSIX Packaging Tool through the Microsoft Store on your computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**. Alternatively, search for the MSIX Packaging Tool, and on the product page you can then prompt it for an update. 
 - To install the MSIX Packaging Tool for offline use, follow [these instructions](disconnected-environment.md#get-the-msix-packaging-tool) to ensure you get the latest app through our offline process.
 
 If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram).
+
+### MSIX Packaging Tool driver
+
+The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update. It will fail to install if the Windows Update service is disabled on the computer or if Windows Insider flight ring settings do not match the OS build of the computer.
+
+If you are running into problems acquiring the driver, or you are working in an offline environment, you can find links to download the driver [here](disconnected-environment.md#get-the-msix-packaging-tool-driver). 
+
+If you have downloaded the driver and are running into issues during your package conversion, it may be one of the following issues.
+
+#### Network connectivity issues
+
+The following error codes might indicate that you are encountering connection issues:
+
+* -2145107924 (0x8024402c)
+* -2145107945 (0x80244017)
+* -2145123272 (0x80240438)
+
+#### Windows Server Update Service (WSUS), Configuration Manager, or group policies affecting Windows Update connectivity
+
+The following error code may indicate that policies on your computer are be affecting Windows Update connectivity: -2145124306 (0x8024002e).
+
+If you receive this error code, you may need to check your [environment settings and policies](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+
+#### Driver required a reinstall
+
+In this scenario, the MSIX Packaging Tool will notify you in the error message and logs that your driver needs a restart. Restart your computer and start your conversion again to fix this issue. 
 
 ### Minimum version
 

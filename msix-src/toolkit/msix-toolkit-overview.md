@@ -35,7 +35,7 @@ Microsoft includes the following scripts, redistributables, and tools in the MSI
 
 | Name | Description |
 |------|-------------|
-| [BatchConversion](msix-toolkit-msixbatchconversion.md) | A set of PowerShell scripts that provide the ability to bulk conversion of applications into the MSIX application package format. |
+| [BulkConversion](msix-toolkit-msixbatchconversion.md) | A set of PowerShell scripts that provide the ability to bulk conversion of applications into the MSIX application package format. |
 | [ModifyPackagePublisher](msix-toolkit-modifypackagepublisher.md) | A PowerShell script that provides the ability to update the publisher information of an MSIX application to align with the certificate used to sign the application. |
 
 ## Redistributables
