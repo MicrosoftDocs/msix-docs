@@ -194,6 +194,6 @@ The app information provided in the `conversionsParameters` variable will be use
 
 ## Logging
 
-The script will generate a log file which outlines what has transpired throughout the script execution. The log file will provide details related to the packaging of applications to the MSIX packaging format, and information related to script progression. The logs can be read from any text utility, but have been configured for reading using the Trace32 log reader. Errors in the script execution will be highlighted as Red, and Warnings as yellow. For more information on the Trace 32 log reader, please visit [CMTrace](https://docs.microsoft.com/en-us/mem/configmgr/core/support/cmtrace) on Microsoft Docs.
+The script will generate a log file which outlines what has transpired throughout the script execution. The log file will provide details related to the packaging of applications to the MSIX packaging format, and information related to script progression. The logs can be read from any text utility, but have been configured for reading using the Trace32 log reader. Errors in the script execution will be highlighted as Red, and Warnings as yellow. For more information on the Trace 32 log reader, please visit [CMTrace](https://docs.microsoft.com/mem/configmgr/core/support/cmtrace) on Microsoft Docs.
 
 The log file is created within the script's directory `.\logs\BulkConversion.log`.
