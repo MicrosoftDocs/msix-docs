@@ -30,8 +30,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.603.0
-- Fixed an issue with App-V registry values during conversion
+## Version 1.2020.618.0
+- Added a longer timeout session for remote command line conversions
+- Improved MSIX Core OS selections to reduce conflicts and confusion
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
