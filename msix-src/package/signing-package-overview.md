@@ -60,4 +60,4 @@ Windows 10 allows users to select the mode in which to run their device on in th
 **Sideload apps**  and **Developer mode** are more permissive of apps that are signed by other certificates as long as those certificates are trusted and chain to one of the trusted roots on the device. Only select Developer mode if you are a developer and building or debugging Windows 10 apps. More info about Developer mode and what it provides can be found [here](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). 
 
 > [!NOTE]
-> Starting in Windows 10 version 2004 Sideload option is turned on by default for all. As a result **Developer mode** is now a toggle switch. Enterprises can still turn off Sideloading via policy. 
+> Starting in Windows 10 version 2004, Sideload option is turned on by default. As a result, **Developer mode** is now a toggle. Enterprises can still turn off Sideloading via policy. 
