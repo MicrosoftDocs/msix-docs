@@ -10,7 +10,7 @@ ms.custom: RS5
 ---
 # Schneider Electric
 
-![Schneider Electric](.../images/Logo_SE_Green_RGB-Screen.png)
+![Schneider Electric](../images/Logo_SE_Green_RGB-Screen.png)
 
 Schneider Electric develops GIS software to support both small and large utilities (electric, gas, water, fiber, coax) within the US and internationally.
 
