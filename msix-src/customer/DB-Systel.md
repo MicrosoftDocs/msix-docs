@@ -10,7 +10,7 @@ ms.custom: RS5
 ---
 # DB Systel
 
-![DB Systel Logo](images/DB_logo_red_outlined_200px_rgb.png)
+![DB Systel Logo](../images/DB_logo_red_outlined_200px_rgb.png)
 
 DB Systel GmbH, headquartered in Frankfurt am Main, is a wholly owned subsidiary of DB AG and a digital partner for all Group companies. Deutsche Bahn AG is the second-largest transport company in the world and is the largest railway operator and infrastructure owner in Europe. It operates large parts of the German railway and It carries about two billion passengers annually.
 
