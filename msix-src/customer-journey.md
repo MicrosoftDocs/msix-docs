@@ -2,7 +2,7 @@
 title: Customer journeys
 description: This article describes MSIX customer journey. 
 author: dianmsft
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
