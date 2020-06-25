@@ -2,7 +2,7 @@
 title: ECNO
 description: ECNO describes their experience with MSIX
 author: dianmsft
-ms.date: 65/25/2020
+ms.date: 06/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
