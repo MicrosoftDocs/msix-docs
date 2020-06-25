@@ -1,7 +1,7 @@
 ---
 description: This article describes signing requirements for Windows 10 apps. Signing is a required step in the process of creating an app package that can be deployed.
 title: Sign a Windows 10 app package 
-ms.date: 07/03/2019
+ms.date: 06/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
