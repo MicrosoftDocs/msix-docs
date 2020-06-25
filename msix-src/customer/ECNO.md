@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-## ECNO
+# ECNO
 
 ![ECNO logo](../images/ECNO_masterlogo.png)
 
