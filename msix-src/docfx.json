@@ -49,9 +49,10 @@
       "ms.author":
       {
         "app-package-updates.md": "diahar",
+        "customer-journey.md": "diahar",
         "detect-package-identity.md": "diahar",
         "group-policy-msix.md": "diahar",
-        "index.md": "diahar",
+        "index.yml": "diahar",
         "modification-packages.md": "diahar",
         "msix-container.md": "diahar",
         "msix-server-2019.md": "diahar",
@@ -62,6 +63,7 @@
         "store-developer-package-update.md": "diahar",
         "supported-platforms.md": "diahar",
         "app-installer/**.md": "diahar",
+        "customer/**.md": "diahar",
         "desktop/**.md": "tajimha",
         "manage/**.md": "diahar",
         "msix-sdk/**.md": "diahar",
@@ -74,9 +76,10 @@
       "author":
       {
         "app-package-updates.md": "dianmsft",
+        "customer-journey.md": "dianmsft",
         "detect-package-identity.md": "dianmsft",
         "group-policy-msix.md": "dianmsft",
-        "index.md": "dianmsft",
+        "index.yml": "dianmsft",
         "modification-packages.md": "dianmsft",
         "msix-container.md": "dianmsft",
         "msix-server-2019.md": "dianmsft",
@@ -87,6 +90,7 @@
         "store-developer-package-update.md": "dianmsft",
         "supported-platforms.md": "dianmsft",
         "app-installer/**.md": "dianmsft",
+        "customer/**.md": "dianmsft",
         "desktop/**.md": "Huios",
         "manage/**.md": "dianmsft",
         "msix-sdk/**.md": "dianmsft",

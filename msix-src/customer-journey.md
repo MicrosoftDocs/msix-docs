@@ -9,10 +9,10 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Customer journeys with MSIX Overview
+# Customer journeys with MSIX
 
-Many customers are successfully using MSIX to improve the deployment of their Windows applications. This article highlights several customer journeys with MSIX.
+Many customers are successfully using MSIX to improve the deployment of their Windows applications. This section highlights the experiences of several of these customers.
 
-* [Learn how DB Systel is enabling agile deployment of Windows applications](customer/DB-Systel.md)
-* [Learn how Educational Computing Network of Ontario (ECNO) is improving desktop application delivery and install experience for Ontario students](customer/ECNO.md)
-* [Learn how Schneider Electric is developing and deploying WPF desktop applications](customer/Schneider-Electric.md)
+* Learn how [DB Systel](customer/db-systel.md) is enabling agile deployment of Windows applications.
+* Learn how [Educational Computing Network of Ontario (ECNO)](customer/ecno.md) is improving desktop application delivery and install experience for Ontario students
+* Learn how [Schneider Electric](customer/schneider-electric.md) is developing and deploying WPF desktop applications
