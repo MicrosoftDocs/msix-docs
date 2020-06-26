@@ -40,10 +40,9 @@ To create an optional package in Visual Studio, you'll need to:
 2. From your **main package** project, open the `Package.appxmanifest` file. Navigate to the "Packaging" tab and make a note of your **package family name**, which is everything before the "_" character.
 3. From your **optional package** project, right click the `Package.appxmanifest` and select **Open with > XML (Text) Editor**.
 4. Locate the `<Dependencies>` element in the file. Add the following:
-
-```XML
-<uap3:MainPackageDependency Name="[MainPackageDependency]"/>
-```
+    ```XML
+    <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
+    ```
 
 Replace `[MainPackageDependency]` with your **package family name** from Step 2. This will specify that your **optional package** is dependent on your **main package**.
 
@@ -51,8 +50,8 @@ Once you have your package dependencies set up from Steps 1 through 4, you can c
 
 Visual Studio can be configured to re-deploy your main package each time you deploy an optional package. To set the build dependency in Visual Studio, you should:
 
-- Right click the optional package project and select **Build Dependencies > Project Dependencies...**
-- Check the main package project and select "OK". 
+1. Right click the optional package project and select **Build Dependencies > Project Dependencies...**
+2. Check the main package project and select "OK". 
 
 Now, every time you enter F5 or build an optional package project, Visual Studio will build the main package project first. This will ensure that your main project and optional projects are in sync.
 
@@ -65,36 +64,33 @@ If you want to load code from an optional package into the main package, you wil
     > [!IMPORTANT]
     > The new text file must be named: `Bundle.Mapping.txt`.
 3. In the `Bundle.Mapping.txt` file you'll specify relative paths to any optional package projects or external packages. A sample `Bundle.Mapping.txt` file should look something like this:
+    ```syntax
+    [OptionalProjects]
+    "..\ActivatableOptionalPackage1\ActivatableOptionalPackage1.vcxproj"
+    "..\ActivatableOptionalPackage2\ActivatableOptionalPackage2.vcxproj"
 
-```syntax
-[OptionalProjects]
-"..\ActivatableOptionalPackage1\ActivatableOptionalPackage1.vcxproj"
-"..\ActivatableOptionalPackage2\ActivatableOptionalPackage2.vcxproj"
+    [ExternalPackages]
+    "..\ActivatableOptionalPackage1\x86\Release\ActivatableOptionalPackage3_1.1.1.0\ ActivatableOptionalPackage3_1.1.1.0.appx"
+    ```
 
-[ExternalPackages]
-"..\ActivatableOptionalPackage1\x86\Release\ActivatableOptionalPackage3_1.1.1.0\ ActivatableOptionalPackage3_1.1.1.0.appx"
-```
-
-When your solution is configured this way, Visual Studio will create a bundle manifest for the main package with all of the required metadata for related sets. 
+When your solution is configured this way, Visual Studio will create a [bundle manifest](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) named AppxBundleManifest.xml for the main package with all of the required metadata for related sets. 
 
 Note that like optional packages, a `Bundle.Mapping.txt` file for related sets will only work on Windows 10, version 1703 or higher. Additionally, your app's Target Platform Min Version should be set to 10.0.15063.0 or higher.
 
 ## Removing Optional Packages 
 Users can go into their **Settings** app and remove the optional packages. Similarly, developers can use the [RemoveOptionalPackageAsync](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.PackageCatalog) to remove a list of optional packages. 
 
-```
- 
-    PackageCatalog catalog = PackageCatalog.OpenForCurrentPackage();
-    List<string> optionalList = new List<string>();
-    optionalList.Add("FabrikamAgeAnalysis_kwpnjs8c36mz0");
+```csharp
+PackageCatalog catalog = PackageCatalog.OpenForCurrentPackage();
+List<string> optionalList = new List<string>();
+optionalList.Add("FabrikamAgeAnalysis_kwpnjs8c36mz0");
     
-     //Warn user that application will be restarted. 
-    var result = await catalog.RemoveOptionalPackagesAsync(optionalList);
-    if(result.ExtendedError != null)
-    {
-        throw removalResult.ExtendedError;
-    }
-    
+// Warn user that application will be restarted. 
+var result = await catalog.RemoveOptionalPackagesAsync(optionalList);
+if (result.ExtendedError != null)
+{
+    throw removalResult.ExtendedError;
+}
 ```
 > [!NOTE]
 > In the case of a related set the platform will need to restart the main application to finalize the removal to avoid situations where the app has content that is loaded from the package that is being removed. The apps must notify the users that the application will need to be restarted before the app calls the API.
