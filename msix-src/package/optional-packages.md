@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Optional packages contain content that can be integrated with a main package. These are useful for downloadable content (DLC), dividing a large app for size restraints, or for shipping any additional content separate from your original app.
 
-Related sets are an extension of optional packages -- they allow you to enforce a strict set of versions across main and optional packages. They also let you load native code (C++) from optional packages. Related sets can have different publishers from the main app if it is deployed outside of the store.
+Related sets are an extension of optional packages -- they allow you to enforce a strict set of versions across main and optional packages. Related sets can have different publishers from the main app if it is deployed outside of the Store.
 
 Optional packages and related sets all run inside the main app's MSIX container.
 
@@ -39,14 +39,12 @@ To create an optional package in Visual Studio, you'll need to:
 1. Make sure your app's **Target Platform Min Version** is set to: 10.0.15063.0 or higher.
 2. From your **main package** project, open the `Package.appxmanifest` file. Navigate to the "Packaging" tab and make a note of your **package family name**, which is everything before the "_" character.
 3. From your **optional package** project, right click the `Package.appxmanifest` and select **Open with > XML (Text) Editor**.
-4. Locate the `<Dependencies>` element in the file. Add the following:
+4. Locate the `<Dependencies>` element in the file. Add the following, and replace `[MainPackageDependency]` with your **package family name** from Step 2. This will specify that your **optional package** is dependent on your **main package**.
     ```XML
     <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
     ```
 
-Replace `[MainPackageDependency]` with your **package family name** from Step 2. This will specify that your **optional package** is dependent on your **main package**.
-
-Once you have your package dependencies set up from Steps 1 through 4, you can continue developing as you normally would. If you would like to load code from the optional package into the main package, you will need to build a related set. See the [Related sets](#related_sets) section for more details.
+After you have your package dependencies set up from Steps 1 through 4, you can continue developing as you normally would. 
 
 Visual Studio can be configured to re-deploy your main package each time you deploy an optional package. To set the build dependency in Visual Studio, you should:
 
@@ -57,7 +55,11 @@ Now, every time you enter F5 or build an optional package project, Visual Studio
 
 ## Related sets<a name="related_sets"></a>
 
-If you want to load code from an optional package into the main package, you will need to build a related set. To build a related set, your main package and optional package must be tightly coupled. The metadata for related sets is specified in the .appxbundle or .msixbundle file of the main package. Visual Studio helps you get the correct metadata in your files. To configure your app's solution for related sets, use the following steps:
+A related set consists of a main package and an optional package that are tightly coupled via metadata that is specified in the .appxbundle or .msixbundle file of the main package. This metadata links the main package to the optional package (using the name of the .appxbundle file + version), and the optional package to the main package (using the version independent name). Visual Studio helps you get the correct metadata in your files. 
+
+The versioning of packages in a related set is synchronized in a way that won't allow the latest version of any package to be used until all of the related set packages (specified by version in the main package) are installed. Packages are serviced independently, but packages specified in the set may not be used until all of them have been updated.
+
+To configure your app's solution for related sets, use the following steps:
 
 1. Right click the main package project, select **Add > New Item...**
 2. From the window, search the Installed Templates for ".txt" and add a new text file.
