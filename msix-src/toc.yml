@@ -55,7 +55,15 @@
     - name: MSIX resources
       href: resources.md
     - name: Customer journeys
-      href: customer-journey.md
+      items:
+        - name: Overview
+          href: customer-journey.md
+        - name: DB Systel
+          href: customer/db-systel.md
+        - name: ECNO
+          href: customer/ecno.md
+        - name: Schneider Electric
+          href: customer/schneider-electric.md
     - name: MSIX SDK
       items: 
         - name: Overview
