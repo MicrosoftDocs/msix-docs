@@ -14,6 +14,10 @@ The following partners provide additional tooling and support for MSIX developme
 
 :::row:::
 :::column:::
+[![Access IT Automation logo](images/AccessITAutomationLogoTransp.png)](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
+:::column-end:::
+
+:::column:::
 [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
 :::column-end:::
 
@@ -21,13 +25,12 @@ The following partners provide additional tooling and support for MSIX developme
 [![Camwood logo](images/Camwood_Logo_2.png)](http://camwood.com/windows-10/)
 :::column-end:::
 
-:::column:::
-[![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)
-:::column-end:::
-
 :::row-end:::
 
 :::row:::
+:::column:::
+[![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)
+:::column-end:::
 
 :::column:::
 [![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)
@@ -37,14 +40,15 @@ The following partners provide additional tooling and support for MSIX developme
 [![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
 :::column-end:::
 
-:::column:::
-[![installAware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)    
-:::column-end:::
+
 
 
 :::row-end:::
 
 :::row:::
+:::column:::
+[![installAware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)    
+:::column-end:::
 
 :::column:::
 [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
