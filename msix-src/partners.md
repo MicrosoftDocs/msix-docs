@@ -62,10 +62,6 @@ The following partners provide additional tooling and support for MSIX developme
 [![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
 :::column-end:::
 
-:::column:::
-[![Access IT Automation logo](images/AccessITAutomationLogoTransp.png)](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
-:::column-end:::
-
 :::row-end:::
 
 
