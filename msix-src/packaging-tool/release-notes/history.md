@@ -10,6 +10,9 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2020.625.0
+- Bug fixes for final release version
+
 ## Version 1.2020.618.0
 - Added a longer timeout session for remote command line conversions
 - Improved MSIX Core OS selections to reduce conflicts and confusion
