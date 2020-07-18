@@ -30,8 +30,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.625.0
-- Bug fixes for final release version
+## Version 1.2020.709.0 - Public Release
+- Ability to add multiple files to the package editor
+- Ability to import multiple .reg files to the package editor
+- Improved support for converting any installer type
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
