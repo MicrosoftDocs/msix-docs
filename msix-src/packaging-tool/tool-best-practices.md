@@ -12,15 +12,15 @@ ms.custom: RS5
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-If you haven't already configured your environment for conversion, you can follow our [environment best practices](prepare-your-environment.md) recommendations and then come back here to set up the MSIX Packaging Tool. Before you start any conversions we recommend configuring your settings in the MSIX Packaging Tool to simplify your workflow each time.
+If you haven't already configured your environment for conversion, you can follow our [environment best practices](prepare-your-environment.md) recommendations and then come back here to set up the MSIX Packaging Tool. Before you start any conversions we recommend configuring your settings in the MSIX Packaging Tool to simplify your workflow each time. Launch the MSIX Packaging Tool and then go to the settings (gear in the top right of the landing page) to configure your tool defaults. 
 
-### Tool defaults
+### Configure your MSIX Packaging Tool defaults
 
 - **Generate a command line with each package** This setting will make it so you automatically generate a command line template file so that if you are repackaging the same application (such as a new version) through the command line later, you can have a pre-configured command line template file for that application. You will need to provide an installer in order to generate a template file during the workflow.
 - **Select all fixes by default for prepare computer** This setting allows you to have all of the recommended fixes pre-selected so that during the prepare computer stage, you can simply choose to disable all without having to select them individually.
 - **Enforce Microsoft Store versioning requirements** If you are planning to deploy your application through the Microsoft Store, you should ensure this is selected so that it conforms to the store requirements (this will affect the package version requirements and minimum OS version support). If this option is unchecked, the package will have a minimum version set to Windows 10 1709, and you will have full control over the 4 digits of the package version. If this option is checked, the package will have a minimum version set to Windows 10 1809 and the version must end in .0 (e.g. 1.5.6.0).
 - **Add Package Integrity when generating a package** If this option is selected, Package Integrity will be automatically added to all packages generated. [Package Integrity](../package/signing-package-overview.md#package-integrity-enforcement) is supported on Windows 10 2004 and later.
-- **Add support for MSIX Core when generating a package** This option allows you to add 9MSIX Core](../msix-core/msixcore.md) support to every package that you generate. Once selected, this will offer a dropdown that will allow you to specify the Windows version to support. 
+- **Add support for MSIX Core when generating a package** This option allows you to add [MSIX Core](../msix-core/msixcore.md) support to every package that you generate. Once selected, this will offer a dropdown that will allow you to specify the Windows version to support. 
 - **Default save location** Specify the default save location where the generated packages and associated files will be saved.
 - **Default installer browse location** Specify the default location to find installers to convert.
 - **Server port number** Specify the server port number for the MSIX Packaging Tool. This is relevant if you are planning to convert using a [remote machine](remote-conversion-setup.md). 
@@ -30,7 +30,7 @@ If you haven't already configured your environment for conversion, you can follo
     - Sign with a certificate (.pfx) - We recommend this option if you already have a trusted certificate that you are using in your enterprise.
     - Specify a .cer file (does not sign) - If you do not wish to sign at the time of conversion, but want to ensure that the publisher information will be valid at the time of signing you can choose this option.
     - Do not sign package. - If you wish to sign your package using another method or at a later time after the package has been generated you can choose this option.
-    We also recommend that you add a timestamp server url to your signing preference (when applicable), so that your application can be installed, even if your certificate expires.   
+    We also recommend that you add a **timestamp server url** to your signing preference (when applicable), so that your application can be installed, even if your certificate expires.   
 
 > [!NOTE]
 > Signing an MSIX package format application with a SHA1 certificate is not supported.
