@@ -40,14 +40,18 @@ The following partners provide additional tooling and support for MSIX developme
 [![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)    
 :::column-end:::
 
-
+:::column:::
+[![installAware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)    
+:::column-end:::
 
 
 :::row-end:::
 
 :::row:::
+
+
 :::column:::
-[![installAware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)    
+[![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
 :::column-end:::
 
 :::column:::
@@ -59,7 +63,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::column-end:::
 
 :::column:::
-[![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
+[![SSH2 logo](images/SSH2_Logo.png)](www.ssh2.xyz)
 :::column-end:::
 
 :::row-end:::
