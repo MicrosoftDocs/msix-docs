@@ -63,7 +63,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::column-end:::
 
 :::column:::
-[![SSH2 logo](images/SSH2_Logo.png)](www.ssh2.xyz)
+[![SSH2 logo](images/SSH2_Logo.png)](https://ssh2.xyz/)
 :::column-end:::
 
 :::row-end:::
