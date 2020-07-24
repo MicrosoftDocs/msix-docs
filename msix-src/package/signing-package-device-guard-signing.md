@@ -47,7 +47,7 @@ To register your app with the proper settings so that you can use Azure AD authe
     > [!NOTE]
     > Under **Redirect URI** section, we recommend you choose **Public client (mobile & desktop)**. Otherwise, if you choose **Web** for the app type, you will need to provide a [client secret](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process.
 
-2. After you register your app, on the main page for your app in the Azure portal, click **API permissions** and add a permission for the **Windows Store for Business API**.
+2. After you register your app, on the main page for your app in the Azure portal, click **API permissions**, under **APIs my organization uses** and add a permission for the **Windows Store for Business API**.
 
 3. Next, select **Delegated permissions** and then select **user_impersonation**.
 
@@ -113,10 +113,10 @@ To test the Device Guard signing, download your certificate from the Microsoft S
 1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** and then select **Settings**.
 3. View **Devices**.
-4. Under **View the list of catalog and policy files which have been signed using this portal.**
-5. Download the latest certificate. This should be the one that was used to sign your package. 
+4. View **Download your organization's root certificate for use with Device Guard**
+5. Click **Download** 
 
-Deploy this certificate to your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
+Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
 
 ## Common errors
 
