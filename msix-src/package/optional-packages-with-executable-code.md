@@ -24,7 +24,7 @@ To get the latest development tools, see [Downloads and tools for Windows 10](ht
 > To submit an app that uses optional packages and/or related sets to the Store, you will need permission. Optional packages and related sets can be used for Line of Business (LOB) or enterprise apps without Partner Center permission if they are not submitted to the Store. See [Windows developer support](https://developer.microsoft.com/windows/support) to get permission to submit an app that uses optional packages and related sets.
 
 > [!NOTE]
-> Optional packages containing executable code must be part of a [related set](optional-packages.md#related_sets). You will not be able to execute code from an optional package unless it is part of a related set.
+> Optional packages containing executable code must be part of a [related set](optional-packages.md#related-sets). You will not be able to execute code from an optional package unless it is part of a related set.
 
 ## C++ Optional packages with executable code
 
@@ -54,7 +54,7 @@ To get started building an optional code package in C#, follow the below steps t
     <uap3:MainPackageDependency Name="12345.MainAppProjectTest" />
     ```
 
-6. Add a `Bundle.mapping.txt` file to the main app. Follow the steps in this [Related sets](optional-packages.md#related_sets) section to create a related set containing both apps.
+6. Add a `Bundle.mapping.txt` file to the main app. Follow the steps in this [Related sets](optional-packages.md#related-sets) section to create a related set containing both apps.
 
 7. Build the optional package project and then navigate to the package Reference folder in the output from the build found at `..\[PathToOptionalPackageProject]\bin\[architecture]\[configuration]\Reference`. Note that you can choose any architecture in the path to the Reference folder since the `.winmd` file (step 8) is architecture independent.
 
