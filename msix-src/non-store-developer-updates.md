@@ -132,6 +132,7 @@ private async void CommandInvokedHandler(IUICommand command)
     }
 }
 ```
+
 ## Automatically restarting your app after an update
 
 If your application is a UWP app, passing in AddPackageByAppInstallerOptions.ForceApplicationShutdown OR AddPackageOptions.ForceTargetAppShutdown when applying an update should schedule the app to restart after the shutdown + update. For non-UWP apps you need to call [RegisterApplicationRestart](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions#updates) before applying the update.
