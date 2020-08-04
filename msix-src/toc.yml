@@ -55,7 +55,17 @@
     - name: MSIX resources
       href: resources.md
     - name: Customer journeys
-      href: customer-journey.md
+      items:
+        - name: Overview
+          href: customer-journey.md
+        - name: DB Systel
+          href: customer/db-systel.md
+        - name: ECNO
+          href: customer/ecno.md
+        - name: Schneider Electric
+          href: customer/schneider-electric.md
+    - name: MSIX partners
+      href: partners.md
     - name: MSIX SDK
       items: 
         - name: Overview
@@ -150,7 +160,7 @@
           href: toolkit/msix-toolkit-overview.md
         - name: Modify package publisher script
           href: toolkit/msix-toolkit-modifypackagepublisher.md
-        - name: Batch conversion scripts
+        - name: Bulk conversion scripts
           href: toolkit/msix-toolkit-msixbatchconversion.md
         - name: AppInstaller File Builder tool
           href: toolkit/msix-toolkit-appinstallerfilebuilder.md
@@ -176,8 +186,10 @@
           href: desktop/desktop-to-uwp-packaging-dot-net.md
         - name: Package a desktop or UWP app in Visual Studio
           href: package/packaging-uwp-apps.md
+        - name: Sign packages with Azure Key Vault
+          href: desktop/sign-with-akv-cert.md
         - name: Optimize binaries with native images
-          href: desktop/desktop-to-uwp-r2r.md  
+          href: desktop/desktop-to-uwp-r2r.md
     - name: CI/CD pipelines for MSIX builds
       href: desktop/azure-dev-ops.md
     - name: Package from the command line

@@ -1,7 +1,7 @@
 ---
 description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
-ms.date: 07/12/2019
+ms.date: 07/24/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -47,7 +47,7 @@ To register your app with the proper settings so that you can use Azure AD authe
     > [!NOTE]
     > Under **Redirect URI** section, we recommend you choose **Public client (mobile & desktop)**. Otherwise, if you choose **Web** for the app type, you will need to provide a [client secret](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process.
 
-2. After you register your app, on the main page for your app in the Azure portal, click **API permissions** and add a permission for the **Windows Store for Business API**.
+2. After you register your app, on the main page for your app in the Azure portal, click **API permissions**, under **APIs my organization uses** and add a permission for the **Windows Store for Business API**.
 
 3. Next, select **Delegated permissions** and then select **user_impersonation**.
 
@@ -108,15 +108,15 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 
 ## Test
 
-To test the Device Guard signing, download your organization's root certificate from the Microsoft Store for Business Portal.
+To test the Device Guard signing, download your certificate from the Microsoft Store for Business Portal.
 
 1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
 2. Select **Manage** and then select **Settings**.
 3. View **Devices**.
 4. View **Download your organization's root certificate for use with Device Guard**
-5. Click **Download**
+5. Click **Download** 
 
-Deploy this certificate to your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
+Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
 
 ## Common errors
 

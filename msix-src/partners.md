@@ -14,6 +14,10 @@ The following partners provide additional tooling and support for MSIX developme
 
 :::row:::
 :::column:::
+[![Access IT Automation logo](images/AccessITAutomationLogoTransp.png)](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
+:::column-end:::
+
+:::column:::
 [![Advanced Installer logo](images/AdvancedInstaller_Logo.png)](https://www.advancedinstaller.com/desktop-bridge)
 :::column-end:::
 
@@ -21,13 +25,12 @@ The following partners provide additional tooling and support for MSIX developme
 [![Camwood logo](images/Camwood_Logo_2.png)](http://camwood.com/windows-10/)
 :::column-end:::
 
-:::column:::
-[![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)
-:::column-end:::
-
 :::row-end:::
 
 :::row:::
+:::column:::
+[![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)
+:::column-end:::
 
 :::column:::
 [![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)
@@ -46,6 +49,11 @@ The following partners provide additional tooling and support for MSIX developme
 
 :::row:::
 
+
+:::column:::
+[![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
+:::column-end:::
+
 :::column:::
 [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
 :::column-end:::
@@ -55,7 +63,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::column-end:::
 
 :::column:::
-[![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
+[![SSH2 logo](images/SSH2_Logo.png)](https://ssh2.xyz/)
 :::column-end:::
 
 :::row-end:::

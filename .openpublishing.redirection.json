@@ -99,6 +99,11 @@
       "source_path": "msix-src/desktop/desktop-to-uwp-root.md",
       "redirect_url": "/windows/msix/desktop/source-code-overview",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "msix-src/package/signing-in-vs.md",
+      "redirect_url": "/windows/msix/package/packaging-uwp-apps",
+      "redirect_document_id": true
     }
 
   ]

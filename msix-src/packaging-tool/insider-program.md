@@ -30,7 +30,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.528.0
+## Version 1.2020.709.0 - Public Release
 - Ability to add multiple files to the package editor
 - Ability to import multiple .reg files to the package editor
 - Improved support for converting any installer type
