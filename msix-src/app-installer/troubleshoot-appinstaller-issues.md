@@ -39,20 +39,33 @@ Each Windows 10 release improves on the sideloading experience, in the table bel
 
 ### Trusted certificates
 
-The app package must be signed with a certificate that is trusted by the device. Certificates provided by common Certificate Authorities are trusted by default in the Windows operating system, however if the certificate is not trusted, it must be installed in the device **before** installing the app. To trust the certificate, the certificate must be present in one of the following local machine certificate stores on your device:
+App packages must be signed with a certificate that is trusted by the device. Certificates provided by common Certificate Authorities are trusted by default in the Windows operating system.
 
-- Trusted Publishers
-- Trusted People
-- Trusted Root Authorities (not recommended)
+However, if the certificate used to sign an app package is not trusted, or is a locally-generated/self-signed certificate used during development, the app installer may report that the package is untrusted and will prevent it from being installed:
 
- >[!IMPORTANT]
- > Installing a certificate in the Local Machine store requires administrative access.
+![MSIX signed with missing or untrusted Cert](..\images\msix-bad-cert.png)
 
-### Dependencies not installed 
+To solve this issue, a user with local administrator rights to the device must use the **Computer Certificates** tool to import the certificate into one of the following containers:
+
+1. Local Computer: Trusted People
+2. Local Computer: Trusted Root Authorities (not recommended)
+
+>[!IMPORTANT]
+> **Do not import package signing certificates into the User Certificate store**. The App Installer does not search User Certificates when verifying package identity.
+
+The Computer Certificates management tool can be easily found by searching from the Start Menu:
+
+![Find the local Computer Certificates tool via the Start Menu](..\images\start-comp-cert.png)
+
+Once the signing certificate is successfully imported, re-running the app installer will show that the package is trusted and can be installed:
+
+![MSIX signed with a trusted Cert](..\images\msix-good-cert.png)
+
+### Dependencies not installed
 
 Windows 10 applications can have framework dependencies based on the application platform used to generate the app. If you are using C# or VB, the app will require the .NET Runtime and .NET framework packages. C++ applications require the VCLibs.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > If the app package is built in Release mode configuration, the framework dependencies will be obtained from the Microsoft Store. However, if the app is built in Debug mode configuration, the dependencies will be obtained from the location specified in the `.appinstaller` file.
 
 ### Files not accessible
@@ -64,7 +77,7 @@ When installing from an HTTP endpoint, it is important to verify that all files 
 
 ## Isolate App Installer app issues
 
-If the App Installer app cannot install the app, these steps will help identify the installation issue.
+If the App Installer cannot install the app, these steps will help identify the installation issue.
 
 ### Verify app package file installation
 
@@ -72,8 +85,6 @@ If the App Installer app cannot install the app, these steps will help identify 
 
 - Download the `.appinstaller` file to a local folder and try to install it using the `Add-AppxPackage -Appinstaller` PowerShell command.
 
-## Related Logs
+### App Installer event logs
 
-The app deployment infrastructure provides logs for debugging in the Windows Event Viewer. These logs are found here: `Application and Services Logs->Microsoft->Windows->AppxDeployment-Server`
-
-
+The app deployment infrastructure emits logs that are often useful for debugging installation issues via the Windows Event Viewer: `Application and Services Logs -> Microsoft -> Windows -> AppxDeployment-Server`
