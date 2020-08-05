@@ -67,7 +67,7 @@ An entry in processes has a value named executable, the value for which should b
     ],
     "processes": [
         {
-            "executable": "PSFSample",
+            "executable": "PSFSample"
         }
     ]
 }
