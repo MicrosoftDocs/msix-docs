@@ -10,6 +10,10 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2020.824.0
+- Added a Services Report to the Package Editor
+- General bug fixes
+
 ## Version 1.2020.709.0 - Public Release
 - Ability to add multiple files to the package editor
 - Ability to import multiple .reg files to the package editor
