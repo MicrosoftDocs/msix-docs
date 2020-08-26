@@ -28,19 +28,3 @@ Fixed bugs:
 - Added a longer timeout session for remote command line conversions
 - Improved MSIX Core OS selections to reduce conflicts and confusion
 
-## Version 1.2020.402.0 - Public Release
-- Package Integrity setting is on by default
-- Ability to automatically add [MSIX Core support](../../msix-core/msixcore.md) to an MSIX
-- Ability to import or export registry files (.reg) in Package Editor
-- Create package page now shows the default save location
-- Add InstalledLocationVirtualization extension
-- Improved quality of icons extracted
-- Improved icon extraction from shortcuts
-Fixed bugs:
-- Validate manifest format after editing 
-- Make message when First Launch Task fails clearer 
-- Forbid relative paths for Unpack 
-- Updated file filters so they show what formats are valid (e.g., for installers it used to say *.* and now `*.msi, *.exe, ...`) 
-- Fixed when Unpack would convert spaces in paths into "%20"
-- general bug fixes
-
