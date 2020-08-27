@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 > [!IMPORTANT]
 > We are introducing a new version of the Device Guard Signing Service (DGSS) to be more automation friendly. The new version of the service (DGSS v2) will be available for consumption starting mid-September 2020.  Action required from you is to transition to DGSS v2 before end of December 2020.  At the end of December 2020, the existing web page based mechanisms for the current version of the DGSS service will be retired and will no longer be available for use.  Please make plans to migrate to the new version of the service between September and December 2020.
- 
+>
 > Following are the major changes we are making to the service – 
 > - The method for consuming the service will change to a more automation-friendly method based on PowerShell cmdlets; these cmdlets will be available as a NuGet download.
 > - In order to achieve desired isolation, you will be required to get a new CI policy from DGSS v2 (and optionally sign it). 
 > -	DGSS v2 will not have support for downloading leaf certificates used to sign your files (however, the root certificate will still be available to download).  Note that the certificate used to sign a file can be easily extracted from the signed file itself.  As a result, once DGSS v1 is retired at the end of December 2020, you will no longer be able to download the leaf certificates used to sign your files.
- 
+>
 > The following functionality will be available via these PowerShell cmdlets –
 > - Get a CI policy
 > - Sign a CI policy
 > - Sign a catalog 
 > - Download root cert
 > - Download history of your signing operations 
- 
+>
 > We will share detailed instructions and NuGet location prior to mid-September. For any questions, please contact us at DGSSMigration@microsoft.com for more information on migration.  
 
 
