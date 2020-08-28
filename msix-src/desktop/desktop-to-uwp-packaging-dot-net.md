@@ -1,5 +1,5 @@
 ---
-Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
+description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
 ms.date: 02/02/2020
 ms.topic: article
