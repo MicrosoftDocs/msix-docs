@@ -1,5 +1,5 @@
 ---
-Description: Run the Desktop App Converter to package a Windows desktop application (like Win32, WPF, and Windows Forms).
+description: Run the Desktop App Converter to package a Windows desktop application (like Win32, WPF, and Windows Forms).
 title: Package an app using the Desktop App Converter (Desktop Bridge)
 ms.date: 07/29/2019
 ms.topic: article
