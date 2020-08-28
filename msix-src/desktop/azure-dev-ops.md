@@ -1,5 +1,5 @@
 ---
-Description: You can use Azure Pipelines to create automated builds for your MSIX project.
+description: You can use Azure Pipelines to create automated builds for your MSIX project.
 title: Set up a CI/CD pipeline to automate your MSIX builds and deployments
 ms.date: 01/27/2020
 ms.topic: article
