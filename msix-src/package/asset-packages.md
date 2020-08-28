@@ -53,7 +53,7 @@ It should be noted here that all of the files referenced in the AppxManifest (th
 
 Asset packages should also not contain a resources.pri; MRT cannot be used to access asset package files. To learn more about how to access asset package files and why asset packages require your app to be installed to an NTFS drive, see [Developing with asset packages and package folding](Package-Folding.md).
 
-To control whether an asset package is allowed to execute or not, you can use **[uap6:AllowExecution](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-allowexecution)** in the **Properties** element of the AppxManifest You must also add **uap6** to the top level **Package** element to become the following: 
+To control whether an asset package is allowed to execute or not, you can use **[uap6:AllowExecution](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-allowexecution)** in the **Properties** element of the AppxManifest You must also add **uap6** to the top level **Package** element to become the following: 
 
 ```XML
 <Package IgnorableNamespaces="uap uap6" 
@@ -62,4 +62,4 @@ xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
 xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
- If not specified, the default value for **AllowExecution** is **true** – set it to **false** for asset packages with no executables to make publishing faster.  
+ If not specified, the default value for **AllowExecution** is **true** – set it to **false** for asset packages with no executables to make publishing faster.

@@ -109,7 +109,7 @@ Under **Signing preference**, select a signing option. You can also set this as 
 - **Sign with a certificate(.pfx)** Browse to and select your .pfx certificate file. If the certificate is password protected, type the password in the password box.
 - **Specify a .cer file (does not sign)** This option allows you to specify a .cer file. This is useful when you don't want to sign the package, but you want to ensure that the publisher information matches the subject of the certificate that will be used for signing. 
 - **Do not sign package** Select this option if you will be signing your package at a later time. NOTE: You cannot install an MSIX package if it is not signed
-- When signing, we highly recommend adding a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](https://docs.microsoft.com/windows/win32/seccrypto/signtool).
+- When signing, we highly recommend adding a **timestamp** to your certificate so that the validity of your certificate can outlast its expiration date. The accepted format is an RFC 3161 [time stamp server URL](/windows/win32/seccrypto/signtool).
 
 > [!NOTE]
 > Signing an MSIX package format application with a SHA1 certificate is not supported.

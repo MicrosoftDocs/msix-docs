@@ -142,9 +142,9 @@ additionalContent:
             - text: Run, debug, and test an MSIX package
               url: desktop/desktop-to-uwp-debug.md
             - text: Windows App Certification Kit
-              url: https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit
+              url: /windows/uwp/debug-test-perf/windows-app-certification-kit
             - text: Package flighting
-              url: https://docs.microsoft.com/windows/uwp/publish/package-flights
+              url: /windows/uwp/publish/package-flights
             - text: Test for Windows 10 in S mode
               url: desktop/desktop-to-uwp-test-windows-s.md
         # Card
@@ -160,11 +160,11 @@ additionalContent:
         - title: API and schema reference
           links:
             - text: Package Manager API
-              url: https://docs.microsoft.com/uwp/api/windows.management.deployment
+              url: /uwp/api/windows.management.deployment
             - text: App manifest schema
-              url: https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest
+              url: /uwp/schemas/appxpackage/appx-package-manifest
             - text: App Installer file schema
-              url: https://docs.microsoft.com/uwp/schemas/appinstallerschema/schema-root
+              url: /uwp/schemas/appinstallerschema/schema-root
         # Card
         - title: Related resources
           links:

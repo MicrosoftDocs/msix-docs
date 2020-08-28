@@ -39,7 +39,7 @@ You will also need to install ASP.NET 4.5 or greater. To install it, locate **In
 
 ## Step 2 - Install Visual Studio 2017 and Web Development tools 
 
-[Install Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) if you have not already installed it. If you already have Visual Studio 2017, ensure that the following workloads are installed. If the workloads are not present on your installation, follow along using the Visual Studio Installer (found from the Start menu).  
+[Install Visual Studio 2017](/visualstudio/install/install-visual-studio) if you have not already installed it. If you already have Visual Studio 2017, ensure that the following workloads are installed. If the workloads are not present on your installation, follow along using the Visual Studio Installer (found from the Start menu).  
 
 During installation, select **ASP.NET and Web development** and any other workloads that you are interested in. 
 

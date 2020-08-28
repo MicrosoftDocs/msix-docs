@@ -41,7 +41,7 @@ Resource packages are asset-only packages that allow your app to adapt to multip
 
 ## App extensions
 
-[App extensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions) enable your app to host content provided by other apps. Discover, enumerate, and access read-only content from those apps.
+[App extensions](/uwp/api/windows.applicationmodel.appextensions) enable your app to host content provided by other apps. Discover, enumerate, and access read-only content from those apps.
 
 If an app supports extensions, any developer can submit an extension for the app. Thus, the host app needs to be robust when it loads an extension that it hasn't been pre-tested with. Extensions should be considered untrusted.
 
@@ -49,7 +49,7 @@ Applications cannot load code from extensions. If you need code execution, consi
 
 ## App Services
 
-Windows app services enable app-to-app communication by allowing your app to provide services to another app. App services let you create UI-less services that apps can call on the same device, and starting with Windows 10, version 1607, on remote devices. See [Create and consume an app service](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) for details.
+Windows app services enable app-to-app communication by allowing your app to provide services to another app. App services let you create UI-less services that apps can call on the same device, and starting with Windows 10, version 1607, on remote devices. See [Create and consume an app service](/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) for details.
 
 App services are analogous to web services on a device. An app service runs as a background task in the host app and can provide its service to other apps. For example, an app service might provide a bar code scanner service that other apps could use. Or perhaps an Enterprise suite of apps has a common spell checking app service that is available to the other apps in the suite.
 
@@ -58,12 +58,12 @@ Modification packages allow IT Pros to customize apps without having to repackag
 
 ## See Also
 
-[Create and consume an app service](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
+[Create and consume an app service](/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [Introduction to asset packages](asset-packages.md)  
 [Package creation with the packaging layout](packaging-layout.md)  
 [Optional packages and related set authoring](optional-packages.md)  
 [Developing with asset packages and package folding](package-folding.md)  
 [App streaming install](streaming-install.md)  
 [Flat bundle app packages](flat-bundles.md)  
-[Windows.ApplicationModel.AppService namespace](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService)  
-[Windows.ApplicationModel.Extensions namespace](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions)  
+[Windows.ApplicationModel.AppService namespace](/uwp/api/Windows.ApplicationModel.AppService)  
+[Windows.ApplicationModel.Extensions namespace](/uwp/api/windows.applicationmodel.appextensions)

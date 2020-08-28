@@ -1,5 +1,5 @@
 ---
-Description: The Package Support Framework helps work with the working directory.
+description: The Package Support Framework helps work with the working directory.
 title: Package Support Framework current working directory
 ms.date: 05/14/2020
 ms.topic: article
@@ -67,7 +67,7 @@ An entry in processes has a value named executable, the value for which should b
     ],
     "processes": [
         {
-            "executable": "PSFSample",
+            "executable": "PSFSample"
         }
     ]
 }
@@ -95,7 +95,7 @@ makeappx unpack /p PrimaryApp.msix /d PackageContents
 The above PowerShell command will export the contents of the application into a local directory.
 
 ### Inject required files
-Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide, you'll also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](https://docs.microsoft.com/windows/msix/psf/package-support-framework) Docs article for guidance on using the Package Support Framework for runtime fixes.
+Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide, you'll also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](./package-support-framework.md) Docs article for guidance on using the Package Support Framework for runtime fixes.
 
 | Application executable is x64 | Application executable is x86     |
 |-------------------------------|-----------------------------------|

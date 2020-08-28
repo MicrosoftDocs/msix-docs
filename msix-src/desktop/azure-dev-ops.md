@@ -1,5 +1,5 @@
 ---
-Description: You can use Azure Pipelines to create automated builds for your MSIX project.
+description: You can use Azure Pipelines to create automated builds for your MSIX project.
 title: Set up a CI/CD pipeline to automate your MSIX builds and deployments
 ms.date: 01/27/2020
 ms.topic: article
@@ -14,9 +14,9 @@ You can use Azure Pipelines to create automated builds for your MSIX project. Th
 
 ## Create a new Azure Pipeline
 
-Begin by [signing up for Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up) if you haven't done so already.
+Begin by [signing up for Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up) if you haven't done so already.
 
-Next, create a pipeline that you can use to build your source code. For a tutorial about building a pipeline to build a GitHub repository, see [Create your first pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml). Azure Pipelines supports the repository types listed [in this article](https://docs.microsoft.com/azure/devops/pipelines/repos).
+Next, create a pipeline that you can use to build your source code. For a tutorial about building a pipeline to build a GitHub repository, see [Create your first pipeline](/azure/devops/pipelines/get-started-yaml). Azure Pipelines supports the repository types listed [in this article](/azure/devops/pipelines/repos).
 
 To set up the actual build pipeline, you browse to the Azure DevOps portal at dev.azure.com/\<organization\> and create a new project. If you don’t have an account, you can create one for free. Once you’ve signed in and created a project, you can either push the source code to the Git repository that’s set up for you at https://\<organization\>@dev.azure.com/<organization\>/\<project\>/_git/\<project\>, or use any other provider, such as GitHub. You’ll get to choose the location of your repository when you create a new pipeline in the portal by clicking first on the **Pipelines** button and then on **New Pipeline**.
 
@@ -25,7 +25,7 @@ On the **Configure** screen that comes next, you should select the **Existing Az
 ## Add your project certificate to the Secure files library
 
 > [!NOTE]
->You should avoid submitting certificates to your repo if at all possible, and git ignores them by default. To manage the safe handling of sensitive files like certificates, Azure DevOps supports the [secure files](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops) feature.
+>You should avoid submitting certificates to your repo if at all possible, and git ignores them by default. To manage the safe handling of sensitive files like certificates, Azure DevOps supports the [secure files](/azure/devops/pipelines/library/secure-files?view=azure-devops) feature.
 
 To upload a certificate for your automated build:
 
@@ -33,10 +33,10 @@ To upload a certificate for your automated build:
 2. Click the **Secure files** tab and then click **+ Secure file**.
 3. Browse to the certificate file and click **OK**.
 4. After you upload the certificate, select it to view its properties. Under **Pipeline permissions**, enable the **Authorize for use in all pipelines** toggle.
-5. If the private key in the certificate has a password, we recommend that you store your password in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) and then link the password to a [variable group](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). You can use the variable to access the password from the pipeline. Note that a password is only supported for the private key; using a certificate file that is itself password-protected is not currently supported.
+5. If the private key in the certificate has a password, we recommend that you store your password in [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates) and then link the password to a [variable group](/azure/devops/pipelines/library/variable-groups). You can use the variable to access the password from the pipeline. Note that a password is only supported for the private key; using a certificate file that is itself password-protected is not currently supported.
 
 > [!NOTE]
-> Starting in Visual Studio 2019, a temporary certificate is no longer generated in MSIX projects. To create or export certificates, use the PowerShell cmdlets described in [this article](/windows/msix/package/create-certificate-package-signing).
+> Starting in Visual Studio 2019, a temporary certificate is no longer generated in MSIX projects. To create or export certificates, use the PowerShell cmdlets described in [this article](../package/create-certificate-package-signing.md).
 
 
 ## Configure the Build in your YAML file
@@ -54,7 +54,7 @@ The table below lists the different MSBuild arguments you can define to setup yo
 | AppxPackageSigningEnabled | true | Enables package signing. |
 | PackageCertificateThumbprint | Certificate Thumbprint | This value **must** match the thumbprint in the signing certificate, or be an empty string. |
 | PackageCertificateKeyFile | Path | The path to the certificate to use. This is retrieved from the secure file metadata. |
-| PackageCertificatePassword | Password | The password for the private key in the certificate. We recommend that you store your password in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) and link the password to [variable group](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). You can pass the variable to this argument. |
+| PackageCertificatePassword | Password | The password for the private key in the certificate. We recommend that you store your password in [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates) and link the password to [variable group](/azure/devops/pipelines/library/variable-groups). You can pass the variable to this argument. |
 
 
 
@@ -159,7 +159,7 @@ Next, update the MSBuild task to reference the signing certificate:
 The parameters defined with the `$()` syntax are variables defined in the build definition, and will change in other build systems.
 
 
-To view all predefined variables, see [Predefined build variables](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
+To view all predefined variables, see [Predefined build variables](/azure/devops/pipelines/build/variables).
 
 ## Configure the Publish Build Artifacts task
 
@@ -286,5 +286,3 @@ The generated HTML file includes a hyperlink prefixed with the browser-agnostic 
 ```
 
 If you set up a release pipeline that publishes the contents of the drop folder to your intranet or any other Web site, and the Web server supports byte-range requests and is configured properly, your end users can use this link to directly install the app without downloading the MSIX package first.
-
-

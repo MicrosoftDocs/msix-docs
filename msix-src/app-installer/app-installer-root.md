@@ -15,7 +15,7 @@ This section contains or links to articles about App Installer and how to use th
 
 App Installer allows for Windows 10 apps to be installed by double clicking the app package. This means that users don't need to use PowerShell or other developer tools to deploy Windows 10 apps. The App Installer can also install an app from the web, optional packages, and related sets. 
 
-App Installer can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store/details/app-installer/9NBLGGH4NNS1). You can learn more about offline distribution [here](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
+App Installer can be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store/details/app-installer/9NBLGGH4NNS1). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
 To learn how to use the App Installer to install your app, see the topics in the table.
 
@@ -26,10 +26,10 @@ To learn how to use the App Installer to install your app, see the topics in the
 | [Create an App Installer file manually](how-to-create-appinstaller-file.md)| Learn how to create an .appinstaller file manually. This is particularly useful for installing a related set that contains a main package and optional packages. |
 | [Configure update settings in the App Installer file](update-settings.md)  |  Learn how to configure app updates by using the App Installer file. |
 | [Install a Windows 10 app from the web](installing-windows10-apps-web.md) | In this section, we will review the steps you need to take to allow users to install your apps directly from the web page. |
-| [Optional packages and related sets](install-related-set.md) | Learn about related sets that contain a main package and related optional packages.  |
+| [Optional packages and related sets](../package/optional-packages.md) | Learn about related sets that contain a main package and related optional packages.  |
 | [Troubleshoot installation issues with the App Installer file](troubleshoot-appinstaller-issues.md) | Common issues and solutions when sideloading applications with the App Installer file. |
 | [Related documentation](app-installer-documentation.md) | Provides links to related documentation, including APIs that you can use to modify packages via App Installer files or to retrieve information about apps with an App Installer association.  |
-| [App Installer file (.appinstaller) reference](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render) | View the full XML schema for the App Installer file. |
+| [App Installer file (.appinstaller) reference](/uwp/schemas/appinstallerschema/app-installer-file?context=%252fwindows%252fmsix%252frender) | View the full XML schema for the App Installer file. |
 
 ## Tutorials
 
