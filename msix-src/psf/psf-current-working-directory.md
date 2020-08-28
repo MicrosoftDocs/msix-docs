@@ -1,5 +1,5 @@
 ---
-Description: The Package Support Framework helps work with the working directory.
+description: The Package Support Framework helps work with the working directory.
 title: Package Support Framework current working directory
 ms.date: 05/14/2020
 ms.topic: article
