@@ -66,7 +66,6 @@ Here's a quick comparison of the Windows 10 Fall Creators update version of App 
 | After package download, App Installer automatically launches the app package | User must click **Install** and manually launch the app package |
 | App Installer will take care of disposal of downloaded packages | User must manually delete the downloaded files |
 
-## Web install experience on previous versions of Windows 10
 On versions prior to the Windows 10 Fall Creators Update, App Installer cannot directly install an app from the web. On these versions, App Installer can only install app packages that are locally available. Instead, App Installer will download the package and require the user to double click the downloaded package to install.
 
 
