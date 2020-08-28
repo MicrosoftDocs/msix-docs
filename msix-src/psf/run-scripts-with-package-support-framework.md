@@ -1,5 +1,5 @@
 ---
-Description: You can run scripts with the Package Support Framework to customize your desktop application for the user environment.
+description: You can run scripts with the Package Support Framework to customize your desktop application for the user environment.
 title: Run scripts with the Package Support Framework
 ms.date: 09/20/2019
 ms.topic: article
