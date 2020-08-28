@@ -1,5 +1,5 @@
 ---
-Description: Fix issues that prevent your desktop application from running in an MSIX container
+description: Fix issues that prevent your desktop application from running in an MSIX container
 title: Fix issues that prevent your desktop application from running in an MSIX container
 ms.date: 05/14/2020
 ms.topic: article
