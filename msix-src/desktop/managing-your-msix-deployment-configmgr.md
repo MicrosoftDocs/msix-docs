@@ -1,5 +1,5 @@
 ---
-Description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Endpoint Configuration Manager
+description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Endpoint Configuration Manager
 title: Microsoft Endpoint Configuration Manager
 ms.date: 1/31/2020
 ms.topic: article
