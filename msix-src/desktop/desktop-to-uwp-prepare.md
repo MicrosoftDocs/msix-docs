@@ -1,5 +1,5 @@
 ---
-description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
+description: This article lists the things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (MSIX)
 ms.date: 08/22/2019
 ms.topic: article
