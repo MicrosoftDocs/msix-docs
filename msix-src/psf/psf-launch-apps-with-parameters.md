@@ -1,5 +1,5 @@
 ---
-Description: The Package Support Framework can be used to lauch applications which require arguments passed to it..
+description: The Package Support Framework can be used to lauch applications which require arguments passed to it..
 title: Package Support Framework - Launch Apps with Parameters
 ms.date: 03/30/2020
 ms.topic: article
