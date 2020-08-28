@@ -1,5 +1,5 @@
 ---
-Description: This article provides a deeper dive on how the Desktop Bridge works under the covers.
+description: This article provides a deeper dive on how the Desktop Bridge works under the covers.
 title: Behind the scenes of the Desktop Bridge
 ms.date: 01/30/2020
 ms.topic: article
