@@ -1,5 +1,5 @@
 ---
-Description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Intune
+description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Intune
 title: Microsoft Intune
 ms.date: 06/17/2019
 ms.topic: article
