@@ -1,5 +1,5 @@
 ---
-Description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Endpoint Manager Admin Console
+description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Endpoint Manager Admin Console
 title: Microsoft Endpoint Manager Admin Console
 ms.date: 06/17/2019
 ms.topic: article
