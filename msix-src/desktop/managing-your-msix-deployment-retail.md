@@ -1,6 +1,5 @@
 ---
-Description: This article provides all the details you need to manage deploying you MSIX applications in an retail environment.  This article is targeted at developers.
-
+description: This article provides all the details you need to manage deploying you MSIX applications in an retail environment.  This article is targeted at developers.
 title: Distribute your MSIX in a consumer environment
 ms.date: 2/3/2020
 ms.topic: article
