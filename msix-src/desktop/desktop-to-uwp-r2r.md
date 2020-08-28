@@ -86,7 +86,7 @@ A. Optimized binaries will benefit from the improvements when running with .NET 
 
 **Q. How can I provide feedback or report issues?**
 
-A. Report an issue by using the Feedback tool in Visual Studio 2017. [More information](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
+A. Report an issue by using the Feedback tool in Visual Studio 2017. [More information](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 **Q. What’s the impact of adding the native image to existing binaries?**
 

@@ -32,16 +32,16 @@ After you create an MSIX package for your desktop app, you can use UWP APIs, pac
 
 Once you've packaged your app, you can light it up with features such as live tiles, and push notifications. Some of these capabilities can significantly improve the engagement level of your application and they cost you very little time to add. Some enhancements require a bit more code.
 
-See [Use UWP APIs in desktop applications](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance).
+See [Use UWP APIs in desktop applications](/windows/apps/desktop/modernize/desktop-to-uwp-enhance).
 
 ### Integrate with package extensions
 
 If your application needs to integrate with the system (For example: establish firewall rules), describe those things in the package manifest of your application and the system will do the rest. For most of these tasks, you won't have to write any code at all. With a bit of XML in the manifest, you can do things like start a process when the user logs on, integrate your application into File Explorer, and add your application a list of print targets that appear in other apps.
 
-See [Integrate your desktop application with package extensions](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions).
+See [Integrate your desktop application with package extensions](/windows/apps/desktop/modernize/desktop-to-uwp-extensions).
 
 ### Extend with UWP components
 
-Some Windows 10 experiences (For example: a touch-enabled UI page) must run inside of a modern app container. In general, you should first determine whether you can add your experience by [enhancing](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance) your existing desktop application with UWP APIs. If you have to use a UWP component, to achieve the experience, then you can add a UWP project to your solution and use app services to communicate between your desktop application and the UWP component.
+Some Windows 10 experiences (For example: a touch-enabled UI page) must run inside of a modern app container. In general, you should first determine whether you can add your experience by [enhancing](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) your existing desktop application with UWP APIs. If you have to use a UWP component, to achieve the experience, then you can add a UWP project to your solution and use app services to communicate between your desktop application and the UWP component.
 
-See [Extend your desktop application with UWP components](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extend).
+See [Extend your desktop application with UWP components](/windows/apps/desktop/modernize/desktop-to-uwp-extend).

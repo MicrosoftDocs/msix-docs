@@ -27,7 +27,7 @@ If you are interested in joining our Insider Program, click [here](https://aka.m
 
 ### MSIX Packaging Tool driver
 
-The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update. It will fail to install if the Windows Update service is disabled on the computer or if Windows Insider flight ring settings do not match the OS build of the computer.
+The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update. It will fail to install if the Windows Update service is disabled on the computer or if Windows Insider flight ring settings do not match the OS build of the computer.
 
 If you are running into problems acquiring the driver, or you are working in an offline environment, you can find links to download the driver [here](disconnected-environment.md#get-the-msix-packaging-tool-driver). 
 
@@ -45,7 +45,7 @@ The following error codes might indicate that you are encountering connection is
 
 The following error code may indicate that policies on your computer are be affecting Windows Update connectivity: -2145124306 (0x8024002e).
 
-If you receive this error code, you may need to check your [environment settings and policies](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+If you receive this error code, you may need to check your [environment settings and policies](/windows/deployment/update/fod-and-lang-packs).
 
 #### Driver required a reinstall
 
@@ -127,7 +127,7 @@ The file may either be open or non-existent. To resolve this issue, add the appr
 
 #### File Type Associations
 
-The issues regarding File Type Associations (FTA) vary from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See the [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) manifest element for an example.
+The issues regarding File Type Associations (FTA) vary from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See the [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) manifest element for an example.
 
 #### Shortcuts with arguments
 

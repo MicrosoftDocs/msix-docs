@@ -16,6 +16,6 @@ When deploying an App from within the Microsoft Endpoint Manager Admin Console t
 
 |||
 |-----|------|
-| 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package-msi-vm.md)  |
+| 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md)  |
 | 2. Launch the Microsoft Endpoint Manager Admin Console | [Microsoft Endpoint Manager Admin Console](https://devicemanagement.microsoft.com) |
-| 3. Create and deploy a Line-of Business App | [Create a Line-of Business App](https://docs.microsoft.com/intune/apps/lob-apps-windows) |
+| 3. Create and deploy a Line-of Business App | [Create a Line-of Business App](/intune/apps/lob-apps-windows) |

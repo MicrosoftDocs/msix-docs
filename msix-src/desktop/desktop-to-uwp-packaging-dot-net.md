@@ -98,12 +98,12 @@ See [Run, debug, and test a packaged application](desktop-to-uwp-debug.md)
 
 **Enhance your desktop application by adding UWP APIs**
 
-See [Enhance your desktop application for Windows 10](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
+See [Enhance your desktop application for Windows 10](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 
 **Extend your desktop application by adding UWP projects and Windows Runtime Components**
 
-See [Extend your desktop application with modern UWP components](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extend).
+See [Extend your desktop application with modern UWP components](/windows/apps/desktop/modernize/desktop-to-uwp-extend).
 
 **Distribute your app**
 
-See [Distribute a packaged desktop application](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-distribute)
+See [Distribute a packaged desktop application](/windows/apps/desktop/modernize/desktop-to-uwp-distribute)

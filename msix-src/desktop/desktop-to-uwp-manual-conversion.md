@@ -75,7 +75,7 @@ Here's an example **Identity** element with placeholder text for the attributes.
 
 ### Properties
 
-The [Properties](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties) element has 3 required child elements. Here is an example **Properties** node with placeholder text for the elements. The **DisplayName** is the name of your application that you reserve in the Store, for apps which are uploaded to the Store.
+The [Properties](/uwp/schemas/appxpackage/appxmanifestschema/element-properties) element has 3 required child elements. Here is an example **Properties** node with placeholder text for the elements. The **DisplayName** is the name of your application that you reserve in the Store, for apps which are uploaded to the Store.
 
 ```XML
 <Properties>
@@ -87,7 +87,7 @@ The [Properties](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifest
 
 ### Resources
 
-Here is an example [Resources](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-resources) node.
+Here is an example [Resources](/uwp/schemas/appxpackage/appxmanifestschema/element-resources) node.
 
 ```XML
 <Resources>
@@ -130,7 +130,7 @@ For desktop apps that you create a package for, the ``EntryPoint`` attribute of 
 
 ### Visual elements
 
-Here is an example [VisualElements](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements) node.
+Here is an example [VisualElements](/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements) node.
 
 ```XML
 <uap:VisualElements
@@ -144,7 +144,7 @@ Here is an example [VisualElements](https://docs.microsoft.com/uwp/schemas/appxp
 
 ## (Optional) Add Target-based unplated assets
 
-Target-based assets are for icons and tiles that appear on the Windows taskbar, task view, ALT+TAB, snap-assist, and the lower-right corner of Start tiles. You can read more about them [here](https://docs.microsoft.com/windows/uwp/design/style/app-icons-and-logos#unplated-assets).
+Target-based assets are for icons and tiles that appear on the Windows taskbar, task view, ALT+TAB, snap-assist, and the lower-right corner of Start tiles. You can read more about them [here](/windows/uwp/design/style/app-icons-and-logos#unplated-assets).
 
 1. Obtain the correct 44x44 images and then copy them into the folder that contains your images (i.e., Assets).
 
@@ -199,5 +199,3 @@ See [Create an MSIX package or bundle with the MakeAppx.exe tool](../package/cre
 
 > [!NOTE]
 > A packaged application always runs as an interactive user, and any drive that you install your packaged application on to must be formatted to NTFS format.
-
-

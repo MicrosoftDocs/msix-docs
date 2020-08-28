@@ -42,5 +42,4 @@ Installing an MSIX app package to a device using PowerShell leverages the [add-a
 | -RetainFilesOnFailure | In the case of a failed deployment, if this switch is set to True, files that have been created on the target machine during the installation process are not removed. |
 | -Update | Specifies that the package being added is a dependency package update. A dependency package is removed when the parent app is removed. If not specified, the package will not be removed when the parent app is removed. |
 
-For a full list of parameters available for this cmdlet, please visit the PowerShell article on [add-appxpackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps).
-
+For a full list of parameters available for this cmdlet, please visit the PowerShell article on [add-appxpackage](/powershell/module/appx/add-appxpackage?view=win10-ps).

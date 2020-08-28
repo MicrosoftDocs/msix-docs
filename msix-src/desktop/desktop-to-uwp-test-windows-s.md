@@ -44,7 +44,7 @@ You can find those logs by opening the **Event Viewer**, and then browsing to th
 This mode is safe and it won't prevent your system from starting.
 
 #### (Optional) Find specific failure points in the call stack
-To find specific points in the call stack where blocking issues occur, add this registry key, and then [set up a kernel-mode debugging environment](https://docs.microsoft.com/windows-hardware/drivers/debugger/getting-started-with-windbg--kernel-mode-#span-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanset-up-a-kernel-mode-debugging).
+To find specific points in the call stack where blocking issues occur, add this registry key, and then [set up a kernel-mode debugging environment](/windows-hardware/drivers/debugger/getting-started-with-windbg--kernel-mode-#span-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanspan-idsetupakernel-modedebuggingspanset-up-a-kernel-mode-debugging).
 
 |Key|Name|Type|Value|
 |--|---|--|--|
@@ -82,8 +82,8 @@ Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https:/
 
 **Review a detailed blog article that was posted by our App Consult Team**
 
-See [Porting and testing your classic desktop applications on Windows 10 S with the Desktop Bridge](https://blogs.msdn.microsoft.com/appconsult/2017/06/15/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge/).
+See [Porting and testing your classic desktop applications on Windows 10 S with the Desktop Bridge](/archive/blogs/appconsult/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge).
 
 **Learn about tools that make it easier to test for Windows in S Mode**
 
-See [Unpackage, modify, repackage, sign an APPX](https://blogs.msdn.microsoft.com/appconsult/2017/08/07/unpack-modify-repack-sign-appx/).
+See [Unpackage, modify, repackage, sign an APPX](/archive/blogs/appconsult/unpack-modify-repack-sign-appx).

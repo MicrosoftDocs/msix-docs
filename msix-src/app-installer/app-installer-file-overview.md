@@ -38,7 +38,7 @@ You can use the App Installer file to download or update your app from the web, 
 
 ## Contents of the App Installer file
 
-The following image shows an example App Installer file. For full details about the XML elements in the App Installer file, see the [App Installer file schema reference](https://docs.microsoft.com/uwp/schemas/appinstallerschema/schema-root). For more information about how to configure update settings in the App Installer file, see [Configure update settings in the App Installer file](update-settings.md).
+The following image shows an example App Installer file. For full details about the XML elements in the App Installer file, see the [App Installer file schema reference](/uwp/schemas/appinstallerschema/schema-root). For more information about how to configure update settings in the App Installer file, see [Configure update settings in the App Installer file](update-settings.md).
 
 ![App Installer file example with update settings](images/App-Installer-File-Update.png)
 

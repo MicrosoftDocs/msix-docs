@@ -22,10 +22,8 @@ If you're generating MSIX packages using the [MSIX Packaging Tool](../packaging-
 ## Additional Resources
 
 For more information about generating an MSIX bundle see:
-- [Creating a bundle using a directory structure](https://docs.microsoft.com/windows/win32/appxpkg/make-appx-package--makeappx-exe-#to-create-a-package-bundle-using-a-directory-structure)
-- [Creating a bundle using a mapping file](https://docs.microsoft.com/windows/win32/appxpkg/make-appx-package--makeappx-exe-#to-create-a-package-bundle-using-a-mapping-file)
+- [Creating a bundle using a directory structure](/windows/win32/appxpkg/make-appx-package--makeappx-exe-#to-create-a-package-bundle-using-a-directory-structure)
+- [Creating a bundle using a mapping file](/windows/win32/appxpkg/make-appx-package--makeappx-exe-#to-create-a-package-bundle-using-a-mapping-file)
 
 For more information about signing app packages with SignTool.exe, see [this article](../package/sign-app-package-using-signtool.md).
-
- 
 

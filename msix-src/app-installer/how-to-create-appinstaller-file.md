@@ -10,7 +10,7 @@ ms.custom: "RS5, seodec18"
 
 # Create an App Installer file manually
 
-This article shows how to manually create an App Installer file that defines a [related set](install-related-set.md). A related set is not one entity, but rather a combination of a main package and optional packages. 
+This article shows how to manually create an App Installer file that defines a [related set](../package/optional-packages.md). A related set is not one entity, but rather a combination of a main package and optional packages. 
 
 To be able to install a related set as one entity, we must be able to specify the main package and optional package as one. To do this, we will need to create an XML file with an **.appinstaller** extension to define a related set. App Installer consumes the **.appinstaller** file and allows the user to install all of the defined packages with a single click. 
 
@@ -60,11 +60,11 @@ Before we go in to more detail, here is a complete sample msixbundle *.appinstal
 </AppInstaller>
 ```
 
-During deployment, the App Installer file is validated against the app packages referenced in the `Uri` element. So, the `Name`, `Publisher` and `Version` should match the [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the app package manifest.
+During deployment, the App Installer file is validated against the app packages referenced in the `Uri` element. So, the `Name`, `Publisher` and `Version` should match the [Package/Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the app package manifest.
 
 ## How to create an App Installer file
 
-To distribute your related set as one entity, you must create an App Installer file that contains the elements that are required by that [appinstaller schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file).
+To distribute your related set as one entity, you must create an App Installer file that contains the elements that are required by that [appinstaller schema](/uwp/schemas/appinstallerschema/app-installer-file).
 
 ### Step 1: Create the *.appinstaller file
 Using a text editor, create a file (which will contain XML) and name it &lt;filename&gt;.appinstaller
@@ -119,7 +119,7 @@ If the main app package is an .msixbundle or .appxbundle or file, then use the `
 </AppInstaller>
 ```
 
-The information in the `<MainBundle>` or `<MainPackage>` attribute should match the [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the app bundle manifest or app package manifest respectively.
+The information in the `<MainBundle>` or `<MainPackage>` attribute should match the [Package/Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the app bundle manifest or app package manifest respectively.
 
 ### Step 4: Add the optional packages
 Similar to the main app package attribute, if the optional package can be either an app package or an app bundle, the child element within the `<OptionalPackages>` attribute should be `<Package>` or `<Bundle>` respectively. The package information in the child elements should match the identity element in the bundle or package manifest.
@@ -210,7 +210,7 @@ In the dependencies element, you can specify the required framework packages for
 
 ### Step 6: Add Update setting
 
-The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-onlaunch)
+The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **<UpdateSettings>** is an optional element. Within  **<UpdateSettings>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](/uwp/schemas/appinstallerschema/element-onlaunch)
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -259,7 +259,7 @@ The App Installer file can also specify update setting so that the related sets 
 </AppInstaller>
 ```
 
-For all of the details on the XML schema, see [App Installer file reference](https://docs.microsoft.com/uwp/schemas/appinstallerschema/app-installer-file).
+For all of the details on the XML schema, see [App Installer file reference](/uwp/schemas/appinstallerschema/app-installer-file).
 
 > [!NOTE]
 > The App Installer file type is new in Windows 10, version 1709 (the Windows 10 Fall Creators Update). There is no support for deployment of Windows 10 apps using an App Installer file on previous versions of Windows 10. The **HoursBetweenUpdateChecks** element is available starting in Windows 10, version 1803.

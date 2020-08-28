@@ -64,9 +64,9 @@ If you make your changes to your application to fix bugs, repackage it by using 
 
 In some cases, you might want finer-grained control over the debugging process, including the ability to debug your application before it starts.
 
-You can use [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) to get full control over application lifecycle including suspending, resuming, and termination.
+You can use [PLMDebug](/windows-hardware/drivers/debugger/plmdebug) to get full control over application lifecycle including suspending, resuming, and termination.
 
-[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) is included with the Windows SDK.
+[PLMDebug](/windows-hardware/drivers/debugger/plmdebug) is included with the Windows SDK.
 
 ## Test your app
 

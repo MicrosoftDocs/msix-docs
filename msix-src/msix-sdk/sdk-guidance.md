@@ -231,6 +231,6 @@ If you would like to use the package for all platforms (Windows 10 and non-Windo
 
 ## How to effectively use the same package on all platforms (Windows 10 and non-Windows 10)
 
-To make the most of the MSIX Packaging SDK, you will need to build the package in a way that will be deployed like an app package on Windows 10 and at the same time supported on other platforms. On Windows 10, you can build the package as an *App Extension*. For more information about App Extensions and how they can help make your app extensible, see the [Introduction to App Extensions](https://blogs.msdn.microsoft.com/appinstaller/2017/05/01/introduction-to-app-extensions/) blog post.
+To make the most of the MSIX Packaging SDK, you will need to build the package in a way that will be deployed like an app package on Windows 10 and at the same time supported on other platforms. On Windows 10, you can build the package as an *App Extension*. For more information about App Extensions and how they can help make your app extensible, see the [Introduction to App Extensions](../index.yml) blog post.
 
 In the manifest file example shown earlier in this article, you will notice a **Properties** element within the **AppExtension** element. There is no validation performed in this section of the manifest file. This allows developers to specify the required metadata between extension and host/client app.

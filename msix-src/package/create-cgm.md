@@ -163,4 +163,4 @@ For more information about options you can use with **MakeAppx.exe**, open a com
 MakeAppx convertCGM /?
 ```
 
-That's all you'll need to get your final `AppxContentGroupMap.xml` ready for your app! There's still more to do before your app is fully ready for the Microsoft Store. For more information on the complete process of adding streaming install to your app, check out [this blog post](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+That's all you'll need to get your final `AppxContentGroupMap.xml` ready for your app! There's still more to do before your app is fully ready for the Microsoft Store. For more information on the complete process of adding streaming install to your app, check out [this blog post](../index.yml).

@@ -53,7 +53,7 @@ This short reference table shows common file system operations and how the OS ha
 
 ### Packaged VFS locations
 
-The following table shows where files shipping as part of your package are overlaid on the system for the app. Your application will perceive these files to be in the listed system locations, when in fact they are in the redirected locations inside *C:\Program Files\WindowsApps\package_name\VFS*. The FOLDERID locations are from the [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx) constants.
+The following table shows where files shipping as part of your package are overlaid on the system for the app. Your application will perceive these files to be in the listed system locations, when in fact they are in the redirected locations inside *C:\Program Files\WindowsApps\package_name\VFS*. The FOLDERID locations are from the [**KNOWNFOLDERID**](/windows/win32/shell/knownfolderid) constants.
 
 System Location | Redirected Location (Under [PackageRoot]\VFS\) | Valid on architectures
  :--- | :--- | :---
