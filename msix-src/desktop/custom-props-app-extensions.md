@@ -55,7 +55,7 @@ Suppose you have a simple property in an app extensions that describes a version
 </uap3:Properties>
 ```
 
-To get this data at runtime, just call [GetExtensionPropertiesAsync()](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextension.getextensionpropertiesasync) on the app extensions.
+To get this data at runtime, just call [GetExtensionPropertiesAsync()](/uwp/api/windows.applicationmodel.appextensions.appextension.getextensionpropertiesasync) on the app extensions.
 
 ```csharp
 string extensionVersion = "Unknown";

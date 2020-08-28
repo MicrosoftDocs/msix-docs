@@ -84,7 +84,7 @@ This is a set of PowerShell scripts that provides the ability to bulk package ap
 
 Apps being packaged into the MSIX application format will be converted in the order they were entered in the **entry.ps1** script. Remote machines listed in the **entry.ps1** script will be used to package the applications into the MSIX format will be singularly used. Virtual machines can be used multiple times to package different applications into the MSIX application format.
 
-Before running the script, you must first add the apps you want to convert to the `conversionsParameters` variable in the script. Multiple apps can be added to the variable. The script leverages the app and remote/virtual machines to create a XML file formatted to meet the requirements of the [MSIX Packaging Tool](..\packaging-tool\mpt-overview.md) (MsixPackagingTool.exe). After creating the XML file, the **run_job.ps1** script is executed in a new PowerShell process which executes MsixPackagingTool.exe on the target device to convert the app and place it in the **.\Out** folder located in the script execution folder.
+Before running the script, you must first add the apps you want to convert to the `conversionsParameters` variable in the script. Multiple apps can be added to the variable. The script leverages the app and remote/virtual machines to create a XML file formatted to meet the requirements of the [MSIX Packaging Tool](../packaging-tool/tool-overview.md) (MsixPackagingTool.exe). After creating the XML file, the **run_job.ps1** script is executed in a new PowerShell process which executes MsixPackagingTool.exe on the target device to convert the app and place it in the **.\Out** folder located in the script execution folder.
 
 ## Example
 
@@ -190,10 +190,10 @@ $conversionsParameters = @(
 )
 ```
 
-The app information provided in the `conversionsParameters` variable will be used to generate an XML file with all of the required application details. After creating the XML file, the script will then pass the XML file to the [MSIX Packaging Tool](..\packaging-tool\mpt-overview.md) (MsixPackagingTool.exe) to be packaged.
+The app information provided in the `conversionsParameters` variable will be used to generate an XML file with all of the required application details. After creating the XML file, the script will then pass the XML file to the [MSIX Packaging Tool](../packaging-tool/tool-overview.md) (MsixPackagingTool.exe) to be packaged.
 
 ## Logging
 
-The script will generate a log file which outlines what has transpired throughout the script execution. The log file will provide details related to the packaging of applications to the MSIX packaging format, and information related to script progression. The logs can be read from any text utility, but have been configured for reading using the Trace32 log reader. Errors in the script execution will be highlighted as Red, and Warnings as yellow. For more information on the Trace 32 log reader, please visit [CMTrace](https://docs.microsoft.com/mem/configmgr/core/support/cmtrace) on Microsoft Docs.
+The script will generate a log file which outlines what has transpired throughout the script execution. The log file will provide details related to the packaging of applications to the MSIX packaging format, and information related to script progression. The logs can be read from any text utility, but have been configured for reading using the Trace32 log reader. Errors in the script execution will be highlighted as Red, and Warnings as yellow. For more information on the Trace 32 log reader, please visit [CMTrace](/mem/configmgr/core/support/cmtrace) on Microsoft Docs.
 
 The log file is created within the script's directory `.\logs\BulkConversion.log`.

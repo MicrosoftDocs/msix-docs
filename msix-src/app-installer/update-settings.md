@@ -12,7 +12,7 @@ ms.custom: RS5
 
 As mentioned in [App Installer file overview](app-installer-file-overview.md), you can configure the update behavior of the app in the App Installer file. This article explores the update options and their respective trade-offs.
 
-You can configure the update behavior of the app by using the [UpdateSettings](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-update-settings) element. Here we explore the update options and their respective trade-offs.
+You can configure the update behavior of the app by using the [UpdateSettings](/uwp/schemas/appinstallerschema/element-update-settings) element. Here we explore the update options and their respective trade-offs.
 
 In short, you can choose to check for updates two different ways:
 1. Independently of the user launching the app.
@@ -25,7 +25,7 @@ Additionally, you can choose to apply updates in two different ways:
 Finally, when you inform the user of an update, you can either force them to take the update before allowing them to launch the app, or you can allow them to launch the app and apply the update at an opportune time.
 
 
-The [UpdateSettings](https://docs.microsoft.com/uwp/schemas/appinstallerschema/element-update-settings) element can have the following child elements:
+The [UpdateSettings](/uwp/schemas/appinstallerschema/element-update-settings) element can have the following child elements:
 
 | App Installer file update setting | Min Windows 10 Version
 |------------------|--------------------|

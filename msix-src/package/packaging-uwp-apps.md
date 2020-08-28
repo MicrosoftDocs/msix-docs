@@ -22,7 +22,7 @@ Before distributing your app, you need to package it. This article describes the
     An app bundle is a type of package that can contain multiple app packages, each of which is built to support a specific device architecture. For example, an app bundle can contain three separate app packages for the x86, x64, and ARM configurations. App bundles should be generated whenever possible because they allow your app to be available on the widest possible range of devices.  
 
 - **App Package Upload File (.msixupload or .appxupload) - for Store Submission only**  
-    A single file that can contain multiple app packages or an app bundle to support various processor architectures. The app package upload file also contains a symbol file to [Analyze app performance](https://docs.microsoft.com/windows/uwp/publish/analytics) after your app has been published in the Microsoft Store. This file will be automatically created for you if you are packaging your app with Visual Studio with the intention of submitting it to Partner Center for publishing to the Microsoft Store.
+    A single file that can contain multiple app packages or an app bundle to support various processor architectures. The app package upload file also contains a symbol file to [Analyze app performance](/windows/uwp/publish/analytics) after your app has been published in the Microsoft Store. This file will be automatically created for you if you are packaging your app with Visual Studio with the intention of submitting it to Partner Center for publishing to the Microsoft Store.
 
 Here is an overview of the steps to prepare and create an app package:
 
@@ -38,11 +38,11 @@ Here is an overview of the steps to prepare and create an app package:
 
 ## Before packaging your app
 
-1. **Test your app.** Before you package your application, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps) (also applies to packaged desktop apps).
+1. **Test your app.** Before you package your application, make sure it works as expected on all device families that you plan to support. These device families may include desktop, mobile, Surface Hub, Xbox, IoT devices, or others. For more information about deploying and testing your app using Visual Studio, see [Deploying and debugging UWP apps](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps) (also applies to packaged desktop apps).
 
-2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your packaged application. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour) topic.
+2. **Optimize your app.** You can use Visual Studio’s profiling and debugging tools to optimize the performance of your packaged application. For example, the Timeline tool for UI responsiveness, the Memory Usage tool, the CPU Usage tool, and more. For more information about these tools, see the [Profiling Feature Tour](/visualstudio/profiling/profiling-feature-tour) topic.
 
-3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the [.NET native](https://docs.microsoft.com/dotnet/framework/net-native/) toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected.
+3. **Check .NET Native compatibility (for VB and C# apps).** In the Universal Windows Platform, there is a native compiler that will improve the runtime performance of your app. With this change, you should test your app in this compilation environment. By default, the **Release** build configuration enables the [.NET native](/dotnet/framework/net-native/) toolchain, so it's important to test your app with this **Release** configuration and check that your app behaves as expected.
 
 
 
@@ -63,7 +63,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
     ![Manifest designer in Visual Studio](images/packaging-screen1.jpg)
 
-    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](https://docs.microsoft.com/windows/uwp/design/style/app-icons-and-logos).
+    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](/windows/uwp/design/style/app-icons-and-logos).
 
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
@@ -107,10 +107,10 @@ Apps can be installed without being published in the Store by publishing them on
 
 ### Install your app package by double clicking
 
-App packages can be installed simply by double clicking the app package file. To do so, navigate to your app package or app bundle file, and double click it. [App Installer](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) launches and provides the basic app information as well as an install button, installation progress bar, and any relevant error messages.
+App packages can be installed simply by double clicking the app package file. To do so, navigate to your app package or app bundle file, and double click it. [App Installer](../app-installer/app-installer-root.md) launches and provides the basic app information as well as an install button, installation progress bar, and any relevant error messages.
 
 > [!NOTE]
-> App Installer assumes that the package was signed with a cert trusted on the device. If it wasn't, you will need to install the signing certificate to the Trusted People or Trusted Publishers Certification Authorities store on the device. If you're not sure how to do this, see [Installing Test Certificates](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates).
+> App Installer assumes that the package was signed with a cert trusted on the device. If it wasn't, you will need to install the signing certificate to the Trusted People or Trusted Publishers Certification Authorities store on the device. If you're not sure how to do this, see [Installing Test Certificates](/windows-hardware/drivers/install/installing-test-certificates).
 
 ### Install your app package using an install script
 
@@ -164,7 +164,7 @@ You can create an app package upload file by using the **Create App Packages** w
 
     ![Create App Packages window with package configuration shown](images/packaging-screen5.jpg)
 
-7. Include public symbol files to [Analyze app performance](https://docs.microsoft.com/windows/uwp/publish/analytics) from Partner Center after your app has been published. Configure any additional details such as version numbering or the package output location.
+7. Include public symbol files to [Analyze app performance](/windows/uwp/publish/analytics) from Partner Center after your app has been published. Configure any additional details such as version numbering or the package output location.
 
 8. Click **Create** to generate the app package. If you selected one of the **I want to create packages to upload to the Microsoft Store** options in step 3 and are creating a package for Partner Center submission, the wizard will create a package upload (.appxupload or .msixupload) file. If you selected **I want to create packages for sideloading** in step 3, the wizard will create either a single app package or an app bundle based on your selections in step 6.
 
@@ -177,7 +177,7 @@ You can create an app package upload file by using the **Create App Packages** w
 1. Place the following files in a folder:
 
     - One or more app packages (.msix or .appx) or an app bundle (.msixbundle or .appxbundle).
-    - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](https://docs.microsoft.com/windows/uwp/publish/health-report) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
+    - An .appxsym file. This is a compressed .pdb file containing public symbols of your app used for [crash analytics](/windows/uwp/publish/health-report) in Partner Center. You can omit this file, but if you do, no crash analytic or debugging information will be available for your app.
 
 2. Select all the files within the folder, right-click the files, and select **Send to** -> **Compressed (zipped) folder**.
 
@@ -185,13 +185,13 @@ You can create an app package upload file by using the **Create App Packages** w
 
 ## Validate your app package
 
-Validate your app before you submit it to Partner Center for certification on a local or remote machine. You can only validate release builds for your app package, not debug builds. For more information on submitting your app to Partner Center, see [App submissions](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
+Validate your app before you submit it to Partner Center for certification on a local or remote machine. You can only validate release builds for your app package, not debug builds. For more information on submitting your app to Partner Center, see [App submissions](/windows/uwp/publish/app-submissions).
 
 ### Validate your app package locally
 
-1. In the final **Package Creation Completed** page of the **Create App Packages** wizard, leave the **Local machine** option selected and click **Launch Windows App Certification Kit**. For more information about testing your app with the Windows App Certification Kit, see [Windows App Certification Kit](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit).
+1. In the final **Package Creation Completed** page of the **Create App Packages** wizard, leave the **Local machine** option selected and click **Launch Windows App Certification Kit**. For more information about testing your app with the Windows App Certification Kit, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
-    The Windows App Certification Kit (WACK) performs various tests and returns the results. See [Windows App Certification Kit tests](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests) for more specific information.
+    The Windows App Certification Kit (WACK) performs various tests and returns the results. See [Windows App Certification Kit tests](/windows/uwp/debug-test-perf/windows-app-certification-kit-tests) for more specific information.
 
     If you have a remote Windows 10 device that you want to use for testing, you will need to install the Windows App Certification Kit manually on that device. The next section will walk you through these steps. After you've done that, then you can select **Remote machine** and click **Launch Windows App Certification Kit** to connect to the remote device and run the validation tests.
 
@@ -199,23 +199,23 @@ Validate your app before you submit it to Partner Center for certification on a 
 
 ### Validate your app package on a remote Windows 10 device
 
-1. Enable your Windows 10 device for development by following the [Enable your device for development](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) instructions.
+1. Enable your Windows 10 device for development by following the [Enable your device for development](/windows/uwp/get-started/enable-your-device-for-development) instructions.
     >[!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
 
-2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applicationss on a remote machine](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
+2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applicationss on a remote machine](/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
 
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
 
 4. On the **Package Creation Completed** page of the wizard, choose the **Remote Machine** option button, and then choose the ellipsis button next to the **Test Connection** button.
     >[!NOTE]
-    > The **Remote Machine** option button is available only if you selected at least one solution configuration that supports validation. For more information about testing your app with the WACK, see [Windows App Certification Kit](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit).
+    > The **Remote Machine** option button is available only if you selected at least one solution configuration that supports validation. For more information about testing your app with the WACK, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
 5. Specify a device form inside your subnet, or provide the Domain Name Server (DNS) name or IP address of a device that's outside of your subnet.
 
 6. In the **Authentication Mode** list, choose **None** if your device doesn't require you to log onto it by using your Windows credentials.
 
-7. Choose the **Select** button, and then choose the **Launch Windows App Certification Kit** button. If the remote tools are running on that device, Visual Studio connects to the device and then performs the validation tests. See [Windows App Certification Kit tests](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests).
+7. Choose the **Select** button, and then choose the **Launch Windows App Certification Kit** button. If the remote tools are running on that device, Visual Studio connects to the device and then performs the validation tests. See [Windows App Certification Kit tests](/windows/uwp/debug-test-perf/windows-app-certification-kit-tests).
 
 ## Automate Store submissions
 
@@ -225,9 +225,9 @@ Starting in Visual Studio 2019, you can submit the generated .appxupload file to
 
 Before you can retrieve the credentials that are required for automatic Store submissions, you must first follow these steps in the [Partner Center dashboard](https://partner.microsoft.com/dashboard) if you have not done so already.
 
-1. [Associate your Partner Center account with your organization's Azure Active Directory](https://docs.microsoft.com/windows/uwp/publish/associate-azure-ad-with-partner-center). If your organization already uses Office 365 or other business services from Microsoft, you already have Azure AD. Otherwise, you can create a new Azure AD tenant from within Partner Center at no additional charge.
+1. [Associate your Partner Center account with your organization's Azure Active Directory](/windows/uwp/publish/associate-azure-ad-with-partner-center). If your organization already uses Office 365 or other business services from Microsoft, you already have Azure AD. Otherwise, you can create a new Azure AD tenant from within Partner Center at no additional charge.
 
-2. [Add an Azure AD application to your partner Center account](https://docs.microsoft.com/windows/uwp/publish/add-users-groups-and-azure-ad-applications#add-azure-ad-applications-to-your-partner-center-account). This Azure AD application represents the app or service that you will use to access submissions for your Dev Center account. You must assign this application to the **Manager** role. If this application already exists in your Azure AD directory, you can select it on the **Add Azure AD applications** page to add it to your Dev Center account. Otherwise, you can create a new Azure AD application on the **Add Azure AD applications** page.
+2. [Add an Azure AD application to your partner Center account](/windows/uwp/publish/add-users-groups-and-azure-ad-applications#add-azure-ad-applications-to-your-partner-center-account). This Azure AD application represents the app or service that you will use to access submissions for your Dev Center account. You must assign this application to the **Manager** role. If this application already exists in your Azure AD directory, you can select it on the **Add Azure AD applications** page to add it to your Dev Center account. Otherwise, you can create a new Azure AD application on the **Add Azure AD applications** page.
 
 ### Retrieve the credentials required for submissions
 
@@ -241,7 +241,7 @@ Next, you can retrieve the Partner Center credentials required for submissions: 
 
 4. Click the name of your Azure AD application to go to the application's settings. On this page, copy the **Tenant ID** and **Client ID** values.
 
-5. In the **Keys** section, click **Add new key**. On the next screen, copy the **Key** value, which corresponds to the client secret. You will not be able to access this info again after you leave this page, so make sure to not lose it. For more information, see [Manage keys for an Azure AD application](https://docs.microsoft.com/windows/uwp/publish/add-users-groups-and-azure-ad-applications#manage-keys-for-an-azure-ad-application).
+5. In the **Keys** section, click **Add new key**. On the next screen, copy the **Key** value, which corresponds to the client secret. You will not be able to access this info again after you leave this page, so make sure to not lose it. For more information, see [Manage keys for an Azure AD application](/windows/uwp/publish/add-users-groups-and-azure-ad-applications#manage-keys-for-an-azure-ad-application).
 
 ### Configure automatic Store submissions in Visual Studio
 

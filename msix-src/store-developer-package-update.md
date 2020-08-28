@@ -17,7 +17,7 @@ There are two fundamental ways that app updates can be managed. In both cases, t
 
 ## Simple updates
 
-First and foremost is the very simple API call that tells the system to check for updates, download them and then request permission from the user to install them. You'll start by using the [StoreContext](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StoreContext) class to get [StorePackageUpdate](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StorePackageUpdate) objects, download and install them.
+First and foremost is the very simple API call that tells the system to check for updates, download them and then request permission from the user to install them. You'll start by using the [StoreContext](/uwp/api/Windows.Services.Store.StoreContext) class to get [StorePackageUpdate](/uwp/api/Windows.Services.Store.StorePackageUpdate) objects, download and install them.
 
 ```csharp
 using Windows.Services.Store;
@@ -104,7 +104,7 @@ In some cases, it might actually be desirable to have an update that must be ins
 
 ### Implementing app code
 
-In order to take full advantage of mandatory updates, you'll need to make some slight modifications to the code above. You'll need to use the [StorePackageUpdate object](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StorePackageUpdate) to determine if the update is mandatory.
+In order to take full advantage of mandatory updates, you'll need to make some slight modifications to the code above. You'll need to use the [StorePackageUpdate object](/uwp/api/Windows.Services.Store.StorePackageUpdate) to determine if the update is mandatory.
 
 ```csharp
  private async bool CheckForMandatoryUpdates()
@@ -128,7 +128,7 @@ Then you'll need to create a custom in app dialog to inform the user that there 
 
 ### Partner Center
 
-To ensure the [StorePackageUpdate](https://docs.microsoft.com/uwp/api/Windows.Services.Store.StorePackageUpdate) shows true for a mandatory update, you will need to mark the update as mandatory in the Partner Center in the **Packages** page.
+To ensure the [StorePackageUpdate](/uwp/api/Windows.Services.Store.StorePackageUpdate) shows true for a mandatory update, you will need to mark the update as mandatory in the Partner Center in the **Packages** page.
 
 A couple of things to note:
 

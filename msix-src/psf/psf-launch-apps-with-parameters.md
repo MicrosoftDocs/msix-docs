@@ -1,5 +1,5 @@
 ---
-Description: The Package Support Framework can be used to lauch applications which require arguments passed to it..
+description: The Package Support Framework can be used to lauch applications which require arguments passed to it..
 title: Package Support Framework - Launch Apps with Parameters
 ms.date: 03/30/2020
 ms.topic: article
@@ -86,7 +86,7 @@ makeappx unpack /p PrimaryApp.msix /d PackageContents
 The above PowerShell command will export the contents of the application into a local directory.
 
 ### Inject required files
-Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide. You will also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](https://docs.microsoft.com/windows/msix/psf/package-support-framework) Docs article for guidance on using the Package Support Framework for runtime fixes.
+Add the required 32-bit and 64-bit Package Support Framework DLL(s) and executable files to the package directory. Use the following table as a guide. You will also want to include any runtime fixes as required. Visit [Package Support Framework Runtime fixes](./package-support-framework.md) Docs article for guidance on using the Package Support Framework for runtime fixes.
 
 | Application executable is x64 | Application executable is x86     |
 |-------------------------------|-----------------------------------|

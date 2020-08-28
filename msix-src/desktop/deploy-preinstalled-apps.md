@@ -43,10 +43,9 @@ In Windows 10 2004, a provisioned packaged app will reinstall during re-provisio
 
 ## PowerShell
 List of relevant PowerShell commands
-* **[Get-ProvisionedAppxPackages](https://docs.microsoft.com/powershell/module/dism/get-appxprovisionedpackage?view=win10-ps)** This will list all of the apps that are pre-installed on the image.
-* **[Add-ProvisionedAppxPackage](https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps)** This stages the appx package and configures it for pre-install. All dependencies must be provided as well, which can be found in the SDK or with store-downloaded packages.
-* **[Remove-ProvisionedAppxPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)** This can be used to remove a pre-installed app. Note that it does not remove the app if it is already registered for any users - this only strips the auto-registration behavior so it will not be auto-installed for any new users.  If no users have yet installed the app, this command will also remove the staged files.
+* **[Get-ProvisionedAppxPackages](/powershell/module/dism/get-appxprovisionedpackage?view=win10-ps)** This will list all of the apps that are pre-installed on the image.
+* **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps)** This stages the appx package and configures it for pre-install. All dependencies must be provided as well, which can be found in the SDK or with store-downloaded packages.
+* **[Remove-ProvisionedAppxPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)** This can be used to remove a pre-installed app. Note that it does not remove the app if it is already registered for any users - this only strips the auto-registration behavior so it will not be auto-installed for any new users.  If no users have yet installed the app, this command will also remove the staged files.
 
 ## Licensing
 Licensing only applies when provisioning a Windows Store app. Any other apps can be provisioned without a license. If an app is from the Store a machine-license must also provided when the app is provisioned. At this time, all preinstall Windows Store apps must be free apps and configured to be pre-installable via the Windows Store Partner Center. Once it is configured the pre-installable package and license can be downloaded and then provisioned onto any image.
-

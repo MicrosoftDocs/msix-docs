@@ -17,7 +17,7 @@ This article provides examples that demonstrate how to declare the `packageManag
 
 ## Add the PackageManagement Capability to your package manifest
 
-To use the `PackageManager` APIs, your app must declare the `packageManagement` [restricted capability](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in your [package manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest).
+To use the `PackageManager` APIs, your app must declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in your [package manifest](/uwp/schemas/appxpackage/appx-package-manifest).
 
 ```xml
 <Package>
@@ -33,7 +33,7 @@ To use the `PackageManager` APIs, your app must declare the `packageManagement` 
 
 ## Updating packages deployed using an App Installer file
 
-If you are deploying your application using the App Installer file, any code driven updates you perform must make use of the [App Installer file APIs](https://docs.microsoft.com/windows/msix/app-installer/app-installer-documentation#app-installer-file-apis). Doing so ensures that your regular App Installer file updates will continue to work. For intiating an App Installer based update from your code you can use [PackageManager.AddPackageByAppInstallerFileAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync?view=winrt-19041) or [PackageManager.RequestAddPackageByAppInstallerFileAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync?view=winrt-19041). You can check if an update is available using the [Package.CheckUpdateAvailabilityAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package.checkupdateavailabilityasync?view=winrt-19041) API. Below is example code:
+If you are deploying your application using the App Installer file, any code driven updates you perform must make use of the [App Installer file APIs](./app-installer/app-installer-documentation.md#app-installer-file-apis). Doing so ensures that your regular App Installer file updates will continue to work. For intiating an App Installer based update from your code you can use [PackageManager.AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync?view=winrt-19041) or [PackageManager.RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync?view=winrt-19041). You can check if an update is available using the [Package.CheckUpdateAvailabilityAsync](/uwp/api/windows.applicationmodel.package.checkupdateavailabilityasync?view=winrt-19041) API. Below is example code:
 
 ```csharp
 using Windows.Management.Deployment;
@@ -114,7 +114,7 @@ private async void CheckUpdate(object sender, TappedRoutedEventArgs e)
 
 ### Apply the update 
 
-After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackageasync?view=winrt-19041) API. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
+After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync?view=winrt-19041) API. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
 
 ```csharp
 
@@ -135,7 +135,7 @@ private async void CommandInvokedHandler(IUICommand command)
 
 ## Automatically restarting your app after an update
 
-If your application is a UWP app, passing in AddPackageByAppInstallerOptions.ForceApplicationShutdown OR AddPackageOptions.ForceTargetAppShutdown when applying an update should schedule the app to restart after the shutdown + update. For non-UWP apps you need to call [RegisterApplicationRestart](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions#updates) before applying the update.
+If your application is a UWP app, passing in AddPackageByAppInstallerOptions.ForceApplicationShutdown OR AddPackageOptions.ForceTargetAppShutdown when applying an update should schedule the app to restart after the shutdown + update. For non-UWP apps you need to call [RegisterApplicationRestart](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#updates) before applying the update.
 
 You must call RegisterApplicationRestart before your app begins to shut down. Below is an example of doing so using interop services to call the native method in C#:
 

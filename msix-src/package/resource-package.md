@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 # Resource Packages 
 Resource packages offers a great way to reduce users disk footprint by segmenting language or scale specific asset into separate packages that are downloaded automatically by Windows depending on the users machine configuration. If the user adds a new language to their list of OS languages in **Region & language** settings or changes the display configuration, across an automatic store update, the OS will fetch applicable resource packages for all installed apps on the device.
 
-In Windows SDK 10.0.17095.0 [AddResourcePackageAsync API](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.PackageCatalog) allows developers to install a resource package for an app on demand. 
+In Windows SDK 10.0.17095.0 [AddResourcePackageAsync API](/uwp/api/Windows.ApplicationModel.PackageCatalog) allows developers to install a resource package for an app on demand. 
 
 
 ## How to use the AddResourcePackageAsync API 
@@ -51,7 +51,7 @@ Example
  For local validation, developers can create an .msixbundle or .appxbundle and install from your local drive, network share or webserver. When the app calls the AddResourcePackageAsync API, Windows will  acquire the resource package from the location where the original application was installed. This makes the validation simple. Once this works, the app is ready to be deployed. 
 
 ## Removing resource packages 
-The app can choose to remove to remove the resource package(s) it downloaded via the [RemoveResourcePackageAsync API](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.PackageCatalog). However, Resource packages that are  applicable for the user or the device as a whole cannot be uninstalled. 
+The app can choose to remove to remove the resource package(s) it downloaded via the [RemoveResourcePackageAsync API](/uwp/api/Windows.ApplicationModel.PackageCatalog). However, Resource packages that are  applicable for the user or the device as a whole cannot be uninstalled. 
 
 Example 
 ```

@@ -40,4 +40,4 @@ We currently do not support services with dependencies outside the package.
 
 ## Add a service manually using your manifest
 
-If you are manually adding a service to your application, you will need to [add a service](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) to your app manifest. This does require a [restricted capability](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) to add to your application.
+If you are manually adding a service to your application, you will need to [add a service](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) to your app manifest. This does require a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) to add to your application.

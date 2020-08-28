@@ -62,7 +62,7 @@ IIS is an optional Windows feature. To install IIS:
 3. Also make sure you install **ASP.NET 4.5** or greater. In the **Windows Features** dialog, expand **Internet Information Services** -> **World Wide Web Services** -> **Application Development Features**, and select a version of **ASP.NET** that is greater than or equal to **ASP.NET 4.5**.
 4. Click **OK** to begin the installation.
 
-Visual Studio 2017 (or a later version) and Web Development Tools are required. If you already have Visual Studio 2017 or a later version installed, make sure you have the ASP.NET and Web development workloads installed. Otherwise, install Visual Studio from [here](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
+Visual Studio 2017 (or a later version) and Web Development Tools are required. If you already have Visual Studio 2017 or a later version installed, make sure you have the ASP.NET and Web development workloads installed. Otherwise, install Visual Studio from [here](/visualstudio/install/install-visual-studio).
 
 #### Build a web app
 
@@ -143,13 +143,13 @@ setup-exe - url=<location of your msix in the webservice>
 
 ### Sign the application
 
-Because the previous step created a new setup.exe, you will need to sign the app again to verify that you're a trusted publisher of the application and to establish the integrity of the application. You can use the [SignTool](https://docs.microsoft.com/dotnet/framework/tools/signtool-exe) and provide your certificate.
+Because the previous step created a new setup.exe, you will need to sign the app again to verify that you're a trusted publisher of the application and to establish the integrity of the application. You can use the [SignTool](/dotnet/framework/tools/signtool-exe) and provide your certificate.
 
 ### Distribute the application to your users
 
-You can now point to the new setup.exe with a link or download button on their website. MSIX Core is targeted towards users on Windows 10, version 1703 and earlier. The [App Installer](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web) is the ideal installation process for MSIX packages on Windows 1709 or a later version. App Installer optimizes for disk space on the consumer side and can directly install apps from HTTP locations. MSIX Core will detect if a consumer is on Windows 1709 or a later version and redirect them to App Installer. 
+You can now point to the new setup.exe with a link or download button on their website. MSIX Core is targeted towards users on Windows 10, version 1703 and earlier. The [App Installer](../app-installer/installing-windows10-apps-web.md) is the ideal installation process for MSIX packages on Windows 1709 or a later version. App Installer optimizes for disk space on the consumer side and can directly install apps from HTTP locations. MSIX Core will detect if a consumer is on Windows 1709 or a later version and redirect them to App Installer. 
 
-On Microsoft Edge, you can call the [getHostEnvironmentValue()](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399%28v%3dvs.85%29) method and the *os-build* field in the return value will specify the OS version of the user. From there, you can then prompt the installation process to use MSIX Core (for Windows 10, version 1703 and earlier) or App Installer (for Windows 10, version 1709 and later).
+On Microsoft Edge, you can call the [getHostEnvironmentValue()](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399(v=vs.85)) method and the *os-build* field in the return value will specify the OS version of the user. From there, you can then prompt the installation process to use MSIX Core (for Windows 10, version 1703 and earlier) or App Installer (for Windows 10, version 1709 and later).
 
 ## User experience
 

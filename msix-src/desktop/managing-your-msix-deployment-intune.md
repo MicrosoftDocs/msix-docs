@@ -1,5 +1,5 @@
 ---
-Description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Intune
+description: This guide provides instruction on how to create and deploy an MSIX app with Microsoft Intune
 title: Microsoft Intune
 ms.date: 06/17/2019
 ms.topic: article
@@ -18,4 +18,4 @@ When deploying a client app from Microsoft Intune to be delivered to client devi
 |-----|------|
 | 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md) |
 | 2. Launch the Intune Console | [Microsoft Intune Console](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) |
-| 3. Create and deploy a Line-of Business App | [Create a Line-of Business App](https://docs.microsoft.com/intune/apps/lob-apps-windows) |
+| 3. Create and deploy a Line-of Business App | [Create a Line-of Business App](/intune/apps/lob-apps-windows) |

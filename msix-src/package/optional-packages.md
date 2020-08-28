@@ -12,9 +12,9 @@ ms.localizationpriority: medium
 
 # Optional packages and related set authoring
 
-Optional packages contain content that can be integrated with a main package. These are useful for downloadable content (DLC), dividing a large app for size restraints, or for shipping any additional content separate from your original app. For more information about optional packages, see [Blog post: Extend your application using optional packages](https://docs.microsoft.com/archive/blogs/appinstaller/uwpoptionalpackages).
+Optional packages contain content that can be integrated with a main package. These are useful for downloadable content (DLC), dividing a large app for size restraints, or for shipping any additional content separate from your original app. For more information about optional packages, see [Blog post: Extend your application using optional packages](/archive/blogs/appinstaller/uwpoptionalpackages).
 
-Related sets are an extension of optional packages. Related sets allow you to enforce a strict set of versions across main and optional packages. Related sets can have different publishers from the main app if it is deployed outside of the Store. For more information about related sets, see [Blog post: Tooling to create a related set](https://docs.microsoft.com/archive/blogs/appinstaller/tooling-to-create-a-related-set).
+Related sets are an extension of optional packages. Related sets allow you to enforce a strict set of versions across main and optional packages. Related sets can have different publishers from the main app if it is deployed outside of the Store. For more information about related sets, see [Blog post: Tooling to create a related set](/archive/blogs/appinstaller/tooling-to-create-a-related-set).
 
 Optional packages and related sets all run inside the main app's MSIX container.
 
@@ -45,7 +45,7 @@ To create an optional package in Visual Studio, you'll need to:
     <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
     ```
 
-After you have your package dependencies set up from Steps 1 through 4, you can continue developing as you normally would. For more information, see [Blog post: Build your first optional package](https://docs.microsoft.com/archive/blogs/appinstaller/build-your-first-optional-package).
+After you have your package dependencies set up from Steps 1 through 4, you can continue developing as you normally would. For more information, see [Blog post: Build your first optional package](/archive/blogs/appinstaller/build-your-first-optional-package).
 
 Visual Studio can be configured to re-deploy your main package each time you deploy an optional package. To set the build dependency in Visual Studio, you should:
 
@@ -58,7 +58,7 @@ Now, every time you enter F5 or build an optional package project, Visual Studio
 
 A related set consists of a main package and an optional package that are tightly coupled via metadata that is specified in the .appxbundle or .msixbundle file of the main package. This metadata links the main package to the optional package (using the name of the .appxbundle file + version), and the optional package to the main package (using the version independent name). Visual Studio helps you get the correct metadata in your files. 
 
-The versioning of packages in a related set is synchronized in a way that won't allow the latest version of any package to be used until all of the related set packages (specified by version in the main package) are installed. Packages are serviced independently, but packages specified in the set may not be used until all of them have been updated. For more information about related sets, see [Blog post: Tooling to create a related set](https://docs.microsoft.com/archive/blogs/appinstaller/tooling-to-create-a-related-set).
+The versioning of packages in a related set is synchronized in a way that won't allow the latest version of any package to be used until all of the related set packages (specified by version in the main package) are installed. Packages are serviced independently, but packages specified in the set may not be used until all of them have been updated. For more information about related sets, see [Blog post: Tooling to create a related set](/archive/blogs/appinstaller/tooling-to-create-a-related-set).
 
 To configure your app's solution for related sets, use the following steps:
 
@@ -73,13 +73,13 @@ To configure your app's solution for related sets, use the following steps:
     "..\ActivatableOptionalPackage2\ActivatableOptionalPackage2.vcxproj"
     ```
 
-When your solution is configured this way, Visual Studio will create a [bundle manifest](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) named AppxBundleManifest.xml for the main package with all of the required metadata for related sets. 
+When your solution is configured this way, Visual Studio will create a [bundle manifest](/uwp/schemas/bundlemanifestschema/bundle-manifest) named AppxBundleManifest.xml for the main package with all of the required metadata for related sets. 
 
 Note that like optional packages, a `Bundle.Mapping.txt` file for related sets will only work on Windows 10, version 1703 or higher. Additionally, your app's Target Platform Min Version should be set to 10.0.15063.0 or higher.
 
 ## Removing Optional Packages
 
-Users can go into their **Settings** app and remove the optional packages. Similarly, developers can use the [RemoveOptionalPackageAsync](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.PackageCatalog) to remove a list of optional packages. 
+Users can go into their **Settings** app and remove the optional packages. Similarly, developers can use the [RemoveOptionalPackageAsync](/uwp/api/Windows.ApplicationModel.PackageCatalog) to remove a list of optional packages. 
 
 ```csharp
 PackageCatalog catalog = PackageCatalog.OpenForCurrentPackage();
@@ -104,7 +104,7 @@ Debugging a related set optional project is not currently supported in Visual St
 
 ## Related articles
 
-* [Blog post: Extend your application using optional packages](https://docs.microsoft.com/archive/blogs/appinstaller/uwpoptionalpackages)
-* [Blog post: Build your first optional package](https://docs.microsoft.com/archive/blogs/appinstaller/build-your-first-optional-package)
-* [Blog post: Loading code from an optional package](https://docs.microsoft.com/archive/blogs/appinstaller/loading-code-from-an-optional-package)
-* [Blog post: Tooling to create a related set](https://docs.microsoft.com/archive/blogs/appinstaller/tooling-to-create-a-related-set)
+* [Blog post: Extend your application using optional packages](/archive/blogs/appinstaller/uwpoptionalpackages)
+* [Blog post: Build your first optional package](/archive/blogs/appinstaller/build-your-first-optional-package)
+* [Blog post: Loading code from an optional package](/archive/blogs/appinstaller/loading-code-from-an-optional-package)
+* [Blog post: Tooling to create a related set](/archive/blogs/appinstaller/tooling-to-create-a-related-set)

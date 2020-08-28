@@ -13,7 +13,7 @@ ms.custom: "RS5, seodec18"
 
 You may have some versions of your app that were not distributed in an MSIX package. At runtime your app can detect whether it was deployed as an MSIX package by using the Windows Package Manager API, or your own custom installer. You may want to change the app behavior such as update settings or you may want to take advantage of functionality only available to MSIX packages.
 
-To determine whether your application is running as an MSIX package on a version of Windows that supports the full MSIX feature set, you can use the [GetCurrentPackageFullName](https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) native function in kernel32.dll. When a desktop application is running as a non-packaged application without package identity, this function returns an error which can help you infer the context in which the app is running.
+To determine whether your application is running as an MSIX package on a version of Windows that supports the full MSIX feature set, you can use the [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) native function in kernel32.dll. When a desktop application is running as a non-packaged application without package identity, this function returns an error which can help you infer the context in which the app is running.
 
 If the function succeeds, it means:
 
@@ -22,7 +22,7 @@ If the function succeeds, it means:
 
 ## Use GetCurrentPackageFullName in native code
 
-The following code example demonstrates how to use [GetCurrentPackageFullName](https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) to determine the context of an app.
+The following code example demonstrates how to use [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) to determine the context of an app.
 
 ```cpp
 #define _UNICODE 1
@@ -69,7 +69,7 @@ int __cdecl wmain()
 
 ## Use GetCurrentPackageFullName function in managed code
 
-To call [GetCurrentPackageFullName](https://msdn.microsoft.com/library/windows/desktop/hh446599(v=vs.85).aspx) in a managed .NET Framework app, you'll need to use [Platform Invoke (P/Invoke)](https://docs.microsoft.com/dotnet/standard/native-interop/pinvoke) or some other form of interop.
+To call [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) in a managed .NET Framework app, you'll need to use [Platform Invoke (P/Invoke)](/dotnet/standard/native-interop/pinvoke) or some other form of interop.
 
 To simplify this process, you can use the [DesktopBridgeHelpers](https://github.com/qmatteoq/DesktopBridgeHelpers/) library. This library supports .NET Framework 4 and later, and it uses P/Invoke internally to provide a helper class that determines whether the app is running on a version of Windows that supports the full MSIX feature set. This library is also available as a [NuGet Package](https://www.nuget.org/packages/DesktopBridge.Helpers/).
 
