@@ -101,7 +101,7 @@ SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
-For more examples, see our [Using SignTool to Sign a File](https://docs.microsoft.com/windows/win32/seccrypto/using-signtool-to-sign-a-file)
+For more examples, see [Using SignTool to Sign a File](https://docs.microsoft.com/windows/win32/seccrypto/using-signtool-to-sign-a-file)
 
 Note that some certificates do not use a password. If your certificate does not have a password, omit "/p &lt;Your Password&gt;" from the sample commands.
 
