@@ -101,6 +101,8 @@ SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
+For more examples, see our [Using SignTool to Sign a File](https://docs.microsoft.com/windows/win32/seccrypto/using-signtool-to-sign-a-file)
+
 Note that some certificates do not use a password. If your certificate does not have a password, omit "/p &lt;Your Password&gt;" from the sample commands.
 
 Once your app package is signed with a valid certificate, you're ready to upload your package to the Store. For more guidance on uploading and submitting apps to the Store, see [App submissions](/windows/uwp/publish/app-submissions).
