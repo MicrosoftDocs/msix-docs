@@ -49,7 +49,24 @@ If you receive this error code, you may need to check your [environment settings
 
 #### Driver required a reinstall
 
-In this scenario, the MSIX Packaging Tool will notify you in the error message and logs that your driver needs a restart. Restart your computer and start your conversion again to fix this issue. 
+In this scenario, the MSIX Packaging Tool will notify you in the error message and logs that your driver needs a restart. Restart your computer and start your conversion again to fix this issue.  
+
+#### Error starting the MSIX packaging tool driver 0x80131500
+
+If you get this error during the conversion, when you check the log file you should find an entry like the following one:  
+
+`[Error] Error monitoring: Insufficient system resources exist to complete the requested service`
+
+This error happens when the tool starts a new system event tracing session, but you have exceeded the maximum number of sessions that Windows can create system-wide. If you exceed the default limit (64) you will hit an ERROR_NO_SYSTEM_RESOURCES error, which causes the driver to fail.
+
+The solution is to stop some of the existing Event Trace sessions by following these steps:
+
+1) Open the Start menu and look for Performance Monitor.
+2) Right-click on it and choose More -> Run as Administrator.
+3) From the tree menu, choose Data Collector Sets -> Event Trace Sessions.
+4) Right-click on some of the existing sessions in the list and choose Stop.
+
+Now you can try again performing the conversion with the MSIX Packaging Tool.
 
 ### Minimum version
 
