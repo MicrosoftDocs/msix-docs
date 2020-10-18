@@ -11,7 +11,7 @@ ms.custom: Vibranium
 # Release notes for the MSIX Packaging Tool
 
 ## Version 1.2020.1006.0
-- Added support for [Device Guard Signing version 2](../../package/signing-package-device-guard-signing.md)
+- Added support for [Device Guard Signing version 2](../../package/signing-package-device-guard-signing.md). If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
 - Added a fix for MaxVersionTested to keep manifest up to date
 - Fixed bug to preserve icons in shortcuts for App-V conversions
 
