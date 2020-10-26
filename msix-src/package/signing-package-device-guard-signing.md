@@ -24,7 +24,7 @@ ms.localizationpriority: medium
 > - Download root cert
 > - Download history of your signing operations 
 >
-> We will share detailed instructions and NuGet location before mid-October 2020. For any questions, please contact us at DGSSMigration@microsoft.com for more information on migration.  
+> You can find the NuGet package [here](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/). For any questions, please contact us at DGSSMigration@microsoft.com for more information on migration.  
 
 
 [Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
