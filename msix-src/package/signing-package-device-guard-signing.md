@@ -1,7 +1,7 @@
 ---
 description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
-ms.date: 08/27/2020
+ms.date: 10/26/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 > We are introducing a new version of the Device Guard Signing Service (DGSS) to be more automation friendly. The new version of the service (DGSS v2) will be available for consumption starting mid-September 2020, and you will have until the end of December 2020 to transition to DGSS v2. At the end of December 2020, the existing web-based mechanisms for the current version of the DGSS service will be retired and will no longer be available for use. Please make plans to migrate to the new version of the service between September and December 2020.
 >
 > Following are the major changes we are making to the service: 
-> - The method for consuming the service will change to a more automation-friendly method based on PowerShell cmdlets. These cmdlets will be available as a NuGet download.
+> - The method for consuming the service will change to a more automation-friendly method based on PowerShell cmdlets. These cmdlets will be available as a [NuGet download](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/).
 > - In order to achieve desired isolation, you will be required to get a new CI policy from DGSS v2 (and optionally sign it). 
 > -	DGSS v2 will not have support for downloading leaf certificates used to sign your files (however, the root certificate will still be available to download).  Note that the certificate used to sign a file can be easily extracted from the signed file itself.  As a result, after DGSS v1 is retired at the end of December 2020, you will no longer be able to download the leaf certificates used to sign your files.
 >
@@ -24,7 +24,7 @@ ms.localizationpriority: medium
 > - Download root cert
 > - Download history of your signing operations 
 >
-> We will share detailed instructions and NuGet location before mid-October 2020. For any questions, please contact us at DGSSMigration@microsoft.com for more information on migration.  
+> For any questions, please contact us at DGSSMigration@microsoft.com for more information on migration.  
 
 
 [Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.

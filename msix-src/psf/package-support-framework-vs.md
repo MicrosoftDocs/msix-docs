@@ -1,5 +1,5 @@
 ---
-Description: If you have a packaging project in Visual Studios and want to apply a package support framework
+description: If you have a packaging project in Visual Studios and want to apply a package support framework
 title: Apply Package Support Framework in Visual Studio
 ms.date: 05/14/2020
 ms.topic: article
@@ -21,18 +21,20 @@ If you don't already have a **Windows Application Packaging Project**, create on
 
 For more information on Windows Application Packaging project, see [Package your application by using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
-In **Solution Explorer**, right-click the packaging project, select **Edit**, and then add this to the bottom of the project file:
+In **Solution Explorer**, right-click the packaging project, select **Edit Project File**, and then add this to the bottom of the project file:
 
 ```xml
-<Target Name="PSFRemoveSourceProject" AfterTargets="ExpandProjectReferences" BeforeTargets="_ConvertItems">
-<ItemGroup>
-  <FilteredNonWapProjProjectOutput Include="@(_FilteredNonWapProjProjectOutput)">
-  <SourceProject Condition="'%(_FilteredNonWapProjProjectOutput.SourceProject)'=='<Runtime fix project name>'" />
-  </FilteredNonWapProjProjectOutput>
-  <_FilteredNonWapProjProjectOutput Remove="@(_FilteredNonWapProjProjectOutput)" />
-  <_FilteredNonWapProjProjectOutput Include="@(FilteredNonWapProjProjectOutput)" />
-</ItemGroup>
-</Target>
+...
+  <Target Name="PSFRemoveSourceProject" AfterTargets="ExpandProjectReferences" BeforeTargets="_ConvertItems">
+    <ItemGroup>
+      <FilteredNonWapProjProjectOutput Include="@(_FilteredNonWapProjProjectOutput)">
+      <SourceProject Condition="'%(_FilteredNonWapProjProjectOutput.SourceProject)'=='_Runtime fix project name_'" />
+      </FilteredNonWapProjProjectOutput>
+      <_FilteredNonWapProjProjectOutput Remove="@(_FilteredNonWapProjProjectOutput)" />
+      <_FilteredNonWapProjProjectOutput Include="@(FilteredNonWapProjProjectOutput)" />
+    </ItemGroup>
+  </Target>
+</Project>
 ```
 
 ## Step 3: Add project for the runtime fix
