@@ -1,5 +1,5 @@
 ---
-Description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
+description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
 ms.date: 2/3/2020
 ms.topic: article
@@ -38,7 +38,7 @@ Developers have different tools to distribute their applications.  In the [Distr
 MSIX is a robust and reliable modern app install experience. The MSIX experience delivers a 99.96% successful install rate.  But there are some caveats. MSIX is not supported by default on all versions of Windows, and the supported feature set may very depending on which version of Windows 10 you are deploying to.  In the [Plan for your deployment](managing-your-msix-deployment-targetdevices.md) section we will discuss the importance of understanding the target device that the MSIX will be deployed to. 
 
 ## Providing support for my customer
-Though MSIX has a 99.96% successful install rate, you still need to plan how to support your customer.  In the [MSIX Validation and Troubleshooting section](managing-your-msix-deployment-overview.md) we discuss tools available for you to diagnose installation issues.
+Though MSIX has a 99.96% successful install rate, you still need to plan how to support your customer.  In the [MSIX Validation and Troubleshooting section](managing-your-msix-deployment-troubleshooting.md) we discuss tools available for you to diagnose installation issues.
 
 
  
