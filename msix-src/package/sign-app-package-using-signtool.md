@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT] 
 > If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create and sign your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
-For more information about code signing and certificates in general, see [Introduction to Code Signing](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools).
+For more information about code signing and certificates in general, see [Introduction to Code Signing](/windows/desktop/SecCrypto/cryptography-tools).
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ For more information about code signing and certificates in general, see [Introd
 
 ## Using SignTool
 
-**SignTool** can be used to sign files, verify signatures or timestamps, remove signatures, and more. For the purpose of signing an app package, we will focus on the **sign** command. For full information on **SignTool**, see the [SignTool](https://docs.microsoft.com/windows/desktop/SecCrypto/signtool) reference page.
+**SignTool** can be used to sign files, verify signatures or timestamps, remove signatures, and more. For the purpose of signing an app package, we will focus on the **sign** command. For full information on **SignTool**, see the [SignTool](/windows/desktop/SecCrypto/signtool) reference page.
 
 ### Determine the hash algorithm
 
@@ -101,6 +101,8 @@ SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
+For more examples, see [Using SignTool to Sign a File](/windows/win32/seccrypto/using-signtool-to-sign-a-file)
+
 Note that some certificates do not use a password. If your certificate does not have a password, omit "/p &lt;Your Password&gt;" from the sample commands.
 
-Once your app package is signed with a valid certificate, you're ready to upload your package to the Store. For more guidance on uploading and submitting apps to the Store, see [App submissions](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
+Once your app package is signed with a valid certificate, you're ready to upload your package to the Store. For more guidance on uploading and submitting apps to the Store, see [App submissions](/windows/uwp/publish/app-submissions).

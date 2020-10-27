@@ -1,7 +1,7 @@
 ---
 description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
-ms.date: 08/27/2020
+ms.date: 10/26/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -13,11 +13,12 @@ ms.localizationpriority: medium
 > [Device Guard Signing Service v2](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) is now available. As announced earlier, you will have until the end of December 2020 to transition to DGSS v2. At the end of December 2020, the existing web-based mechanisms for the current version of the DGSS service will be retired and will no longer be available for use. You must make plans to migrate to the new version of the service before December 2020. For more information, please contact DGSSMigration@Microsoft.com. 
 
 
-[Device Guard signing](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
+
+[Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
-1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business).
+1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](/microsoft-store/sign-up-microsoft-store-for-business).
     > [!NOTE]
     > You only need to use this portal to configure permissions for Device Guard signing.
 2. In the Microsoft Store for Business (or or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
@@ -40,16 +41,16 @@ To confirm or reassign roles:
 2. Select **Manage** and then select **Permissions**.
 3. View **Roles**.
 
-For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+For more information, see [Roles and permissions in the Microsoft Store for Business and Education](/microsoft-store/roles-and-permissions-microsoft-store-for-business).
 
 ## Register your app in the Azure Portal
 
 To register your app with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) to register the app that will use Device Guard signing.
+1. Sign in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) to register the app that will use Device Guard signing.
 
     > [!NOTE]
-    > Under **Redirect URI** section, we recommend you choose **Public client (mobile & desktop)**. Otherwise, if you choose **Web** for the app type, you will need to provide a [client secret](https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process.
+    > Under **Redirect URI** section, we recommend you choose **Public client (mobile & desktop)**. Otherwise, if you choose **Web** for the app type, you will need to provide a [client secret](/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process.
 
 2. After you register your app, on the main page for your app in the Azure portal, click **API permissions**, under **APIs my organization uses** and add a permission for the **Windows Store for Business API**.
 
@@ -57,7 +58,7 @@ To register your app with the proper settings so that you can use Azure AD authe
 
 ## Get an Azure AD access token
 
-Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](https://docs.microsoft.com/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
+Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
 
 > [!NOTE]
 > If you registered your app as a **Web** app in the Azure portal, you must provide a client secret when you request your token. For more information, see the previous section.
@@ -96,7 +97,7 @@ function GetToken()
 
 ## Sign your package
 
-After you have your Azure AD access token, you are ready to use SignTool to sign your package with Device Guard signing. For more information about using SignTool to sign packages, see [Sign an app package using SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool?context=/windows/msix/render#prerequisites).
+After you have your Azure AD access token, you are ready to use SignTool to sign your package with Device Guard signing. For more information about using SignTool to sign packages, see [Sign an app package using SignTool](/windows/uwp/packaging/sign-app-package-using-signtool?context=%252fwindows%252fmsix%252frender#prerequisites).
 
 The following command line example demonstrates how to sign a package with Device Guard signing.
 

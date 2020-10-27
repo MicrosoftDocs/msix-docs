@@ -11,9 +11,9 @@ ms.localizationpriority: medium
 
 Developers who use MSIX can leverage Group Policy in a similar way to other installer types.
 
-If you have packaged your Win32 app into an MSIX (or if you built your app using the Desktop Bridge), your app has the full trust capability enabled. This allows you to read from the Group Policy registry keys. At run time, your app will have the same view of the Group Policy registry as it would if it had been installed using a different method. Starting in Windows 10, version 1809, if your app is a Universal Windows Platform (UWP) app it can access the same Group Policy keys. For more information about creating Group Policy, see [this article](https://docs.microsoft.com/openspecs/windows_protocols/ms-gpreg/834da877-264f-4589-9b80-b6b012c8edc3).
+If you have packaged your Win32 app into an MSIX (or if you built your app using the Desktop Bridge), your app has the full trust capability enabled. This allows you to read from the Group Policy registry keys. At run time, your app will have the same view of the Group Policy registry as it would if it had been installed using a different method. Starting in Windows 10, version 1809, if your app is a Universal Windows Platform (UWP) app it can access the same Group Policy keys. For more information about creating Group Policy, see [this article](/openspecs/windows_protocols/ms-gpreg/834da877-264f-4589-9b80-b6b012c8edc3).
 
-If you are converting an existing installer to MSIX by using the [MSIX Packaging Tool](mpt-overview.md), there is no new work needed for your app to support Group Policy. Continue to manage Group Policies as you normally would for the original installer. Apps converted to MSIX will still be able to read from existing Group Policy registry keys. 
+If you are converting an existing installer to MSIX by using the [MSIX Packaging Tool](./packaging-tool/tool-overview.md), there is no new work needed for your app to support Group Policy. Continue to manage Group Policies as you normally would for the original installer. Apps converted to MSIX will still be able to read from existing Group Policy registry keys. 
 
 Group Policy does not have native support to install MSIX applications. 
 

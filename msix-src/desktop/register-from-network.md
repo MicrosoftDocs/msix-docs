@@ -26,11 +26,11 @@ Multiple people can contribute to a single app package layout on a network share
 
 ## In Visual Studio
 
-If you are developing in Visual Studio you can follow the steps outlined [here](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps?redirectedfrom=MSDN#advanced-remote-deployment-options).
+If you are developing in Visual Studio you can follow the steps outlined [here](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options).
 
 ## From the command line
 
-If you are not developing in Visual Studio, and using command line tools you can use  [WinDeployAppCmd](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool). Below is an example of how to do so from a command line window:
+If you are not developing in Visual Studio, and using command line tools you can use  [WinDeployAppCmd](/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool). Below is an example of how to do so from a command line window:
 
 ```
 WinAppDeployCmd.exe registerfiles -remotedeploydir <network path> -ip <IP Address> -pin <target machine PIN>

@@ -17,7 +17,7 @@ To successfully install a Windows 10 application, the package doesn't just have 
 |:---|:---|
 |[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prerequisites required to sign the Windows 10 app package. | 
 |[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
-|[Sign an MSIX package with Device Guard signing](https://docs.microsoft.com/windows/msix/package/signing-package-device-guard-signing)| This section discusses how to sign your app with Device Guard signing.|
+|[Sign an MSIX package with Device Guard signing](./signing-package-device-guard-signing.md)| This section discusses how to sign your app with Device Guard signing.|
 
 ## Timestamping
 
@@ -35,7 +35,7 @@ The following are the different scenarios around app signing with/out timestampi
  
  ## Package Integrity Enforcement
  
-In addition to ensuring only trusted applications are installed on a device, an additional benefit of signing an MSIX package is that it enables Windows to enforce the integrity of your package and its contents after it is deployed on a device. By chaining to the [AppxBlockMap.xml](https://docs.microsoft.com/windows/msix/overview#appxblockmapxml) and [AppxSignature.p7x](https://docs.microsoft.com/windows/msix/overview#appxsignaturep7x) in a signed package, Windows is able to perform validation checks on the integrity of a package and its contents at runtime, and during Windows Defender scans. If a package is deemed to be tampered Windows will block application launch and kick-off a remediation workflow to get the package repaired or reinstalled. For packages not distributed through the Microsoft Store, package integrity is enforced if the package declares the [uap10:PackageIntegrity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-packageintegrity) element and is deployed on Windows 2004 and later builds. Below is an example declaration of package integrity enforcement in the AppxManifest.xml:
+In addition to ensuring only trusted applications are installed on a device, an additional benefit of signing an MSIX package is that it enables Windows to enforce the integrity of your package and its contents after it is deployed on a device. By chaining to the [AppxBlockMap.xml](../overview.md#appxblockmapxml) and [AppxSignature.p7x](../overview.md#appxsignaturep7x) in a signed package, Windows is able to perform validation checks on the integrity of a package and its contents at runtime, and during Windows Defender scans. If a package is deemed to be tampered Windows will block application launch and kick-off a remediation workflow to get the package repaired or reinstalled. For packages not distributed through the Microsoft Store, package integrity is enforced if the package declares the [uap10:PackageIntegrity](/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-packageintegrity) element and is deployed on Windows 2004 and later builds. Below is an example declaration of package integrity enforcement in the AppxManifest.xml:
 
 ```xml
 <Package ...
@@ -57,7 +57,7 @@ Windows 10 allows users to select the mode in which to run their device on in th
 
 **Microsoft Store apps** is the most secure as it only allows the installation of apps from the Microsoft Store. Apps in the Microsoft Store go through certification process to ensure that the apps are safe for use. 
 
-**Sideload apps**  and **Developer mode** are more permissive of apps that are signed by other certificates as long as those certificates are trusted and chain to one of the trusted roots on the device. Only select Developer mode if you are a developer and building or debugging Windows 10 apps. More info about Developer mode and what it provides can be found [here](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). 
+**Sideload apps**  and **Developer mode** are more permissive of apps that are signed by other certificates as long as those certificates are trusted and chain to one of the trusted roots on the device. Only select Developer mode if you are a developer and building or debugging Windows 10 apps. More info about Developer mode and what it provides can be found [here](/windows/uwp/get-started/enable-your-device-for-development). 
 
 > [!NOTE]
-> Starting in Windows 10 version 2004, Sideload option is turned on by default. As a result, **Developer mode** is now a toggle. Enterprises can still turn off Sideloading via policy. 
+> Starting in Windows 10 version 2004, Sideload option is turned on by default. As a result, **Developer mode** is now a toggle. Enterprises can still turn off Sideloading via policy.

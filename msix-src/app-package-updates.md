@@ -50,7 +50,7 @@ On a larger scale, if an entire file does not change (determined by a full set o
 The package family is comprised of the Package Name and Publisher. To be able to update, the new package metadata will need to be the same as the previously installed package. 
 
 #### App updates must increment to a higher version
-In general, app updates require the version of the new package to be higher than the current one. The app update process will not allow packages with lower versions to be installed by default. Starting in Windows 10 version 1809, you can use ForceUpdateToAnyVersion to allow lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the [ForceUpdateFromAnyVersion](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) option, via [PackageManager API](https://docs.microsoft.com/uwp/api/windows.management.deployment.deploymentoptions), [EnterpriseModernAppManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/enterprisemodernappmanagement-csp) and in the [AppInstaller file](https://docs.microsoft.com/windows/msix/app-installer/update-settings).  
+In general, app updates require the version of the new package to be higher than the current one. The app update process will not allow packages with lower versions to be installed by default. Starting in Windows 10 version 1809, you can use ForceUpdateToAnyVersion to allow lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the [ForceUpdateFromAnyVersion](/powershell/module/appx/add-appxpackage?view=win10-ps) option, via [PackageManager API](/uwp/api/windows.management.deployment.deploymentoptions), [EnterpriseModernAppManagement CSP](/windows/client-management/mdm/enterprisemodernappmanagement-csp) and in the [AppInstaller file](./app-installer/update-settings.md).  
 
 > [!NOTE]
 > If you use ForceUpdateToAnyVersion on an app from the Windows Store, Windows Update will automatically update the to the latest applicable version.
@@ -69,5 +69,3 @@ There are a few ways to ensure that the differential update technology is optimi
 - Keep files in the package small - doing this will ensure that if a change is needed that would impact the full file, the update would still be small.
 - Changes to files should be additive if possible - additive changes will ensure that end-user devices only download those changed blocks.
 - Changes to files should be contained to 64KB blocks if possible - if your app does have large files and requires changes to the middle of a file, containing changes to a set of blocks will help significantly.
- 
-

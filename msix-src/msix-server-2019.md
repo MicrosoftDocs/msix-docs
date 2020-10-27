@@ -11,7 +11,7 @@ ms.custom: "RS5, seodec18"
 
 # MSIX support on Windows Server 2019
 
-MSIX is now supported on Windows Server 2019 (LTSC) with the Desktop Experience. This support enables you to distribute the same MSIX packages within your enterprise on both client and server SKUs, installing via **PowerShell** or installing directly via the [Package Manager API](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager).
+MSIX is now supported on Windows Server 2019 (LTSC) with the Desktop Experience. This support enables you to distribute the same MSIX packages within your enterprise on both client and server SKUs, installing via **PowerShell** or installing directly via the [Package Manager API](/uwp/api/Windows.Management.Deployment.PackageManager).
 
 ## Considerations
 

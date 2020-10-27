@@ -31,7 +31,7 @@ The goal of MSIX Core is to enable the install, query, and removal of MSIX packa
 
 * MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows versions.
 * When using MSIX Core on a down-level OS, [app execution aliases](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-an-alias) will only work from **Win+R** and not from Command Prompt or PowerShell.
-* MSIX Core does not support Microsoft Store integration. Developers who want to publish their applications to the Store can follow the documentation [here](https://docs.microsoft.com/windows/uwp/publish/).
+* MSIX Core does not support Microsoft Store integration. Developers who want to publish their applications to the Store can follow the documentation [here](/windows/uwp/publish/).
 
 ## Get started
 

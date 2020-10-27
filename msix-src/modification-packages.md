@@ -16,7 +16,7 @@ In Windows 10, version 1809, we introduced a new type of MSIX package called a *
 
 ## How it works
 
-Modification packages are designed for enterprises that do not own the code of the application and only have the installer. You can create a modification package by using the latest version of the MSIX packaging tool (for Windows 10 version 1809 or later). If you have the code for the application, you can alternatively create an [app extension](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-an-extension). 
+Modification packages are designed for enterprises that do not own the code of the application and only have the installer. You can create a modification package by using the latest version of the MSIX packaging tool (for Windows 10 version 1809 or later). If you have the code for the application, you can alternatively create an [app extension](/windows/uwp/launch-resume/how-to-create-an-extension). 
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
@@ -45,7 +45,7 @@ Here are the typical ways to create a .dat file:
 
 * Use Regedit to create a file. Create a hive in Regedit and insert the necessary keys. Than right click, export and save-as hive file. Make sure to name the file either User.dat or Userclass.dat
 
-* Use an API to create necessary files. You can use the [ORSaveHive](https://docs.microsoft.com/windows/win32/devnotes/orsavehive) function to save a .dat file. Make sure to name the file ether User.dat or Userclass.dat
+* Use an API to create necessary files. You can use the [ORSaveHive](/windows/win32/devnotes/orsavehive) function to save a .dat file. Make sure to name the file ether User.dat or Userclass.dat
 
 After you’ve made the necessary changes, you can create the modification package like any other MSIX package. Then you can deploy the package with the current deployment set-up. When you relaunch your main app, you can see the changes that the modification package has made. If you choose to remove the modification package, your main app will revert to a state without the modification package. 
 

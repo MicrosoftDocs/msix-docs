@@ -1,5 +1,5 @@
 ---
-Description: Run the Desktop App Converter to package a Windows desktop application (like Win32, WPF, and Windows Forms).
+description: Run the Desktop App Converter to package a Windows desktop application (like Win32, WPF, and Windows Forms).
 title: Package an app using the Desktop App Converter (Desktop Bridge)
 ms.date: 07/29/2019
 ms.topic: article
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 # Package a desktop application using the Desktop App Converter
 
 > [!NOTE]
-> The Desktop App Converter tool is deprecated. We recommend that you use the [MSIX Packaging Tool](../packaging-tool/create-app-package-msi-vm.md) instead.
+> The Desktop App Converter tool is deprecated. We recommend that you use the [MSIX Packaging Tool](../packaging-tool/create-app-package.md) instead.
 
 ![DAC Icon](images/dac.png)
 
@@ -92,7 +92,7 @@ You can skip ahead to the next section if your application doesn't have an insta
    Make sure that the version number that appears in the name of the file matches the version number of your Windows build.
 
    >[!IMPORTANT]
-   > If you're using build number **15063**, and the minor version of that build is equal to or greater than **.483** (For example: **15063.540**), make sure to download the **BaseImage-15063-UPDATE.wim** file. If the minor version of that build is less than **.483**, download the **BaseImage-15063.wim** file. If you've already setup an incompatible version of this base file, you can fix it. This [blog post](https://blogs.msdn.microsoft.com/appconsult/2017/08/04/desktop-app-converter-fails-on-windows-10-15063-483-and-later-how-to-solve-it/) explains how to do that.
+   > If you're using build number **15063**, and the minor version of that build is equal to or greater than **.483** (For example: **15063.540**), make sure to download the **BaseImage-15063-UPDATE.wim** file. If the minor version of that build is less than **.483**, download the **BaseImage-15063.wim** file. If you've already setup an incompatible version of this base file, you can fix it. This [blog post](/archive/blogs/appconsult/desktop-app-converter-fails-on-windows-10-15063-483-and-later-how-to-solve-it) explains how to do that.
 
 3. Place the downloaded file anywhere on your computer where you'll be able to find it later.
 
@@ -151,7 +151,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.msi -Destination C:\O
 > [!IMPORTANT]
 > There are two important things to keep in mind here. First, make sure that your installer is located in an independent folder and that only files related to that installer are in the same folder. The converter copies all of the contents of that folder to the isolated Windows environment. <br> Secondly, if Partner Center assigns an identity to your package that begins with a number, make sure that you also pass in the <i>-AppId</i> parameter, and use only the string suffix (after the period separator) as the value of that parameter.  
 
-If your installer includes installers for dependent libraries or frameworks, you might have to organize things a bit a differently. See [Chaining multiple installers with the Desktop Bridge](https://blogs.msdn.microsoft.com/appconsult/2017/09/11/chaining-multiple-installers-with-the-desktop-app-converter/).
+If your installer includes installers for dependent libraries or frameworks, you might have to organize things a bit a differently. See [Chaining multiple installers with the Desktop Bridge](/archive/blogs/appconsult/chaining-multiple-installers-with-the-desktop-app-converter).
 
 <a id="setup-conversion"></a>
 
@@ -273,7 +273,7 @@ You can also view the entire list by running the ``Get-Help`` command in the app
 |-ExpandedBaseImage &lt;String&gt;  |Optional |Full path to an already expanded base image.|
 |-LogFile &lt;String&gt;  |Optional |Specifies a log file. If omitted, a log file temporary location will be created. |
 | -Sign [&lt;SwitchParameter&gt;] |Optional |Tells this script to sign the output Windows app package by using a generated certificate for testing purposes. This switch should be present alongside the switch ```-MakeAppx```. |
-|&lt;Common parameters&gt; |Required |This cmdlet supports the common parameters: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, and *OutVariable*. For more info, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216). |
+|&lt;Common parameters&gt; |Required |This cmdlet supports the common parameters: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, and *OutVariable*. For more info, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters). |
 | -Verify [&lt;SwitchParameter&gt;] |Optional |A switch that, when present, tells the DAC to validate the app package against packaged app and Microsoft Store requirements. The result is a validation report "VerifyReport.xml", which is best visualized in a browser. This switch should be present alongside the switch `-MakeAppx`. |
 |-PublishComRegistrations| Optional| Scans all public COM registrations made by your installer and publishes the valid ones in your manifest. Use this flag only if you want to make these registrations available to other applications. You don't need to use this flag if these registrations will be used only by your application. <br><br>Review [this article](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#lDg5gSFxJ2TDlpC6.97) to make sure that your COM registrations behave as you expect after you package your app.
 
@@ -407,7 +407,7 @@ For the Authenticode signature to be correct, the following must be true of the 
 - The size of the **WIN_CERTIFICATE** entry must be positive
 - The **WIN_CERTIFICATE**entry must start after the **IMAGE_NT_HEADERS32** structure for 32-bit executables and IMAGE_NT_HEADERS64 structure for 64-bit executables
 
-For more details, please refer to the [Authenticode Portal Executable specification](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) and the [PE file format specification](https://msdn.microsoft.com/windows/hardware/gg463119.aspx).
+For more details, please refer to the [Authenticode Portal Executable specification](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx) and the [PE file format specification](/windows/win32/debug/pe-format).
 
 Note that SignTool.exe can output a list of the corrupted or malformed binaries when attempting to sign an Windows app package. To do this, enable verbose logging by setting the environment variable APPXSIP_LOG to 1 (e.g., ```set APPXSIP_LOG=1``` ) and re-run SignTool.exe.
 

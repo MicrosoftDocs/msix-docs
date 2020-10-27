@@ -16,7 +16,7 @@ App streaming install enables you to specify which parts of your app you would l
 
 To use app streaming install you'll need to divide your app's files into sections. To do this, you'll create a content group map, which is an XML file that's packaged with your app, allowing you to set download priority and order. See the topic linked below for more information.
 
-For a complete guide on adding streaming install to your app, check out this [blog series](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+For a complete guide on adding streaming install to your app, check out this [blog series](../index.yml).
 
 | Topic | Description |
 |-------|-------------|

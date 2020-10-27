@@ -47,7 +47,7 @@ Prefix your app package URIs with the activation scheme `'ms-appinstaller:?sourc
 ## Signing the app package
 For users to install your app, you will need to sign the app package with a trusted certificate. You can use a third party paid certificate from a trusted certification authority to sign your app package. If a third party certificate is used, the user will need to have their device in either sideload or developer mode to install and run your app.
 
-If you are deploying an app to employees within an enterprise, you can use an enterprise issued certificate to sign the app. It's important to note that the enterprise certificate must be deployed to any devices which the app will be installed on. For more information on deploying enterprise apps, see [Enterprise app management](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
+If you are deploying an app to employees within an enterprise, you can use an enterprise issued certificate to sign the app. It's important to note that the enterprise certificate must be deployed to any devices which the app will be installed on. For more information on deploying enterprise apps, see [Enterprise app management](/windows/client-management/mdm/enterprise-app-management).
 
 ## Web install experience on previous versions of Windows 10<a name="web-install-experience"></a>
 
@@ -66,7 +66,6 @@ Here's a quick comparison of the Windows 10 Fall Creators update version of App 
 | After package download, App Installer automatically launches the app package | User must click **Install** and manually launch the app package |
 | App Installer will take care of disposal of downloaded packages | User must manually delete the downloaded files |
 
-## Web install experience on previous versions of Windows 10
 On versions prior to the Windows 10 Fall Creators Update, App Installer cannot directly install an app from the web. On these versions, App Installer can only install app packages that are locally available. Instead, App Installer will download the package and require the user to double click the downloaded package to install.
 
 

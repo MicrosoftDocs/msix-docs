@@ -27,7 +27,7 @@ If you are interested in joining our Insider Program, click [here](https://aka.m
 
 ### MSIX Packaging Tool driver
 
-The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update. It will fail to install if the Windows Update service is disabled on the computer or if Windows Insider flight ring settings do not match the OS build of the computer.
+The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update. It will fail to install if the Windows Update service is disabled on the computer or if Windows Insider flight ring settings do not match the OS build of the computer.
 
 If you are running into problems acquiring the driver, or you are working in an offline environment, you can find links to download the driver [here](disconnected-environment.md#get-the-msix-packaging-tool-driver). 
 
@@ -45,11 +45,28 @@ The following error codes might indicate that you are encountering connection is
 
 The following error code may indicate that policies on your computer are be affecting Windows Update connectivity: -2145124306 (0x8024002e).
 
-If you receive this error code, you may need to check your [environment settings and policies](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+If you receive this error code, you may need to check your [environment settings and policies](/windows/deployment/update/fod-and-lang-packs).
 
 #### Driver required a reinstall
 
-In this scenario, the MSIX Packaging Tool will notify you in the error message and logs that your driver needs a restart. Restart your computer and start your conversion again to fix this issue. 
+In this scenario, the MSIX Packaging Tool will notify you in the error message and logs that your driver needs a restart. Restart your computer and start your conversion again to fix this issue.  
+
+#### Error starting the MSIX packaging tool driver 0x80131500
+
+If you get this error during the conversion, when you check the log file you should find an entry like the following one:  
+
+`[Error] Error monitoring: Insufficient system resources exist to complete the requested service`
+
+This error happens when the tool starts a new system event tracing session, but you have exceeded the maximum number of sessions that Windows can create system-wide. If you exceed the default limit (64) you will hit an ERROR_NO_SYSTEM_RESOURCES error, which causes the driver to fail.
+
+The solution is to stop some of the existing Event Trace sessions by following these steps:
+
+1) Open the Start menu and look for Performance Monitor.
+2) Right-click on it and choose More -> Run as Administrator.
+3) From the tree menu, choose Data Collector Sets -> Event Trace Sessions.
+4) Right-click on some of the existing sessions in the list and choose Stop.
+
+Now you can try again performing the conversion with the MSIX Packaging Tool.
 
 ### Minimum version
 
@@ -127,7 +144,7 @@ The file may either be open or non-existent. To resolve this issue, add the appr
 
 #### File Type Associations
 
-The issues regarding File Type Associations (FTA) vary from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See the [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) manifest element for an example.
+The issues regarding File Type Associations (FTA) vary from package to package. MSIX Packaging Tool support file associations for double click installs. For example, if your app has context menu, it is not automatically added, so you will need to add it manually to the manifest. See the [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) manifest element for an example.
 
 #### Shortcuts with arguments
 
