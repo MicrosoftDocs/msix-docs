@@ -113,13 +113,10 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 
 ## Test
 
-To test the Device Guard signing, download your certificate from the Microsoft Store for Business Portal.
-
-1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
-2. Select **Manage** and then select **Settings**.
-3. View **Devices**.
-4. View **Download your organization's root certificate for use with Device Guard**
-5. Click **Download** 
+To test, download the root certificate by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
+```cmd
+Get-RootCertificate
+```
 
 Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
 
