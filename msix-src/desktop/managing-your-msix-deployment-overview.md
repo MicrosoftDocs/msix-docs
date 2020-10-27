@@ -1,5 +1,5 @@
 ---
-Description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
+description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
 ms.date: 2/3/2020
 ms.topic: article
