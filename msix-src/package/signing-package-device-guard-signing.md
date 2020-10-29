@@ -100,10 +100,15 @@ To sign with Device Guard Signing version 2, obtain the **Microsoft.Acs.Dlib.dll
 
 After you have your Azure AD access token, you are ready to use SignTool to sign your package with Device Guard signing. For more information about using SignTool to sign packages, see [Sign an app package using SignTool](/windows/uwp/packaging/sign-app-package-using-signtool?context=%252fwindows%252fmsix%252frender#prerequisites).
 
-The following command line example demonstrates how to sign a package with Device Guard signing.
+The following command line example demonstrates how to sign a package with Device Guard signing version 2.
 
 ```cmd
 signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
+```
+
+The following command line example demonstrates how to sign with Device Guard signing version 1. Note that this will be deprecated by end of December 2020.
+```cmd
+signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
 ```
 
 > [!NOTE]
