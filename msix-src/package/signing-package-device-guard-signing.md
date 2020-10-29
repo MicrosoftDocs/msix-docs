@@ -127,7 +127,7 @@ Get-RootCertificate
 Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
 > [!NOTE]
-> It is recommended to use CI policy for further isolation. Be sure to read through the README file attached with the NuGet Package. 
+> It is recommended to use CI policy for further isolation. Be sure to read through the readme_cmdlets documentation and migration From DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
 
 ## Common errors
 
