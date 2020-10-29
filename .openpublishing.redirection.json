@@ -104,6 +104,11 @@
       "source_path": "msix-src/package/signing-in-vs.md",
       "redirect_url": "/windows/msix/package/packaging-uwp-apps",
       "redirect_document_id": true
+    }, 
+    {
+      "source_path": "msix-src/desktop/managing-your-msix-deployment-dism-provisioning.md",
+      "redirect_url": "/windows/msix/desktop/deploy-preinstalled-apps",
+      "redirect_document_id": true
     }
 
   ]
