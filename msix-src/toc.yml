@@ -45,13 +45,13 @@
     - name: API and schema reference
       items: 
         - name: Package Manager API
-          href: /uwp/api/windows.management.deployment?context=%252fwindows%252fmsix%252frender
+          href: /uwp/api/windows.management.deployment?context=/windows/msix/render
         - name: Packaging APIs
-          href: /windows/desktop/appxpkg/interfaces?context=%252fwindows%252fmsix%252frender
+          href: /windows/desktop/appxpkg/interfaces?context=/windows/msix/render
         - name: App manifest schema
-          href: /uwp/schemas/appxpackage/appx-package-manifest?context=%252fwindows%252fmsix%252frender
+          href: /uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render
         - name: App Installer file schema
-          href: /uwp/schemas/appinstallerschema/app-installer-file?context=%252fwindows%252fmsix%252frender
+          href: /uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
     - name: MSIX resources
       href: resources.md
     - name: Customer journeys
@@ -213,7 +213,7 @@
         - name: Overview
           href: desktop/extend-overview.md
         - name: App extensions
-          href: /windows/uwp/launch-resume/how-to-create-an-extension?context=%252fwindows%252fmsix%252frender
+          href: /windows/uwp/launch-resume/how-to-create-an-extension?context=/windows/msix/render
         - name: Custom properties for app extensions
           href: desktop/custom-props-app-extensions.md
         - name: Optional packages
@@ -279,7 +279,7 @@
         - name: Overview
           href: desktop/managing-your-msix-deployment-retail.md
         - name: Microsoft Store
-          href: /windows/uwp/publish/?context=%252fwindows%252fmsix%252frender
+          href: /windows/uwp/publish/?context=/windows/msix/render
     - name: MSIX package updates
       items: 
         - name: Overview
@@ -313,13 +313,13 @@
     - name: MSIX support on Windows Server 2019
       href: msix-server-2019.md
     - name: Windows device portal
-      href: /windows/uwp/debug-test-perf/device-portal?context=%252fwindows%252fmsix%252frender
+      href: /windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render
     - name: Troubleshoot runtime issues in an MSIX Container
       href: manage/troubleshoot-msix-container.md
     - name: Debug and test a packaged app
       items:
         - name: Troubleshooting packaging, deployment, and query of Windows apps
-          href: /windows/win32/appxpkg/troubleshooting?context=%252fwindows%252fmsix%252frender
+          href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
         - name: Run, debug, and test a packaged desktop application
           href: desktop/desktop-to-uwp-debug.md
         - name: Detect package identity and runtime context
