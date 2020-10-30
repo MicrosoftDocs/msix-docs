@@ -12,8 +12,6 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > [Device Guard Signing Service v2](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) is now available. As announced earlier, you will have until the end of December 2020 to transition to DGSS v2. At the end of December 2020, the existing web-based mechanisms for the current version of the DGSS service will be retired and will no longer be available for use. You must make plans to migrate to the new version of the service before December 2020. For more information, please contact DGSSMigration@Microsoft.com. 
 
-
-
 [Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
@@ -95,12 +93,20 @@ function GetToken()
 > [!NOTE]
 > We recommand that you save your JSON file for later use.
 
+## Obtain the Device Guard Signing version 2 DLL
+To sign with Device Guard Signing version 2, obtain the **Microsoft.Acs.Dlib.dll** by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) that will be used to sign your package. This is also needed to obtain the root certificate. 
+
 ## Sign your package
 
 After you have your Azure AD access token, you are ready to use SignTool to sign your package with Device Guard signing. For more information about using SignTool to sign packages, see [Sign an app package using SignTool](/windows/uwp/packaging/sign-app-package-using-signtool?context=%252fwindows%252fmsix%252frender#prerequisites).
 
-The following command line example demonstrates how to sign a package with Device Guard signing.
+The following command line example demonstrates how to sign a package with Device Guard signing version 2.
 
+```cmd
+signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
+```
+
+The following command line example demonstrates how to sign with Device Guard signing version 1. Note that this will be deprecated by end of December 2020.
 ```cmd
 signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
 ```
@@ -118,7 +124,10 @@ To test, download the root certificate by downloading the [NuGet Package](https:
 Get-RootCertificate
 ```
 
-Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing.
+Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
+
+> [!NOTE]
+> It is recommended to use CI policy for further isolation. Be sure to read through the readme_cmdlets documentation and migration From DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
 
 ## Common errors
 
