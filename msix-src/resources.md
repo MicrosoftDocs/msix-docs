@@ -60,6 +60,15 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row-end:::
 :::row:::
     :::column:::
+        <h3>Using MSIX with CI/CD Pipelines for Code Changes</h3>
+        <p>With MSIX and Azure DevOps you can go from making a code change in your repo to getting the updated release of your application on users’ machines in a matter of minutes. Join us for this demo-driven session as we demonstrate how to use MSIX CI/CD Pipelines to automate building, packaging, and deploying your desktop applications.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/embed/MnDCaQNnZc0" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
         <h3>Building apps for 1 billion Windows 10 Desktops and expanding reach w/ Windows Virtual Desktop</h3>
         <p>Learn how to take advantage of incredible Windows technologies like WinUI3 and MSIX to target the 1 billion+ in-market Windows 10 devices, and to reach billions of other devices via Windows Virtual Desktop.</p>
     :::column-end:::
