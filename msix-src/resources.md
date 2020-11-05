@@ -42,6 +42,15 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row-end:::
 :::row:::
     :::column:::
+        <h3>MSIX in the Enterprise</h3>
+        <p>The MSIX platform is continuing to grow and adapting to customer needs. Let's walk through what's new in the past year for the MSIX platform and what it means for your enterprise.  We will also cover the plans upcoming for the MSIX platform.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/embed/orh87lo6VKY" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
         <h3>MSIX App Attach in Windows Virtual Desktop</h3>
         <p>Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.</p>
     :::column-end:::
