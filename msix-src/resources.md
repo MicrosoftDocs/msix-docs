@@ -42,6 +42,15 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row-end:::
 :::row:::
     :::column:::
+        <h3>MSIX in the Enterprise</h3>
+        <p>The MSIX platform is continuing to grow and adapting to customer needs. Let's walk through what's new in the past year for the MSIX platform and what it means for your enterprise.  We will also cover the plans upcoming for the MSIX platform.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/embed/orh87lo6VKY" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
         <h3>MSIX App Attach in Windows Virtual Desktop</h3>
         <p>Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.</p>
     :::column-end:::
@@ -51,11 +60,11 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row-end:::
 :::row:::
     :::column:::
-        <h3>Application security and deployment</h3>
-        <p>Learn how to improve you app distribution.  We will talk about using code signing to improve authenticity of your application and improvements we are doing to reduce developer friction.  We also dive into how to improve your app packaging and deployment with MSIX.  We will cover the benefits, features and moving your existing app to MSIX.</p>
+        <h3>Using MSIX with CI/CD Pipelines for Code Changes</h3>
+        <p>With MSIX and Azure DevOps you can go from making a code change in your repo to getting the updated release of your application on users’ machines in a matter of minutes. Join us for this demo-driven session as we demonstrate how to use MSIX CI/CD Pipelines to automate building, packaging, and deploying your desktop applications.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.youtube.com/embed/iju9KAAIUCM" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        <iframe src="https://www.youtube.com/embed/MnDCaQNnZc0" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
     :::column-end:::
 :::row-end:::
 :::row:::
