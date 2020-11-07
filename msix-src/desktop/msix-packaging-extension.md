@@ -62,7 +62,7 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 ![Build and package task](images/msix-packaging-ext/build-and-package.png)
 
 - **Display name** - Customize your task name
-- **Output Path** - Specify the output path for the MSIX package that will be created by this task. The path in the example above uses [predefined variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml) **Build.ArtifactStagingDirectory** which is the local path on the agent to store artifacts, and is used here to store task output files which can later be published using a publish artifacts task.
+- **Output Path** - Specify the output path for the MSIX package that will be created by this task. The path in the example above uses [predefined variable](https://docs.microsoft.com/azure/devops/pipelines/build/variables) **Build.ArtifactStagingDirectory** which is the local path on the agent to store artifacts, and is used here to store task output files which can later be published using a publish artifacts task.
 - **Build Solution with MSBuild** - Select this option to build your solution with msbuild for the specified target platform. Leave the box unchecked if you already have binaries that just need to be packaged. If you leave the box unchecked, you will be asked to provide the path to your binaries.
 - **Project to Build** - Provide the path to your project or solution file that needs to be built.
 - **Clean before Building** - Select this checkbox if you want the task to run a clean build prior to the build.
@@ -107,7 +107,7 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 
 After configuring all the tasks, you can use a *Publish build artifacts* task to drop all the artifacts from the temp location to Azure Pipelines artifacts or a file share of your choice.
 
-## Feedback
+## Ways to provide Feedback
 
 We would love to hear your feedback on the *MSIX Packaging* Extension. Reach out to us via the following channels:
 
