@@ -12,6 +12,8 @@ ms.custom: RS5
 
 You can use Azure Pipelines to create automated builds for your MSIX project. This article takes a look at how to do so in Azure DevOps. We’ll also show you how to perform these tasks by using the command line so that you can integrate with any other build system.
 
+If you prefer to use a UI based Azure DevOps extension to configure your pipeline instead, use the [*MSIX Packaging* Extension](msix-packaging-extension.md)
+
 ## Create a new Azure Pipeline
 
 Begin by [signing up for Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up) if you haven't done so already.
