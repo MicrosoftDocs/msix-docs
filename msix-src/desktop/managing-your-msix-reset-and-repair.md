@@ -20,7 +20,7 @@ You can repair Windows Apps that have been installed to an online Windows image.
 
 ### Repairing a Windows App
 
-* Repairing a Windows App using the Windows Settings:
+Repairing a Windows App using the Windows Settings:
     1. Open the Settings App from the Start Menu.
     1. Select the **Apps** menu item.
     1. Select the **Apps & Features** menu item, from the left side navigation.
@@ -36,13 +36,13 @@ You can reset Windows Apps that have been installed to an online Windows image. 
 
 ### Resetting a Windows App
 
-* Resetting a Windows App using Windows Powershell: 
+Resetting a Windows App using Windows Powershell: 
     1. Open an administrative PowerShell window, and type:
         ```PowerShell
         Get-AppxPackage -Name "MyEmployees" | Reset-AppxPackage
         ```
 
-* Resetting a Windows App using the Windows Settings:
+Resetting a Windows App using the Windows Settings:
     1. Open the Settings App from the Start Menu.
     1. Select the **Apps** menu item.
     1. Select the **Apps & Features** menu item, from the left side navigation.
