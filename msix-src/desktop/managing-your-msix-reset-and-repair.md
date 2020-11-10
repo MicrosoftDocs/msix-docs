@@ -38,9 +38,9 @@ You can reset Windows Apps that have been installed to an online Windows image. 
 
 * Resetting a Windows App using Windows Powershell: 
     1. Open an administrative PowerShell window, and type:
-```PowerShell
-Get-AppxPackage -Name "MyEmployees" | Reset-AppxPackage
-```
+        ```PowerShell
+        Get-AppxPackage -Name "MyEmployees" | Reset-AppxPackage
+        ```
 
 * Resetting a Windows App using the Windows Settings:
     1. Open the Settings App from the Start Menu.
