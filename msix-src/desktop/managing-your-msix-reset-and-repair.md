@@ -1,5 +1,5 @@
 ---
-Description: This article provides details regarding the the reset and repair of MSIX apps that have been deployed to a device.
+description: This article provides details regarding the the reset and repair of MSIX apps that have been deployed to a device.
 title: Reset or Repair MSIX Apps
 ms.date: 11/10/2020
 ms.topic: article
