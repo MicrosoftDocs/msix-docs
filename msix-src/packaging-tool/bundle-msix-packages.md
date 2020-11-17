@@ -36,7 +36,7 @@ After the Windows 10 SDK is installed, MakeAppx.exe is usually found here:
 
 ## Step 2: Bundle the packages
 
-The easiest way to bundle packages with MakeApp.exe is to add all the packages that you want to bundle together in one folder. The directory must be free of everything else except the packages that been to be bundled.
+The easiest way to bundle packages with MakeApp.exe is to add all the packages that you want to bundle together in one folder. The directory must be free of everything else except the packages that need to be bundled.
 
 Move the app packages that you want to bundle into one directory, as shown in the following screenshot.
 
