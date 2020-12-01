@@ -47,9 +47,7 @@ On a larger scale, if an entire file does not change (determined by a full set o
 ## App update constraints
 
 #### Updates are performed within the same package family
-The package family name (PFN) is comprised of the Package Name and Publisher. To be able to update, the new package metadata will need to be the same as the previously installed package.
-
-  *Example: Microsoft.MicrosoftEdge_8wekyb3d8bbwe*
+The package family name (PFaN) is comprised of the Package Name and Publisher. To be able to update, the new package metadata will need to be the same as the previously installed package. The following is an example of a PFaN: `Microsoft.MicrosoftEdge_8wekyb3d8bbwe`.
 
 #### App updates must increment to a higher version
 In general, app updates require the version of the new package to be higher than the current one. The app update process will not allow packages with lower versions to be installed by default. Starting in Windows 10 version 1809, you can use ForceUpdateToAnyVersion to allow lower version packages to be installed when an override switch is provided as part of the update arguments. It is currently available in PowerShell using the [ForceUpdateFromAnyVersion](/powershell/module/appx/add-appxpackage?view=win10-ps) option, via [PackageManager API](/uwp/api/windows.management.deployment.deploymentoptions), [EnterpriseModernAppManagement CSP](/windows/client-management/mdm/enterprisemodernappmanagement-csp) and in the [AppInstaller file](./app-installer/update-settings.md).  
