@@ -44,7 +44,7 @@ The following table describes the commands for **MakeAppx.exe**.
 | pack          | Creates a package.                    |
 | unpack        | Extracts all files in the specified package to the specified output directory. |
 | bundle        | Creates a bundle.                     |
-| unbundle      | Unpacks all packages to a subdirectory under the specified output path named after the bundle full name. |
+| unbundle      | Unpacks all packages to a subdirectory under the specified output path named after the bundle or package full name. |
 | encrypt       | Creates an encrypted app package or bundle from the input package/bundle at the specified output package/bundle. |
 | decrypt       | Creates an decrypted app package or bundle from the input app package/bundle at the specified output package/bundle. |
 
@@ -160,7 +160,7 @@ Options specific to **unpack** and **unbundle** commands:
 | **Option**    | **Description**                       |
 |---------------|---------------------------------------|
 | /nd           | Does not perform decryption when unpacking or unbundling the package/bundle. |
-| /pfn          | Unpacks/unbundles all files to a subdirectory under the specified output path, named after the package or bundle full name |
+| /pfn          | Unpacks/unbundles all files to a subdirectory under the specified output path, named after the bundle or package full name |
 
 The following usage examples show some possible syntax options for the **unpack** and **unbundle** commands:
 
