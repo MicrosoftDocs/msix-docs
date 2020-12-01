@@ -1,9 +1,9 @@
 ---
 title: App package updates
 description: Describes how MSIX packages are optimized to ensure that only the essential changed bits of the app are downloaded to update an existing Windows app.
-ms.date: 09/10/2018
+ms.date: 11/30/2020
 ms.topic: article
-keywords: windows 10, uwp, app package, app update, msix, appx
+keywords: windows 10, uwp, app package, app update, msix, appx, pfan, package family name
 ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---

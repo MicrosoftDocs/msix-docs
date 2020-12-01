@@ -1,11 +1,11 @@
 ---
 title: Preinstalling packaged apps 
 description: This article provides an overview of preinstalled apps 
-ms.date: 04/02/2020
+ms.date: 11/30/2020
 ms.topic: article
 author: dianmsft
 ms.author: diahar
-keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio, dism, preinstall, preinstalling, packaged apps
+keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio, dism, preinstall, preinstalling, packaged apps, package full name, pfun
 ms.localizationpriority: medium
 ---
 
