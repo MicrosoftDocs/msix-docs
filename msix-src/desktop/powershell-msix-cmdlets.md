@@ -1,5 +1,5 @@
 ---
-Description: This article provides all the details you need to manage deploying you MSIX applications in an enteroprise environment.  This article is targeted at enterprise and IT developers.
+description: This article provides all the details you need to manage deploying you MSIX applications in an enteroprise environment.  This article is targeted at enterprise and IT developers.
 title: Managing MSIX with PowerShell
 ms.date: 2/3/2020
 ms.topic: article
