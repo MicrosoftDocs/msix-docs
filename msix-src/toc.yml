@@ -312,7 +312,7 @@
           href: msix-core/msixcore-troubleshoot.md  
     - name: Deployment Validation and Troubleshooting
       href: desktop\managing-your-msix-deployment-troubleshooting.md
-    - name: Reset and Repair Windows Apps
+    - name: Reset and Repair MSIX Apps
       href: desktop\managing-your-msix-reset-and-repair.md
 - name: MSIX validation and troubleshooting
   items: 
