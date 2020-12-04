@@ -1,11 +1,11 @@
 ---
 title: Preinstalling packaged apps 
 description: This article provides an overview of preinstalled apps 
-ms.date: 04/02/2020
+ms.date: 11/30/2020
 ms.topic: article
 author: dianmsft
 ms.author: diahar
-keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio, dism, preinstall, preinstalling, packaged apps
+keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio, dism, preinstall, preinstalling, packaged apps, package full name, pfun
 ms.localizationpriority: medium
 ---
 
@@ -46,6 +46,8 @@ List of relevant PowerShell commands
 * **[Get-ProvisionedAppxPackages](/powershell/module/dism/get-appxprovisionedpackage?view=win10-ps)** This will list all of the apps that are pre-installed on the image.
 * **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps)** This stages the appx package and configures it for pre-install. All dependencies must be provided as well, which can be found in the SDK or with store-downloaded packages.
 * **[Remove-ProvisionedAppxPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)** This can be used to remove a pre-installed app. Note that it does not remove the app if it is already registered for any users - this only strips the auto-registration behavior so it will not be auto-installed for any new users.  If no users have yet installed the app, this command will also remove the staged files.
+
+Using the MSIX PowerShell cmdlets, to preinstall or provision an MSIX packaged app on a device you must use the MSIX app's Package Full Name. The Package Full Name is the full name of the package containing the package name, version, architecture, and publisher information. The following is an example of a Package Full Name: `Contoso.ContosoApp_44.20231.1000.0_neutral__8wekyb3d8bbwe`
 
 ## Licensing
 Licensing only applies when provisioning a Windows Store app. Any other apps can be provisioned without a license. If an app is from the Store a machine-license must also provided when the app is provisioned. At this time, all preinstall Windows Store apps must be free apps and configured to be pre-installable via the Windows Store Partner Center. Once it is configured the pre-installable package and license can be downloaded and then provisioned onto any image.
