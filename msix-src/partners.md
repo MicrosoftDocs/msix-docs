@@ -1,7 +1,7 @@
 ---
 title: MSIX partners
 description: Provides links to additional documentation from our trusted partners on MSIX tooling and support.
-ms.date: 09/14/2018
+ms.date: 12/4/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
