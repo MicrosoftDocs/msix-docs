@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying you MSIX applications in an enteroprise environment.  This article is targeted at enterprise and IT developers.
 title: Managing MSIX with PowerShell
-ms.date: 2/3/2020
+ms.date: 12/4/2020
 ms.topic: article
 keywords: windows 10, deployment, msix, PowerShell, PSH, PS, PoSh, cmdlets
 ms.assetid:  
