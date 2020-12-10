@@ -115,7 +115,7 @@ signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json 
 
 ## Test
 
-To test, download the root certificate by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
+To test, download the [root certificate](http://www.microsoft.com/pkiops/certs/microsoft%20enterprise%20identity%20verification%20root%20certificate%20authority%202020.crt) by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
 ```cmd
 Get-RootCertificate
 ```
