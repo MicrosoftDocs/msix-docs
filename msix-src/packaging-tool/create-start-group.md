@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 # Group applications under a folder in the Start menu
 
 > [!IMPORTANT]
-> This feature is currently available in preliminary Windows 10 builds which are distributed through the Dev Ring of the [Windows Insider program](https://insider.windows.com/en/). It might be included in a future official Windows 10 release.
+> This feature is currently available in preliminary Windows 10 builds which are distributed through the Dev Ring of the [Windows Insider program](https://insider.windows.com/en/). You will need at least build 20257 to enable this feature.
 
 The manifest of a MSIX packaged application contains one or more `<Application>` entries, which are the available entry points. Each of them will become an icon in the Start menu.
 
