@@ -107,11 +107,6 @@ The following command line example demonstrates how to sign a package with Devic
 signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
 ```
 
-The following command line example demonstrates how to sign with Device Guard signing version 1. Note that this will be deprecated by end of December 2020.
-```cmd
-signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
-```
-
 > [!NOTE]
 > * We recommend that you use one of the timestamp options when you sign your package. If you do not apply a [timestamp](signing-package-overview.md#timestamping), the signing will expire in one year and the app will need to be resigned.
 > * Make sure that the publisher name in your package's manifest matches the certificate you are using to sign the package. With this feature, it will be your leaf certificate. For example, if leaf certificate is **CompanyName**, than the publisher name in the manifest must be **CN=CompanyName**. Otherwise, the signing operation will fail.
