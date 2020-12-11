@@ -20,9 +20,9 @@ In both scenarios, you may want to group together all the entries in the Start m
 This goal can be achieved using the `VisualGroup` property of the `VisualElements` item.
 Here are the steps to implement this change:
 
-1) Open the manifest file of your application with a text editor of choice. Alternativaly, if you're using the MSIX Packaging Tool, you can press the *Open manifest* button in the Package Editor.
+1) Open the manifest file of your application with a text editor of choice. Alternatively, if you're using the MSIX Packaging Tool, you can press the *Open manifest* button in the Package Editor.
 2) Make sure that the `uap3` namespace is declared in the `<Package>` node of the manifest:
-    
+
     ```xml
     <Package ...
          xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"  
