@@ -11,9 +11,9 @@ ms.localizationpriority: medium
 
 > [!IMPORTANT]
 > [Device Guard Signing Service v2](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal)(DGSS v2) is now available. December 2020 -
-The existing web-based mechanism for the Device Guard Signing service v1 has been retired and is no longer available for use. Please transition to the PowerShell based version of the service (DGSS v2). Please transition to the PowerShell based version of the service (DGSS v2). A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) containing the required DGSS v2 components and migration documentation is available. Please read the Microsoft Terms of Use included in the NuGet package; note that the usage of DGSS implies acceptance of these terms. For any questions, please contact us at DGSSMigration@microsoft.com.
+The existing web-based mechanism for the Device Guard Signing service v1 has been retired and is no longer available for use. Please transition to the PowerShell based version of the service (DGSS v2). A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) containing the required DGSS v2 components and migration documentation is available. Please read the Microsoft Terms of Use included in the NuGet package; note that the usage of DGSS implies acceptance of these terms. For any questions, please contact us at DGSSMigration@microsoft.com.
 
-[Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
+[Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK adn the DGSSv2 dlib in the NuGet package to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
@@ -120,7 +120,7 @@ To test, download the root certificate by clicking [here](https://www.microsoft.
 Get-RootCertificate
 ```
 
-Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
+Install the root certificate to the **Trusted Root Certification Authorities** on your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
 > [!IMPORTANT]
 > In order to achieve isolation, deploy the WDAC CI policy to trust apps that are signed with DGSSv2. Be sure to read through the readme_cmdlets documentation and migration from DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
