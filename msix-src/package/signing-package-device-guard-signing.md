@@ -123,7 +123,7 @@ Get-RootCertificate
 Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
 > [!IMPORTANT]
-> In order to achieve isolation, deploy the WDAC CI policy to trust apps that are signed with DGSSv2. Be sure to read through the readme_cmdlets documentation and migration From DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
+> In order to achieve isolation, deploy the WDAC CI policy to trust apps that are signed with DGSSv2. Be sure to read through the readme_cmdlets documentation and migration from DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
 
 ## Common errors
 
