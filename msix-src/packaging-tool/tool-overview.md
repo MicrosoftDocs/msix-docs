@@ -38,10 +38,10 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - 1.2020.709.0
-- Ability to add multiple files to the package editor
-- Ability to import multiple .reg files to the package editor
-- Improved support for converting any installer type
+## Latest public release - 1.2020.1006.0
+- Added support for [Device Guard Signing version 2](../../package/signing-package-device-guard-signing.md). If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
+- Added a Services Report to the Package Editor
+- General bug fixes
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
