@@ -39,7 +39,7 @@ PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPacka
 ```
 
 ## Latest public release - 1.2020.1006.0
-- Added support for [Device Guard Signing version 2](../../package/signing-package-device-guard-signing.md). If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
+- Added support for [Device Guard Signing version 2](../package/signing-package-device-guard-signing.md). If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
 - Added a Services Report to the Package Editor
 - General bug fixes
 
