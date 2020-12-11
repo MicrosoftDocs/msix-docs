@@ -10,9 +10,10 @@ ms.localizationpriority: medium
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
-> [Device Guard Signing Service v2](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal) is now available. As announced earlier, you will have until the end of December 2020 to transition to DGSS v2. At the end of December 2020, the existing web-based mechanisms for the current version of the DGSS service will be retired and will no longer be available for use. You must make plans to migrate to the new version of the service before December 2020. For more information, please contact DGSSMigration@Microsoft.com. 
+> [Device Guard Signing Service v2](https://docs.microsoft.com/microsoft-store/device-guard-signing-portal)(DGSS v2) is now available. December 2020 -
+The existing web-based mechanism for the Device Guard Signing service v1 has been retired and is no longer available for use. Please transition to the PowerShell based version of the service (DGSS v2). A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) containing the required DGSS v2 components and migration documentation is available. Please read the Microsoft Terms of Use included in the NuGet package; note that the usage of DGSS implies acceptance of these terms. For any questions, please contact us at DGSSMigration@microsoft.com.
 
-[Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. Starting in Windows 10 Insider Preview Build 18945, you can use SignTool in the Windows SDK to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
+[Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK and the DGSSv2 dlib in the NuGet package to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
@@ -106,11 +107,6 @@ The following command line example demonstrates how to sign a package with Devic
 signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
 ```
 
-The following command line example demonstrates how to sign with Device Guard signing version 1. Note that this will be deprecated by end of December 2020.
-```cmd
-signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t <timestamp-service-url> <your .msix package>
-```
-
 > [!NOTE]
 > * We recommend that you use one of the timestamp options when you sign your package. If you do not apply a [timestamp](signing-package-overview.md#timestamping), the signing will expire in one year and the app will need to be resigned.
 > * Make sure that the publisher name in your package's manifest matches the certificate you are using to sign the package. With this feature, it will be your leaf certificate. For example, if leaf certificate is **CompanyName**, than the publisher name in the manifest must be **CN=CompanyName**. Otherwise, the signing operation will fail.
@@ -119,15 +115,15 @@ signtool sign /fd sha256 /dlib DgssLib.dll /dmdf <Azure AAD in .json format> /t 
 
 ## Test
 
-To test, download the root certificate by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
+To test, download the root certificate by clicking [here](https://www.microsoft.com/pkiops/certs/microsoft%20enterprise%20identity%20verification%20root%20certificate%20authority%202020.crt) or by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
 ```cmd
 Get-RootCertificate
 ```
 
-Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
+Install the root certificate to the **Trusted Root Certification Authorities** on your device. Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
-> [!NOTE]
-> It is recommended to use CI policy for further isolation. Be sure to read through the readme_cmdlets documentation and migration From DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
+> [!IMPORTANT]
+> In order to achieve isolation, deploy the WDAC CI policy to trust apps that are signed with DGSSv2. Be sure to read through the readme_cmdlets documentation and migration from DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
 
 ## Common errors
 
