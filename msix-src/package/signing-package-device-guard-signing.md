@@ -115,15 +115,15 @@ signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json 
 
 ## Test
 
-To test, download the root certificate by clicking [here](http://www.microsoft.com/pkiops/certs/microsoft%20enterprise%20identity%20verification%20root%20certificate%20authority%202020.crt) or by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
+To test, download the root certificate by clicking [here](https://www.microsoft.com/pkiops/certs/microsoft%20enterprise%20identity%20verification%20root%20certificate%20authority%202020.crt) or by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) and obtaining it with the command:
 ```cmd
 Get-RootCertificate
 ```
 
 Install the root certificate to the **Trusted Root Certification Authorities** on your device . Install your newly signed app to verify that you have successfully signed your app with Device Guard signing. 
 
-> [!NOTE]
-> It is recommended to use CI policy for further isolation. Be sure to read through the readme_cmdlets documentation and migration From DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
+> [!IMPORTANT]
+> In order to achieve isolation, deploy the WDAC CI policy to trust apps that are signed with DGSSv2. Be sure to read through the readme_cmdlets documentation and migration From DGSSv1 to DGSSv2 documentation that is included in the NuGet Package. 
 
 ## Common errors
 
