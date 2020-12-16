@@ -18,15 +18,16 @@ This article shows how you can use configure your MSIX packaged app to receive i
 This enables your app to be launched using your custom defined protocol. When your packaged application is started by using a protocol, specified parameters can be passed to its activation event arguments so it can use the arguments when launched. 
 
 ```xml
-<Package>
+<Application>
 ...
-
-  <Capabilities>
-    <rescap:Capability Name="packageManagement" />
-  </Capabilities>
+   </Extensions>
+     <uap:Extension Category="windows.protocol">
+        <uap:Protocol Name="my-custom-protocol"/>
+     </uap:Extension>
+   </Extensions>
   
 ...
-</Package>
+</Application>
 ```
 
 ##  Write code to handle parameters when app is launched
