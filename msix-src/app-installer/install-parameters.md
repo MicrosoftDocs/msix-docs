@@ -30,7 +30,7 @@ This enables your app to be launched using your custom defined protocol. When yo
 </Application>
 ```
 
-##  Write code to handle parameters when app is launched
+##  Write code to handle parameters when your app is launched after installation
 
 You will need to implement code in your application to handle the installation parameters that will be passed to your app at first launch. The example code below uses the [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs?view=winrt-19041) method to determine the type of activation used to instantiate an app. When your app is launched/activated with install parameters from an install uri as defined in the next section, the activation type will be a protocol activation as defined by your custom protocol in your install uri. So the activation event args will be of type [ProtocolActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs?view=winrt-19041).
 
