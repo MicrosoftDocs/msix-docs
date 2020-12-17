@@ -32,42 +32,47 @@ This enables your app to be launched using your custom defined protocol. When yo
 
 ##  Write code to handle parameters when app is launched
 
-You need to write code in your application to handle the installation parameters that will be passed to your app at first launch.
+You will need to implement code in your application to handle the installation parameters that will be passed to your app at first launch. The example code below uses the [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs?view=winrt-19041) method to determine the type of activation used to instantiate an app. When your app is launched/activated with install parameters from an install uri as defined in the next section, the activation type will be a protocol activation as defined by your custom protocol in your install uri. So the activation event args will be of type [ProtocolActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs?view=winrt-19041).
+
 ```csharp
-using Windows.Management.Deployment;
 
-public async void CheckForAppInstallerUpdatesAndLaunchAsync(string targetPackageFullName, PackageVolume packageVolume)
-{
-    // Get the current app's package for the current user.
-    PackageManager pm = new PackageManager();
-    Package package = pm.FindPackageForUser(string.Empty, targetPackageFullName);
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.Activation;
 
-    PackageUpdateAvailabilityResult result = await package.CheckUpdateAvailabilityAsync();
-    switch (result.Availability)
+public static void Main(string[] cmdArgs)
+        {
+            
+    var activationArgs = AppInstance.GetActivatedEventArgs();
+    switch (activationArgs.Kind)
     {
-        case PackageUpdateAvailability.Available:
-        case PackageUpdateAvailability.Required:
-            //Queue up the update and close the current instance
-            await pm.AddPackageByAppInstallerFileAsync(
-            new Uri("https://trial3.azurewebsites.net/HRApp/HRApp.appinstaller"),
-            AddPackageByAppInstallerOptions.ForceApplicationShutdown,
-            packageVolume);
-            break;
-        case PackageUpdateAvailability.NoUpdates:
-            // Close AppInstaller.
-            await ConsolidateAppInstallerView();
-            break;
-        case PackageUpdateAvailability.Unknown:
+        //Install parameters will be passed in during a protocol activation
+        case ActivationKind.Protocol:
+        HandleProtocolActivation(activationArgs as ProtocolActivatedEventArgs);
+        break;
+        case ActivationKind.Launch:
+        //Regular launch activation type
+        HandleLaunch(activationArgs as LaunchActivatedEventArgs);
+        break;
         default:
-            // Log and ignore error.
-            Logger.Log($"No update information associated with app {targetPackageFullName}");
-            // Launch target app and close AppInstaller.
-            await ConsolidateAppInstallerView();
-            break;
-    }
+        break;
+     }       
+    
+
+     static void HandleProtocolActivation(ProtocolActivatedEventArgs args)
+     {
+
+         if (args.Uri != null)
+        {
+            //Handle the installation parameters in the protocol uri
+            handleInstallParameter(args.Uri.ToString());
+
+        }
+            
 }
 ```
 
 ## Add your app activation protocol and parameters to the installation uri
 
-Once your app is set up to handle your installation parameters, you can define specific parameters in your app installation uri and they will be passed in to your app at first launch. 
+Once your app is set up to handle your installation parameters, you can define specific parameters in your app installation uri and they will be passed in to your app at first launch. In the example uri below, I have defined the parameter my-parameter and given it the value my-param-value.
+
+ms-appinstaller:?source=https://contosomsix.com/contosomsix.appinstaller&activationUri=my-custom-protocol:?my-parameter=my-param-value
