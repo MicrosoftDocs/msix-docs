@@ -73,6 +73,8 @@ public static void Main(string[] cmdArgs)
 
 ## Add your app activation protocol and parameters to the installation uri
 
-Once your app is set up to handle your installation parameters, you can define specific parameters in your app installation uri and they will be passed in to your app at first launch. In the example uri below, I have defined the parameter my-parameter and given it the value my-param-value.
+Once your app is set up to handle your installation parameters, you can define specific parameters in your [app download uri](https://docs.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web#protocol-activation-scheme) on your webpage and the parameters you specify will be passed to your app at first launch. In the example uri below, I have defined the a custom protocol _my-custom-protocol_, a parameter _my-parameter_ and given it the value _my-param-value_.
 
+```html
 ms-appinstaller:?source=https://contosomsix.com/contosomsix.appinstaller&activationUri=my-custom-protocol:?my-parameter=my-param-value
+```
