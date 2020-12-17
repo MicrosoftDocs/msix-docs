@@ -11,11 +11,12 @@ ms.custom: "RS5, seodec18"
 
 # Passing installation parameters to your app via App Installer
 
-When deploying your app as an MSIX via the web, you can pass installation parameters to your MSIX packaged application after it is installed. 
-This article shows how you can use configure your MSIX packaged app to receive installation parameters, and setting up your installation uri with the parameters you need to pacc into your app. For more details see this [blog post](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/passing-installation-parameters-to-a-windows-application-with/ba-p/1719829).
+When deploying your app as an MSIX via the web, you can configure your app and installation uri such that unique parametersare passed on to your app when it is launched after installation. 
+This article shows how you can use configure your MSIX packaged app to receive installation parameters and how to set up your installation uri with the parameters you need to pass on to your app when it is launched. For more details see this [blog post](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/passing-installation-parameters-to-a-windows-application-with/ba-p/1719829).
+
 ## Configure your application for protocol activation
 
-This enables your app to be launched using your custom defined protocol. When your packaged application is started by using a protocol, specified parameters can be passed to its activation event arguments so it can use the arguments when launched. 
+The first thing to do is to register your app for it to be launched using a [custom protocol](https://docs.microsoft.com/en-us/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-in-different-ways) you define. When this protocol is invoked, your application is launched and any prameters specified in the uri are passed to your app's activation event arguments when it is launched. You can register the protocol by adding a protocol entry into your application extensions node in the appxmanifest.xml file as below:
 
 ```xml
 <Application>
@@ -29,6 +30,10 @@ This enables your app to be launched using your custom defined protocol. When yo
 ...
 </Application>
 ```
+
+If you are using the [Windows Packaging Project](https://docs.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-packaging-dot-net), you can also define a custom protocol using the default manifest editor by double clicking the _package.appxmanifest_ file, navigating to the _Declarations_ tab and selecting _Protocol_ under _Available Declarations_:
+
+![Protocol declaration in package.appxmanifest](images/custom-protocol.PNG)
 
 ##  Write code to handle parameters when your app is launched after installation
 
