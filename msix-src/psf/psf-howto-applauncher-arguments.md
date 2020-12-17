@@ -30,6 +30,8 @@ Some Windows App launchers in the start menu require the use of parameters to be
 1. Review the value in the text box right of **Target**. After the application file path, if there is a parameter listed, this app
     :::image type="content" source="images/contosoapp-fileproperties-target-parameter.png" alt-text="Example of the File Property Window with Parameter in Target":::
 
+1. Record the parameter value for future use.
+
 
 ## Resolution
 
@@ -132,18 +134,10 @@ After updating the **config.json** file, the **config.json** file and supporting
 1. Set the `applications.executable` value in the *config.json* to target the relative path to the application located in **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-executable.png" alt-text="Image circling the location of the executable within the AppxManifest file.":::
 
+1. Set the `applications.arguments` value in the *config.json* to match with the argument used to launch the application. See recorded value from the final step of the [Investigation - Identifying Windows App Launcher Parameter Requirement](#Identifying-Windows-App-Launcher-Parameter-Requirement) guidance.
+
 1. Set the `applications.workingdirectory` value in the *config.json* to target the relative folder path found in the **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image circling the location of the working directory within the AppxManifest file.":::
-
-1. Set the `process.executable` value in the *config.json* to target the file name (without path and extensions) found in the **Applications.Application.Executable** field of the *AppxManifest.xml* file.
-    :::image type="content" source="images/appxmanifest-application-processexecutable.png" alt-text="Image circling the location of the process executable within the AppxManifest file.":::
-
-1. Set the `processes.fixups.dll` value in the *config.json* to target the architecture specific **FileRedirectionFixup.dll**. If correction is for x64 architecture, set the value to be **FileRedirectionFixup64.dll**. If the architecture is x86, or is unknown, set the value to be **FileRedirectionFixup86.dll**
-
-1. Set the `processes.fixups.config.redirectedPaths.packageRelative.base` value in the *config.json* to the package relative folder path as found in the **Applications.Application.Executable** of the *AppxManifest.xml* file.
-    :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image circling the location of the working directory within the AppxManifest file.":::
-
-1. Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value in the *config.json* file to match the file type being created by the application. By using **".*\\.log"** the PSF will redirect writes for all log files that are in the directory identified in the **processes.fixups.config.redirectedPaths.packageRelative.base** path, as well as child directories.
 
 1. Save the updated **config.json** file.
     ```json
@@ -151,29 +145,8 @@ After updating the **config.json** file, the **config.json** file and supporting
         "applications": [
             {
             "id": "PSFSample",
-            "executable": "VFS/ProgramFilesX64/PS Sample App/PSFSample.exe"
-            }
-        ],
-        "processes": [
-            {
-                "executable": "PSFSample",
-                "fixups": [
-                    {
-                        "dll": "FileRedirectionFixup64.dll",
-                        "config": {
-                            "redirectedPaths": {
-                                "packageRelative": [
-                                    {
-                                        "base": "VFS/ProgramFilesX64/PS Sample App/",
-                                        "patterns": [
-                                            ".*\\.log"
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ]
+            "executable": "VFS/ProgramFilesX64/PS Sample App/PSFSample.exe",
+            "arguments": "/bootfromsettingshortcut"
             }
         ]
     }
@@ -186,7 +159,6 @@ After updating the **config.json** file, the **config.json** file and supporting
     | PSFLauncher64.exe          | PSFLauncher32.exe          |
     | PSFRuntime64.dll           | PSFRuntime32.dll           |
     | PSFRunDll64.exe            | PSFRunDll32.exe            |
-    | FileRedirectionFixup64.dll | FileRedirectionFixup64.dll |
 
 
 ### Update AppxManifest
