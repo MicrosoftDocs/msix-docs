@@ -142,24 +142,20 @@
               href: psf/package-support-framework-overview.md
             - name: Get started with Package Support Framework
               href: psf/package-support-framework.md
+            - name: Create a Package Support Framework fixup
+              href: psf/create-package-support-framework.md
             - name: How to implement PSF in your package
               items:
                 - name: Windows App Working Directory error
-                  href: psf/psf-howto-workingdirectory-fix.md
+                  href: psf\psf-current-working-directory.md
                 - name: Windows App Writing to Directory error
-                  href: psf/psf-howto-filesystem-writepermission.md
+                  href: psf/psf-filesystem-writepermission.md
                 - name: Windows App Launcher Parameter requirement
-                  href: psf/psf-howto-applauncher-arguments.md
-            - name: Current working directory PSF
-              href: psf\psf-current-working-directory.md
-            - name: Launch apps with parameters using PSF
-              href: psf\psf-launch-apps-with-parameters.md
-            - name: Apply Package Support Framework in Visual Studio
-              href: psf\package-support-framework-vs.md
-            - name: Run scripts with the Package Support Framework
-              href: psf/run-scripts-with-package-support-framework.md
-            - name: Create a Package Support Framework fixup
-              href: psf/create-package-support-framework.md
+                  href: psf\psf-launch-apps-with-parameters.md
+                - name: Apply Package Support Framework in Visual Studio
+                  href: psf\package-support-framework-vs.md
+                - name: Run scripts with the Package Support Framework
+                  href: psf/run-scripts-with-package-support-framework.md
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
     - name: MSIX Toolkit
