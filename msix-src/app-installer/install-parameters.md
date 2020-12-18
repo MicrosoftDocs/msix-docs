@@ -45,7 +45,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 
 public static void Main(string[] cmdArgs)
-        {
+{
             
     var activationArgs = AppInstance.GetActivatedEventArgs();
     switch (activationArgs.Kind)
