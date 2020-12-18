@@ -16,7 +16,7 @@ This article shows how to configure your MSIX packaged application and its downl
 
 ## Configure your application for protocol activation
 
-The first thing to do is to register your app for it to be launched using a [custom protocol](https://docs.microsoft.com/en-us/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-in-different-ways) you define. When this protocol is invoked, your application is launched and any prameters specified in the uri are passed to your app's activation event arguments when it is launched. You can register the protocol by adding a protocol extension entry in the Application Extensions node in your MSIX's appxmanifest.xml file:
+The first thing to do is to register your app for it to be launched using a [custom protocol](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-in-different-ways) you define. When this protocol is invoked, your application is launched and any prameters specified in the uri are passed to your app's activation event arguments when it is launched. You can register the protocol by adding a protocol extension entry in the Application Extensions node in your MSIX's appxmanifest.xml file:
 
 ```xml
 <Application>
@@ -31,13 +31,13 @@ The first thing to do is to register your app for it to be launched using a [cus
 </Application>
 ```
 
-If you are using the [Windows Packaging Project](https://docs.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-packaging-dot-net), you can also define a custom protocol using the default manifest editor by double clicking the _package.appxmanifest_ file, navigating to the _Declarations_ tab and selecting _Protocol_ under _Available Declarations_:
+If you are using the [Windows Packaging Project](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net), you can also define a custom protocol using the default manifest editor by double clicking the _package.appxmanifest_ file, navigating to the _Declarations_ tab and selecting _Protocol_ under _Available Declarations_:
 
 ![Protocol declaration in package.appxmanifest](images/custom-protocol.PNG)
 
 ##  Write code to handle parameters when your app is launched after installation
 
-You will need to implement code in your application to handle the installation parameters that will be passed to your app when it is launched. The example code below uses the [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs?view=winrt-19041) method to determine the type of activation used to instantiate an app (you can also handle the parameters using a different method). When your app is launched/activated with query sting parameters from an install uri (see defintion in the next section), the activation type will be a protocol activation as defined by your custom protocol declared in your appxmanifest.xml and download/install uri. The activation event args will be of type [ProtocolActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs?view=winrt-19041) and that is what the code below uses:
+You will need to implement code in your application to handle the installation parameters that will be passed to your app when it is launched. The example code below uses the [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs?view=winrt-19041) method to determine the type of activation used to instantiate an app (you can also handle the parameters using a different method). When your app is launched/activated with query sting parameters from an install uri (see defintion in the next section), the activation type will be a protocol activation as defined by your custom protocol declared in your appxmanifest.xml and download/install uri. The activation event args will be of type [ProtocolActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs?view=winrt-19041) and that is what the code below uses:
 
 ```csharp
 
@@ -80,7 +80,7 @@ public static void Main(string[] cmdArgs)
 
 Once your app is set up to handle your installation parameters, you can customise the app download/install uri to contain uniquely defined parameters that will be passed on to your app at launch, after a user clicks on the uri. The uri must contain:
 
-1. The [ms-appinstaller](https://docs.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web#protocol-activation-scheme) protocol that invokes App Installer.
+1. The [ms-appinstaller](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web#protocol-activation-scheme) protocol that invokes App Installer.
 2. The unique parameter **activationUri** that points to your app's custom protocol and the install parameters you want passed to your app when it is launched.
 3. Your app's custom protocol and the the parameter and its value.
 
