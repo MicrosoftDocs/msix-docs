@@ -11,8 +11,8 @@ ms.custom: "RS5, seodec18"
 
 # Passing installation parameters to your app via App Installer
 
-When deploying your app as an MSIX via the web, you can configure your app and installation uri such that unique parametersare passed on to your app when it is launched after installation. 
-This article shows how you can use configure your MSIX packaged app to receive installation parameters and how to set up your installation uri with the parameters you need to pass on to your app when it is launched. For more details see this [blog post](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/passing-installation-parameters-to-a-windows-application-with/ba-p/1719829).
+When deploying your app as an MSIX you can configure your app such that parameters you define in the download/install uri are passed on to your app when it launches, after a user clicks on the download/install uri. This works whether it's the first time a user is installing the app or if the app was previously installed. 
+This article shows how to configure your MSIX packaged application and its download/install uri  to take advantage of this functionality. This can be useful if you want to track or handle different installs based on the source, download type etc and will work for web downloads, and any other cases where a user clicks the uri e.g. from an email campaign. For some more details check out this [blog post](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/passing-installation-parameters-to-a-windows-application-with/ba-p/1719829).
 
 ## Configure your application for protocol activation
 
@@ -37,7 +37,7 @@ If you are using the [Windows Packaging Project](https://docs.microsoft.com/en-u
 
 ##  Write code to handle parameters when your app is launched after installation
 
-You will need to implement code in your application to handle the installation parameters that will be passed to your app at first launch. The example code below uses the [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs?view=winrt-19041) method to determine the type of activation used to instantiate an app. When your app is launched/activated with install parameters from an install uri as defined in the next section, the activation type will be a protocol activation as defined by your custom protocol in your install uri. So the activation event args will be of type [ProtocolActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs?view=winrt-19041).
+You will need to implement code in your application to handle the installation parameters that will be passed to your app when it is launched. The example code below uses the [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.appinstance.getactivatedeventargs?view=winrt-19041) method to determine the type of activation used to instantiate an app (you can also handle the parameters differently). When your app is launched/activated with install parameters from an install uri as defined in the next section, the activation type will be a protocol activation as defined by your custom protocol declared in your app and install uri. The activation event args will be of type [ProtocolActivatedEventArgs](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.protocolactivatedeventargs?view=winrt-19041) and that is what we use below:
 
 ```csharp
 
@@ -76,9 +76,15 @@ public static void Main(string[] cmdArgs)
 }
 ```
 
-## Add your app activation protocol and parameters to the installation uri
+## Add your custom activation protocol and parameters to the installation uri
 
-Once your app is set up to handle your installation parameters, you can define specific parameters in your [app download uri](https://docs.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web#protocol-activation-scheme) on your webpage and the parameters you specify will be passed to your app at first launch. In the example uri below, I have defined the a custom protocol _my-custom-protocol_, a parameter _my-parameter_ and given it the value _my-param-value_.
+Once your app is set up to handle your installation parameters, you can customise the app download/install uri to contain uniquely defined parameters that will be passed on to your app at launch, after a user clicks on the uri. The uri must contain:
+
+1. The [ms-appinstaller](https://docs.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web#protocol-activation-scheme) protocol.
+2. The parameter **activationUri** that points to your app's custom protocol and the install parameters you want passed on to your app when it is launched.
+3. Your app's custom protocol and the the parameter and its value.
+
+In the example uri below, I have defined a custom protocol _my-custom-protocol_, a parameter _my-parameter_ and given it the value _my-param-value_. When my app is launched after a user clicks on the uri, it will receive the part of the uri after **activationUri**, from the uri below, that will be _my-custom-protocol:?my-parameter=my-param-value_.
 
 ```html
 ms-appinstaller:?source=https://contosomsix.com/contosomsix.appinstaller&activationUri=my-custom-protocol:?my-parameter=my-param-value
