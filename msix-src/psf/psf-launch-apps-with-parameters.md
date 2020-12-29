@@ -39,10 +39,10 @@ Windows Apps will redirect specific directories that are related to the applicat
 
 To resolve the issue related to the Windows App failing to write to the Windows App container, we must follow the following four steps:
 
-1. [Stage the Windows App to a local directory](#Stage-the-Windows-App)
-1. [Create the Config.json and inject required PSF Files](#Create-and-inject-required-psf-files)
-1. [Update the Windows App AppxManifest file](#Update-AppxManifest)
-1. [Repackage and sign the Windows App](Re-package-the-application)
+1. [Stage the Windows App to a local directory](#stage-the-windows-app)
+1. [Create the Config.json and inject required PSF Files](#create-and-inject-required-psf-files)
+1. [Update the Windows App AppxManifest file](#update-appxmanifest)
+1. [Repackage and sign the Windows App](#re-package-the-application)
 
 The above steps provide guidance through extracting the content of the Windows App to a local staged directory, injecting the PSF fixup files into the staged Windows App directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
 
@@ -134,7 +134,7 @@ After updating the **config.json** file, the **config.json** file and supporting
 1. Set the `applications.executable` value in the *config.json* to target the relative path to the application located in **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-executable.png" alt-text="Image circling the location of the executable within the AppxManifest file.":::
 
-1. Set the `applications.arguments` value in the *config.json* to match with the argument used to launch the application. See recorded value from the final step of the [Investigation - Identifying Windows App Launcher Parameter Requirement](#Identifying-Windows-App-Launcher-Parameter-Requirement) guidance.
+1. Set the `applications.arguments` value in the *config.json* to match with the argument used to launch the application. See recorded value from the final step of the [Investigation - Identifying Windows App Launcher Parameter Requirement](#identifying-windows-app-launcher-parameter-requirement) guidance.
 
 1. Set the `applications.workingdirectory` value in the *config.json* to target the relative folder path found in the **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image circling the location of the working directory within the AppxManifest file.":::
