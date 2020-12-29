@@ -54,7 +54,7 @@ To resolve the issue related to the Windows App referencing an incorrect Working
 
 1. [Stage the Windows App to a local directory](#stage-the-windows-app)
 1. [Create the Config.json and inject required PSF Files](#create-and-inject-required-psf-files)
-1. [Update the Windows App AppxManifest file](#update-appxmanifest)
+1. [Update the Windows App AppxManifest file](#update-appxmanifest) 
 1. [Repackage and sign the Windows App](#re-package-the-application)
 
 The above steps provide guidance through extracting the content of the Windows App to a local staged directory, injecting the PSF fixup files into the staged Windows App directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
