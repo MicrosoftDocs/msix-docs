@@ -52,9 +52,9 @@ Windows Apps will redirect specific directories that are related to the applicat
 
 To resolve the issue related to the Windows App referencing an incorrect Working Directory, we must follow the following four steps:
 
-1. [Stage the Windows App to a local directory](#stage-the-Windows-App)
+1. [Stage the Windows App to a local directory](#stage-the-windows-app)
 1. [Create the Config.json and inject required PSF Files](#create-and-inject-required-psf-files)
-1. [Update the Windows App AppxManifest file](#update-AppxManifest)
+1. [Update the Windows App AppxManifest file](#update-appxmanifest)
 1. [Repackage and sign the Windows App](#re-package-the-application)
 
 The above steps provide guidance through extracting the content of the Windows App to a local staged directory, injecting the PSF fixup files into the staged Windows App directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
