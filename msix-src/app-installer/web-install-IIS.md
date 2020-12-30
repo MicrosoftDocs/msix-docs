@@ -111,6 +111,9 @@ Open the **Web.config** file from the solution explorer and add the following li
 </system.webServer>
 ```
 
+> [!NOTE]
+> On newest Microsoft web technology .Net Core. Web site build using .Net Core ASP ignore web.config static content mimeMap. As a result, To proper configuration of .Net Core web site which will host your MSIX installation you need modify Configure method in Startup.cs file.
+
 ## Step 8 - Add loopback exemption for App Installer
 
 Due to network isolation, Windows 10 apps like App Installer are restricted to use IP loopback addresses like http://localhost/. When using local IIS Server, App Installer must be added to the loopback exempt list. 
