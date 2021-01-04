@@ -14,11 +14,11 @@ If you are not an enterprise developer, retail distribution of MSIX can be done 
 
 ## Microsoft Store
 
-The [Microsoft App Store](https://www.microsoft.com/store/apps/windows) can be an excellent way to distribute your application.  It has been available to consumers since the launch of Windows 8 in late 2012. Users can browse, search and download apps or games for Windows.
+The [Microsoft Store](https://www.microsoft.com/store/apps/windows) can be an excellent way to distribute your application.  It has been available to consumers since the launch of Windows 8 in late 2012. Users can browse, search and download apps or games for Windows.
 
-For details on the Microsoft App Store and its capabilities, see [Microsoft App Store.](/windows/uwp/publish/) 
+For details on the Microsoft Store and its capabilities, see [Microsoft Store.](/windows/uwp/publish/) 
 
-To get started on publishing an app to the Microsoft App Store and its capabilities, see the [Partner Center](https://partner.microsoft.com/dashboard/home)
+To get started on publishing an app to the Microsoft Store and its capabilities, see the [Partner Center](https://partner.microsoft.com/dashboard/home)
 
 ## App Center
 
