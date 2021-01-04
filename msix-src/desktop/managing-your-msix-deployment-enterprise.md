@@ -65,7 +65,7 @@ To learn more about MSIX support and limitations in group policy support, see [G
 
 ### Manage MSIX updates
 
-Configure the update behavior of the app by using the using the App Installer file.  IT Pros can define when a user gets updates to a MSIX and whether the update experience will be silent.  User may be required to update at launch or delayed.    
+Configure the update behavior of the app by using the App Installer file.  IT Pros can define when a user gets updates to a MSIX and whether the update experience will be silent.  User may be required to update at launch or delayed.    
 
 To learn more about Configuring a MSIX update schedule, see [Configure update settings in the App Installer file.](../app-installer/update-settings.md)
 
