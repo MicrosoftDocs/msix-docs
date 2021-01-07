@@ -30,10 +30,8 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2020.1130.0
-- Fixed an issue where clicking in the same line in package files didn't work to highlight the item
-- UX improvements for select installer page
-- Only add a default logo for the store if one is not extracted from the application
+## Version 1.2020.1219.0
+- Removed Device Guard Signing version 1 support. See documentation on how to use [version 2](../package/signing-package-device-guard-signing.md).If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
