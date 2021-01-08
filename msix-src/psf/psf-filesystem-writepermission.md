@@ -1,17 +1,17 @@
 ---
-description: Provides guidance on how to apply runtime working directory fix up with the Package Support Framework.
-title: Package Support Framework - Working Directory fixup
+description: Provides guidance on how to apply Filesystem Write permission fixes with the Package Support Framework.
+title: Package Support Framework - Filesystem Write Permission fixup
 ms.date: 12/16/2020
 ms.topic: article
-keywords: windows 10, uwp, psf, package support framework, working directory, workingdirectory, msix
+keywords: windows 10, uwp, psf, package support framework, filesystem, write permission, msix
 ms.localizationpriority: medium
 ---
 
-# Package Support Framework - Working Directory fixup
+# Package Support Framework - Filesystem Write Permission fixup
 
 ## Investigation
 
-Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application creates a subfolder (`C:\Program Files\Vendor\subfolder`) as part of the installation, and later calls this subfolder, it will fail to find the directory as it does not exist.
+Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application attempts to write to the Windows App container, an error will trigger, and the write will fail. 
 
 Using the Package Support Framework (PSF), enhancements can be made to the Windows App package to resolve this issue. First, we must identify the failure, and directory paths that are being requested by the app.
 
@@ -44,17 +44,17 @@ After capturing the Windows App processes, the results will need to be investiga
 
 1. Review the SysInternals Process Monitor results, searching for failures outlined in the above table.
 1. If the results show an **"Name Not Found"** result, with the details **"Desired Access: ..."** for your specific app targeting a directory outside of the **"C:\Program Files\WindowsApps\\...\\"** (as seen in the below image), then you have successfully identified a failure related with the working directory, use the [PSF Support - Filesystem Access]() article for guidance on how to apply the PSF correction to your app.
-:::image type="content" source="images/procmon-psfsampleapp-readfailure.png" alt-text="Displays the error message witnessed in the SysInternals Process Monitor for failure to write to directory.":::
+:::image type="content" source="images/procmon-psfsampleapp-writefailure.png" alt-text="Displays the error message witnessed in the SysInternals Process Monitor for failure to write to directory.":::
 
 ## Resolution
 
-Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application creates a subfolder (`C:\Program Files\Vendor\subfolder`) as part of the installation, and later calls this subfolder, it will fail to find the directory as it does not exist.
+Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application attempts to write to the Windows App container, an error will trigger, and the write will fail. 
 
-To resolve the issue related to the Windows App referencing an incorrect Working Directory, we must follow the following four steps:
+To resolve the issue related to the Windows App failing to write to the Windows App container, we must follow the following four steps:
 
 1. [Stage the Windows App to a local directory](#stage-the-windows-app)
 1. [Create the Config.json and inject required PSF Files](#create-and-inject-required-psf-files)
-1. [Update the Windows App AppxManifest file](#update-appxmanifest) 
+1. [Update the Windows App AppxManifest file](#update-appxmanifest)
 1. [Repackage and sign the Windows App](#re-package-the-application)
 
 The above steps provide guidance through extracting the content of the Windows App to a local staged directory, injecting the PSF fixup files into the staged Windows App directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
@@ -123,13 +123,29 @@ After updating the **config.json** file, the **config.json** file and supporting
         "applications": [
             {
                 "id": "",
-                "executable": "",
-                "workingDirectory": ""
+                "executable": ""
             }
         ],
         "processes": [
             {
-                "executable": ""
+                "executable": "",
+                "fixups": [
+                {
+                    "dll": "",
+                    "config": {
+                        "redirectedPaths": {
+                            "packageRelative": [
+                                {
+                                    "base": "",
+                                    "patterns": [
+                                        ""
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
             }
         ]
     }
@@ -146,17 +162,24 @@ After updating the **config.json** file, the **config.json** file and supporting
     </Applications>
     ```
 
-1. Copy the value in the **ID** field located in the **AppxManifest.xml** file located in `Package.Applications.Application` to the Applications ID field in the **config.json** file.
+1. Set the `applications.id` value in the *config.json* to be the same value as found in the **Applications.Application.ID** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-id.png" alt-text="Image circling the location of the ID within the AppxManifest file.":::
 
-1. Copy the package-relative path from the **Executable** field located in the **AppxManifest.xml** file located in `Package.Applications.Application` to the Applications **Executable** field in the **config.json** file.
+1. Set the `applications.executable` value in the *config.json* to target the relative path to the application located in **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-executable.png" alt-text="Image circling the location of the executable within the AppxManifest file.":::
 
-1. Copy the package-relative parent path from the **Executable** field located in the **AppxManifest.xml** file located in `Package.Applications.Application` to the Applications **WorkingDirectory** field in the **config.json** file.
+1. Set the `applications.workingdirectory` value in the *config.json* to target the relative folder path found in the **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image circling the location of the working directory within the AppxManifest file.":::
 
-1. Copy the executable name from the **Executable** field located in the **AppxManifest.xml** file located in `Package.Applications.Application` to the Processes **Executable** field in the **config.json** file.
+1. Set the `process.executable` value in the *config.json* to target the file name (without path and extensions) found in the **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-processexecutable.png" alt-text="Image circling the location of the process executable within the AppxManifest file.":::
+
+1. Set the `processes.fixups.dll` value in the *config.json* to target the architecture specific **FileRedirectionFixup.dll**. If correction is for x64 architecture, set the value to be **FileRedirectionFixup64.dll**. If the architecture is x86, or is unknown, set the value to be **FileRedirectionFixup86.dll**
+
+1. Set the `processes.fixups.config.redirectedPaths.packageRelative.base` value in the *config.json* to the package relative folder path as found in the **Applications.Application.Executable** of the *AppxManifest.xml* file.
+    :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image circling the location of the working directory within the AppxManifest file.":::
+
+1. Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value in the *config.json* file to match the file type being created by the application. By using **".*\\.log"** the PSF will redirect writes for all log files that are in the directory identified in the **processes.fixups.config.redirectedPaths.packageRelative.base** path, as well as child directories.
 
 1. Save the updated **config.json** file.
     ```json
@@ -164,25 +187,42 @@ After updating the **config.json** file, the **config.json** file and supporting
         "applications": [
             {
             "id": "PSFSample",
-            "executable": "VFS/ProgramFilesX64/PS Sample App/PSFSample.exe",
-            "workingDirectory": "VFS/ProgramFilesX64/PS Sample App/"
+            "executable": "VFS/ProgramFilesX64/PS Sample App/PSFSample.exe"
             }
         ],
         "processes": [
             {
-            "executable": "PSFSample"
+                "executable": "PSFSample",
+                "fixups": [
+                    {
+                        "dll": "FileRedirectionFixup64.dll",
+                        "config": {
+                            "redirectedPaths": {
+                                "packageRelative": [
+                                    {
+                                        "base": "VFS/ProgramFilesX64/PS Sample App/",
+                                        "patterns": [
+                                            ".*\\.log"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
             }
         ]
     }
     ```
 
-1. Copy the following three files from the Package Support Framework based on the application executable architecture to the root of the staged Windows App. The following files are located within the **.\Microsoft.PackageSupportFramework.<Version>\bin**.
+1. Copy the following four files from the Package Support Framework based on the application executable architecture to the root of the staged Windows App. The following files are located within the **.\Microsoft.PackageSupportFramework.<Version>\bin**.
 
-    | Application (x64) | Application (x86) | 
-    |-------------------|-------------------|
-    | PSFLauncher64.exe | PSFLauncher32.exe |
-    | PSFRuntime64.dll  | PSFRuntime32.dll  |
-    | PSFRunDll64.exe   | PSFRunDll32.exe   |
+    | Application (x64)          | Application (x86)          | 
+    |----------------------------|----------------------------|
+    | PSFLauncher64.exe          | PSFLauncher32.exe          |
+    | PSFRuntime64.dll           | PSFRuntime32.dll           |
+    | PSFRunDll64.exe            | PSFRunDll32.exe            |
+    | FileRedirectionFixup64.dll | FileRedirectionFixup64.dll |
 
 
 ### Update AppxManifest
