@@ -31,17 +31,19 @@ To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://w
 
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
 
-After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine. 
+After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps&preserve-view=true) to add the app package and license to your machine. 
 
 ### Example of offline installation
 ```
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - 1.2020.1006.0
-- Added support for [Device Guard Signing version 2](../package/signing-package-device-guard-signing.md). If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
-- Added a Services Report to the Package Editor
+## Latest public release - 1.2020.1219.0
+- Removed Device Guard Signing version 1 support. See documentation on how to use [version 2](../package/signing-package-device-guard-signing.md).If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
+- Fixed an issue where clicking in the same line in package files didn't work to highlight the item
+- UX improvements for select installer page
 - General bug fixes
+
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
