@@ -198,10 +198,12 @@
           href: desktop/desktop-to-uwp-r2r.md
     - name: MSIX and CI/CD pipelines
       items:
-        - name: CI/CD pipelines for MSIX builds
-          href: desktop/azure-dev-ops.md
+        - name: Overview
+          href: desktop/cicd-overview.md
         - name: MSIX Packaging Extension
           href: desktop/msix-packaging-extension.md
+        - name: Configure CI/CD pipeline with YAML file
+          href: desktop/azure-dev-ops.md
     - name: Package from the command line
       items:  
         - name: Overview
