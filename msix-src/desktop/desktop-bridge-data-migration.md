@@ -41,7 +41,7 @@ This extension must be under the *<Application>* element.
 </rescap3:Extension>
 ```
 
-If you know your app’s [Application User Model ID](https://msdn.microsoft.com/en-us/library/windows/desktop/dd378459(v=vs.85).aspx), then it’s recommended that you use it for the transition.
+If you know your app’s [Application User Model ID](https://msdn.microsoft.com/library/windows/desktop/dd378459(v=vs.85).aspx), then it’s recommended that you use it for the transition.
 
 Otherwise, you can use the path to your app’s shortcut (.lnk) file. If you don’t know where your app installs the shortcut, the easiest way to find it is to right-click on the app’s name from the start menu and select ‘*Open file location’* .
 
@@ -59,7 +59,7 @@ You must use the following namespace:
 xmlns:uap3=”http://schemas.microsoft.com/appx/manifest/uap/windows10/3”
 ```
 
-As part of this transition, you need to provide the [Programmatic Identifier](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144152(v=vs.85).aspx).
+As part of this transition, you need to provide the [Programmatic Identifier](https://msdn.microsoft.com/library/windows/desktop/cc144152(v=vs.85).aspx).
 
 ```
 <uap:Extension Category="windows.fileTypeAssociation">
