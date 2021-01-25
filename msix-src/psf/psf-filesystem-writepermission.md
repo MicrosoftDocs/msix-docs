@@ -19,7 +19,7 @@ Using the Package Support Framework (PSF), enhancements can be made to the Windo
 
 Filtering the results is an optional step, that will make viewing application related failures easier. To do this, we will create two filter rules. The first an include filter for the application process name, and the second is an inclusion of any results that are not successful.
 
-1. Download and extract the [SysInternals Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to the **C:\PSF\ProcessMonitor** directory.
+1. Download and extract the [SysInternals Process Monitor](/sysinternals/downloads/procmon) to the **C:\PSF\ProcessMonitor** directory.
 1. Open Windows Explorer and navigate to the extracted SysInternals Process Monitor Folder
 1. Double-click the SysInternals Process Monitor (procmon.exe) file, launching the app.
 1. If prompted by UAC, select the **Yes** button.
@@ -69,7 +69,7 @@ This process will guide you through the retrieval of, and usage of the following
 The following will provide step-by-step guidance on downloading and installing the required tools.
 
 1. Download the latest (non-preview) version of the [NuGet client tool](https://www.nuget.org/downloads), and save the **nuget.exe** in the `C:\PSF\nuget` folder.
-1. Download the Package Support Framework using [Nuget](https://docs.microsoft.com/nuget/install-nuget-client-tools#nugetexe-cli) by running the following from an Administrative PowerShell window:
+1. Download the Package Support Framework using [Nuget](/nuget/install-nuget-client-tools#nugetexe-cli) by running the following from an Administrative PowerShell window:
     ```PowerShell
     Set-Location "C:\PSF"
     .\nuget\nuget.exe install Microsoft.PackageSupportFramework

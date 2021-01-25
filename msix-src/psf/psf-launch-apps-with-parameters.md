@@ -56,7 +56,7 @@ This process will guide you through the retrieval of, and usage of the following
 The following will provide step-by-step guidance on downloading and installing the required tools.
 
 1. Download the latest (non-preview) version of the [NuGet client tool](https://www.nuget.org/downloads), and save the **nuget.exe** in the `C:\PSF\nuget` folder.
-1. Download the Package Support Framework using [Nuget](https://docs.microsoft.com/nuget/install-nuget-client-tools#nugetexe-cli) by running the following from an Administrative PowerShell window:
+1. Download the Package Support Framework using [Nuget](/nuget/install-nuget-client-tools#nugetexe-cli) by running the following from an Administrative PowerShell window:
     ```PowerShell
     Set-Location "C:\PSF"
     .\nuget\nuget.exe install Microsoft.PackageSupportFramework
