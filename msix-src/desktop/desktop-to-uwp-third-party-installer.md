@@ -27,6 +27,36 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 > [!TIP]
 > Be sure to checkout the recently released [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
 
+## Capture
+Capture from Access IT Automation is an API driven modular application management offering that enables effortless and autonomous creation of application packages in MSI, AppV, MSIX and app attach formats.   
+We provide you with tangible outputs that you can either directly make use of via Configuration Manager and Intune delivery OR you can further utilise our extensive Testing and publishing APIs so that we can create the SCCM and Intune application objects for you to manage User Acceptance Testing to ensure Evergreen IT Application Management. 
+
+Our MSIX and app attach API offerings are broken down into the following:  
+* Package creation for MSI, AppV, MSIX and app attach 
+  * AppScan API – We can load all your existing MSI applications and check for MSIX suitability.  Checking for blockers like Boot time services or MSIs with no shortcuts. 
+  * MSIX Builder API is for ANY CI/CD pipeline where you need to create an MSIX without the need to snapshot – common examples are DevOps (loose files, binaries). 
+  * MSIX Creation API – you supply simple inputs of source package and signature file and we create and digitally sign the MSIX output using snapshot technology. 
+  * App attach API – we can cerate as part of the above API per MSIX creation and in addition with this API we can manage grouping up sets of MSIX to create app attach VHD or CIMfs. 
+* Testing management 
+  * User Acceptance Testing API – we take the MSIX or app attach completed packages and created the Intune objects or Azure WVD objects for publishing and delivery. 
+    * We capture the UAT testers pass and fail detail. 
+    * We capture the screenshots and full audit of the UAT test. 
+    *	We capture the performance of the application on the Windows 10 build. 
+  *	Launch and Load Testing API – we autonomously load ALL your applications 1 by 1 onto a Windows 10 build (to compare against other launch and load tests on other Windows 10 build versions) – ensuring your package works on newer Windows 10 
+    * We distribute the application using Intune to mimic a real app delivery. 
+    * We launch all shortcuts from the MSIX package to ensure no issues. 
+    *	We video record this autonomous test for pass or fail of the launch test. 
+      *	Passes mean your investment in packaging to MSIX. 
+      * Failures provide you with detail so you can remediate the package before moving your end users on to the next version of Windows 10. 
+  *	Performance Testing API – Provides you with confidence that high risk package changes perform as expected on your physical desktop and VDI/WVD plant 
+    * You can configure the performance counters you wish to monitor. 
+    *	You can set the duration in hours of the MSIX Intune delivered package. 
+    *	We provide all the results of the application package, specifically looking for any CPU or memory spikes. 
+How we plug our APIs into your existing traditional end to end application management workflows: [End-to-End Application Packaging & Testing Automation Solution](accessitautomation.com) 
+
+Modern API driven application management: [Modern API-Driven Application Packaging & Testing](accessitautomation.com) 
+
+
 ## Cloudhouse Compatibility Containers
 
 For Enterprise customers who have line of business applications that are incompatible with Windows 10 and 10 S, Cloudhouse’s Compatibility Containers enable Windows XP and 7 apps to run on Windows 10 and then converts them to run on the Universal Windows Platform (UWP) for delivery through Microsoft Store for Business, or Microsoft InTune without changing the source code. Register for a [Free Trial](https://www.cloudhouse.com/free-trial).
