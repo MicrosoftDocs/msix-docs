@@ -31,6 +31,8 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 Capture from Access IT Automation is an API driven modular application management offering that enables effortless and autonomous creation of application packages in MSI, AppV, MSIX and app attach formats.   
 We provide you with tangible outputs that you can either directly make use of via Configuration Manager and Intune delivery OR you can further utilise our extensive Testing and publishing APIs so that we can create the SCCM and Intune application objects for you to manage User Acceptance Testing to ensure Evergreen IT Application Management. 
 
+<img width="20%" src="images/CAPTURE_Source.svg">
+
 Our MSIX and app attach API offerings are broken down into the following:  
 * Package creation for MSI, AppV, MSIX and app attach 
   * AppScan API – We can load all your existing MSI applications and check for MSIX suitability.  Checking for blockers like Boot time services or MSIs with no shortcuts. 
