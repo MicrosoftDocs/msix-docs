@@ -22,6 +22,10 @@ The following partners provide additional tooling and support for MSIX developme
 :::column-end:::
 
 :::column:::
+[![appCure logo](images/AppCure-WB.png)](www.appcure.io)
+:::column-end:::
+
+:::column:::
 [![Camwood logo](images/Camwood_Logo_2.png)](http://camwood.com/windows-10/)
 :::column-end:::
 
@@ -62,9 +66,7 @@ The following partners provide additional tooling and support for MSIX developme
 [![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/msix)
 :::column-end:::
 
-:::column:::
-[![SSH2 logo](images/SSH2_Logo.png)](https://ssh2.xyz/)
-:::column-end:::
+
 
 :::row-end:::
 
