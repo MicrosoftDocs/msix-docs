@@ -22,7 +22,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::column-end:::
 
 :::column:::
-[![appCure logo](images/AppCure-WB.png)](www.appcure.io)
+[![appCure logo](images/AppCure-WB.png)](https://www.appcure.io/)
 :::column-end:::
 
 :::column:::
