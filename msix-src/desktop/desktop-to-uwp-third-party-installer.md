@@ -12,22 +12,6 @@ ms.custom: RS5
 
 Below is a list of popular third-party products and installers that support the ability to package a desktop application. You can use them to generate MSI installers or app packages with only a few clicks. While we don't produce documentation on how to use these tools, visit their websites to learn more.
 
-## Appcure
-
-appCURE allows IT to accelerate application capture and streamline the transformation process to MSIX. 
-SSH2’s appCURE captures running applications on the endpoint without worrying about finding install media, instructions etc; enables updating and remediation and to create PSF fixes ready to be added, thus creating the comprehensive step change in speed at which end-user environments can be executed.
-
-<img width="20%" src="images/AppCure-WB.png">
-
-appCURE captures application details from running applications to ensure all points that may impact your end-user’s applications are understood. appCURE then updates and delivers them as an MSIX package ready to use. By capturing all application integration points in your current environment, appCURE provides the speed to optimize IT resources and plan for your migrations better and quicker than ever before thus enabling organizations to get to production faster.
-
-**appCURE Studio**, built upon appCURE’s process, has the capability to create the most optimal and best utilised environments for your MSIX estate by automating the creation of:
-•	VHD/VHDX/VMDK/CIMFS
-•	Certification changes
-•	VHD to CIMFS conversion
-•	MSIX app-attach and APP Volumes 4
-•	Test and reporting
-
 ## Advanced Installer
 
 Caphyon provides a free, GUI-based, desktop app packaging tool that helps you to generate a Windows app package for your application with only a few clicks. It can use any installer; even ones that run in silent mode, and performs a validation check to determine whether the application is suitable for packaging. The Desktop App Converter also integrates with Hyper-V and [VMware](https://www.vmware.com/). This means that you can use your own virtual machines, without having to download a matching [Docker](https://docs.docker.com/) image that can be over 3GB in size.
@@ -42,6 +26,22 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 
 > [!TIP]
 > Be sure to checkout the recently released [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
+
+## appCURE
+
+appCURE allows IT to accelerate application capture and streamline the transformation process to MSIX. 
+SSH2’s appCURE captures running applications on the endpoint without worrying about finding install media, instructions etc; enables updating and remediation and to create PSF fixes ready to be added, thus creating the comprehensive step change in speed at which end-user environments can be executed.
+
+<img width="20%" src="images/AppCure-WB.png">
+
+appCURE captures application details from running applications to ensure all points that may impact your end-user’s applications are understood. appCURE then updates and delivers them as an MSIX package ready to use. By capturing all application integration points in your current environment, appCURE provides the speed to optimize IT resources and plan for your migrations better and quicker than ever before thus enabling organizations to get to production faster.
+
+**appCURE Studio**, built upon appCURE’s process, has the capability to create the most optimal and best utilised environments for your MSIX estate by automating the creation of:
+•	VHD/VHDX/VMDK/CIMFS
+•	Certification changes
+•	VHD to CIMFS conversion
+•	MSIX app-attach and APP Volumes 4
+•	Test and reporting
 
 ## Cloudhouse Compatibility Containers
 
