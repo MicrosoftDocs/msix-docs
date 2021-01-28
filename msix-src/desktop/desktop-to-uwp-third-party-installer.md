@@ -37,11 +37,11 @@ SSH2’s appCURE captures running applications on the endpoint without worrying 
 appCURE captures application details from running applications to ensure all points that may impact your end-user’s applications are understood. appCURE then updates and delivers them as an MSIX package ready to use. By capturing all application integration points in your current environment, appCURE provides the speed to optimize IT resources and plan for your migrations better and quicker than ever before thus enabling organizations to get to production faster.
 
 **appCURE Studio**, built upon appCURE’s process, has the capability to create the most optimal and best utilised environments for your MSIX estate by automating the creation of:
-•	VHD/VHDX/VMDK/CIMFS
-•	Certification changes
-•	VHD to CIMFS conversion
-•	MSIX app-attach and APP Volumes 4
-•	Test and reporting
+*	VHD/VHDX/VMDK/CIMFS
+*	Certification changes
+*	VHD to CIMFS conversion
+*	MSIX app-attach and APP Volumes 4
+*	Test and reporting
 
 ## Cloudhouse Compatibility Containers
 
