@@ -1,5 +1,5 @@
 ---
-Description: This guide provides a list of third-party products and installers to package desktop applications.
+description: This guide provides a list of third-party products and installers to package desktop applications.
 title: Package a desktop app using third-party installers
 ms.date: 06/17/2019
 ms.topic: article
@@ -16,7 +16,7 @@ Below is a list of popular third-party products and installers that support the 
 
 Caphyon provides a free, GUI-based, desktop app packaging tool that helps you to generate a Windows app package for your application with only a few clicks. It can use any installer; even ones that run in silent mode, and performs a validation check to determine whether the application is suitable for packaging. The Desktop App Converter also integrates with Hyper-V and [VMware](https://www.vmware.com/). This means that you can use your own virtual machines, without having to download a matching [Docker](https://docs.docker.com/) image that can be over 3GB in size.
 
-<img width="20%" src="images/Advanced_Installer_Vertical.png">
+<img width="20%" src="images/Advanced_Installer_Vertical.png" Alt-text="Logo of Advance Installer">
 
 You can use [Advanced Installer](https://www.advancedinstaller.com/) to generate MSI and [Windows app packages](https://www.advancedinstaller.com/uwp-app-package.html) from existing projects. You can also use Advanced installer to import Windows app packages that you generate by using the Microsoft Desktop App Converter. Once imported, you can maintain them by using visual tools that are specifically designed for UWP apps.
 
@@ -27,11 +27,61 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 > [!TIP]
 > Be sure to checkout the recently released [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
 
+
+## appCURE
+
+**appCURE** allows IT to accelerate application capture and streamline the transformation process to MSIX. 
+SSH2’s appCURE captures running applications on the endpoint without worrying about finding install media, instructions etc; enables updating and remediation and to create PSF fixes ready to be added, thus creating the comprehensive step change in speed at which end-user environments can be executed.
+
+<img width="20%" src="images/AppCure-WB.png" alt-text="Logo of appCure">
+
+**appCURE** captures application details from running applications to ensure all points that may impact your end-user’s applications are understood. appCURE then updates and delivers them as an MSIX package ready to use. By capturing all application integration points in your current environment, appCURE provides the speed to optimize IT resources and plan for your migrations better and quicker than ever before thus enabling organizations to get to production faster.
+
+**appCURE Studio**, built upon appCURE’s process, has the capability to create the most optimal and best utilised environments for your MSIX estate by automating the creation of:
+*	VHD/VHDX/VMDK/CIMFS
+*	Certification changes
+*	VHD to CIMFS conversion
+*	MSIX app-attach and APP Volumes 4
+*	Test and reporting
+
+## Capture
+Capture from Access IT Automation is an API driven modular application management offering that enables effortless and autonomous creation of application packages in MSI, AppV, MSIX and app attach formats. 
+
+We provide you with tangible outputs that you can either directly make use of via Configuration Manager and Intune delivery OR you can further utilise our extensive Testing and publishing APIs so that we can create the SCCM and Intune application objects for you to manage User Acceptance Testing to ensure Evergreen IT Application Management. 
+
+<img width="20%" src="images/Capture-AccessIT.png" alt-text="Logo  for Capture">
+
+Our MSIX and app attach API offerings are broken down into the following:  
+* Package creation for MSI, AppV, MSIX and app attach 
+  * AppScan API – We can load all your existing MSI applications and check for MSIX suitability.  Checking for blockers like Boot time services or MSIs with no shortcuts. 
+  * MSIX Builder API is for ANY CI/CD pipeline where you need to create an MSIX without the need to snapshot – common examples are DevOps (loose files, binaries). 
+  * MSIX Creation API – you supply simple inputs of source package and signature file and we create and digitally sign the MSIX output using snapshot technology. 
+  * App attach API – we can cerate as part of the above API per MSIX creation and in addition with this API we can manage grouping up sets of MSIX to create app attach VHD or CIMfs. 
+* Testing management 
+  * User Acceptance Testing API – we take the MSIX or app attach completed packages and created the Intune objects or Azure WVD objects for publishing and delivery. 
+    * We capture the UAT testers pass and fail detail. 
+    * We capture the screenshots and full audit of the UAT test. 
+    *	We capture the performance of the application on the Windows 10 build. 
+  *	Launch and Load Testing API – we autonomously load ALL your applications 1 by 1 onto a Windows 10 build (to compare against other launch and load tests on other Windows 10 build versions) – ensuring your package works on newer Windows 10 
+    * We distribute the application using Intune to mimic a real app delivery. 
+    * We launch all shortcuts from the MSIX package to ensure no issues. 
+    *	We video record this autonomous test for pass or fail of the launch test. 
+      *	Passes mean your investment in packaging to MSIX. 
+      * Failures provide you with detail so you can remediate the package before moving your end users on to the next version of Windows 10. 
+  *	Performance Testing API – Provides you with confidence that high risk package changes perform as expected on your physical desktop and VDI/WVD plant 
+    * You can configure the performance counters you wish to monitor. 
+    *	You can set the duration in hours of the MSIX Intune delivered package. 
+    *	We provide all the results of the application package, specifically looking for any CPU or memory spikes. 
+    
+How we plug our APIs into your existing traditional end to end application management workflows: [End-to-End Application Packaging & Testing Automation Solution](https://www.accessitautomation.com/access-capture-end-to-end) 
+
+Modern API driven application management: [Modern API-Driven Application Packaging & Testing](https://www.accessitautomation.com/api-driven-app-packaging-testing) 
+
 ## Cloudhouse Compatibility Containers
 
 For Enterprise customers who have line of business applications that are incompatible with Windows 10 and 10 S, Cloudhouse’s Compatibility Containers enable Windows XP and 7 apps to run on Windows 10 and then converts them to run on the Universal Windows Platform (UWP) for delivery through Microsoft Store for Business, or Microsoft InTune without changing the source code. Register for a [Free Trial](https://www.cloudhouse.com/free-trial).
 
-<img width="20%" src="images/cloudhouse-container-logo.png">
+<img width="20%" src="images/cloudhouse-container-logo.png" alt-text="Logo of Cloudhouse Compatibility Container">
 
 Cloudhouse provides an Auto Packager for packaging line of business applications into [Compatibility Containers](https://docs.cloudhouse.com/37613-overview/266723-compatibility-containers-for-applications) on the operating systems that the apps runs on today (For example: Windows XP), and then [prepare it for conversion](https://docs.cloudhouse.com/37613-overview/266725-compatibility-containers-for-desktop-bridge?from_search=17883905) to UWP. The Container is then converted to the new Windows app package format by integrating it with Microsoft’s Desktop App Converter tool.
 
@@ -43,7 +93,7 @@ Find out more about how you can deliver business applications through the Micros
 
 The [FireGiant MSIX extension](https://www.firegiant.com/products/wix-expansion-pack/msix) lets you create Windows app packages and MSI packages simultaneously from the same WiX source code. Every time you build, you can target Windows 10 with a Windows app package and earlier versions of Windows with MSI.
 
-<img width="20%" src="images/FG3rdPartyLogo.png">
+<img width="20%" src="images/FG3rdPartyLogo.png" alt-text="Logo of FireGiant">
 
 The FireGiant MSIX extension uses static analysis and intelligent emulation of your WiX projects to create Windows app packages without the disk space and runtime overhead of containers or virtual machines.
 
@@ -55,7 +105,7 @@ Check out this [video](https://www.youtube.com/watch?v=AFBpdBiAYQE) and see how 
 
 InstallAware, with a [track record](https://www.installaware.com/press-room.htm) of quickly supporting Microsoft's innovations, builds [Windows app packages (Desktop Bridge)](https://www.installaware.com/appx-builder.htm), App-V (Application Virtualization), MSI (Windows Installer), and EXE (Native Code) packages from a single source.
 
-<img width="20%" src="images/installaware.png">
+<img width="20%" src="images/installaware.png" alt-text="Logo of InstallAware">
 
 InstallAware provides free InstallAware extensions for Visual Studio versions 2012-2017. You can use them to create Windows app packages with a single click directly from the [Visual Studio toolbar](https://www.installaware.com/visual-studio-installer-2015.htm).
 
@@ -69,7 +119,7 @@ InstallAware also [open sourced](https://www.installaware.com/gnu.asp) an **APPX
 
 InstallShield provides a single solution to develop MSI and EXE installers, create Universal Windows Platform (UWP) and Windows Server App (WSA) packages, and virtualize applications with minimal scripting, coding and rework.
 
-<img width="20%" src="images/InstallShield-logo.jpg">
+<img width="20%" src="images/InstallShield-logo.jpg" alt-text="Logo of InstallShield">
 
 Scan your InstallShield project in seconds to save hours of investigative work by automatically identifying potential compatibility issues between your application and UWP and WSA packages.
 
@@ -83,7 +133,7 @@ Learn more in this [eBook](https://na01.safelinks.protection.outlook.com/?url=ht
 
 [PACE Suite](https://pacesuite.com/) is an application packaging tool that you can use to bring your desktop apps to the Universal Windows Platform.
 
-<img width="20%" src="images/PACE.png">
+<img width="20%" src="images/PACE.png" alt-text="Logo of PACE Suite">
 
 With PACE Suite, you don't need to prepare special packaging environments or install additional Windows SDK components. PACE Suite can build Windows app packages independently in your standard packaging environment under Windows 10 or Windows Server 2016. Check out this [illustrated example](https://pacesuite.com/convert-exe-to-appx/) to learn how PACE Suite approaches repackaging an installer to a Windows app package.
 
@@ -99,7 +149,7 @@ See [RAD Studio by Embarcadero](https://www.embarcadero.com/products/rad-studio/
 
 Raynet's packaging solution, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), supports the creation of packages for desktop applications as one of several possible outcomes of efficient and easy-to-configure conversion and repackaging framework.
 
-<img width="20%" src="images/RaynetLogo_v3.png">
+<img width="20%" src="images/RaynetLogo_v3.png" alt-text="Logo of RayPack Studio">
 
 Existing virtual environments (VMware Workstation, Hyper-V) can be used to perform automated/bulk conversion without a lengthy environment setup. A component of the studio ([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad)) is able to make pre-conversion screening and compatibility tests to verify software that is eligible for conversion. Additionally, users can now perform comprehensive collision and compatibility checks with various Windows 10 editions including Anniversary and Creators updates.
 
