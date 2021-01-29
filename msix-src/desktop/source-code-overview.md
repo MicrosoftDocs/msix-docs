@@ -1,5 +1,5 @@
 ---
-Description: An overview of topics for creating an MSIX package from source code
+description: An overview of topics for creating an MSIX package from source code
 title: Building an MSIX package from your code overview
 author: Huios
 ms.date: 02/03/2020
@@ -18,7 +18,7 @@ If you're developing a UWP application, Visual Studio will default to MSIX as th
 
 |Topic| Description |
 |:---|:---|
-|[What to know before packaging your desktop app](before-packaging-overview.md)| Background on MSIX requirments and packaged desktop app runtime behavior. This is useful to know before building an MSIX package for your desktop application. If you're building a UWP app you can skip this section. | 
+|[What to know before packaging your desktop app](before-packaging-overview.md)| Background on MSIX requirements and packaged desktop app runtime behavior. This is useful to know before building an MSIX package for your desktop application. If you're building a UWP app you can skip this section. | 
 |[Packaging your desktop or UWP app in Visual Studio](vs-package-overview.md)| This section discusses how to package your desktop (Windows Forms, WPF, Win32 etc.) or UWP app as an MSIX in Visual Studio.|
 |[CI/CD Pipelines for MSIX Builds and Deployments](azure-dev-ops.md)| This section discusses how to automate your build and deployment workflows using CI/CD pipelines in Azure DevOps.|
 |[Packaging from the command line](../package/manual-packaging-root.md)| This section discusses how to package your app as an MSIX using command line tools.|
