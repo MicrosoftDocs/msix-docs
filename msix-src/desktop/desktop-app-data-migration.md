@@ -12,7 +12,7 @@ ms.custom: RS5
 
 ## Overview
 
-This article describes tips for smooth user transition and data migration when converting an existing desktop app to an MSIX packaged version of the app. Users will be encouraged to download the packaged version of their desktop apps. If the user already has the previous desktop version of the app, the transition experience should be as seamless as possible.
+This article describes tips for smooth user transition and data migration when converting an existing desktop app (i.e .exe, .msi, ...) to an MSIX packaged version of the app. Users will be encouraged to download the packaged version of their desktop apps. If the user already has the previous desktop version of the app, the transition experience should be as seamless as possible.
 
 Refer to the following [GitHub sample](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
 
