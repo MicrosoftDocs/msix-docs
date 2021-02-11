@@ -1,18 +1,18 @@
 ---
-description: Guide for smooth user transition and data migration for desktop bridge apps
-title: Desktop Bridge - Smooth User Transition & Data Migration 
+description: Guide for smooth user transition and data migration for packaged app
+title: Smooth user transition & data migration for packaged app 
 ms.date: 01/21/2021
 ms.topic: article
-keywords: windows 10, desktop bridge
+keywords: windows 10, desktop app, packaged app
 ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Desktop Bridge: Smooth User Transition & Data Migration
+# Smooth user transition & data migration for packaged app
 
 ## Overview
 
-Users will be encouraged to download the store version of their desktop apps. If the user already has the previous desktop version of the app, the transition experience should be as seamless as possible.
+This article describes tips for smooth user transition and data migration when converting an existing desktop app to an MSIX packaged version of the app. Users will be encouraged to download the packaged version of their desktop apps. If the user already has the previous desktop version of the app, the transition experience should be as seamless as possible.
 
 Refer to the following [GitHub sample](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition).
 
@@ -74,15 +74,15 @@ As part of this transition, you need to provide the [Programmatic Identifier](ht
 
 ## Data Migration
 
-As best practice, it is recommended for developers to attempt to migrate previous user data from the desktop app, upon first launch of the store version of the same app. This will delight the users, so they can ‘pick up where they left off’.
+As best practice, it is recommended for developers to attempt to migrate previous user data from the desktop app, upon first launch of the packaged version of the same app. This will delight the users, so they can ‘pick up where they left off’.
 
-Please refer to the code sample below to learn about the best practices around how to do this on first launch, while recognizing which version of your desktop app you are running (store version vs previous desktop version).
+Please refer to the code sample below to learn about the best practices around how to do this on first launch, while recognizing which version of your desktop app you are running (packaged version vs previous desktop version).
 
 ## User Transition: Uninstall previous desktop app
 
-As best practice, it is recommended for developers to offer uninstallation of the previous desktop app upon first launch of the store version of the app. This will help in avoiding user confusion and potential user data corruption.
+As best practice, it is recommended for developers to offer uninstallation of the previous desktop app upon first launch of the packaged version of the app. This will help in avoiding user confusion and potential user data corruption.
 
-Keep in mind that the user can refuse the uninstallation of the previous desktop app, so the previous and store version of the app may end up running side-by-side. It is up to the app developer to decide whether or not to block the launch of the store version of the app, until the previous desktop app is uninstalled.
+Keep in mind that the user can refuse the uninstallation of the previous desktop app, so the previous and packaged version of the app may end up running side-by-side. It is up to the app developer to decide whether or not to block the launch of the packaged version of the app, until the previous desktop app is uninstalled.
 
 ```
 //Please refer to the following blogpost to learn how you can use this method:
