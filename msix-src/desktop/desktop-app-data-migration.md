@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# Smooth user transition & data migration for packaged app
+# Smooth user transition & data migration from desktop app to packaged app
 
 ## Overview
 
