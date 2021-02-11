@@ -30,7 +30,7 @@ If you are developing in Visual Studio you can follow the steps outlined [here](
 
 ## From the command line
 
-If you are not developing in Visual Studio, and using command line tools you can use  [WinDeployAppCmd](/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool). Below is an example of how to do so from a command line window:
+If you are not developing in Visual Studio, and using command line tools you can use  [WinAppDeployCmd](/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool). Below is an example of how to do so from a command line window:
 
 ```
 WinAppDeployCmd.exe registerfiles -remotedeploydir <network path> -ip <IP Address> -pin <target machine PIN>
