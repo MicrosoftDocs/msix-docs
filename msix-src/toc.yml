@@ -326,23 +326,21 @@
       href: desktop\managing-your-msix-reset-and-repair.md
 - name: MSIX validation and troubleshooting
   items: 
+    - name: Troubleshooting packaging, deployment, and query of Windows apps
+      href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
+    - name: Troubleshoot runtime issues in an MSIX Container
+      href: manage/troubleshoot-msix-container.md
     - name: MSIX support on Windows Server 2019
       href: msix-server-2019.md
     - name: Windows device portal
       href: /windows/uwp/debug-test-perf/device-portal?context=/windows/msix/render
-    - name: Troubleshoot runtime issues in an MSIX Container
-      href: manage/troubleshoot-msix-container.md
-    - name: Debug and test a packaged app
-      items:
-        - name: Troubleshooting packaging, deployment, and query of Windows apps
-          href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
-        - name: Run, debug, and test a packaged desktop application
-          href: desktop/desktop-to-uwp-debug.md
-        - name: Detect package identity and runtime context
-          href: detect-package-identity.md
-        - name: Registering a package layout from a network share
-          href: desktop/register-from-network.md
-        - name: Testing on Windows 10 S
-          href: desktop/desktop-to-uwp-test-windows-s.md
-        - name: Known issues when packaging an MSIX
-          href: desktop/desktop-to-uwp-known-issues.md
+    - name: Run, debug, and test a packaged desktop application
+      href: desktop/desktop-to-uwp-debug.md
+    - name: Detect package identity and runtime context
+      href: detect-package-identity.md
+    - name: Registering a package layout from a network share
+      href: desktop/register-from-network.md
+    - name: Testing on Windows 10 S
+      href: desktop/desktop-to-uwp-test-windows-s.md
+    - name: Known issues when packaging an MSIX
+      href: desktop/desktop-to-uwp-known-issues.md

@@ -1,7 +1,7 @@
 ---
-Description: This article provides details that need to be considered when deploying your MSIX packages on Windows devices in an enterprise environment.  This article is targeted at enterprise and IT Pros.
+description: This article provides details that need to be considered when deploying your MSIX packages on Windows devices in an enterprise environment.  This article is targeted at enterprise and IT Pros.
 title: Plan for your deployment.
-ms.date: 2/3/2020
+ms.date: 02/16/2021
 ms.topic: article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -14,7 +14,7 @@ No matter if you are targeting the consumer market or enterprise, the key to suc
 
 All developers also need to know the minimum supported operating system they want to target.  Targeting the lowest common denominator of the operating system, may get you the best potential reach, but often earlier releases of the operating system may not support certain API calls your application is built using.
 
-## MSIX Platform Support
+## MSIX platform support
 MSIX was introduced to Windows 10 version 1709 (10.0.16299.0) and greater.  This means if you are using the basic MSIX functionality and targeting Windows 10 version 1709 or greater, it will just work.  For a complete list of supporting operating systems and supporting features, see [Supported Platforms.](../supported-platforms.md)
 
 ## Services packaged in MSIX
@@ -47,7 +47,23 @@ When uninstalling or downgrading MSIX, MSIX preserves the user's appdata.  There
 
 To learn more about how you can control the update settings for your apps, see [Configure update settings in the App Installer file](../packaging-tool/convert-an-installer-with-services.md)
 
-### MSIX Bundles
+### MSIX bundles
 MSIX bundles are packages that are designed to contain multiple architectures.  MSIX packages on the other hand only support a single  architecture.  MSIX bundles can upgrade be used to upgrade or downgrade MSIX packages, but the reverse is not true.  You cannot upgrade or downgrade a MSIX bundle with a MSIX package. 
 
 To learn more about creating bundles, see [Bundle MSIX packages](../packaging-tool/bundle-msix-packages.md)
+
+## Transition users to your packaged app
+
+Before you distribute your app, consider adding a few extensions to your package manifest to help users get into the habit of using your packaged app. Here's a few things you can do.
+
+* Point existing Start tiles and taskbar buttons to your packaged app.
+* Associate your packaged application with a set of file types.
+* Make your packaged application open certain types of files by default.
+
+Also, consider adding code to your packaged application that accomplishes these tasks:
+
+* Migrates user data associated with your desktop application to the appropriate folder locations of your packaged app.
+* Gives users the option to uninstall the desktop version of your app.
+
+For more information and examples, see [Transition users to your app](/windows/apps/desktop/modernize/desktop-to-uwp-distribute#transition-users-to-your-packaged-app).
+
