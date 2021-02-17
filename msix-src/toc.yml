@@ -232,8 +232,6 @@
           href: package/optional-packages-with-executable-code.md 
         - name: Building an app with a modification package 
           href: package/modification-package-developers.md
-    - name: User transition & data migration from desktop app
-      href: desktop/desktop-app-data-migration.md
 - name: Manage your MSIX deployment
   items: 
     - name: Overview
