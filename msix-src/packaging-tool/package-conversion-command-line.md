@@ -22,13 +22,15 @@ For sample PowerShell and Bash scripts that demonstrate how to automate the proc
 
 To create a new MSIX package for your application, run the `MsixPackagingTool.exe create-package` command in an administrator Command prompt window.
 
-Here are the parameters that can be passed as command line arguments:
+Here are the parameters that can be passed as command line arguments(case sensitive):
 
 |**Parameter** |	**Description**|
 |---------|---------|
 |-? --help	|Show help information|
 |--template	| [required] path to the conversion template XML file containing package information and settings for this conversion|
-|--virtualMachinePassword	| [optional] The password for the Virtual Machine to be used for the conversion environment. Notes: The template file must contain a VirtualMachine element and the Settings::AllowPromptForPassword attribute must not be set to true.|
+|--virtualMachinePassword   | [optional] The password for the Virtual Machine to be used for the conversion environment. Note: The template file must contain a VirtualMachine element and the Settings::AllowPromptForPassword attribute must not be set to true.|
+|--machinePassword  |[optional] The password for the remote machine to be used for the conversion environment. Note: The template file must contain a RemoteMachine or VirtualMachine element and the Settings::AllowPromptForPassword attribute must not be set to true.|
+|--resume   |[optional] Used to resume the conversion flow after a reboot.|
 |-v --verbose	|[optional] Print verbose logs to the console.|
 
 Examples:

@@ -24,7 +24,7 @@ To fix a service or see additional data about the service, double-click the serv
 - **Display name:** The display name of the service.
 - **Image path:** Location of the service executable. This is not editable.
 - **Start account:** The start account for the service.
-- **Startup type:** Type of startup for the service. Supports **Automatic**, **Manual**, and **Disabled**.
+- **Startup type:** Type of startup for the service. Supports **Automatic**, **Manual**, **Disabled**, and **Delayed**.
 - **Arguments:** Arguments to be run when the service starts.
 - **Dependencies:** Dependencies for the service.
 

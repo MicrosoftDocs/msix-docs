@@ -45,6 +45,9 @@ To create an optional package in Visual Studio, you'll need to:
     <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
     ```
 
+> [!NOTE]
+> If you would like to create an optional package from a different publisher, you will need to specify the publisher of the main application if they are different. Like so <uap4:MainPackageDependency Name="Main_app" Publisher="CN=Contoso..." />. This will not work if you are publishing to the Store.
+
 After you have your package dependencies set up from Steps 1 through 4, you can continue developing as you normally would. For more information, see [Blog post: Build your first optional package](/archive/blogs/appinstaller/build-your-first-optional-package).
 
 Visual Studio can be configured to re-deploy your main package each time you deploy an optional package. To set the build dependency in Visual Studio, you should:
