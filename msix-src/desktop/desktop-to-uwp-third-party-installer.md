@@ -172,14 +172,14 @@ Related links:
 ## Rimo3 cloud
 
 Rimo3 cloud enables the adoption of new technologies at scale through intelligent automation to not only create deployment-ready MSIX packages but also help customers to make informed, data driven decisions about which applications to convert and in which environments those application will work best.
-<img width="20%" src="images/Advanced_Installer_Vertical.png" Alt-text="Logo of Advance Installer">
+<img width="20%" src="images/Rimo3CLOUD-Logo-Colour-RGB.png" Alt-text="Logo of Rimo3 Cloud">
 
-You can use [Advanced Installer](https://www.advancedinstaller.com/) to generate MSI and [Windows app packages](https://www.advancedinstaller.com/uwp-app-package.html) from existing projects. You can also use Advanced installer to import Windows app packages that you generate by using the Microsoft Desktop App Converter. Once imported, you can maintain them by using visual tools that are specifically designed for UWP apps.
+Application Modernization with Rimo3 cloud leverages the power of automation and orchestration to not only bulk test, convert, and remediate applications to deployment-ready MSIX packages but also: 
 
-Advanced Installer also provides an extension for Visual Studio 2017 and 2015 that can use to [build and debug Desktop Bridge apps](https://www.advancedinstaller.com/debug-desktop-bridge-apps.html).
+* Understand which applications are suitable for conversion 
+* Ensure that the applications actually work on the target modern OS before converting 
+* Test the converted applications
 
-See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) for a quick overview.
+Rimo3 cloud eliminates almost all of the manual effort required when tackling a technology transformation effort whether it is a large-scale transformation of your entire estate or an initial exploration of MSIX. 
 
-> [!TIP]
-> Be sure to checkout the recently released [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
-
+Checkout our 5-step guide to modernizing your applications to MSIX in minutes [here](https://rimo3.com/rimo3cloud/?msix-guide).
