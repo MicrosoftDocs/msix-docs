@@ -183,3 +183,7 @@ Application Modernization with Rimo3 cloud leverages the power of automation and
 Rimo3 cloud eliminates almost all of the manual effort required when tackling a technology transformation effort whether it is a large-scale transformation of your entire estate or an initial exploration of MSIX. 
 
 Checkout our 5-step guide to modernizing your applications to MSIX in minutes [here](https://rimo3.com/rimo3cloud/?msix-guide).
+
+For more information about modernizing your applications with Rimo3 cloud and to see what else you can do with intelligent automation at scale come visit us at: https://rimo3.com
+
+
