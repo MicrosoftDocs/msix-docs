@@ -172,6 +172,7 @@ Related links:
 ## Rimo3 cloud
 
 Rimo3 cloud enables the adoption of new technologies at scale through intelligent automation to not only create deployment-ready MSIX packages but also help customers to make informed, data driven decisions about which applications to convert and in which environments those application will work best.
+
 <img width="20%" src="images/Rimo3CLOUD-Logo-Colour-RGB.png" Alt-text="Logo of Rimo3 Cloud">
 
 Application Modernization with Rimo3 cloud leverages the power of automation and orchestration to not only bulk test, convert, and remediate applications to deployment-ready MSIX packages but also: 
