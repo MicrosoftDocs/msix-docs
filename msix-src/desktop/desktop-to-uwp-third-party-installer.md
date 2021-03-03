@@ -168,3 +168,23 @@ Related links:
 * RayQC: [https://raynet.de/Raynet-Products/RayQC](https://raynet.de/Raynet-Products/RayQC)
 * RayQC Advanced: [https://raynet.de/Raynet-Products/RayQCad](https://raynet.de/Raynet-Products/RayQCad)
 * Free Trial License: [https://raynet.de/contact?init=license](https://raynet.de/contact?init=license)
+
+## Rimo3 cloud
+
+Rimo3 cloud enables the adoption of new technologies at scale through intelligent automation to not only create deployment-ready MSIX packages but also help customers to make informed, data driven decisions about which applications to convert and in which environments those application will work best.
+
+<img width="20%" src="images/Rimo3CLOUD-Logo-Colour-RGB.png" Alt-text="Logo of Rimo3 Cloud">
+
+Application Modernization with Rimo3 cloud leverages the power of automation and orchestration to not only bulk test, convert, and remediate applications to deployment-ready MSIX packages but also: 
+
+* Understand which applications are suitable for conversion 
+* Ensure that the applications actually work on the target modern OS before converting 
+* Test the converted applications
+
+Rimo3 cloud eliminates almost all of the manual effort required when tackling a technology transformation effort whether it is a large-scale transformation of your entire estate or an initial exploration of MSIX. 
+
+Checkout our 5-step guide to modernizing your applications to MSIX in minutes [here](https://rimo3.com/rimo3cloud/?msix-guide).
+
+For more information about modernizing your applications with Rimo3 cloud and to see what else you can do with intelligent automation at scale come visit us at: https://rimo3.com
+
+
