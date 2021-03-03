@@ -33,20 +33,20 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row-end:::
 :::row:::
     :::column:::
-        <h3>What's new in MSIX</h3>
-        <p>MSIX continues to grow and evolve to customer needs. Get a short recap of MSIX today through the 20H2 release and explore key tools like the MSIX Packaging Tool and Package Support Framework. We’ll also cover what’s to come beyond 20H2 with features like shared package containers, third-party updates and repair, and more.</p>
-    :::column-end:::
-    :::column:::
-        <iframe src="https://techcommunity.microsoft.com/t5/video-hub/what-s-new-in-msix/td-p/2177276#.YD595BwTraE.link" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
         <h3>MSIX walkthrough</h3>
         <p>MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.</p>
     :::column-end:::
     :::column:::
         <iframe src="https://www.microsoft.com/videoplayer/embed/RE3ig2l" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        <h3>MSIX in the Enterprise</h3>
+        <p>The MSIX platform is continuing to grow and adapting to customer needs. Let's walk through what's new in the past year for the MSIX platform and what it means for your enterprise.  We will also cover the plans upcoming for the MSIX platform.</p>
+    :::column-end:::
+    :::column:::
+        <iframe src="https://www.youtube.com/embed/orh87lo6VKY" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
     :::column-end:::
 :::row-end:::
 :::row:::
