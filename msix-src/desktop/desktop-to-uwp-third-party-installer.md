@@ -33,7 +33,7 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 **appCURE** allows IT to accelerate application capture and streamline the transformation process to MSIX. 
 SSH2’s appCURE captures running applications on the endpoint without worrying about finding install media, instructions etc; enables updating and remediation and to create PSF fixes ready to be added, thus creating the comprehensive step change in speed at which end-user environments can be executed.
 
-<img width="20%" src="images/AppCure-WB.png" alt-text="Logo of appCure">
+![appCURE logo](images/AppCure-WB.png)
 
 **appCURE** captures application details from running applications to ensure all points that may impact your end-user’s applications are understood. appCURE then updates and delivers them as an MSIX package ready to use. By capturing all application integration points in your current environment, appCURE provides the speed to optimize IT resources and plan for your migrations better and quicker than ever before thus enabling organizations to get to production faster.
 
