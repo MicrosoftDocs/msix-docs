@@ -20,5 +20,5 @@ As part of the digital transformation at SAP, and to address the previous challe
 
 By leveraging MSIX and Intune capabilities, SAP will be able to deploy the LOB Applications to SAP employees while removing unneeded additional users’ privileges on Windows devices at the same time. One of their goals is to provide a consistent App deployment experience without worrying who is installing the app. Removing Admin privileges to users that don’t need to have that permission, while allowing them to install the apps they need, will help SAP reduce IT tickets for Windows Devices PCs not working after the user installs applications,
 
-*“We have been successful in our MSIX Pilot so far and we believe it will help our organization to reduce IT support costs and improve our App delivery experience to end users.  Thanks to the team for the help for the pilot” * -Eugene Schrempf, Global Head of Workplace Delivery at SAP Americas, Inc.
+*“We have been successful in our MSIX Pilot so far and we believe it will help our organization to reduce IT support costs and improve our App delivery experience to end users.  Thanks to the team for the help for the pilot”* -Eugene Schrempf, Global Head of Workplace Delivery at SAP Americas, Inc.
 
