@@ -93,9 +93,7 @@ Find out more about how you can deliver business applications through the Micros
 
 The [FireGiant MSIX extension](https://www.firegiant.com/products/wix-expansion-pack/msix) lets you create Windows app packages and MSI packages simultaneously from the same WiX source code. Every time you build, you can target Windows 10 with a Windows app package and earlier versions of Windows with MSI.
 
-<img width="20%" src="images/FG3rdPartyLogo.png" alt-text="Logo of FireGiant">
-
-![FireGiant logo](images/FG3rdPartyLogo.png)
+![FireGiant logo](images/FG3rdPartyLogo_50.png)
 
 The FireGiant MSIX extension uses static analysis and intelligent emulation of your WiX projects to create Windows app packages without the disk space and runtime overhead of containers or virtual machines.
 
@@ -107,7 +105,7 @@ Check out this [video](https://www.youtube.com/watch?v=AFBpdBiAYQE) and see how 
 
 InstallAware, with a [track record](https://www.installaware.com/press-room.htm) of quickly supporting Microsoft's innovations, builds [Windows app packages (Desktop Bridge)](https://www.installaware.com/appx-builder.htm), App-V (Application Virtualization), MSI (Windows Installer), and EXE (Native Code) packages from a single source.
 
-<img width="20%" src="images/installaware.png" alt-text="Logo of InstallAware">
+![InstallAware logo](images/installaware_20.png)
 
 InstallAware provides free InstallAware extensions for Visual Studio versions 2012-2017. You can use them to create Windows app packages with a single click directly from the [Visual Studio toolbar](https://www.installaware.com/visual-studio-installer-2015.htm).
 
@@ -121,7 +119,7 @@ InstallAware also [open sourced](https://www.installaware.com/gnu.asp) an **APPX
 
 InstallShield provides a single solution to develop MSI and EXE installers, create Universal Windows Platform (UWP) and Windows Server App (WSA) packages, and virtualize applications with minimal scripting, coding and rework.
 
-<img width="20%" src="images/InstallShield-logo.jpg" alt-text="Logo of InstallShield">
+![InstallShield logo](images/InstallShield-logo.jpg)
 
 Scan your InstallShield project in seconds to save hours of investigative work by automatically identifying potential compatibility issues between your application and UWP and WSA packages.
 
@@ -135,7 +133,7 @@ Learn more in this [eBook](https://na01.safelinks.protection.outlook.com/?url=ht
 
 [PACE Suite](https://pacesuite.com/) is an application packaging tool that you can use to bring your desktop apps to the Universal Windows Platform.
 
-<img width="20%" src="images/PACE.png" alt-text="Logo of PACE Suite">
+![Pace logo](images/PACE_20.png)
 
 With PACE Suite, you don't need to prepare special packaging environments or install additional Windows SDK components. PACE Suite can build Windows app packages independently in your standard packaging environment under Windows 10 or Windows Server 2016. Check out this [illustrated example](https://pacesuite.com/convert-exe-to-appx/) to learn how PACE Suite approaches repackaging an installer to a Windows app package.
 
@@ -152,6 +150,8 @@ See [RAD Studio by Embarcadero](https://www.embarcadero.com/products/rad-studio/
 Raynet's packaging solution, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), supports the creation of packages for desktop applications as one of several possible outcomes of efficient and easy-to-configure conversion and repackaging framework.
 
 <img width="20%" src="images/RaynetLogo_v3.png" alt-text="Logo of RayPack Studio">
+
+![RayPack logo](images/RaynetLogo_v3.png)
 
 Existing virtual environments (VMware Workstation, Hyper-V) can be used to perform automated/bulk conversion without a lengthy environment setup. A component of the studio ([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad)) is able to make pre-conversion screening and compatibility tests to verify software that is eligible for conversion. Additionally, users can now perform comprehensive collision and compatibility checks with various Windows 10 editions including Anniversary and Creators updates.
 
@@ -176,6 +176,8 @@ Related links:
 Rimo3 cloud enables the adoption of new technologies at scale through intelligent automation to not only create deployment-ready MSIX packages but also help customers to make informed, data driven decisions about which applications to convert and in which environments those application will work best.
 
 <img width="20%" src="images/Rimo3CLOUD-Logo-Colour-RGB.png" Alt-text="Logo of Rimo3 Cloud">
+
+![Rimo3 logo](images/Rimo3CLOUD-Logo-Colour-RGB.png)
 
 Application Modernization with Rimo3 cloud leverages the power of automation and orchestration to not only bulk test, convert, and remediate applications to deployment-ready MSIX packages but also: 
 
