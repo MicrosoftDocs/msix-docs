@@ -149,9 +149,7 @@ See [RAD Studio by Embarcadero](https://www.embarcadero.com/products/rad-studio/
 
 Raynet's packaging solution, [RayPack Studio](https://raynet.de/Raynet-Products/RayPackStudio), supports the creation of packages for desktop applications as one of several possible outcomes of efficient and easy-to-configure conversion and repackaging framework.
 
-<img width="20%" src="images/RaynetLogo_v3.png" alt-text="Logo of RayPack Studio">
-
-![RayPack logo](images/RaynetLogo_v3.png)
+![RayPack logo](images/RaynetLogo_v3_20.png)
 
 Existing virtual environments (VMware Workstation, Hyper-V) can be used to perform automated/bulk conversion without a lengthy environment setup. A component of the studio ([RayQC Advanced](https://raynet.de/Raynet-Products/RayQCad)) is able to make pre-conversion screening and compatibility tests to verify software that is eligible for conversion. Additionally, users can now perform comprehensive collision and compatibility checks with various Windows 10 editions including Anniversary and Creators updates.
 
@@ -174,8 +172,6 @@ Related links:
 ## Rimo3 cloud
 
 Rimo3 cloud enables the adoption of new technologies at scale through intelligent automation to not only create deployment-ready MSIX packages but also help customers to make informed, data driven decisions about which applications to convert and in which environments those application will work best.
-
-<img width="20%" src="images/Rimo3CLOUD-Logo-Colour-RGB.png" Alt-text="Logo of Rimo3 Cloud">
 
 ![Rimo3 logo](images/Rimo3CLOUD-Logo-Colour-RGB.png)
 
