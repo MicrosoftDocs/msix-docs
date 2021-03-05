@@ -95,6 +95,8 @@ The [FireGiant MSIX extension](https://www.firegiant.com/products/wix-expansion-
 
 <img width="20%" src="images/FG3rdPartyLogo.png" alt-text="Logo of FireGiant">
 
+![FireGiant logo](images/FG3rdPartyLogo.png)
+
 The FireGiant MSIX extension uses static analysis and intelligent emulation of your WiX projects to create Windows app packages without the disk space and runtime overhead of containers or virtual machines.
 
 Because the FireGiant MSIX extension doesn't convert your installer by running it, you can maintain your WiX installer without having to repeatedly convert it to Windows app packages. All your users on different versions of Windows get your latest improvements and you don't have to worry about MSI and Windows app packages getting out of sync.
