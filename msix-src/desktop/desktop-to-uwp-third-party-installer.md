@@ -46,6 +46,7 @@ Apptimized Factory packaging service provides the ability to work with key forma
 Apptimized Workspace is an application packaging environment where customers can successfully create the package going through the process – Discovery, Packaging, and Testing. With the use of Workspace, a сloud packaging toolbox that contains all applications in one place for packaging, making the customers' personal experience as convenient as possible. As a result, create, edit and customize packages under MSI, MSIX, App-V, Intunewin format. Access anywhere and anytime with simple integration into the customer's workflow system via API, combined with a secure, modern, and customizable environment. Thus, deploy your ready-made and tested package into SCCM or Intune via the integration option or direct to download it. 24/5 live support is available.
 
 For more products we offer and additional information, please visit www.apptimized.com 
+
 Related links:
 *	[Apptimized](https://apptimized.com/en/) 
 *	[Apptimized Catalogue](https://apptimized.com/en/solution/catalogue/)
