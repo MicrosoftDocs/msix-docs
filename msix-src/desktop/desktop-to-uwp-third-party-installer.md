@@ -27,6 +27,35 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 > [!TIP]
 > Be sure to checkout the recently released [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
 
+## Apptimized Platform
+Apptimized Platform is the application packaging environment of Apptimized, making efficient, high-quality, and safe packaging desktop applications with the modernized application delivery framework.  
+
+Apptimized Platform provides a fully cloud-based Evergreen state of services to keep company software up to date. This concept consists of four main steps that our solutions represent: Inform – Test – Fix – Run.  
+
+![apptimized logo](images/apptimized.png) 
+
+Apptimized Updates is an Inform step of the Evergreen concept integrated into our platform. This service notifies you when the most recent version is being released to maintain up-to-date applications. Our team's operatively supported updates will come to you by email. Apptimized Updates as a part of our platform has silent integration with our other solutions.
+
+Apptimized Proof, which represents a Test step in the Evergreen concept, is performed on the Apptimized Platform. Apptimized Proof is an automated solution to solve lengthy and costly testing and migration problems. Our automated testing service covers both the issues of migrating Windows-based applications and the lift-and-shift of apps from legacy into the cloud. Combined with a cloud testing environment, multiple concurrent tests, and detailed testing reports, this solution perfectly fits various customer requests in a simple and convenient all in one service.
+
+ Fix & Run steps provide application packages ready for deployment via the Apptimized Catalogue, Factory, and Workspace.
+Apptimized Catalogue supports ready to deploy applications in 32-bit and 64-bit versions and various formats: MSI, APP-V, Intunewin, MSIX, PSADT wrapping. All of the latest applications become available within 48 hours after a user request. A single, cost-effective, and swift service with dozens of the most popular ready-to-deploy applications is well suited for a customer interested in streamlined application packaging.
+
+Apptimized Factory packaging service provides the ability to work with key formats – MSI, APP-V, Intunewin, СloudPaging, CloudHouse, ThinApp, MSIX, and VSL built on the secure and scalable Microsoft Azure. The platform supports packaging for Windows platforms and Mac, VMWare, Citrix, and Linux. With more than 15 years of packaging expertise, our specialists will create application packages of any complexity. Using the Portal provides 24/5 support via live chat at any stage of packaging and deployment.
+
+Apptimized Workspace is an application packaging environment where customers can successfully create the package going through the process – Discovery, Packaging, and Testing. With the use of Workspace, a сloud packaging toolbox that contains all applications in one place for packaging, making the customers' personal experience as convenient as possible. As a result, create, edit and customize packages under MSI, MSIX, App-V, Intunewin format. Access anywhere and anytime with simple integration into the customer's workflow system via API, combined with a secure, modern, and customizable environment. Thus, deploy your ready-made and tested package into SCCM or Intune via the integration option or direct to download it. 24/5 live support is available.
+
+For more products we offer and additional information, please visit www.apptimized.com 
+
+Related links:
+*	[Apptimized](https://apptimized.com/en/) 
+*	[Apptimized Catalogue](https://apptimized.com/en/solution/catalogue/)
+*	[Apptimized Factory](https://apptimized.com/en/solution/factory/)
+*	[Apptimized Workspace](https://apptimized.com/en/solution/workspace/)
+*	[Apptimized Updates](https://apptimized.com/en/solution/updates/) 
+*	[Apptimized Proof](https://apptimized.com/en/solution/proof/)
+*	[Apptimized Evergreen](https://apptimized.com/en/evergreen/) 
+
 
 ## appCURE
 

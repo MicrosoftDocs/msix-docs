@@ -17,3 +17,4 @@ Many customers are successfully using MSIX to improve the deployment of their Wi
 * Learn how [Educational Computing Network of Ontario (ECNO)](customer/ecno.md) is improving desktop application delivery and install experience for Ontario students
 * Learn how [SAP](customer/sap.md) is using Microsoft technology for saving costs by improving their Windows Application distribution mechanism 
 * Learn how [Schneider Electric](customer/schneider-electric.md) is developing and deploying WPF desktop applications
+* Learn how [Trend Micro](customer/trend-micro.md) uses C++/WinRT and MSIX in Cleaner One
