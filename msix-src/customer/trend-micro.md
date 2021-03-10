@@ -9,6 +9,9 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 # Trend Micro
+
+![Trend Micro logo](../images/Trend Micro-lightmode.png)
+
 Trend Micro Incorporated., a global leader in cybersecurity, helps to make the world safe for exchanging digital information. In an increasingly connected world, our innovative solutions for businesses, governments, and consumers provide layered security for data centers, cloud environments, networks, and endpoints.
 
 Besides the security sector, we are also looking for new opportunities in other domains, such as system maintenance and optimization. For example, we are developing Cleaner One, an innovative app to help users gain more free disk space (by removing junks, big files, duplicate files, etc.) and optimize their computer performance. At present, Cleaner One has two distribution channels, Microsoft Store and Online.
