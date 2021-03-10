@@ -97,11 +97,11 @@ Apps can be installed without being published in the Store by publishing them on
 
 3. Select **Sideloading** in the first page of the wizard and then click **Next**.
 
-    ![Create Your Packages dialog window shown](images/packaging-screen10.png)
+    ![Create Your Packages dialog window shown with Sideloading](images/packaging-screen10.png)
 
 4. On the **Select signing method** page, select whether to skip packaging signing or select a certificate for signing. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. 
 
-    ![Create Your Packages dialog window shown](images/package-signing2.png)
+    ![Create Your Packages dialog window shown with Signing](images/package-signing2.png)
 
 5. Complete the **Select and configure packages** page as described in the [Create your app package upload file using Visual Studio](#create-your-app-package-upload-file-using-visual-studio) section.
 
@@ -150,7 +150,7 @@ You can create an app package upload file by using the **Create App Packages** w
 
 3. Select **Microsoft Store using a new app name** in the first dialog and then click **Next**.  
 
-    ![Create Your Packages dialog window shown](images/packaging-screen3.jpg)
+    ![Create Your Packages dialog window shown with Microsoft Store](images/packaging-screen3.jpg)
 
     If you have already associated your project with an app in the Store, you also have an option to create packages for the associated Store app. If you choose **Sideloading**, Visual Studio will not generate the app package upload (.msixupload or .appxupload) file for Partner Center submissions. If you only want to create an MSIX packge or bundle for non-Store distribution, then you can select this option.
 

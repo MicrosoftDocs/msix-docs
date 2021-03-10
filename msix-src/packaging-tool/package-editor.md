@@ -24,15 +24,15 @@ On the **Package information** page, you can change your package information thr
 
 You can navigate to other sections of the package editor to edit your capabilities, virtual registry, or package files. When you are finished editing your package, be sure to sign your package and update your version before saving your changes.
 
-![packageeditorpkginfo1](images/PackageEditorPkgInfo1.png)
+![Package Editorpkg Info1](images/PackageEditorPkgInfo1.png)
 
-![packageeditorpkginfo2](images/PackageEditorPkgInfo2.png)
+![Package Editorpkg Info2](images/PackageEditorPkgInfo2.png)
 
 ## Capabilities page
 
 On the **Capabilities** page you can add or remove [capabilities](/uwp/schemas/appxpackage/uapmanifestschema/element-capability) for the package. If a capability is present in the package, then the checkbox will be checked. If you select or deselect a capability, it will update your manifest. This translates to the <capability> element in the MSIX manifest.
 
-![pic11](images/pic11.png)
+![Pic 11](images/pic11.png)
 
 ## Virtual registry page
 
@@ -51,7 +51,7 @@ Right-click anywhere in the right window to perform the these operations:
 - Add binary: to add a binary value to a key.
 - Add DWORD: to add a DWORD value to a key.
 
-![pic12](images/pic12.png)
+![Pic 12](images/pic12.png)
 
 ## Package files page
 
@@ -70,4 +70,4 @@ Right-click on a file to perform the these operations:
 - Delete: Delete the selected file.
 - Move: Rename or move the file to a new location.
 
-![pic13](images/pic13.png)
+![Pic 13](images/pic13.png)

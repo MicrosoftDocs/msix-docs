@@ -81,7 +81,7 @@ You can skip ahead to the next section if your application doesn't have an insta
 
    To do that, type **winver** in the **Run** dialog box, and then choose the **OK** button.
 
-   ![winver](images/winver.png)
+   ![Winver picture](images/winver.png)
 
    You'll find the version of your Windows build in the **About Windows** dialog box.
 
