@@ -27,6 +27,12 @@ See this [video](https://www.youtube.com/watch?v=cmLKgn04Vfg&feature=youtu.be) f
 > [!TIP]
 > Be sure to checkout the recently released [Advanced Installer Express Edition](https://www.advancedinstaller.com/express-edition.html).
 
+## Apptimized Platform
+Apptimized Platform is the application packaging environment of Apptimized, making efficient, high-quality, and safe packaging desktop applications with the modernized application delivery framework.  
+
+Apptimized Platform provides a fully cloud-based Evergreen state of services to keep company software up to date. This concept consists of four main steps that our solutions represent: Inform – Test – Fix – Run.  
+
+
 
 ## appCURE
 
