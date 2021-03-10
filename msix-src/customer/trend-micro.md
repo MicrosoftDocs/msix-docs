@@ -10,7 +10,7 @@ ms.custom: RS5
 ---
 # Trend Micro
 
-![Trend Micro logo](../images/Trend Micro-lightmode.png)
+![Trend Micro logo](../images/Trend_Micro-lightmode.png)
 
 Trend Micro Incorporated., a global leader in cybersecurity, helps to make the world safe for exchanging digital information. In an increasingly connected world, our innovative solutions for businesses, governments, and consumers provide layered security for data centers, cloud environments, networks, and endpoints.
 
