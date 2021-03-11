@@ -38,3 +38,11 @@ This policy denies or allows access to the Store application. If you enable this
 * **GPO:** `Computer Configuration\Administrative Templates\Windows Components\Store` or `User Configuration\Administrative Templates\Windows Components\Store`
 * **Registry:** `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStoreRemoveWindowsStore REG_DWORD` or `HKEY_CURRENT_USER\Software\Policies\Microsoft\WindowsStoreRemoveWindowsStore REG_DWORD`
 * **App updates:** If configured in the computer context, this policy turns off app updates.
+
+### Overview of both Store signed and Trusted non-Store apps on Windows 10 2004 Enterprise 
+
+#### BlockNonAdminUserInstall
+This is the state of the device when the policy is *Enabled*
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Blocked|
