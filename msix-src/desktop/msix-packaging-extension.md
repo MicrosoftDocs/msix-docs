@@ -12,7 +12,7 @@ ms.custom: RS5
 
 The *MSIX Packaging* Extension is an Azure DevOps extension which helps build, package and sign Windows apps using the MSIX package format.
 
-CI/CD workflows have become an integral part of the development process to improve efficiency and quality while reducing cost and time to market. Microsoft's CI/CD solution Azure DevOps Pipelines is widely adopted and popular, but the current process of integrating build and deployment workflows for apps that need to be packaged as MSIX into Azure Pipelines by using YAML files is tedious, specifically for people that are not Azure Pipelines or MSIX experts. This Azure DevOps extension offers a straightforward, intuitive and UI based solution making it easier to automate build and deployment process for apps being packaged as MSIX, and for apps with existing CI/CD workflows to move to MSIX without disrupting their build and deployment mechanisms.
+CI/CD workflows have become an integral part of the development process to improve efficiency and quality while reducing cost and time to market. Microsoft's CI/CD solution Azure DevOps Pipelines is widely adopted and popular, but the current process of integrating build and deployment workflows for apps that need to be packaged as MSIX into Azure Pipelines is tedious, specifically for people that are not Azure Pipelines or MSIX experts. This Azure DevOps extension offers a straightforward and intuitive solution making it easier to automate build and deployment process for apps being packaged as MSIX, and for apps with existing CI/CD workflows to move to MSIX without disrupting their build and deployment mechanisms.
 
 The *MSIX Packaging* Extension contains the following tasks that you can use to custom build your pipeline according to your requirements:
 
@@ -59,6 +59,24 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 
 ### MSIX build and package
 
+#### [YAML](#tab/yaml/)
+Here's an example that shows how to configure the build and package task in the yaml file:
+
+```yaml
+steps:
+- task: MSIX.msix-ci-automation-task-dev.msix-packaging.MsixPackaging@1
+  displayName: 'MSIX build and package'
+  inputs:
+    outputPath: '$(Build.ArtifactStagingDirectory)\MyApp.msix'
+    solution: MyUWPApp.sln
+    buildPlatform: x64
+    updateAppVersion: true
+    manifestFile: MyUWPApp/Package.appxmanifest
+    appVersion: 2.0.0.0
+    appPackageDistributionMode: SideloadOnly
+    msbuildArchitecture: x64
+```
+#### [UI](#tab/UI/)
 ![Build and package task](images/msix-packaging-ext/build-and-package.png)
 
 - **Display name** - Customize your task name
@@ -71,20 +89,59 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 - **Platform** - Specify the target build platform, for example, *x64*, *x86*, *Any CPU*.
 - **Update App Version in Manifest** - Select this checkbox to change the app version from the one specified in the app's .appxmanifest file. This will not overwrite the .appxmanifest file, but change the app version in the generated output MSIX package. If this option is selected, you will be asked to provide the path to the manifest file, and the app version number to set for the app.
 - **Application Package Distribution Mode** - Select the mode from the dropdown menu to generate a Store app package or non-Store app package.
-- **Advanced Options for MSBuild** - Customize your MSBuild by using advanced options.
+- **MSBuild Version and Architecture** - Customize your MSBuild by specifying advanced options.
+
+***
 
 ### MSIX package signing
 
-![signing task](images/msix-packaging-ext/signing.png)
+The signing task allows signing using a certificate. The certificate can come from the [Secure Files library](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files) , or be encoded as a string as if fetched with the [Azure Key Vault task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault).
+
+#### [YAML](#tab/yaml/)
+Here's an example that shows how to configure the package signing task in the yaml file:
+
+```yaml
+steps:
+- task: MSIX.msix-ci-automation-task-dev.msix-signing.MsixSigning@1
+  displayName: 'Sign MSIX package'
+  inputs:
+    certificateType: base64
+    encodedCertificate: '$(kvtestcert)'
+```
+
+#### [UI](#tab/UI/)
+This example shows the task when the source of the certificate is the Secure Files Library.
+![signing task with secure files cert](images/msix-packaging-ext/sign-with-cert.png)
+
+This example shows the task when the source of the certificate is an Azure Key Vault.
+![signing task with key vault cert](images/msix-packaging-ext/sign-with-kv.png)
 
 - **Display name** - Customize your task name
 - **Package to sign** - The MSIX package signing task uses SignTool to sign all files matching this path, regardless of whether they are MSIX packages or bundles.
-- **Certificate file** - Select your trusted certificate to sign the app from the dropdown, or upload a certificate file by using the gear icon.
-- **Password Variable** - The name of the variable which stores the password used to access the certificate file for signing. Note that this is NOT the password itself, but rather the variable name, which can be set under Library.
+- **Certificate file type** - Select the source of the certificate file to use.
 - **Time Stamp Server** - A URL that specifies the address of a time stamping server. This is an optional parameter.
+
+***
 
 ### App installer file for MSIX
 
+#### [YAML](#tab/yaml/)
+Here's an example that shows how to configure the AppInstaller file task in the yaml file:
+
+```yaml
+steps:
+- task: MSIX.msix-ci-automation-task-dev.app-installer-file.AppInstallerFile@1
+  displayName: 'Create App Installer file'
+  inputs:
+    package: '$(Build.ArtifactStagingDirectory)\MyApp.msix'
+    outputPath: '$(Build.ArtifactStagingDirectory)\MyApp.appinstaller'
+    uri: 'https://myuwpapp-demo.azurewebsites.net/MyApp.appinstaller'
+    mainItemUri: 'https://myuwpapp-demo.azurewebsites.net/MyApp.msix'
+    showPromptWhenUpdating: true
+    updateBlocksActivation: true
+```
+
+#### [UI](#tab/UI/)
 ![appinstaller](images/msix-packaging-ext/app-installer.png)
 
 - **Display name** - Customize your task name
@@ -96,8 +153,23 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 - **Main Package/Bundle URI** - URI to the app package/bundle location.
 - **Update On Launch** - Select this to set the app to check for updates when launched. If this checkbox is selected, you will be asked to provide details like *Hours Between Update Checks*, whether to *Show UI to User when Updating*, and whether you want the *Update to Block App Activation*.
 
+***
+
 ### Create package for MSIX app attach
 
+#### [YAML](#tab/yaml/)
+Here's an example that shows how to configure the task to create a VHDX file for app attach in the yaml file:
+
+```yaml
+steps:
+- task: MSIX.msix-ci-automation-task-dev.msix-app-attach.MsixAppAttach@1
+  displayName: 'Create package for MSIX app attach'
+  inputs:
+    package: '$(Build.ArtifactStagingDirectory)\MyApp.msix'
+    vhdxOutputPath: '$(Build.ArtifactStagingDirectory)\MyApp.vhdx'
+```
+
+#### [UI](#tab/UI/)
 ![app attach](images/msix-packaging-ext/app-attach.png)
 
 - **Display name** - Customize your task name.
@@ -106,6 +178,8 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 - **VHDX size** - The maximum size in MBs of the VHDX.
 
 After configuring all the tasks, you can use a *Publish build artifacts* task to drop all the artifacts from the temp location to Azure Pipelines artifacts or a file share of your choice.
+
+***
 
 ## Ways to provide Feedback
 
