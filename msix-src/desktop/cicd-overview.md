@@ -10,7 +10,7 @@ ms.custom: RS5
 
 # MSIX and CI/CD Pipeline Overview
 
-You can use Azure Pipelines to create automated builds for your MSIX project in Azure DevOps by either using a UI based Azure DevOps extension or by configuring your own yaml file. We’ll also show you how to perform these tasks by using the command line so that you can integrate with any other build system.
+You can use Azure Pipelines to create automated builds for your MSIX project in Azure DevOps by either using the Azure DevOps extension: *MSIX Packaging* Extension or by configuring your own yaml file. We’ll also show you how to perform these tasks by using the command line so that you can integrate with any other build system.
 
 ## Create a new Azure Pipeline
 
@@ -41,4 +41,4 @@ To upload a certificate for your automated build:
 | Topic | Description |
 |----------|-----------|------------|
 | [MSIX Packaging Extension](msix-packaging-extension.md) | Leverage the Azure DevOps extension that will guide you through building and signing an MSIX package |
-| [Configure CI/CD pipeline with YAML file](azure-dev-ops.md) | Manually configure your own yaml file |
+| [Configure CI/CD pipeline with YAML file](azure-dev-ops.md) | Configure your own yaml file |
