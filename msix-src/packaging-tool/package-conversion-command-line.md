@@ -20,7 +20,7 @@ For sample PowerShell and Bash scripts that demonstrate how to automate the proc
 
 ## Use the command line with the Command Prompt
 
-To create a new MSIX package for your application, run the `MsixPackagingTool.exe create-package` command in an administrator Command prompt window.
+To create a new MSIX package for your application, run the `MsixPackagingTool.exe create-package` command in an administrator Command prompt window. Please note this is an [app execution alias](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-an-alias) to make it easier to run the application without specifying the full path. 
 
 Here are the parameters that can be passed as command line arguments(case sensitive):
 
