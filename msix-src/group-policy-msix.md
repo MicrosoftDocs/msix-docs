@@ -38,3 +38,105 @@ This policy denies or allows access to the Store application. If you enable this
 * **GPO:** `Computer Configuration\Administrative Templates\Windows Components\Store` or `User Configuration\Administrative Templates\Windows Components\Store`
 * **Registry:** `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStoreRemoveWindowsStore REG_DWORD` or `HKEY_CURRENT_USER\Software\Policies\Microsoft\WindowsStoreRemoveWindowsStore REG_DWORD`
 * **App updates:** If configured in the computer context, this policy turns off app updates.
+
+### Overview of both Store signed and Trusted non-Store apps on Windows 10 2004 Enterprise 
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Enabled**, *AllowAllTrustedApps* is **Enabled** and *AllowDevelopmentWithoutDevLicense* is **Enabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Blocked|
+|Trusted Non-Store Package (Double-Click)| Blocked|
+|Store Signed Package (PowerShell standard)|Blocked|
+|Trusted Non-Store Package (PowerShell standard)|Blocked|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Enabled**, *AllowAllTrustedApps* is **Enabled** and *AllowDevelopmentWithoutDevLicense* is **Disabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Blocked|
+|Trusted Non-Store Package (Double-Click)| Blocked|
+|Store Signed Package (PowerShell standard)|Blocked|
+|Trusted Non-Store Package (PowerShell standard)|Blocked|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Enabled**, *AllowAllTrustedApps* is **Disabled** and *AllowDevelopmentWithoutDevLicense* is **Enabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Blocked|
+|Trusted Non-Store Package (Double-Click)| Blocked|
+|Store Signed Package (PowerShell standard)|Blocked|
+|Trusted Non-Store Package (PowerShell standard)|Blocked|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Enabled**, *AllowAllTrustedApps* is **Disabled** and *AllowDevelopmentWithoutDevLicense* is **Enabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Blocked|
+|Trusted Non-Store Package (Double-Click)| Blocked|
+|Store Signed Package (PowerShell standard)|Blocked|
+|Trusted Non-Store Package (PowerShell standard)|Blocked|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Enabled**, *AllowAllTrustedApps* is **Disabled** and *AllowDevelopmentWithoutDevLicense* is **Disabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Blocked|
+|Trusted Non-Store Package (Double-Click)| Blocked|
+|Store Signed Package (PowerShell standard)|Blocked|
+|Trusted Non-Store Package (PowerShell standard)|Blocked|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Blocked|
+
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Disabled**, *AllowAllTrustedApps* is **Enabled** and *AllowDevelopmentWithoutDevLicense* is **Enabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Installed|
+|Trusted Non-Store Package (Double-Click)| Installed|
+|Store Signed Package (PowerShell standard)|Installed|
+|Trusted Non-Store Package (PowerShell standard)|Installed|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Disabled**, *AllowAllTrustedApps* is **Enabled** and *AllowDevelopmentWithoutDevLicense* is **Disabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Installed|
+|Trusted Non-Store Package (Double-Click)| Installed|
+|Store Signed Package (PowerShell standard)|Installed|
+|Trusted Non-Store Package (PowerShell standard)|Installed|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Disabled**, *AllowAllTrustedApps* is **Disabled** and *AllowDevelopmentWithoutDevLicense* is **Enabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Installed|
+|Trusted Non-Store Package (Double-Click)| Installed|
+|Store Signed Package (PowerShell standard)|Installed|
+|Trusted Non-Store Package (PowerShell standard)|Installed|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Installed|
+
+The table below demonstartes what happens when *BlockNonAdminUserInstall* policy is **Disabled**, *AllowAllTrustedApps* is **Disabled** and *AllowDevelopmentWithoutDevLicense* is **Disabled**
+
+| App Installation | Results |
+|------------------|--------------------|
+|Store Signed Package (Double-Click)|Installed|
+|Trusted Non-Store Package (Double-Click)| Blocked|
+|Store Signed Package (PowerShell standard)|Installed|
+|Trusted Non-Store Package (PowerShell standard)|Blocked|
+|Store Signed Package (PowerShell elevated)|Installed|
+|Trusted Non-Store Package (PowerShell elevated)|Blocked|
