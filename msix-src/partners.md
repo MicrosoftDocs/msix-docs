@@ -27,6 +27,11 @@ The following partners provide additional tooling and support for MSIX developme
 :::row-end:::
 
 :::row:::
+
+    :::column:::
+     	[![Apptimized logo](images/Apptimized_Logo.png)](https://www.apptimized.com/solutions/)  
+    :::column-end:::
+    
     :::column:::
         [![Camwood logo](images/Camwood_Logo_2.png)](http://camwood.com/windows-10/)
     :::column-end:::
@@ -35,12 +40,14 @@ The following partners provide additional tooling and support for MSIX developme
         [![Cloudhouse logo](images/CloudHouse_Logo.png)](https://cloudhouse.com/msixpr)
     :::column-end:::
     
-    :::column:::
-        [![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)
-    :::column-end:::
 :::row-end:::
 
 :::row:::
+
+    :::column:::
+        [![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)
+    :::column-end:::
+    
     :::column:::
         [![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)
     :::column-end:::
@@ -49,12 +56,15 @@ The following partners provide additional tooling and support for MSIX developme
         [![InstallAware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)    
     :::column-end:::
     
-    :::column:::
-        [![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
-    :::column-end:::
+
 :::row-end:::
 
 :::row:::
+
+    :::column:::
+        [![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
+    :::column-end:::
+    
     :::column:::
         [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
     :::column-end:::
@@ -63,14 +73,16 @@ The following partners provide additional tooling and support for MSIX developme
         [![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/msix)
     :::column-end:::
 
-    :::column:::
-        <br>
-    :::column-end:::
+
 :::row-end:::
 
 <!--
 :::row:::
     :::column:::
+
+    :::column:::
+        <br>
+    :::column-end:::
         ![Access IT Automation logo](images/AccessITAutomationLogoTransp.png)<br>
         [Learn more](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
     :::column-end:::
@@ -184,6 +196,8 @@ The following partners provide additional tooling and support for MSIX developme
     :::column:::
         [![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/msix)
     :::column-end:::
+    
+
 :::row-end:::
 -->
 
