@@ -95,7 +95,7 @@ steps:
 
 ### MSIX package signing
 
-The signing task allows signing using a certificate. The certificate can come from the [Secure Files library](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files) , or be encoded as a string as if fetched with the [Azure Key Vault task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-key-vault).
+The signing task allows signing using a certificate. The certificate can come from the [Secure Files library](/azure/devops/pipelines/library/secure-files) , or be encoded as a string as if fetched with the [Azure Key Vault task](/azure/devops/pipelines/tasks/deploy/azure-key-vault).
 
 #### [YAML](#tab/yaml/)
 Here's an example that shows how to configure the package signing task in the yaml file:
