@@ -114,7 +114,7 @@ private async void CheckUpdate(object sender, TappedRoutedEventArgs e)
 
 ### Apply the update 
 
-After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync?view=winrt-19041) API. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
+After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync?view=winrt-19041) API. It should also work to install an optional package as long as the main package is already installed on the device. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
 
 ```csharp
 

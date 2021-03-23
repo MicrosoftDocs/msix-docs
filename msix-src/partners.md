@@ -66,11 +66,28 @@ The following partners provide additional tooling and support for MSIX developme
     :::column-end:::
     
     :::column:::
-        [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
+	[![Revenera logo](images/Revenera_light.png)](https://community.flexera.com/t5/MSIX-Central/Get-Started-with-MSIX-and-InstallShield/ba-p/160126)
     :::column-end:::
 
     :::column:::
+        [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
+    :::column-end:::
+
+
+:::row-end:::
+
+:::row:::
+
+    :::column:::
         [![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/msix)
+    :::column-end:::
+    
+    :::column:::
+
+    :::column-end:::
+
+    :::column:::
+
     :::column-end:::
 
 
