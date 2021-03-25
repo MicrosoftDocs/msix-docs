@@ -146,17 +146,15 @@ InstallAware also [open sourced](https://www.installaware.com/gnu.asp) an **APPX
 
 ## InstallShield
 
-InstallShield provides a single solution to develop MSI and EXE installers, create Universal Windows Platform (UWP) and Windows Server App (WSA) packages, and virtualize applications with minimal scripting, coding and rework.
+InstallShield provides a single solution to develop MSI, EXE, APPX and MSIX installers, and virtualize applications with minimal scripting, coding and rework.
 
 ![InstallShield logo](images/InstallShield-logo.jpg)
 
-Scan your InstallShield project in seconds to save hours of investigative work by automatically identifying potential compatibility issues between your application and UWP and WSA packages.
+Scan your InstallShield project in seconds to save hours of investigative work by automatically identifying potential compatibility issues between your application and UWP packages.
 
-Prepare for the Microsoft Store and simplify your software’s installation experience on Windows 10 by building UWP app packages from your existing InstallShield projects. Build both Windows Installer and UWP App Packages to support all of your customers’ desired deployment scenarios. Support Nano Server and Windows Server 2016 deployments by building WSA packages from your existing InstallShield projects.
+Prepare for the Microsoft Store and simplify your software’s installation experience on Windows 10 by building MSIX app packages from your existing InstallShield projects. Build both Windows Installer and MSIX Packages to support all of your customers’ desired deployment scenarios. You can start to build an MSIX app from scratch or use our wizard to convert an existing MSI file into an MSIX app. Create Modification Packages for your MSIX apps to minimize customization. Check out [this video](https://www.youtube.com/watch?v=tj0d08gems4) to know more. Add fixups using PSF, if your apps are incompatible with MSIX
 
-Develop your installation in modules for easier deployment and maintenance, and then merge the components and dependencies at build time into a single UWP app package for the Microsoft Store. For direct distribution outside the Store, bundle your UWP App Packages and other dependencies together with a Suite/Advanced UI installer.
-
-Learn more in this [eBook](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fresources.flexerasoftware.com%2Fweb%2Fpdf%2FeBook-IS-Your-Fast-Track-to-Profit.pdf&data=02%7C01%7Cnormesta%40microsoft.com%7C86b9a00bc8e345c2ac6208d4ba464802%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C1%7C636338258409706554&sdata=IAYNp9nFc8B5ayxwrs%2FQTWowUmOda6p%2Fn%2BjdHea257M%3D&reserved=0).
+Here is [a short video](https://www.youtube.com/watch?v=r2jViWCtKFI) to get started with MSIX and InstallShield
 
 ## PACE Suite
 
