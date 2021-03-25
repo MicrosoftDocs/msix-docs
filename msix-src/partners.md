@@ -33,7 +33,7 @@ The following partners provide additional tooling and support for MSIX developme
     :::column-end:::
     
     :::column:::
-        [![Camwood logo](images/Camwood_Logo_2.png)](http://camwood.com/windows-10/)
+        [![Camwood logo](images/Camwood_Logo_2.png)](https://camwood.com/application-services/)
     :::column-end:::
 
     :::column:::
