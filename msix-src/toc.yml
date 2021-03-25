@@ -326,7 +326,7 @@
           href: msix-core/msixcore-troubleshoot.md  
     - name: Deployment Validation and Troubleshooting
       href: desktop\managing-your-msix-deployment-troubleshooting.md
-    - name: Enforcing Package Integrity
+    - name: Enforcing Package Integrity check
       href: desktop\tamper-protection.md
     - name: Reset and Repair MSIX Apps
       href: desktop\managing-your-msix-reset-and-repair.md
