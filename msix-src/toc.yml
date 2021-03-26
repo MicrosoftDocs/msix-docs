@@ -208,6 +208,8 @@
           href: desktop/msix-packaging-extension.md
         - name: Configure CI/CD pipeline with YAML file
           href: desktop/azure-dev-ops.md
+        - name: Sign with Azure Key Vault in a CI/CD pipeline
+          href: desktop/cicd-keyvault.md 
     - name: Package from the command line
       items:  
         - name: Overview
