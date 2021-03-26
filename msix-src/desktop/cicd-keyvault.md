@@ -16,6 +16,9 @@ At the same time, signing is one of the most critical tasks also when it comes t
 
 In this article we're going to see how you can leverage Azure Key Vault in a CI/CD pipeline, so that we can automatically sign our MSIX package as part of the process.
 
+> [!IMPORTANT]
+> The process described in this article is based on an open source tool called [Azure SignTool](https://github.com/vcsjones/AzureSignTool), which works both with Azure Pipelines and GitHub Actions. If you're using Azure Pipelines, you can leverage also the [MSIX Extensions](msix-packaging-extension.md) in combination with the [Azure Key  Vault task](/azure/devops/pipelines/tasks/deploy/azure-key-vault).
+
 ## Prerequisites
 
 - An Azure account. If you do not already have an Azure account, start [here](https://azure.microsoft.com/free/).
