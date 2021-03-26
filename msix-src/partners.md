@@ -29,7 +29,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-     	[![Apptimized logo](images/Apptimized_Logo.png)](https://www.apptimized.com/solutions/)  
+     	[![Apptimized logo](images/Apptimized_Logo.png)](https://apptimized.com/en/product/workspace/)  
     :::column-end:::
     
     :::column:::
