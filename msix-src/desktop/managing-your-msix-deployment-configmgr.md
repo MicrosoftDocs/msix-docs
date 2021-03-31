@@ -16,7 +16,7 @@ The [Microsoft Endpoint Configuration Manager](/configmgr/) can be used to creat
 ## Deploying MSIX Application
 When deploying an Windows app package from within the Microsoft Endpoint Configuration Manager Console to be delievered, you will first require a UNC path to your MSIX app package. The details of the App being created will be retrieved from the meta data contained within the MSIX app package and automatically added into the Windows app package properties.
 
-|||
+| Task | Documentation reference |
 |-----|------|
 | 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md)  |
 | 2. Launch the Microsoft Endpoint Configuration Manager Console | [Microsoft Endpoint Configuration Manager Console](https://devicemanagement.microsoft.com) |

@@ -14,7 +14,7 @@ The [Microsoft Endpoint Manager Admin Console](https://devicemanagement.microsof
 ## Deploying MSIX Application
 When deploying an App from within the Microsoft Endpoint Manager Admin Console to be delievered, you will first require a local or network path to your MSIX package. The details of the App being created from within the Microsoft Endpoint Manager Admin Console will retrieve the meta data contained within the MSIX app package and automatically load the retrieved information into the App properties.
 
-|||
+| Task | Documentation reference |
 |-----|------|
 | 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md)  |
 | 2. Launch the Microsoft Endpoint Manager Admin Console | [Microsoft Endpoint Manager Admin Console](https://devicemanagement.microsoft.com) |
