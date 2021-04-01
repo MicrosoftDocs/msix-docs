@@ -1,7 +1,7 @@
 ---
 description: This guide provides a list of third-party products and installers to package desktop applications.
 title: Package a desktop app using third-party installers
-ms.date: 06/17/2019
+ms.date: 04/1/2021
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
