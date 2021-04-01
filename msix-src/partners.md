@@ -1,7 +1,7 @@
 ---
 title: MSIX partners
 description: Provides links to additional documentation from our trusted partners on MSIX tooling and support.
-ms.date: 12/4/2020
+ms.date: 04/1/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -62,15 +62,15 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-        [![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
+        [![Liquit logo](images/Liquit_Logo.png)](https://www.liquit.com/msix-readiness/)
     :::column-end:::
     
     :::column:::
-	[![Revenera logo](images/Revenera_light.png)](https://community.flexera.com/t5/MSIX-Central/Get-Started-with-MSIX-and-InstallShield/ba-p/160126)
+	[![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
     :::column-end:::
 
     :::column:::
-        [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
+        [![Revenera logo](images/Revenera_light.png)](https://community.flexera.com/t5/MSIX-Central/Get-Started-with-MSIX-and-InstallShield/ba-p/160126)
     :::column-end:::
 
 
@@ -79,11 +79,11 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-        [![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/msix)
+        [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
     :::column-end:::
-    
+    	
     :::column:::
-
+	[![Rimo3 logo](images/Rimo3_Logo.png)](https://rimo3.com/msix)
     :::column-end:::
 
     :::column:::

@@ -1,5 +1,5 @@
 ---
-Description: This article provides details regarding the options available when updating an MSIX app.
+description: This article provides details regarding the options available when updating an MSIX app.
 title: Differential updates MSIX app package
 ms.date: 2/3/2020
 ms.topic: article
@@ -33,7 +33,7 @@ The delivery or installation of an MSIX app package to a device can be configure
 ### PowerShell
 Installing an MSIX app package to a device using PowerShell leverages the [add-appxpackage](/powershell-msix-cmdlets.md) cmdlet. This cmdlet contains the following parameters which alter the MSIX app package installation or upgrade user experience.
 
-|||
+| Parameter | Description |
 |-|-|
 | -DeferRegistrationWhenPackagesAreInUse | Indicates that this cmdlet will prevent the MSIX app package from updating while the user currently has the app open. |
 | -ForceApplicationShutdown | Indicates that this cmdlet forces all active processes that are associated with the package or its dependencies to shut down |

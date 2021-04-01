@@ -14,7 +14,7 @@ The [Microsoft Intune Console](https://portal.azure.com/#blade/Microsoft_Intune_
 ## Deploying an MSIX app
 When deploying a client app from Microsoft Intune to be delivered to client devices you will first require a local or network path to your MSIX app. The details of the app being created from within the Microsoft Intune will retrieve the meta data contained within the MSIX app package and automatically load the retrieved information into the app properties.
 
-|||
+| Task | Documentation reference |
 |-----|------|
 | 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md) |
 | 2. Launch the Intune Console | [Microsoft Intune Console](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) |

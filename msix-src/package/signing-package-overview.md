@@ -25,7 +25,7 @@ It is highly recommended that **Timestamping** is used when signing your app wit
 
 The following are the different scenarios around app signing with/out timestamping:
 
-| |App is signed without timestamping | App is signed with timestamping |
+|Scenario|App is signed without timestamping | App is signed with timestamping |
 |---|---------------------------------- | ------------------------------- |
 | Certificate is valid |App will install | App will install |
 | Certificate is invalid(expired) | App will fail to install | App will install as the authenticity of the cert was verified at signing by timestamping authority |

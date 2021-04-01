@@ -1,7 +1,7 @@
 ---
 description: This guide provides a list of third-party products and installers to package desktop applications.
 title: Package a desktop app using third-party installers
-ms.date: 06/17/2019
+ms.date: 04/1/2021
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -129,6 +129,32 @@ The FireGiant MSIX extension uses static analysis and intelligent emulation of y
 Because the FireGiant MSIX extension doesn't convert your installer by running it, you can maintain your WiX installer without having to repeatedly convert it to Windows app packages. All your users on different versions of Windows get your latest improvements and you don't have to worry about MSI and Windows app packages getting out of sync.
 
 Check out this [video](https://www.youtube.com/watch?v=AFBpdBiAYQE) and see how in a couple lines of code FireGiant CEO Rob Mensching creates an Appx (Windows app package) version of the popular open-source 7-Zip compression tool and then how he improves both Windows application and MSI packages with changes in the same WiX source code.
+
+## Infinity Evergreen
+Infinity Evergreen is the proprietary application packaging automation solution of Camwood. Creating fully automated, high-quality, and compliant application packages with direct integration with enterprise end user compute management solutions. 
+
+![Infinity logo](images/Infinity_logo.png)
+
+Infinity Evergreen is a modern workplace orchestration platform, using intelligent automation and powerful analytics to plan, test and deploy any update or upgrade to your modern workplace environment, including Windows 10, driving organisational change into an agile Evergreen IT model. Infinity includes the following features: 
+
+* Automated OAT & UAT Application Testing
+
+Ensure the functionality and validity of applications against any new Windows 10 Operating System updates and releases. It provides an end-to-end automation functionality to OAT and UAT test applications against Windows 10 updates and releases, which provides peace of mind that Operating System updates will not cause system interruptions and negatively affect the user experience. 
+
+* [Automated Application Packaging](https://infinityevergreen.com/automated-packaging/) 
+
+Infinity Evergreen provides a fully automated end-to-end solution that allows customers to package their applications rapidly, to their specific packaging requirements whilst ensuring successful deployments. With support for all major application packaging formats MSIX, MSI, MST and AppV. 
+
+With Infinity Evergreen’s 6 step automated MSIX packaging process, it will allow for the simplistic approach to MSIX application packaging:
+
+1.	Upload your application into Infinity Evergreen ready for packaging, no matter the size or complexity. 
+2.	Customise your application package as per your requirements, Imbedding all registry, properties, dependencies, or exclusions.
+3.	Capture your application package with a fully automated or semi-automated workflow to ensure it meets your organisational needs. 
+4.	Automated packaging of your application as per your conditions, with supporting Discovery Documentation to support your compliance requirements.
+5.	Automated validation of your application package against any Windows 10 Operating System build to ensure that it is compatible with your organisation. 
+6.	Deploy your fully packaged and validated application into end user compute management solution with ease. 
+
+*Infinity Evergreen Simplify modern workplace management with Intelligent Automation.*
 
 ## InstallAware
 
