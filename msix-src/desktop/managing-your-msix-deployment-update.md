@@ -1,5 +1,5 @@
 ---
-Description: This article provides details regarding the options available when updating an MSIX app.
+description: This article provides details regarding the options available when updating an MSIX app.
 title: Differential updates MSIX app package
 ms.date: 2/3/2020
 ms.topic: article
