@@ -234,9 +234,8 @@ Here's the complete list of parameters (organized by category) that you can use 
 
 You can also view the entire list by running the ``Get-Help`` command in the app console window.   
 
-||||
+|<a id="setup-params"></a> <strong>Setup parameters</strong>  | Required or optional? | Description 
 |-------------|-----------|-------------|
-|<a id="setup-params"></a> <strong>Setup parameters</strong>  ||
 |-Setup [&lt;SwitchParameter&gt;] |Required |Runs DesktopAppConverter in setup mode. Setup mode supports expanding a provided base image.|
 |-BaseImage &lt;String&gt; | Required |Full path to an unexpanded base image. This parameter is required if -Setup is specified.|
 | -LogFile &lt;String&gt; |Optional |Specifies a log file. If omitted, a log file temporary location will be created.|
