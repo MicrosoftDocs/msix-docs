@@ -15,7 +15,7 @@ Shared Package Container operations are independent of app deployment operations
 Note that an app will only be allowed to be inside one container. Deploying a shared package container that contains an app that is already part of a shared package container will result in an error.  
 
 ## Prerequisite  
-To use the feature, enterprises will require an administrator on the device. Additionally, the packages will all need to be .msix packages. To package your installers as MSIX package, visit our [create package from existing installer documentation](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/create-an-msix-overview).  
+To use the feature, enterprises will require an administrator on the device. Additionally, the packages will all need to be .msix packages. To package your installers as MSIX package, visit our [create package from existing installer documentation](https://docs.microsoft.com/windows/msix/packaging-tool/create-an-msix-overview).  
 
 ## Shared Package Container definition
 Shared package contianer is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
