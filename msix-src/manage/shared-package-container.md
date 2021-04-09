@@ -1,5 +1,5 @@
 ---
-Description: This guide explains MSIX Shared Package Container
+description: This guide explains MSIX Shared Package Container
 title: MSIX Shared Package Container
 ms.date: 03/17/2021
 ms.topic: article
