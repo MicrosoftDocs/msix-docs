@@ -75,7 +75,7 @@ This command gets information about the shared package container. In particular,
 
 #### Reset shared package container 
 ```powershell
-Reset-AppXSharedPackageContainer -Name <name>  
+Reset-AppSharedPackageContainer -Name <name>  
 ``` 
 This command destroys all the application data of the container, including the virtual files and registry keys. 
 
