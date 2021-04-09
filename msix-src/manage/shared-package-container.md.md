@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 
 # MSIX Shared Package Container 
-Shared package container allows IT Pros to create a shared runtime container for MSIX packaged application – sharing a merged view of the virtual file system and virtual registry - enabling access to one another’s package root files and state. Begining on Windows 10, Build 21354,  IT Pros will be able to to manage what apps can be in what container is important to the conversion of MSIX from legacy installers. The concept of a shared container is used primarily for customization, sharing pre-requisite software, and supporting addons for converted apps. Please note that this is an enterprise only feature and will require administrative privileges to use.  
+Shared package container allows IT Pros to create a shared runtime container for MSIX packaged application – sharing a merged view of the virtual file system and virtual registry - enabling access to one another’s package root files and state. Begining on Windows 10, Dev Insider Build 21354,  IT Pros will be able to to manage what apps can be in what container is important to the conversion of MSIX from legacy installers. The concept of a shared container is used primarily for customization, sharing pre-requisite software, and supporting addons for converted apps. Please note that this is an enterprise only feature and will require administrative privileges to use.  
 
 Shared Package Container operations are independent of app deployment operations. What this means is that apps do not have to be installed prior to share package container definition being deployed to a device. It also means that not all apps that are defined inside the shared package container need to be installed for the shared package container to run. The apps inside the shared package container will be able to independently update without having to modify the shared package container definition.  
 
@@ -43,7 +43,7 @@ When you have the container definition .xml, you can use the following Powershel
 ```powershell
 Add-AppSharedPackageContainer <path> 
 ``` 
-This commands deploys the shared package container definiton for the particular user. Optional parameters include the following 
+This command deploys the shared package container definiton for the particular user. Optional parameters include the following: 
 |**Parameter** |	**Description**|
 |---------|---------|
 |RequirePackagePresent |Fails if the user does not have a container-specified package registered. |
@@ -54,13 +54,30 @@ This commands deploys the shared package container definiton for the particular 
 ```powershell
 Remove-AppSharedPackageContainer -Name <name>  
 ``` 
-This commands removes the shared package container definiton for the particular user. Optional parameters include the following 
+This command removes the shared package container definiton for the particular user. Optional parameters include the following: 
 
 |**Parameter** |	**Description**|
 |---------|---------|
 |ForceApplicationShutdown  |Closes all packages in the Shared Package Container.  |
 |AllUsers  |Remove matching packages that are deployed to any user. |
 |DeprovisionForAllUsers   |Deprovisions the container for all users.  |
+
+#### Get information on a shared package container 
+```powershell
+Get-AppSharedPackageContainer -Name <name> 
+``` 
+This command gets information about the shared package container. In particular, it will show what packages are inside the shared package container. Optional parameters include the following: 
+
+|**Parameter** |	**Description**|
+|---------|---------|
+|AllUsers   |Get matching packages that are either deployed to any user or are provisioned to the machine.   |
+
+#### Reset shared package container 
+```powershell
+Reset-AppXSharedPackageContainer -Name <name>  
+``` 
+This command destroys all the application data of the container, including the virtual files and registry keys. 
+
 
 
 
