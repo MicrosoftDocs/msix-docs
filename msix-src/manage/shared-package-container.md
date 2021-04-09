@@ -44,6 +44,7 @@ When you have the container definition .xml, you can use the following Powershel
 Add-AppSharedPackageContainer <path> 
 ``` 
 This command deploys the shared package container definiton for the particular user. Optional parameters include the following: 
+
 |**Parameter** |	**Description**|
 |---------|---------|
 |RequirePackagePresent |Fails if the user does not have a container-specified package registered. |
