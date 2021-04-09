@@ -49,3 +49,18 @@ This commands deploys the shared package container definiton for the particular 
 |RequirePackagePresent |Fails if the user does not have a container-specified package registered. |
 |ForceApplicationShutdown |Closes all packages currently running in the Shared Package Container. |
 |ProvisionForAllUsers  |Provisions the container for all users. |
+
+#### Remove a shared package container 
+```powershell
+Remove-AppSharedPackageContainer -Name <name>  
+``` 
+This commands removes the shared package container definiton for the particular user. Optional parameters include the following 
+
+|**Parameter** |	**Description**|
+|---------|---------|
+|ForceApplicationShutdown  |Closes all packages in the Shared Package Container.  |
+|AllUsers  |Remove matching packages that are deployed to any user. |
+|DeprovisionForAllUsers   |Deprovisions the container for all users.  |
+
+
+
