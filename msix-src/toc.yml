@@ -300,6 +300,8 @@
           href: desktop/managing-your-msix-deployment-retail.md
         - name: Microsoft Store
           href: /windows/uwp/publish/?context=/windows/msix/render
+    - name: Shared package container
+      href: manage/shared-package-container.md
     - name: MSIX package updates
       items: 
         - name: Overview
