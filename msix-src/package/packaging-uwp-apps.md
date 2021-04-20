@@ -203,7 +203,7 @@ Validate your app before you submit it to Partner Center for certification on a 
     >[!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
 
-2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applicationss on a remote machine](/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
+2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applications on a remote machine](/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
 
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
 
