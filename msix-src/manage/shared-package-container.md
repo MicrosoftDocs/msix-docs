@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 
 # Shared package container 
-Shared package containers allows IT Pros to create a shared runtime container for MSIX packaged application – sharing a merged view of the virtual file system and virtual registry - enabling access to one another’s package root files and state. Beginning on Windows 10 Insider Preview Build 21354,  IT Pros will be able to to manage what apps can be in what container is important to the conversion of MSIX from legacy installers. The concept of a shared container is used primarily for customization, sharing pre-requisite software, and supporting addons for converted apps. Please note that this is an enterprise only feature and will require administrative privileges to use.  
+Shared package containers allows IT Pros to create a shared runtime container for MSIX packaged application – sharing a merged view of the virtual file system and virtual registry - enabling access to one another’s package root files and state. Beginning on Windows 10 Insider Preview Build 21354,  IT Pros will be able to manage what apps can be in what container is important to the conversion of MSIX from legacy installers. The concept of a shared container is used primarily for customization, sharing pre-requisite software, and supporting addons for converted apps. Please note that this is an enterprise only feature and will require administrative privileges to use.  
 
 Shared package container operations are independent of app deployment operations. What this means is that apps do not have to be installed prior to share package container definition being deployed to a device. It also means that not all apps that are defined inside the shared package container need to be installed for the shared package container to run. The apps inside the shared package container will be able to independently update without having to modify the shared package container definition.  
 
@@ -18,7 +18,7 @@ Note that an app will only be allowed to be inside one container. Deploying a sh
 To use the feature, enterprises will require an administrator on the device. Additionally, the packages will all need to be .msix packages. To package your installers as MSIX package, visit our [create package from existing installer documentation](/windows/msix/packaging-tool/create-an-msix-overview).  
 
 ## Shared package container definition
-Shared package contianer is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
+Shared package contianer is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Only main packages need to be included in the .xml. Optional packages and modification packages will automatically be included in the shared package container as they already share the same container as their main package. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?> 
