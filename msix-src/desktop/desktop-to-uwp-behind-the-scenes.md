@@ -76,7 +76,7 @@ FOLDERID_System\spool | AppVSystem32Spool | x86, amd64
 
 App packages contain a registry.dat file, which serves as the logical equivalent of *HKLM\Software* in the real registry. At runtime, this virtual registry merges the contents of this hive into the native system hive to provide a singular view of both. For example, if registry.dat contains a single key "Foo", then a read of *HKLM\Software* at runtime will also appear to contain "Foo" (in addition to all the native system keys).
 
-Only keys under *HKLM\Software* are part of the package; keys under *HKCU* or other parts of the registry are not. Writes to keys or values in the package are not allowed. Writes to keys or values not part of the package are allowed as long as the user has permission.
+Although MSIX packages include HKLM and HKCU keys, they are treated differently. Only keys under *HKLM\Software* are part of the package; keys under *HKCU* or other parts of the registry are not. Writes to keys or values in the package are not allowed. Writes to keys or values not part of the package are allowed as long as the user has permission.
 
 All writes under HKCU are copy-on-written to a private per-user, per-app location. Traditionally, uninstallers are unable to clean *HKEY_CURRENT_USER* because the registry data for logged out users is unmounted and unavailable.
 
