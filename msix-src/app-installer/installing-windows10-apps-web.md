@@ -44,6 +44,21 @@ Prefix your app package URIs with the activation scheme `'ms-appinstaller:?sourc
 </html>
 ```
 
+> ![Note]
+> By prefixing your link to the Windows App, or AppInstaller file with `ms-appinstaller:?source=''` client devices will be able to determine how to interpret the content, launching the Desktop App Installer. It is recommended that MIME-Types be configured as this will improve the users experience when launching the Windows App or AppInstaller file, but not required.
+
+It is recommended that MIME-Types be configured for the Windows Apps and AppInstaller files that are intended to be shared from your website. By including the MIME-Types, the Desktop App Installer will quickly identify the file association and launch the information page with next steps. If not included, the Desktop App Installer must determine the file association which can impact how quickly the Desktop App Installer will launch the information page with next steps.
+
+| File Extension | MIME Type                |
+|----------------|--------------------------|
+| .msix          | application/msix         |
+| .appx          | application/appx         |
+| .msixbundle    | application/msixbundle   |
+| .appxbundle    | application/appxbundle   |
+| .appinstaller  | application/appinstaller |
+
+For more information on how to configure the MIME types, please visit [Distribute a Windows 10 App from an IIS Server](https://docs.microsoft.com/en-us/windows/msix/app-installer/web-install-iis#step-7---configure-the-web-app-for-app-package-mime-types).
+
 ## Signing the app package
 For users to install your app, you will need to sign the app package with a trusted certificate. You can use a third party paid certificate from a trusted certification authority to sign your app package. If a third party certificate is used, the user will need to have their device in either sideload or developer mode to install and run your app.
 
