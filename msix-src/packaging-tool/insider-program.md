@@ -30,7 +30,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2021.422.0
+## Version 1.2021.422.0 - Public version
 - Improved warnings about timestamping for the Device Guard Signing version 2 option
 - Shortcut detection improvements
 - General bug fixes
