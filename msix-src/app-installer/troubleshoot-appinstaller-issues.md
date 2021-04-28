@@ -16,9 +16,12 @@ If you find any issues when installing an application from the App Installer fil
 
 To be able to sideload apps in Windows 10, the user device must satisfy the next requirements:
 
-- The device must be enabled for Developer Mode or Sideloading apps. See [Enable your device for development](/windows/uwp/get-started/enable-your-device-for-development) to learn more.
+**Windows 10:**
 - The certificate used to sign the package must be trusted by the device. See the **Trusted certificates** section below for more details.
 - The Windows 10 version must support the `.appinstaller` file schema and the distribution protocol.
+
+**Windows 10 1909 and earlier:**
+- The device must be enabled for Developer Mode or Sideloading apps. See [Enable your device for development](/windows/uwp/get-started/enable-your-device-for-development) to learn more.
 
 ## Common issues
 
