@@ -2,7 +2,7 @@
 title: Supported platforms 
 description: This article describes supported platform for MSIX. 
 author: dianmsft
-ms.date: 03/06/2020
+ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -32,40 +32,45 @@ This article describes how key features of MSIX are supported in these versions 
 The following table shows which MSIX features and scenarios are supported in different versions of Windows.
 
 > [!div class="mx-tableFixed"]
-| Features | 1709 | 1803 | 1809 | 1903 | 1909 | 2004| Windows Server 2019 LTSC | Windows Enterprise 2019 LTSC|
-|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| [Allow elevation](/windows/uwp/packaging/app-capability-declarations) | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
-| [App Installer File Support](app-installer/installing-windows10-apps-web.md)| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| [Defer registration flag](desktop/managing-your-msix-deployment-update.md) |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
-| [Force update from any version downgrade](desktop/managing-your-msix-deployment-targetdevices.md) |  :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
-| Force provisioning |  :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x: | :x: |
-| Identity for packaged desktop apps | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| [Modification packages](modification-packages.md) | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
-| Native MSIX install and uninstall | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark: |
-| [Package Support Framework (PSF)](psf/package-support-framework-overview.md) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:|  :heavy_check_mark: | :heavy_check_mark:|  
-| [Windows services](packaging-tool/convert-an-installer-with-services.md) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
-| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x: | :x: | :x: | :x:| :x: | :heavy_check_mark:| :x:| :x: | 
+| Features                                                                                                                  | 1709               | 1803               | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               | Windows Server 2019 LTSC | Windows Enterprise 2019 LTSC|
+|---------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------------|-----------------------------|
+| [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          | 
+| [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          | 
+| [Defer registration flag](desktop/managing-your-msix-deployment-update.md)                                                | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                      | :x:                         |
+| [Force update from any version downgrade](desktop/managing-your-msix-deployment-targetdevices.md)                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          | 
+| Force provisioning                                                                                                        | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                      | :x:                         |
+| Identity for packaged desktop apps                                                                                        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          |
+| [Modification packages](modification-packages.md)                                                                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          |
+| Native MSIX install and uninstall                                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          |
+| [Package Support Framework (PSF)](psf/package-support-framework-overview.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:       | :heavy_check_mark:          |
+| [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                      | :x:                         |
+| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                      | :x:                         |
+| Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                      | :x:                         |
+
 ## Package format support
 
 The following table shows which package formats are supported in different versions of Windows 10.
 
-| Package format | 1709 | 1803 | 1809 | 1903 | 1909 | 2004
-|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| .msix              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| .msixbundle| :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:|
-| .appx | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| .appxbundle | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
+| Package format | 1709               | 1803               | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               |
+|----------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| .msix          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| .msixbundle    | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| .appx          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| .appxbundle    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+> [!Important]
+> Prior to Windows 10 2004, Sideloading of Windows Apps must be enabled to allow non-Store Windows Apps to be installed on Enterprise, Education, and LTSC SKUs. Windows 10 Home, and Professional SKUs had Sideloading of Windows Apps enabled by default.
 
 ## Microsoft Store
 
 The following table shows which Microsoft Store features are supported in different versions of Windows 10.
 
-| Features | 1709 | 1803 | 1809 | 1903 | 1909 | 2004
-|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| Publishing             | :x: | :x: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| Update Notification| :x: | :x: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
-| Streaming Install | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:| 
-| Delta Updates | :x: | :x: | :heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark: | :heavy_check_mark:| 
+| Features            | 1709 | 1803 | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               |
+|---------------------|------|------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Publishing          | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Update Notification | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Streaming Install   | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Delta Updates       | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 > [!NOTE]
 > .appx or .appxbundle will work for all versions of Windows 10 listed above. The table only reflects .msix or .msixbundle behavior.

@@ -1,7 +1,7 @@
 ---
 title: MSIX packaging tool insider program
 description: This article introduces the MSIX Packaging Tool Insider Program, which provides early access releases of the MSIX Packaging Tool.
-ms.date: 03/25/2020
+ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
 ms.localizationpriority: medium
@@ -30,7 +30,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2021.422.0
+## Version 1.2021.422.0 - Public version
 - Improved warnings about timestamping for the Device Guard Signing version 2 option
 - Shortcut detection improvements
 - General bug fixes

@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool Overview
 description: This article introduces the MSIX Packaging Tool, which enables you to repackage your existing Windows desktop applications to the MSIX format.
-ms.date: 02/19/2019
+ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
@@ -38,12 +38,10 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - 1.2020.1219.0
-- Removed Device Guard Signing version 1 support. See documentation on how to use [version 2](../package/signing-package-device-guard-signing.md).If you have any questions, contact the Device Guard Signing Support Team DGSSMigration@microsoft.com
-- Fixed an issue where clicking in the same line in package files didn't work to highlight the item
-- UX improvements for select installer page
+## Latest public release - 1.2021.422.0
+- Improved warnings about timestamping for the Device Guard Signing version 2 option
+- Shortcut detection improvements
 - General bug fixes
-
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

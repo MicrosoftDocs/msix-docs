@@ -1,7 +1,7 @@
 ---
 title: Distribute a Windows 10 app from an IIS server
 description: This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
-ms.date: 05/30/2018
+ms.date: 04/23/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, IIS Server
 ms.localizationpriority: medium
@@ -112,7 +112,7 @@ Open the **Web.config** file from the solution explorer and add the following li
 ```
 
 > [!NOTE]
-> On newest Microsoft web technology .Net Core. Web site build using .Net Core ASP ignore web.config static content mimeMap. As a result, to proper configuration of .Net Core web site which will host your MSIX installation you need modify Configure method in Startup.cs file.
+> On newest Microsoft web technology .NET Core. Web site build using .NET Core ASP ignore web.config static content mimeMap. As a result, you will need to a proper configuration of .NET Core website which will host your MSIX installation you need modify Configure method in Startup.cs file. Visit [.NET Core documentation](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-5.0) for more information. 
 
 ## Step 8 - Add loopback exemption for App Installer
 
