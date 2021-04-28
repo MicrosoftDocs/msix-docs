@@ -1,7 +1,7 @@
 ---
 title: Installing Windows 10 apps from a web page
 description: In this section, we will review the steps you need to take to allow users to install your apps directly from the web page.
-ms.date: 11/16/2017
+ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.localizationpriority: medium
