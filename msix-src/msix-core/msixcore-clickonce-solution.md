@@ -129,16 +129,21 @@ Using a web service interface like [S3 browser](https://s3browser.com/fea
 
 ## Use the MSIX Core installer to build the ClickOnce application
 
-Find your application application ClickOnce setup.exe.
+Find your application application ClickOnce setup.exe. This is refering to the clone of the Git project, build and publish it via Visual Studio project. 
 
 ### Run URL command to create new setup.exe
 
-Make sure you have followed the instructions to clone, build and publish the MSIX Core solution in Visual Studio.
+Make sure you have followed the instructions to clone, build and publish the MSIX Core solution in Visual Studio. For reference, the GitHub project can be found [here](https://github.com/microsoft/msix-packaging/tree/master/MsixCore)
 
-Navigate to the directory where you downloaded the setup.exe file and then run this command:
+Navigate to the directory where you published the setup.exe file and then run this command:
 
 ```PowerShell
-setup-exe - url=<location of your msix in the webservice>
+.\setup.exe -url=<location of your msix in the webservice>
+```
+For example 
+
+```PowerShell
+.\setup.exe -url="https://appinstallerdemo.azurewebsites.net/MSIXCore/msixmgrWrapper.application?https://appinstallerdemo.azurewebsites.net/MSIXCore/notepadplus.msix#"
 ```
 
 ### Sign the application
