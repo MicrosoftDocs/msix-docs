@@ -2,7 +2,7 @@
 title: Supported platforms 
 description: This article describes supported platform for MSIX. 
 author: dianmsft
-ms.date: 03/06/2020
+ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
