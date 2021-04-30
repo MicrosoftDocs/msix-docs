@@ -44,10 +44,11 @@ Prefix your app package URIs with the activation scheme `'ms-appinstaller:?sourc
 </html>
 ```
 
-> ![Note]
-> By prefixing your link to the Windows App, or AppInstaller file with `ms-appinstaller:?source=''` client devices will be able to determine how to interpret the content, launching the Desktop App Installer. It is recommended that MIME-Types be configured as this will improve the users experience when launching the Windows App or AppInstaller file, but not required.
+> [!Note]
+> By prefixing the link to the Windows App, or AppInstaller file with `ms-appinstaller:?source=''` client devices are able to determine how to interpret the content and will launch the Desktop App Installer. It is recommended that MIME Types be configured as this will improve the users experience when launching the Windows App or AppInstaller file.
 
-It is recommended that MIME-Types be configured for the Windows Apps and AppInstaller files that are intended to be shared from your website. By including the MIME-Types, the Desktop App Installer will quickly identify the file association and launch the information page with next steps. If not included, the Desktop App Installer must determine the file association which can impact how quickly the Desktop App Installer will launch the information page with next steps.
+It is recommended that MIME-Types be configured for the Windows Apps and AppInstaller files that are intended to be shared from your website. By including the MIME Types, the Desktop App Installer will quickly identify the file association and launch the information page with next steps. If not included, the Desktop App Installer must determine the file association which can negatively impact how quickly the Desktop App Installer will interpret the information and launch the Windows App installer.
+
 
 | File Extension | MIME Type                |
 |----------------|--------------------------|
