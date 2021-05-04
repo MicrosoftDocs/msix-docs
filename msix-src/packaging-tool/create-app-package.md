@@ -135,7 +135,7 @@ After you choose to package your application on an existing virtual machine, you
     - This field accepts a string between 1 and 8192 characters in length that fits the regular expression of a distinguished name : "(CN | L | O | OU | E | C | S | STREET | T | G | I | SN | DC | SERIALNUMBER | Description | PostalCode | POBox | Phone | X21Address | dnQualifier | (OID.(0 | [1-9][0-9])(.(0 | [1-9][0-9]))+))=(([^,+="<>#;])+ | ".")(, ((CN | L | O | OU | E | C | S | STREET | T | G | I | SN | DC | SERIALNUMBER | Description | PostalCode | POBox | Phone | X21Address | dnQualifier | (OID.(0 | [1-9][0-9])(.(0 | [1-9][0-9]))+))=(([^,+="<>#;])+ | ".")))*".
 - Publisher display name:
     - Required and corresponds to package in the manifest to display a friendly publisher name to the user, in App installer and settings pages.
-    - Field accepts A string between 1 and 256 characters in length and is localizable.
+    - Field accepts a string between 1 and 256 characters in length and is localizable.
 - Version:
     - Required and corresponds to the package in the manifest to describe the version number of the package.
     - This field accepts a version string in quad notation: "Major.Minor.Build.Revision".
