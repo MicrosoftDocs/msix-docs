@@ -15,6 +15,7 @@ Many customers are successfully using MSIX to improve the deployment of their Wi
 
 * Learn how [DB Systel](customer/db-systel.md) is enabling agile deployment of Windows applications.
 * Learn how [Educational Computing Network of Ontario (ECNO)](customer/ecno.md) is improving desktop application delivery and install experience for Ontario students
+* Learn how [MID GmbH](customer/mid.md) is using MSIX and .NET Core to improve the release cycle of their Innovator Enterprise Modeling Suite
 * Learn how [SAP](customer/sap.md) is using Microsoft technology for saving costs by improving their Windows Application distribution mechanism 
 * Learn how [Schneider Electric](customer/schneider-electric.md) is developing and deploying WPF desktop applications
 * Learn how [Trend Micro](customer/trend-micro.md) uses C++/WinRT and MSIX in Cleaner One

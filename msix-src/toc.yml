@@ -62,6 +62,8 @@
           href: customer/db-systel.md
         - name: ECNO
           href: customer/ecno.md
+        - name: MID GmbH
+          href: customer/mid.md
         - name: SAP
           href: customer/sap.md
         - name: Schneider Electric
