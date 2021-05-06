@@ -10,6 +10,7 @@ ms.custom: RS5
 ---
 
 # MID GmbH
+![MID GmbH logo](../images/ECNO_masterlogo.png)
 
 [MID GmbH](https://www.mid.de/en) is a German ISV and one of the leading providers of modeling solutions. They have a catalog of products that can help companies from a wide range of sectors, from Business Process Management to Agile Consulting.
 
