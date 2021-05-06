@@ -18,7 +18,7 @@ This article explains how to create and export a certificate for app package sig
 An app containing an AppxManifest.xml file. You will need to reference the manifest file while creating the certificate that will be used to sign the final app package. For details on how to manually package an app, see [Create an app package with the MakeAppx.exe tool](create-app-package-with-makeappx-tool.md).
 
 - **Public Key Infrastructure (PKI) Cmdlets**  
-You need PKI cmdlets to create and export your signing certificate. For more information, see [Public Key Infrastructure Cmdlets](/powershell/module/pkiclient/).
+You need PKI cmdlets to create and export your signing certificate. For more information, see [Public Key Infrastructure Cmdlets](/powershell/module/pki).
 
 ## Create a self-signed certificate
 
