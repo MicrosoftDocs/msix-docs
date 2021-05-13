@@ -113,7 +113,7 @@
     {
       "source_path": "msix-src/desktop/desktop-to-uwp-run-desktop-app-converter.md",
       "redirect_url": "/windows/msix/packaging-tool/tool-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
