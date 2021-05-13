@@ -109,7 +109,11 @@
       "source_path": "msix-src/desktop/managing-your-msix-deployment-dism-provisioning.md",
       "redirect_url": "/windows/msix/desktop/deploy-preinstalled-apps",
       "redirect_document_id": true
+    }, 
+    {
+      "source_path": "msix-src/desktop/desktop-to-uwp-run-desktop-app-converter.md",
+      "redirect_url": "/windows/msix/packaging-tool/tool-overview",
+      "redirect_document_id": true
     }
-
   ]
 }
