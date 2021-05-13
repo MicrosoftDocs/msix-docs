@@ -1,5 +1,5 @@
 ---
-description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise environment.  This article is targeted at enterprise and IT Pros.
+description: This article provides troubleshooting and validation guidance for MSIX installations.
 title: Managing your MSIX deployment
 ms.date: 2/3/2020
 ms.topic: article
