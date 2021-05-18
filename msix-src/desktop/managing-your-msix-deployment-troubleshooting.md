@@ -1,5 +1,5 @@
 ---
-Description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise environment.  This article is targeted at enterprise and IT Pros.
+description: This article provides troubleshooting and validation guidance for MSIX installations.
 title: Managing your MSIX deployment
 ms.date: 2/3/2020
 ms.topic: article
@@ -8,7 +8,7 @@ ms.assetid:
 ms.localizationpriority: medium
 ---
 
-# MSIX Validation and Troubleshooting
+# MSIX validation and troubleshooting
 Though MSIX has a 99% successful install rate, sometimes you need to be able to trouble shoot an installation.
 
 ## Know the application
@@ -23,9 +23,9 @@ To learn more about the Windows App Certification Kit, see [Windows App Certific
 Another great way to catch issues early is to flight your applications.  If you are deploying through the Windows store or Microsoft Store for Business, you can use package flights to deploy your application to a subset of individuals to get additional real world testing.  
 To learn more about flighting, see [Package flighting.](/windows/uwp/publish/package-flights?context=%252fwindows%252fmsix%252frender)
 
-## Device Portal and Debugging
+## Device Portal and debugging
 Sometimes it is necessary to interact with the application in the user's environment to adequately understand the issue.  Windows provides a powerful tool, the [Device Portal Desktop](/windows/uwp/debug-test-perf/device-portal-desktop) which will allow you to connect to the device and interact with the application remotely.  
-To learn more about Device Portal, see [Device Portal Desktop.](/windows/uwp/debug-test-perf/device-portal-desktop)
+To learn more about Device Portal, see [Device Portal Desktop](/windows/uwp/debug-test-perf/device-portal-desktop).
 To learn more about Debugging MSIX packages, see [Run, debug, and test a packaged desktop application.](./desktop-to-uwp-debug.md)
 
 ## Installation issues
@@ -39,5 +39,5 @@ To learn more about AppInstaller troubleshooting, see [Troubleshoot Appinstaller
 
 ## Next steps
 
-Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). You can also ask us [here](https://social.msdn.microsoft.com/Forums//home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).
 
