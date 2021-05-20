@@ -35,7 +35,7 @@ Here are the locations of each executable.
 
 For more information about PowerShell execution policies, see [this article](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6).
 
-Make sure to also include the StartingScriptWrapper.ps1 file in your package and place it in the same folder as your executable. You can copy this file from the [PSF NuGet package](https://www.nuget.org/packages/Microsoft.PackageSupportFramework/).
+🚩 Make sure to also include the __StartingScriptWrapper.ps1__ file in your package and place it in the same folder as your executable. You can copy this file from the [PSF NuGet package](https://www.nuget.org/packages/Microsoft.PackageSupportFramework/) or from the [PSF Github repo](https://github.com/Microsoft/MSIX-PackageSupportFramework/releases).
 
 ## Enable scripts
 
