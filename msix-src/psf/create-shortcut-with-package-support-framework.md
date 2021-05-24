@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
-# How to run scripts with the Package Support Framework to create an application shortcut
+# Create an application shortcut by running a script using Package Support Framework 
 
 This document will show you how to create application shortcuts using Package Support Framework (PSF) that run scripts via the __MSIX Packaging Tool__ and the [Contoso Expense](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/tree/master/Exercise5/02-End) WPF application.
 
