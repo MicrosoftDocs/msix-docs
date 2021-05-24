@@ -1,5 +1,5 @@
 ---
-description: You can run scripts with the Package Support Framework to customize your desktop application for the user environment.
+description: This document will show you how to create application shortcuts using scripts with Package Support Framework. 
 title: How to run scripts with the Package Support Framework to create an application shortcut
 ms.date: 04/14/2021
 ms.topic: article
@@ -10,11 +10,11 @@ ms.custom: RS5
 
 # How to run scripts with the Package Support Framework to create an application shortcut
 
-In this session, it will be demonstrated how to run PSF scripts to create an application shortcut in the user Desktop through the __MSIX Packaging Tool__ and the [Contoso Expense](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/tree/master/Exercise5/02-End) WPF application.
+This document will show you how to create application shortcuts using Package Support Framework (PSF) that run scripts via the __MSIX Packaging Tool__ and the [Contoso Expense](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/tree/master/Exercise5/02-End) WPF application.
 
 ![contoso expenses](images/contosoexpense.png )
 
-The idea is to copy the application shortcut, that will be available inside the package, to the user Desktop through the PSF scripts.
+The idea is to copy the application shortcut, that will be available inside the package, to the user's Desktop through the PSF scripts.
 
 Creating a shortcut for a MSIX application can be a little trick, as it involves some challenges. The first challenge is that the MSIX application must be installed before creating the shortcut, so that we can specify the MSIX application path during the shortcut creation. At the same time, the MSIX application path can change, once it has the version number specified in the installation folder. Example of the __Contoso Expenses__ installation path:
 
