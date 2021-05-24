@@ -20,7 +20,7 @@ Creating a shortcut for a MSIX application can be a little trick, as it involves
 
 C:\Program Files\WindowsApps\ContosoExpenses_`1.0.0.0`_x86__3z09h3y28h0qg
 
-To avoid having to change the application shortcut every time the application is updated, it is possible to create the shortcut pointing to the [AppExecutionAlias](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions). The __AppExecutionAlias__ allows to launch the application with the value defined in the alias session of the application manifest, so there is no need to specify the full application path. Therefore, before create the shortcut, it is necessary to define the alias in the application manifest and to install the packaged App. Otherwise, Windows Explorer will not recognize the alias and it will not allow us to create the shortcut.
+To avoid having to change the application shortcut every time the application is updated, it is possible to create the shortcut pointing to the [AppExecutionAlias](/windows/apps/desktop/modernize/desktop-to-uwp-extensions). The __AppExecutionAlias__ allows to launch the application with the value defined in the alias session of the application manifest, so there is no need to specify the full application path. Therefore, before create the shortcut, it is necessary to define the alias in the application manifest and to install the packaged App. Otherwise, Windows Explorer will not recognize the alias and it will not allow us to create the shortcut.
 
 ## Create the application alias
 
@@ -74,7 +74,7 @@ Create a new application shortcut in a folder of your preference using the alias
 
 Name the shortcut for Contoso Expenses:
 
-![new app shortcut](images/contosoexpense-finish-creating-appshortcut.png)
+![new app finish creating shortcut](images/contosoexpense-finish-creating-appshortcut.png)
 
 Despite the shortcut is working, its is using a generic icon:
 
@@ -103,7 +103,7 @@ Now that the shortcut is working, the next step is to add it to the package and 
 
 Download the __PSFBinaries.zip__ from the [PSF Github repo](https://github.com/Microsoft/MSIX-PackageSupportFramework/releases).
 
-![psf from github](images/get-psf-from-github-releases.png)
+![psf from github releases](images/get-psf-from-github-releases.png)
 
 Extract the required 32-bit or 64-bit files to the root of your package directory, depending if your application is 32 or 64-bit. Use the following table as a guide.
 
@@ -116,21 +116,21 @@ Extract the required 32-bit or 64-bit files to the root of your package director
 
 Edit the __Contoso Expense__ through __MSIX Packaging Tool__ :
 
-![psf from github](images/contosoexpense-edit-mpt.png)
+![psf from github edit mpt](images/contosoexpense-edit-mpt.png)
 
 Click on the __Package Files__ menu item, click with the right button on the __Package__ folder and select __Add File...__:
 
-![psf from github](images/contosoexpense-add-psf-files.png)
+![psf from github add psf files](images/contosoexpense-add-psf-files.png)
 
 As the ContosoExpense build here is 32-bit, it was added the PSF 32-bit required files. Your package content should now look something like this:
 
-![psf from github](images/contosoexpense-psf-added-files.png)
+![psf from github psf added files](images/contosoexpense-psf-added-files.png)
 
 ## Update the package manifest for PSF
 
 Click on the __Package information__ menu item and click on __Open File__, available on the bottom of UI, to edit the application manifest:
 
-![psf from github](images/contosoexpense-edit-manifest.png)
+![psf from github edit manifest](images/contosoexpense-edit-manifest.png)
 
 In this step, it is necessary to change the application entry point (ContosoExpenses\ContosoExpenses.exe) by the PSFLauncher32.exe.
 
