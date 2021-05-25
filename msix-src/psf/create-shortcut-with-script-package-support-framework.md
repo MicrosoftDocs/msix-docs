@@ -17,7 +17,7 @@ This document will show you how to create application shortcuts using Package Su
 The idea is to copy the application shortcut, that will be available inside the package, to the user's Desktop through the PSF scripts.
 
 There are a couple of things to keep in mind: 
-1. Only create shortcuts if they are absolutely necessary. The goal is to not clutter the users desktop. 
+1. Only create a shortcut if they are absolutely necessary. The goal is to not clutter the user's desktop. 
 2. The MSIX application must be installed before creating the shortcut, so that we can specify the MSIX application path during the shortcut creation. 
 3. At the same time, the MSIX application path can change, once it has the version number specified in the installation folder. Example of the __Contoso Expenses__ installation path:
 
