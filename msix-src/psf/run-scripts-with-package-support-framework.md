@@ -1,7 +1,7 @@
 ---
 description: You can run scripts with the Package Support Framework to customize your desktop application for the user environment.
 title: Run scripts with the Package Support Framework
-ms.date: 09/20/2019
+ms.date: 05/25/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.localizationpriority: medium
