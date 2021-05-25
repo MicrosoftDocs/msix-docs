@@ -23,7 +23,7 @@ There are a couple of things to keep in mind:
 
 C:\Program Files\WindowsApps\ContosoExpenses_`1.0.0.0`_x86__3z09h3y28h0qg
 
-To avoid having to change the application shortcut every time the application is updated, it is possible to create the shortcut pointing to the [AppExecutionAlias](/windows/apps/desktop/modernize/desktop-to-uwp-extensions). The __AppExecutionAlias__ allows to launch the application with the value defined in the alias session of the application manifest, so there is no need to specify the full application path. Therefore, before create the shortcut, it is necessary to define the alias in the application manifest and to install the packaged App. Otherwise, Windows Explorer will not recognize the alias and it will not allow us to create the shortcut.
+To avoid having to change the application shortcut every time the application is updated, create the shortcut by pointing to the [AppExecutionAlias](/windows/apps/desktop/modernize/desktop-to-uwp-extensions). The __AppExecutionAlias__ allows it to launch the application with the value defined in the alias session of the application manifest, so there is no need to specify the full application path. Therefore, before create the shortcut, define the alias in the application manifest. Otherwise, Windows Explorer will not recognize the alias and it will not allow us to create the shortcut.
 
 ## Create the application alias
 
@@ -79,7 +79,7 @@ Name the shortcut for Contoso Expenses:
 
 ![new app finish creating shortcut](images/contosoexpense-finish-creating-appshortcut.png)
 
-Despite the shortcut is working, its is using a generic icon:
+By default, the shortcut will be a generic icon:
 
 ![generic app shortcut](images/contosoexpense-generic-shortcut.png)
 
