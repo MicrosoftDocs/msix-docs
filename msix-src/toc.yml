@@ -161,7 +161,11 @@
                 - name: Apply Package Support Framework in Visual Studio
                   href: psf\package-support-framework-vs.md
                 - name: Run scripts with the Package Support Framework
-                  href: psf/run-scripts-with-package-support-framework.md
+                  items:
+                    - name: Overview
+                      href: psf/run-scripts-with-package-support-framework.md
+                    - name: Create Shortcuts with Package Support Framework
+                      href: psf/create-shortcut-with-script-package-support-framework.md
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
         - name: Group applications under a folder in the Start menu
