@@ -59,7 +59,7 @@ Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks
 
 ### MSIX build and package
 
-Note: If you are trying to build a packaged app using this task, you will need to [include the Windows Application Packaging Project](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net), because the task needs the Package.appxmanifest file. The task will not add it automatically for you.
+Note: If you are trying to build a packaged app using this task, you will need to [include the Windows Application Packaging Project](./desktop-to-uwp-packaging-dot-net.md), because the task needs the Package.appxmanifest file. The task will not add it automatically for you.
 
 #### [YAML](#tab/yaml/)
 Here's an example that shows how to configure the build and package task in the yaml file:
