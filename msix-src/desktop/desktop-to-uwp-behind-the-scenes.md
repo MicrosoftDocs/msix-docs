@@ -22,14 +22,12 @@ App packages are installed under *C:\Program Files\WindowsApps\package_name*, wi
 
 After deployment, package files are marked read-only and heavily locked down by the operating system. Windows prevents apps from launching if these files are tampered with.
 
-## Optimized for your device
-
+## Optimized for your device (which title?)
 ## Single storage and hard linking of files
 
 A goal of MSIX is to avoid duplication of files in order to optimize for disk storage space and reduce the bandwidth needed when downloading files.  
 
-When a user downloads an MSIX package, the AppBlockMap is used to determine if the data contained with the package already exist on disk from an earlier package installation. If the same file exists in multiple MSIX packages, we store the shared file on disk only once and create hard links from both packages to the shared file. Files are downloaded in 64k blocks, so even if a percentage of a file being downloaded exists on disk, only the increment that is different is downloaded. This reduces the bandwidth used for downloading.
-
+When a user downloads an MSIX package, the AppBlockMap is used to determine if the data contained with the package already exist on disk from an earlier package installation. If the same file exists in multiple MSIX packages, we store the shared file on disk only once and create hard links from both packages to the shared file. Since files are downloaded in 64k blocks, even if a percentage of a file being downloaded exists on disk, only the increment that is different is downloaded. This reduces the bandwidth used for downloading.
 
 ## File system
 
