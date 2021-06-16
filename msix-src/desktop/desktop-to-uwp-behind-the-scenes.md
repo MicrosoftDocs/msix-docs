@@ -28,7 +28,7 @@ The OS supports different levels of file system operations for packaged desktop 
 
 ### Optimized for your device
 
-In order to avoid duplication of files to optimize for disk storage space and reduce the bandwidth needed when downloading files, the OS leverages single storage and hard linking of files. When a user downloads an MSIX package, the AppBlockMap.xml is used to determine if the data contained with the package already exist on disk from an earlier package installation. If the same file exists in multiple MSIX packages, the OS stores the shared file on disk only once and create hard links from both packages to the shared file. Since files are downloaded in 64k blocks, even if a percentage of a file being downloaded exists on disk, only the increment that is different is downloaded. This reduces the bandwidth used for downloading.
+In order to avoid duplication of files to optimize for disk storage space and reduce the bandwidth needed when downloading files, the OS leverages single storage and hard linking of files. When a user downloads an MSIX package, the AppxManifest.xml is used to determine if the data contained with the package already exist on disk from an earlier package installation. If the same file exists in multiple MSIX packages, the OS stores the shared file on disk only once and create hard links from both packages to the shared file. Since files are downloaded in 64k blocks, even if a percentage of a file being downloaded exists on disk, only the increment that is different is downloaded. This reduces the bandwidth used for downloading.
 
 ### AppData operations on Windows 10, version 1903 and later
 
