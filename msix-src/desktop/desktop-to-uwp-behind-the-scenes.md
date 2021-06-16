@@ -26,14 +26,9 @@ After deployment, package files are marked read-only and heavily locked down by 
 
 ## Single storage and hard linking of files
 
-A goal of MSIX is to avoid duplication of files to optimize for disk storage space and reduce the bandwidth needed when downloading files. If the same file exists in multiple MSIX packages, we store the shared file on disk only once and create hard links from both packages to the shared file. 
+A goal of MSIX is to avoid duplication of files in order to optimize for disk storage space and reduce the bandwidth needed when downloading files.  
 
-When a user downloads an MSIX package, the block map is used to determine if the files contained with the package already exist on disk from an earlier package installation. If a fraction of the files are the same, then only the portion of the file that is different is downloaded. This way, only content that doesn't exist on disk is installed, thereby reducing the bandwidth used when installing packages. If a binary already exists on disk, we will hardlink it so that you don't have to download that particular file. 
-
-- we want to avoid duplication of files to optimize for disk storage space and reduce the bandwidth needed when downloading a file
-- if a file already exists, we don't download it again
-- if 90% of a file exists on disk, we only download the 10%
-- things are downloaded in 64k blocks
+When a user downloads an MSIX package, the AppBlockMap is used to determine if the data contained with the package already exist on disk from an earlier package installation. If the same file exists in multiple MSIX packages, we store the shared file on disk only once and create hard links from both packages to the shared file. Files are downloaded in 64k blocks, so even if a percentage of a file being downloaded exists on disk, only the increment that is different is downloaded. This reduces the bandwidth used for downloading.
 
 
 ## File system
