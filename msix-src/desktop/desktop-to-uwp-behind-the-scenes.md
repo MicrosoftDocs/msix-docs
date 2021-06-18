@@ -26,6 +26,10 @@ After deployment, package files are marked read-only and heavily locked down by 
 
 The OS supports different levels of file system operations for packaged desktop applications, depending on the folder location.
 
+### Optimized for your device
+
+In order to avoid duplication of files to optimize for disk storage space and reduce the bandwidth needed when downloading files, the OS leverages single storage and hard linking of files. When a user downloads an MSIX package, the AppxManifest.xml is used to determine if the data contained with the package already exist on disk from an earlier package installation. If the same file exists in multiple MSIX packages, the OS stores the shared file on disk only once and create hard links from both packages to the shared file. Since files are downloaded in 64k blocks, even if a percentage of a file being downloaded exists on disk, only the increment that is different is downloaded. This reduces the bandwidth used for downloading.
+
 ### AppData operations on Windows 10, version 1903 and later
 
 All newly created files and folders in the user's AppData folder (e.g., *C:\Users\user_name\AppData*) are written to a private per-user, per-app location but merged at runtime to appear in the real AppData location. This allows some degree of state separation for artifacts that are only used by the application itself, and this enables the system to clean up those files when the application is uninstalled. Modifications to existing files under the user's AppData folder is allowed to provide a higher degree of compatibility and interactivity between applications and the OS. This reduces filesystem “rot” because the OS is aware of every file or directory change made by an application. State separation also allows packaged desktop applications to pick up where a non-packaged version of the same application left off. Note that the OS does not support a virtual file system (VFS) folder for the user's AppData folder.
