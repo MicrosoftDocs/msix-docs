@@ -1,5 +1,5 @@
 ---
-title: MSIX Identity Transfer 
+title: Package Signing Certificate and MSIX Identity
 description: This article describes how to sign a package with a different certificate while maintaining the app update experience
 ms.date: 07/02/2021
 ms.topic: article
