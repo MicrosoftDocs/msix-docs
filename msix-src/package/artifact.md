@@ -13,4 +13,25 @@ This feature enables the ability to sign packages with a new certificate while s
 ## Requirements
 1. Obtain MakeAppx.exe through the Windows SDK. This feature is currently avaliable in the Windows SDK Preview. 
 1. Obtain SighTool.exe through the Windows SDK 
-1. The old certifcate (CN=Old) that was used to sign the original package  
+1. The old certificate (CN=Old) that was used to sign the original package  
+1. The new certificate (CN=New) that will be used to sign the package
+
+## Walk thru
+This is a step by step instructions on how to sign your package with the new certificate while maintaining the package identity. 
+
+### Create the artifact 
+1. Write the XML artifact detailing the old and new publishers. Name it anything you like, e.g. artifact.xml:
+ ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Publisher xmlns=http://schemas.microsoft.com/appx/publisherbridging/2021 Old="CN=Old" New="CN=New" />
+```
+1. Write a Catalog Definition File (CDF) to create the catalog that will be used to sign the artifact. Name it anything you like, e.g. artifact.cdf:
+ ```
+[CatalogHeader]
+Name=artifact.cat
+CatalogVersion=2
+HashAlgorithms=SHA256
+ 
+[CatalogFiles]
+<HASH>artifact.xml=artifact.xml
+```
