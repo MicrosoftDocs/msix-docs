@@ -43,7 +43,7 @@ makecat.exe artifact.cdf
 ```powershell
 signtool.exe sign /f old-cert.pfx /fd SHA256 artifact.cat
 ```
-At this point, you only need to keep the XML and CAT files after this. You can create several artifacts but we currently support up to 5 at the moment.
+At this point, you only need to keep the XML and CAT files after this. You can create several artifacts, however the platform currently support up to 5.
 
 ### Create the package
 1.	Create a publisher bridging file to tell makeappx.exe what artifacts to use. This file is like the mapping file. Name it anything you like, artifacts.txt
@@ -64,8 +64,8 @@ signtool.exe sign /f new-cert.pfx /fd SHA256 app.msix
 Now you have a package that has the artifact(s) stored inside of it and been signed with the new certificate. You can deploy the package like any other MSIX package. 
 
 ### Considerations
-1. We recommend that the catalog should be timestamped. To do this you would need to add these arguments in the call to signtool before the path to the catalog: /td SHA256 /tr
+- We recommend that the catalog should be timestamped. To do this you would need to add these arguments in the call to signtool before the path to the catalog: /td SHA256 /tr
 
-1. You will still need to install the old certificate (recommended with timestamp) on the machine for the platform to install the package that was signed by the new certificate.
+- You will still need to install the old certificate (recommended with timestamp) on the machine for the platform to install the package that was signed by the new certificate.
  
-1. This feature works for both MSIX packages and MSIX Bundles 
+- This feature works for both MSIX packages and MSIX Bundles 
