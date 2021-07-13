@@ -35,3 +35,35 @@ HashAlgorithms=SHA256
 [CatalogFiles]
 <HASH>artifact.xml=artifact.xml
 ```
+1. Run makecat.exe on this CDF. It will create the file specified in it
+```powershell
+makecat.exe artifact.cdf
+```
+1. Sign the catalog using the old certificate
+```powershell
+signtool.exe sign /f old-cert.pfx /fd SHA256 artifact.cat
+```
+At this point, you only need to keep the XML and CAT files after this. You can create several artifacts but we currently support up to 5 at the moment.
+
+### Create the package
+1.	Create a publisher bridging file to tell makeappx what artifacts to use. This file is similar to the mapping file. Name it anything you like, e.g. artifacts.txt
+ ```
+[PublisherBridging]
+"artifact.xml" "artifact.cat"
+```
+Each line has to contain a pair of XML and CAT file paths. The artifacts must be ordered as they are applied. E.g., if you have two artifacts one for going **Publisher1->Publisher2**, and another for **Publisher2->Publisher3**, you must list first the one for **Publisher1->Publisher2**
+1. Call makeappx.exe with  **/pb** flag to point to the publisher bridging file:
+```powershell
+makeappx.exe /p app.msix /d .\app\ /pb artifacts.txt
+ ```
+1. Sign your package using the new certificate
+```powershell 
+signtool.exe sign /f new-cert.pfx /fd SHA256 app.msix
+```
+
+### Considerations
+1. We recommend that catalog should be timestamped. To do this you would need to add these arguments in the call to signtool before the path to the catalog: /td SHA256 /tr <URL to time stamp server>
+
+1. You will still need to install the old certificate (recommended with timestamp) on the machine in order for the platform to install the package that was signed by the new certificate. 
+ 
+1. This feature works for both MSIX packages and MSIX Bundles 
