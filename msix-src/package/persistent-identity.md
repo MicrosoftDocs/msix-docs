@@ -20,12 +20,12 @@ This feature enables the ability to sign packages with a new certificate while s
 This is a step-by-step instruction on how to sign your package with the new certificate while maintaining the package identity.
 
 ### Create the artifact 
-1. Write the XML artifact detailing the old and new publishers. Name it anything you like, e.g., artifact.xml:
+1. Write the XML artifact detailing the old and new publishers. Name it anything you like, artifact.xml:
  ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Publisher xmlns=http://schemas.microsoft.com/appx/publisherbridging/2021 Old="CN=Old" New="CN=New" />
 ```
-2. Write a Catalog Definition File (CDF) to create the catalog that will be used to sign the artifact. Name it anything you like, e.g., artifact.cdf:
+2. Write a Catalog Definition File (CDF) to create the catalog that will be used to sign the artifact. Name it anything you like, artifact.cdf:
  ```
 [CatalogHeader]
 Name=artifact.cat
@@ -46,12 +46,12 @@ signtool.exe sign /f old-cert.pfx /fd SHA256 artifact.cat
 At this point, you only need to keep the XML and CAT files after this. You can create several artifacts but we currently support up to 5 at the moment.
 
 ### Create the package
-1.	Create a publisher bridging file to tell makeappx.exe what artifacts to use. This file is like the mapping file. Name it anything you like, e.g., artifacts.txt
+1.	Create a publisher bridging file to tell makeappx.exe what artifacts to use. This file is like the mapping file. Name it anything you like, artifacts.txt
  ```
 [PublisherBridging]
 "artifact.xml" "artifact.cat"
 ```
-Each line must contain a pair of XML and CAT file paths. The artifacts must be ordered as they are applied. E.g., if you have two artifacts one for going **Publisher1->Publisher2**, and another for **Publisher2->Publisher3**, you must list first the one for **Publisher1->Publisher2**
+Each line must contain a pair of XML and CAT file paths. The artifacts must be ordered as they are applied. If you have two artifacts one for going **Publisher1->Publisher2**, and another for **Publisher2->Publisher3**, you must list first the one for **Publisher1->Publisher2**
 2. Call makeappx.exe with  **/pb** flag to point to the publisher bridging file:
 ```powershell
 makeappx.exe /p app.msix /d .\app\ /pb artifacts.txt
