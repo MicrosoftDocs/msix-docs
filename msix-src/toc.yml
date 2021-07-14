@@ -316,6 +316,8 @@
           href: store-developer-package-update.md
         - name: Update non-Store published apps from your code
           href: non-store-developer-updates.md
+    - name: MSIX persistent identity
+      href: package/persistent-identity.md
     - name: Deploy MSIX Core for Windows 10 1703 and earlier 
       items: 
         - name: Overview
