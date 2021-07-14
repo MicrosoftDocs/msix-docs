@@ -250,6 +250,10 @@
       href: desktop/Managing-your-MSIX-deployment-targetdevices.md
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
+    - name: Auto-update and repair apps
+      href: app-installer/auto-update-and-repair--overview.md
+    - name: App Installer Authentication Manager
+      href: app-installer/app-installer-authentication-manager--overview.md
     - name: Distribute your MSIX in an enterprise environment
       items: 
         - name: Overview
@@ -270,8 +274,10 @@
           href: desktop/managing-your-msix-deployment-downgrading.md
     - name: Deploy MSIX with App Installer file
       items:
-        - name: AppInstaller file overview
+        - name: App Installer file overview
           href: app-installer/app-installer-file-overview.md
+        - name: Using an embedded App Installer file to update your app
+          href: app-installer\how-to-embed-an-appinstaller-file.md
         - name: Create an App Installer file in Visual Studio
           href: app-installer/create-appinstallerfile-vs.md
         - name: Create an App Installer file manually
