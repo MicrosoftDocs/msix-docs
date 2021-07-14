@@ -26,6 +26,7 @@ To learn how to use the App Installer to install your app, see the topics in the
 | [Create an App Installer file manually](how-to-create-appinstaller-file.md)| Learn how to create an .appinstaller file manually. This is particularly useful for installing a related set that contains a main package and optional packages. |
 | [Configure update settings in the App Installer file](update-settings.md)  |  Learn how to configure app updates by using the App Installer file. |
 | [Install a Windows 10 app from the web](installing-windows10-apps-web.md) | In this section, we will review the steps you need to take to allow users to install your apps directly from the web page. |
+| [Embeded App Installer File](how-to-embed-an-appinstaller-file.md) | Learn how to embed your App Installer file into your Windows apps |
 | [Optional packages and related sets](../package/optional-packages.md) | Learn about related sets that contain a main package and related optional packages.  |
 | [Troubleshoot installation issues with the App Installer file](troubleshoot-appinstaller-issues.md) | Common issues and solutions when sideloading applications with the App Installer file. |
 | [Related documentation](app-installer-documentation.md) | Provides links to related documentation, including APIs that you can use to modify packages via App Installer files or to retrieve information about apps with an App Installer association.  |
