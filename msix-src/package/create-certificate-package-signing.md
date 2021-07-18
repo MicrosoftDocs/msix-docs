@@ -43,7 +43,7 @@ The "Publisher", in this case, is "CN=Contoso Software, O=Contoso Corporation, C
 
 ### Use **New-SelfSignedCertificate** to create a certificate
 
-Use the **New-SelfSignedCertificate** PowerShell cmdlet to create a self signed certificate. **New-SelfSignedCertificate** has several parameters for customization, but for the purpose of this article, we'll focus on creating a simple certificate that will work with **SignTool**. For more examples and uses of this cmdlet, see [New-SelfSignedCertificate](/powershell/module/pkiclient/New-SelfSignedCertificate).
+Use the **New-SelfSignedCertificate** PowerShell cmdlet to create a self signed certificate. **New-SelfSignedCertificate** has several parameters for customization, but for the purpose of this article, we'll focus on creating a simple certificate that will work with **SignTool**. For more examples and uses of this cmdlet, see [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate).
 
 Based on the AppxManifest.xml file from the previous example, you should use the following syntax to create a certificate. In an elevated PowerShell prompt:
 
