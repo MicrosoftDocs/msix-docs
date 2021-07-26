@@ -45,6 +45,9 @@ signtool.exe sign /f old-cert.pfx /fd SHA256 artifact.cat
 ```
 At this point, you only need to keep the XML and CAT files after this. You can create several artifacts, however the platform currently supports up to 5.
 
+> [!NOTE]
+> We recommend that you timestamp your catalog file. If the catalog is not timestamped, the artifact becomes useless the moment the old certificate expires.
+
 ### Create the package
 1.	Create a publisher bridging file to tell makeappx.exe what artifacts to use. This file is like the mapping file. Name it anything you like, artifacts.txt
  ```
