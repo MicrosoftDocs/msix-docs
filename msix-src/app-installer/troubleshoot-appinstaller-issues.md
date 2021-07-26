@@ -78,6 +78,10 @@ When installing from an HTTP endpoint, it is important to verify that all files 
 - `.appinstaller` file, available as an `application/xml`
 - `.appx` and `.appxbundle` files, available as `application/vns.ms-appx`
 
+### App installation failed with error message: The parameter is incorrect
+
+Since vanity URLs are not supported at this time, when using the `ms-appinstaller` protocol, the source parameter MUST end in `.appinstaller`. It doesn't matter if you redirect to a file ending with `.appinstaller`. That will also fail in the same way. The only way to fix this is to make sure the original url ends with `.appinstaller`.
+
 ## Isolate App Installer app issues
 
 If the App Installer cannot install the app, these steps will help identify the installation issue.
