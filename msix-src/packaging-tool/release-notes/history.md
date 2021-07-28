@@ -10,13 +10,6 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2021.709.0
+## Version 1.2021.709.0 - Public Version
 - Fixed minimum version requirement for packages with Services
 - general bug fixes
-
-## Version 1.2021.422.0 - Public Version
-- Improved warnings about timestamping for the Device Guard Signing version 2 option
-- Fixed an issue where settings was verifying signing each time settings was opened
-- Shortcut detection improvements
-- Added more default exclusion paths to improve logs
-- General bug fixes

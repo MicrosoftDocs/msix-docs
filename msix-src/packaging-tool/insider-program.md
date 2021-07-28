@@ -30,7 +30,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2021.709.0
+## Version 1.2021.709.0 (Public)
 - Fixed minimum version requirement for packages with Services
 - general bug fixes
 

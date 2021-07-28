@@ -38,10 +38,9 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - 1.2021.422.0
-- Improved warnings about timestamping for the Device Guard Signing version 2 option
-- Shortcut detection improvements
-- General bug fixes
+## Latest public release - 1.2021.709.0
+- Fixed minimum version requirement for packages with Services
+- general bug fixes
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
