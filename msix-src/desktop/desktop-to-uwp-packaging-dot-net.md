@@ -48,29 +48,31 @@ Review this guide before you begin creating a package for your application: [Pre
 
 ## Setup the Windows Application Packaging Project in your solution
 
+The screenshots below are from Visual Studio 2019 16.10.
+
 1. In Visual Studio, open the solution that contains your desktop application project.
 
 2. Add a **Windows Application Packaging Project** project to your solution.
 
    You won't have to add any code to it. It's just there to generate a package for you. We'll refer to this project as the "packaging project".
 
-   ![Packaging project](images/packaging-project.png)
+   ![Packaging project](images/add-packaging-project.png)
 
-3. Set the **Target Version** of this project to any version that you want, but make sure to set the **Minimum Version** to **Windows 10 Anniversary Update**.
+3. Set the **Target Version** of this project to any version that you want, but make sure to set the **Minimum Version** to not lower than **Windows 10 Anniversary Update**.
 
-   ![Packaging version selector dialog box](images/packaging-version.png)
+   <img src="images/target-version.png" alt="Packaging version selector dialog box" width=70%>
 
-4. In Solution Explorer, right-click the **Applications** folder under the packaging project and choose **Add Reference**.
+4. In Solution Explorer, right-click the **Dependencies** folder under the packaging project and choose **Add Project Reference...**.
 
-   ![Add Project Reference](images/add-project-reference.png)
+   ![Add Project Reference](images/add-project-ref.png)
 
 5. Choose your desktop application project, and then choose the **OK** button.
 
-   ![Desktop project](images/reference-project.png)
+   ![Desktop project](images/add-project-ref-2.png)
 
    You can include multiple desktop applications in your package, but only one of them can start when users choose your app tile. In the **Applications** node, right-click the application that you want users to start when they choose the app's tile, and then choose **Set as Entry Point**.
 
-   ![Set entry point](images/entry-point-set.png)
+   ![Set entry point](images/set-as-entry-point.png)
 
 6. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
 
