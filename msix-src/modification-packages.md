@@ -115,4 +115,4 @@ You can create a modification package manually by using the [MakeAppX.exe](packa
 This process also supports file system plug-ins and customizations, as long as the executable of the main application is not in a virtual file system (VFS). This is to ensure that the main package will get all the VFS of the main package and the modification package.
 
 ## Install modification packages on machine
-Installing modification packages on the machine follows other packaging conventions. It is worth noting that you may want to use the the **-OptionalPackagePath** parameter when installing the package. 
+Installing modification packages on the machine follows other installing conventions. It is worth noting that you may want to use the the **-OptionalPackagePath** parameter when installing the package. 
