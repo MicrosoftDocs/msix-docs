@@ -12,6 +12,7 @@ ms.localizationpriority: medium
 This article describes the PowerShell cmdlets that are used to manage your .appx and .msix packages.
 
 ## MSIX PowerShell cmdlets
+The following PowerShell cmdlets are provided with aliases enabling the use of either "Appx" or "App" prefixed nouns (Example: `Add-AppxPackage` can also be used as `Add-AppPackage`).
 
 | PowerShell cmdlets | Description |
 |-------------------|-------------|
