@@ -11,10 +11,10 @@ ms.custom: RS5
 # Microsoft Endpoint Configuration Manager
 The [Microsoft Endpoint Configuration Manager](/configmgr/) can be used to create a `Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)` which can be delivered to client devices. Deploying a MSIX app has the following prerequisites:
 1) Access to the MSIX package to deploy.
-2) a device or user collection to be the target of the install.
+2) A device or user collection to be the target of the install.
 
 ## Deploying MSIX Application
-When deploying an Windows app package from within the Microsoft Endpoint Configuration Manager Console to be delievered, you will first require a UNC path to your MSIX app package. The details of the App being created will be retrieved from the meta data contained within the MSIX app package and automatically added into the Windows app package properties.
+When deploying an Windows app package from within the Microsoft Endpoint Configuration Manager Console to be delivered, you will first require a UNC path to your MSIX app package. The details of the App being created will be retrieved from the meta data contained within the MSIX app package and automatically added into the Windows app package properties.
 
 | Task | Documentation reference |
 |-----|------|
