@@ -29,20 +29,39 @@ Device Guard signing requires permissions in the Microsoft Store for Business an
 
 The following sections describes these steps in more detail.
 
-## Configure permissions for Device Guard signing
+## Configure permissions for Device Guard signing 
 
-To use Device Guard signing in the Microsoft Store for Business or Microsoft Store for Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign. 
+Downloading and unpacking the DGSSv2 package is the first step in preparing to use the DGSSv2 toolset.  Before we can use the service for the first time, we must first create an Azure AD application registration for DGSSv2 to use for authenticating with an Azure AD tenant. This is a onetime process per tenant. Once this process is completed and a AddID has been generated we can use this AppID for all DGSSv2 operations.
 
  > [!NOTE]
- > Device Guard Signer role is used when you are signing as an app. Global Administrator and Billing Account Owner is used when you sign as a logged in person.
+ > This is a per tenant process. If a customer only needs a single central point of trust this can process can be completed on a single tenant and have the App registration configured to support authentication with a Multitenant configuration. If the customer needs multiple independent points of trust this process will need to be completed for each tenant that needs an independent point of trust. 
 
-To confirm or reassign roles:
+1.	Navigate to https://portal.azure.com, and authenticate as a tenant Global Administrator
+2.	Navigate to the **Azure Active Directory** Azure service.
+3.	From the left side menu under **Manage** locate and select **App registrations**
+4.	From the menu bar select **New registration**
+5.	In the **Name** field enter **DGSSv2**.
+    > [!NOTE]
+    > The Name field is used for easy identification of the app registration in the Azure portal. Any name desired can be used. For the purpose of this demonstration, we use DGSSv2 simply to make it easy to identify.
 
-1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
-2. Select **Manage** and then select **Permissions**.
-3. View **Roles**.
+6. Under **Supported account types** select the appropriate setting. 
+    - **Accounts in this organization directory only (Single tenant)** – This option is recommended unless you have a specific need for a multitenant deployment. All user and guest accounts in your directory can use your application or API.
+    - **Accounts in any organizational directory (Any Azure AD directory - Multitenant)** – This option is best for an organization that has multiple Azure AD tenants, but only needs a single point of trust for code signing. All users with a work or school account from Microsoft can use your application or API. This includes schools and businesses that use Office 365.
+    - **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g., Skype, Xbox)** – This option is not recommended due to it being open to use by consumer level Microsoft accounts. All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign into services like Xbox and Skype.
+    - **Personal Microsoft accounts only** – Like the last option this option is also not recommended. This is not only because it allows personal accounts, but because this option only supports personal accounts.  Azure AD accounts are explicitly blocked. Personal accounts that are used to sign into services like Xbox and Skype
 
-For more information, see [Roles and permissions in the Microsoft Store for Business and Education](/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter https://dgss.microsoft.com in the text box.
+8.	Click **Register**
+9.	Toward the top right of the page locate the entry labeled Redirect URIs. Select the line below it labeled **0 web, 0 spa, 1 public client**
+10.	Locate the entry labeled Allow public client flows in the Advanced settings section. Set this value to **Yes**
+11.	Click **Save** at the top of the page
+12.	From the left side menu select **API permissions**
+13.	From the menu bar select Add a permission. In the fly out menu select the APIs my organization uses tab. In the search box enter Windows Store for Business
+    > [!NOTE]
+    > If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
+14.	Select **Windows Store for Business**, then select **Delegated permissions.** Check **user_impersonation**.
+15.	Click **Add permissions** at the bottom of the page. From the left side menu select **Overview** to return to the DGSSv2 app registration overview.
+
 
 ## Register your app in the Azure Portal
 
