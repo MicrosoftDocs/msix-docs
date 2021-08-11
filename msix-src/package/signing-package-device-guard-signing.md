@@ -10,6 +10,9 @@ ms.localizationpriority: medium
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
+> Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. You can continue to use the current capabilities of free apps until that time. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution)
+
+> [!IMPORTANT]
 > [Device Guard Signing Service v2](/microsoft-store/device-guard-signing-portal) (DGSS v2) is now available. 
 > 
 > May 2021 -
