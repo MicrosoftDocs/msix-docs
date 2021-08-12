@@ -10,10 +10,16 @@ ms.localizationpriority: medium
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
+> Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. You can continue to use the current capabilities of free apps until that time. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution)
+
+> [!IMPORTANT]
 > [Device Guard Signing Service v2](/microsoft-store/device-guard-signing-portal) (DGSS v2) is now available. 
 > 
 > May 2021 -
 The existing web-based mechanism for the Device Guard Signing service v1 will be retired on June 9, 2021. Please transition to the PowerShell based version of the service (DGSS v2). A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) containing the required DGSS v2 components and migration documentation is available. Please read the Microsoft Terms of Use included in the NuGet package; note that the usage of DGSS implies acceptance of these terms. For any questions, please contact us at DGSSMigration@microsoft.com.
+
+> [!NOTE]
+> After downloading microsoft.acs/dgss.client.nupkg you can rename to .zip and extract contents for files and additional documentation and information
 
 [Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK and the DGSSv2 dlib in the NuGet package to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
@@ -29,40 +35,59 @@ Device Guard signing requires permissions in the Microsoft Store for Business an
 
 The following sections describes these steps in more detail.
 
-## Configure permissions for Device Guard signing
+## Configure permissions for Device Guard signing 
 
-To use Device Guard signing in the Microsoft Store for Business or Microsoft Store for Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign. 
+To use Device Guard signing in the Microsoft Store for Business or Microsoft Store for Education, you need the **Device Guard signer** role. This is the least privilege role that has the ability to sign. Other roles such as **Global Administrator** and **Billing account owner** can also sign.
 
- > [!NOTE]
- > Device Guard Signer role is used when you are signing as an app. Global Administrator and Billing Account Owner is used when you sign as a logged in person.
+> [!NOTE]
+> Device Guard Signer role is used when you are signing as an app. Global Administrator and Billing Account Owner is used when you sign as a logged in person.
 
 To confirm or reassign roles:
+1.	Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
+2.	Select **Manage** and then select **Permissions**.
+3.	View **Roles**.
 
-1. Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
-2. Select **Manage** and then select **Permissions**.
-3. View **Roles**.
-
-For more information, see [Roles and permissions in the Microsoft Store for Business and Education](/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
 
 ## Register your app in the Azure Portal
 
 To register your app with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) and follow the instructions in [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) to register the app that will use Device Guard signing.
-
+1.	Navigate to https://portal.azure.com, and authenticate as a tenant Global Administrator
+2.	Navigate to the **Azure Active Directory** Azure service.
+3.	From the left side menu under **Manage** locate and select **App registrations**
+4.	From the menu bar select **New registration**
+5.	In the **Name** field enter **DGSSv2**.
     > [!NOTE]
-    > Under **Redirect URI** section, we recommend you choose **Public client (mobile & desktop)**. Otherwise, if you choose **Web** for the app type, you will need to provide a [client secret](/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application) when you obtain an Azure AD access token later in this process.
+    > The Name field is used for easy identification of the app registration in the Azure portal. Any name desired can be used. For the purpose of this demonstration, we use DGSSv2 simply to make it easy to identify.
 
-2. After you register your app, on the main page for your app in the Azure portal, click **API permissions**, under **APIs my organization uses** and add a permission for the **Windows Store for Business API**.
+6. Under **Supported account types** select the appropriate setting. 
+    - **Accounts in this organization directory only (Single tenant)** – This option is recommended unless you have a specific need for a multitenant deployment. All user and guest accounts in your directory can use your application or API.
+    - **Accounts in any organizational directory (Any Azure AD directory - Multitenant)** – This option is best for an organization that has multiple Azure AD tenants, but only needs a single point of trust for code signing. All users with a work or school account from Microsoft can use your application or API. This includes schools and businesses that use Office 365.
+    - **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g., Skype, Xbox)** – This option is not recommended due to it being open to use by consumer level Microsoft accounts. All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign into services like Xbox and Skype.
+    - **Personal Microsoft accounts only** – Like the last option this option is also not recommended. This is not only because it allows personal accounts, but because this option only supports personal accounts.  Azure AD accounts are explicitly blocked. Personal accounts that are used to sign into services like Xbox and Skype
 
-3. Next, select **Delegated permissions** and then select **user_impersonation**.
+7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter https://dgss.microsoft.com in the text box.
+8.	Click **Register**
+9.	Toward the top right of the page locate the entry labeled Redirect URIs. Select the line below it labeled **0 web, 0 spa, 1 public client**
+10.	Locate the entry labeled **Allow public client flows** in the Advanced settings section. Set this value to **Yes**
+11.	Click **Save** at the top of the page
+12.	From the left side menu select **API permissions**
+13.	From the menu bar select **Add a permission.** In the fly out menu select the **APIs my organization** uses tab. In the search box enter **Windows Store for Business**
+
+> [!NOTE]
+> If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
+
+14.	Select **Windows Store for Business**, then select **Delegated permissions.** Check **user_impersonation**.
+15.	Click **Add permissions** at the bottom of the page. From the left side menu select **Overview** to return to the DGSSv2 app registration overview.
+
 
 ## Get an Azure AD access token
 
 Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
 
 > [!NOTE]
-> If you registered your app as a **Web** app in the Azure portal, you must provide a client secret when you request your token. For more information, see the previous section.
+> If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
 
 The following PowerShell example demonstrates how to request an access token.
 
