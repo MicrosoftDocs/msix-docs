@@ -70,13 +70,24 @@ To register your app with the proper settings so that you can use Azure AD authe
 7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter https://dgss.microsoft.com in the text box.
 8.	Click **Register**
 9.	Toward the top right of the page locate the entry labeled Redirect URIs. Select the line below it labeled **0 web, 0 spa, 1 public client**
+10.	10.	Locate the entry labeled **Allow public client flows** in the Advanced settings section. Set this value to **Yes**
+11.	Click **Save** at the top of the page
+12.	From the left side menu select **API permissions**
+13.	From the menu bar select **Add a permission.** In the fly out menu select the **APIs my organization** uses tab. In the search box enter **Windows Store for Business**
+
+> [!NOTE]
+> If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
+
+14.	Select **Windows Store for Business**, then select **Delegated permissions.** Check **user_impersonation**.
+15.	Click **Add permissions** at the bottom of the page. From the left side menu select **Overview** to return to the DGSSv2 app registration overview.
+
 
 ## Get an Azure AD access token
 
 Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
 
 > [!NOTE]
-> If you registered your app as a **Web** app in the Azure portal, you must provide a client secret when you request your token. For more information, see the previous section.
+> If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
 
 The following PowerShell example demonstrates how to request an access token.
 
