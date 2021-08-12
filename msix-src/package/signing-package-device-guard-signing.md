@@ -70,7 +70,7 @@ To register your app with the proper settings so that you can use Azure AD authe
 7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter https://dgss.microsoft.com in the text box.
 8.	Click **Register**
 9.	Toward the top right of the page locate the entry labeled Redirect URIs. Select the line below it labeled **0 web, 0 spa, 1 public client**
-10.	10.	Locate the entry labeled **Allow public client flows** in the Advanced settings section. Set this value to **Yes**
+10.	Locate the entry labeled **Allow public client flows** in the Advanced settings section. Set this value to **Yes**
 11.	Click **Save** at the top of the page
 12.	From the left side menu select **API permissions**
 13.	From the menu bar select **Add a permission.** In the fly out menu select the **APIs my organization** uses tab. In the search box enter **Windows Store for Business**
