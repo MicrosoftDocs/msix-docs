@@ -14,7 +14,7 @@ The context menu is one of the most popular and useful shell extensions. If you 
 If your desktop app implements the legacy IContextMenu interface for shell extensions such as the context menu handler or drag and drop handler, the shell extension might not work after you package your app. In order for shell to recognize and register the extension, you will need to modify the package manifest file.
 (This feature is available on Windows 11 build 22000+, which is currently available via [Windows Insider](https://insider.windows.com/) builds)
 
-- Add com namespace and [windows.comServer extension](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-surrogateserver) for your shellex dll
+- Add com namespace and [windows.comServer extension](/uwp/schemas/appxpackage/uapmanifestschema/element-com-surrogateserver) for your shellex dll
     
     `xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"`
 
@@ -61,4 +61,4 @@ If your desktop app implements the legacy IContextMenu interface for shell exten
     ```
 
 
-Note: If you are implementing shell extensions instead of packaging an existing desktop app with legacy [IContextMenu](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) implementation, we suggest implementing the [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) interface and using [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) instead. Refer [here](https://docs.microsoft.com/windows/win32/shell/shortcut-choose-method) for more information. 
+Note: If you are implementing shell extensions instead of packaging an existing desktop app with legacy [IContextMenu](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) implementation, we suggest implementing the [IExplorerCommand](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) interface and using [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) instead. Refer [here](/windows/win32/shell/shortcut-choose-method) for more information. 
