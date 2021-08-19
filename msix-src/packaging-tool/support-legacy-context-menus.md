@@ -19,7 +19,7 @@ If your desktop app implements the legacy IContextMenu interface for shell exten
     `xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"`
 
     Below is an example code snippet:
-    ```
+    ```xml
     <com:Extension Category="windows.comServer">
         <com:ComServer>
             <com:SurrogateServer DisplayName="<display-name-for-the-com-server>">
@@ -34,7 +34,7 @@ If your desktop app implements the legacy IContextMenu interface for shell exten
     `xmlns:desktop9="http://schemas.microsoft.com/appx/manifest/desktop/windows10/9"`
 
     Below is an example code snippet:
-    ```
+    ```xml
     <desktop9:Extension Category="windows.fileExplorerClassicContextMenuHandler">
         <desktop9:FileExplorerClassicContextMenuHandler>
             <desktop9:ExtensionHandler Type="*" Clsid="<GUID-for-the-com-server>" />
@@ -54,7 +54,7 @@ If your desktop app implements the legacy IContextMenu interface for shell exten
 - Change MaxVersionTested to be greater than 10.0.21300.0
   
     Below is an example code snippet:
-    ```
+    ```xml
     <Dependencies>
         <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.21301.0" />
     </Dependencies>
