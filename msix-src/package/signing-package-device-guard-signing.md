@@ -47,7 +47,7 @@ To confirm or reassign roles:
 2.	Select **Manage** and then select **Permissions**.
 3.	View **Roles**.
 
-For more information, see [Roles and permissions in the Microsoft Store for Business and Education](https://docs.microsoft.com/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+For more information, see [Roles and permissions in the Microsoft Store for Business and Education](/microsoft-store/roles-and-permissions-microsoft-store-for-business).
 
 ## Register your app in the Azure Portal
 
