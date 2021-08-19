@@ -168,6 +168,8 @@
           href: packaging-tool/bundle-msix-packages.md
         - name: Group applications under a folder in the Start menu
           href: packaging-tool/create-start-group.md
+        - name: Support legacy context menus
+          href: packaging-tool/support-legacy-context-menus.md
     - name: MSIX Toolkit
       items: 
         - name: Overview
