@@ -60,5 +60,5 @@ If your desktop app implements the legacy IContextMenu interface for shell exten
     </Dependencies>
     ```
 
-
-Note: If you are implementing shell extensions instead of packaging an existing desktop app with legacy [IContextMenu](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) implementation, we suggest implementing the [IExplorerCommand](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) interface and using [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) instead. Refer [here](/windows/win32/shell/shortcut-choose-method) for more information. 
+> [!NOTE]
+> If you are implementing shell extensions instead of packaging an existing desktop app with legacy [IContextMenu](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) implementation, we suggest implementing the [IExplorerCommand](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) interface and using [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) instead. Refer [here](/windows/win32/shell/shortcut-choose-method) for more information. 
