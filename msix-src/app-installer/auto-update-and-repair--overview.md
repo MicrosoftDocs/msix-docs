@@ -11,14 +11,14 @@ ms.localizationpriority: medium
 >[!Important]
 > The following article discusses settings currently available in Windows Insider build 22415 and newer.
 
-The auto-update and repair settings allows developers and IT pros to provide an automated update solution to Windows apps that are distributed without the use of the Microsoft Store. By specifying auto-updates and repair settings as part of your AppInstaller file, the Windows app can be configured to check for updates on every launch, hide the updating / repairing prompt, and/or prevent the Windows app from launching until it has received the latest update.
+The auto-update and repair settings allows developers and IT pros to provide an automated update solution to Windows apps that are distributed without the use of the Microsoft Store. By specifying auto-updates and repair settings as part of your App Installer file, the Windows app can be configured to check for updates on every launch, hide the updating / repairing prompt, and/or prevent the Windows app from launching until it has received the latest update.
 
 Installing a Windows app using the App Installer file will create an entry in the App Installer repository with the specified configurations that had been set. As long as the Windows app has an entry in the App Installer repository, the automatic update and repair of the app can be configured through by: Windows Settings App, App Installer file, PowerShell, or through a CSP. Any changes that are made to any specific Windows app will overwrite all settings for that particular Windows app.
 
 The Windows Settings App provides the ability to enable / disable the automatic update and repair of Windows apps.
 
 > [!NOTE]
-> There are instances when a setting will not be overwritten, any settings configured via CSP will over ride all other configurations, PowerShell, and the AppInstaller file will override any settings configured by the develop. 
+> There are instances when a setting will not be overwritten, any settings configured via CSP will over ride all other configurations, PowerShell, and the App Installer file will override any settings configured by the develop. 
 
 ## Automatic updates
 
@@ -33,7 +33,7 @@ Updating of Windows apps supports the following elements:
 | ShowPrompt               | Defines if a window is displayed when updates are being installed, and when updates are being checked for.                      |
 | UpdateURI                | The URI to the fallback App Installer file which can be used to update the Windows app when the App Installer URI is unavailable. |
 
-For instructions on how to create an App Installer file witht he above settings, please visit the [Creating an App Installer file](how-to-create-appinstaller-file.md) Docs article.
+For instructions on how to create an App Installer file with the above settings, please visit the [Creating an App Installer file](how-to-create-appinstaller-file.md) Docs article.
 
 ### Embedded App Installer file
 
