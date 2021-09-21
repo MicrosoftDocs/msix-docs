@@ -61,7 +61,7 @@ There are multiple methods in which AppLocker can be leveraged within an organiz
 ### Manage access through Group Policy
 
 Group Policies provide centralized management and configuration of operating systems, applications, and users' settings in an Active Directory environment. MSIX packages applications can read group policy registry keys and honor group policy settings.  
-To learn more about MSIX support and limitations in group policy support, see [Group Policy and MSIX packaged apps.](/windows/msix/group-policy-msix)
+To learn more about MSIX support and limitations in group policy support, see [Group Policy and MSIX packaged apps.](../group-policy-msix.md)
 
 ### Manage MSIX updates
 
