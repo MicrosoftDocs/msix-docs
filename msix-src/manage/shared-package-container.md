@@ -21,11 +21,11 @@ To use the feature, enterprises will require an administrator on the device. Add
 Shared package contianer is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Only main packages need to be included in the .xml. Optional packages and modification packages will automatically be included in the shared package container as they already share the same container as their main package. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?> 
 <AppSharedPackageContainer Name="ContosoContainer"> 
-    <PackageFamily Name="Fabrikam.MainApp_8wekyb3d8bbwe" /> 
-    <PackageFamily Name="Contoso.MainApp_8wekyb3d8bbwe" /> 
-    <PackageFamily Name="ContosoCustomize_7xekyb3d8ccde" /> 
+  <PackageFamily Name="Fabrikam.MainApp_8wekyb3d8bbwe"/> 
+  <PackageFamily Name="Contoso.MainApp_8wekyb3d8bbwe/> 
+  <PackageFamily Name="ContosoCustomize_7xekyb3d8ccde"/> 
 </AppSharedPackageContainer>   
 ```
 When you have the container definition .xml, you can use the following Powershell commands to deploy, reset, update, and remove a Shared Package Container from the device. Note that all other app deployment commands remain the same (i.e installing packages)
