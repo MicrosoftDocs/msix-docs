@@ -16,10 +16,10 @@ To enabl this feature, the package will need to declare where to project the fil
 ```xml
 <Package...> 
   <Extensions> 
-    <desktop13:Extension Category="windows.MutablePackageDirectories"> 
-      <desktop13:MutablePackageDirectories> 
-        <desktop13:MutablePackageDirectory target="$(package.volumeroot)\Program Files\<Folder>" Shared=”true”> 
-      </desktop13:MutablePackageDirectories> 
+    <desktop8:Extension Category="windows.MutablePackageDirectories"> 
+      <desktop8:MutablePackageDirectories> 
+        <desktop8:MutablePackageDirectory target="$(package.volumeroot)\Program Files\<Folder>" Shared=”true”> 
+      </desktop8:MutablePackageDirectories> 
     </Extension> 
   </Extensions> 
 </Package> 
@@ -29,11 +29,11 @@ Before using this feature, here are a list of considerations:
 
 |Considerations  | Description |
 |----------|-----------|
+|How to install a package with the ability to project?   |Packages have to install through ProvisionPackageForAllUsers API       |
 |Who can install it (users or admins)?   |Admin       |
 |Where can the files be projected to (locked location, or anywhere at all)?|Anywhere besides %pf%\windowsapps or %pf%\modifiablewindowsapps   |
 |What are the ACLs on the projected directory if we create it?|Inherited from parent directory   |
-|What permissions are required to use the feature? |Custom capability    |
-|Can more than one package declare the same directory?|Yes   |
+|Can more than one package declare the same directory?|We do not allow more than one related set to declare the same directory. In other words, if there are multiple packages declaring the same directory, they must all be from the same related set.   |
 |What about more than one publisher?|No   |
 |How are collisions handled?|Packages and/or pre-existing files are merged. Conflicting files are resolved in specified priority order, or package-name alphabetically, if no order specified   |
 
