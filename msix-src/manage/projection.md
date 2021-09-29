@@ -27,7 +27,7 @@ To enabl this feature, the package will need to declare where to project the fil
 ## Considerations for projection
 Before using this feature, here are a list of considerations: 
 
-|Considerations  | |
+|Considerations  | Description |
 |----------|-----------|
 |Who can install it (users or admins)?   |Admin       |
 |Where can the files be projected to (locked location, or anywhere at all)?|Anywhere besides %pf%\windowsapps or %pf%\modifiablewindowsapps   |
