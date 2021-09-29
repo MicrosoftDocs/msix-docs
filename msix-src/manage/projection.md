@@ -25,6 +25,18 @@ To enabl this feature, the package will need to declare where to project the fil
 </Package> 
 ```
 ## Considerations for projection
+Before using this feature, here are a list of considerations: 
+|Considerations  | |
+|----------|-----------|
+|Who can install it (users or admins)?   |Admin       |
+|Where can the files be projected to (locked location, or anywhere at all)?|Anywhere besides %pf%\windowsapps or %pf%\modifiablewindowsapps   |
+|What are the ACLs on the projected directory if we create it?|Inherited from parent directory   |
+|What permissions are required to use the feature |Custom capability    |
+|Can more than one package declare the same directory?|Yes   |
+|What about more than one publisher?|No   |
+|How are collisions handled?|Packages and/or pre-existing files are merged. Conflicting files are resolved in specified priority order, or package-name alphabetically, if no order specified   |
+
+
 The main considerations when using the projection feature is that this will require and adminstrator to install the package and administrators are able to modify the package. The files can be projected anwhere besides %pf%\windowsapps or %pf%\modifiablewindowsapps
 
 
