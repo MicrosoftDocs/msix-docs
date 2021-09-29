@@ -26,6 +26,7 @@ To enabl this feature, the package will need to declare where to project the fil
 ```
 ## Considerations for projection
 Before using this feature, here are a list of considerations: 
+
 |Considerations  | |
 |----------|-----------|
 |Who can install it (users or admins)?   |Admin       |
