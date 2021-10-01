@@ -41,39 +41,39 @@ Here is a list of parameters available for customization:
 ## Sample xml:
 ```xml
 
-\&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?\&gt;
+<?xml version="1.0" encoding="utf-8"?> 
 
-\&lt;AppInstallerUX xmlns=&quot;http://schemas.microsoft.com/msix/appinstallerux&quot;
+<AppInstallerUX xmlns="http://schemas.microsoft.com/msix/appinstallerux"  
 
-xmlns:ux=&quot;http://schemas.microsoft.com/msix/appinstallerux&quot;
+xmlns:ux="http://schemas.microsoft.com/msix/appinstallerux" 
 
-xmlns:ux2=&quot;http://schemas.microsoft.com/msix/appinstallerux/2&quot;
+xmlns:ux2="http://schemas.microsoft.com/msix/appinstallerux/2" 
 
-IgnorableNamespaces=&quot;ux ux2&quot; Version=&quot;1.0.0&quot;\&gt;
+IgnorableNamespaces="ux ux2" Version="1.0.0"> 
 
-\&lt;UX AccentColor=&quot;#DE781F&quot; FontFamily=&quot;Segoe UI&quot; AllowUserInteraction=&quot;false&quot; BackgroundColor=&quot;#F3F3F3&quot;
+  <UX AccentColor="#DE781F" FontFamily="Segoe UI" AllowUserInteraction="false" BackgroundColor="#F3F3F3"  
 
-AppNameInTitle=&quot;true&quot;
+  AppNameInTitle="true"  
 
-HyperLinkFontSize=&quot;12&quot;\&gt;
+  HyperLinkFontSize="12"> 
 
-\&lt;Icon HorizontalAlignment=&quot;center&quot; Logo=&quot;Images\Contoso96x96.png&quot; TopMarging=&quot;70&quot;/\&gt;
+    <Icon HorizontalAlignment="center" Logo="Images\Contoso96x96.png" TopMarging="70"/> 
 
-\&lt;Buttons HorizontalAlignment=&quot;center&quot; Text=&quot;Contoso&quot; IsSecondaryButtonAccent=&quot;false&quot;/\&gt;
+    <Buttons HorizontalAlignment="center" Text="Contoso" IsSecondaryButtonAccent="false"/> 
 
-\&lt;LaunchWhenReady HorizontalAlignment=&quot;center&quot;/\&gt;
+    <LaunchWhenReady HorizontalAlignment="center"/> 
 
-\&lt;AppInformation Mode=&quot;flyout&quot; /\&gt;
+    <AppInformation Mode="flyout" /> 
 
-\&lt;HyperLinks TopMarging=&quot;30&quot;\&gt;
+    <HyperLinks TopMarging="30"> 
 
-\&lt;HyperLink Text=&quot;Terms &amp;amp; conditions&quot; Url=&quot;https://support.microsoft.com/&quot; HorizontalAlignment=&quot;center&quot;/\&gt;
+      <HyperLink  Text="Terms &amp; conditions" Url="https://support.microsoft.com/" HorizontalAlignment="center"/> 
 
-\&lt;/HyperLinks\&gt;
+    </HyperLinks> 
 
-\&lt;/UX\&gt;
+  </UX> 
 
-\&lt;/AppInstallerUX\&gt;
+</AppInstallerUX> 
 
 ```
 
