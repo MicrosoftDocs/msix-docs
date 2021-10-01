@@ -11,7 +11,7 @@ ms.topic: article
 
 The App Installer App is used for all MSIX installations providing a consistent experience for all users installing an MSIX application. While this consistency is good, we want to also provide the ability for developers to customize the install experience that they are providing to their users. This feature is available on Windows 10 1709 and later.
 
-# Create your custom MsixAppInstallerData.xml file
+## Create your custom MsixAppInstallerData.xml file
 
 The first thing you are going to need to customize your App Installer experience is the customization xml file. You can customize several features of your App Installer UX, to make your own unique installer experience. Be sure to save the file name as **MsixAppInstallerData.xml**
 
@@ -79,9 +79,9 @@ HyperLinkFontSize=&quot;12&quot;\&gt;
 
 Save your file as &#39;MsixAppInstallerData.xml&#39;
 
-# Add the xml file to your MSIX application
+## Add the xml file to your MSIX application
 
-## Using the MSIX Packaging Tool – Package Editor
+### Using the MSIX Packaging Tool – Package Editor
 
 1) Open your MSIX application with Package Editor in the MSIX Packaging Tool
 
@@ -91,7 +91,7 @@ Save your file as &#39;MsixAppInstallerData.xml&#39;
 
 4) Save your MSIX Package – be sure to increment the version and sign the package
 
-# Troubleshooting
+## Troubleshooting
 
 - The file must be named MsixAppInstallerData.xml
 - The file must be in the folder named MsixAppInstallerData
