@@ -39,7 +39,7 @@ Here is a list of parameters available for customization:
 | Hyperlink:: HorizontalAlignment | Alignment of hyperlink within the window. Left, center, right |
 
 ## Sample xml:
-```console
+```xml
 
 \&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?\&gt;
 
@@ -85,7 +85,7 @@ Save your file as &#39;MsixAppInstallerData.xml&#39;
 
 1) Open your MSIX application with Package Editor in the MSIX Packaging Tool
 
-2) Go to your Package Files and add a new folder under your Package root called &#39;Msix.AppInstaller.Data&quot;
+2) Go to your Package Files and add a new folder under your Package root called &#39;Msix.AppInstaller.Data&#39;
 
 3) Add your MsixAppInstallerData.xml file to your newly created folder.
 
