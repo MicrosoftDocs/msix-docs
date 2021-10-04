@@ -252,6 +252,8 @@
       href: desktop/Managing-your-MSIX-deployment-targetdevices.md
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
+    - name: Create custom App Installer UX
+      href: app-installer/How-to-create-custom-app-installer-ux.md
     - name: Auto-update and repair apps
       href: app-installer/auto-update-and-repair--overview.md
     - name: App Installer Authentication Manager
