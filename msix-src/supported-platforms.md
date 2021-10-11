@@ -46,6 +46,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
 | Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
+| Shared Containers                                                                                                         | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
 
 ### Other view
 
@@ -63,12 +64,12 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
 | Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
-
+| Shared Containers                                                                                                         | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :x:                 | :x:                 | :x:                          |
 
 
 ### Windows 10 Support
 > [!div class="mx-tableFixed"]
-| Features                                                                                                                  | 1709               | 1803               | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               | 21H2               |
+| Features                                                                                                                  | 1709               | 1803               | 1809  **           | 1903               | 1909   **          | 2004               | 20H2   **          | 21H1               | 21H2               |
 |---------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
 | [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -82,6 +83,8 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Shared Containers                                                                                                         | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+
 
 ### Windows 11 Support
 > [!div class="mx-tableFixed"]
@@ -99,6 +102,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :heavy_check_mark: |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :heavy_check_mark: |
 | Support for Windows App App Services                                                                                      | :heavy_check_mark: |
+| Shared Containers                                                                                                         | :heavy_check_mark: |
 
 
 ### Windows Long Term Servicing Channel
@@ -117,6 +121,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                          | :x:                          |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                          | :x:                          |
 | Support for Windows App App Services                                                                                      | :x:                          | :x:                          |
+| Shared Containers                                                                                                         | :x:                          | :x:                          |
 
 
 ### Windows Server Support
@@ -135,23 +140,26 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                 | :x:                 |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                 | :x:                 |
 | Support for Windows App App Services                                                                                      | :x:                 | :x:                 |
+| Shared Containers                                                                                                         | :x:                 | :x:                 |
 
-### Windows Enterprise
+### Windows Desktop
 
-| Features                                                                                                                  | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               | 21H2               | Windows 10 LTSC 2019 | Windows 10 LTSC 2021 | Windows 11         |
-|---------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|----------------------|----------------------|--------------------|
-| [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| [Defer registration flag](desktop/managing-your-msix-deployment-update.md)                                                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                  | :x:                  | :heavy_check_mark: |
-| [Force update from any version downgrade](desktop/managing-your-msix-deployment-targetdevices.md)                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| Force provisioning                                                                                                        | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                  | :x:                  | :heavy_check_mark: |
-| Identity for packaged desktop apps                                                                                        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| [Modification packages](modification-packages.md)                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| Native MSIX install and uninstall                                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| [Package Support Framework (PSF)](psf/package-support-framework-overview.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark: |
-| [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                  | :x:                  | :heavy_check_mark: |
-| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                  | :x:                  | :heavy_check_mark: |
-| Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                  | :x:                  | :heavy_check_mark: |
+| Features                                                                                                                  | Windows 10 1809 ** | Windows 10 1903    | Windows 10 1909    | Windows 10 2004    | Windows 10 20H2 ** | Windows 10 21H1    | Windows 10 21H2    | Windows 11 21H2    |
+|---------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Defer registration flag](desktop/managing-your-msix-deployment-update.md)                                                | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Force update from any version downgrade](desktop/managing-your-msix-deployment-targetdevices.md)                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Force provisioning                                                                                                        | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Identity for packaged desktop apps                                                                                        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Modification packages](modification-packages.md)                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Native MSIX install and uninstall                                                                                         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Package Support Framework (PSF)](psf/package-support-framework-overview.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Shared Containers                                                                                                         | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :heavy_check_mark: |
+
 
 
 
@@ -171,6 +179,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                 | :x:                 |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                 | :x:                 |
 | Support for Windows App App Services                                                                                      | :x:                 | :x:                 |
+| Shared Containers                                                                                                         | :x:                 | :x:                 |
 
 
 ## Package format support
