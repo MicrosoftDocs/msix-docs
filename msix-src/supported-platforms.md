@@ -69,7 +69,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 
 ### Windows 10 Support
 > [!div class="mx-tableFixed"]
-| Features                                                                                                                  | 1809  (LTSC 2019)  | 1903               | 1909               | 2004               | 20H2 (LTSC 2021)   | 21H1               | 21H2               |
+| Features                                                                                                                  | 1809 ( * )         | 1903               | 1909               | 2004               | 20H2 ( * )         | 21H1               | 21H2               |
 |---------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
 | [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -84,6 +84,9 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Support for Windows App App Services                                                                                      | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Shared Containers                                                                                                         | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+
+Windows 10 1809 and Windows LTSC 2019 support the same features.
+Windows 10 20H2 and Windows LTSC 2021 support the same features.
 
 
 ### Windows 11 Support
