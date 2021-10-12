@@ -41,7 +41,7 @@ Apptimized Proof, which represents a Test step in the Evergreen concept, is perf
  Fix & Run steps provide application packages ready for deployment via the Apptimized Catalogue, Factory, and Workspace.
 Apptimized Catalogue supports ready to deploy applications in 32-bit and 64-bit versions and various formats: MSI, APP-V, Intunewin, MSIX, PSADT wrapping. All of the latest applications become available within 48 hours after a user request. A single, cost-effective, and swift service with dozens of the most popular ready-to-deploy applications is well suited for a customer interested in streamlined application packaging.
 
-Apptimized Factory packaging service provides the ability to work with key formats – MSI, APP-V, Intunewin, СloudPaging, CloudHouse, ThinApp, MSIX, and VSL built on the secure and scalable Microsoft Azure. The platform supports packaging for Windows platforms and Mac, VMWare, Citrix, and Linux. With more than 15 years of packaging expertise, our specialists will create application packages of any complexity. Using the Portal provides 24/5 support via live chat at any stage of packaging and deployment.
+Apptimized Factory packaging service provides the ability to work with key formats – MSI, APP-V, Intunewin, СloudPaging, ThinApp, MSIX, and VSL built on the secure and scalable Microsoft Azure. The platform supports packaging for Windows platforms and Mac, VMWare, Citrix, and Linux. With more than 15 years of packaging expertise, our specialists will create application packages of any complexity. Using the Portal provides 24/5 support via live chat at any stage of packaging and deployment.
 
 Apptimized Workspace is an application packaging environment where customers can successfully create the package going through the process – Discovery, Packaging, and Testing. With the use of Workspace, a сloud packaging toolbox that contains all applications in one place for packaging, making the customers' personal experience as convenient as possible. As a result, create, edit and customize packages under MSI, MSIX, App-V, Intunewin format. Access anywhere and anytime with simple integration into the customer's workflow system via API, combined with a secure, modern, and customizable environment. Thus, deploy your ready-made and tested package into SCCM or Intune via the integration option or direct to download it. 24/5 live support is available.
 
@@ -105,18 +105,6 @@ Our MSIX and app attach API offerings are broken down into the following:
 How we plug our APIs into your existing traditional end to end application management workflows: [End-to-End Application Packaging & Testing Automation Solution](https://www.accessitautomation.com/access-capture-end-to-end) 
 
 Modern API driven application management: [Modern API-Driven Application Packaging & Testing](https://www.accessitautomation.com/api-driven-app-packaging-testing) 
-
-## Cloudhouse Compatibility Containers
-
-For Enterprise customers who have line of business applications that are incompatible with Windows 10 and 10 S, Cloudhouse’s Compatibility Containers enable Windows XP and 7 apps to run on Windows 10 and then converts them to run on the Universal Windows Platform (UWP) for delivery through Microsoft Store for Business, or Microsoft InTune without changing the source code. Register for a [Free Trial](https://www.cloudhouse.com/free-trial).
-
-![Cloudhouse logo](images/cloudhouse-container-logo_30.png)
-
-Cloudhouse provides an Auto Packager for packaging line of business applications into [Compatibility Containers](https://docs.cloudhouse.com/37613-overview/266723-compatibility-containers-for-applications) on the operating systems that the apps runs on today (For example: Windows XP), and then [prepare it for conversion](https://docs.cloudhouse.com/37613-overview/266725-compatibility-containers-for-desktop-bridge?from_search=17883905) to UWP. 
-
-The Auto Packager uses install / capture and runtime analysis to create a Container for the application which includes the application’s files, registry, runtimes, dependencies, and the compatibility and redirection engine required to enable the application to run on Windows 10. The Container provides isolation for the application and its runtimes, so that that they do not affect or conflict with other applications running on the user’s device.
-
-Find out more about how you can deliver business applications through the Microsoft Store for Business Read in our [Release blog](https://www.cloudhouse.com/resources/release-solution-to-get-any-line-of-business-app-to-uwp).
 
 ## FireGiant
 
