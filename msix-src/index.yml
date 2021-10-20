@@ -123,6 +123,8 @@ additionalContent:
               url: desktop/desktop-to-uwp-prepare.md
             - text: Understanding how packaged desktop apps run on Windows
               url: desktop/desktop-to-uwp-behind-the-scenes.md
+            - text: Flexible virtualization
+              url: desktop/flexible-virtualization.md
         # Card
         - title: Build
           links:
