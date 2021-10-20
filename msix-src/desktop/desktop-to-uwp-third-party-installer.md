@@ -147,7 +147,7 @@ With Infinity Evergreen’s 6 step automated MSIX packaging process, it will all
 ## Liquit Release & Patch Management
 Liquit Setup Commander is part of Liquit's Release & Patch Management offering. Its Repackaging Wizard uses most popular packaging tools like the Microsoft MSIX Packaging Tool to significantly simplify and speed up repackaging of legacy setups to MSIX.
 
-![Liquit logo](images/liquit_logo.png)
+![Liquit logo](images/Liquit_Logo.png)
 
 
 Within the Repackaging Wizard you have the option to convert the MSIX package into an MSIX app attach VHD or CIM during the repackaging process. Which then can be used with Windows 10 Enterprise multi-session 2004, on premises or as part of a Microsoft Windows Virtual Desktop implementation.
