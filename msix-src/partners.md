@@ -62,7 +62,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-        [![Liquit logo](images/Liquit_Logo.png)](https://www.liquit.com/msix-readiness/)
+        [Liquit logo](https://www.liquit.com/msix-readiness/)
     :::column-end:::
     
     :::column:::
