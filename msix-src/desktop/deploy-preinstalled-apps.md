@@ -32,7 +32,7 @@ The staging of a packaged app can be performed on an offline image (.wim, .vhd, 
 After a packaged app has been staged, the app can then be registered to users on the device. Registration occurs on a per-user basis, and begins when a user of the device logs on. The operating system will then load the preinstalled packaged app package creating user specific app data, create file type associations, and app tiles in the start menu. This accomplished by the App Rediness Service (ARS) which is aware of all pre-installed apps. 
 
 ## DISM
-DISM is a command-line tool that can be used to service and prepare WIndows images, including those used for Windows Pre-Execution (Win-PE), Recovery Environment (Win-RE), and Windows Setup. Dism can be used to service a Windows image (.wim) or virtual hard disks (.vhd, or .vhdx).
+DISM is a command-line tool that can be used to service and prepare Windows images, including those used for Windows Pre-Execution (Win-PE), Recovery Environment (Win-RE), and Windows Setup. Dism can be used to service a Windows image (.wim) or virtual hard disks (.vhd, or .vhdx).
 
 ## Provisioning packages
 All app provisioning is encapsulated within the DISM tool, and it does both the staging and ARS setup. To do provisioning, the IT Pro needs an app package (.msix, .msixbundle, .appx or .appxbundle) and any dependency packages. 

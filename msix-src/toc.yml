@@ -10,6 +10,8 @@
       href: msix-container.md     
     - name: Understanding how MSIX packages run on Windows
       href: desktop/desktop-to-uwp-behind-the-scenes.md
+    - name: Flexible virtualization
+      href: desktop/flexible-virtualization.md
     - name: MSIX package signing
       items:
         - name: Overview
@@ -252,6 +254,8 @@
       href: desktop/Managing-your-MSIX-deployment-targetdevices.md
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
+    - name: Create custom App Installer UX
+      href: app-installer/How-to-create-custom-app-installer-ux.md
     - name: Auto-update and repair apps
       href: app-installer/auto-update-and-repair--overview.md
     - name: App Installer Authentication Manager
