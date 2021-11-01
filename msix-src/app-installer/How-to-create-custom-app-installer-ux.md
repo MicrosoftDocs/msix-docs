@@ -1,4 +1,4 @@
----
+
 title: How to create a custom App Installer UX
 description: A document describing how to create the custom UX xml file and how to add it to your MSIX package to create a custom look and feel for your App Installer installs.
 author: sharlaakers
@@ -11,9 +11,9 @@ ms.topic: article
 
 The App Installer App is used for all MSIX installations providing a consistent experience for all users installing an MSIX application. While this consistency is good, we want to also provide the ability for developers to customize the install experience that they are providing to their users. This feature is available on Windows 10 1709 and later.
 
-## Create your custom MsixAppInstallerData.xml file
+## Create your custom MSIXAppInstallerData.xml file
 
-The first thing you are going to need to customize your App Installer experience is the customization xml file. You can customize several features of your App Installer UX, to make your own unique installer experience. Be sure to save the file name as **MsixAppInstallerData.xml**
+The first thing you are going to need to customize your App Installer experience is the customization xml file. You can customize several features of your App Installer UX, to make your own unique installer experience. Be sure to save the file name as **MSIXAppInstallerData.xml**
 
 Here is a list of parameters available for customization:
 
@@ -87,14 +87,14 @@ Save your file as &#39;MsixAppInstallerData.xml&#39;
 
 2) Go to your Package Files and add a new folder under your Package root called &#39;Msix.AppInstaller.Data&#39;
 
-3) Add your MsixAppInstallerData.xml file to your newly created folder.
+3) Add your MSIXAppInstallerData.xml file to your newly created folder.
 
 4) Save your MSIX Package – be sure to increment the version and sign the package
 
 ## Troubleshooting
 
-- The file must be named MsixAppInstallerData.xml
-- The file must be in the folder named MsixAppInstallerData
+- The file must be named MSIXAppInstallerData.xml
+- The file must be in the folder named MSIXAppInstallerData
 - The folder must be underneath the Package root of the package files
 - Check your OS version and your App Installer version
 - Double check the validity of your xml file

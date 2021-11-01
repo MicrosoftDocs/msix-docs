@@ -135,7 +135,7 @@ signtool sign /fd sha256 /dlib Microsoft.Acs.Dlib.dll /dmdf <Azure AAD in .json 
 ```
 
 > [!NOTE]
-> * We recommend that you use one of the timestamp options when you sign your package. If you do not apply a [timestamp](signing-package-overview.md#timestamping), the signing will expire in one year and the app will need to be resigned.
+> * Certificates generated for Device Guard signing v2 are valid for one day. We recommend that you use one of the timestamp options when you sign your package. If you do not apply a [timestamp](signing-package-overview.md#timestamping), the signing will expire in one day and the app will need to be resigned.
 > * Make sure that the publisher name in your package's manifest matches the certificate you are using to sign the package. With this feature, it will be your leaf certificate. For example, if leaf certificate is **CompanyName**, than the publisher name in the manifest must be **CN=CompanyName**. Otherwise, the signing operation will fail.
 > * Only the SHA256 algorithm is supported.
 > * When you sign your package with Device Guard signing, your package is not being sent over the Internet.
