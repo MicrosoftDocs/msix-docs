@@ -1,6 +1,6 @@
 ---
-description: This guide the ability to project files 
-title: Ability to project files in MSIX packages
+description: This guide the declare a directory in any location based on package app directory
+title: Create a directory in any location based on packaged app directory
 ms.date: 11/04/2021
 ms.topic: article
 keywords: msix
