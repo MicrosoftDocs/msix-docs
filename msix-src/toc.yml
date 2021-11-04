@@ -314,6 +314,8 @@
           href: /windows/uwp/publish/?context=/windows/msix/render
     - name: Shared package container
       href: manage/shared-package-container.md
+    - name: Create directory based on package app directory 
+      href: manage/create-directory.md
     - name: MSIX package updates
       items: 
         - name: Overview
