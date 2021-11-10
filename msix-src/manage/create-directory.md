@@ -1,5 +1,5 @@
 ---
-description: This guide the declare a directory in any location based on package app directory
+description: This is guide the declare a directory in any location based on package app directory in the Manifest. 
 title: Create a directory in any location based on packaged app directory
 ms.date: 11/04/2021
 ms.topic: article
@@ -8,10 +8,10 @@ ms.localizationpriority: medium
 ---
 
 # Create a directory in any location based on packaged app directory
-In order to satisfy certain requirements, apps may require the files to appear to exist in their existing install directory. For example, if a particular app was expecting a file in a folder, like C:\Program Files\Contoso; that directory can be modified by the admins. So starting in Windows 11, apps can specify a directory outside of the WindowsApps directory and the OS will ensure that files will appear in that location with proper ACLs inherited from the parent directory. 
+In order to satisfy certain requirements, apps may require the files to appear in their existing install directory. For example, if a particular app was expecting a file in a folder, like C:\Program Files\Contoso; that directory can be modified by the admins. Starting in Windows 11, apps can specify a directory outside of the WindowsApps directory and the OS will ensure that files will appear in that location with proper ACLs inherited from the parent directory. 
 
 ## Declaring the location of the directory in the manifest 
-To enabl this feature, the package will need to declare where to project the files in the package to. Below is an example
+To enable this feature, the package will need to declare where to project the files in the package to. Below is an example
 
 ```xml
 <Package...> 
