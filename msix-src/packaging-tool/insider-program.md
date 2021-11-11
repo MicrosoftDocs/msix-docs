@@ -30,7 +30,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Version 1.2021.1026.0 - Public Version
+### Version 1.2021.1105.0 - Public Version
 - Added support for capturing [legacy context menus](support-legacy-context-menus.md) during conversion.
 - General bug fixes
 
