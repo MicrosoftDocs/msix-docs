@@ -10,6 +10,8 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2021.709.0 - Public Version
-- Fixed minimum version requirement for packages with Services
-- general bug fixes
+## Version 1.2021.1105.0 - Public Version
+- Added support for capturing [legacy context menus](../support-legacy-context-menus.md) during conversion.
+- Fixed a bug in Package Editor where it wouldn't create packages
+- General bug fixes
+

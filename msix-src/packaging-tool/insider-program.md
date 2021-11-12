@@ -30,9 +30,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2021.709.0 (Public)
-- Fixed minimum version requirement for packages with Services
-- general bug fixes
+### Version 1.2021.1105.0 - Public Version
+- Added support for capturing [legacy context menus](support-legacy-context-menus.md) during conversion.
+- General bug fixes
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
