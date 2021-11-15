@@ -58,7 +58,7 @@ Each line must contain a pair of XML and CAT file paths. The artifacts must be o
 
 2. Call makeappx.exe with  **/pb** flag to point to the publisher bridging file:
 ```powershell
-makeappx.exe /p app.msix /d .\app\ /pb artifacts.txt
+makeappx.exe pack /p app.msix /d .\app\ /pb artifacts.txt
  ```
 3. Sign your package using the new certificate
 ```powershell 
