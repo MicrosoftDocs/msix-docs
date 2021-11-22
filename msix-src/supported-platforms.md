@@ -53,7 +53,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 
 ### Windows Server Support
 > [!div class="mx-tableFixed"]
-| Features                                                                                                                  | Windows Server 2019 | Windows Server 2021 |
+| Features                                                                                                                  | Windows Server 2019 | Windows Server 2022 |
 |---------------------------------------------------------------------------------------------------------------------------|---------------------|---------------------|
 | [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :heavy_check_mark:  | :heavy_check_mark:  |
 | [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark:  | :heavy_check_mark:  |
@@ -74,12 +74,12 @@ The following table shows which MSIX features and scenarios are supported in dif
 
 The following table shows which package formats are supported in different versions of Windows 10.
 
-| Package format | 1709               | 1803               | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               | 21H2               | Windows 11         |
-|----------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| .msix          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| .msixbundle    | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| .appx          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| .appxbundle    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Package format | Windows 10 (1809)  | Windows 10 (1903)  | Windows 10 (1909)  | Windows 10 (2004)  | Windows 10 (20H2)  | Windows 10 (21H1)  | Windows 10 (21H2)  | Windows 11 (21H2)  |
+|----------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| .msix          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| .msixbundle    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| .appx          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| .appxbundle    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 > [!Important]
 > Prior to Windows 10 2004, Sideloading of Windows Apps must be enabled to allow non-Store Windows Apps to be installed on Enterprise, Education, and LTSC SKUs. Windows 10 Home, and Professional SKUs had Sideloading of Windows Apps enabled by default.
@@ -88,12 +88,12 @@ The following table shows which package formats are supported in different versi
 
 The following table shows which Microsoft Store features are supported in different versions of Windows 10.
 
-| Features            | 1709 | 1803 | 1809               | 1903               | 1909               | 2004               | 20H2               | 21H1               | 21H2               | Windows 11         |
-|---------------------|------|------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| Publishing          | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Update Notification | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Streaming Install   | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Delta Updates       | :x:  | :x:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Features            | Windows 10 (1809)  | Windows 10 (1903)  | Windows 10 (1909)  | Windows 10 (2004)  | Windows 10 (20H2)  | Windows 10 (21H1)  | Windows 10 (21H2)  | Windows 11 (21H2)  |
+|---------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| Publishing          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Update Notification | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Streaming Install   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Delta Updates       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 > [!NOTE]
 > .appx or .appxbundle will work for all versions of Windows 10 listed above. The table only reflects .msix or .msixbundle behavior.
