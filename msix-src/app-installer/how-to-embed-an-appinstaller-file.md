@@ -10,11 +10,11 @@ ms.custom: "RS5, seodec18"
 
 # Using an embedded App Installer file to update your app
 >[!Important]
->The use of an embedded App Installer file is currently available in Windows Insider build of Windows 10.
+>The use of an embedded App Installer file is available in Windows version 10.0.21300.0. To make use of this feature, ensure that the MaxVersionTested is referencing this or a newer version of the Windows operating system.
 
 The App Installer file provides an update path that a Windows app can traverse searching for updates, and repairs.
 
-When you use Visual Studio to build and publish your Windows app with an embedded App Installer file, you must ensure that the Windows 10 SDK 2104 (or newer) has been installed, and the project properties has Windows 10 21H1 (or newer) as the Targetted versions. If this has not been configured, the Windows app will not set the embedded AppInstaller configurations to the device when the Windows app is installed.
+When you use Visual Studio to build and publish your Windows app with an embedded App Installer file, you must ensure that the Windows 10 SDK 2104 (or newer) has been installed, and the project properties has Windows 10 21H1 (or newer) as the Targetted versions (MaxVersionTested and MinVersion). If this has not been configured, the Windows app will not set the embedded AppInstaller configurations to the device when the Windows app is installed.
 
 ## How to - MSIX Packaging Tool
 The following steps will guide you through how to use the MSIX Packaging Tool to edit a pre-existing Windows app to include an embedded App Installer app. 

@@ -37,6 +37,6 @@ When a new device is setup with the MSIX Packaging Tool installed, copy the sett
 
 ## Considerations
 
-* Make sure the <DefaultSaveLocation> entry is removed or is a valid location for a user. If the value is not provided or the location is invalid, the tool will default to C:\Users\\%username%\Desktop.
+* Make sure the \<DefaultSaveLocation\> entry is removed or is a valid location for a user. If the value is not provided or the location is invalid, the tool will default to C:\Users\\%username%\Desktop.
 
 * Settings files should only be copied to the same version of the packaging tool or a later version. Settings may not be honored if the version in the settings.xml is copied to an older version of the tool. We recommend that you always use the latest version of the tool for the latest fixes and for the best packaging experience.  

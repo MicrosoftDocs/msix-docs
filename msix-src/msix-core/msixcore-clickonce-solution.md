@@ -88,7 +88,7 @@ Create an HTML page or any other web app as required per your needs. Add the lin
 
 #### Configure the web app for app package MIME types
 
-Open the **Web.config** file from the solution explorer and add the following XML within the <configuration> element.
+Open the **Web.config** file from the solution explorer and add the following XML within the \<configuration\> element.
 
 ```xml
 <system.webServer>
