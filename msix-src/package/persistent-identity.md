@@ -23,7 +23,7 @@ This is a step-by-step instruction on how to sign your package with the new cert
 1. Write the XML artifact detailing the old and new publishers. Name it anything you like, artifact.xml:
  ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<Publisher xmlns=http://schemas.microsoft.com/appx/publisherbridging/2021 Old="CN=Old" New="CN=New" />
+<Publisher xmlns="http://schemas.microsoft.com/appx/publisherbridging/2021" Old="CN=Old" New="CN=New" />
 ```
 2. Write a Catalog Definition File (CDF) to create the catalog that will be used to sign the artifact. Name it anything you like, artifact.cdf:
  ```
