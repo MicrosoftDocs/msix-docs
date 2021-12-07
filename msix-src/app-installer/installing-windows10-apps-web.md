@@ -10,7 +10,7 @@ ms.custom: RS5
 
 # Installing Windows 10 apps from a web page
 > [!IMPORTANT]
-> The ms-appinstaller protocol has been disabled. What this means is App Installer will not be able to install an app directly from a web server. Please ask the vendor to update the web link so that the entire package will be downloaded. 
+> The ms-appinstaller protocol has been disabled. What this means is App Installer will not be able to install an app directly from a web server and therefore you will not be able to distribute your app from your website. Please remove this protocol from your package manifest so that the entire package will be downloaded. 
 
 Typically, an app needs to be locally available on a device before it can be installed with the App Installer. For the web scenario, this means that the user must download the app package from the web server, after which it can be installed with App Installer. This is inefficient and wastes disk space, which is why App Installer now has built in features to streamline the process.
 
