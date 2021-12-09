@@ -48,7 +48,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Support for Windows App App Services                                                                                      | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Shared Containers                                                                                                         | :x:                         | :x:                | :x:                | :x:                | :x:                         | :x:                | :x:                | :heavy_check_mark: |
+| Shared package containers                                                                                                         | :x:                         | :x:                | :x:                | :x:                | :x:                         | :x:                | :x:                | :heavy_check_mark: |
 
 
 ### Windows Server Support
@@ -67,7 +67,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                 | :x:                 |
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                 | :x:                 |
 | Support for Windows App App Services                                                                                      | :x:                 | :x:                 |
-| Shared Containers                                                                                                         | :x:                 | :x:                 |
+| Shared package containers                                                                                                         | :x:                 | :x:                 |
 
 
 ## Package format support
