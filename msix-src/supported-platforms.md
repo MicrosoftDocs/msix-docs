@@ -64,9 +64,9 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Modification packages](modification-packages.md)                                                                         | :heavy_check_mark:  | :heavy_check_mark:  |
 | Native MSIX install and uninstall                                                                                         | :heavy_check_mark:  | :heavy_check_mark:  |
 | [Package Support Framework (PSF)](psf/package-support-framework-overview.md)                                              | :heavy_check_mark:  | :heavy_check_mark:  |
-| [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                 | :x:                 |
-| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                 | :x:                 |
-| Support for Windows App App Services                                                                                      | :x:                 | :x:                 |
+| [Windows services](packaging-tool/convert-an-installer-with-services.md)                                                  | :x:                 | :heavy_check_mark:                 |
+| [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                 | :heavy_check_mark:                 |
+| Support for Windows App App Services                                                                                      | :x:                 | :heavy_check_mark:                 |
 | Shared package containers                                                                                                         | :x:                 | :x:                 |
 
 
