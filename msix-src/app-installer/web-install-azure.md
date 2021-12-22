@@ -4,7 +4,6 @@ description: This tutorial demonstrates how to set up an Azure web server, verif
 ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, Azure web server
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

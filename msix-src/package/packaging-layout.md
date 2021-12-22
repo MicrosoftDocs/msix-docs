@@ -4,7 +4,6 @@ description: The packaging layout is a single document that describes packaging 
 ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, packaging, package layout, asset package
-ms.localizationpriority: medium
 ---
 
 # Package creation with the packaging layout  

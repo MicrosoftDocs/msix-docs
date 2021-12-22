@@ -4,7 +4,6 @@ description: This article describes the process of creating a bundle after conve
 ms.date: 10/25/2018
 ms.topic: article
 keywords: windows 10, msix
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

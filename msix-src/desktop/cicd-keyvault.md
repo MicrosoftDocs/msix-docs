@@ -4,7 +4,6 @@ title: MSIX and CI/CD Pipeline signing with Azure Key Vault
 ms.date: 03/25/2021
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

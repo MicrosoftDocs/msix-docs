@@ -4,7 +4,6 @@ description: This article lists known issues with the PackageManager and Package
 ms.date: 2/20/2019
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

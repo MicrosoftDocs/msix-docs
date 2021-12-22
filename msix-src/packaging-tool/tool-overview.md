@@ -4,7 +4,6 @@ description: This article introduces the MSIX Packaging Tool, which enables you 
 ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

@@ -5,7 +5,6 @@ author: Huios
 ms.date: 12/17/2020
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

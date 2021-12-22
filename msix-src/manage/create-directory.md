@@ -4,7 +4,6 @@ title: Create a directory in any location based on packaged app directory
 ms.date: 11/04/2021
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # Create a directory in any location based on packaged app directory

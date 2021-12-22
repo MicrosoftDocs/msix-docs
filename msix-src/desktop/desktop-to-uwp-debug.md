@@ -5,7 +5,6 @@ ms.date: 02/03/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
-ms.localizationpriority: medium
 ---
 
 # Run, debug, and test an MSIX package

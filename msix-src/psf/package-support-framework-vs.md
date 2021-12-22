@@ -4,7 +4,6 @@ title: Apply Package Support Framework in Visual Studio
 ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ---
 
 # Apply Package Support Framework in Visual Studio

@@ -4,7 +4,6 @@ description: Learn more about which processor architecture(s) you should use whe
 ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp, packaging, architecture, package configuration
-ms.localizationpriority: medium
 ---
 
 # App package architectures

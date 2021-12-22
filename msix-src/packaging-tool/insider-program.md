@@ -4,7 +4,6 @@ description: This article introduces the MSIX Packaging Tool Insider Program, wh
 ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

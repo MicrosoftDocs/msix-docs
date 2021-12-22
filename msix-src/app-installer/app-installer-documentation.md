@@ -4,7 +4,6 @@ description: This article provides links to documentation about the App Installe
 ms.date: 2/20/2019
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API, XML, schema
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

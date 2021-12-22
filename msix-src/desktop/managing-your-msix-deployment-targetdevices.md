@@ -5,7 +5,6 @@ ms.date: 02/16/2021
 ms.topic: article
 keywords: windows 10, deployment, msix
 ms.assetid:  
-ms.localizationpriority: medium
 ---
   
 # Plan for your deployment

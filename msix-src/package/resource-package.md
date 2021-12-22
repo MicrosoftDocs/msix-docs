@@ -6,7 +6,6 @@ author: dianmsft
 ms.topic: article
 ms.author: diahar
 keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio
-ms.localizationpriority: medium
 ---
 
 # Resource Packages 

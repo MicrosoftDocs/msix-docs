@@ -7,7 +7,6 @@ author: dianmsft
 ms.author: diahar
 ms.topic: article
 keywords: windows 10, msix, uwp, content group map, streaming install, app streaming install, source content group map
-ms.localizationpriority: medium
 ---
 
 # Create and convert a source content group map

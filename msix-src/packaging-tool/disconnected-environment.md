@@ -4,7 +4,6 @@ description: This article describes how to acquire all of the assets required fo
 ms.date: 02/05/2020
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # Using the MSIX Packaging Tool in a disconnected environment

@@ -5,7 +5,6 @@ ms.date: 02/05/2020
 ms.topic: article
 author: dianmsft
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ---
 
 # Known issues and troubleshooting for SignTool

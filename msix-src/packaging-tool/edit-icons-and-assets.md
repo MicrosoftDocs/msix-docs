@@ -4,7 +4,6 @@ description: Describes how to edit icons and assets during the app conversion pr
 ms.date: 06/27/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

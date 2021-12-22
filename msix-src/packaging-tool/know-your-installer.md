@@ -4,7 +4,6 @@ description: This article lists things you need to know before packaging your de
 ms.date: 01/29/2020
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # Know your installer

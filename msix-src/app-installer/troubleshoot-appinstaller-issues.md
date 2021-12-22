@@ -4,7 +4,6 @@ description: Common issues when sideloading applications with the App Installer 
 ms.date: 4/28/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

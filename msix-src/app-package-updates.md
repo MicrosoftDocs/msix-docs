@@ -4,7 +4,6 @@ description: Describes how MSIX packages are optimized to ensure that only the e
 ms.date: 11/30/2020
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx, pfan, package family name
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

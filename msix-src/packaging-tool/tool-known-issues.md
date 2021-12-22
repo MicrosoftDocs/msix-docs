@@ -4,7 +4,6 @@ description: Describes known issues and provides troubleshooting tips to conside
 ms.date: 06/11/2020
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

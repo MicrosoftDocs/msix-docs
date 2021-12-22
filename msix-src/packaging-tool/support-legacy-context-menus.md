@@ -4,7 +4,6 @@ description: Describes how to support legacy context menus for MSIX apps.
 ms.date: 8/16/2021
 ms.topic: article
 keywords: MSIX, IContextMenu, DropHandler, win32 shell extensions, MPT, MSIX Packaging Tool
-ms.localizationpriority: medium
 ---
 
 # Support legacy context menus for packaged apps

@@ -4,7 +4,6 @@ title: Package Support Framework - Working Directory fixup
 ms.date: 12/16/2020
 ms.topic: article
 keywords: windows 10, uwp, psf, package support framework, working directory, workingdirectory, msix
-ms.localizationpriority: medium
 ---
 
 # Package Support Framework - Working Directory fixup

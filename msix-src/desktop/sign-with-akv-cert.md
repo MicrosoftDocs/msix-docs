@@ -4,7 +4,6 @@ description: This article describes how to sign your app package with a certific
 ms.date: 05/07/2020
 ms.topic: article
 keywords: windows 10, msix, uwp, azure key vault, visual studio
-ms.localizationpriority: medium
 ---
 
 # Sign packages with Azure Key Vault

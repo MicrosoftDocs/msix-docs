@@ -4,7 +4,6 @@ description: This section contains or links to articles about App Installer and 
 ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
