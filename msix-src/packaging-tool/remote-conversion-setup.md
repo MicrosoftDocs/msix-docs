@@ -4,7 +4,6 @@ description: This article describes how to set up and connect to a remote machin
 ms.date: 02/26/2019
 ms.topic: article
 keywords: MSIX, MPT, MSIX Packaging Tool, remote IP
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

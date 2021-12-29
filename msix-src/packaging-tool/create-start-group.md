@@ -4,7 +4,6 @@ description: Describes how to enable multiple packaged MSIX application to be gr
 ms.date: 12/02/2020
 ms.topic: article
 keywords: windows 10, uwp, msix, appx
-ms.localizationpriority: medium
 ---
 
 # Group applications under a folder in the Start menu

@@ -4,7 +4,6 @@ title: Package your app as an MSIX in Visual Studio
 ms.date: 01/27/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

@@ -4,7 +4,6 @@ description: This article describes how modification packages will work with the
 ms.date: 02/04/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

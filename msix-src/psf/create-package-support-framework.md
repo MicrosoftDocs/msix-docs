@@ -4,7 +4,6 @@ title: Use the Package Support Framework to create a new runtime fix
 ms.date: 05/13/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ---
 
 # Create a Package Support Framework fixup 

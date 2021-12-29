@@ -4,7 +4,6 @@ title: How to run scripts with the Package Support Framework to create an applic
 ms.date: 04/14/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

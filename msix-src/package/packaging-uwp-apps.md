@@ -6,7 +6,6 @@ ms.date: 07/18/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
 f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
-ms.localizationpriority: medium
 ---
 
 # Package a desktop or UWP app in Visual Studio

@@ -6,7 +6,6 @@ ms.topic: article
 author: dianmsft
 ms.author: diahar
 keywords: windows 10, msix, uwp, app installer, AppInstaller, sideload, related set, optional packages
-ms.localizationpriority: medium
 ---
 # Optional packages with executable code
  

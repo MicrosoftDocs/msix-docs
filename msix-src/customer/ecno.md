@@ -5,7 +5,6 @@ author: dianmsft
 ms.date: 06/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

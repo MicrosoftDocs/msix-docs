@@ -4,7 +4,6 @@ description: This article describes how to install a related set via App Install
 ms.date: 1/4/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

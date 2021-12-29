@@ -4,7 +4,6 @@ title: Optimize your .NET desktop apps with native images
 ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix, native image Compiler
-ms.localizationpriority: medium
 ---
 
 # Optimize your .NET desktop apps with native images

@@ -4,7 +4,6 @@ title: Package Support Framework
 ms.date: 05/14/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

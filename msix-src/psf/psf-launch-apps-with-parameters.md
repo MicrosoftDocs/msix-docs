@@ -4,7 +4,6 @@ title: Package Support Framework - Launching Windows Apps with Parameters
 ms.date: 12/16/2020
 ms.topic: article
 keywords: windows 10, uwp, psf, package support framework, arguments, app launcher, parameters, shortcut, msix
-ms.localizationpriority: medium
 ---
 
 

@@ -4,7 +4,6 @@ title: Microsoft Endpoint Configuration Manager
 ms.date: 1/31/2020
 ms.topic: article
 keywords: windows 10, uwp, mecm, configmgr, app, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

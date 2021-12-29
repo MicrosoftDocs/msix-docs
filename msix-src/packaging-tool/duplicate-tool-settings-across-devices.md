@@ -5,7 +5,6 @@ author: sharlaakers
 ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ---
 
 # Duplicate MSIX Packaging Tool Settings across multiple devices 

@@ -4,7 +4,6 @@ description: This article explains how to convert an existing installer with ser
 ms.date: 12/19/2019
 ms.topic: article
 keywords: windows 10, MSIX, MSIX Packaging Tool, services
-ms.localizationpriority: medium
 ---
 
 # Convert an installer that includes services

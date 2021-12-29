@@ -4,7 +4,6 @@ description: This article provides release notes for version 1.6 of the MSIX SDK
 ms.date: 02/06/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

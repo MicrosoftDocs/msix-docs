@@ -4,7 +4,6 @@ description: Overview of the App Installer Authentication Manager
 ms.date: 4/15/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller
-ms.localizationpriority: medium
 ---
 
 # App Installer Authentication Manager

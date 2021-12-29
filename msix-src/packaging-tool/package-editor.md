@@ -4,7 +4,6 @@ description: This article describes how to use Package Editor in the MSIX Packag
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

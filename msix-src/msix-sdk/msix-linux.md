@@ -4,7 +4,6 @@ description: This article gives an overview of how to create an MSIX 
 ms.date: 02/02/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
