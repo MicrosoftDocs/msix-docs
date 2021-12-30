@@ -4,7 +4,6 @@ description: This article provides details about the bulk conversion scripts in 
 ms.date: 1/23/2020
 ms.topic: article
 keywords: windows 10, msix, msixtoolkit, msix toolkit, toolkit, batch, conversion, bulk, bulk conversion
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

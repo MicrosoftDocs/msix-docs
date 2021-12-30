@@ -5,7 +5,6 @@ ms.date: 02/02/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
-ms.localizationpriority: medium
 ---
 
 # Set up your desktop application for MSIX packaging in Visual Studio

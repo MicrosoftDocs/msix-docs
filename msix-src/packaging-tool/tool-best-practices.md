@@ -4,7 +4,6 @@ description: This article covers best practices for repackaging your app to MSIX
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

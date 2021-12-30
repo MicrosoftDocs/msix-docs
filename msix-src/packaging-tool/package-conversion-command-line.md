@@ -4,7 +4,6 @@ description: This article describes how to create an MSIX package using the comm
 ms.date: 02/11/2019
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

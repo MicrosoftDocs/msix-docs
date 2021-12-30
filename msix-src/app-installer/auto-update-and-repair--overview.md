@@ -4,7 +4,6 @@ description: Overview of the auto-update and repair settings for Windows apps in
 ms.date: 4/15/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller
-ms.localizationpriority: medium
 ---
 
 # Auto-update and repair apps

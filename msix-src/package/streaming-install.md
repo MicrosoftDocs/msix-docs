@@ -7,7 +7,6 @@ author: dianmsft
 ms.author: diahar
 ms.topic: article
 keywords: windows 10, msix, uwp, streaming install
-ms.localizationpriority: medium
 ---
 
 # App streaming install

@@ -4,7 +4,6 @@ description: This article list out the error codes and issues that customers may
 ms.date: 11/15/2019
 ms.topic: article
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

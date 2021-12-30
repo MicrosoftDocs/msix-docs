@@ -5,7 +5,6 @@ ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, packaging
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

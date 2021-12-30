@@ -4,7 +4,6 @@ description: The flexible virtualization feature provides a way for your app to 
 ms.date: 10/20/2021
 ms.topic: article
 keywords: windows 10, uwp, msix, flexible, virtualization
-ms.localizationpriority: medium
 ---
 
 # Flexible virtualization

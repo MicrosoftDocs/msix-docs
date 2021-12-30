@@ -4,7 +4,6 @@ description: This article introduces the basics of the MSIX packaging format, a 
 ms.date: 12/02/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

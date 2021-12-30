@@ -6,7 +6,6 @@ author: dianmsft
 ms.author: diahar
 ms.topic: article
 keywords: windows 10, msix, packaging, package configuration, flat bundle
-ms.localizationpriority: medium
 ---
 
 # Flat bundle app packages 

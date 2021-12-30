@@ -4,7 +4,6 @@ description: This article describes how tocustomize your Enterprise apps by usin
 ms.date: 01/15/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

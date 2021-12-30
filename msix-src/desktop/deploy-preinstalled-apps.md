@@ -6,7 +6,6 @@ ms.topic: article
 author: dianmsft
 ms.author: diahar
 keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio, dism, preinstall, preinstalling, packaged apps, package full name, pfun
-ms.localizationpriority: medium
 ---
 
 # Preinstalling packaged apps

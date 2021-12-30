@@ -4,7 +4,6 @@ description: Provides links to additional documentation from our trusted partner
 ms.date: 04/1/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

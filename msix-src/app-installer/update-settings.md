@@ -4,7 +4,6 @@ description: This article describes options for how to configure the behavior of
 ms.date: 06/12/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

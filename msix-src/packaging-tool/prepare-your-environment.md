@@ -4,7 +4,6 @@ description: Provides an overview of how to convert an MSIX from an existing ins
 ms.date: 01/27/2020
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # Prepare your environment for conversion

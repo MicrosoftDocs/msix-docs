@@ -5,7 +5,6 @@ author: dianmsft
 ms.date: 03/25/2021
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ---
 
 # Enforce Package Integrity Check

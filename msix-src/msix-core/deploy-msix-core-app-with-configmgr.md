@@ -4,7 +4,6 @@ description: Describes how to deploy MSIX Core with Microsoft Endpoint Configura
 ms.date: 03/02/2020
 ms.topic: article
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

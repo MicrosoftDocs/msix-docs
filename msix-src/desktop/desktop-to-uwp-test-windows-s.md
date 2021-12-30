@@ -4,7 +4,6 @@ title: Test your Windows app for Windows 10 S
 ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10 S, uwp, msix
-ms.localizationpriority: medium
 ---
 
 # Test your Windows app for Windows 10 in S mode

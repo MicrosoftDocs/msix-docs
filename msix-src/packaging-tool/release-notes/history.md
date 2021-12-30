@@ -4,7 +4,6 @@ description: This article provides the full history of release notes for differe
 ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, msix, msix packaging tool, insider program
-ms.localizationpriority: medium
 ms.custom: Vibranium
 ---
 

@@ -4,7 +4,6 @@ title: MSIX Shared Package Container
 ms.date: 03/17/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ---
 
 # Shared package container 

@@ -4,7 +4,6 @@ description: This article describes how to embed a pre-existing AppInstaller fil
 ms.date: 05/26/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

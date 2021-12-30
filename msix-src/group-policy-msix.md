@@ -4,7 +4,6 @@ description: Describes how Group Policy works with apps that are converted to MS
 ms.date: 04/12/2019
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # Group Policy and MSIX packaged apps

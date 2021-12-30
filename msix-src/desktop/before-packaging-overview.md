@@ -4,7 +4,6 @@ title: Key concepts to know before packing to MSIX
 ms.date: 01/27/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
