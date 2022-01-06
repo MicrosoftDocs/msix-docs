@@ -49,7 +49,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | Support for Windows App App Services                                                                                      | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Shared package containers                                                                                                         | :x:                         | :x:                | :x:                | :x:                | :x:                         | :x:                | :x:                | :heavy_check_mark: |
 | [Sparse packages](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [Hosted Apps](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/hosted-apps)                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Hosted Apps](/windows/uwp/launch-resume/hosted-apps)                                                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 
 ### Windows Server Support
@@ -70,7 +70,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | Support for Windows App App Services                                                                                      | :x:                 | :heavy_check_mark:                 |
 | Shared package containers                                                                                                         | :x:                 | :x:                 |
 | [Sparse packages](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                 | :heavy_check_mark:  |
-| [Hosted Apps](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/hosted-apps)                                     | :x:                 | :heavy_check_mark:  |
+| [Hosted Apps](/windows/uwp/launch-resume/hosted-apps)                                                                     | :x:                 | :heavy_check_mark:  |
 
 
 ## Package format support
