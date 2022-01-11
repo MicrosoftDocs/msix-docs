@@ -22,6 +22,8 @@
           href: package/signing-package-device-guard-signing.md
         - name: Known issues and troubleshooting 
           href: package/signing-known-issues.md
+        - name: Unsigned MSIX for testing
+          href: package/unsigned-package.md
     - name: App package formats
       items: 
         - name: Overview
