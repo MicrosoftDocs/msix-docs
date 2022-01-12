@@ -12,7 +12,7 @@ Starting in Windows 11, we now allow developers to install their apps via Powers
 
 ## How to create an unsigned package
 
-Unsigned packages must include a special OID (organization ID) value in their [Identity](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element or they won’t be allowed to register. An unsigned package will never have the same identity as a package that is signed. This prevents unsigned packages from conflicting with or spoofing the identity of a signed package.
+Unsigned packages must include a special OID (organization ID) value in their [Identity](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the manifest file or they won’t be allowed to register. An unsigned package will never have the same identity as a package that is signed. This prevents unsigned packages from conflicting with or spoofing the identity of a signed package.
 
 Example: 
 ```xml
