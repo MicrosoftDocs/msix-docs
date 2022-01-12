@@ -17,6 +17,7 @@ To successfully install a Windows 10 application, the package doesn't just have 
 |[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prerequisites required to sign the Windows 10 app package. | 
 |[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
 |[Sign an MSIX package with Device Guard signing](./signing-package-device-guard-signing.md)| This section discusses how to sign your app with Device Guard signing.|
+|[Creating unsigned packages for testing](./unsigned-package.md)| This section discusses how to create an unsigned msix package.|
 
 ## Timestamping
 
