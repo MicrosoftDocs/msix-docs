@@ -4,7 +4,6 @@ description: This article describes the contents of App Installer files and how 
 ms.date: 06/12/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

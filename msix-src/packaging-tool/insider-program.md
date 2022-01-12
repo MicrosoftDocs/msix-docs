@@ -4,7 +4,6 @@ description: This article introduces the MSIX Packaging Tool Insider Program, wh
 ms.date: 04/28/2021
 ms.topic: article
 keywords: windows 10, uwp, MSIX, MSIX Packaging Tool
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 
@@ -30,9 +29,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2021.709.0 (Public)
-- Fixed minimum version requirement for packages with Services
-- general bug fixes
+### Version 1.2021.1105.0 - Public Version
+- Added support for capturing [legacy context menus](support-legacy-context-menus.md) during conversion.
+- General bug fixes
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 

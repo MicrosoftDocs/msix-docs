@@ -1,10 +1,9 @@
 ---
 title: MSIX Persistent Identity 
 description: This article describes how to sign a package with a different certificate while maintaining the app update experience
-ms.date: 07/02/2021
+ms.date: 11/15/2021
 ms.topic: article
 keywords: windows 10, msix, uwp, desktop, package
-ms.localizationpriority: medium
 ---
 
 # MSIX persistent identity 
@@ -23,7 +22,7 @@ This is a step-by-step instruction on how to sign your package with the new cert
 1. Write the XML artifact detailing the old and new publishers. Name it anything you like, artifact.xml:
  ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<Publisher xmlns=http://schemas.microsoft.com/appx/publisherbridging/2021 Old="CN=Old" New="CN=New" />
+<Publisher xmlns="http://schemas.microsoft.com/appx/publisherbridging/2021" Old="CN=Old" New="CN=New" />
 ```
 2. Write a Catalog Definition File (CDF) to create the catalog that will be used to sign the artifact. Name it anything you like, artifact.cdf:
  ```
@@ -58,7 +57,7 @@ Each line must contain a pair of XML and CAT file paths. The artifacts must be o
 
 2. Call makeappx.exe with  **/pb** flag to point to the publisher bridging file:
 ```powershell
-makeappx.exe /p app.msix /d .\app\ /pb artifacts.txt
+makeappx.exe pack /p app.msix /d .\app\ /pb artifacts.txt
  ```
 3. Sign your package using the new certificate
 ```powershell 

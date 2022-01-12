@@ -4,7 +4,6 @@ description: Provides links to additional documentation from our trusted partner
 ms.date: 04/1/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
@@ -62,7 +61,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-        [![Liquit logo](images/Liquit_Logo.png)](https://www.liquit.com/msix-readiness/)
+        [Liquit logo](https://www.liquit.com/msix-readiness/)
     :::column-end:::
     
     :::column:::

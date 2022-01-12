@@ -4,7 +4,6 @@ title: Package a desktop app using third-party installers
 ms.date: 04/1/2021
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

@@ -4,7 +4,6 @@ description: This article describes how to use Package Editor in the MSIX Packag
 ms.date: 09/07/2018
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 
@@ -30,7 +29,7 @@ You can navigate to other sections of the package editor to edit your capabiliti
 
 ## Capabilities page
 
-On the **Capabilities** page you can add or remove [capabilities](/uwp/schemas/appxpackage/uapmanifestschema/element-capability) for the package. If a capability is present in the package, then the checkbox will be checked. If you select or deselect a capability, it will update your manifest. This translates to the <capability> element in the MSIX manifest.
+On the **Capabilities** page you can add or remove [capabilities](/uwp/schemas/appxpackage/uapmanifestschema/element-capability) for the package. If a capability is present in the package, then the checkbox will be checked. If you select or deselect a capability, it will update your manifest. This translates to the \<capability\> element in the MSIX manifest.
 
 ![Pic 11](images/pic11.png)
 

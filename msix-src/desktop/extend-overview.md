@@ -4,7 +4,6 @@ title: Building an MSIX package from your code
 ms.date: 01/27/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

@@ -4,7 +4,6 @@ description: Learn how to use Visual Studio to enable automatic updates using th
 ms.date: 5/2/2018
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

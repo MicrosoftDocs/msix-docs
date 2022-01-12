@@ -5,7 +5,6 @@ description: This section contains or links to articles about manually packaging
 ms.date: 01/30/2020
 ms.topic: article
 keywords: windows 10, uwp, packaging
-ms.localizationpriority: medium
 ---
 
 # Package from the command line

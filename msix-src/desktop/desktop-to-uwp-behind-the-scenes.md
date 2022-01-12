@@ -5,7 +5,6 @@ ms.date: 01/30/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
-ms.localizationpriority: medium
 ---
 
 # Understanding how packaged desktop apps run on Windows

@@ -4,7 +4,6 @@ description: Describes how to build an MSIX package from source code with MSIX C
 ms.date: 12/19/2019
 ms.topic: article
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
@@ -88,7 +87,7 @@ Create an HTML page or any other web app as required per your needs. Add the lin
 
 #### Configure the web app for app package MIME types
 
-Open the **Web.config** file from the solution explorer and add the following XML within the <configuration> element.
+Open the **Web.config** file from the solution explorer and add the following XML within the \<configuration\> element.
 
 ```xml
 <system.webServer>

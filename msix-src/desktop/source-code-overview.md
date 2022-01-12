@@ -5,7 +5,6 @@ author: Huios
 ms.date: 02/03/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

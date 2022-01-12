@@ -4,7 +4,6 @@ description: This article provides details about the available MSIX toolkit.
 ms.date: 1/23/2020
 ms.topic: article
 keywords: windows 10, msix, msix toolkit
-ms.localizationpriority: medium
 ms.custom: 19H1
 ---
 

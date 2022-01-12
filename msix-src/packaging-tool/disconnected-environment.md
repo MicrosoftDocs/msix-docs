@@ -4,7 +4,6 @@ description: This article describes how to acquire all of the assets required fo
 ms.date: 02/05/2020
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # Using the MSIX Packaging Tool in a disconnected environment
@@ -16,7 +15,7 @@ While we make it super easy for users to acquire the MSIX Packaging Tool through
 The MSIX Packaging Tool can be downloaded for offline use in the enterprise from the Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps).
 
 You can also directly download the latest version of the offline package here:
-- [Download 1.2020.422.0 MSIX Packaging Tool](https://download.microsoft.com/download/d/9/7/d9707be8-06db-4b13-a992-48666aad8b78/91b9474c34904fe39de2b66827a93267.msixbundle)
+- [Download 1.2021.1105.0 MSIX Packaging Tool](https://download.microsoft.com/download/0/e/b/0eb00e54-7674-4fa5-9547-3ba464b2d641/6e2f56fa2c3d487f8e5985ecf7e57069[1].msixbundle)
 
 If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) for the tool. 
 
@@ -35,8 +34,7 @@ If you are in an enterprise environment with Windows Server Update Services (WSU
 
 - Download the FOD .cab file for [Windows 10, version 1809, x64](https://download.microsoft.com/download/8/4/3/8436215A-42DB-4FD2-966D-60D436D6EEFC/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) or [Windows 10, version 1809, x86](https://download.microsoft.com/download/9/9/4/9948d09d-af25-45a5-b01f-cc4bcf05f5bf/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~x86~~.cab)
 - Download the FOD .cab file for [Windows 10, version 1903, x64](https://download.microsoft.com/download/5/2/e/52ec35e9-3b50-47b2-879d-c815a93bc3fc/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) or [Windows 10, version 1903, x86](https://download.microsoft.com/download/2/c/3/2c3a78a2-4d64-426a-976d-dfe4805110cc/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~x86~~.cab) **NOTE: This will also work for Windows 10, version 1909**
-- Download the FOD .cab file for [Windows 10, version 2004, x64](https://download.microsoft.com/download/a/f/1/af16ad00-3b28-4c8a-9765-1e14a21e93d2/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) or [Windows 10, version 2004, x86](https://download.microsoft.com/download/e/5/7/e57f0cec-807b-403e-9ac8-abb2799d09e5/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~x86~~.cab)
-- Download the FOD .cab file for [Windows 10, version 20H2, x64](https://download.microsoft.com/download/a/a/d/aadf507e-5fc1-4ae9-92c2-e1634e895a0b/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) or [Windows 10, version 20H2, x86](https://download.microsoft.com/download/9/f/f/9ffdbe5b-b317-4bf0-91a3-aa8c283082cc/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~x86~~.cab)
+- Download the FOD .cab file for [Windows 10, version 2004, x64](https://download.microsoft.com/download/4/c/7/4c79bf31-946c-444a-bc5f-61398d3b0a76/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) **NOTE: This will also work for later Windows 10 versions**
 - Individually-obtained Feature on Demand (FOD) packages can be installed using [DISM command-line options](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options). In an elevated PowerShell window type: ```Dism /Online /add-package /packagepath:(path)```
 
 IT admins can also create [Side by side feature store (shared folder)](/windows-server/administration/server-manager/configure-features-on-demand-in-windows-server) to allow access to the MSIX Packaging tool driver FOD. You can find additional details at the bottom of this [blog post](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Language-pack-acquisition-and-retention-for-enterprise-devices/ba-p/275404).

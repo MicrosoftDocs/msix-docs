@@ -4,7 +4,6 @@ title: MSIX Shared Package Container
 ms.date: 03/17/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
-ms.localizationpriority: medium
 ---
 
 # Shared package container 
@@ -22,7 +21,7 @@ Shared package contianer is defined by a .xml file.  The container definition re
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?> 
-<AppSharedPackageContainer Name="ContosoContainer"> 
+<AppSharedPackageContainer Name="ContosoContainer"> 
   <PackageFamily Name="Fabrikam.MainApp_8wekyb3d8bbwe"/> 
   <PackageFamily Name="Contoso.MainApp_8wekyb3d8bbwe/> 
   <PackageFamily Name="ContosoCustomize_7xekyb3d8ccde"/> 

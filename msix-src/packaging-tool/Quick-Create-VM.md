@@ -4,7 +4,6 @@ description: Create a virtual environment for MSIX packaging projects using the 
 ms.date: 04/04/2019
 ms.topic: article
 keywords: MSIX, MPT, MSIX Packaging Tool, Hyper-V Quick Create
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

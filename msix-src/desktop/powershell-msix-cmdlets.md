@@ -5,7 +5,6 @@ ms.date: 12/4/2020
 ms.topic: article
 keywords: windows 10, deployment, msix, PowerShell, PSH, PS, PoSh, cmdlets
 ms.assetid:  
-ms.localizationpriority: medium
 ---
 
 # Managing MSIX with PowerShell

@@ -5,7 +5,6 @@ ms.date: 11/10/2020
 ms.topic: article
 keywords: windows 10, deployment, msix, reset, repair
 ms.assetid:  
-ms.localizationpriority: medium
 ---
   
 # Reset or Repair MSIX apps

@@ -4,7 +4,6 @@ title: Package Support Framework - Filesystem Write Permission fixup
 ms.date: 12/16/2020
 ms.topic: article
 keywords: windows 10, uwp, psf, package support framework, filesystem, write permission, msix
-ms.localizationpriority: medium
 ---
 
 # Package Support Framework - Filesystem Write Permission fixup
@@ -215,7 +214,7 @@ After updating the **config.json** file, the **config.json** file and supporting
     }
     ```
 
-1. Copy the following four files from the Package Support Framework based on the application executable architecture to the root of the staged Windows App. The following files are located within the **.\Microsoft.PackageSupportFramework.<Version>\bin**.
+1. Copy the following four files from the Package Support Framework based on the application executable architecture to the root of the staged Windows App. The following files are located within the **.\Microsoft.PackageSupportFramework.\<Version\>\bin**.
 
     | Application (x64)          | Application (x86)          | 
     |----------------------------|----------------------------|

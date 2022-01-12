@@ -4,7 +4,6 @@ description: This tutorial demonstrates how to set up an IIS server, verify that
 ms.date: 04/23/2021
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages, IIS Server
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 

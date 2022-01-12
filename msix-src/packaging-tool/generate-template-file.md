@@ -4,7 +4,6 @@ description: This article describes how to generate a template file for command 
 ms.date: 01/28/2020
 ms.topic: article
 keywords: msix
-ms.localizationpriority: medium
 ---
 
 # How to generate a template file for command line conversions

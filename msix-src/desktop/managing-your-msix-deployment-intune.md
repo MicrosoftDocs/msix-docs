@@ -4,7 +4,6 @@ title: Microsoft Intune
 ms.date: 06/17/2019
 ms.topic: article
 keywords: windows 10, uwp, mem, mem ac, mem admin console, app, msix
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

@@ -5,13 +5,12 @@ author: Huios
 ms.date: 06/12/2020
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx
-ms.localizationpriority: medium
 ms.custom: "RS5, seodec18"
 ---
 
 # Update non-Store published app packages from your code
 
-When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. In order to apply updates from your code, your app package must declare the `packageManagement` capability.
+When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. In order to apply updates from your code, your app package must declare the `packageManagement` capability. Note that this is required for cross-publisher scenario, but managing your own app should work without having to declare the capability.
 
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
 

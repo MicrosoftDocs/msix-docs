@@ -4,7 +4,6 @@ description: Learn how to use Using Custom Properties for AppExtensions
 ms.date: 02/06/2020
 ms.topic: article
 keywords: windows 10, msix, uwp, extensions
-ms.localizationpriority: medium
 ---
 
 # Using custom properties for app extensions

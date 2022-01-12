@@ -4,7 +4,6 @@ description: Create an MSIX package from any desktop installer(MSI, EXE, ClickOn
 ms.date: 03/25/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.localizationpriority: medium
 ms.custom: RS5
 ---
 

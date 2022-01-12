@@ -5,7 +5,6 @@ ms.date: 2/3/2020
 ms.topic: article
 keywords: windows 10, deployment, msix
 ms.assetid:  
-ms.localizationpriority: medium
 ---
 
 # Install earlier versions of an MSIX app package
