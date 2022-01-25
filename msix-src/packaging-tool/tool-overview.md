@@ -37,9 +37,9 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - 1.2021.1105.0
-- Added support for capturing [legacy context menus](support-legacy-context-menus.md) during conversion.
-- General bug fixes
+## Latest Public Release - 1.2022.110.0
+- Added the ability to automatically add detected fonts to the manifest
+- Bug fixes
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
