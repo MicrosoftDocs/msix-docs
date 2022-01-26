@@ -12,7 +12,7 @@ Starting in Windows 11, we now allow developers to install their apps via Powers
 
 ## How to create an unsigned package
 
-Unsigned packages must include a special OID (organization ID) value in their [Identity](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the manifest file or they won’t be allowed to register. An unsigned package will never have the same identity as a package that is signed. This prevents unsigned packages from conflicting with or spoofing the identity of a signed package.
+Unsigned packages must include a special OID (organization ID) value in their [Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the manifest file or they won’t be allowed to register. An unsigned package will never have the same identity as a package that is signed. This prevents unsigned packages from conflicting with or spoofing the identity of a signed package.
 
 Example: 
 ```xml
@@ -26,7 +26,7 @@ Example:
 
 ## Installing an unsigned package
 
-Developers must run PowerShell as admin when installing an unsigned package, and pass the **-AllowUnsigned** flag when running the [Add-AppxPackage](https://docs.microsoft.com/en-us/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps) command. A non admin can only install unsigned packages if it contains non executable files. This is useful in scenarios where the user only needs to load images, assets and content or script files. 
+Developers must run PowerShell as admin when installing an unsigned package, and pass the **-AllowUnsigned** flag when running the [Add-AppxPackage](/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps) command. A non admin can only install unsigned packages if it contains non executable files. This is useful in scenarios where the user only needs to load images, assets and content or script files. 
 
 Example:
 
@@ -36,4 +36,4 @@ Example:
     
 ```
 
-When the app is ready to be distributed, developers should ensure the package is signed. They must remove the special OID and ensure that the publisher name is the same as the certificate subject name. 
+When the app is ready to be distributed, developers should ensure the package is signed. They must remove the special OID and ensure that the publisher name is the same as the certificate subject name.
