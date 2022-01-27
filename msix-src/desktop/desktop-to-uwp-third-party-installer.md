@@ -192,7 +192,7 @@ Here is [a short video](https://www.youtube.com/watch?v=r2jViWCtKFI) to get star
 
 [PACE Suite](https://pacesuite.com/) is an application packaging tool that you can use to bring your desktop apps to the Universal Windows Platform.
 
-![Pace logo](images/PACE_20.png)
+![Pace logo](images/PACE-Suite-white-for-dark-background-small.png)
 
 With PACE Suite, you don't need to prepare special packaging environments or install additional Windows SDK components. PACE Suite can build Windows app packages independently in your standard packaging environment under Windows 10 or Windows Server 2016. Check out this [illustrated example](https://pacesuite.com/convert-exe-to-appx/) to learn how PACE Suite approaches repackaging an installer to a Windows app package.
 
