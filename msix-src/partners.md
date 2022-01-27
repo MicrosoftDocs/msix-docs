@@ -65,7 +65,7 @@ The following partners provide additional tooling and support for MSIX developme
     :::column-end:::
     
     :::column:::
-	[![Pace logo](images/Pace_Logo.png)](https://pacesuite.com/convert-exe-to-msix/)
+	[![Pace logo](images/PACE-Suite-white-for-dark-background-small.png)](https://pacesuite.com/convert-exe-to-msix/)
     :::column-end:::
 
     :::column:::
