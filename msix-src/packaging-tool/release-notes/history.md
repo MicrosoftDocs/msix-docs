@@ -9,8 +9,7 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2021.1105.0 - Public Version
-- Added support for capturing [legacy context menus](../support-legacy-context-menus.md) during conversion.
-- Fixed a bug in Package Editor where it wouldn't create packages
-- General bug fixes
+## Version 1.2022.110.0 - Public Version
+- Added the ability to automatically add detected fonts to the manifest
+- Bug fixes
 
