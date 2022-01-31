@@ -18,3 +18,7 @@ If authentication is required, the URI targeting the installation media must pro
 | Google            | msixauth=google             |
 | Dropbox           | msixauth=dropbox            |
 
+> [!Note]
+> The values of each field must be URL-encoded, that is with non-printing characters and spaces. The use of question mark ("?") to seperate the main Source from the field values, and ampersands ("&") to seperate each subsequent fields in the `ms-appinstaller:`.
+> 
+> Example: `ms-appinstaller:?source=https://website.com/app.msix&msixauth=aad`
