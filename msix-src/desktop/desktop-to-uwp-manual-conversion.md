@@ -61,7 +61,7 @@ Fill in this template with information that describes your package.
 
 ### Identity information
 
-Here's an example **Identity** element with placeholder text for the attributes. You can set the ``ProcessorArchitecture`` attribute to ``x64`` or ``x86``.
+Here's an example **Identity** element with placeholder text for the attributes. You can set the ``ProcessorArchitecture`` attribute to ``x64`` , ``x86`` , ``arm`` (i.e. 32bit ARM), ``arm64`` , or ``neutral``
 
 ```XML
 <Identity Name="MyCompany.MySuite.MyApp"
