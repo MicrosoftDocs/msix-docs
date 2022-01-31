@@ -23,9 +23,9 @@ For information about how to use **MakeApp.exe** to package a desktop app, see [
 ## Using MakeAppx.exe
 
 Based on your installation path of the SDK, this is where **MakeAppx.exe** is on your Windows 10 PC:
-- C:\Program Files (x86)\Windows Kits\10\bin\<build number>\<architecture>\makeappx.exe
+- C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\\&lt;architecture&gt;\makeappx.exe
 
-where <architecture> = x86, x64, arm, ar64 or chpe
+where &lt;architecture&gt; = x86, x64, arm, ar64 or chpe
 
 ### MakeAppx.exe syntax and options
 
