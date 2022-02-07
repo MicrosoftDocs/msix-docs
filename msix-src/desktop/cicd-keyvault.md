@@ -86,7 +86,7 @@ Now you can sign your package using the AzureSignTool command, which requires th
 This is a sample command:
 
 ```text
-AzureSignTool sign -kvt "<tenantID>" "https://contosoexpenses-blog.vault.azure.net/" -kvi "64fae35e-cb84-4b9f-86eb-5170d169316d" -kvs "this-is-the-secret" -kvc "MyCertificate" -tr http://timestamp.digicert.com -v .\MyContosoApp.msix
+AzureSignTool sign -kvt "<tenantID>" -kvu "https://contosoexpenses-blog.vault.azure.net/" -kvi "64fae35e-cb84-4b9f-86eb-5170d169316d" -kvs "this-is-the-secret" -kvc "MyCertificate" -tr http://timestamp.digicert.com -v .\MyContosoApp.msix
 ```
 > [!NOTE]
 > To learn more about AzureSignTool, run `AzureSignTool sign --help`
