@@ -61,11 +61,11 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-    [![Liquit logo](images/liquit_logo.png)(https://www.liquit.com/msix-readiness/)
+        [![Liquit logo](images/liquit_logo.png)(https://www.liquit.com/msix-readiness/)
     :::column-end:::
     
     :::column:::
-	[![Pace logo](images/PACE-suite-logos.png)](https://pacesuite.com/convert-exe-to-msix/)
+	    [![Pace logo](images/PACE-suite-logos.png)](https://pacesuite.com/convert-exe-to-msix/)
     :::column-end:::
 
     :::column:::
