@@ -40,6 +40,12 @@
               href: package/create-cgm.md
         - name: Flat bundle app packages
           href: package/flat-bundles.md
+        - name: Framework packages
+          items:
+            - name: Overview
+              href: /windows/apps/desktop/modernize/framework-packages/framework-packages-overview?context=/windows/msix/render
+            - name: Framework packages at run time
+              href: /windows/apps/desktop/modernize/framework-packages/use-the-dynamic-dependency-api?context=/windows/msix/render
         - name: Asset packages
           href: package/asset-packages.md
         - name: Resource Packages 
