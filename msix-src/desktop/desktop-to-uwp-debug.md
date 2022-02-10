@@ -96,6 +96,8 @@ To manually sign your application package:
 
 [SigningCerts](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SigningCerts)
 
+### Test your application with comparepackage.exe
+ComparePackage.exe is a tool in the [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-sdk/) that shows a report that states which files have been changed, what new files have been added, what files have been deleted, and what remains unchanged when an app has been update from one version to the next.
 
 ### Test your application for Windows 10 S
 
