@@ -101,9 +101,9 @@ Using a text editor (Notepad.exe), create a new file with a filename extension o
 ## Step 2: Add the basic template
 Include the `AppInstaller` element into your App Installer file noting the version, path and network location of your App Installer file. The information in the `AppInstaller` element will be consumed when installing the associated Windows apps.
 
-| Element     | Description                                                               |
-|-------------|---------------------------------------------------------------------------|
-| **xmlns**   | The XML Namespace                                                         |
+| Element     | Description                                                                |
+|-------------|----------------------------------------------------------------------------|
+| **xmlns**   | The XML Namespace                                                          |
 | **Version** | The Version of the App Installer file in a quad-dotted notation (1.0.0.0). |
 | **URI**     | A URI path to the current App Installer file, accessible by the device.    |
 
@@ -130,7 +130,7 @@ The `<MainPackage>` and `<MainBundle>` are used to identify the primary Windows 
 
 | Element               | Description                                                                                                                                                                                             |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                  | The name of the primary application that is being distributed to through the App Installer file. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Name`.      |
+| Name                  | The name of the primary application that is being distributed to through the App Installer file. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Name`.     |
 | Publisher             | The canonical name of the publisher certificate used to sign the primary Windows app installer. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Publisher`. |
 | Version               | The version of the primary Windows app installer in a quad-dotted notation (1.0.0.0). This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Version`.             |
 | ProcessorArchitecture | The Architecture that the primary Windows app installer is installing on to.                                                                                                                            |
@@ -183,7 +183,7 @@ Similar to the main app package attribute, if the optional package can be either
 
 | Element               | Description                                                                                                                                                                                              |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                  | The name of the optional application that is being distributed to through the App Installer file. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Name`.      |
+| Name                  | The name of the optional application that is being distributed to through the App Installer file. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Name`.     |
 | Publisher             | The canonical name of the publisher certificate used to sign the optional Windows app installer. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Publisher`. |
 | Version               | The version of the optional Windows app installer in a quad-dotted notation (1.0.0.0). This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Version`.             |
 | ProcessorArchitecture | The Architecture that the optional Windows app installer is installing on to.                                                                                                                            |
@@ -227,7 +227,7 @@ In the dependencies element, you can specify the required framework packages for
 
 | Element               | Description                                                                                                                                                                                                |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                  | The name of the dependency application that is being distributed to through the App Installer file. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Name`.      |
+| Name                  | The name of the dependency application that is being distributed to through the App Installer file. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Name`.     |
 | Publisher             | The canonical name of the publisher certificate used to sign the dependency Windows app installer. This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Publisher`. |
 | Version               | The version of the dependency Windows app installer in a quad-dotted notation (1.0.0.0). This can be found by running the following PowerShell cmdlet: `$(Get-AppxPackage [AppName]).Version`.             |
 | ProcessorArchitecture | The Architecture that the dependency Windows app installer is installing on to.                                                                                                                            |
@@ -266,11 +266,12 @@ In the dependencies element, you can specify the required framework packages for
 
 The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **\<UpdateSettings\>** is an optional element. Within  **\<UpdateSettings\>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](/uwp/schemas/appinstallerschema/element-onlaunch)
 
-| Elements                 | Description                                                                                                |
-|--------------------------|------------------------------------------------------------------------------------------------------------|
-| HoursBetweenUpdateChecks | Defines the minimal gap in Windows app update checks.                                                      |
-| UpdateBlocksActivation   | Defines the experience when an app update is checked for.                                                  |
-| ShowPrompt               | Defines if a window is displayed when updates are being installed, and when updates are being checked for. |
+| Elements                  | Description                                                                                                                                                                   |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| HoursBetweenUpdateChecks  | Defines the minimal gap in Windows app update checks.                                                                                                                         |
+| UpdateBlocksActivation    | Defines the experience when an app update is checked for.                                                                                                                     |
+| ShowPrompt                | Defines if a window is displayed when updates are being installed, and when updates are being checked for.                                                                    |
+| ForceUpdateFromAnyVersion | Specifies that the next version of the application could be to a newer or older version. If True, will all for both, if False (default), only new versions will be installed. |
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
