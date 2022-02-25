@@ -154,7 +154,7 @@ The following partners provide additional tooling and support for MSIX developme
 
     :::column:::
         ![Rimo3 logo](images/Rimo3_Logo.png)<br>
-        [Learn more](https://rimo3.com/msix)
+        [Learn more](https://www.rimo3.com/)
     :::column-end:::
 :::row-end:::
 -->
