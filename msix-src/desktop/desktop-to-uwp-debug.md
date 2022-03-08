@@ -1,6 +1,6 @@
 ---
 description: This article provides guidance on how to run, debug, and test your packaged desktop application to get it ready for deployment.
-title: Run, debug, and test a packaged desktop app (Desktop Bridge)
+title: Run, debug, and test an MSIX package
 ms.date: 02/03/2020
 ms.topic: article
 keywords: windows 10, uwp, msix
