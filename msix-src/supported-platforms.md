@@ -58,7 +58,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 |---------------------------------------------------------------------------------------------------------------------------|---------------------|---------------------|
 | [Allow elevation](/windows/uwp/packaging/app-capability-declarations)                                                     | :heavy_check_mark:  | :heavy_check_mark:  |
 | [App Installer File Support](app-installer/installing-windows10-apps-web.md)                                              | :heavy_check_mark:  | :heavy_check_mark:  |
-| [Defer registration flag](desktop/managing-your-msix-deployment-update.md)                                                | :x:                 | :x:                 |
+| [Defer registration flag](desktop/managing-your-msix-deployment-update.md)                                                | :x:                 | :heavy_check_mark:  |
 | [Force update from any version downgrade](desktop/managing-your-msix-deployment-targetdevices.md)                         | :heavy_check_mark:  | :heavy_check_mark:  |
 | Force provisioning                                                                                                        | :x:                 | :x:                 |
 | Identity for packaged desktop apps                                                                                        | :heavy_check_mark:  | :heavy_check_mark:  |
