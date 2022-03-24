@@ -101,7 +101,7 @@ additionalContent:
             - text: Distribute your MSIX in a retail environment
               url: desktop/managing-your-msix-deployment-retail.md
             - text: Create a shared runtime container
-              url: manage/shred-package-container.md
+              url: manage/shared-package-container.md
         # Card
         - title: Related resources
           links:
