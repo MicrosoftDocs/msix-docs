@@ -12,6 +12,8 @@ App package signing is a required step in the process of creating a Windows 10 a
 
 To successfully install a Windows 10 application, the package doesn't just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. By default, Windows 10 trusts certificates from most of the certificate authorities that provide code signing certificates.
 
+Additionally, if you are creating an MSIX bundle, there is no need to sign all the packages in the bundle individually. Only the bundle needs to be signed, and all packages inside get signed recursively.
+
 |Topic| Description |
 |:---|:---|
 |[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prerequisites required to sign the Windows 10 app package. | 
