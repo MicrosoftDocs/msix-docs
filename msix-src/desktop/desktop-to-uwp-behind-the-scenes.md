@@ -17,7 +17,7 @@ Packages that you create for your desktop application are desktop-only, full-tru
 
 ## Installation
 
-App packages are installed under *C:\Program Files\WindowsApps\package_name*, with the executable titled *app_name.exe*. Each package folder contains a manifest (named AppxManifest.xml) that contains a special XML namespace for packaged apps. Inside that manifest file is an ```<EntryPoint>``` element, which references the full-trust app. When that application is launched, it does not run inside an app container, but instead it runs as the user as it normally would.
+App packages are installed on a per user basis instead of system wide. App packages are installed under *C:\Program Files\WindowsApps\package_name*, with the executable titled *app_name.exe*. Each package folder contains a manifest (named AppxManifest.xml) that contains a special XML namespace for packaged apps. Inside that manifest file is an ```<EntryPoint>``` element, which references the full-trust app. When that application is launched, it does not run inside an app container, but instead it runs as the user as it normally would.
 
 After deployment, package files are marked read-only and heavily locked down by the operating system. Windows prevents apps from launching if these files are tampered with.
 
