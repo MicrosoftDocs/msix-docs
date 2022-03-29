@@ -115,3 +115,6 @@ This process also supports file system plug-ins and customizations, as long as t
 
 ## Install modification packages on machine
 Installing modification packages on the machine follows other installing conventions. It is worth noting that you may want to use the the **-OptionalPackagePath** parameter when installing the package. 
+
+## Conflict resolution
+In case of multiple modification packages attempting to change the same value, the conflict is resolved by considering the **alphabetical order** of the modification packages' names.
