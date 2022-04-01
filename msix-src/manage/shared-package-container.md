@@ -39,9 +39,7 @@ This command deploys the shared package container definiton for the particular u
 
 |**Parameter** |	**Description**|
 |---------|---------|
-|RequirePackagePresent |Fails if the user does not have a container-specified package registered. |
 |ForceApplicationShutdown |Closes all packages currently running in the Shared Package Container. |
-|ProvisionForAllUsers  |Provisions the container for all users. |
 
 #### Remove a shared package container 
 ```powershell
@@ -52,18 +50,12 @@ This command removes the shared package container definiton for the particular u
 |**Parameter** |	**Description**|
 |---------|---------|
 |ForceApplicationShutdown  |Closes all packages in the Shared Package Container.  |
-|AllUsers  |Remove matching packages that are deployed to any user. |
-|DeprovisionForAllUsers   |Deprovisions the container for all users.  |
 
 #### Get information on a shared package container 
 ```powershell
 Get-AppSharedPackageContainer -Name <name> 
 ``` 
-This command gets information about the shared package container. In particular, it will show what packages are inside the shared package container. Optional parameters include the following: 
-
-|**Parameter** |	**Description**|
-|---------|---------|
-|AllUsers   |Get matching packages that are either deployed to any user or are provisioned to the machine.   |
+This command gets information about the shared package container. In particular, it will show what packages are inside the shared package container. 
 
 #### Reset shared package container 
 ```powershell

@@ -1,6 +1,6 @@
 ---
 description: Shows how to manually package a Windows desktop application (like Win32, WPF, and Windows Forms) for Windows 10.
-title: Package an application manually (Desktop Bridge)
+title: Generating MSIX package components
 ms.date: 07/29/2019
 ms.topic: article
 keywords: windows 10, uwp, msix
@@ -27,32 +27,32 @@ It's a basic template that contains the elements and attributes that your packag
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Package
-	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
   <Identity Name="" Version="" Publisher="" ProcessorArchitecture="" />
-    <Properties>
-       <DisplayName></DisplayName>
-       <PublisherDisplayName></PublisherDisplayName>
-			 <Description></Description>
-      <Logo></Logo>
-    </Properties>
-    <Resources>
-      <Resource Language="" />
-    </Resources>
-	  <Dependencies>
-	  <TargetDeviceFamily Name="Windows.Desktop" MinVersion="" MaxVersionTested="" />
-	  </Dependencies>
-	  <Capabilities>
-	    <rescap:Capability Name="runFullTrust"/>
-	  </Capabilities>
-    <Applications>
-      <Application Id="" Executable="" EntryPoint="Windows.FullTrustApplication">
-        <uap:VisualElements DisplayName="" Description=""	Square150x150Logo=""
-				   Square44x44Logo=""	BackgroundColor="" />
-      </Application>
-     </Applications>
-  </Package>
+  <Properties>
+    <DisplayName></DisplayName>
+    <PublisherDisplayName></PublisherDisplayName>
+    <Description></Description>
+    <Logo></Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="" MaxVersionTested="" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Applications>
+    <Application Id="" Executable="" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="" Description=""	Square150x150Logo=""
+        Square44x44Logo="" BackgroundColor="" />
+    </Application>
+  </Applications>
+</Package>
 ```
 
 ## Fill in the package-level elements of your file

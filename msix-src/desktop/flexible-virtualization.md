@@ -78,7 +78,7 @@ In traditional environments, apps can create, update, and delete files in most p
 
 In the Universal Windows Platform (UWP), such files and Registry entries are virtualized so that only the app that writes them can see them. And they're removed when the app is uninstalled. But there are valid scenarios where the app wants such files and Registry entries to be visible to other apps. In addition, other apps might require that those files and entries persist even after the app that wrote them is uninstalled.
 
-### Default Desktop Bridge behavior
+### Default MSIX behavior
 
 |Location|Context|Description|
 |-|-|-|
