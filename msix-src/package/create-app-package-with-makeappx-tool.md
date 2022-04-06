@@ -18,7 +18,7 @@ For information about how to use **MakeApp.exe** to package a desktop app, see [
 > If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
 > [!IMPORTANT]
-> Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](/windows/uwp/publish/upload-app-packages). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#generate-an-app-package-upload-file-for-store-submission), although it can also be created manually.
+> Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](/windows/uwp/publish/upload-app-packages). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#generate-an-app-package-upload-file-for-store-submission), although it can also be [created manually](packaging-uwp-apps.md#create-your-app-package-upload-file-manually).
 
 ## Using MakeAppx.exe
 
