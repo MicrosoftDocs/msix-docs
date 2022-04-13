@@ -30,7 +30,7 @@ When an older version of the MSIX app package is installed, the manifest file is
 The delivery or installation of an MSIX app package to a device can be configured to improve the users experience. When an app is deployed the device can be configured to update the app after the user closes the app , or force the application to be closed and update the app forcably.
 
 ### PowerShell
-Installing an MSIX app package to a device using PowerShell leverages the [add-appxpackage](/powershell-msix-cmdlets.md) cmdlet. This cmdlet contains the following parameters which alter the MSIX app package installation or upgrade user experience.
+Installing an MSIX app package to a device using PowerShell leverages the [add-appxpackage](/windows/msix/desktop/powershell-msix-cmdlets) cmdlet. This cmdlet contains the following parameters which alter the MSIX app package installation or upgrade user experience.
 
 | Parameter | Description |
 |-|-|

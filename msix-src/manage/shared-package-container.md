@@ -23,7 +23,7 @@ Shared package contianer is defined by a .xml file.  The container definition re
 <?xml version="1.0" encoding="utf-8"?> 
 <AppSharedPackageContainer Name="ContosoContainer"> 
   <PackageFamily Name="Fabrikam.MainApp_8wekyb3d8bbwe"/> 
-  <PackageFamily Name="Contoso.MainApp_8wekyb3d8bbwe/> 
+  <PackageFamily Name="Contoso.MainApp_8wekyb3d8bbwe"/> 
   <PackageFamily Name="ContosoCustomize_7xekyb3d8ccde"/> 
 </AppSharedPackageContainer>   
 ```
