@@ -29,9 +29,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-### Version 1.2022.110.0 - Public Version
-- Added the ability to automatically add detected fonts to the manifest
-- Bug fixes
+### Version 1.2022.330.0 - Public Version
+- Added driver detection to alert user if their application contains a driver during conversion
+- General performance improvements and bug fixes
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
