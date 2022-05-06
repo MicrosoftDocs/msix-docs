@@ -1,5 +1,5 @@
 ---
-description: An overview of topics for creating an MSIX package from source code
+description: Learn how to build an MSIX package from source code.
 title: Building an MSIX package from your code overview
 author: Huios
 ms.date: 02/03/2020

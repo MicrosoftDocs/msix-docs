@@ -1,6 +1,6 @@
 ---
 title: Create an MSIX from an existing installer
-description: Provides an overview of how to convert an MSIX from an existing installer.
+description: Learn how to use the MSIX packaging tool to migrate your applications to MSIX.
 ms.date: 01/27/2020
 ms.topic: article
 keywords: msix
