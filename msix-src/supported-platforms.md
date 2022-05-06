@@ -30,6 +30,7 @@ This article describes how key features of MSIX are supported in these versions 
 
 The following table shows which MSIX features and scenarios are supported in different versions of Windows.
 
+
 ### Windows Desktop
 
 > [!div class="mx-tableFixed"]
