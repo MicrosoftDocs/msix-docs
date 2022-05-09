@@ -1,5 +1,5 @@
 ---
-Description: This guide explains how to troubleshoot runtime issues in an MSIX container.
+Description: Learn how to troubleshoot runtime issues in an MSIX container.
 title: Troubleshoot runtime issues in an MSIX container 
 ms.date: 07/11/2019
 ms.topic: article
