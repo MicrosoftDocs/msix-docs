@@ -46,7 +46,7 @@ Before a flat bundle can be deployed, each of the app packages (in addition to t
 
 After the packages are signed, you can install the app via one of these options:
 * Double click the app bundle file to install with App Installer.
-* Use the [Add-AppxPackage cmdlet](/powershell/module/appx/add-appxpackage?view=win10-ps) in PowerShell and point to the app bundle file (assuming app packages are where the app bundle expects them to be). 
+* Use the [Add-AppxPackage cmdlet](/powershell/module/appx/add-appxpackage&preserve-view=true) in PowerShell and point to the app bundle file (assuming app packages are where the app bundle expects them to be). 
 
 You cannot deploy the individual .appx/.msix packages of a flat bundle by themselves. They must be deployed through the .appxbundle/.msixbundle. However, you can update individual .appx/.msix packages of a flat bundle after the initial install. If you do update individual .appx/.msix package, you will also need to update the flat bundle's manifest.
 

@@ -36,8 +36,8 @@ Each Windows 10 release improves on the sideloading experience, in the table bel
 | Build 16299 (Fall Creators Update, version 1709) | Introduced the `.appinstaller` file to provide automatic updates to your app. This version only supports HTTP endpoints. Update checks are not configurable and happens each 24 hours. |
 | Build 15063 (Creators Update, version 1703)      | The App Installer app is able to download app dependencies (only in release mode) from the Store. |
 | Build 14393 (Anniversary Update, version 1607)   | Introduced the App Installer app to install .appx and .appxbundle files, .appinstaller file is not supported. |
-| Build 10586 (November Update, version 1511)      | Sideload is only available through PowerShell using the [Add-AppxPackage](/powershell/module/appx/add-appxpackage?view=win10-ps) command. |
-| Build 10240 (Windows 10, version 1507)           | Sideload is only available through PowerShell using the [Add-AppxPackage](/powershell/module/appx/add-appxpackage?view=win10-ps) command. |
+| Build 10586 (November Update, version 1511)      | Sideload is only available through PowerShell using the [Add-AppxPackage](/powershell/module/appx/add-appxpackage&preserve-view=true) command. |
+| Build 10240 (Windows 10, version 1507)           | Sideload is only available through PowerShell using the [Add-AppxPackage](/powershell/module/appx/add-appxpackage&preserve-view=true) command. |
 
 ### Trusted certificates
 
@@ -87,7 +87,7 @@ If the App Installer cannot install the app, these steps will help identify the 
 
 ### Verify app package file installation
 
-- Download the app package file to a local folder and try to install it using the [Add-AppxPackage](/powershell/module/appx/add-appxpackage?view=win10-ps) PowerShell command.
+- Download the app package file to a local folder and try to install it using the [Add-AppxPackage](/powershell/module/appx/add-appxpackage&preserve-view=true) PowerShell command.
 
 - Download the `.appinstaller` file to a local folder and try to install it using the `Add-AppxPackage -Appinstaller` PowerShell command.
 

@@ -13,7 +13,7 @@ In this article, we will review how you can troubleshoot runtime issues occurrin
 
 There can be cases where the order in which these applications are installed could cause unforseen issues where the expected registry keys might be overwritten and expected files might be replaced. 
 
-To assist in diagnosing such issues, [Invoke-CommandInDesktopPackage](/powershell/module/appx/invoke-commandindesktoppackage?view=win10-ps) is a PowerShell cmdlet that can be used to run an application inside the MSIX container. This allows for users to run command prompt, registry editor, PowerShell inside the MSIX container and get a view of the merged file system and merged registry hive. 
+To assist in diagnosing such issues, [Invoke-CommandInDesktopPackage](/powershell/module/appx/invoke-commandindesktoppackage&preserve-view=true) is a PowerShell cmdlet that can be used to run an application inside the MSIX container. This allows for users to run command prompt, registry editor, PowerShell inside the MSIX container and get a view of the merged file system and merged registry hive. 
 
  > [!IMPORTANT]
  > Invoke-CommandInDesktopPackage requires the device to be in Developer mode for Windows 10 builds prior to 18922.
