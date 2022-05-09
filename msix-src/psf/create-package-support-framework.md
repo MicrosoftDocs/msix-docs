@@ -1,5 +1,5 @@
 ---
-description: Learn how to create a new runtime fix and replace functions in an MSIX container.
+description: Learn how to create a new runtime fix and replace functions including configuration data in an MSIX container.
 title: Use the Package Support Framework to create a new runtime fix
 ms.date: 05/13/2020
 ms.topic: article

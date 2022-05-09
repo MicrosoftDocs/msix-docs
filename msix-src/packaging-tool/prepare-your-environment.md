@@ -1,6 +1,6 @@
 ---
 title: prepare your environment for conversion
-description: Learn how to prepare an existing installers conversion environment to MSIX.
+description: Learn how to correctly prepare your environment for conversion to convert existing installers to MSIX.
 ms.date: 01/27/2020
 ms.topic: article
 keywords: msix
