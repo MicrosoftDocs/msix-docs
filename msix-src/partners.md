@@ -85,6 +85,7 @@ The following partners provide additional tooling and support for MSIX developme
         [![Readiness logo](images/readiness-logo-offset.png)](https://applicationreadiness.com/)
     :::column-end:::
 
+
     :::column:::
         
     :::column-end:::
