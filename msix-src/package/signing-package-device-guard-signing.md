@@ -118,7 +118,7 @@ function GetToken()
 ```
 
 > [!NOTE]
-> We recommand that you save your JSON file for later use.
+> We recommend that you save your JSON file for later use.
 
 ## Obtain the Device Guard Signing version 2 DLL
 To sign with Device Guard Signing version 2, obtain the **Microsoft.Acs.Dlib.dll** by downloading the [NuGet Package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client/) that will be used to sign your package. This is also needed to obtain the root certificate. 
