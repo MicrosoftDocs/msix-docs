@@ -189,7 +189,7 @@ After you create the *config.json* file, you move the *config.json* and supporti
 
      :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image showing the location of the working directory within the AppxManifest file.":::
 
-   - Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value to match the file type the application creates. If you use `.*\.log`, the PSF redirects all log file writes in the `processes.fixups.config.redirectedPaths.packageRelative.base` directory and child directories.
+   - Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value to match the file type the application creates. If you use `.*\\.log`, the PSF redirects all log file writes in the `processes.fixups.config.redirectedPaths.packageRelative.base` directory and child directories.
 
 1. Save the updated *config.json* file. The following example shows an updated *config.json* file:
     ```json
