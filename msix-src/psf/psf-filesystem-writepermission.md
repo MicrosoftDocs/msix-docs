@@ -1,23 +1,23 @@
 ---
-title: Package Support Framework - Filesystem Write Permission fixup
-description: Provides guidance on how to apply Filesystem Write permission fixes with the Package Support Framework.
+title: Package Support Framework filesystem write permission fix
+description: Learn how to identify and apply filesystem write permission error fixes by using the MSIX Package Support Framework.
 ms.date: 05/10/2022
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, psf, package support framework, filesystem, write permission, msix
 ms.custom: kr2b-contr-experiment
 ---
 
-# How to fix Package Support Framework - Filesystem Write Permission error
+# How to fix Package Support Framework filesystem write permission errors
 
 This article describes how to use the Package Support Framework (PSF) to resolve a Package Support Framework - Filesystem Write Permission error.
 
-Windows Apps redirects specific directories that are related to the application to the Windows App container folder. If an application attempts to write to the Windows App container, an error triggers, and the write fails. You can make enhancements to the Windows App package to resolve this issue.
+Windows apps redirect specific directories that are related to the application to the Windows app container folder. If the application attempts to write to the Windows app container, an error triggers, and the write fails. You can make enhancements to the Windows app package to resolve this issue.
 
 ## Investigation
 
 First, identify the failure, and the directory paths that the app is requesting.
 
-#### Capture the Windows App failure
+#### Capture the Windows app failure
 
 Filtering the results is optional, but makes it easier to see application-related failures. To filter results, you create two filter rules. The first filter includes the application process name, and the second filter includes any results that aren't successful.
 
@@ -41,11 +41,11 @@ Filtering the results is optional, but makes it easier to see application-relate
 1. Select **Add**, and then select **OK**.
 1. Launch the Windows app, trigger the error, and then close the Windows app.
 
-#### Review the Windows App failure logs
+#### Review the Windows app failure logs
 
 After you capture the Windows app processes, investigate the results to determine whether the failure is related to the working directory.
 
-Review the SysInternals Process Monitor failure results. If the results include an **Access denied** result, with the details **Desired Access: ...** for your app targeting **C:\Program Files\WindowsApps\\...\\** as in the following screenshot, you've identified a failure related to the working directory.
+Review the SysInternals Process Monitor failure results. If the results include **Access denied**, with a **Desired Access: Generic Write** detail, for your app targeting **C:\Program Files\WindowsApps\\...\\**, you've identified a write permission failure related to the working directory.
 
 :::image type="content" source="images/procmon-psfsampleapp-writefailure.png" alt-text="Displays the error message witnessed in the SysInternals Process Monitor for failure to write to directory.":::
 
@@ -56,10 +56,10 @@ If you identify this error, apply the following PSF correction to your app.
 To resolve the issue of the Windows app failing to write to the Windows app container, follow these steps:
 
 1. Extract the content of the Windows app to a [local staged directory](#stage-the-windows-app).
-1. [Create the config.json and inject the PSF fixup files](#create-and-inject-required-psf-files) into the staged Windows app directory.
+1. [Create a config.json and inject the PSF fixup files](#create-and-inject-required-psf-files) into the staged Windows app directory.
 1. Configure the application launcher to point to the PSF launcher, and configure the PSF *config.json* file to redirect the PSF launcher to the app, specifying the working directory.
 1. [Update the Windows app AppxManifest file](#update-appxmanifest).
-1. [Repackage and sign the Windows app](#re-package-the-application).
+1. [Repackage and sign the Windows app](#repackage-the-application).
 
 ### Download and install required tools
 
@@ -74,7 +74,7 @@ To download and install NuGet and PSF:
 
 1. Download the latest non-preview version of the [NuGet client tool](https://www.nuget.org/downloads), and save *nuget.exe* in *C:\\PSF\\nuget*.
 
-1. Download and install the Package Support Framework using [Nuget](/nuget/install-nuget-client-tools#nugetexe-cli) by running the following command from an administrative PowerShell window:
+1. Download and install the Package Support Framework with NuGet by running the following command from an administrative PowerShell window:
    ```powershell
    Set-Location "C:\PSF"
    .\nuget\nuget.exe install Microsoft.PackageSupportFramework
@@ -93,7 +93,7 @@ To download and install the Windows 10 SDK:
 
 ### Stage the Windows app
 
-Staging the Windows app extracts and unpackages the contents of the Windows app to a local directory. Once the Windows App is unpacked to the staging location, you can inject PSF fixup files to correct any unwanted experiences.
+Staging the Windows app extracts and unpackages the contents of the app to a local directory. Once the Windows App is unpacked to the staging location, you can inject PSF fixup files to correct any unwanted experiences.
 
 1. In an administrative PowerShell window, set the following variables to target your specific app file and Windows 10 SDK version:
    ```powershell
@@ -154,7 +154,7 @@ After you create the *config.json* file, you move the *config.json* and supporti
     }
     ```
 
-1. Open the *AppxManifest.xml* file in the Windows app staging folder. *AppxManifest.xml* looks something like the following example:
+1. Open the *AppxManifest.xml* file in the Windows app staging folder. An *AppxManifest.xml* file looks something like the following example:
     ```xml
     <Applications>
         <Application Id="PSFSAMPLE" Executable="VFS\ProgramFilesX64\PS Sample App\PSFSample.exe" EntryPoint="Windows.FullTrustApplication">
@@ -189,7 +189,7 @@ After you create the *config.json* file, you move the *config.json* and supporti
 
      :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image showing the location of the working directory within the AppxManifest file.":::
 
-   - Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value to match the file type the application creates. If you use `.*\\.log`, the PSF redirects all log file writes in the `processes.fixups.config.redirectedPaths.packageRelative.base` directory and child directories.
+   - Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value to match the file type the application creates. If you use `.*\.log`, the PSF redirects all log file writes in the `processes.fixups.config.redirectedPaths.packageRelative.base` directory and child directories.
 
 1. Save the updated *config.json* file. The updated file looks something like the following example:
     ```json
@@ -239,7 +239,7 @@ After you create the *config.json* file, you move the *config.json* and supporti
 
 After you create and update the *config.json* file, update the Windows app's *AppxManifest.xml* file for each Windows app launcher you included in the *config.json*. The *AppxManifest.xml* `Applications` must now target the *PSFLauncher.exe* associated with the application architecture.
 
-1. Open *AppxManifest.xml* in the Staged MSIX App folder, *C:\\PSF\\Staging\\PSFSampleApp*.
+1. Open *AppxManifest.xml* in the staged MSIX app folder, *C:\\PSF\\Staging\\PSFSampleApp*.
 1. Update *AppxManifest.xml* with the following code:
     ```xml
     <Package ...>
