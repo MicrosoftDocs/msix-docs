@@ -1,17 +1,17 @@
 ---
-title: Package Support Framework filesystem write permission fix
-description: Learn how to identify and apply filesystem write permission error fixes by using the MSIX Package Support Framework.
+title: Package Support Framework Filesystem Write Permission fix
+description: Learn how to identify and apply Filesystem Write Permission error fixes by using the MSIX Package Support Framework.
 ms.date: 05/10/2022
 ms.topic: how-to
 keywords: windows 10, uwp, psf, package support framework, filesystem, write permission, msix
 ms.custom: kr2b-contr-experiment
 ---
 
-# How to fix Package Support Framework filesystem write permission errors
+# How to fix Package Support Framework Filesystem Write Permission errors
 
-This article describes how to use the Package Support Framework (PSF) to resolve a Package Support Framework - Filesystem Write Permission error.
+This article describes how to use the Package Support Framework (PSF) to resolve a Filesystem Write Permission error.
 
-Windows apps redirect specific directories that are related to the application to the Windows app container folder. If the application attempts to write to the Windows app container, an error triggers, and the write fails. You can make enhancements to the Windows app package to resolve this issue.
+Windows apps redirect specific application-related directories to the Windows app container folder. If the application attempts to write to the Windows app container, an error triggers, and the write fails. You can make enhancements to the Windows app package to resolve this issue.
 
 ## Investigation
 
@@ -55,9 +55,9 @@ If you identify this error, apply the following PSF correction to your app.
 
 To resolve the issue of the Windows app failing to write to the Windows app container, follow these steps:
 
-1. Extract the content of the Windows app to a [local staged directory](#stage-the-windows-app).
+1. Extract the content of the Windows app to a [local staging directory](#stage-the-windows-app).
 1. [Create a config.json and inject the PSF fixup files](#create-and-inject-required-psf-files) into the staged Windows app directory.
-1. Configure the application launcher to point to the PSF launcher, and configure the PSF *config.json* file to redirect the PSF launcher to the app, specifying the working directory.
+1. Configure the application launcher to point to the PSF launcher, and configure the PSF *config.json* file to redirect the PSF launcher, specifying the working directory.
 1. [Update the Windows app AppxManifest file](#update-appxmanifest).
 1. [Repackage and sign the Windows app](#repackage-the-application).
 
@@ -154,7 +154,7 @@ After you create the *config.json* file, you move the *config.json* and supporti
     }
     ```
 
-1. Open the *AppxManifest.xml* file in the Windows app staging folder. An *AppxManifest.xml* file looks something like the following example:
+1. Open the *AppxManifest.xml* file in the Windows app staging folder. The following example shows an *AppxManifest.xml* file:
     ```xml
     <Applications>
         <Application Id="PSFSAMPLE" Executable="VFS\ProgramFilesX64\PS Sample App\PSFSample.exe" EntryPoint="Windows.FullTrustApplication">
@@ -191,7 +191,7 @@ After you create the *config.json* file, you move the *config.json* and supporti
 
    - Set the `processes.fixups.config.redirectedPaths.packageRelative.patterns` value to match the file type the application creates. If you use `.*\.log`, the PSF redirects all log file writes in the `processes.fixups.config.redirectedPaths.packageRelative.base` directory and child directories.
 
-1. Save the updated *config.json* file. The updated file looks something like the following example:
+1. Save the updated *config.json* file. The following example shows an updated *config.json* file:
     ```json
     {
         "applications": [
@@ -256,7 +256,7 @@ After you create and update the *config.json* file, update the Windows app's *Ap
 
 ### Repackage the application
 
-Now that you applied all of the corrections, repackage the Windows app into an MSIX and sign it with a code signing certificate.
+After you apply all the corrections, repackage the Windows app into an MSIX and sign it with a code signing certificate.
 
 1. Open an Administrative PowerShell Window.
 1. Set the following variables:
