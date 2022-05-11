@@ -44,10 +44,11 @@ You can control who has access to the contents of your Key Vault by using **acce
 
 1. On the Key Vault properties pages, select **Access policies**.
 2. Select **+ Add Access Policy**.
-3. Click on the **Key permissions** dropdown and check the boxes for **Get** and **List** under **Key Management Operations**.
-4. Click on **Select principal**, search for the user you are granting access to, and click **Select**.
-5. Click **Add**.
-6. Make sure to save your changes by clicking **Save**.
+3. Click on the **Certificate Permissions** dropdown and check the boxes for **Get** and **List** under **Certificate Management Operations**.
+4. Click on the **Secret Permissions** dropdown and check the boxes for **Get** and **List** under **Secret Management Operations**.
+5. Click on **Select Principal**, search for the user you are granting access to, and click **Select**.
+6. Click **Add**.
+7. Make sure to save your changes by clicking **Save**.
 
 > [!NOTE]
 > Giving users direct access to a key vault is **discouraged**. Ideally, users should be added to an Azure AD group, which is in turn given access to the key vault.
