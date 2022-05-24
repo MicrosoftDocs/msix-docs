@@ -26,7 +26,7 @@ Example:
 
 ## Installing an unsigned package
 
-Developers must run PowerShell as admin when installing an unsigned package, and pass the **-AllowUnsigned** flag when running the [Add-AppxPackage](/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps) command. A non admin can only install unsigned packages if it contains non executable files. This is useful in scenarios where the user only needs to load images, assets and content or script files. 
+Developers must run PowerShell as admin when installing an unsigned package, and pass the **-AllowUnsigned** flag when running the [Add-AppxPackage](/powershell/module/appx/add-appxpackage&preserve-view=true) command. A non admin can only install unsigned packages if it contains non executable files. This is useful in scenarios where the user only needs to load images, assets and content or script files. 
 
 Example:
 

@@ -1,5 +1,5 @@
 ---
-description: An overview of topics for creating an MSIX package from source code
+description: An overview of topics for creating an MSIX package from source code.
 title: Building an MSIX package from your code 
 ms.date: 01/27/2020
 ms.topic: article

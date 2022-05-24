@@ -23,7 +23,7 @@ To set up the actual build pipeline, you browse to the Azure DevOps portal at de
 ## Add your project certificate to the Secure files library
 
 > [!NOTE]
->You should avoid submitting certificates to your repo if at all possible, and git ignores them by default. To manage the safe handling of sensitive files like certificates, Azure DevOps supports the [secure files](/azure/devops/pipelines/library/secure-files?view=azure-devops) feature.
+>You should avoid submitting certificates to your repo if at all possible, and git ignores them by default. To manage the safe handling of sensitive files like certificates, Azure DevOps supports the [secure files](/azure/devops/pipelines/library/secure-files&preserve-view=true) feature.
 
 To upload a certificate for your automated build:
 
