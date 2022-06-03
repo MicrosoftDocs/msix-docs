@@ -13,7 +13,7 @@ The following partners provide additional tooling and support for MSIX developme
 
 :::row:::
     :::column:::
-        [![Access IT Automation logo](images/AccessITAutomationLogoTransp.png)](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
+        [![Access IT Automation logo](images/AccessItItAutomationLogoRebranded.png)](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
     :::column-end:::
 
     :::column:::
@@ -36,17 +36,13 @@ The following partners provide additional tooling and support for MSIX developme
     :::column-end:::
 
     :::column:::
-	    [![Rimo3 logo](images/Rimo3_Logo.png)](https://www.rimo3.com/)
+        [![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)
     :::column-end:::
     
 :::row-end:::
 
 :::row:::
 
-    :::column:::
-        [![FireGiant logo](images/FireGiant_Logo.png)](https://www.firegiant.com/r/msix/)
-    :::column-end:::
-    
     :::column:::
         [![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)
     :::column-end:::
@@ -55,35 +51,39 @@ The following partners provide additional tooling and support for MSIX developme
         [![InstallAware logo](images/installAware_logo.png)](https://www.installaware.com/msix.htm)    
     :::column-end:::
     
+    :::column:::
+        [![Liquit logo](images/liquit_logo.png)](https://www.liquit.com/msix-readiness/)
+    :::column-end:::
 
 :::row-end:::
 
 :::row:::
-
-    :::column:::
-        [![Liquit logo](images/liquit_logo.png)](https://www.liquit.com/msix-readiness/)
-    :::column-end:::
     
     :::column:::
 	    [![Pace logo](images/PACE-suite-logos.png)](https://pacesuite.com/convert-exe-to-msix/)
     :::column-end:::
 
     :::column:::
-        [![Revenera logo](images/Revenera_light.png)](https://community.flexera.com/t5/MSIX-Central/Get-Started-with-MSIX-and-InstallShield/ba-p/160126)
+        [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
     :::column-end:::
 
+    :::column:::
+        [![Readiness logo](images/readiness-logo-offset.png)](https://applicationreadiness.com/)
+    :::column-end:::
 
 :::row-end:::
 
 :::row:::
+    
+    :::column:::
+        [![Revenera logo](images/Revenera_light.png)](https://community.flexera.com/t5/MSIX-Central/Get-Started-with-MSIX-and-InstallShield/ba-p/160126)
+    :::column-end:::
 
     :::column:::
-        [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
+	    [![Rimo3 logo](images/Rimo3_Logo.png)](https://www.rimo3.com/)
     :::column-end:::
     	
-    :::column:::
-        [![Readiness logo](images/readiness-logo-offset.png)](https://applicationreadiness.com/)
-    :::column-end:::
+    
 
 
     :::column:::
