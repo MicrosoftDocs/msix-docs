@@ -32,7 +32,7 @@ To use the `PackageManager` APIs, your app must declare the `packageManagement` 
 
 ## Updating packages deployed using an App Installer file
 
-If you are deploying your application using the App Installer file, any code driven updates you perform must make use of the [App Installer file APIs](./app-installer/app-installer-documentation.md#app-installer-file-apis). Doing so ensures that your regular App Installer file updates will continue to work. For intiating an App Installer based update from your code you can use [PackageManager.AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync?view=winrt-19041) or [PackageManager.RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync?view=winrt-19041). You can check if an update is available using the [Package.CheckUpdateAvailabilityAsync](/uwp/api/windows.applicationmodel.package.checkupdateavailabilityasync?view=winrt-19041) API. Below is example code:
+If you are deploying your application using the App Installer file, any code driven updates you perform must make use of the [App Installer file APIs](./app-installer/app-installer-documentation.md#app-installer-file-apis). Doing so ensures that your regular App Installer file updates will continue to work. For intiating an App Installer based update from your code you can use [PackageManager.AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync&preserve-view=true) or [PackageManager.RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync&preserve-view=true). You can check if an update is available using the [Package.CheckUpdateAvailabilityAsync](/uwp/api/windows.applicationmodel.package.checkupdateavailabilityasync&preserve-view=true) API. Below is example code:
 
 ```csharp
 using Windows.Management.Deployment;
@@ -113,7 +113,7 @@ private async void CheckUpdate(object sender, TappedRoutedEventArgs e)
 
 ### Apply the update 
 
-After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync?view=winrt-19041) API. It should also work to install an optional package as long as the main package is already installed on the device. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
+After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync&preserve-view=true) API. It should also work to install an optional package as long as the main package is already installed on the device. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
 
 ```csharp
 

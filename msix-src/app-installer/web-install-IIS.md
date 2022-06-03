@@ -111,7 +111,7 @@ Open the **Web.config** file from the solution explorer and add the following li
 ```
 
 > [!NOTE]
-> On newest Microsoft web technology .NET Core. Web site build using .NET Core ASP ignore web.config static content mimeMap. As a result, you will need to a proper configuration of .NET Core website which will host your MSIX installation you need modify Configure method in Startup.cs file. Visit [.NET Core documentation](/aspnet/core/?view=aspnetcore-5.0) for more information. 
+> On newest Microsoft web technology .NET Core. Web site build using .NET Core ASP ignore web.config static content mimeMap. As a result, you will need to a proper configuration of .NET Core website which will host your MSIX installation you need modify Configure method in Startup.cs file. Visit [.NET Core documentation](/aspnet/core/&preserve-view=true) for more information. 
 
 ## Step 8 - Add loopback exemption for App Installer
 

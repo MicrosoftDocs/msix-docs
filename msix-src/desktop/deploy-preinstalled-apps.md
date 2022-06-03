@@ -41,13 +41,13 @@ Beginning with Windows 10 1809, IT Pros can pre-install through provisioning. Pr
 In Windows 10 2004, a provisioned packaged app will reinstall during re-provisioning. Prior versions of Windows 10 would prevent the reinstall of these packaged apps if the user had previously uninstalled the packaged app.
 
 ### Force Provisioning
-With regular provisioning, if a user removes an app, it cannot be reinstalled with an update. With force provisioning, an IT pro administrator can re-provision an app to be reinstalled for all users. This is triggered by running the **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps)** Powershell command described below.
+With regular provisioning, if a user removes an app, it cannot be reinstalled with an update. With force provisioning, an IT pro administrator can re-provision an app to be reinstalled for all users. This is triggered by running the **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true)** Powershell command described below.
 
 ## PowerShell
 List of relevant PowerShell commands
-* **[Get-ProvisionedAppxPackages](/powershell/module/dism/get-appxprovisionedpackage?view=win10-ps)** This will list all of the apps that are pre-installed on the image.
-* **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps)** This stages the appx package and configures it for pre-install. All dependencies must be provided as well, which can be found in the SDK or with store-downloaded packages.
-* **[Remove-ProvisionedAppxPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps)** This can be used to remove a pre-installed app. Note that it does not remove the app if it is already registered for any users - this only strips the auto-registration behavior so it will not be auto-installed for any new users.  If no users have yet installed the app, this command will also remove the staged files.
+* **[Get-ProvisionedAppxPackages](/powershell/module/dism/get-appxprovisionedpackage&preserve-view=true)** This will list all of the apps that are pre-installed on the image.
+* **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true)** This stages the appx package and configures it for pre-install. All dependencies must be provided as well, which can be found in the SDK or with store-downloaded packages.
+* **[Remove-ProvisionedAppxPackage](/powershell/module/dism/remove-appxprovisionedpackage&preserve-view=true)** This can be used to remove a pre-installed app. Note that it does not remove the app if it is already registered for any users - this only strips the auto-registration behavior so it will not be auto-installed for any new users.  If no users have yet installed the app, this command will also remove the staged files.
 
 Using the MSIX PowerShell cmdlets, to preinstall or provision an MSIX packaged app on a device you must use the MSIX app's Package Full Name. The Package Full Name is the full name of the package containing the package name, version, architecture, and publisher information. The following is an example of a Package Full Name: `Contoso.ContosoApp_44.20231.1000.0_neutral__8wekyb3d8bbwe`
 

@@ -1,20 +1,20 @@
 ---
-title: Customer journeys
-description: This article describes MSIX customer journey. 
+title: Links to customer journeys
+description: Get links to articles that describe DB Systel, ECNO, MID, SAP, Schneider Electric, and Trend Micro MSIX customer journeys.
 author: dianmsft
-ms.date: 06/25/2020
-ms.topic: article
+ms.date: 05/11/2022
+ms.topic: landing-page
 keywords: windows 10, uwp, msix
-ms.custom: RS5
+ms.custom: RS5, kr2b-contr-experiment
 ---
 
 # Customer journeys with MSIX
 
-Many customers are successfully using MSIX to improve the deployment of their Windows applications. This section highlights the experiences of several of these customers.
+The following articles describe how customers successfully used MSIX to improve their Windows application deployments:
 
-* Learn how [DB Systel](customer/db-systel.md) is enabling agile deployment of Windows applications.
-* Learn how [Educational Computing Network of Ontario (ECNO)](customer/ecno.md) is improving desktop application delivery and install experience for Ontario students
-* Learn how [MID GmbH](customer/mid.md) is using MSIX and .NET Core to improve the release cycle of their Innovator Enterprise Modeling Suite
-* Learn how [SAP](customer/sap.md) is using Microsoft technology for saving costs by improving their Windows Application distribution mechanism 
-* Learn how [Schneider Electric](customer/schneider-electric.md) is developing and deploying WPF desktop applications
-* Learn how [Trend Micro](customer/trend-micro.md) uses C++/WinRT and MSIX in Cleaner One
+- [DB Systel](customer/db-systel.md) used MSIX to enable agile Windows application deployment.
+- [Educational Computing Network of Ontario (ECNO)](customer/ecno.md) improved the desktop application delivery and install experience for Ontario students.
+- [MID GmbH](customer/mid.md) used MSIX and .NET Core to improve the release cycle of their Innovator Enterprise Modeling Suite.
+- [SAP](customer/sap.md) used Microsoft technology to save costs by improving their Windows application distribution mechanism.
+- [Schneider Electric](customer/schneider-electric.md) developed and deployed WPF desktop applications.
+- [Trend Micro](customer/trend-micro.md) used C++/WinRT and MSIX in Cleaner One.

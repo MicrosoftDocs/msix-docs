@@ -19,7 +19,7 @@ You can also directly download the latest version of the offline package here:
 
 If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://download.microsoft.com/download/b/8/d/b8d117f8-95cc-4210-be09-d197331c134d/MSIXPackagingTool_1.2022.330.0_License.xml) for the tool. 
 
-After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps) to add the app package and license to your machine.
+After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true) to add the app package and license to your machine.
 
 #### Example of offline installation
 ```
