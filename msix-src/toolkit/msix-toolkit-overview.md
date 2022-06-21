@@ -41,8 +41,8 @@ Microsoft includes the following scripts, redistributables, and tools in the MSI
 
 | Name | Description|
 |------|------------|
-| [Redist.x64](https://github.com/microsoft/MSIX-Toolkit/tree/master/Redist.x64) | Includes the binaries and tools from the Windows 10 SDK that are essential while working with MSIX packages. These binaries are intended for a device operating on a 64-bit architecture. |
-| [Redist.x86](https://github.com/microsoft/MSIX-Toolkit/tree/master/Redist.x86) | Includes the binaries and tools from the Windows 10 SDK that are essential while working with MSIX packages. These binaries are intended for a device operating on a 32-bit architecture. |
+| [Redist.x64](https://github.com/microsoft/MSIX-Toolkit/tree/master/WindowsSDK/10/10.0.20348.0/x64) | Includes the binaries and tools from the Windows 10 SDK that are essential while working with MSIX packages. These binaries are intended for a device operating on a 64-bit architecture. |
+| [Redist.x86](https://github.com/microsoft/MSIX-Toolkit/tree/master/WindowsSDK/10/10.0.20348.0/x86) | Includes the binaries and tools from the Windows 10 SDK that are essential while working with MSIX packages. These binaries are intended for a device operating on a 32-bit architecture. |
 
 The redistributables (x86/x64) are used with the Microsoft MSIX Toolkit scripts providing the required executables.
 
