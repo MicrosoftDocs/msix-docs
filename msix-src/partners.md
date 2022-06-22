@@ -58,7 +58,10 @@ The following partners provide additional tooling and support for MSIX developme
 :::row-end:::
 
 :::row:::
-    
+    :::column:::
+	    [![Pace logo](images/MP_logo.png)](https://www.masterpackager.com/)
+    :::column-end:::
+
     :::column:::
 	    [![Pace logo](images/PACE-suite-logos.png)](https://pacesuite.com/convert-exe-to-msix/)
     :::column-end:::
@@ -67,13 +70,13 @@ The following partners provide additional tooling and support for MSIX developme
         [![Raynet logo](images/RayPackStudio_Logo_offset.png)](https://raynet.de/en/msix/)
     :::column-end:::
 
-    :::column:::
-        [![Readiness logo](images/readiness-logo-offset.png)](https://applicationreadiness.com/)
-    :::column-end:::
-
 :::row-end:::
 
 :::row:::
+
+    :::column:::
+        [![Readiness logo](images/readiness-logo-offset.png)](https://applicationreadiness.com/)
+    :::column-end:::
     
     :::column:::
         [![Revenera logo](images/Revenera_light.png)](https://community.flexera.com/t5/MSIX-Central/Get-Started-with-MSIX-and-InstallShield/ba-p/160126)
