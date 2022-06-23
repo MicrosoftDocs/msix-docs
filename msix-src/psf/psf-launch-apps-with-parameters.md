@@ -80,7 +80,7 @@ By staging the Windows App, we will be extracting / unpackaging the contents of 
     ```PowerShell
     $AppPath          = "C:\PSF\SourceApp\PSFSampleApp.msix"         ## Path to the MSIX App Installer
     $StagingFolder    = "C:\PSF\Staging\PSFSampleApp"                ## Path to where the MSIX App will be staged
-    $OSArchitecture   = "x$((gwmi Win32_Processor).AddressWidth)"    ## Operating System Architecture
+    $OSArchitecture   = "x$((gcim Win32_Processor).AddressWidth)"    ## Operating System Architecture
     $Win10SDKVersion  = "10.0.19041.0"                               ## Latest version of the Win10 SDK
     ```
 
@@ -192,7 +192,7 @@ All of the corrections have been applied, now the Windows App can be re-packaged
     $CodeSigningCert  = "C:\PSF\Cert\CodeSigningCertificate.pfx"     ## Path to your code signing certificate
     $CodeSigningPass  = "<Password>"                                 ## Password used by the code signing certificate
     $StagingFolder    = "C:\PSF\Staging\PSFSampleApp"                ## Path to where the MSIX App will be staged
-    $OSArchitecture   = "x$((gwmi Win32_Processor).AddressWidth)"    ## Operating System Architecture
+    $OSArchitecture   = "x$((gcim Win32_Processor).AddressWidth)"    ## Operating System Architecture
     $Win10SDKVersion  = "10.0.19041.0"                               ## Latest version of the Win10 SDK
     ```
 

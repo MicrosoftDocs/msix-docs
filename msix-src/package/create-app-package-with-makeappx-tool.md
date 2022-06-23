@@ -18,14 +18,14 @@ For information about how to use **MakeApp.exe** to package a desktop app, see [
 > If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 
 > [!IMPORTANT]
-> Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](/windows/uwp/publish/upload-app-packages). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#generate-an-app-package-upload-file-for-store-submission), although it can also be created manually.
+> Note that **MakeAppx.exe** does not create an [app package upload file (.appxupload or .msixupload)](packaging-uwp-apps.md#types-of-app-packages), which is the recommended type of valid app package for [submissions to Partner Center](/windows/uwp/publish/upload-app-packages). The app package upload file is typically [created as part of the Visual Studio packaging process](packaging-uwp-apps.md#generate-an-app-package-upload-file-for-store-submission), although it can also be [created manually](packaging-uwp-apps.md#create-your-app-package-upload-file-manually).
 
 ## Using MakeAppx.exe
 
 Based on your installation path of the SDK, this is where **MakeAppx.exe** is on your Windows 10 PC:
 - C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\\&lt;architecture&gt;\makeappx.exe
 
-where &lt;architecture&gt; = x86, x64, arm, ar64 or chpe. Alternatively, it may be located in:
+where &lt;architecture&gt; = x86, x64, arm, arm64 or chpe. Alternatively, it may be located in:
 - C:\Program Files (x86)\Windows Kits\10\App Certification Kit\makeappx.exe
 
 ### MakeAppx.exe syntax and options

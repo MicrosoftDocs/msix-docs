@@ -23,7 +23,7 @@ After deployment, package files are marked read-only and heavily locked down by 
 
 ## File system
 
-The OS supports different levels of file system operations for packaged desktop applications, depending on the folder location.
+The operating system (OS) supports different levels of file system operations for packaged desktop applications, depending on the folder location.
 
 ### Optimized for your device
 
@@ -37,11 +37,11 @@ All newly created files and folders in the user's AppData folder (e.g., *C:\User
 
 All writes to the user's AppData folder (e.g., *C:\Users\user_name\AppData*), including create, delete, and update, are copied on write to a private per-user, per-app location. This creates the illusion that the packaged application is editing the real AppData when it is actually modifying a private copy. By redirecting writes this way, the system can track all file modifications made by the app. This allows the system to clean up those files when the application is uninstalled, thus reducing system "rot" and providing a better application removal experience for the user.
 
-### Other folders
+### Working directory, and application files
 
-In addition to redirecting AppData, Windows' well-known folders (System32, Program Files (x86), etc) are dynamically merged with corresponding directories in the app package. Each package contains a folder named "VFS" at its root. Any reads of directories or files in the VFS directory are merged at runtime with their respective native counterparts. For example, an application could contain *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* as part of its app package, but the file would appear to be installed at *C:\Windows\System32\vc10.dll*.  This maintains compatibility with desktop applications that may expect files to live in non-package locations.
+In addition to redirecting AppData, Windows' well-known folders (System32, Program Files (x86), etc.) are dynamically merged with corresponding directories in the app package. Each package contains a folder named "VFS" at its root. Any reads of directories or files in the VFS directory are merged at runtime with their respective native counterparts. For example, an application could contain `C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll` as part of its app package, but the file would appear to be installed at `C:\Windows\System32\vc10.dll`. That maintains compatibility with desktop applications that expect files to live in non-package locations.
 
-Writes to files/folders in the app package are not allowed. Writes to files and folders that are not part of the package are ignored by the OS and are allowed as long as the user has permission.
+Writes to files/folders in the app package aren't allowed. Writes to files and folders that aren't part of the package are ignored by the OS, and are allowed as long as the user has permission.
 
 ### Common operations
 
