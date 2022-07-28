@@ -37,9 +37,10 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - Version 1.2022.330.0
-- Added driver detection to alert user if their application contains a driver during conversion
-- General performance improvements and bug fixes
+## Latest public release - Version 1.2022.718.0
+- Added support for null arguments during unattended installs
+- Added support for unusual font files included in package
+- Added support for start menu shortcuts
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
