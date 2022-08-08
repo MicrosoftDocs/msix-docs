@@ -9,7 +9,7 @@ ms.custom: 19H1
 
 # MSIX Bulk conversion scripts
 
-The [Bulk conversion scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts/BatchConversion) in the MSIX Toolkit can be used to automate the conversion of Windows apps to the MSIX package format. The list of apps and their details are provided in the **entry.ps1** script.
+The [Bulk conversion scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts/BulkConversion) in the MSIX Toolkit can be used to automate the conversion of Windows apps to the MSIX package format. The list of apps and their details are provided in the **entry.ps1** script.
 
 ## Prepare machines for conversion
 Prior to running the MSIX Toolkit's Bulk Conversion script, to automate the conversion of your application to the MSIX packaging format the devices that you will be using (virtual, or remote) must be configured to allow remote communication, and have the MSIX Packaging Tool installed.
