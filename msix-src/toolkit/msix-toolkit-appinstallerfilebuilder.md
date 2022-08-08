@@ -19,5 +19,5 @@ The [AppInstaller File Builder tool](https://github.com/microsoft/MSIX-Toolkit/t
 4. Specify the update options that you would like the app package to have.
     > [!Note]
     > Options may vary based on selected minimum operating system version. **Check for updates on app launch** must be enabled within the tool to see or configure these values.
-5. Continue through the wizard, adding [optional packages](../package/optional-packages.md), [modification packages](//modification-packages.md), [related packages](../package/optional-packages.md) and dependencies as required.
+5. Continue through the wizard, adding [optional packages](../package/optional-packages.md), [modification packages](/windows/msix/modification-packages), [related packages](../package/optional-packages.md) and dependencies as required.
 6. Select the **Generate** button after reviewing the Summary details to create the AppInstaller file.
