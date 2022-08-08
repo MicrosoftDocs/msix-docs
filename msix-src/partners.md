@@ -44,7 +44,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
     :::column:::
-        [![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com/company/news/press-releases/Flexera-Launches-Support-for-Microsofts-MSIX.html)
+        [![Flexera logo](images/Flexera_Logo.png)](https://www.flexera.com)
     :::column-end:::
 
     :::column:::
