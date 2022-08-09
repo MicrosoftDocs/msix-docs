@@ -29,6 +29,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
+## Version 1.2022.802.0
+- Fixed a UI bug
+
 ## Version 1.2022.718.0
 - Added support for null arguments during unattended installs
 - Added support for unusual font files included in package
