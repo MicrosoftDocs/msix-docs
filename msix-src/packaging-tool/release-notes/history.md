@@ -9,10 +9,10 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2022.802.0
+## Version 1.2022.802.0 - Public Version
 - Fixed a UI bug
 
-## Version 1.2022.718.0 - Public Version
+## Version 1.2022.718.0
 - Added support for null arguments during unattended installs
 - Added support for unusual font files included in package
 - Added support for start menu shortcuts
