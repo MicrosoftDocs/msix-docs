@@ -64,7 +64,7 @@ Here is the complete list of parameters that you can use in the Conversion templ
 |Installer::Path | The path to the application installer.|
 |Installer::Arguments | [optional] The arguments to pass to the installer.  The tool will automatically run MSI installers silently using argument  "/qn /norestart INSTALLSTARTMENUSHORTCUTS=1 DISABLEADVTSHORTCUTS=1". NOTE: You must pass the arguments to force your installer to run silently if you are using .exe installers.|
 |Installer::InstallLocation | [optional] The full path to your application's root folder for the installed files if it were installed (e.g. "C:\Program Files (x86)\MyAppInstalllocation").|
-|Installer::IsUnattendedInstallWithoutArgument | [optional] This attribute should be used if the app allows 'Unattended' install without silent installer arguments. This attribute is used only for .exe installers.|
+|Installer::IsUnattendedInstallWithoutArgument | [optional] This attribute should be used if the app allows 'Unattended' install without silent arguments. This attribute is used only for .exe installers.|
 |VirtualMachine | [optional] An element to specify that the conversion will be run on a local Virtual Machine.|
 |VirtualMachine::Name | The name of the virtual machine to be used for the conversion environment.|
 |VirtualMachine::Username | The user name for the virtual machine to be used for the conversion environment.|
