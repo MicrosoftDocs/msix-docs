@@ -1,9 +1,9 @@
 ---
 title: How to build MSIX package on Linux 
 description: This article gives an overview of how to create an MSIX package on a Linux machine using the MSIX SDK
-ms.date: 02/02/2020
+ms.date: 08/12/2022
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows 10, windows 11, linux, uwp, msix
 ms.custom: RS5
 ---
 
@@ -19,3 +19,13 @@ On a Linux machine use the following commands to build an MSIX packa
    ./makelinux [options]
    ./makeaosp [options]
 ```
+
+## Use the MSIX package
+
+After creating your MSIX package on Linux, you have a few options:
+
+* Distribute your app on the Microsoft Store for business. There is no need to sign it yourself in this case.
+
+* Use this Azure Dev Ops [MSIX Packaging Extension](https://marketplace.visualstudio.com/items?itemName=MSIX.msix-ci-automation-task) to help sign your package in a Windows agent. A sample pipeline can be [found here](https://github.com/microsoft/msix-packaging/blob/master/tools/pipelines-tasks/azure-pipelines/sample-pipeline.yml).
+
+* Generate the MSIX package on Linux and copy it over to a Windows machine to sign it by using [signtool](/windows/msix/package/sign-app-package-using-signtool).
