@@ -111,6 +111,9 @@ private async void CheckUpdate(object sender, TappedRoutedEventArgs e)
 }
 ```
 
+> [!NOTE]
+> The `targetPackageFileName` is representative of the MSIX packaged app's full name. (Example: Contoso.HeadTrax_1.0.0.0_x64__PublisherHash)
+
 ### Apply the update 
 
 After you determined that an update is available, you can queue it up for download and install using the [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync&preserve-view=true) API. It should also work to install an optional package as long as the main package is already installed on the device. The update will be applied the next time your app is shut down. After the app is restarted, the new version will be available to the user. Below is example code:
