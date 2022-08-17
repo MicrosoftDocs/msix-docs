@@ -92,11 +92,6 @@ See [Run, debug, and test a packaged application](desktop-to-uwp-debug.md)
 
 ## Additional resources
 
-**Video**
-
-&nbsp;
-> [!VIDEO https://www.youtube-nocookie.com/embed/fJkbYPyd08w]
-
 **Enhance your desktop application by adding UWP APIs**
 
 See [Enhance your desktop application for Windows 10](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
