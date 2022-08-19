@@ -1,6 +1,6 @@
 ---
-title: Supported platforms 
-description: This article describes supported platform for MSIX. 
+title: MSIX features and supported platforms 
+description: This article describes supported platforms for MSIX and lists feature additions by release. 
 author: dianmsft
 ms.date: 04/28/2021
 ms.topic: article
@@ -8,7 +8,7 @@ keywords: windows 10, uwp, msix
 ms.custom: RS5
 ---
 
-# Supported platforms
+# MSIX features and supported platforms
 
 MSIX is currently supported on the following versions of Windows:
 
@@ -51,6 +51,11 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Shared package containers](manage/shared-package-container.md)                             | :x:                         | :x:                | :x:                | :x:                | :x:                         | :x:                | :x:                | :heavy_check_mark: |
 | [Sparse packages](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Hosted Apps](/windows/uwp/launch-resume/hosted-apps)                                                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Flexible virtualization](desktop/flexible-virtualization.md) | :x:                         | :x:                | :x:                | :x: | :x:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Start menu groups](packaging-tool/create-start-group.md) | :x:                         | :x:                | :x:                | :x: | :x:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Legacy context menu support](packaging-tool/support-legacy-context-menus.md) | :x:                         | :x:                | :x:                | :x: | :x:          |  :x:  |  :x:  | :heavy_check_mark: |
+| [Mutable package directories](manage/create-directory.md) | :x:                         | :x:                | :x:                | :x: | :x:          |  :x:  |  :x:  | :heavy_check_mark: |
+| [MSIX Persistent Identity](package/persistent-identity.md) | :x:                         | :x:                | :x:                | :x: | :x:          |  :x:  |  :x:  | :heavy_check_mark: |
 
 
 ### Windows Server Support
