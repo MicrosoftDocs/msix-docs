@@ -4,7 +4,7 @@
       href: index.yml  
     - name: What is MSIX?
       href: overview.md
-    - name: Supported platforms
+    - name: Features and supported platforms 
       href: supported-platforms.md
     - name: MSIX Container
       href: msix-container.md     
