@@ -15,13 +15,13 @@ Starting in Windows 11, we now allow developers to install their apps via Powers
 Unsigned packages must include a special OID (organization ID) value in their [Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) element in the manifest file or they won’t be allowed to register. An unsigned package will never have the same identity as a package that is signed. This prevents unsigned packages from conflicting with or spoofing the identity of a signed package.
 
 Example: 
+
 ```xml
 ...
   <Identity Name="NumberGuesserManifest"
     Publisher="CN=AppModelSamples, OID.2.25.311729368913984317654407730594956997722=1"
     Version="1.0.0.0" />
 ...
-
 ```
 
 ## Installing an unsigned package
@@ -30,10 +30,8 @@ Developers must run PowerShell as admin when installing an unsigned package, and
 
 Example:
 
-```console
-
+```powershell
     Add-AppPackage -Path ".\MyEmployees.appx" -AllowUnsigned
-    
 ```
 
 When the app is ready to be distributed, developers should ensure the package is signed. They must remove the special OID and ensure that the publisher name is the same as the certificate subject name.
