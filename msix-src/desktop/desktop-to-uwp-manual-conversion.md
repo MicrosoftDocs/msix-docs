@@ -182,7 +182,7 @@ There is no ARM version of this tool.
 
 ## Test your application before packaging
 
-You can deploy your non-packaged application and test it before packaging or signing. To do so, run the cmdlet below from a PowerShell window. Make sure to pass in your application's manifest file located in the root of your package directory with all your other package components:
+You can deploy your unpackaged application and test it before packaging or signing. To do so, run the cmdlet below from a PowerShell window. Make sure to pass in your application's manifest file located in the root of your package directory with all your other package components:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
