@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ---
 
 # Apply Package Support Framework in Visual Studio
-The Package Support Framework (PSF) is an [open source project](https://github.com/Microsoft/MSIX-PackageSupportFramework/) that enables you to apply fixes to your existing desktop application. The PSF enables an application to run in an MSIX packaged format without modifying code. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
+The Package Support Framework (PSF) is an [open source project](https://github.com/Microsoft/MSIX-PackageSupportFramework/) that enables you to apply fixes to your existing desktop application. The PSF enables an application to run in a packaged format without modifying code. The Package Support Framework helps your application follow the best practices of the modern runtime environment.
 
 In the following sections, we will explore how to create a new Visual Studio project, include Package Support Framework to the solution, and create runtime fixes.
 

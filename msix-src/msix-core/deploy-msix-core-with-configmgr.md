@@ -8,7 +8,7 @@ ms.custom: "RS5, seodec18"
 ---
 
 # Deploy MSIX Core with Microsoft Endpoint Configuration Manager
-MSIX Core enables an enterprise to standardize on the MSIX packaging format for their applications. IT Pros can easily deploy the MSIX Core installer to their devices and enables: install, query, and removal of MSIX packaged apps (that already work on those Windows versions).
+MSIX Core enables an enterprise to standardize on the MSIX packaging format for their applications. IT Pros can easily deploy the MSIX Core installer to their devices and enables: install, query, and removal of packaged apps (that already work on those Windows versions).
 
 MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types. MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on early Windows versions.
 

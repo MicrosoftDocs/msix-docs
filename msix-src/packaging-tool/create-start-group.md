@@ -11,7 +11,7 @@ keywords: windows 10, uwp, msix, appx
 > [!IMPORTANT]
 > This feature is currently available in preliminary Windows 10 builds which are distributed through the Dev Ring of the [Windows Insider program](https://insider.windows.com/en/). You will need at least build 20257 to enable this feature.
 
-The manifest of a MSIX packaged application contains one or more `<Application>` entries, which are the available entry points. Each of them will become an icon in the Start menu.
+The manifest of a packaged application contains one or more `<Application>` entries, which are the available entry points. Each of them will become an icon in the Start menu.
 
 A MSIX package can contain multiple applications. Alternatively, a company can build multiple applications, which are packaged as separate MSIX packages, but they all belong to the same suite.
 In both scenarios, you may want to group together all the entries in the Start menu under a single folder, so that for the user it's easier to find all the applications in the same place.

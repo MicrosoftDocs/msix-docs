@@ -22,11 +22,11 @@ MSIX Core enables the installation of MSIX apps on previous versions of Windows,
 * Currently supported Windows Server (with Desktop Experience)
 * Windows 10 versions prior to 1709
 
-MSIX Core is designed for both developers and IT pros. Developers can use the MSIX Core Library to enable their existing installers to install their MSIX packaged apps on previous Windows versions, so they can produce just one MSIX package to target all Windows users. IT pros can download the MSIX Core Installer.  MSIX Core installer enables command line installation of MSIX along with the ability for users to install MSIX packages simply by double clicking them.
+MSIX Core is designed for both developers and IT pros. Developers can use the MSIX Core Library to enable their existing installers to install their packaged apps on previous Windows versions, so they can produce just one MSIX package to target all Windows users. IT pros can download the MSIX Core Installer.  MSIX Core installer enables command line installation of MSIX along with the ability for users to install MSIX packages simply by double clicking them.
 
 ## Considerations of MSIX Core
 
-The goal of MSIX Core is to enable the install, query, and removal of MSIX packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types.
+The goal of MSIX Core is to enable the install, query, and removal of packaged apps (that already work on those Windows versions), and provide as clean of an uninstall as possible. MSIX Core provides a subset of features of native MSIX, functioning similar to existing Win32 installer types.
 
 * MSIX Core does not provide the container benefits of native MSIX, nor enable an app that uses Windows 10 specific features to work on previous Windows versions.
 * When using MSIX Core on a down-level OS, [app execution aliases](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-an-alias) will only work from **Win+R** and not from Command Prompt or PowerShell.

@@ -135,7 +135,7 @@ The specified remote machine will be used to package a single app into the MSIX 
 Ensure that the fully qualified domain name or externally facing alias of the device is resolvable prior to execution of the **entry.ps1** script.
 
 ### signingCertificate
-The `signingCertificate` parameter is an array that contains information related to the code signing certificate that will be used to sign the MSIX packaged application. This certificate must have an encryption level of at minimum SHA256.
+The `signingCertificate` parameter is an array that contains information related to the code signing certificate that will be used to sign the packaged application. This certificate must have an encryption level of at minimum SHA256.
 
 * **Type:** Array
 * **Required:** No

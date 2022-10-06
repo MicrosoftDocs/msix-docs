@@ -81,7 +81,7 @@ Have questions? Ask us on Stack Overflow. Our team monitors these [tags](https:/
 
 **Review a detailed blog article that was posted by our App Consult Team**
 
-See [Porting and testing your classic desktop applications on Windows 10 S with the Desktop Bridge](/archive/blogs/appconsult/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge).
+See [Porting and testing your desktop applications on Windows 10 S with the Desktop Bridge](/archive/blogs/appconsult/porting-and-testing-your-classic-desktop-applications-on-windows-10-s-with-the-desktop-bridge).
 
 **Learn about tools that make it easier to test for Windows in S Mode**
 
