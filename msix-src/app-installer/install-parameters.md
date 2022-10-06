@@ -11,7 +11,7 @@ ms.custom: "RS5, seodec18"
 # Passing installation parameters to your app via App Installer
 
 When distributing your app using MSIX you can configure your app such that query string parameters you define in the download/install uri are passed on to your app when it launches, after a user clicks on the download/install uri. This works whether it's the first time a user is installing the app or if the app was previously installed. 
-This article shows how to configure your MSIX packaged application and its download/install uri  to take advantage of this functionality. This can be useful if you want to track or handle different installs based on the source, download type etc and will work for web downloads, and any other cases where a user clicks the uri e.g. from an email campaign. For more details check out this [blog post](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/passing-installation-parameters-to-a-windows-application-with/ba-p/1719829).
+This article shows how to configure your packaged application and its download/install uri  to take advantage of this functionality. This can be useful if you want to track or handle different installs based on the source, download type etc and will work for web downloads, and any other cases where a user clicks the uri e.g. from an email campaign. For more details check out this [blog post](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/passing-installation-parameters-to-a-windows-application-with/ba-p/1719829).
 
 ## Configure your application for protocol activation
 

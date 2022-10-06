@@ -13,7 +13,7 @@ This article provides a deeper dive on what happens to files and registry entrie
 
 A key goal of a modern package is to separate application state from system state as much as possible while maintaining compatibility with other apps. Windows 10 accomplishes this by placing the application inside a MSIX package, and then detecting and redirecting some changes it makes to the file system and registry at runtime.
 
-Packages that you create for your desktop application are desktop-only, full-trust applications and are not virtualized or sandboxed. This allows them to interact with other apps the same way classic desktop applications do.
+Packages that you create for your desktop application are desktop-only, full-trust applications and are not virtualized or sandboxed. This allows them to interact with other apps the same way unpackaged desktop applications do.
 
 ## Installation
 
@@ -31,7 +31,7 @@ In order to avoid duplication of files to optimize for disk storage space and re
 
 ### AppData operations on Windows 10, version 1903 and later
 
-All newly created files and folders in the user's AppData folder (e.g., *C:\Users\user_name\AppData*) are written to a private per-user, per-app location but merged at runtime to appear in the real AppData location. This allows some degree of state separation for artifacts that are only used by the application itself, and this enables the system to clean up those files when the application is uninstalled. Modifications to existing files under the user's AppData folder is allowed to provide a higher degree of compatibility and interactivity between applications and the OS. This reduces filesystem “rot” because the OS is aware of every file or directory change made by an application. State separation also allows packaged desktop applications to pick up where a unpackaged version of the same application left off. Note that the OS does not support a virtual file system (VFS) folder for the user's AppData folder.
+All newly created files and folders in the user's AppData folder (e.g., *C:\Users\user_name\AppData*) are written to a private per-user, per-app location but merged at runtime to appear in the real AppData location. This allows some degree of state separation for artifacts that are only used by the application itself, and this enables the system to clean up those files when the application is uninstalled. Modifications to existing files under the user's AppData folder is allowed to provide a higher degree of compatibility and interactivity between applications and the OS. This reduces filesystem “rot” because the OS is aware of every file or directory change made by an application. State separation also allows packaged desktop applications to pick up where an unpackaged version of the same application left off. Note that the OS does not support a virtual file system (VFS) folder for the user's AppData folder.
 
 ### AppData operations on Windows 10, version 1809 and earlier
 
@@ -39,7 +39,7 @@ All writes to the user's AppData folder (e.g., *C:\Users\user_name\AppData*), in
 
 ### Working directory, and application files
 
-In addition to redirecting AppData, Windows' well-known folders (System32, Program Files (x86), etc.) are dynamically merged with corresponding directories in the app package. Each package contains a folder named "VFS" at its root. Any reads of directories or files in the VFS directory are merged at runtime with their respective native counterparts. For example, an application could contain `C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll` as part of its app package, but the file would appear to be installed at `C:\Windows\System32\vc10.dll`. That maintains compatibility with desktop applications that expect files to live in non-package locations.
+In addition to redirecting AppData, Windows' well-known folders (System32, Program Files (x86), etc.) are dynamically merged with corresponding directories in the app package. Each package contains a folder named "VFS" at its root. Any reads of directories or files in the VFS directory are merged at runtime with their respective native counterparts. For example, an application could contain `C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll` as part of its app package, but the file would appear to be installed at `C:\Windows\System32\vc10.dll`. That maintains compatibility with desktop applications that expect files to live in unpackaged locations.
 
 Writes to files/folders in the app package aren't allowed. Writes to files and folders that aren't part of the package are ignored by the OS, and are allowed as long as the user has permission.
 

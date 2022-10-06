@@ -49,7 +49,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Package Integrity Enforcement for non-Store packages](/package/signing-package-overview.md#package-integrity-enforcement) | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Support for Windows App App Services](/package/app-package-formats.md/#app-services)         | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Shared package containers](manage/shared-package-container.md)                             | :x:                         | :x:                | :x:                | :x:                | :x:                         | :x:                | :x:                | :heavy_check_mark: |
-| [Sparse packages](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Packages with external location](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Hosted Apps](/windows/uwp/launch-resume/hosted-apps)                                                                     | :x:                         | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Flexible virtualization](desktop/flexible-virtualization.md) | :x:                         | :x:                | :x:                | :x: | :x:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Start menu groups](packaging-tool/create-start-group.md) | :x:                         | :x:                | :x:                | :x: | :x:          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -75,7 +75,7 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Package Integrity Enforcement for non-Store packages](package/signing-package-overview.md#package-integrity-enforcement) | :x:                 | :heavy_check_mark:                 |
 | [Support for Windows App App Services](/package/app-package-formats.md/#app-services)                                      | :x:                 | :heavy_check_mark:                 |
 | [Shared package containers](manage/shared-package-container.md)                                                           | :x:                 | :x:                 |
-| [Sparse packages](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                 | :heavy_check_mark:  |
+| [Packages with external location](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                 | :heavy_check_mark:  |
 | [Hosted Apps](/windows/uwp/launch-resume/hosted-apps)                                                                     | :x:                 | :heavy_check_mark:  |
 
 
