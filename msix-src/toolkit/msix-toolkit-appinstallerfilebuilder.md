@@ -9,7 +9,7 @@ ms.custom: 19H1
 
 # AppInstaller File Builder tool
 
-The [AppInstaller File Builder tool](https://github.com/microsoft/MSIX-Toolkit/tree/master/AppInstallerFileBuilder) in the MSIX toolkit can be used to configure an MSIX-packaged app to check back to a central source for updates. This tool aids in the construction of an AppInstaller (.appinstaller) file. The AppInstaller file can be used with different [deployment options](../desktop/managing-your-msix-deployment-overview.md).
+The [AppInstaller File Builder tool](https://github.com/microsoft/MSIX-Toolkit/tree/master/AppInstallerFileBuilder) in the MSIX toolkit can be used to configure a packaged app to check back to a central source for updates. This tool aids in the construction of an AppInstaller (.appinstaller) file. The AppInstaller file can be used with different [deployment options](../desktop/managing-your-msix-deployment-overview.md).
 
 ## Create an AppInstaller file
 

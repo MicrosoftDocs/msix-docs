@@ -12,7 +12,7 @@ ms.custom: "RS5, seodec18"
 
 You may have some versions of your app that were not distributed in an MSIX package. At runtime your app can detect whether it was deployed as an MSIX package by using the Windows Package Manager API, or your own custom installer. You may want to change the app behavior such as update settings or you may want to take advantage of functionality only available to MSIX packages.
 
-To determine whether your application is running as an MSIX package on a version of Windows that supports the full MSIX feature set, you can use the [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) native function in kernel32.dll. When a desktop application is running as a unpackaged application without package identity, this function returns an error which can help you infer the context in which the app is running.
+To determine whether your application is running as an MSIX package on a version of Windows that supports the full MSIX feature set, you can use the [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) native function in kernel32.dll. When a desktop application is running as an unpackaged application without package identity, this function returns an error which can help you infer the context in which the app is running.
 
 If the function succeeds, it means:
 

@@ -10,7 +10,7 @@ ms.assetid:
 #	MSIX App Distribution
 The MSIX packaging format can be delivered to client devices through the use of device and application management tools such as Microsoft Intune, and Microsoft Endpoint Configuration Manager. 
 
-MSIX packaged apps can be installed using deployment tools, PowerShell, or by using [AppInstaller](https://www.microsoft.com/p/app-installer/9nblggh4nns1?ocid=9nblggh4nns1_ORSEARCH_Bing&rtc=1&activetab=pivot:overviewtab). By using AppInstaller to install an MSIX packaged app, the user or IT Pro may select to right-click and install or double click the MSIX installer. This approach will prompt the user to select the **Install** button to initiate the installation and view the installation progress. Alternatively, by using available [PowerShell cmdlets](./powershell-msix-cmdlets.md) the installation and uninstallation of an MSIX packaged app can be performed silently.
+Packaged apps can be installed using deployment tools, PowerShell, or by using [AppInstaller](https://www.microsoft.com/p/app-installer/9nblggh4nns1?ocid=9nblggh4nns1_ORSEARCH_Bing&rtc=1&activetab=pivot:overviewtab). By using AppInstaller to install an MSIX packaged app, the user or IT Pro may select to right-click and install or double click the MSIX installer. This approach will prompt the user to select the **Install** button to initiate the installation and view the installation progress. Alternatively, by using available [PowerShell cmdlets](./powershell-msix-cmdlets.md) the installation and uninstallation of an MSIX packaged app can be performed silently.
 
 ##	Microsoft Endpoint Configuration Manager 
 
@@ -60,7 +60,7 @@ There are multiple methods in which AppLocker can be leveraged within an organiz
 ### Manage access through Group Policy
 
 Group Policies provide centralized management and configuration of operating systems, applications, and users' settings in an Active Directory environment. MSIX packages applications can read group policy registry keys and honor group policy settings.  
-To learn more about MSIX support and limitations in group policy support, see [Group Policy and MSIX packaged apps.](../group-policy-msix.md)
+To learn more about MSIX support and limitations in group policy support, see [Group Policy and packaged apps.](../group-policy-msix.md)
 
 ### Manage MSIX updates
 

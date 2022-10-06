@@ -112,7 +112,7 @@ private async void CheckUpdate(object sender, TappedRoutedEventArgs e)
 ```
 
 > [!NOTE]
-> The `targetPackageFileName` is representative of the MSIX packaged app's full name. (Example: Contoso.HeadTrax_1.0.0.0_x64__PublisherHash)
+> The `targetPackageFileName` is representative of the packaged app's full name. (Example: Contoso.HeadTrax_1.0.0.0_x64__PublisherHash)
 
 ### Apply the update 
 
