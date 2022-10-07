@@ -11,7 +11,7 @@ ms.custom: Vibranium
 
 ## Version 1.2022.1003.0 - Public Version
 - Added support for auto application of PSF FixUps through MPT-CLI. The following PSF FixUps will be supported - FileRedirectionFixup, RegLegacyFixups, DynamicLibraryFixup, and EnvVarFixup
-- PSF Scripts are now support by MPT-CLI
+- PSF Scripts are now supported by MPT-CLI
 - Added support for new capabilities to MPT Package Editor
 - Added support for new extensions - SearchPathOverride and InstallLocalVirtualization
 
