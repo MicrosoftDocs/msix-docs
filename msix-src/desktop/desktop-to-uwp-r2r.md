@@ -8,7 +8,7 @@ keywords: windows 10, uwp, msix, native image Compiler
 
 # Optimize your .NET desktop apps with native images
 
-You can improve the startup time of your .NET Framework application by pre-compiling your binaries. You can use this technology on large applications that you package and distribute through the Microsoft Store. In some cases, we've observed a 20% performance improvement. You can learn more about this technology in the [technical overview](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
+You can improve the startup time of your .NET Framework application by pre-compiling your binaries. You can use this technology on large applications that you package and distribute through the Microsoft Store. In some cases, we've observed a 20% performance improvement. You can learn more about this technology in the [technical overview](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/readytorun-overview.md).
 
 We've released the native image compiler as a [NuGet package](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler). You can apply this package to any .NET Framework application that targets the .NET Framework version 4.6.2 or later. This package adds a post build step that includes a native payload to all the binaries used by your application. This optimized payload will be loaded when the application runs in .NET 4.7.2 and above while previous versions will still load the MSIL code.
 
@@ -85,7 +85,7 @@ A. Optimized binaries will benefit from the improvements when running with .NET 
 
 **Q. How can I provide feedback or report issues?**
 
-A. Report an issue by using the Feedback tool in Visual Studio 2017. [More information](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
+A. Report an issue by using the Feedback tool in Visual Studio. [More information](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
 **Q. What’s the impact of adding the native image to existing binaries?**
 
