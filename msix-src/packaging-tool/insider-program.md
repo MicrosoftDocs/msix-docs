@@ -29,11 +29,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2022.1003.0
-- Added support for auto application of PSF FixUps through MPT-CLI. The following PSF FixUps will be supported - FileRedirectionFixup, RegLegacyFixups, DynamicLibraryFixup, and EnvVarFixup
-- PSF Scripts are now supported by MPT-CLI
-- Added support for new capabilities to MPT Package Editor
-- Added support for new extensions - SearchPathOverride and InstallLocalVirtualization
+## Version 1.2022.1101.0
+- Fixed a minor UI bug
+- Fixed a localization bug
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
