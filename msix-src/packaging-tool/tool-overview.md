@@ -37,11 +37,9 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - Version 1.2022.1003.0
-- Added support for auto application of PSF FixUps through MPT-CLI. The following PSF FixUps will be supported - FileRedirectionFixup, RegLegacyFixups, DynamicLibraryFixup, and EnvVarFixup
-- PSF Scripts are now supported by MPT-CLI
-- Added support for new capabilities to MPT Package Editor
-- Added support for new extensions - SearchPathOverride and InstallLocalVirtualization
+## Latest public release - Version 1.2022.1101.0
+- Fixed a minor UI bug
+- Fixed a localization bug
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
