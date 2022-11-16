@@ -15,7 +15,7 @@ While we make it super easy for users to acquire the MSIX Packaging Tool through
 The MSIX Packaging Tool can be downloaded for offline use in the enterprise from the Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps).
 
 You can also directly download the latest version of the offline package here:
-- [Download 1.2022.1101.0 MSIX Packaging Tool](https://download.microsoft.com/download/5/5/d/55d00b0c-1246-4277-8f2a-b60e466317df/MsixPackagingTool.msixbundle)
+- [Download 1.2022.1101.0 MSIX Packaging Tool](https://download.microsoft.com/download/5/5/d/55d00b0c-1246-4277-8f2a-b60e466317df/Desktop_MSIXPackagingTool_1.2022.1101.0_x64.x86.msixbundle_Windows10_PreinstallKit.zip)
 
 If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://download.microsoft.com/download/5/5/d/55d00b0c-1246-4277-8f2a-b60e466317df/MSIXPackagingTool_1.2022.1101.0_License.xml) for the tool. 
 
