@@ -9,6 +9,13 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2023.102.0
+- Portable Apps can now be packaged as MSIX Packages
+- Added ability to edit files within a package using Package Editor
+- Apply Trace fixup to your package from within the Package Editor
+- Added feature to exclude dependent Windows services from MSIX packages
+- MSIX Packaging Tool now monitors child processes during app installation
+
 ## Version 1.2022.1101.0 - Public Version
 - Fixed a minor UI bug
 - Fixed a localization bug
