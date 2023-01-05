@@ -110,13 +110,15 @@ For desktop apps that you create a package for, always set the ``Name`` attribut
 ```
 
 ### Capabilities
-For desktop apps that you create a package for, you'll have to add the ``runFullTrust`` capability.
+
+For a package that contains one or more full-trust apps, you'll need to declare the `runFullTrust` restricted capability as shown below. For full details, and a definition of *full-trust app*, search for *Full Trust Permission Level* in [App capability declarations](/windows/uwp/packaging/app-capability-declarations)).
 
 ```XML
 <Capabilities>
   <rescap:Capability Name="runFullTrust"/>
 </Capabilities>
 ```
+
 ## Fill in the application-level elements
 
 Fill in this template with information that describes your app.
