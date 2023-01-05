@@ -1,9 +1,9 @@
 ---
-description: Shows how to manually package a Windows desktop application (like Win32, WPF, and Windows Forms) for Windows 10.
 title: Generating MSIX package components
-ms.date: 07/29/2019
+description: Shows how to manually package a Windows desktop application (such as Win32, WPF, or Windows Forms) for Windows.
+ms.date: 01/04/2023
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows 11, windows 10, uwp, msix
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.custom: RS5
 ---
@@ -29,6 +29,7 @@ It's a basic template that contains the elements and attributes that your packag
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities">
   <Identity Name="" Version="" Publisher="" ProcessorArchitecture="" />
   <Properties>
@@ -47,13 +48,18 @@ It's a basic template that contains the elements and attributes that your packag
     <rescap:Capability Name="runFullTrust"/>
   </Capabilities>
   <Applications>
-    <Application Id="" Executable="" EntryPoint="Windows.FullTrustApplication">
+    <Application Id="" Executable=""
+      uap10:RuntimeBehavior="packagedClassicApp"
+      uap10:TrustLevel="mediumIL">
       <uap:VisualElements DisplayName="" Description=""	Square150x150Logo=""
         Square44x44Logo="" BackgroundColor="" />
     </Application>
   </Applications>
 </Package>
 ```
+
+> [!NOTE]
+> If your package installs on systems older than Windows 10, version 2004 (10.0; Build 19041), then use the `EntryPoint` attribute instead of `uap10:RuntimeBehavior` and `uap10:TrustLevel`. For more details, and examples, see [uap10 was introduced in Windows 10, version 2004 (10.0; Build 19041)](/uwp/schemas/appxpackage/uapmanifestschema/element-application#uap10-was-introduced-in-windows-10-version-2004-100-build-19041).
 
 ## Fill in the package-level elements of your file
 
@@ -117,15 +123,19 @@ Fill in this template with information that describes your app.
 
 ### Application element
 
-For desktop apps that you create a package for, the ``EntryPoint`` attribute of the Application element is always ``Windows.FullTrustApplication``.
+For desktop apps that you create a package for, configure the **Application** element like this:
 
 ```XML
 <Applications>
-  <Application Id="MyApp"     
-		Executable="MyApp.exe" EntryPoint="Windows.FullTrustApplication">
+  <Application Id="MyApp" Executable="MyApp.exe"
+		 uap10:RuntimeBehavior="packagedClassicApp"
+     uap10:TrustLevel="mediumIL">
    </Application>
 </Applications>
 ```
+
+> [!NOTE]
+> If your package installs on systems older than Windows 10, version 2004 (10.0; Build 19041), then use the `EntryPoint` attribute instead of `uap10:RuntimeBehavior` and `uap10:TrustLevel`. For more details, and examples, see [uap10 was introduced in Windows 10, version 2004 (10.0; Build 19041)](/uwp/schemas/appxpackage/uapmanifestschema/element-application#uap10-was-introduced-in-windows-10-version-2004-100-build-19041).
 
 ### Visual elements
 
@@ -162,7 +172,7 @@ Target-based assets are for icons and tiles that appear on the Windows taskbar, 
 
 If you create target-based assets as described in the section above, or you modify any of the visual assets of your application after you've created the package, you'll have to generate a new PRI file.
 
-Based on your installation path of the SDK, this is where **MakePri.exe** is on your Windows 10 PC:
+Based on your installation path of the SDK, this is where **MakePri.exe** is on your Windows PC:
 - x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x86\makepri.exe
 - x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x64\makepri.exe
 
@@ -190,11 +200,9 @@ Once this is done. Your app should be deployed on the system and you can test it
 
 ## Package your components into an MSIX
 
-The next step is to use **MakeAppx.exe** to generate an MSIX package for your application. Makeappx.exe is included with the Windows 10 SDK, and if you have Visual Studio installed, it can be easily accessed through the Developer Command Prompt for Visual Studio.
+The next step is to use **MakeAppx.exe** to generate an MSIX package for your application. Makeappx.exe is included with the Windows SDK, and if you have Visual Studio installed, it can be easily accessed through the Developer Command Prompt for Visual Studio.
 
 See [Create an MSIX package or bundle with the MakeAppx.exe tool](../package/create-app-package-with-makeappx-tool.md)
-
-
 
 > [!NOTE]
 > A packaged application always runs as an interactive user, and any drive that you install your packaged application on to must be formatted to NTFS format.
