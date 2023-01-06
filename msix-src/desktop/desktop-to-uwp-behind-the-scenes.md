@@ -26,7 +26,7 @@ And then the **uap10:TrustLevel** attribute (of the same **Application** element
 > [!IMPORTANT]
 > For more details, dependencies, and capability requirements, see the documentation for those two attributes in [Application](/uwp/schemas/appxpackage/uapmanifestschema/element-application). Also see [uap10 was introduced in Windows 10, version 2004 (10.0; Build 19041)](/uwp/schemas/appxpackage/uapmanifestschema/element-application#uap10-was-introduced-in-windows-10-version-2004-100-build-19041).
 
-The purpose of packaging your app is to grant it *package identity* at runtime. Package identity is needed for certain Windows features (see [Features that require package identity](../desktop/modernize/modernize-packaged-apps.md)). You can package *all* combinations of app types described above (and thereby benefit from *package identity*).
+The purpose of packaging your app is to grant it *package identity* at runtime. Package identity is needed for certain Windows features (see [Features that require package identity](/windows/apps/desktop/modernize/modernize-packaged-apps)). You can package *all* combinations of app types described above (and thereby benefit from *package identity*).
 
 But a key goal of an `appContainer` app is to separate app state from system state as much as possible, while maintaining compatibility with other apps. Windows accomplishes that by detecting and redirecting certain changes that it makes to the file system and registry at runtime (known as *virtualizing*). We'll call out when a section applies only to virtualized apps.
 
