@@ -29,7 +29,7 @@ Here's an example.
 > [!IMPORTANT]
 > In most scenarios, you'll need to run PowerShell as administrator. See the details below.
 
-* To install an unsigned package, pass the `-AllowUnsigned` flag to the `Add-AppxPackage` command.
+* To install an unsigned package, pass the `-AllowUnsigned` flag to the [Add-AppxPackage](/powershell/module/appx/add-appxpackage) command.
 * In most scenarios, the unsigned package will contain executable content; so you'll need to run PowerShell as administrator. That's because an unsigned package containing executable content must be installed for all users. Since that can affect more than just the current user, it requires administrator privilege.
 * If the unsigned package contains only non-executable content (for example, when you need to load only images, assets and other content, or script files) then administrator privilege is *not* needed, and a non-admin can install the package.
 
