@@ -9,13 +9,16 @@ ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 
 # Set up your desktop application for MSIX packaging in Visual Studio
 
+* If your desktop app is a WinUI 3 app, then see [Package your app using single-project MSIX](/windows/apps/windows-app-sdk/single-project-msix). A WinUI 3 app is one that uses the [Windows UI Library (WinUI) 3](/windows/apps/winui/winui3/) framework for its user interface (UI); and it uses the Windows App SDK.
+* But for all other kinds of desktop app, continue reading this topic.
+
 You can use the **Windows Application Packaging Project** project in Visual Studio to generate a package for your desktop app. Then you can distribute your package to the Microsoft Store, on the Web, in your enterprise or any other distribution mechanism you're using.
 
 ## Required Visual Studio version and workload
 
 The **Windows Application Packaging Project** project is available in the following versions of Visual Studio:
 
-* Visual Studio 2019
+* Visual Studio 2019 and later
 * Visual Studio 2017 15.5 and later
 
 To see the Windows Application Packaging Project template in the 'Add New Project' menu, you need to make sure you have **at least one** of the following the Visual Studio workloads installed:
