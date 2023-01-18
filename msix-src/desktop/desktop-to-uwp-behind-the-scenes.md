@@ -1,7 +1,7 @@
 ---
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
-ms.date: 01/05/2022
+ms.date: 01/18/2022
 ms.topic: article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
@@ -9,9 +9,15 @@ ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 
 # Understanding how packaged desktop apps run on Windows
 
-This topic provides a deep dive into operating system (OS) behavior with respect to desktop apps for which you've created a Windows app package.
+This topic describes the types of desktop apps that you can create a Windows app package for, together with some operating system (OS) behaviors&mdash;and other specifics&mdash;that are important to be aware of. We'll go into details of the following items (as we'll see, the specific behavior depends on the type of your app):
 
-There are two types of desktop app that you can create and package, and you declare your app's type in its app package manifest by using the **uap10:RuntimeBehavior** attribute of the [Application](/uwp/schemas/appxpackage/uapmanifestschema/element-application) element:
+* Your app's [install location](#installation) and [working directory](#working-directory-and-application-files) (which might be different from what your app has assumed in the past).
+* The OS's [file system](#file-system) and [registry](#registry) behavior.
+* [Uninstallation](#uninstallation).
+
+## Types of desktop app
+
+There are two types of desktop app that you can create and package. You declare your app's type in its app package manifest by using the **uap10:RuntimeBehavior** attribute of the [Application](/uwp/schemas/appxpackage/uapmanifestschema/element-application) element:
 
 * One type includes both WinUI 3 apps (which use the [Windows App SDK](/windows/apps/windows-app-sdk/)) and Desktop Bridge apps (Centennial). Declared with `uap10:RuntimeBehavior="packagedClassicApp"`.
 * The other type represents other kinds of Win32 app, including apps [packaged with external location](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps). Declared with `uap10:RuntimeBehavior="win32App"`.
@@ -26,6 +32,8 @@ And then the **uap10:TrustLevel** attribute (of the same **Application** element
 > [!IMPORTANT]
 > For more details, dependencies, and capability requirements, see the documentation for those two attributes in [Application](/uwp/schemas/appxpackage/uapmanifestschema/element-application). Also see [uap10 was introduced in Windows 10, version 2004 (10.0; Build 19041)](/uwp/schemas/appxpackage/uapmanifestschema/element-application#uap10-was-introduced-in-windows-10-version-2004-100-build-19041).
 
+## The purpose of packaging, and app containers
+
 The purpose of packaging your app is to grant it *package identity* at runtime. Package identity is needed for certain Windows features (see [Features that require package identity](/windows/apps/desktop/modernize/modernize-packaged-apps)). You can package *all* combinations of app types described above (and thereby benefit from *package identity*).
 
 But a key goal of an `appContainer` app is to separate app state from system state as much as possible, while maintaining compatibility with other apps. Windows accomplishes that by detecting and redirecting certain changes that it makes to the file system and registry at runtime (known as *virtualizing*). We'll call out when a section applies only to virtualized apps.
@@ -34,7 +42,7 @@ But a key goal of an `appContainer` app is to separate app state from system sta
 
 App packages are installed on a per-user basis instead of system-wide. The default location for new packages on a new machine is under `C:\Program Files\WindowsApps\<package_full_name>`, with the executable named *app_name.exe*. But packages can be installed in other places; for example, Visual Studio's **Start** commands use the project's `$(OutDir)`.
 
-After deployment, package files are marked read-only, and are heavily locked down by the operating system (OS). Windows prevents apps from launching if thOse files are tampered with.
+After deployment, package files are marked read-only, and are heavily locked down by the operating system (OS). Windows prevents apps from launching if those files are tampered with.
 
 ## File system
 
@@ -66,7 +74,7 @@ In addition to redirecting `AppData`, Windows' well-known folders (`System32`, `
 
 Writes to files/folders in the app package aren't allowed. Writes to files and folders that aren't part of the package are ignored by the OS, and are allowed as long as the user has permission.
 
-### Common operations
+### Common file system operations
 
 This short reference table shows common file system operations and how the OS handles them.
 
@@ -112,7 +120,7 @@ All writes under *HKCU* are copied on write to a private per-user, per-app locat
 
 All writes are kept during package upgrade, and deleted only when the app is removed entirely.
 
-### Common operations
+### Common registry operations
 
 Most of this section applies only to virtualized apps.
 
