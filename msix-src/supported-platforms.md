@@ -78,7 +78,6 @@ The following table shows which MSIX features and scenarios are supported in dif
 | [Packages with external location](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)                                     | :x:                 | :heavy_check_mark:  |
 | [Hosted Apps](/windows/uwp/launch-resume/hosted-apps)                                                                     | :x:                 | :heavy_check_mark:  |
 
-
 ## Package format support
 
 The following table shows which package formats are supported in different versions of Windows 10.
@@ -91,7 +90,7 @@ The following table shows which package formats are supported in different versi
 | .appxbundle    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 > [!Important]
-> Prior to Windows 10 2004, Sideloading of Windows Apps must be enabled to allow non-Store Windows Apps to be installed on Enterprise, Education, and LTSC SKUs. Windows 10 Home, and Professional SKUs had Sideloading of Windows Apps enabled by default.
+> Prior to Windows 10 2004, Sideloading of Windows apps must be enabled to allow non-Store Windows apps to be installed on Enterprise, Education, and LTSC SKUs. Windows 10 Home, and Professional SKUs had Sideloading of Windows apps enabled by default.
 
 ## Microsoft Store
 

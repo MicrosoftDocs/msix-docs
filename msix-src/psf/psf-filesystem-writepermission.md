@@ -11,7 +11,7 @@ ms.custom: kr2b-contr-experiment
 
 This article describes how to use the Package Support Framework (PSF) to resolve a Filesystem Write Permission error.
 
-Windows apps redirect specific application-related directories to the Windows app container folder. If the application attempts to write to the Windows app container, an error triggers, and the write fails. You can make enhancements to the Windows app package to resolve this issue.
+Windows apps redirect specific application-related directories to the `C:\Program Files\WindowsApps` folder. If the application attempts to write to the Windows app container, an error triggers, and the write fails. You can make enhancements to the Windows app package to resolve this issue.
 
 ## Investigation
 
@@ -93,7 +93,7 @@ To download and install the Windows 10 SDK:
 
 ### Stage the Windows app
 
-Staging the Windows app extracts and unpackages the contents of the app to a local directory. Once the Windows App is unpacked to the staging location, you can inject PSF fixup files to correct any unwanted experiences.
+Staging the Windows app extracts and unpackages the contents of the app to a local directory. Once the Windows app is unpacked to the staging location, you can inject PSF fixup files to correct any unwanted experiences.
 
 1. In an administrative PowerShell window, set the following variables to target your specific app file and Windows 10 SDK version:
    ```powershell
@@ -108,7 +108,7 @@ Staging the Windows app extracts and unpackages the contents of the app to a loc
    ## Sets the directory to the Windows 10 SDK
    Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
    
-   ## Unpackages the Windows App to the staging folder
+   ## Unpackages the Windows app to the staging folder
    .\makeappx.exe unpack /p "$AppPath" /d "$StagingFolder"
    ```
 
