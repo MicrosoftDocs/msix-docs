@@ -27,7 +27,7 @@ Shared package contianer is defined by a .xml file.  The container definition re
   <PackageFamily Name="ContosoCustomize_7xekyb3d8ccde"/> 
 </AppSharedPackageContainer>   
 ```
-When you have the container definition .xml, you can use the following Powershell commands to deploy, reset, update, and remove a Shared Package Container from the device. Note that all other app deployment commands remain the same (i.e installing packages)
+When you have the container definition .xml, you can use the following PowerShell commands to deploy, reset, update, and remove a Shared Package Container from the device. Note that all other app deployment commands remain the same (i.e installing packages)
 
 ### PowerShell commands 
 

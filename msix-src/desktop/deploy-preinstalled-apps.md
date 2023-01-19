@@ -41,7 +41,7 @@ Beginning with Windows 10 1809, IT Pros can pre-install through provisioning. Pr
 In Windows 10 2004, a provisioned packaged app will reinstall during re-provisioning. Prior versions of Windows 10 would prevent the reinstall of these packaged apps if the user had previously uninstalled the packaged app.
 
 ### Force Provisioning
-With regular provisioning, if a user removes an app, it cannot be reinstalled with an update. With force provisioning, an IT pro administrator can re-provision an app to be reinstalled for all users. This is triggered by running the **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true)** Powershell command described below.
+With regular provisioning, if a user removes an app, it cannot be reinstalled with an update. With force provisioning, an IT pro administrator can re-provision an app to be reinstalled for all users. This is triggered by running the **[Add-ProvisionedAppxPackage](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true)** PowerShell command described below.
 
 ## PowerShell
 List of relevant PowerShell commands

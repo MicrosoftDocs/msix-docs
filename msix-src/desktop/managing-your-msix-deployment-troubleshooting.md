@@ -14,7 +14,7 @@ Though MSIX has a 99% successful install rate, sometimes you need to be able to 
 Understanding the application that you are installing and how it works can go a long way to troubleshooting the user experience.  For example, does the application have certain limitations that could be causing the issues?  Does the user have access to the resources needed by the application?  Were there dependencies the application had, that were not met by the current operating system?
 
 ## Test your application
-Before deploying your application, make sure you have tested your application.  The Windows SDK provides a tool, the Windows App Certification kit that can identify common issues before publication.  
+Before deploying your application, make sure you have tested your application.  The Windows SDK provides a tool, the Windows App Certification Kit that can identify common issues before publication.  
 To install the latest Windows SDK, [go here.](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 To learn more about the Windows App Certification Kit, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit)
 
@@ -30,7 +30,7 @@ To learn more about Debugging MSIX packages, see [Run, debug, and test a package
 ## Installation issues
 When there are issues with the installation, you can investigate the artifacts provided by AppInstaller.  First, AppInstaller provides error code failures.  If the error code for any failure is not sufficient to determine what is wrong, the AppInstaller also logs all interactions to the Event Viewer.  You will find the logs here: Application and Services Logs->Microsoft->Windows->AppxDeployment-Server.
 
-You can use the Event Viewer or Powershell to access those events. 
+You can use the Event Viewer or PowerShell to access those events. 
 To learn more about how to view the events, see [Troubleshooting packaging, deployment, and query of Windows apps.](/windows/win32/appxpkg/troubleshooting)
 
 To learn more about AppInstaller troubleshooting, see [Troubleshoot Appinstaller Issues.](../app-installer/troubleshoot-appinstaller-issues.md)
