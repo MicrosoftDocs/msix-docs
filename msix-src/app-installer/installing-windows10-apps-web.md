@@ -46,11 +46,11 @@ Prefix your app package URIs with the activation scheme `'ms-appinstaller:?sourc
 ```
 
 > [!Note]
-> By prefixing the link to the Windows App, or AppInstaller file with `ms-appinstaller:?source=''` client devices will launch the Desktop App Installer, with details pertaining to the Windows App. MIME Types must be configured on the Web Server as this information will be shared with the Desktop App Installer informing of the file type and it's file type association.
+> By prefixing the link to the Windows app, or AppInstaller file with `ms-appinstaller:?source=''` client devices will launch the Desktop App Installer, with details pertaining to the Windows app. MIME Types must be configured on the Web Server as this information will be shared with the Desktop App Installer informing of the file type and it's file type association.
 
-It is required that MIME-Types be configured for the Windows Apps and AppInstaller files that will be shared from your website. By including the MIME Types, the Desktop App Installer will quickly identify the file association and launch the information page with next steps. If not included, the Desktop App Installer must determine the file association which can negatively impact how quickly the Desktop App Installer will interpret the information and launch the Windows App installer. The only MIME-Types that are required to be configured on your Web Server are of the file types that will be hosted on your website.
+It is required that MIME-Types be configured for the Windows apps and AppInstaller files that will be shared from your website. By including the MIME Types, the Desktop App Installer will quickly identify the file association and launch the information page with next steps. If not included, the Desktop App Installer must determine the file association which can negatively impact how quickly the Desktop App Installer will interpret the information and launch the Windows app installer. The only MIME-Types that are required to be configured on your Web Server are of the file types that will be hosted on your website.
 
-If the Windows App installation media is hosted on a file share, and linked to from the website then MIME-Types need not be configured on the Web Server. 
+If the Windows app installation media is hosted on a file share, and linked to from the website then MIME-Types need not be configured on the Web Server. 
 
 
 | File Extension | MIME Type                |

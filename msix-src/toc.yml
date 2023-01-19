@@ -162,11 +162,11 @@
               href: psf/create-package-support-framework.md
             - name: How to implement PSF in your package
               items:
-                - name: Windows App Working Directory error
+                - name: Windows app working directory error
                   href: psf\psf-current-working-directory.md
-                - name: Windows App Writing to Directory error
+                - name: Windows app writing to directory error
                   href: psf/psf-filesystem-writepermission.md
-                - name: Windows App Launcher Parameter requirement
+                - name: Windows app launcher parameter requirement
                   href: psf\psf-launch-apps-with-parameters.md
                 - name: Apply Package Support Framework in Visual Studio
                   href: psf\package-support-framework-vs.md

@@ -10,11 +10,11 @@ keywords: windows 10, uwp, psf, package support framework, working directory, wo
 
 ## Investigation
 
-Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application creates a subfolder (`C:\Program Files\Vendor\subfolder`) as part of the installation, and later calls this subfolder, it will fail to find the directory as it does not exist.
+Windows apps will redirect specific directories that are related to the application to the `C:\Program Files\WindowsApps` folder. If an application creates a subfolder (`C:\Program Files\Vendor\subfolder`) as part of the installation, and later calls this subfolder, it will fail to find the directory as it does not exist.
 
-Using the Package Support Framework (PSF), enhancements can be made to the Windows App package to resolve this issue. First, we must identify the failure, and directory paths that are being requested by the app.
+Using the Package Support Framework (PSF), enhancements can be made to the Windows app package to resolve this issue. First, we must identify the failure, and directory paths that are being requested by the app.
 
-#### Capture the Windows App Failure
+#### Capture the Windows app failure
 
 Filtering the results is an optional step, that will make viewing application related failures easier. To do this, we will create two filter rules. The first an include filter for the application process name, and the second is an inclusion of any results that are not successful.
 
@@ -35,11 +35,11 @@ Filtering the results is an optional step, that will make viewing application re
     :::image type="content" source="images/procmon-filterdialog-result-success.png" alt-text="Example of the Process Monitor Filter Windows with Result":::
 1. Select the **Add** button.
 1. Select the **Ok** button.
-1. launch the Windows App, trigger the error, and close the Windows App.
+1. launch the Windows app, trigger the error, and close the Windows app.
 
-#### Review the Windows App Failure Logs
+#### Review the Windows app failure logs
 
-After capturing the Windows App processes, the results will need to be investigated to identify if the failure is related to the working directory.
+After capturing the Windows app processes, the results will need to be investigated to identify if the failure is related to the working directory.
 
 1. Review the SysInternals Process Monitor results, searching for failures outlined in the above table.
 1. If the results show an **"Name Not Found"** result, with the details **"Desired Access: ..."** for your specific app targeting a directory outside of the **"C:\Program Files\WindowsApps\\...\\"** (as seen in the below image), then you have successfully identified a failure related with the working directory, use the [PSF Support - Filesystem Access]() article for guidance on how to apply the PSF correction to your app.
@@ -47,16 +47,16 @@ After capturing the Windows App processes, the results will need to be investiga
 
 ## Resolution
 
-Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application creates a subfolder (`C:\Program Files\Vendor\subfolder`) as part of the installation, and later calls this subfolder, it will fail to find the directory as it does not exist.
+Windows apps will redirect specific directories that are related to the application to the `C:\Program Files\WindowsApps` folder. If an application creates a subfolder (`C:\Program Files\Vendor\subfolder`) as part of the installation, and later calls this subfolder, it will fail to find the directory as it does not exist.
 
-To resolve the issue related to the Windows App referencing an incorrect Working Directory, we must follow the following four steps:
+To resolve the issue related to the Windows app referencing an incorrect Working Directory, we must follow the following four steps:
 
-1. [Stage the Windows App to a local directory](#stage-the-windows-app)
+1. [Stage the Windows app to a local directory](#stage-the-windows-app)
 1. [Create the Config.json and inject required PSF Files](#create-and-inject-required-psf-files)
-1. [Update the Windows App AppxManifest file](#update-appxmanifest) 
-1. [Repackage and sign the Windows App](#re-package-the-application)
+1. [Update the Windows app AppxManifest file](#update-appxmanifest) 
+1. [Repackage and sign the Windows app](#re-package-the-application)
 
-The above steps provide guidance through extracting the content of the Windows App to a local staged directory, injecting the PSF fixup files into the staged Windows App directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
+The above steps provide guidance through extracting the content of the Windows app to a local staged directory, injecting the PSF fixup files into the staged Windows app directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
 
 ### Download and Install Required Tools
 This process will guide you through the retrieval of, and usage of the following tools:
@@ -85,8 +85,8 @@ The following will provide step-by-step guidance on downloading and installing t
     1. Select the **Install** button.
     1. Select the **Ok** button.
 
-### Stage the Windows App
-By staging the Windows App, we will be extracting / unpackaging the contents of the Windows App to a local directory. Once the Windows App has been unpacked to the staging location, PSF fixup files can be injected correcting any unwanted experiences.
+### Stage the Windows app
+By staging the Windows app, we will be extracting/unpackaging the contents of the Windows app to a local directory. Once the Windows app has been unpacked to the staging location, PSF fixup files can be injected correcting any unwanted experiences.
 
 1. Open an Administrative PowerShell window.
 1. Set the following variables targeting your specific app file, and Windows 10 SDK version:
@@ -97,25 +97,25 @@ By staging the Windows App, we will be extracting / unpackaging the contents of 
     $Win10SDKVersion  = "10.0.19041.0"                               ## Latest version of the Win10 SDK
     ```
 
-1. Unpack the Windows App to the staging folder by running the following PowerShell cmdlet:
+1. Unpack the Windows app to the staging folder by running the following PowerShell cmdlet:
     ```PowerShell
     ## Sets the directory to the Windows 10 SDK
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     
-    ## Unpackages the Windows App to the staging folder
+    ## Unpackages the Windows app to the staging folder
     .\makeappx.exe unpack /p "$AppPath" /d "$StagingFolder"
     ```
 
 
 ### Create and inject required PSF Files
-To apply corrective actions to the Windows App the a **config.json** file must be created, and supplied with information about the Windows App Launcher that is failing. If there are multiple Windows App Launchers that are experiencing issues, the **config.json** file can be updated with multiple entries.
+To apply corrective actions to the Windows app, you must create a **config.json** file, and supply it with information about the Windows app launcher that's failing. If there are multiple Windows app launchers that are experiencing issues, then the **config.json** file can be updated with multiple entries.
 
-After updating the **config.json** file, the **config.json** file and supporting PSF fixup files must then be moved into the root of the Windows App package. 
+After updating the **config.json** file, the **config.json** file and supporting PSF fixup files must then be moved into the root of the Windows app package. 
 
 
 1. Open Visual Studio Code (VS Code), or any other text editor.
 1. Create a new file, by selecting the **File** menu at the top of the VS Code, selecting **New File** from the drop-down menu.
-1. Save the file as **config.json**, by select the **File** menu at the top of the VS Code window, selecting **Save** from the drop-down menu. In the Save As window, navigate to the Windows App Staging directory (**C:\PSF\Staging\PSFSampleApp**) and set the **File Name** as `config.json`. Select the **Save** button.
+1. Save the file as **config.json**, by select the **File** menu at the top of the VS Code window, selecting **Save** from the drop-down menu. In the Save As window, navigate to the Windows app staging directory (**C:\PSF\Staging\PSFSampleApp**) and set the **File Name** as `config.json`. Select the **Save** button.
 1. Copy the following code to the newly created **config.json** file.
     ```JSON
     {
@@ -134,7 +134,8 @@ After updating the **config.json** file, the **config.json** file and supporting
     }
     ```
 
-1. Open the staged Windows App **AppxManifest** file located in the Windows App staging folder (**C:\PSF\Staging\PSFSampleApp\AppxManifest.xml**) using VS Code, or another text editor.
+1. Open the staged Windows app **AppxManifest** file located in the Windows app staging folder (**C:\PSF\Staging\PSFSampleApp\AppxManifest.xml**) using VS Code, or another text editor.
+
     ```xml
     <Applications>
         <Application Id="PSFSAMPLE" Executable="VFS\ProgramFilesX64\PS Sample App\PSFSample.exe" EntryPoint="Windows.FullTrustApplication">
@@ -175,7 +176,7 @@ After updating the **config.json** file, the **config.json** file and supporting
     }
     ```
 
-1. Copy the following three files from the Package Support Framework based on the application executable architecture to the root of the staged Windows App. The following files are located within the **.\Microsoft.PackageSupportFramework.\<Version\>\bin**.
+1. Copy the following three files from the Package Support Framework based on the application executable architecture to the root of the staged Windows app. The following files are located within the **.\Microsoft.PackageSupportFramework.\<Version\>\bin**.
 
     | Application (x64) | Application (x86) | 
     |-------------------|-------------------|
@@ -185,7 +186,7 @@ After updating the **config.json** file, the **config.json** file and supporting
 
 
 ### Update AppxManifest
-After creating and updating the **config.json** file, the Windows App's **AppxManifest.xml** must be updated for each Windows App Launcher that was included in the **config.json**. The **AppxManifest**'s Applications must now target the **PSFLauncher.exe** associated with the applications architecture.
+After creating and updating the **config.json** file, the Windows app's **AppxManifest.xml** must be updated for each Windows app launcher that was included in the **config.json**. The **AppxManifest**'s Applications must now target the **PSFLauncher.exe** associated with the applications architecture.
 
 
 1. Open File Explorer, and navigate to the Staged MSIX App folder (**C:\PSF\Staging\PSFSampleApp**).
@@ -207,7 +208,7 @@ After creating and updating the **config.json** file, the Windows App's **AppxMa
 
 
 ### Re-package the application
-All of the corrections have been applied, now the Windows App can be re-packaged into an MSIX and signed using a code signing certificate.
+All of the corrections have been applied, now the Windows app can be re-packaged into an MSIX, and signed using a code signing certificate.
 
 1. Open an Administrative PowerShell Window.
 1. Set the following variables:
@@ -220,13 +221,13 @@ All of the corrections have been applied, now the Windows App can be re-packaged
     $Win10SDKVersion  = "10.0.19041.0"                               ## Latest version of the Win10 SDK
     ```
 
-1. Repack the Windows App from the staging folder by running the following PowerShell cmdlet:
+1. Repack the Windows app from the staging folder by running the following PowerShell cmdlet:
     ```PowerShell
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     .\makeappx.exe pack /p "$AppPath" /d "$StagingFolder"
     ```
 
-1. Sign the Windows App by running the following PowerShell cmdlet:
+1. Sign the Windows app by running the following PowerShell cmdlet:
     ```PowerShell
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     .\signtool.exe sign /v /fd sha256 /f $CodeSigningCert /p $CodeSigningPass $AppPath

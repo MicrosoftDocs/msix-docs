@@ -43,7 +43,7 @@ Details regarding the Windows Update can be found at:
 
 The Publisher entry in the Windows app package manifest must match the Subject of the certificate you are signing with.  You can use any of the following methods to view the subject of the cert.
 
-**Option 1: Powershell**
+**Option 1: PowerShell**
 
 Run the following PowerShell command. Either .cer or .pfx can be used as the certificate file, as they have the same publisher information.
 
