@@ -44,6 +44,8 @@ App packages are installed on a per-user basis instead of system-wide. The defau
 
 After deployment, package files are marked read-only, and are heavily locked down by the operating system (OS). Windows prevents apps from launching if those files are tampered with.
 
+The `C:\Program Files\WindowsApps` location is what's known as a *PackageVolume*. That location is the default PackageVolume that Windows ships with; but you can create a PackageVolume on any drive, and at any path. Furthermore, not all packages are installed in a PackageVolume (see the Visual Studio example above).
+
 ## File system
 
 The OS supports different levels of file system operations for packaged desktop apps, depending on the folder location.

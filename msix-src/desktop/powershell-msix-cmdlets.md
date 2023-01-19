@@ -26,7 +26,7 @@ The following PowerShell cmdlets are provided with aliases enabling the use of e
 | [Remove-AppxVolume](/powershell/module/appx/remove-appxvolume) | This cmdlet will remove an existing AppxVolume from the device. |
 | [Mount-AppxVolume](/powershell/module/appx/mount-appxvolume) | This cmdlet will mount an AppxVolume, allowing all apps that are deployed to the target to become accessible. |
 | [Dismount-AppxVolume](/powershell/module/appx/dismount-appxvolume) | Ths cmdlet will dismount an AppxVolume, removing access to apps that are deployed to the target. |
-| [Move-AppxPackage](/powershell/module/appx/move-appxpackage) | This cmdlet will move a Windows App packge from its current location to another mounted AppxVolume. |
+| [Move-AppxPackage](/powershell/module/appx/move-appxpackage) | This cmdlet will move a Windows app packge from its current location to another mounted AppxVolume. |
 | [Get-AppxDefaultVolume](/powershell/module/appx/get-appxdefaultvolume) | This cmdlet will get the default AppxVolume used as the target for all deployment operations to the devive. |
 | [Set-AppxDefaultVolume](/powershell/module/appx/set-appxdefaultvolume) | This cmdlet will set another mounted AppxVolume as the new default target for all deployment operations to the device. |
-| [Invoke-CommandInDesktopPackage](/powershell/module/appx/invoke-commandindesktoppackage) | This cmdlet enables the ability to execute commands into the Windows App Package bubble. |
+| [Invoke-CommandInDesktopPackage](/powershell/module/appx/invoke-commandindesktoppackage) | This cmdlet enables the ability to execute commands into the Windows app package bubble. |

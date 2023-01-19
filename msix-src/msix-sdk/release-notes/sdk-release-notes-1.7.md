@@ -46,7 +46,7 @@ The following are the new UTF8 interfaces:
 
 This release updates the test infrastructure to use [Catch2](https://github.com/catchorg/Catch2). Before this release, the SDK provided three different test implementations:
 
-- Powershell script for Windows.
+- PowerShell script for Windows.
 - Shell script for Linux and macOS.
 - Common shared library for Android and iOS.
 

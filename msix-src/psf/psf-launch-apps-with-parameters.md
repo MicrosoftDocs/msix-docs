@@ -1,28 +1,28 @@
 ---
 description: Provides guidance on how to apply runtime fixes with the Package Support Framework.
-title: Package Support Framework - Launching Windows Apps with Parameters
+title: Package Support Framework - Launching Windows apps with parameters
 ms.date: 12/16/2020
 ms.topic: article
 keywords: windows 10, uwp, psf, package support framework, arguments, app launcher, parameters, shortcut, msix
 ---
 
 
-# Launching Windows App with Parameters
+# Launching Windows apps with parameters
 
 ## Investigation
 
-Some Windows App launchers in the start menu require the use of parameters to be passed to the executable when launching the Windows App. To accomplish this, we will first need to identify the launcher requiring the parameter before integrating the Windows App with the Package Support Framework.
+Some Windows app launchers in the start menu require the use of parameters to be passed to the executable when launching the Windows app. To accomplish this, we will first need to identify the launcher requiring the parameter before integrating the Windows App with the Package Support Framework.
 
-#### Identifying Windows App Launcher Parameter Requirement
+#### Identifying Windows app launcher parameter requirement
 
-1. Install your Windows App on a test machine.
+1. Install your Windows app on a test machine.
 1. Open the **Windows Start Menu**.
-1. Locate and select your Windows App Launcher from within the Start Menu.
-1. If the App launches, then you do not have any issues (test all associated Windows App Launchers in the Start Menu).
-1. Uninstall the Windows App from the test machine.
+1. Locate and select your Windows app launcher from within the Start Menu.
+1. If the App launches, then you do not have any issues (test all associated Windows app launchers in the Start Menu).
+1. Uninstall the Windows app from the test machine.
 1. Using the Win32 installation media, install the application to your test machine.
 1. Open the **Windows Start Menu**.
-1. Locate and right-click on your Windows App from within the Start Menu.
+1. Locate and right-click on your Windows app from within the Start Menu.
 1. Select **More** >> **Open File Location** from within the drop-down menu.
 1. Right-click on the first associated application shortcut (repeat the next three steps for all associated application shortcuts).
 1. Select **Properties** from the drop-down menu.
@@ -34,18 +34,19 @@ Some Windows App launchers in the start menu require the use of parameters to be
 
 ## Resolution
 
-Windows Apps will redirect specific directories that are related to the application to the Windows App container folder. If an application attempts to write to the Windows App container, an error will trigger, and the write will fail. 
+Windows apps will redirect specific directories that are related to the application to the `C:\Program Files\WindowsApps` folder. If an application attempts to write to the Windows app container, an error will trigger, and the write will fail. 
 
-To resolve the issue related to the Windows App failing to write to the Windows App container, we must follow the following four steps:
+To resolve the issue related to the Windows app failing to write to the Windows app container, we must follow the following four steps:
 
-1. [Stage the Windows App to a local directory](#stage-the-windows-app)
+1. [Stage the Windows app to a local directory](#stage-the-windows-app)
 1. [Create the Config.json and inject required PSF Files](#create-and-inject-required-psf-files)
-1. [Update the Windows App AppxManifest file](#update-appxmanifest)
-1. [Repackage and sign the Windows App](#re-package-the-application)
+1. [Update the Windows app AppxManifest file](#update-appxmanifest)
+1. [Repackage and sign the Windows app](#re-package-the-application)
 
-The above steps provide guidance through extracting the content of the Windows App to a local staged directory, injecting the PSF fixup files into the staged Windows App directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
+The above steps provide guidance through extracting the content of the Windows app to a local staged directory, injecting the PSF fixup files into the staged Windows app directory, configuring the Application Launcher to point to the PSF launcher, then configuring the PSF config.json file to redirect the PSF launcher to the app specifying the working directory.
 
-### Download and Install Required Tools
+### Download and install required tools
+
 This process will guide you through the retrieval of, and usage of the following tools:
 - NuGet Client Tool
 - Package Support Framework
@@ -72,8 +73,8 @@ The following will provide step-by-step guidance on downloading and installing t
     1. Select the **Install** button.
     1. Select the **Ok** button.
 
-### Stage the Windows App
-By staging the Windows App, we will be extracting / unpackaging the contents of the Windows App to a local directory. Once the Windows App has been unpacked to the staging location, PSF fixup files can be injected correcting any unwanted experiences.
+### Stage the Windows app
+By staging the Windows app, we will be extracting / unpackaging the contents of the Windows app to a local directory. Once the Windows app has been unpacked to the staging location, PSF fixup files can be injected correcting any unwanted experiences.
 
 1. Open an Administrative PowerShell window.
 1. Set the following variables targeting your specific app file, and Windows 10 SDK version:
@@ -84,25 +85,25 @@ By staging the Windows App, we will be extracting / unpackaging the contents of 
     $Win10SDKVersion  = "10.0.19041.0"                               ## Latest version of the Win10 SDK
     ```
 
-1. Unpack the Windows App to the staging folder by running the following PowerShell cmdlet:
+1. Unpack the Windows app to the staging folder by running the following PowerShell cmdlet:
     ```PowerShell
     ## Sets the directory to the Windows 10 SDK
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     
-    ## Unpackages the Windows App to the staging folder
+    ## Unpackages the Windows app to the staging folder
     .\makeappx.exe unpack /p "$AppPath" /d "$StagingFolder"
     ```
 
 
 ### Create and inject required PSF Files
-To apply corrective actions to the Windows App the a **config.json** file must be created, and supplied with information about the Windows App Launcher that is failing. If there are multiple Windows App Launchers that are experiencing issues, the **config.json** file can be updated with multiple entries.
+To apply corrective actions to the Windows app a **config.json** file must be created, and supplied with information about the Windows app launcher that is failing. If there are multiple Windows app launchers that are experiencing issues, the **config.json** file can be updated with multiple entries.
 
-After updating the **config.json** file, the **config.json** file and supporting PSF fixup files must then be moved into the root of the Windows App package. 
+After updating the **config.json** file, the **config.json** file and supporting PSF fixup files must then be moved into the root of the Windows app package. 
 
 
 1. Open Visual Studio Code (VS Code), or any other text editor.
 1. Create a new file, by selecting the **File** menu at the top of the VS Code, selecting **New File** from the drop-down menu.
-1. Save the file as **config.json**, by select the **File** menu at the top of the VS Code window, selecting **Save** from the drop-down menu. In the Save As window, navigate to the Windows App Staging directory (**C:\PSF\Staging\PSFSampleApp**) and set the **File Name** as `config.json`. Select the **Save** button.
+1. Save the file as **config.json**, by select the **File** menu at the top of the VS Code window, selecting **Save** from the drop-down menu. In the Save As window, navigate to the Windows app staging directory (**C:\PSF\Staging\PSFSampleApp**) and set the **File Name** as `config.json`. Select the **Save** button.
 1. Copy the following code to the newly created **config.json** file.
     ```JSON
     {
@@ -116,7 +117,7 @@ After updating the **config.json** file, the **config.json** file and supporting
     }
     ```
 
-1. Open the staged Windows App **AppxManifest** file located in the Windows App staging folder (**C:\PSF\Staging\PSFSampleApp\AppxManifest.xml**) using VS Code, or another text editor.
+1. Open the staged Windows app **AppxManifest** file located in the Windows app staging folder (**C:\PSF\Staging\PSFSampleApp\AppxManifest.xml**) using VS Code, or another text editor.
     ```xml
     <Applications>
         <Application Id="PSFSAMPLE" Executable="VFS\ProgramFilesX64\PS Sample App\PSFSample.exe" EntryPoint="Windows.FullTrustApplication">
@@ -133,7 +134,7 @@ After updating the **config.json** file, the **config.json** file and supporting
 1. Set the `applications.executable` value in the *config.json* to target the relative path to the application located in **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-executable.png" alt-text="Image circling the location of the executable within the AppxManifest file.":::
 
-1. Set the `applications.arguments` value in the *config.json* to match with the argument used to launch the application. See recorded value from the final step of the [Investigation - Identifying Windows App Launcher Parameter Requirement](#identifying-windows-app-launcher-parameter-requirement) guidance.
+1. Set the `applications.arguments` value in the *config.json* to match with the argument used to launch the application. See recorded value from the final step of the [Investigation - Identifying Windows app launcher parameter requirement](#identifying-windows-app-launcher-parameter-requirement) guidance.
 
 1. Set the `applications.workingdirectory` value in the *config.json* to target the relative folder path found in the **Applications.Application.Executable** field of the *AppxManifest.xml* file.
     :::image type="content" source="images/appxmanifest-application-workingdirectory.png" alt-text="Image circling the location of the working directory within the AppxManifest file.":::
@@ -151,7 +152,7 @@ After updating the **config.json** file, the **config.json** file and supporting
     }
     ```
 
-1. Copy the following four files from the Package Support Framework based on the application executable architecture to the root of the staged Windows App. The following files are located within the **.\Microsoft.PackageSupportFramework.\<Version\>\bin**.
+1. Copy the following four files from the Package Support Framework based on the application executable architecture to the root of the staged Windows app. The following files are located within the **.\Microsoft.PackageSupportFramework.\<Version\>\bin**.
 
     | Application (x64)          | Application (x86)          | 
     |----------------------------|----------------------------|
@@ -161,7 +162,7 @@ After updating the **config.json** file, the **config.json** file and supporting
 
 
 ### Update AppxManifest
-After creating and updating the **config.json** file, the Windows App's **AppxManifest.xml** must be updated for each Windows App Launcher that was included in the **config.json**. The **AppxManifest**'s Applications must now target the **PSFLauncher.exe** associated with the applications architecture.
+After creating and updating the **config.json** file, the Windows app's **AppxManifest.xml** must be updated for each Windows app launcher that was included in the **config.json**. The **AppxManifest**'s Applications must now target the **PSFLauncher.exe** associated with the applications architecture.
 
 
 1. Open File Explorer, and navigate to the Staged MSIX App folder (**C:\PSF\Staging\PSFSampleApp**).
@@ -183,7 +184,7 @@ After creating and updating the **config.json** file, the Windows App's **AppxMa
 
 
 ### Re-package the application
-All of the corrections have been applied, now the Windows App can be re-packaged into an MSIX and signed using a code signing certificate.
+All of the corrections have been applied, now the Windows app can be re-packaged into an MSIX, and signed using a code signing certificate.
 
 1. Open an Administrative PowerShell Window.
 1. Set the following variables:
@@ -196,13 +197,15 @@ All of the corrections have been applied, now the Windows App can be re-packaged
     $Win10SDKVersion  = "10.0.19041.0"                               ## Latest version of the Win10 SDK
     ```
 
-1. Repack the Windows App from the staging folder by running the following PowerShell cmdlet:
+1. Repack the Windows app from the staging folder by running the following PowerShell cmdlet:
+
     ```PowerShell
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     .\makeappx.exe pack /p "$AppPath" /d "$StagingFolder"
     ```
 
-1. Sign the Windows App by running the following PowerShell cmdlet:
+1. Sign the Windows app by running the following PowerShell cmdlet:
+
     ```PowerShell
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     .\signtool.exe sign /v /fd sha256 /f $CodeSigningCert /p $CodeSigningPass $AppPath
