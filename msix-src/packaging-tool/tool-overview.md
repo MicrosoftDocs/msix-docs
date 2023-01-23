@@ -37,9 +37,12 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - Version 1.2022.1101.0
-- Fixed a minor UI bug
-- Fixed a localization bug
+## Latest public release - Version 1.2023.118.0
+- Portable Apps can now be packaged as MSIX Packages
+- Added ability to edit files within a package using Package Editor
+- Apply Trace fixup to your package from within the Package Editor
+- Added feature to exclude dependent Windows services from MSIX packages
+- MSIX Packaging Tool now monitors child processes during app installation
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
