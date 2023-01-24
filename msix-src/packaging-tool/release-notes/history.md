@@ -9,21 +9,21 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2023.102.0
+## Version 1.2023.118.0 - Public Version
 - Portable Apps can now be packaged as MSIX Packages
 - Added ability to edit files within a package using Package Editor
 - Apply Trace fixup to your package from within the Package Editor
 - Added feature to exclude dependent Windows services from MSIX packages
 - MSIX Packaging Tool now monitors child processes during app installation
 
-## Version 1.2022.1101.0 - Public Version
+## Version 1.2022.1101.0
 - Fixed a minor UI bug
 - Fixed a localization bug
 
 ## Version 1.2022.1003.0
-- Added support for auto application of PSF FixUps through MPT-CLI. The following PSF FixUps will be supported - FileRedirectionFixup, RegLegacyFixups, DynamicLibraryFixup, and EnvVarFixup
-- PSF Scripts are now supported by MPT-CLI
-- Added support for new capabilities to MPT Package Editor
+- Added support for auto application of PSF FixUps through Command Line Interface. The following PSF FixUps will be supported - FileRedirectionFixup, RegLegacyFixups, DynamicLibraryFixup, and EnvVarFixup
+- PSF Scripts are now supported through the Command Line Interface
+- Added support for new capabilities to the Package Editor
 - Added support for new extensions - SearchPathOverride and InstallLocalVirtualization
 
 ## Version 1.2022.802.0
