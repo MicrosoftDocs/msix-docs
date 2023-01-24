@@ -29,7 +29,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2023.102.0
+## Version 1.2023.118.0
 - Portable Apps can now be packaged as MSIX Packages
 - Added ability to edit files within a package using Package Editor
 - Apply Trace fixup to your package from within the Package Editor
