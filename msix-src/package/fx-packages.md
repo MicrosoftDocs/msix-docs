@@ -6,6 +6,6 @@ ms.topic: article
 keywords: windows 11, uwp, desktop, msix
 ---
 
-# Create an unsigned MSIX package for testing
+# Framework packages
 
 See [Use MSIX framework packages dynamically from your desktop app](/windows/apps/desktop/modernize/framework-packages/).
