@@ -36,7 +36,7 @@ Here is a list of parameters available for customization:
 | Buttons::IsSecondaryButtonAccent | Boolean. |
 | LaunchWhenReady::HorizontalAlignment | Alignment of the checkbox for &#39;Launch when ready&#39;. Center, left. |
 | AppInformation::Mode | Additional Information show type. Normal, flyout |
-| Hyperlinks::TopMargin | Specifies margin between hyperlink and buttons. |
+| Hyperlinks::TopMarging | Specifies margin between hyperlink and buttons. |
 | Hyperlink::Text | Text to display as hyperlink |
 | Hyperlink::Url | Link |
 | Hyperlink:: HorizontalAlignment | Alignment of hyperlink within the window. Left, center, right |
@@ -60,7 +60,7 @@ IgnorableNamespaces="ux ux2" Version="1.0.0">
 
   HyperLinkFontSize="12"> 
 
-    <Icon HorizontalAlignment="center" Logo="Images\Contoso96x96.png" TopMargin="70"/> 
+    <Icon HorizontalAlignment="center" Logo="Images\Contoso96x96.png" TopMarging="70"/> 
 
     <Buttons HorizontalAlignment="center" Text="Contoso" IsSecondaryButtonAccent="false"/> 
 
@@ -68,7 +68,7 @@ IgnorableNamespaces="ux ux2" Version="1.0.0">
 
     <AppInformation Mode="flyout" /> 
 
-    <HyperLinks TopMargin="30"> 
+    <HyperLinks TopMarging="30"> 
 
       <HyperLink  Text="Terms &amp; conditions" Url="https://support.microsoft.com/" HorizontalAlignment="center"/> 
 
