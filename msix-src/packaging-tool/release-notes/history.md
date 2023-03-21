@@ -12,7 +12,7 @@ ms.custom: Vibranium
 ## Version 1.2023.319.0
 - MSIX Packaging Tool now supports High Contrast themes of Windows
 - Enhanced UI support for local (non-English) languages
-- UI changes for failed installation of the MSIX Packaging Tool driver
+- UI changes for improved trobleshooting of the MSIX Packaging Tool driver installation failure
 
 ## Version 1.2023.118.0 - Public Version
 - Portable Apps can now be packaged as MSIX Packages
