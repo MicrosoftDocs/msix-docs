@@ -29,12 +29,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2023.118.0
-- Portable Apps can now be packaged as MSIX Packages
-- Added ability to edit files within a package using Package Editor
-- Apply Trace fixup to your package from within the Package Editor
-- Added feature to exclude dependent Windows services from MSIX packages
-- MSIX Packaging Tool now monitors child processes during app installation
+## Version 1.2023.319.0
+- MSIX Packaging Tool now supports High Contrast themes of Windows
+- Enhanced UI support for local (non-English) languages
+- UI changes for failed installation of the MSIX Packaging Tool driver
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
