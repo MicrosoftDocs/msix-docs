@@ -14,5 +14,10 @@ ms.date:     03/27/2023
 
 # App-V vs MSIX
 
+  
+Description  
+  
+This article contains a side-by-side comparison of App-V and MSIX.  
+Since Application Virtualization will be [end of life in April 2026](/lifecycle/announcements/mdop-extended), we recommend looking at Azure Virtual Desktop with MSIX App Attach
 
 
