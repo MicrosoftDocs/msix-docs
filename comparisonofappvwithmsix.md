@@ -31,8 +31,6 @@ Since Application Virtualization will be [end of life in April 2026](/lifecycle
 |A single copy of a file across apps/users |File duplication across apps is not avoided |A single copy of any file is kept.  |
 |Signing |Does not seem required |Required|
 
-  
-  
 ## For more information
   
 [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview)  
