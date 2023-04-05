@@ -1,7 +1,7 @@
 - name: MSIX
   items: 
     - name: App-V vs MSIX
-      href: ../../../MicrosoftDocs/msix-pr/msix-src/packaging-tool/comparisonofappvwithmsix.md
+      href: ../../../MicrosoftDocs/msix-pr/msix-src/comparisonofappvwithmsix.md
       displayName: "App-V MSIX Comparison "
     - name: Overview
       href: index.yml  
