@@ -1,8 +1,8 @@
 - name: MSIX
   items: 
-    - name: App-V vs MSIX
+    - name: App-V versus MSIX
       href: comparisonofappvwithmsix.md
-      displayName: "App-V MSIX Comparison "
+      displayName: "App-V MSIX comparison "
     - name: Overview
       href: index.yml  
     - name: What is MSIX?
