@@ -1,8 +1,5 @@
 - name: MSIX
   items: 
-    - name: App-V versus MSIX
-      href: comparisonofappvwithmsix.md
-      displayName: "App-V MSIX comparison "
     - name: Overview
       href: index.yml  
     - name: What is MSIX?
@@ -191,6 +188,9 @@
           href: toolkit/msix-toolkit-msixbatchconversion.md
         - name: AppInstaller File Builder tool
           href: toolkit/msix-toolkit-appinstallerfilebuilder.md
+    - name: App-V versus MSIX
+      href: comparisonofappvwithmsix.md
+      displayName: "App-V MSIX comparison "
 - name: Build an MSIX package from source code
   items: 
     - name: Overview
