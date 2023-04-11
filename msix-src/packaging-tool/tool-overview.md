@@ -28,9 +28,9 @@ If you are interested in being an MSIX Packaging Tool insider, click [here](insi
  
 To install the MSIX Packaging Tool from the Microsoft Store, go [here](https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf), making sure you are logged in with the MSA that is used for your Windows Insider Program. Next, go to the product description page and click the Install icon to begin the installation.
 
-MSIX Packaging Tool can also be installed from WinGet command-line tool using command -
+MSIX Packaging Tool can be installed from WinGet command-line tool using the command -
 ```
-winget install "MSIX Packaging Tool"
+PS C:\> winget install "MSIX Packaging Tool"
 ```
 
 MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
