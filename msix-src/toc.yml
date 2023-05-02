@@ -2,6 +2,9 @@
   items: 
     - name: Overview
       href: index.yml  
+    - name: Accelerators
+      href: ./toolkit/accelerators.md
+      displayName: accelerators
     - name: What is MSIX?
       href: overview.md
     - name: Features and supported platforms 
