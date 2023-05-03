@@ -28,7 +28,7 @@ Enterprises today prefer application streaming for app distribution for better 
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).
 
 - Get the extension from [MSIX Developer Labs](https://microsoft.github.io/MSIX-Labs)
-- [Install the extension](/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2022) to Visual Studio 2022  
+- [Install the extension](/visualstudio/ide/finding-and-using-visual-studio-extensions) to Visual Studio 2022  
   
 > [!NOTE] 
 > This extension is only compatible with Visual Studio 2022 version.
@@ -54,15 +54,15 @@ Note: App streaming is only supported for WinUI3 apps in this private preview
     
  <Project ...>
 
-    3. In the Solution Explorer, open the solution for your application project.  
+3. In the Solution Explorer, open the solution for your application project.  
 
-    4. Right-click the project and choose __Package and Publish__->__Publish App Streaming Packages__  
+4. Right-click the project and choose __Package and Publish__->__Publish App Streaming Packages__  
 
 ![Publish App Streaming Packages Img](media/desktop-to-uwp-packaging-dot-net/publish-app-streaming-packages-img.png)
 
-    5. Now you can decide how to configure the package by selecting an output location for your MSIX Package and VHDx file and selecting the platform of choice.   
+5. Now you can decide how to configure the package by selecting an output location for your MSIX Package and VHDx file and selecting the platform of choice.   
 
-    6. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.  
+6. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.  
 Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-using-signtool)here.
 
  
