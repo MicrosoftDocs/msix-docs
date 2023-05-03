@@ -1,9 +1,9 @@
 ---
 # Required metadata
-		# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-		# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
+# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
+# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-		title:       # Add a title for the browser tab
+title:       # Add a title for the browser tab
 description: # Add a meaningful description for search results
 author:      fiza-microsoft # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
@@ -15,4 +15,7 @@ ms.date:     05/02/2023
 
 # Accelerators
 
+An Accelerator provides an efficient way to capture important information regarding conversion of legacy applications to MSIX format. It consists of important information regarding the package (application), the operating system on which conversion happens, as well as the steps required to fix the package for proper functioning of converted MSIX.
+
+## Prerequisites
 
