@@ -2,9 +2,6 @@
   items: 
     - name: Overview
       href: index.yml  
-    - name: Accelerators
-      href: ./toolkit/accelerators.md
-      displayName: accelerators
     - name: What is MSIX?
       href: overview.md
     - name: Features and supported platforms 
@@ -191,6 +188,8 @@
           href: toolkit/msix-toolkit-msixbatchconversion.md
         - name: AppInstaller File Builder tool
           href: toolkit/msix-toolkit-appinstallerfilebuilder.md
+        - name: Accelerators
+          href: toolkit/accelerators.md
     - name: App-V versus MSIX
       href: comparisonofappvwithmsix.md
       displayName: "App-V MSIX comparison "
