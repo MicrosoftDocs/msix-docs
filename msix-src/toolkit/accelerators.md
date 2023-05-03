@@ -7,9 +7,7 @@ title:       # Add a title for the browser tab
 description: # Add a meaningful description for search results
 author:      fiza-microsoft # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.topic:    conceptual # Add the ms.topic value
 ms.date:     05/02/2023
 ---
 
