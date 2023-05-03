@@ -27,7 +27,7 @@ Enterprises today prefer application streaming for app distribution for better 
 - Download [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)   
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).
 
-- Get the extension from [MSIX Developer Labs](MSIX%20Developer%20Labs)
+- Get the extension from [MSIX Developer Labs](https://microsoft.github.io/MSIX-Labs)
 - [Install the extension](/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2022) to Visual Studio 2022  
   
 > [!NOTE] 
@@ -51,10 +51,12 @@ Note: App streaming is only supported for WinUI3 apps in this private preview
   < EnablePackagingAndAppAttachFlow >
 
   ...
+    
+ <Project ...>
 
-     3. In the Solution Explorer, open the solution for your application project.  
+    3. In the Solution Explorer, open the solution for your application project.  
 
-     4. Right-click the project and choose __Package and Publish__->__Publish App Streaming Packages__  
+    4. Right-click the project and choose __Package and Publish__->__Publish App Streaming Packages__  
 
 ![Publish App Streaming Packages Img](media/desktop-to-uwp-packaging-dot-net/publish-app-streaming-packages-img.png)
 
