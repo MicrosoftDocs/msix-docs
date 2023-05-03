@@ -1,9 +1,9 @@
 ---
 # Required metadata
-		# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-		# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
+# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
+# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-		title:       App Streaming in Visual Studio# Add a title for the browser tab
+title:       App Streaming in Visual Studio# Add a title for the browser tab
 description: This article explains how to create an App Streaming package using Visual Studio 2022 and publish it to Azure Virtual Desktop # Add a meaningful description for search results
 author:      fiza-microsoft # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
