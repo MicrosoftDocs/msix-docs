@@ -211,15 +211,15 @@
           href: desktop/vs-package-overview.md
         - name: Set up your desktop app for packaging in Visual Studio
           href: desktop/desktop-to-uwp-packaging-dot-net.md
-        - name: App Streaming in Visual Studio
-          href: ./desktop/appstreaminginvisualstudio.md
-          displayName: Azure Virtual Desktop, App Streaming, Visual Studio, Extension
         - name: Package a desktop or UWP app in Visual Studio
           href: package/packaging-uwp-apps.md
         - name: Sign packages with Azure Key Vault
           href: desktop/sign-with-akv-cert.md
         - name: Optimize binaries with native images
           href: desktop/desktop-to-uwp-r2r.md
+        - name: App Attach from Visual Studio
+          href: ./desktop/appattachfromvisualstudio.md
+          displayName: Azure Virtual Desktop, App Streaming, Visual Studio, Extension
     - name: MSIX and CI/CD pipelines
       items:
         - name: Overview
