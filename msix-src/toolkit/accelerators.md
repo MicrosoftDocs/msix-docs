@@ -48,3 +48,194 @@ An Accelerator provides an efficient way to capture important information regard
 - _Architecture_ : Architecture of the package (application). (32/64 bit)
 - _MSIXConversionToolVersion_ :	Version of MSIX Packaging Tool used for conversion. Example - 1.2021.709.0;
 - _AcceleratorVersion_: Version of the accelerator being used. Currently the latest version is 1.0.0.
+
+## Use Cases For ConversionStatus
+- Successful - No Fix Required          
+```yaml
+ConversionStatus : Successful - No Fix Required
+```
+
+-  Successful - Fix Required   
+```yaml
+ConversionStatus: Successful - Fix Required
+
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: App unable to install visual c++ dependency
+    Fix:
+      FixType: Dependency
+      FixDetails:
+        Dependencies:
+          - Visual C++
+```
+
+-  Converted With Issues                
+```yaml
+ConversionStatus: Converted With Issues
+
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Shortcut not captured
+    Fix:
+      FixType: EntryPoint 
+      FixDetails:
+        EntryPointIssue: ShortcutNotCaptured
+        Solution:
+          - Launch from start menu
+```
+-  Failed       
+```yaml
+ConversionStatus: Failed
+
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Registry errors in Procmon
+```
+
+-  Not Eligible    
+```yaml
+EligibleForConversion: No - Driver Required
+
+ConversionStatus: Not Eligible
+```
+## Use Cases For FixDetails
+ - FixType: Capability
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Admin Access needed to run an app 
+    Fix:
+      FixType: Capability
+      Reference: https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#:~:text=or%20Visual%20Studio.-,Elevation,-The%20allowElevation%20restricted
+      FixDetails:
+        Capabilities:
+          - allowElevation
+      
+```
+- FixType: Dependency
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: The app needs a 2008 C++ to be installed in the system
+      Reference: https://forums.guru3d.com/threads/problem-running-afterburner.408768/
+    Fix:
+      FixType: Dependency
+      Reference: https://forums.guru3d.com/threads/problem-running-afterburner.408768/
+      FixDetails:
+        Dependencies:
+          - C++ 2008 runtime 
+```
+- FixType: InstallationPath
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Required permissions were not granted to the VFS folder and launcher.exe was not available during msix launch
+    Fix:
+      FixType: InstallationPath
+      Reference: https://docs.microsoft.com/en-us/windows/msix/packaging-tool/create-app-package#package-information
+      FixDetails:
+        Path: C:/Users/User/AppData/Local
+```
+- FixType: Custom
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description:  Chromium is downloaded as zip (not exe or msi).
+    Fix:
+      FixType: Custom
+      FixDetails:
+        Solution:
+          - MSIX Packaging Tool Installation Step, Unzip the chromium.zip and then launch chrome.exe.
+```
+- FixType: PSF
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: There were create file errors in process monitor
+    Fix:
+      FixType: PSF
+      Reference: https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup
+      FixDetails:
+        PSFConfig:
+          applications:
+            - id: LINELAUNCHER
+              executable: LINE/bin/LineLauncher.exe
+              workingDirectory: LINE/bin/
+          processes:
+            - executable: LineLauncher
+              fixups:
+                - dll: FileRedirectionFixup.dll
+                  config:
+                    redirectedPaths:
+                      packageRelative:
+                        - base: LINE/Data/
+                          patterns:
+                            - .*\.tst
+                        - base: LINE/bin/
+                          patterns:
+                            - .*
+```
+- FixType: Services
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: MSIX Packaging Tool failed to convert to MSIX stating a service is running outside the package.
+    Fix:
+      FixType: Services
+      FixDetails:
+        Exclude:
+          - CleanupPSvc
+```
+- FixType: EntryPoint
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Shortcut not captured
+      Reference: https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems/edit/35877020
+    Fix:
+      FixType: EntryPoint 
+      FixDetails:
+        EntryPointIssue: ShortcutNotCaptured
+        Solution:
+          - Launch from start menu
+```
+- FixType: InstalledLocationVirtualization
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: Test Issue
+    Fix:
+      FixType: InstalledLocationVirtualization
+      Reference: https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-installedlocationvirtualization
+      FixDetails:
+        UpdateActionsAttributes:
+          ModifiedItems: keep
+          DeletedItems: reset
+          AddedItems: keep
+```
+- FixType: LoaderSearchPathOverride
+```yaml
+RemediationApproach:
+  - SequenceNumber: 1
+    Issue:
+      Description: DLL not found 
+    Fix:
+      FixType: LoaderSearchPathOverride
+      Reference: https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride
+      FixDetails:
+        FolderPaths: 
+          - VFS\ProgramFilesX64\LINE\lib
+          - VFS\ProgramFilesX64\LINE\bin
+```
+
