@@ -57,8 +57,6 @@ Note: MSIX Image creation process is only supported for WinUI3 apps in this priv
 
 4. Right-click the project and choose __Package and Publish__->__Publish App Streaming Packages__  
 
-![Publish App Streaming Packages Img](media/desktop-to-uwp-packaging-dot-net/publish-app-streaming-packages-img.png)
-
 5. Now you can decide how to configure the package by selecting an output location for your MSIX Package and VHDx file and selecting the platform of choice.   
 
 6. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.  
