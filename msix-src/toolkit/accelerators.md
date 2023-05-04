@@ -20,7 +20,7 @@ An Accelerator provides an efficient way to capture important information regard
 1.	Join the The MSIX Packaging Tool Insider Program  to get early access Preview build to try out accelerators
 
 ## Create an Accelerator 
-1. Check out the sample accelerator here at MSIX-Labs DeveloperLabs to see the accelerator structure, and use it to build your own accelerator.
+1. Check out the sample accelerator here at [MSIX-Labs DeveloperLabs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) to see the accelerator structure, and use it to build your own accelerator.
 
 ## Definitions
 
@@ -239,3 +239,38 @@ RemediationApproach:
           - VFS\ProgramFilesX64\LINE\bin
 ```
 
+### Accepted Values for EligibleForConversion
+
+- Yes                                       
+- No                                   
+- No - Driver Required                           
+
+### Accepted Values For ConversionStatus
+
+- Successful - No Fix Required          
+- Successful - Fix Required             
+- Converted With Issues               
+- Failed                                
+- Not Eligible
+
+### Relation between EligibleForConversion and ConversionStatus
+
+| EligibleForConversion        | ConversionStatus |
+| ---------------------------- | ---------------- |
+| Yes                          | Successful - No Fix Required, Successful - Fix Required, Converted With Issues |             
+| No                           | Failed, Not Eligible |
+| No - Driver Required         | Not Eligible |
+
+### Accepted Values for FixType
+
+| Accepted Values | Definitions |
+| ------------------- | ---------------- |
+| Capability | Capabilities needed (eg: allowElevation, uiAccess etc.) for MSIX application to work. To be added in AppManifest or via Capabilities page in MSIX packaging tool during conversion. See [here](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-capabilities) for more details. |
+| Dependency | Dependencies needed (eg: C++ 2008 Redistributable x86) for MSIX application to work. To be downloaded externally in the OS environment. |
+| InstallationPath | Used to custom set the exe/msi installer location in case it installs data outside default folder (Program Files). Path needs to be added in "Package Information" page in MSIX packaging tool during conversion. See [here](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/create-app-package#:~:text=Install%20location%3A,application%20install%20operation.) for more details.|
+| Custom | Fixes that need to be done manually by the user to fix the MSIX application. Eg: Changing Application Id sequence in the app manifest. |
+| PSF | Adding Package support framework fixups (Eg: FileRedirectionFixup) to fix the MSIX application. User need to create a config.json and add it and other necessary dlls in the package during conversion. See [here](https://docs.microsoft.com/en-us/windows/msix/psf/package-support-framework-overview) for more details. The author of the accelerator needs to provide the yaml equivalent of config.json in PSFConfig field. |
+| Services | Services that needed to be included/excluded in order for the MSIX application to work. Need to specify in the Service Report of MSIX Packaging tool during conversion. See [here](https://docs.microsoft.com/en-us/windows/msix/packaging-tool/convert-an-installer-with-services) for more details. |
+| EntryPoint | To fix issues related to EntryPoint (Eg: ShortcutNotCaptured). See [here](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-application#:~:text=Default%20value-,EntryPoint,No,-Executable) for more details. |
+| InstalledLocationVirtualization | It is an extension that redirects any writes to the app's installation directory to a location in the app data. See [here](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-installedlocationvirtualization) and [here](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-updateactions) for more details. The default values for ModifiedItems, DeletedItems and AddedItems are keep, reset and keep respectively. |
+| LoaderSearchPathOverride | It is an extension that allows an app developer to declare a path in the app package, relative to the app package root path, to be included in the loader search path for the app's processes. The author of the accelerator needs to provide a the list of paths to be included. See [here](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) for more details. |
