@@ -101,10 +101,8 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 :::column:::
 
-![App-V-Scheduler-logo2](media/partners/app-v-scheduler-logo2.png)
+[![App-V-Scheduler-logo2](media/partners/app-v-scheduler-logo2.png)](https://appventix.com/)
 
-  
-  
   
   
 :::column-end:::
