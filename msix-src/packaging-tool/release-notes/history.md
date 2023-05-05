@@ -10,7 +10,7 @@ ms.custom: Vibranium
 # Release notes for the MSIX Packaging Tool
 
 ## Version 1.2023.504.0
-- Search for and apply [Accelerators](~/msix/toolkit/accelerators) during conversion process
+- Search for and apply [Accelerators](/windows/msix/toolkit/accelerators) during conversion process
 
 ## Version 1.2023.319.0 - Public Version
 - MSIX Packaging Tool now supports High Contrast themes of Windows
