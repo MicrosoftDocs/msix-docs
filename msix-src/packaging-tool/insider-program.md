@@ -29,10 +29,8 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2023.319.0
-- MSIX Packaging Tool now supports High Contrast themes of Windows
-- Enhanced UI support for local (non-English) languages
-- UI changes for improved troubleshooting of the MSIX Packaging Tool driver installation failure
+## Version 1.2023.504.0
+- Search for and apply Accelerators during conversion process
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
