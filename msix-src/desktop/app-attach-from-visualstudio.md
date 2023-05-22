@@ -26,33 +26,37 @@ Enterprises prefer App Attach for:
 
 Streamed app's data roams with the user. This helps them instantly run apps and continue their experience wherever they are.   
   
-## Requirements:  
-- Download [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
+## Pre-requisite steps  
+- Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
+- Configure Azure Development Workload in Visual Studio by the following:
+```
+Open Visual Studio Installer -> Click on Modify -> Check on Azure development -> Confirm by clicking on Modify at the bottom.
+```
+![Visual Studio Extension](https://github.com/bansalsushant/msix-docs/assets/15215151/e517e795-4dc6-4337-8ad8-3b70f4725f19)
+
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).
 
 - Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppStreaming/AppAttachExtension.vsix).
-- [Install the extension](/visualstudio/ide/finding-and-using-visual-studio-extensions) to Visual Studio 2022.
+- Install the extension to Visual Studio by double clicking the above downloaded file.
+- Ensure the system is connected to the Internet.
   
 ```
 Note: This extension is only compatible with Visual Studio 2022.
 ``` 
 ## Create an App Attach ready Package  
-Once you have the extension installed in Visual Studio 2022,   
+Once you have the extension installed in Visual Studio 2022,
+1. Launch Visual Studio in elevated mode by right-click and choosing 'Run as Administrator'.
   
-1. Create a [ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
+2. Create a [ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
 ```
 Note: MSIX Image creation process is only supported for WinUI3 apps in this Private Preview.
 ```
-2. In the Solution Explorer, open the solution for your application project.  
+3. In the Solution Explorer, right-click the project and choose __Package and Publish__->__Create App Attach Packages__  
 
-3. Right-click the project and choose __Package and Publish__->__Publish App Streaming Packages__  
+4. Now you can configure the package by selecting an output location for your MSIX Package and VHDx file, and selecting the platform of choice.   
 
-4. Now you can decide how to configure the package by selecting an output location for your MSIX Package and VHDx file and selecting the platform of choice.   
+5. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-using-signtool)here.
 
-5. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate.  
-Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-using-signtool)here.
-
- 
 
 ## Publish your App Attach Package
 
@@ -61,14 +65,14 @@ Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-usin
 ```
 Note: This extension only allows publishing to existing Azure resources.
 ```
-2. Enter the following values:  
-__Subscription-__ Choose the Azure subscription to use for your deployment.  
-__Resource group-__ Using the dropdown, select an existing resource group name.  
-__Storage account-__ Select your storage account name which has the deployed file share   
-__Fileshare –__ Select a file share in your Azure Virtual Desktop deployment where the package will be stored.
-__Application Group-__ Select the application group you want to publish the apps to.  
-__Workspace__ - Select the name of the workspace you want to assign an application group to.  
-__Host Pool__ – Select the host pool name for the application group
+2. Select the following values:  
+- __Subscription__ – Choose the Azure subscription to use for your deployment.  
+- __Resource Group__ – Using the dropdown, select an existing resource group name.  
+- __Storage Account__ – Select your storage account name which has the deployed file share.   
+- __Fileshare__ – Select a file share in your Azure Virtual Desktop deployment where the package will be stored.  
+- __Application Group__ – Select the application group you want to publish the apps to.  
+- __Workspace__ – Select the name of the workspace you want to assign an application group to.  
+- __Host Pool__ – Select the host pool name for the application group.  
 
 3. Click on Publish to publish your package to the above Azure virtual Desktop deployment.
 
