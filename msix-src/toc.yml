@@ -220,7 +220,7 @@
         - name: Optimize binaries with native images
           href: desktop/desktop-to-uwp-r2r.md
         - name: App Attach from Visual Studio
-          href: desktop/appattachfromvisualstudio.md
+          href: desktop/app-attach-from-visualstudio.md
           displayName: Azure Virtual Desktop, App Streaming, Visual Studio, Extension
     - name: MSIX and CI/CD pipelines
       items:
