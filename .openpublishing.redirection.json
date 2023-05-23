@@ -114,6 +114,11 @@
       "source_path": "msix-src/desktop/desktop-to-uwp-run-desktop-app-converter.md",
       "redirect_url": "/windows/msix/packaging-tool/tool-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "msix-src/desktop/appattachfromvisualstudio.md",
+      "redirect_url": "/windows/msix/desktop/app-attach-from-visualstudio",
+      "redirect_document_id": false
     }
   ]
 }
