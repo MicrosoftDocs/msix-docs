@@ -36,7 +36,7 @@ To see the accelerator structure, and use to it to build your own accelerator, s
     - _Reference_ : Reference link to the document containing detailed information about the fix and how it needs to be done. This field is optional.
     - _FixDetails_ : To determine specific kind of fix required under a particular FixType. Example - If Fixtype is “Dependency”, then FixDetails would have a array-type field called "Dependencies" to list down all the dependencies that need to be added for the application. Use cases can be found [here](#use-cases-for-fixdetails).
 
-- _MinimumPSFVersion_ : (Required only when atleast one of the FixType uses PSF or [PackageSupportFramework](https://docs.microsoft.com/windows/msix/psf/package-support-framework-overview)). Since PSF releases are backward-compatible, any version greater than this specified version will work.
+- _MinimumPSFVersion_ : (Required only when atleast one of the FixType uses PSF or [PackageSupportFramework](/windows/msix/psf/package-support-framework-overview)). Since PSF releases are backward-compatible, any version greater than this specified version will work.
 - _AdditionalComments_ : To list additional information regarding app conversion, solely meant for human reading. This field is optional.
 - _Edition_ : Edition of the Operating system. Example - Windows 10 Enterprise.
 - _MinimumOSVersion_ :	Version of the Operating system. Example - 21H1. This field is to signify that any version greater than this specified OS version will work.
@@ -45,7 +45,7 @@ To see the accelerator structure, and use to it to build your own accelerator, s
 - _MSIXConversionToolVersion_ :	Version of MSIX Packaging Tool used for conversion. Example - 1.2021.709.0;
 - _AcceleratorVersion_: Version of the accelerator being used. Currently the latest version is 1.0.0.
 
-## Use Cases For ConversionStatus
+## Use cases for ConversionStatus
 - Successful - No Fix Required          
 ```yaml
 ConversionStatus : Successful - No Fix Required
@@ -97,7 +97,7 @@ EligibleForConversion: No - Driver Required
 
 ConversionStatus: Not Eligible
 ```
-## Use Cases For FixDetails
+## Use cases for FixDetails
  - FixType: Capability
 ```yaml
 RemediationApproach:
@@ -106,7 +106,7 @@ RemediationApproach:
       Description: Admin Access needed to run an app 
     Fix:
       FixType: Capability
-      Reference: https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#:~:text=or%20Visual%20Studio.-,Elevation,-The%20allowElevation%20restricted
+      Reference: /windows/uwp/packaging/app-capability-declarations#:~:text=or%20Visual%20Studio.-,Elevation,-The%20allowElevation%20restricted
       FixDetails:
         Capabilities:
           - allowElevation
@@ -134,7 +134,7 @@ RemediationApproach:
       Description: Required permissions were not granted to the VFS folder and launcher.exe was not available during msix launch
     Fix:
       FixType: InstallationPath
-      Reference: https://docs.microsoft.com/en-us/windows/msix/packaging-tool/create-app-package#package-information
+      Reference: /windows/msix/packaging-tool/create-app-package#package-information
       FixDetails:
         Path: C:/Users/User/AppData/Local
 ```
@@ -213,7 +213,7 @@ RemediationApproach:
       Description: Test Issue
     Fix:
       FixType: InstalledLocationVirtualization
-      Reference: https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-installedlocationvirtualization
+      Reference: /uwp/schemas/appxpackage/uapmanifestschema/element-uap10-installedlocationvirtualization
       FixDetails:
         UpdateActionsAttributes:
           ModifiedItems: keep
@@ -228,7 +228,7 @@ RemediationApproach:
       Description: DLL not found 
     Fix:
       FixType: LoaderSearchPathOverride
-      Reference: https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride
+      Reference: /uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride
       FixDetails:
         FolderPaths: 
           - VFS\ProgramFilesX64\LINE\lib
@@ -261,15 +261,15 @@ RemediationApproach:
 
 | Accepted values | Definitions |
 | ------------------- | ---------------- |
-| Capability* | Capabilities needed (eg: allowElevation, uiAccess etc.) for MSIX application to work. To be added in AppManifest or via Capabilities page in MSIX packaging tool during conversion. See [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-capabilities) for more details. |
+| Capability* | Capabilities needed (eg: allowElevation, uiAccess etc.) for MSIX application to work. To be added in AppManifest or via Capabilities page in MSIX packaging tool during conversion. See [here](/uwp/schemas/appxpackage/uapmanifestschema/element-capabilities) for more details. |
 | Dependency | Dependencies needed (eg: C++ 2008 Redistributable x86) for MSIX application to work. To be downloaded externally in the OS environment. |
-| InstallationPath | Used to custom set the exe/msi installer location in case it installs data outside default folder (Program Files). Path needs to be added in "Package Information" page in MSIX packaging tool during conversion. See [here](https://docs.microsoft.com/windows/msix/packaging-tool/create-app-package#:~:text=Install%20location%3A,application%20install%20operation.) for more details.|
+| InstallationPath | Used to custom set the exe/msi installer location in case it installs data outside default folder (Program Files). Path needs to be added in "Package Information" page in MSIX packaging tool during conversion. See [here](/windows/msix/packaging-tool/create-app-package#:~:text=Install%20location%3A,application%20install%20operation.) for more details.|
 | Custom | Fixes that need to be done manually by the user to fix the MSIX application. Eg: Changing Application Id sequence in the app manifest. |
-| PSF* | Adding Package support framework fixups (Eg: FileRedirectionFixup) to fix the MSIX application. User need to create a config.json and add it and other necessary dlls in the package during conversion. See [here](https://docs.microsoft.com/windows/msix/psf/package-support-framework-overview) for more details. The author of the accelerator needs to provide the yaml equivalent of config.json in PSFConfig field. |
-| Services | Services that needed to be included/excluded in order for the MSIX application to work. Need to specify in the Service Report of MSIX Packaging tool during conversion. See [here](https://docs.microsoft.com/windows/msix/packaging-tool/convert-an-installer-with-services) for more details. |
-| EntryPoint | To fix issues related to EntryPoint (Eg: ShortcutNotCaptured). See [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application#:~:text=Default%20value-,EntryPoint,No,-Executable) for more details. |
-| InstalledLocationVirtualization* | It is an extension that redirects any writes to the app's installation directory to a location in the app data. See [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-installedlocationvirtualization) and [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-updateactions) for more details. The default values for ModifiedItems, DeletedItems and AddedItems are keep, reset and keep respectively. |
-| LoaderSearchPathOverride* | It is an extension that allows an app developer to declare a path in the app package, relative to the app package root path, to be included in the loader search path for the app's processes. The author of the accelerator needs to provide a the list of paths to be included. See [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) for more details. |
+| PSF* | Adding Package support framework fixups (Eg: FileRedirectionFixup) to fix the MSIX application. User need to create a config.json and add it and other necessary dlls in the package during conversion. See [here](/windows/msix/psf/package-support-framework-overview) for more details. The author of the accelerator needs to provide the yaml equivalent of config.json in PSFConfig field. |
+| Services | Services that needed to be included/excluded in order for the MSIX application to work. Need to specify in the Service Report of MSIX Packaging tool during conversion. See [here](/windows/msix/packaging-tool/convert-an-installer-with-services) for more details. |
+| EntryPoint | To fix issues related to EntryPoint (Eg: ShortcutNotCaptured). See [here](/uwp/schemas/appxpackage/uapmanifestschema/element-application#:~:text=Default%20value-,EntryPoint,No,-Executable) for more details. |
+| InstalledLocationVirtualization* | It is an extension that redirects any writes to the app's installation directory to a location in the app data. See [here](/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-installedlocationvirtualization) and [here](/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-updateactions) for more details. The default values for ModifiedItems, DeletedItems and AddedItems are keep, reset and keep respectively. |
+| LoaderSearchPathOverride* | It is an extension that allows an app developer to declare a path in the app package, relative to the app package root path, to be included in the loader search path for the app's processes. The author of the accelerator needs to provide a the list of paths to be included. See [here](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) for more details. |
 
 > [!NOTE]
 > Accepted FixTypes marked with an asterisk (*) above are automatically supported by the MSIX Packaging Tool.
