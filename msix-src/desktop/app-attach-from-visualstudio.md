@@ -5,8 +5,8 @@
 
 title:       App Attach from Visual Studio # Add a title for the browser tab
 description: This article explains how to create an App Attach ready package using Visual Studio 2022 and publish it to Azure Virtual Desktop # Add a meaningful description for search results
-author:      bansalsushant # GitHub alias
-ms.author:   susbansal # Microsoft alias
+author:      fiza-microsoft # GitHub alias
+ms.author:   fizaazmi # Microsoft alias
 ms.topic:    conceptual # Add the ms.topic value
 ms.date:     05/02/2023
 ---
@@ -39,18 +39,19 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 - Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppStreaming/AppAttachExtension.vsix).
 - Install the extension to Visual Studio by double clicking the above downloaded file.
 - Ensure the system is connected to the Internet.
-  
-```
-Note: This extension is only compatible with Visual Studio 2022.
-``` 
+
+> [!NOTE] 
+> This extension is only compatible with Visual Studio 2022.
+
 ## Create an App Attach ready Package  
 Once you have the extension installed in Visual Studio 2022,
 1. Launch Visual Studio in elevated mode by right-click and choosing 'Run as Administrator'.
   
 2. Create a [ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
-```
-Note: MSIX Image creation process is only supported for WinUI3 apps in this Private Preview.
-```
+
+> [!NOTE] 
+> MSIX Image creation process is only supported for WinUI3 apps in this Private Preview.
+
 3. In the Solution Explorer, right-click the project and choose __Package and Publish__->__Create App Attach Packages__  
 
 4. Now you can configure the package by selecting an output location for your MSIX Package and VHDx file, and selecting the platform of choice.   
@@ -62,9 +63,10 @@ Note: MSIX Image creation process is only supported for WinUI3 apps in this Priv
 
  
 1. To Publish your App Attach package to Azure Virtual Desktop, select the Azure option.
-```
-Note: This extension only allows publishing to existing Azure resources.
-```
+
+> [!NOTE] 
+> This extension only allows publishing to existing Azure resources.
+
 2. Select the following values:  
 - __Subscription__ – Choose the Azure subscription to use for your deployment.  
 - __Resource Group__ – Using the dropdown, select an existing resource group name.  
