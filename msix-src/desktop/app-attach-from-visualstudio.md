@@ -38,7 +38,7 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).
 
-- Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppStreaming/AppAttachExtension.vsix).
+- Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppAttach/AppAttachExtension.vsix).
 - Install the extension to Visual Studio by double clicking the above downloaded file.
 
 ![User's image](media/app-attach-from-visualstudio/image1.png)
@@ -68,6 +68,12 @@ Once you have the extension installed in Visual Studio 2022,
 
 ## Publish your App Attach Package
 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
