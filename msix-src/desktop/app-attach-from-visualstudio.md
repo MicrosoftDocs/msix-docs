@@ -40,6 +40,7 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 
 - Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppStreaming/AppAttachExtension.vsix).
 - Install the extension to Visual Studio by double clicking the above downloaded file.
+
 ![User's image](media/app-attach-from-visualstudio/image1.png)
 
 - Ensure the system is connected to the Internet.
@@ -58,6 +59,7 @@ Once you have the extension installed in Visual Studio 2022,
 > MSIX Image creation process is only supported for WinUI3 apps in this Private Preview.
 
 1. In the Solution Explorer, right-click the project and choose __Package and Publish__ -> __Create App Attach Packages__  
+
 ![Screenshot 2023-05-30 165836](media/app-attach-from-visualstudio/screenshot-2023-05-30-165836.png)
 
 4. Now you can configure the package by selecting an output location for your MSIX Package and VHDx file, and selecting the platform of choice.   
@@ -66,6 +68,8 @@ Once you have the extension installed in Visual Studio 2022,
 
 ## Publish your App Attach Package
 
+ 
+ 
  
  
 1. To Publish your App Attach package to Azure Virtual Desktop, select the Azure option.
@@ -89,7 +93,7 @@ Once you have the extension installed in Visual Studio 2022,
 
 ## See Also
 
-- [What is MSIX App Attach](/azure/virtual-desktop/what-is-app-attach)?
-
+- [What is MSIX App Attach?](/azure/virtual-desktop/what-is-app-attach)
 - [Set up MSIX app attach with the Azure portal](/azure/virtual-desktop/app-attach-azure-portal)
+
 
