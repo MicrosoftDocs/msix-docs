@@ -28,7 +28,9 @@ Streamed app's data roams with the user. This helps them instantly run apps and 
   
 ## Pre-requisite steps  
 - Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
-- Configure Azure Development Workload in Visual Studio by the following:
+- Setup [Visual Studio for C#](/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
+- Configure 'Azure development' workload in Visual Studio by the following:
+
 ```
 Open Visual Studio Installer -> Click on Modify -> Check on Azure development -> Confirm by clicking on Modify at the bottom.
 ```
@@ -38,6 +40,8 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 
 - Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppStreaming/AppAttachExtension.vsix).
 - Install the extension to Visual Studio by double clicking the above downloaded file.
+![User's image](media/app-attach-from-visualstudio/image1.png)
+
 - Ensure the system is connected to the Internet.
 
 > [!NOTE] 
@@ -46,21 +50,23 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 ## Create an App Attach ready Package  
 Once you have the extension installed in Visual Studio 2022,
 1. Launch Visual Studio in elevated mode by right-click and choosing 'Run as Administrator'.
-  
 2. Create a [ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
+
+![Screenshot 2023-05-30 165600](media/app-attach-from-visualstudio/screenshot-2023-05-30-165600.png)
 
 > [!NOTE] 
 > MSIX Image creation process is only supported for WinUI3 apps in this Private Preview.
 
-3. In the Solution Explorer, right-click the project and choose __Package and Publish__->__Create App Attach Packages__  
+1. In the Solution Explorer, right-click the project and choose __Package and Publish__ -> __Create App Attach Packages__  
+![Screenshot 2023-05-30 165836](media/app-attach-from-visualstudio/screenshot-2023-05-30-165836.png)
 
 4. Now you can configure the package by selecting an output location for your MSIX Package and VHDx file, and selecting the platform of choice.   
 
 5. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-using-signtool)here.
 
-
 ## Publish your App Attach Package
 
+ 
  
 1. To Publish your App Attach package to Azure Virtual Desktop, select the Azure option.
 
@@ -68,6 +74,7 @@ Once you have the extension installed in Visual Studio 2022,
 > This extension only allows publishing to existing Azure resources.
 
 2. Select the following values:  
+
 - __Subscription__ – Choose the Azure subscription to use for your deployment.  
 - __Resource Group__ – Using the dropdown, select an existing resource group name.  
 - __Storage Account__ – Select your storage account name which has the deployed file share.   
@@ -80,11 +87,9 @@ Once you have the extension installed in Visual Studio 2022,
 
 4. You can also publish to a Folder by selecting __Folder__ on the Publish Screen. This will generate an MSIX Package and a VHDx at the specified output folder location.
 
-
 ## See Also
 
 - [What is MSIX App Attach](/azure/virtual-desktop/what-is-app-attach)?
 
 - [Set up MSIX app attach with the Azure portal](/azure/virtual-desktop/app-attach-azure-portal)
 
- 
