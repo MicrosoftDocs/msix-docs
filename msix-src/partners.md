@@ -13,7 +13,7 @@ The following partners provide additional tooling and support for MSIX developme
 
 :::row:::
     :::column:::
-        [![Access IT Automation logo](images/AccessItItAutomationLogoRebranded.png)](http://info.accessitautomation.com/ty-evergreen-it-webinar-0)
+        [![Access IT Automation logo](images/AccessItItAutomationLogoRebranded.png)](https://accessitautomation.com/products/access-capture/capture-packaging/)
     :::column-end:::
 
 :::column:::
@@ -179,6 +179,7 @@ The following partners provide additional tooling and support for MSIX developme
     :::column-end:::
 :::row-end:::
 -->
+
 
 
 
