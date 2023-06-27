@@ -6,7 +6,7 @@
       href: overview.md
     - name: Features and supported platforms 
       href: supported-platforms.md
-    - name: MSIX Container
+    - name: MSIX appContainer apps
       href: msix-container.md     
     - name: Understanding how MSIX packages run on Windows
       href: desktop/desktop-to-uwp-behind-the-scenes.md
