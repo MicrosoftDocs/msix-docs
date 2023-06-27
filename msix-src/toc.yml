@@ -8,8 +8,6 @@
       href: supported-platforms.md
     - name: MSIX appContainer apps
       href: msix-container.md     
-    - name: Understanding how MSIX packages run on Windows
-      href: desktop/desktop-to-uwp-behind-the-scenes.md
     - name: Flexible virtualization
       href: desktop/flexible-virtualization.md
     - name: MSIX package signing
