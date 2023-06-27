@@ -1,7 +1,7 @@
 ---
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
-ms.date: 01/18/2022
+ms.date: 06/27/2023
 ms.topic: article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
@@ -27,7 +27,7 @@ Universal Windows Platform (UWP) apps (`uap10:RuntimeBehavior="windowsApp"`) are
 And then the **uap10:TrustLevel** attribute (of the same **Application** element) determines whether or not your packaged app's process runs inside an app container.
 
 * A *full trust* app. Declared with `uap10:TrustLevel="mediumIL"`.
-* An app that runs in a lightweight app container (and is therefore isolated using file system and registry virtualization). Declared with `uap10:TrustLevel="appContainer"`.
+* An *appContainer* app. Declared with `uap10:TrustLevel="appContainer"`. Runs in a lightweight app container (and is therefore isolated using file system and registry virtualization). For more info, see [MSIX appContainer apps](/windows/msix/msix-container).
 
 > [!IMPORTANT]
 > For more details, dependencies, and capability requirements, see the documentation for those two attributes in [Application](/uwp/schemas/appxpackage/uapmanifestschema/element-application). Also see [uap10 was introduced in Windows 10, version 2004 (10.0; Build 19041)](/uwp/schemas/appxpackage/uapmanifestschema/element-application#uap10-was-introduced-in-windows-10-version-2004-100-build-19041).
@@ -36,7 +36,7 @@ And then the **uap10:TrustLevel** attribute (of the same **Application** element
 
 The purpose of packaging your app is to grant it *package identity* at runtime. Package identity is needed for certain Windows features (see [Features that require package identity](/windows/apps/desktop/modernize/modernize-packaged-apps)). You can package *all* combinations of app types described above (and thereby benefit from *package identity*).
 
-But a key goal of an `appContainer` app is to separate app state from system state as much as possible, while maintaining compatibility with other apps. Windows accomplishes that by detecting and redirecting certain changes that it makes to the file system and registry at runtime (known as *virtualizing*). We'll call out when a section applies only to virtualized apps.
+But a key goal of an *appContainer* app is to separate app state from system state as much as possible, while maintaining compatibility with other apps. Windows accomplishes that by detecting and redirecting certain changes that it makes to the file system and registry at runtime (known as *virtualizing*). We'll call out when a section applies only to virtualized apps.
 
 ## Installation
 
