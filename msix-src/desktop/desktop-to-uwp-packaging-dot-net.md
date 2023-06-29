@@ -1,9 +1,9 @@
 ---
 description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
-ms.date: 02/02/2020
+ms.date: 06/29/2023
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows 11, windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ---
 
@@ -16,10 +16,7 @@ You can use the **Windows Application Packaging Project** project in Visual Stud
 
 ## Required Visual Studio version and workload
 
-The **Windows Application Packaging Project** project is available in the following versions of Visual Studio:
-
-* Visual Studio 2019 and later
-* Visual Studio 2017 15.5 and later
+The **Windows Application Packaging Project** project is available in Visual Studio 2017 15.5 and later.
 
 To see the Windows Application Packaging Project template in the 'Add New Project' menu, you need to make sure you have **at least one** of the following the Visual Studio workloads installed:
 
@@ -48,15 +45,13 @@ Review this guide before you begin creating a package for your application: [Pre
 
 <a id="new-packaging-project"></a>
 
-## Setup the Windows Application Packaging Project in your solution
-
-The screenshots below are from Visual Studio 2019 16.10.
+## Set up the Windows Application Packaging Project in your solution
 
 1. In Visual Studio, open the solution that contains your desktop application project.
 
-2. Add a **Windows Application Packaging Project** project to your solution.
+2. Add a **Windows Application Packaging Project** project to your solution, choosing the appropriate language (C# or C++) that matches the language of your existing dekstop app's project.
 
-   You won't have to add any code to it. It's just there to generate a package for you. We'll refer to this project as the "packaging project".
+   You won't have to add any code to the packaging project. Its purpose is only to generate and configure a package for you. We'll refer to this project as *the packaging project*.
 
    ![Packaging project](images/add-packaging-project.png)
 
@@ -81,7 +76,6 @@ The screenshots below are from Visual Studio 2019 16.10.
    ![Config manager](images/config-manager.png)
 
 7. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
-
 
 ## Next steps
 
