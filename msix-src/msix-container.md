@@ -97,7 +97,7 @@ The project file for the packaging project now contains this explicit property:
 ```xml
 ...
 <ItemGroup>
-  <ProjectReference Include="..\MyWinUI3AppProject\MyWinUI3AppProject.vcxproj">
+  <ProjectReference Include="...">
     <TrustLevel>Partial</TrustLevel>
   </ProjectReference>
 </ItemGroup>
