@@ -1,7 +1,7 @@
 ---
 title: MSIX appContainer apps
 description: This topic describes MSIX appContainer apps and how to configure a package for one.
-ms.date: 06/29/2023
+ms.date: 07/14/2023
 ms.topic: article
 ms.author: stwhi
 author: stevewhims
@@ -105,6 +105,36 @@ The project file for the packaging project now contains this explicit property:
 ```
 
 And you can now remove `<rescap:Capability Name="runFullTrust" />` from the packaging project's `Package.appxmanifest` file.
+
+## Configure a Windows Application Project (C++ Win32 WndProc-type app) for appContainer
+
+This section is for you if you have a C++ Win32 WndProc-type project that was created with the **Windows Application Project** project template. The first step, in a nutshell, is to add to your solution a C++ **Windows Application Packaging Project**. There are more details on the exact steps in [Set up your desktop application for MSIX packaging in Visual Studio](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net). That topic applies to desktop apps written in C++ or C#.
+
+Then open your new packaging project's project file, and add a **TrustLevel** property to the existing **ProjectReference** property like this:
+
+```xml
+...
+<ItemGroup>
+  <ProjectReference Include="...">
+    <TrustLevel>Partial</TrustLevel>
+  </ProjectReference>
+</ItemGroup>
+...
+```
+
+When you build, you might see the error "error APPX1673: App manifest is missing required element 'PhoneIdentity'". If that happens, then edit the project's `Package.appxmanifest` file like this:
+
+```xml
+<Package ...
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  ...>
+...
+  <mp:PhoneIdentity
+      PhoneProductId="A GUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx."
+      PhonePublisherId="A GUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx."
+  </mp:PhoneIdentity>
+...
+```
 
 ## Configure a WPF or WinForms project for appContainer
 
