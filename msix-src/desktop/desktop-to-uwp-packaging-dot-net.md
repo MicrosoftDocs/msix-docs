@@ -49,6 +49,8 @@ Review this guide before you begin creating a package for your application: [Pre
 
 1. In Visual Studio, open the solution that contains your desktop application project.
 
+> [!NOTE]
+> If you want to package your project in x64 configuration, make sure you have configured referenced project to x64. To confirm this, refer to Additional notes below.
 2. Add a **Windows Application Packaging Project** project to your solution, choosing the appropriate language (C# or C++) that matches the language of your existing dekstop app's project.
 
    You won't have to add any code to the packaging project. Its purpose is only to generate and configure a package for you. We'll refer to this project as *the packaging project*.
@@ -77,6 +79,36 @@ Review this guide before you begin creating a package for your application: [Pre
 
 7. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
 
+## Additional notes
+
+To build WAP for x64 platform, follow either of the following steps:
+
+__Approach 1:__ Before adding the WAP project on any of the project, add x64 architecture via configuration manager (as shown in the screenshot below).
+
+![Configuration manager.](media/desktop-to-uwp-packaging-dot-net/microsoftteams-image-(12).png)
+
+__Approach 2:__ For the existing projects where WAP has been added, 
+
+1. Remove the x64 entries from .sln files entry manually. 
+
+
+``` 
+_Global_
+_GlobalSection(SolutionConfigurationPlatforms) = preSolution_
+_Debug|Any CPU = Debug|Any CPU_
+_Debug|ARM = Debug|ARM_
+_Debug|ARM64 = Debug|ARM64_ (remove)
+_Debug|x64 = Debug|x64_ (remove)
+_Debug|x86 = Debug|x86_
+_Release|Any CPU = Release|Any CPU_
+_Release|ARM = Release|ARM_
+_Release|ARM64 = Release|ARM64_ (remove)
+_Release|x64 = Release|x64_ (remove)
+_Release|x86 = Release|x86"_
+```
+
+2. After step1, add x64 configurations via configuration manager.
+
 ## Next steps
 
 **Package your desktop app in Visual Studio**
@@ -100,3 +132,4 @@ See [Extend your desktop application with modern UWP components](/windows/apps/d
 **Distribute your app**
 
 See [Distribute a packaged desktop application](/windows/apps/desktop/modernize/desktop-to-uwp-distribute)
+
