@@ -50,7 +50,8 @@ Review this guide before you begin creating a package for your application: [Pre
 1. In Visual Studio, open the solution that contains your desktop application project.
 
 > [!NOTE]
-> If you want to package your project in x64 configuration, make sure you have configured referenced project to x64. To confirm this, refer to Additional notes below.
+> If you want to package your project in x64 configuration, make sure you have configured referenced project to x64. To confirm this, refer to [Additional notes](#Additional notes) below.
+
 2. Add a **Windows Application Packaging Project** project to your solution, choosing the appropriate language (C# or C++) that matches the language of your existing dekstop app's project.
 
    You won't have to add any code to the packaging project. Its purpose is only to generate and configure a package for you. We'll refer to this project as *the packaging project*.
