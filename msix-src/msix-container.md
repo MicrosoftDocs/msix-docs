@@ -1,7 +1,7 @@
 ---
 title: MSIX appContainer apps
 description: This topic describes MSIX appContainer apps and how to configure a package for one.
-ms.date: 07/14/2023
+ms.date: 07/19/2023
 ms.topic: article
 ms.author: stwhi
 author: stevewhims
@@ -17,6 +17,39 @@ If you have an app that's packaged using MSIX, then you can configure it to run 
 A key goal of an *appContainer* app is to separate app state from system state as much as possible, while maintaining compatibility with other apps. Windows accomplishes that by detecting and redirecting certain changes that it makes to the file system and registry at runtime (known as *virtualizing*).
 
 An *appContainer* app writes to its own virtual registry and application data folder, and that data is deleted when the app is uninstalled or reset. Other apps don't have access to the virtual registry or virtual file system of an *appContainer* app.
+
+## Example code to test for running in an app container
+
+In a C++ project, you can use the code snippet below to determine whether or not a process is running inside an app container. For a C# project, you can use [Platform Invoke (P/Invoke)](/dotnet/standard/native-interop/pinvoke) to do the equivalent.
+
+```cpp
+#include <windows.h>
+...
+HANDLE tokenHandle{};
+DWORD isAppContainer{};
+DWORD tokenInformationLength{ sizeof(DWORD) };
+
+if (!::OpenProcessToken(
+    GetCurrentProcess(),
+    TOKEN_QUERY,
+    &tokenHandle))
+{
+    // Handle the error.
+}
+
+if (::GetTokenInformation(
+    tokenHandle,
+    TOKEN_INFORMATION_CLASS::TokenIsAppContainer,
+    &isAppContainer,
+    tokenInformationLength,
+    &tokenInformationLength
+))
+{
+    // Handle the error.
+}
+```
+
+After that code has run, if the value of *isAppContainer* is non-zero, then the process is running inside an app container.
 
 ## Configure a WinUI 3 project for appContainer
 
@@ -131,7 +164,7 @@ When you build, you might see the error "error APPX1673: App manifest is missing
 ...
   <mp:PhoneIdentity
       PhoneProductId="A GUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx."
-      PhonePublisherId="A GUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx."
+      PhonePublisherId="A GUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.">
   </mp:PhoneIdentity>
 ...
 ```
