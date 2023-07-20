@@ -1,7 +1,7 @@
 ---
 title: MSIX appContainer apps
 description: This topic describes MSIX appContainer apps and how to configure a package for one.
-ms.date: 07/19/2023
+ms.date: 07/20/2023
 ms.topic: article
 ms.author: stwhi
 author: stevewhims
@@ -20,7 +20,69 @@ An *appContainer* app writes to its own virtual registry and application data fo
 
 ## Example code to test for running in an app container
 
-In a C++ project, you can use the code snippet below to determine whether or not a process is running inside an app container. For a C# project, you can use [Platform Invoke (P/Invoke)](/dotnet/standard/native-interop/pinvoke) to do the equivalent.
+In a C# or C++ project, you can use the appropriate one of the code examples below to determine whether or not a process is running inside an app container. For each example, after the code has run, if the value of *isAppContainer* is non-zero (or `true`), then the process is running inside an app container.
+
+### C# (P/Invoke)
+
+```csharp
+[DllImport("kernel32.dll", SetLastError = true)]
+public static extern IntPtr GetCurrentProcess();
+
+[DllImport("advapi32.dll", SetLastError = true)]
+[return: MarshalAs(UnmanagedType.Bool)]
+static extern bool OpenProcessToken(
+    IntPtr ProcessHandle,
+    UInt32 DesiredAccess,
+    out IntPtr TokenHandle);
+
+[DllImport("advapi32.dll", SetLastError = true)]
+[return: MarshalAs(UnmanagedType.Bool)]
+static extern bool GetTokenInformation(
+    IntPtr TokenHandle,
+    uint TokenInformationClass,
+    out uint TokenInformation,
+    uint TokenInformationLength,
+    out uint ReturnLength);
+
+UInt32 TOKEN_QUERY = 0x0008;
+IntPtr tokenHandle;
+
+if (!OpenProcessToken(
+    GetCurrentProcess(),
+    TOKEN_QUERY,
+    out tokenHandle))
+{
+    // Handle the error.
+}
+
+uint isAppContainer;
+uint TokenIsAppContainer = 29;
+uint tokenInformationLength = sizeof(uint);
+
+if (!GetTokenInformation(
+    tokenHandle,
+    TokenIsAppContainer,
+    out isAppContainer,
+    tokenInformationLength,
+    out tokenInformationLength))
+{
+    // Handle the error.
+}
+```
+
+### C++ (WIL)
+
+This example uses the [Windows Implementation Libraries (WIL)](https://github.com/Microsoft/wil)). A convenient way to install WIL is to go to Visual Studio, click **Project** \> **Manage NuGet Packages...** \> **Browse**, type or paste **Microsoft.Windows.ImplementationLibrary** in the search box, select the item in search results, and then click **Install** to install the package for that project.
+
+```cpp
+#include <wil\token_helpers.h>
+...
+bool isAppContainer = wil::get_token_is_app_container();
+```
+
+The functions **wil::get_token_is_app_container_nothrow** and **wil::get_token_is_app_container_failfast** offer alternative error-handling strategies. See `wil\token_helpers.h` for more info.
+
+### C++ (canonical)
 
 ```cpp
 #include <windows.h>
@@ -48,8 +110,6 @@ if (::GetTokenInformation(
     // Handle the error.
 }
 ```
-
-After that code has run, if the value of *isAppContainer* is non-zero, then the process is running inside an app container.
 
 ## Configure a WinUI 3 project for appContainer
 
