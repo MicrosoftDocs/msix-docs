@@ -29,8 +29,11 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2023.504.0
-- Search for and apply Accelerators during conversion process
+## Version 1.2023.718.0
+- Improvements in entry point detection by MSIX Packaging Tool
+- Added notifications for Accelerator fixups that require manual intervention
+- Improvements in error reporting 
+- Bug fixes and general improvements
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
