@@ -9,6 +9,12 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2023.718.0
+- Improvements in entry point detection by MSIX Packaging Tool
+- Added notifications for Accelerator fixups that require manual intervention
+- Improvements in error reporting 
+- Bug fixes and general improvements
+
 ## Version 1.2023.504.0
 - Search for and apply [Accelerators](https://learn.microsoft.com/windows/msix/toolkit/accelerators) during conversion process
 
