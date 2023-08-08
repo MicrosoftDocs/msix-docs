@@ -9,7 +9,7 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2023.718.0
+## Version 1.2023.807.0
 - Improvements in entry point detection by MSIX Packaging Tool
 - Added notifications for Accelerator fixups that require manual intervention
 - Enhanced accessibility features to better support keyboard navigation, voice access, screen reader compatibility and contrast themes
