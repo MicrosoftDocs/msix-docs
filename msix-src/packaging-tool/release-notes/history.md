@@ -9,7 +9,7 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2023.807.0
+## Version 1.2023.807.0 - Public Version
 - Improvements in entry point detection by MSIX Packaging Tool
 - Added notifications for Accelerator fixups that require manual intervention
 - Enhanced accessibility features to better support keyboard navigation, voice access, screen reader compatibility and contrast themes
@@ -19,7 +19,7 @@ ms.custom: Vibranium
 ## Version 1.2023.504.0
 - Search for and apply [Accelerators](https://learn.microsoft.com/windows/msix/toolkit/accelerators) during conversion process
 
-## Version 1.2023.319.0 - Public Version
+## Version 1.2023.319.0 
 - MSIX Packaging Tool now supports High Contrast themes of Windows
 - Enhanced UI support for local (non-English) languages
 - UI changes for improved troubleshooting of the MSIX Packaging Tool driver installation failure
