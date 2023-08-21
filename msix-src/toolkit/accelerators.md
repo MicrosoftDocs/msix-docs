@@ -1,30 +1,30 @@
 ---
 title: Accelerators
-description: Guide for developers to create accelerators
+description: An accelerator provides an efficient way to convert legacy apps to MSIX format.
 author: fiza-microsoft
 ms.author: fizaazmi
 ms.topic: conceptual
-ms.date: 05/23/2023
+ms.date: 08/21/2023
 ---
 
 # Accelerators
 
-An accelerator provides an efficient way to convert legacy applications to MSIX format. It consists of important information regarding the package (application), the operating system on which conversion happens, as well as the steps required to fix the package for proper functioning of converted MSIX.
+An accelerator provides an efficient way to convert legacy applications (apps) to MSIX format. It consists of important info regarding: the package (the app); the operating system (OS) on which conversion happens; and the steps required to fix the package for proper functioning of the converted MSIX.
 
 ## Prerequisites
 
-To get an early-access preview build to try out accelerators, join the [MSIX Packaging Tool Insider Program](/windows/msix/packaging-tool/insider-program).
+To try out accelerators in a early-access preview build, join the [MSIX Packaging Tool Insider Program](/windows/msix/packaging-tool/insider-program).
 
 ## Create an accelerator 
 
-To see the accelerator structure, and use it to build your own accelerator, see the sample accelerator at the [MSIX-Labs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) GitHub repo.
+To see the accelerator structure, and to use it to build your own accelerator, see the sample accelerators at the [MSIX-Labs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) GitHub repo.
 
 ## Definitions
 
-- _PackageName_: Package is an application or program (Win32, WPF or Windows Forms application) having a legacy (exe, msi etc) installer which is being converted to MSIX format.
-- _PackageVersion_: Package versions are associated with a specific release. In some cases you will see a perfectly formed [semantic](https://semver.org) version number, and in other cases you might see something different. These may be date driven, or they might have other characters with some package specific meaning.
--  _PublisherName_: Name of the **original** publisher of the package.
-- _EligibleForConversion_: Some apps are prohibited for conversion due to security reasons, use of drivers etc. Hence, this flag is used to determine the eligibility for conversion. Accepted values can be found [here](#accepted-values-for-eligibleforconversion).
+- _PackageName_: Package is an application or program (Win32, WPF, or Windows Forms app) having a legacy (exe, msi, etc.) installer that's being converted to MSIX format.
+- _PackageVersion_: Package versions are associated with a specific release. In some cases, you'll see a perfectly formed [Semantic Versioning](https://semver.org) number; and in other cases you might see something different. These might be date-driven, or they might have other characters with some package-specific meaning.
+-  _PublisherName_: Name of the *original* publisher of the package.
+- _EligibleForConversion_: Some apps are prohibited from conversion for security reasons, use of drivers, etc. Hence, this flag is used to determine the eligibility for conversion. Accepted values can be found [here](#accepted-values-for-eligibleforconversion).
 - _ConversionStatus_: Determine status of application conversion. Accepted values can be found [here](#accepted-values-for-conversionstatus).
 - _RemediationApproach_: 
   - _SequenceNumber_: Determines the sequence number of a fix-step. Fix steps to successfully convert the app need to be provided sequentially.
@@ -302,5 +302,3 @@ RemediationApproach:
 
 > [!NOTE]
 > Accepted FixTypes marked with an asterisk (*) above are automatically supported by the MSIX Packaging Tool.
-
-
