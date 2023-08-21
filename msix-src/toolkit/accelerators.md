@@ -1,30 +1,30 @@
 ---
 title: Accelerators
-description: Guide for developers to create accelerators
+description: An accelerator provides an efficient way to convert legacy apps to MSIX format.
 author: fiza-microsoft
 ms.author: fizaazmi
 ms.topic: conceptual
-ms.date: 05/23/2023
+ms.date: 08/21/2023
 ---
 
 # Accelerators
 
-An accelerator provides an efficient way to convert legacy applications to MSIX format. It consists of important information regarding the package (application), the operating system on which conversion happens, as well as the steps required to fix the package for proper functioning of converted MSIX.
+An accelerator provides an efficient way to convert legacy applications (apps) to MSIX format. It consists of important info regarding: the package (the app); the operating system (OS) on which conversion happens; and the steps required to fix the package for proper functioning of the converted MSIX.
 
 ## Prerequisites
 
-To get an early-access preview build to try out accelerators, join the [MSIX Packaging Tool Insider Program](/windows/msix/packaging-tool/insider-program).
+To try out accelerators in a early-access preview build, join the [MSIX Packaging Tool Insider Program](/windows/msix/packaging-tool/insider-program).
 
 ## Create an accelerator 
 
-To see the accelerator structure, and use to it to build your own accelerator, see the sample accelerator at the [MSIX-Labs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) GitHub repo.
+To see the accelerator structure, and to use it to build your own accelerator, see the sample accelerators at the [MSIX-Labs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) GitHub repo.
 
 ## Definitions
 
-- _PackageName_: Package is an application or program (Win32, WPF or Windows Forms application) having a legacy (exe, msi etc) installer which is being converted to MSIX format.
-- _PackageVersion_: Package versions are associated with a specific release. In some cases you will see a perfectly formed [semantic](https://semver.org) version number, and in other cases you might see something different. These may be date driven, or they might have other characters with some package specific meaning.
--  _PublisherName_: Name of the **original** publisher of the package.
-- _EligibleForConversion_: Some apps are prohibited for conversion due to security reasons, use of drivers etc. Hence, this flag is used to determine the eligibility for conversion. Accepted values can be found [here](#accepted-values-for-eligibleforconversion).
+- _PackageName_: Package is an application or program (Win32, WPF, or Windows Forms app) having a legacy (exe, msi, etc.) installer that's being converted to MSIX format.
+- _PackageVersion_: Package versions are associated with a specific release. In some cases, you'll see a perfectly formed [Semantic Versioning](https://semver.org) number; and in other cases you might see something different. These might be date-driven, or they might have other characters with some package-specific meaning.
+-  _PublisherName_: Name of the *original* publisher of the package.
+- _EligibleForConversion_: Some apps are prohibited from conversion for security reasons, use of drivers, etc. Hence, this flag is used to determine the eligibility for conversion. Accepted values can be found [here](#accepted-values-for-eligibleforconversion).
 - _ConversionStatus_: Determine status of application conversion. Accepted values can be found [here](#accepted-values-for-conversionstatus).
 - _RemediationApproach_: 
   - _SequenceNumber_: Determines the sequence number of a fix-step. Fix steps to successfully convert the app need to be provided sequentially.
@@ -42,15 +42,41 @@ To see the accelerator structure, and use to it to build your own accelerator, s
 - _MinimumOSBuild_: Build Version of the Operating System. Example - "19043.1165". This field is to signify that that any OS build greater than this specified OS build will work.
 - _Architecture_: Architecture of the package (application). (32/64 bit)
 - _MSIXConversionToolVersion_:	Version of MSIX Packaging Tool used for conversion. Example - 1.2021.709.0;
-- _AcceleratorVersion_: Version of the accelerator being used. Currently the latest version is 1.0.0.
+- _AcceleratorVersion_: Version of the accelerator being used. Currently the latest version is 1.0.0.  
+  
+## Command line option for Accelerators
+
+For auto-conversion, you can generate the accelerator template through MSIX Packaging tool.
+
+1. Ensure that 'Generate a command line file with each package’ option is selected in MSIX Packing Tool Settings.
+
+1. Convert an app using the MSIX Packaging tool, applying an accelerator in the conversion process.
+
+1. By default, the conversion template file will be saved in the same location as your MSIX package, unless you specify a different save location.
+
+1. Run the MsixPackagingTool.exe in elevated mode.
+
+1. Run the following cmdlet to use the accelerator template:
+
+```yaml
+MsixPackagingTool.exe create-package --template c:\users\documents\AcceleratorTemplate.xml
+
+```
+
+More information on generating a template file for command line conversions [here.](/windows/msix/packaging-tool/generate-template-file)
+Learn about the parameters that can be passed as command line arguments [here.](/windows/msix/packaging-tool/package-conversion-command-line#use-the-command-line-with-the-command-prompt)
+
+
 
 ## Use cases for ConversionStatus
 - Successful - No Fix Required          
+
 ```yaml
 ConversionStatus: Successful - No Fix Required
 ```
 
 -  Successful - Fix Required   
+
 ```yaml
 ConversionStatus: Successful - Fix Required
 
@@ -66,6 +92,7 @@ RemediationApproach:
 ```
 
 -  Converted With Issues                
+
 ```yaml
 ConversionStatus: Converted With Issues
 
@@ -91,13 +118,15 @@ RemediationApproach:
 ```
 
 -  Not Eligible    
+
 ```yaml
 EligibleForConversion: No - Driver Required
 
 ConversionStatus: Not Eligible
 ```
 ## Use cases for FixDetails
- - FixType: Capability
+- FixType: Capability
+
 ```yaml
 RemediationApproach:
   - SequenceNumber: 1
@@ -246,6 +275,7 @@ RemediationApproach:
 - Successful - Fix Required             
 - Converted With Issues               
 - Failed                                
+
 - Not Eligible
 
 ### Relation between EligibleForConversion and ConversionStatus
