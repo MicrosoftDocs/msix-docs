@@ -17,7 +17,7 @@ To get an early-access preview build to try out accelerators, join the [MSIX Pac
 
 ## Create an accelerator 
 
-To see the accelerator structure, and use to it to build your own accelerator, see the sample accelerator at the [MSIX-Labs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) GitHub repo.
+To see the accelerator structure, and use it to build your own accelerator, see the sample accelerator at the [MSIX-Labs](https://github.com/microsoft/MSIX-Labs/tree/master/DeveloperLabs/SampleAccelerators) GitHub repo.
 
 ## Definitions
 
@@ -42,15 +42,41 @@ To see the accelerator structure, and use to it to build your own accelerator, s
 - _MinimumOSBuild_: Build Version of the Operating System. Example - "19043.1165". This field is to signify that that any OS build greater than this specified OS build will work.
 - _Architecture_: Architecture of the package (application). (32/64 bit)
 - _MSIXConversionToolVersion_:	Version of MSIX Packaging Tool used for conversion. Example - 1.2021.709.0;
-- _AcceleratorVersion_: Version of the accelerator being used. Currently the latest version is 1.0.0.
+- _AcceleratorVersion_: Version of the accelerator being used. Currently the latest version is 1.0.0.  
+  
+## Command line option for Accelerators
+
+For auto-conversion, you can generate the accelerator template through MSIX Packaging tool.
+
+1. Ensure that 'Generate a command line file with each package’ option is selected in MSIX Packing Tool Settings.
+
+1. Convert an app using the MSIX Packaging tool, applying an accelerator in the conversion process.
+
+1. By default, the conversion template file will be saved in the same location as your MSIX package, unless you specify a different save location.
+
+1. Run the MsixPackagingTool.exe in elevated mode.
+
+1. Run the following cmdlet to use the accelerator template:
+
+```yaml
+MsixPackagingTool.exe create-package --template c:\users\documents\AcceleratorTemplate.xml
+
+```
+
+More information on generating a template file for command line conversions [here.](/windows/msix/packaging-tool/generate-template-file)
+Learn about the parameters that can be passed as command line arguments [here.](/windows/msix/packaging-tool/package-conversion-command-line#use-the-command-line-with-the-command-prompt)
+
+
 
 ## Use cases for ConversionStatus
 - Successful - No Fix Required          
+
 ```yaml
 ConversionStatus: Successful - No Fix Required
 ```
 
 -  Successful - Fix Required   
+
 ```yaml
 ConversionStatus: Successful - Fix Required
 
@@ -66,6 +92,7 @@ RemediationApproach:
 ```
 
 -  Converted With Issues                
+
 ```yaml
 ConversionStatus: Converted With Issues
 
@@ -91,13 +118,15 @@ RemediationApproach:
 ```
 
 -  Not Eligible    
+
 ```yaml
 EligibleForConversion: No - Driver Required
 
 ConversionStatus: Not Eligible
 ```
 ## Use cases for FixDetails
- - FixType: Capability
+- FixType: Capability
+
 ```yaml
 RemediationApproach:
   - SequenceNumber: 1
@@ -246,6 +275,7 @@ RemediationApproach:
 - Successful - Fix Required             
 - Converted With Issues               
 - Failed                                
+
 - Not Eligible
 
 ### Relation between EligibleForConversion and ConversionStatus
@@ -272,3 +302,5 @@ RemediationApproach:
 
 > [!NOTE]
 > Accepted FixTypes marked with an asterisk (*) above are automatically supported by the MSIX Packaging Tool.
+
+
