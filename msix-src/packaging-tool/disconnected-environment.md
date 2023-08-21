@@ -15,9 +15,8 @@ While we make it super easy for users to acquire the MSIX Packaging Tool through
 The MSIX Packaging Tool can be downloaded for offline use in the enterprise from the Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps).
 
 You can also directly download the latest version of the offline package here:
-- [Download 1.2023.319.0 MSIX Packaging Tool](https://download.microsoft.com/download/d/0/0/d0043667-b1db-4060-9c82-eaee1fa619e8/493b543c21624db8832da8791ebf98f3.msixbundle)
-
-If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://download.microsoft.com/download/d/0/0/d0043667-b1db-4060-9c82-eaee1fa619e8/493b543c21624db8832da8791ebf98f3_License1.xml) or the tool. 
+- [Download 1.2023.807.0 MSIX Packaging Tool](https://download.microsoft.com/download/6/6/5/665875c6-5449-4ba2-b3ea-4d9cf78ee197/82341417062a4309979d76cc80568820.msixbundle)
+If you are encountering issues with the offline copy of the packaging tool, make sure you have the [offline copy of the license](https://download.microsoft.com/download/6/6/5/665875c6-5449-4ba2-b3ea-4d9cf78ee197/82341417062a4309979d76cc80568820_License1.xml) or the tool. 
 
 After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true) to add the app package and license to your machine.
 
