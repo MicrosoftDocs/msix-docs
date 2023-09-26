@@ -83,4 +83,4 @@ If you are using a local password-protected certificate (.pfx) to sign your app 
 10. Click **OK**.
 
 ## Enable signing in CI/CD scenarios
-To enable signing in CI/CD scenarios, you need to configure your pipeline to use the [DefaultAzureCredential](https://learn.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential) to authenticate with Azure Key Vault. The **DefaultAzureCredential** will try to use the identity of the pipeline agent to access the Key Vault, if it has the appropriate permissions. Alternatively, you can specify a service principal or a managed identity to use for authentication.
+To enable signing in CI/CD scenarios, you need to configure your pipeline to use the [DefaultAzureCredential](https://learn.microsoft.com/dotnet/api/azure.identity.defaultazurecredential) to authenticate with Azure Key Vault. The **DefaultAzureCredential** will try to use the identity of the pipeline agent to access the Key Vault, if it has the appropriate permissions. Alternatively, you can specify a service principal or a managed identity to use for authentication.
