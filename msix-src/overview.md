@@ -1,9 +1,9 @@
 ---
 title: What is MSIX?
-description: This article introduces the basics of the MSIX packaging format, a modern packaging experience to all Windows apps.
-ms.date: 12/02/2019
+description: This topic introduces the basics of the MSIX packaging format; a modern packaging experience for Windows apps.
+ms.date: 10/02/2023
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows 11, windows 10, uwp, msix
 ms.custom: RS5
 ---
 
@@ -62,4 +62,6 @@ See [this article](supported-platforms.md) for a full list of platforms that sup
 
 ## Benefits of app containers
 
-Apps that are packaged using MSIX run in a lightweight app container. The MSIX app process and its child processes run inside the container and are isolated using file system and registry virtualization. All MSIX apps can read the global registry. An MSIX app writes to its own virtual registry and application data folder, and this data will be deleted when the app is uninstalled or reset. Other apps do not have access to the virtual registry or virtual file system of an MSIX app.
+Apps that are packaged using MSIX can be configured to run in a lightweight app container. The app's process, and its child processes, run inside the container, and are isolated using file system and registry virtualization. For more info, see [MSIX AppContainer apps](/windows/msix/msix-container).
+
+All AppContainer apps can read the global registry. An AppContainer app writes to its own virtual registry and application data folder, and that data is deleted when the app is uninstalled or reset. Other apps don't have access to the virtual registry or virtual file system of an AppContainer app.
