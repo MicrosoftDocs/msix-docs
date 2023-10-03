@@ -33,7 +33,10 @@ MSIX Packaging Tool can be installed from WinGet command-line tool using the com
 PS C:\> winget install "MSIX Packaging Tool"
 ```
 
-MSIX Packaging tool can also be downloaded for offline use in the enterprise from Microsoft Store for Business [web portal](https://businessstore.microsoft.com/). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app).
+MSIX Packaging tool can also be directly downloaded for offline use: 
+
+- [Download 1.2023.319.0 MSIX Packaging Tool](https://download.microsoft.com/download/d/0/0/d0043667-b1db-4060-9c82-eaee1fa619e8/MsixPackagingToolv1.2023.319.0.msixbundle)  
+You can learn more about [using the MSIX Packaging Tool in a disconnected environment](/windows/msix/packaging-tool/disconnected-environment).
 
 After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps&preserve-view=true) to add the app package and license to your machine. 
 
@@ -69,3 +72,4 @@ The following articles are tutorials on how to use MSIX Packaging Tool to conver
 | [Create MSIX package from a MSI/App-V file](./create-app-package.md) | This tutorial will go through how to use MSIX Packaging Tool's UI to convert your desktop applications(particularly installers like MSI, EXE or App-V) to a MSIX Package. |
 | [Create MSIX package using the command line](package-conversion-command-line.md) | This tutorial will go through how to use MSIX Packaging Tool and the command line to convert your desktop application to a MSIX Package. |
 | [Create MSIX package on a remote device](remote-conversion-setup.md) | This article will provide the instructions required to perform the conversion of desktop applications to MSIX packages on a remote device. |
+
