@@ -12,8 +12,6 @@ While we make it super easy for users to acquire the MSIX Packaging Tool through
 
 ## Get the MSIX Packaging Tool
 
-The MSIX Packaging Tool can be downloaded for offline use in the enterprise from the Microsoft Store for Business [web portal](https://businessstore.microsoft.com/store). You can learn more about offline distribution [here](/microsoft-store/distribute-offline-apps).
-
 You can also directly download the latest version of the offline package here:
 - [Download 1.2023.319.0 MSIX Packaging Tool](https://download.microsoft.com/download/d/0/0/d0043667-b1db-4060-9c82-eaee1fa619e8/MsixPackagingToolv1.2023.319.0.msixbundle)
 
@@ -25,8 +23,6 @@ After you have the offline version of the application, you can use [PowerShell](
 ```
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
-
-## Get the MSIX Packaging Tool driver
 
 The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update and will fail to install if the Windows Update service is disabled on the machine or Windows Insider flight ring settings do not match the OS build of the computer.
 
