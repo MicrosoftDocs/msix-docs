@@ -21,7 +21,7 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. If you plan on publishing your app to the Microsoft Store, apps that require elevation for any part of their functionality won't be accepted into the Store.
 
-+ __Your application requires a kernel-mode driver__. MSIX doesn't support a kernel-mode driver.
++ __Your application requires a Windows driver__. MSIX doesn't support Windows drivers.
 
 + __Your application requires a user Windows service__. MSIX doesn't support per-user Windows services. MSIX supports session-0 (per-machine) services running under one of the defined system accounts (LocalSystem, LocalService, or NetworkService). Instead of a user Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
 
