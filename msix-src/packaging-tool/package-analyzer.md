@@ -22,7 +22,7 @@ To try out the Package Analyzer in a early-access preview build, join the [MSIX 
 ## Key features 
 
 1: **Analyze Package:**
-The analyse feature analyzes nput packages trace logs of MSIX apps during runtime with one simple click
+The analyze feature analyzes input packages trace logs of MSIX apps during runtime with one simple click
 
 2: **Automated remediation:**
 Based on the analysis, automated suggestions are provided by MSIX Packaging tool to fix the detected runtime errors. The fixes are then applied on saving the package.
@@ -46,10 +46,11 @@ Once you have converted an app to MSIX format, to begin analysis:
 
 ## Supported fixes
 
-Currently the following fixes are supported in Preview and we are continuing to iterate on them further to cover more fixups and make your MSIX conversion processes more effortless.
+Currently the following fixes are supported in Preview, and we are continuing to iterate on them further to cover more fixups and make your MSIX conversion processes more effortless.
 
 1. RegLegacyFixups(PSF)
 2. Installed location Virtualization
 3. SearchPathoverride
+
 
 
