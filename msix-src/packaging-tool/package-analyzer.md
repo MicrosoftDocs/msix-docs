@@ -22,7 +22,7 @@ To try out the Package Analyzer in an early-access preview build, join the [MSIX
 ## Key features 
 
 1: **Analyze Package:**
-The analyze feature analyzes input packages trace logs of MSIX apps during runtime with one simple click
+The analyze feature analyzes input MSIX package trace logs during runtime with one simple click
 
 2: **Automated remediation:**
 Based on the analysis, automated suggestions are provided by MSIX Packaging tool to fix the detected runtime errors. The fixes are then applied on saving the package.
