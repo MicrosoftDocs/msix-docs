@@ -37,9 +37,13 @@ Once you have converted an app to MSIX format, to begin analysis:
 3. Click on **Analyze Package** button
 4. The tool will automatically start examining the package for any issues. Play around with features of your application for a while to test functionality before stopping analysis
 5. Once you click on **Stop Analysis**, the tool will suggest remediations to fix runtime issues with your application
+
+![Package-Analyzer](media/package-analyzer/screenshot-2023-10-06-014557.jpg)
+
+
 6. Review the suggestions, unchecking fixes you don’t deem necessary, and click on **Save**
 7. A new package will automatically be created with the selected fixes.
- 
+
 
 ## Supported fixes
 
