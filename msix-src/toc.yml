@@ -136,13 +136,13 @@
       items: 
         - name: Create an MSIX package from any desktop installer
           href: packaging-tool/create-app-package.md
-        - name: "Analyze and resolve runtime issues "
-          href: ./packaging-tool/package-analyzer.md
-          displayName: "auto detect fixes "
         - name: Conversion with the command line
           href: packaging-tool/package-conversion-command-line.md
         - name: Convert an installer that includes services
           href: packaging-tool/convert-an-installer-with-services.md
+        - name: "Analyze and resolve runtime issues "
+          href: ./packaging-tool/package-analyzer.md
+          displayName: "auto detect fixes "
         - name: Edit a package using Package Editor
           href: packaging-tool/package-editor.md
         - name: Edit icons and assets using the MSIX Packaging Tool
