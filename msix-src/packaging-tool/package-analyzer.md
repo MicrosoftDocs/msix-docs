@@ -3,13 +3,11 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title:       Package Analyzer # Add a title for the browser tab
+description: feature in MSIX Packaging tool that analyzes the package. It then detects errors and suggests fixes # Add a meaningful description for search results
 author:      fiza-microsoft # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.topic:    article # Add the ms.topic value
 ms.date:     10/06/2023
 ---
 
