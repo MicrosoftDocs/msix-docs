@@ -3,16 +3,15 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       Package Analyzer # Add a title for the browser tab
-description: feature in MSIX Packaging tool that analyzes the package. It then detects errors and suggests fixes # Add a meaningful description for search results
+title:       Package Analyzer
+description: feature in MSIX Packaging tool that analyzes the package. It then detects errors and suggests fixes.
 author:      fiza-microsoft # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
-ms.topic:    article # Add the ms.topic value
+ms.topic:    article 
 ms.date:     10/06/2023
 ---
 
-# Analyzing and resolving post conversion issues with MSIX Packaging tool
-
+# Analyze and resolve runtime issues
 
 ## Introduction
 The **Package Analyzer** in [MSIX Packaging tool](/windows/msix/overview) provisions runtime analysis of an MSIX package and suggests remediations to fix post-conversions issues seamlessly. This feature simplifies conversion and packaging workflows, and saves time and effort by streamlining the debugging and application of fixes.
