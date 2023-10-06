@@ -22,7 +22,7 @@ If you have opted in to our [Insider Program](insider-program.md), make sure you
 - Manually update the MSIX Packaging Tool through the Microsoft Store on your computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**. Alternatively, search for the MSIX Packaging Tool, and on the product page you can then prompt it for an update. 
 - To install the MSIX Packaging Tool for offline use, follow [these instructions](disconnected-environment.md#get-the-msix-packaging-tool) to ensure you get the latest app through our offline process.
 
-If you are interested in joining our Insider Program, go to [Join MSIX Packaging Tool Insiders!](aka.ms/MSIXPackagingPreviewProgram).
+If you are interested in joining our Insider Program, go to [Join MSIX Packaging Tool Insiders!](https://aka.ms/MSIXPackagingPreviewProgram).
 
 ### MSIX Packaging Tool driver
 
