@@ -173,6 +173,9 @@
                       href: psf/run-scripts-with-package-support-framework.md
                     - name: Create Shortcuts with Package Support Framework
                       href: psf/create-shortcut-with-script-package-support-framework.md
+            - name: Automated PSF config generation
+              href: ./psf/psf-integration-with-mpt.md
+              displayName: "Automatic PSF config generation, PSF Integration "
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
         - name: Group applications under a folder in the Start menu
