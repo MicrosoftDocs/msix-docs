@@ -17,7 +17,7 @@ This article talks about the integration of adding Package Support Framework (PS
 
 ## Prerequisites
 
-To try out the Package Analyzer in an early-access preview build, join the [MSIX Packaging Tool Insider Program](/windows/msix/packaging-tool/insider-program).
+To try out this feature in an early-access preview build, join the [MSIX Packaging Tool Insider Program](/windows/msix/packaging-tool/insider-program).
 
 ### Automatically generate PSF config.json
 
