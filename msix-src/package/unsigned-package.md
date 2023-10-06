@@ -1,12 +1,12 @@
 ---
+title: Create an unsigned MSIX package
 description: This topic describes how to create and install an unsigned MSIX package
-title: Create an unsigned MSIX package for testing
-ms.date: 01/09/2023
+ms.date: 05/26/2023
 ms.topic: article
 keywords: windows 11, uwp, desktop, msix
 ---
 
-# Create an unsigned MSIX package for testing
+# Create an unsigned MSIX package
 
 As of Windows 11, you can install your app via PowerShell without needing to sign your package. This feature is intended to make it easier for you to quickly test your app. Don't use this feature to distribute your app widely.
 
@@ -40,3 +40,7 @@ Add-AppPackage -Path ".\MyEmployees.appx" -AllowUnsigned
 ```
 
 When your app is ready to be distributed, you should ensure that the package is signed. Be sure to remove the special OID, and ensure that the publisher name is the same as the certificate subject name.
+
+## Related topics
+
+* [Create hosted apps](/windows/uwp/launch-resume/hosted-apps)

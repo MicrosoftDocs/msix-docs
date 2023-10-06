@@ -1,7 +1,7 @@
 ---
 description: This article lists the things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (MSIX)
-ms.date: 08/22/2019
+ms.date: 10/04/2023
 ms.topic: article
 keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
@@ -21,15 +21,17 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application always runs with elevated security privileges__. Your application needs to work while running as the interactive user. Users who install your application may not be system administrators, so requiring your application to run elevated means that it won't run correctly for standard users. If you plan on publishing your app to the Microsoft Store, apps that require elevation for any part of their functionality won't be accepted into the Store.
 
-+ __Your application requires a kernel-mode driver or a Windows service__. MSIX does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
++ __Your application requires a Windows driver__. MSIX doesn't support Windows drivers.
+
++ __Your application requires a user Windows service__. MSIX doesn't support per-user Windows services. MSIX supports session-0 (per-machine) services running under one of the defined system accounts (LocalSystem, LocalService, or NetworkService). Instead of a user Windows service, use a [background task](/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 + __Your app's modules are loaded in-process to processes that are not in your Windows app package__. This isn't permitted, which means that in-process extensions, like [shell extensions](/previous-versions/windows/desktop/legacy/dd758089(v=vs.85)), aren't supported. But if you have two apps in the same package, you can do inter-process communication between them.
 
-+ __Ensure that any extensions installed by the application will install where the application is installed__. Windows allows users and IT managers to change the default install location for packages.  See "Settings->System->Storage->More Storage Settings-> Change where new content is saved to -> New Apps will save to".  If you are installing an extension with your application, make sure that the extension does not have additional installation folder restrictions.  For example, some extensions may disable installing their extension to non-system drives.  This will result in an error 0x80073D01 (ERROR_DEPLOYMENT_BLOCKED_BY_POLICY) if the default location has been changed. 
++ __Ensure that any extensions installed by the application will install where the application is installed__. Windows allows users and IT managers to change the default install location for packages.  See "Settings->System->Storage->More Storage Settings-> Change where new content is saved to -> New Apps will save to".  If you are installing an extension with your application, make sure that the extension doesn't have additional installation folder restrictions.  For example, some extensions may disable installing their extension to non-system drives.  This will result in an error 0x80073D01 (ERROR_DEPLOYMENT_BLOCKED_BY_POLICY) if the default location has been changed. 
 
 + __Your application uses a custom Application User Model ID (AUMID)__. If your process calls [SetCurrentProcessExplicitAppUserModelID](/windows/win32/api/shobjidl_core/nf-shobjidl_core-setcurrentprocessexplicitappusermodelid) to set its own AUMID, then it may only use the AUMID generated for it by the application model environment/Windows app package. You can't define custom AUMIDs.
 
-+ __Your application modifies the HKEY_LOCAL_MACHINE (HKLM) registry hive__. Any attempt by your application to create an HKLM key, or to open one for modification, will result in an access-denied failure. Remember that your application has its own private virtualized view of the registry, so the notion of a user- and machine-wide registry hive (which is what HKLM is) does not apply. You will need to find another way of achieving what you were using HKLM for, like writing to HKEY_CURRENT_USER (HKCU) instead.
++ __Your application modifies the HKEY_LOCAL_MACHINE (HKLM) registry hive__. Any attempt by your application to create an HKLM key, or to open one for modification, will result in an access-denied failure. Remember that your application has its own private virtualized view of the registry, so the notion of a user- and machine-wide registry hive (which is what HKLM is) doesn't apply. You will need to find another way of achieving what you were using HKLM for, like writing to HKEY_CURRENT_USER (HKCU) instead.
 
 + __Your application uses a ddeexec registry subkey as a means of launching another app__. Instead, use one of the DelegateExecute verb handlers as configured by the various Activatable* extensions in your [app package manifest](/uwp/schemas/appxpackage/appx-package-manifest).
 
@@ -102,7 +104,7 @@ This article lists the things you need to know before you package your desktop a
 
 + __Your application contains a custom jump list__. There are several issues and caveats to be aware of when using jump lists.
 
-	- __Your app's architecture does not match the OS.__  Jump lists currently do not function correctly if the application and OS architectures do not match (e.g., an x86 application running on x64 Windows). At this time, there is no workaround other than to recompile your application to the matching architecture.
+	- __Your app's architecture doesn't match the OS.__  Jump lists currently do not function correctly if the application and OS architectures do not match (e.g., an x86 application running on x64 Windows). At this time, there is no workaround other than to recompile your application to the matching architecture.
 
 	- __Your application creates jump list entries and calls [ICustomDestinationList::SetAppID](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icustomdestinationlist-setappid) or [SetCurrentProcessExplicitAppUserModelID](/windows/win32/api/shobjidl_core/nf-shobjidl_core-setcurrentprocessexplicitappusermodelid)__. Do not programmatically set your AppID in code. Doing so will cause your jump list entries to not appear. If your application needs a custom Id, specify it using the manifest file. Refer to [Package a desktop application manually](desktop-to-uwp-manual-conversion.md) for instructions. The AppID for your application is specified in the *YOUR_PRAID_HERE* section.
 

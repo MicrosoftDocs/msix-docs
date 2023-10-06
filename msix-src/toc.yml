@@ -6,10 +6,8 @@
       href: overview.md
     - name: Features and supported platforms 
       href: supported-platforms.md
-    - name: MSIX Container
+    - name: MSIX appContainer apps
       href: msix-container.md     
-    - name: Understanding how MSIX packages run on Windows
-      href: desktop/desktop-to-uwp-behind-the-scenes.md
     - name: Flexible virtualization
       href: desktop/flexible-virtualization.md
     - name: MSIX package signing
@@ -142,6 +140,9 @@
           href: packaging-tool/package-conversion-command-line.md
         - name: Convert an installer that includes services
           href: packaging-tool/convert-an-installer-with-services.md
+        - name: "Analyze and resolve runtime issues "
+          href: ./packaging-tool/package-analyzer.md
+          displayName: "auto detect fixes "
         - name: Edit a package using Package Editor
           href: packaging-tool/package-editor.md
         - name: Edit icons and assets using the MSIX Packaging Tool
@@ -156,6 +157,9 @@
               href: psf/package-support-framework.md
             - name: Create a Package Support Framework fixup
               href: psf/create-package-support-framework.md
+            - name: Automated PSF config generation
+              href: ./psf/psf-integration-with-mpt.md
+              displayName: "Automatic PSF config generation, PSF Integration "
             - name: How to implement PSF in your package
               items:
                 - name: Windows app working directory error
@@ -188,6 +192,8 @@
           href: toolkit/msix-toolkit-msixbatchconversion.md
         - name: AppInstaller File Builder tool
           href: toolkit/msix-toolkit-appinstallerfilebuilder.md
+        - name: Accelerators
+          href: toolkit/accelerators.md
     - name: App-V versus MSIX
       href: comparisonofappvwithmsix.md
       displayName: "App-V MSIX comparison "
@@ -217,6 +223,9 @@
           href: desktop/sign-with-akv-cert.md
         - name: Optimize binaries with native images
           href: desktop/desktop-to-uwp-r2r.md
+        - name: App Attach from Visual Studio
+          href: desktop/app-attach-from-visualstudio.md
+          displayName: Azure Virtual Desktop, App Streaming, Visual Studio, Extension
     - name: MSIX and CI/CD pipelines
       items:
         - name: Overview

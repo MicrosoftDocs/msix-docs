@@ -147,7 +147,7 @@ The issues regarding File Type Associations (FTA) vary from package to package. 
 
 #### Shortcuts with arguments
 
-Shortcuts with arguments are not currently supported with MSIX. If we detect that the installer includes these, MSIX will create a tile with no arguments.
+MSIX Packaging tool will capture all the user level shortcuts along with arguments. In case these shortcuts are not detected properly, you can add it manually to the manifest. See [desktop7:Shortcut](https://learn.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop7-shortcut) for more details.
 
 #### Install directory
 
@@ -170,3 +170,5 @@ You can also send us feedback directly from the MSIX Packaging Tool by going to 
 
 > [!NOTE]
 > It may take 24 hours for your feedback to get to us. Therefore if you are using a VM to convert your package, you may want to keep your VM on and in its current state for 24 hours after conversion. Also, you can manually attach conversion logs to the feedback.
+
+

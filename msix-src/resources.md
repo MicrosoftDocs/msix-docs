@@ -27,7 +27,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>This brief video introduces the key ways that MSIX packaging can help you streamline and improve your app installation and deployment workflows.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.youtube.com/embed/phrD081sMWc" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.youtube.com/embed/phrD081sMWc]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -36,7 +36,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.microsoft.com/videoplayer/embed/RE3ig2l" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ig2l]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -45,7 +45,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>The MSIX platform is continuing to grow and adapting to customer needs. Let's walk through what's new in the past year for the MSIX platform and what it means for your enterprise.  We will also cover the plans upcoming for the MSIX platform.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.youtube.com/embed/orh87lo6VKY" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.youtube.com/embed/orh87lo6VKY]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -54,16 +54,16 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>Learn how you can use MSIX for dynamic delivery of applications in virtual environments such as Windows Virtual Desktop.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.youtube.com/embed/6kkPLFgPaN8" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.youtube.com/embed/6kkPLFgPaN8]
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
         <h3>Using MSIX with CI/CD Pipelines for Code Changes</h3>
-        <p>With MSIX and Azure DevOps you can go from making a code change in your repo to getting the updated release of your application on usersâ€™ machines in a matter of minutes. Join us for this demo-driven session as we demonstrate how to use MSIX CI/CD Pipelines to automate building, packaging, and deploying your desktop applications.</p>
+        <p>With MSIX and Azure DevOps you can go from making a code change in your repo to getting the updated release of your application on users’ machines in a matter of minutes. Join us for this demo-driven session as we demonstrate how to use MSIX CI/CD Pipelines to automate building, packaging, and deploying your desktop applications.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.youtube.com/embed/MnDCaQNnZc0" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.youtube.com/embed/MnDCaQNnZc0]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -72,7 +72,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>Learn how to take advantage of incredible Windows technologies like WinUI3 and MSIX to target the 1 billion+ in-market Windows 10 devices, and to reach billions of other devices via Windows Virtual Desktop.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.youtube.com/embed/W2aL8mgJU2M" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.youtube.com/embed/W2aL8mgJU2M]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -81,7 +81,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>Learn how developers can take advantage of the benefits of MSIX.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.microsoft.com/videoplayer/embed/RE3i5DH" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3i5DH]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -90,6 +90,6 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls and other features.</p>
     :::column-end:::
     :::column:::
-        <iframe src="https://www.microsoft.com/videoplayer/embed/RE3iiD5" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+        > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3iiD5]
     :::column-end:::
 :::row-end:::

@@ -1,9 +1,9 @@
 ---
 description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
-ms.date: 02/02/2020
+ms.date: 06/29/2023
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows 11, windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ---
 
@@ -16,10 +16,7 @@ You can use the **Windows Application Packaging Project** project in Visual Stud
 
 ## Required Visual Studio version and workload
 
-The **Windows Application Packaging Project** project is available in the following versions of Visual Studio:
-
-* Visual Studio 2019 and later
-* Visual Studio 2017 15.5 and later
+The **Windows Application Packaging Project** project is available in Visual Studio 2017 15.5 and later.
 
 To see the Windows Application Packaging Project template in the 'Add New Project' menu, you need to make sure you have **at least one** of the following the Visual Studio workloads installed:
 
@@ -48,15 +45,16 @@ Review this guide before you begin creating a package for your application: [Pre
 
 <a id="new-packaging-project"></a>
 
-## Setup the Windows Application Packaging Project in your solution
-
-The screenshots below are from Visual Studio 2019 16.10.
+## Set up the Windows Application Packaging Project in your solution
 
 1. In Visual Studio, open the solution that contains your desktop application project.
 
-2. Add a **Windows Application Packaging Project** project to your solution.
+> [!NOTE]
+> If you want to package your project in x64 configuration, make sure you have configured referenced project to x64. To confirm this, refer to [Additional notes](#Additional notes) below.
 
-   You won't have to add any code to it. It's just there to generate a package for you. We'll refer to this project as the "packaging project".
+2. Add a **Windows Application Packaging Project** project to your solution, choosing the appropriate language (C# or C++) that matches the language of your existing dekstop app's project.
+
+   You won't have to add any code to the packaging project. Its purpose is only to generate and configure a package for you. We'll refer to this project as *the packaging project*.
 
    ![Packaging project](images/add-packaging-project.png)
 
@@ -82,6 +80,35 @@ The screenshots below are from Visual Studio 2019 16.10.
 
 7. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
 
+## Additional notes
+
+To build WAP for x64 platform, follow either of the following steps:
+
+__Approach 1:__ Before adding the WAP project on any of the project, add x64 architecture via configuration manager (as shown in the screenshot below).
+
+![Configuration manager.](media/desktop-to-uwp-packaging-dot-net/microsoftteams-image-(12).png)
+
+__Approach 2:__ For the existing projects where WAP has been added, 
+
+1. Remove the x64 entries from .sln files entry manually. 
+
+
+``` 
+_Global_
+_GlobalSection(SolutionConfigurationPlatforms) = preSolution_
+_Debug|Any CPU = Debug|Any CPU_
+_Debug|ARM = Debug|ARM_
+_Debug|ARM64 = Debug|ARM64_ (remove)
+_Debug|x64 = Debug|x64_ (remove)
+_Debug|x86 = Debug|x86_
+_Release|Any CPU = Release|Any CPU_
+_Release|ARM = Release|ARM_
+_Release|ARM64 = Release|ARM64_ (remove)
+_Release|x64 = Release|x64_ (remove)
+_Release|x86 = Release|x86"_
+```
+
+2. After step1, add x64 configurations via configuration manager.
 
 ## Next steps
 
@@ -106,3 +133,4 @@ See [Extend your desktop application with modern UWP components](/windows/apps/d
 **Distribute your app**
 
 See [Distribute a packaged desktop application](/windows/apps/desktop/modernize/desktop-to-uwp-distribute)
+
