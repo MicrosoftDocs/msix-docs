@@ -48,6 +48,4 @@ To apply known fixups,
 
 1. Reg Legacy Fixup 
 
-### 
-
 
