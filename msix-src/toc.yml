@@ -146,8 +146,8 @@
           href: packaging-tool/edit-icons-and-assets.md
     - name: Tasks for after you create an MSIX package
       items: 
-        - name: name: Analyze and resolve runtime issues
-          href: ./packaging-tool/package-analyzer.md
+        - name: Analyze and resolve runtime issues
+          href: packaging-tool/package-analyzer.md
           displayName: "auto detect fixes"
         - name: Package Support Framework (PSF)
           items:
