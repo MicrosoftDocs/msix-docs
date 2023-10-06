@@ -157,6 +157,9 @@
               href: psf/package-support-framework.md
             - name: Create a Package Support Framework fixup
               href: psf/create-package-support-framework.md
+            - name: Automated PSF config generation
+              href: ./psf/psf-integration-with-mpt.md
+              displayName: "Automatic PSF config generation, PSF Integration "
             - name: How to implement PSF in your package
               items:
                 - name: Windows app working directory error

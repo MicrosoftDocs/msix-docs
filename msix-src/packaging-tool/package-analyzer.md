@@ -13,16 +13,15 @@ ms.date:     10/06/2023
 
 # Analyze and resolve runtime issues
 
-## Introduction
-The **Package Analyzer** in [MSIX Packaging tool](/windows/msix/overview) provisions runtime analysis of an MSIX package and suggests remediations to fix post-conversions issues seamlessly. This feature simplifies conversion and packaging workflows, and saves time and effort by streamlining the debugging and application of fixes.
+The **Package Analyzer** in [MSIX Packaging tool](/windows/msix/overview) provisions runtime analysis of an MSIX package and suggests remediations to fix post-conversion issues seamlessly. This feature simplifies conversion and packaging workflows, and saves time and effort by streamlining the debugging and application of fixes.
 
 ## Prerequisites
-To try out the Package Analyzer in a early-access preview build, join the [MSIX Packaging Tool Insider Program.](/windows/msix/packaging-tool/insider-program)
+To try out the Package Analyzer in an early-access preview build, join the [MSIX Packaging Tool Insider Program.](/windows/msix/packaging-tool/insider-program)
 
 ## Key features 
 
 1: **Analyze Package:**
-The analyze feature analyzes input packages trace logs of MSIX apps during runtime with one simple click
+The analyze feature analyzes input MSIX package trace logs during runtime with one simple click
 
 2: **Automated remediation:**
 Based on the analysis, automated suggestions are provided by MSIX Packaging tool to fix the detected runtime errors. The fixes are then applied on saving the package.
@@ -41,8 +40,7 @@ Once you have converted an app to MSIX format, to begin analysis:
 
 
 6. Review the suggestions, unchecking fixes you don’t deem necessary, and click on **Save**
-7. A new package will automatically be created with the selected fixes.
-
+1. A new package will automatically be created with the selected fixes
 
 ## Supported fixes
 
@@ -51,6 +49,8 @@ Currently the following fixes are supported in Preview, and we are continuing to
 1. RegLegacyFixups(PSF)
 2. Installed location Virtualization
 3. SearchPathoverride
+
+
 
 
 
