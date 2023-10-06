@@ -140,15 +140,15 @@
           href: packaging-tool/package-conversion-command-line.md
         - name: Convert an installer that includes services
           href: packaging-tool/convert-an-installer-with-services.md
+        - name: "Analyze and resolve runtime issues "
+          href: ./packaging-tool/package-analyzer.md
+          displayName: "auto detect fixes "
         - name: Edit a package using Package Editor
           href: packaging-tool/package-editor.md
         - name: Edit icons and assets using the MSIX Packaging Tool
           href: packaging-tool/edit-icons-and-assets.md
     - name: Tasks for after you create an MSIX package
       items: 
-        - name: Analyze and resolve runtime issues
-          href: packaging-tool/package-analyzer.md
-          displayName: "auto detect fixes"
         - name: Package Support Framework (PSF)
           items:
             - name: Overview
@@ -157,6 +157,9 @@
               href: psf/package-support-framework.md
             - name: Create a Package Support Framework fixup
               href: psf/create-package-support-framework.md
+            - name: Automated PSF config generation
+              href: ./psf/psf-integration-with-mpt.md
+              displayName: "Automatic PSF config generation, PSF Integration "
             - name: How to implement PSF in your package
               items:
                 - name: Windows app working directory error
@@ -165,8 +168,6 @@
                   href: psf/psf-filesystem-writepermission.md
                 - name: Windows app launcher parameter requirement
                   href: psf\psf-launch-apps-with-parameters.md
-                - name: Automated PSF config generation
-                  href: ./psf/psf-integration-with-mpt.md
                 - name: Apply Package Support Framework in Visual Studio
                   href: psf\package-support-framework-vs.md
                 - name: Run scripts with the Package Support Framework
