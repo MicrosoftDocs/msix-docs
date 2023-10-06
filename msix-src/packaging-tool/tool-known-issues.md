@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. 
-ms.date: 06/11/2020
+ms.date: 10/06/2023
 ms.topic: article
 keywords: msix packaging tool, known issues, troubleshooting
 ms.custom: RS5
@@ -22,7 +22,7 @@ If you have opted in to our [Insider Program](insider-program.md), make sure you
 - Manually update the MSIX Packaging Tool through the Microsoft Store on your computer. If this option if available to you, open the Store, go to **Downloads and updates**, and click **Get updates**. Alternatively, search for the MSIX Packaging Tool, and on the product page you can then prompt it for an update. 
 - To install the MSIX Packaging Tool for offline use, follow [these instructions](disconnected-environment.md#get-the-msix-packaging-tool) to ensure you get the latest app through our offline process.
 
-If you are interested in joining our Insider Program, click [here](https://aka.ms/MSIXPackagingPreviewProgram).
+If you are interested in joining our Insider Program, go to [Join MSIX Packaging Tool Insiders!](aka.ms/MSIXPackagingPreviewProgram).
 
 ### MSIX Packaging Tool driver
 
@@ -110,7 +110,7 @@ Make sure to follow [these steps](../package/signing-package-device-guard-signin
 - Use a timestamp when you sign your package.
 - You can resign with a valid sign or timestamp certificate.
 
-You can resign your app using the [batch conversion script](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts).
+You can resign your app using the batch conversion script at [MSIX Toolkit - Scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts).
 
 ## Troubleshooting
 
@@ -147,7 +147,7 @@ The issues regarding File Type Associations (FTA) vary from package to package. 
 
 #### Shortcuts with arguments
 
-MSIX Packaging tool will capture all the user level shortcuts along with arguments. In case these shortcuts are not detected properly, you can add it manually to the manifest. See [desktop7:Shortcut](https://learn.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop7-shortcut) for more details.
+MSIX Packaging tool will capture all the user level shortcuts along with arguments. In case these shortcuts are not detected properly, you can add it manually to the manifest. See [desktop7:Shortcut](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop7-shortcut) for more details.
 
 #### Install directory
 
