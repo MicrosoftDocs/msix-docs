@@ -14,7 +14,7 @@ There are several ways you can modify your app package assets during the convers
 * You can modify your app package assets during the conversion process.
 * After your package has been created, you can modify your app package assets via the [Package editor](package-editor.md).
 
-Refer to the [guidelines for icon and assets](https://learn.microsoft.com/en-us/windows/apps/design/style/iconography/app-icon-design) as you make your modifications.
+Refer to [Design guidelines for Windows app icons](/windows/apps/design/style/iconography/app-icon-design) as you make your modifications.
 
 ## Modify assets during the conversion process
 

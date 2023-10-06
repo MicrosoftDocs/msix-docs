@@ -14,6 +14,8 @@ The topic [AppContainer for legacy applications](/windows/win32/secauthz/appcont
 
 The topic you're reading now shows how you can take an app that's packaged using MSIX, and easily configure it to run in the AppContainer environment (in a lightweight app container). Universal Windows Platform (UWP) apps are automatically AppContainer apps. But you can also configure your desktop app that's packaged with MSIX to be an AppContainer app.
 
+An AppContainer app's process and its child processes run inside a lightweight app container where they can access only the resources that are specifically granted to them. And they're isolated using file system and registry virtualization. As a result, apps implemented in an AppContainer can't be hacked to allow malicious actions outside of the limited assigned resources.
+
 > [!TIP]
 > Unpackaged apps can run in an AppContainer, too. But it's particularly easy to use AppContainer if you package using MSIX. So all of the scenarios described in this topic are about packaged apps.
 

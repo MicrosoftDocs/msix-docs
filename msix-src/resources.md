@@ -1,6 +1,6 @@
 ---
 title:  MSIX resources 
-description: This article provides an overview of how you can get started with using MSIX. The article will point you to our Git Hub repositories depending on your scenarios. 
+description: This article provides an overview of how you can get started with using MSIX. The article will point you to our GitHub repositories depending on your scenarios. 
 ms.date: 01/16/2020
 ms.topic: article
 author: dianmsft

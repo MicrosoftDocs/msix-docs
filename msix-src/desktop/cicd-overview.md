@@ -38,6 +38,6 @@ To upload a certificate for your automated build:
 
 ## Configure your pipeline
 | Topic | Description |
-|----------|-----------|------------|
+|----------|-----------|
 | [MSIX Packaging Extension](msix-packaging-extension.md) | Leverage the Azure DevOps extension that will guide you through building and signing an MSIX package |
 | [Configure CI/CD pipeline with YAML file](azure-dev-ops.md) | Configure your own yaml file |
