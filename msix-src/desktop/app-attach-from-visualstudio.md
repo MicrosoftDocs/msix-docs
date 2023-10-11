@@ -48,7 +48,8 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 > [!NOTE] 
 > This extension is only compatible with Visual Studio 2022.
 
-## Create an App Attach ready Package  
+## Using the extension
+
 Once you have the extension installed in Visual Studio 2022,
 1. Launch Visual Studio in elevated mode by right-click and choosing 'Run as Administrator'.
 1. Create a[ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# or C++ Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
@@ -66,8 +67,29 @@ Once you have the extension installed in Visual Studio 2022,
 
 ![Screenshot 2023-10-11 181102](media/app-attach-from-visualstudio/screenshot-2023-10-11-181102.png)
 
-## Publish your App Attach Package 
-1. To Publish your App Attach package to Azure Virtual Desktop, select the Azure option.
+## Features of the extension
+
+The extension will enable developers to either create app attach ready packages, test app attach locally or publish to AVD host pool directly from Visual Studio.
+
+You should choose the appropriate option and proceed.
+
+![User's image](image3.png)
+
+### Create App Attach ready package
+
+This will create an App Attach ready disk image of your app, but not publish it anywhere. It can be used to manually transfer or publish elsewhere. You can go to the specified output folder path to access the image.
+
+### Test App Attach locally
+
+This will create an App Attach ready package and publish it locally for testing and troubleshooting.
+
+It will save the effort of attaching to AVD host for testing. Users can install the app and eject the disk post testing.
+
+### Publish your App Attach package
+
+This will create an App Attach ready package and publish it to your AVD host pool.
+
+1. To publish your App Attach package to Azure Virtual Desktop, select the Azure option.
 
 > [!NOTE] 
 > This extension only allows publishing to existing Azure resources.
@@ -82,8 +104,9 @@ Once you have the extension installed in Visual Studio 2022,
 - __Workspace__ – Select the name of the workspace you want to assign an application group to.  
 - __Host pool__ – Select the host pool name for the application group.  
 
+![Screenshot 2023-10-11 182632](media/app-attach-from-visualstudio/screenshot-2023-10-11-182632.png)
+
 1. Click on Publish to publish your package to the above Azure virtual Desktop deployment.
-1. You can also publish to a Folder by selecting __Folder__ on the Publish Screen. This will generate an MSIX Package and a VHDx at the specified output folder location.
 
 ## Frequently Asked Questions (FAQs)
 **Q1: Why did the staging fail in Local App attach, showing errors?**    
@@ -106,10 +129,6 @@ A6: No, this functionality is not currently supported. However, you can increase
 
 **Q7: How do I uninstall a locally attached application?**   
 A7: Right-click on your app in the search bar and select uninstall. Also, eject the new drive added to your This PC. For a comprehensive removal, launch PowerShell in admin mode and execute the following command: 
-
-
-
-
 
 ```azurepowershell
 $msixPackageFullName = <msixPackageFullName> 
