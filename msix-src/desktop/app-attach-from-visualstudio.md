@@ -41,7 +41,7 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 - Get the extension from Visual Studio Marketplace by going [here ](https://marketplace.visualstudio.com/items?itemName=AppStreamingDeveloperServices.AppAttachToolkit)or searching for "App Attach Toolkit".
 - Install the extension to Visual Studio by double clicking the above downloaded file.
 
-![User's image](media/app-attach-from-visualstudio/image1.png)
+![Screenshot 2023-10-11 180059](media/app-attach-from-visualstudio/screenshot-2023-10-11-180059.png)
 
 - Ensure the system is connected to the Internet.
 
@@ -51,20 +51,20 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 ## Create an App Attach ready Package  
 Once you have the extension installed in Visual Studio 2022,
 1. Launch Visual Studio in elevated mode by right-click and choosing 'Run as Administrator'.
-2. Create a [ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
+1. Create a[ WinUI 3 ](/windows/apps/winui/winui3/create-your-first-winui3-app) C# or C++ Desktop app using the **Blank App, Packaged (WinUI 3 in Desktop)** Visual Studio project template that comes with the Windows App SDK.   
 
 ![Screenshot 2023-05-30 165600](media/app-attach-from-visualstudio/screenshot-2023-05-30-165600.png)
 
-> [!NOTE] 
-> MSIX Image creation process is only supported for WinUI3 apps in this Private Preview.
-
+> [!NOTE]
+> MSIX Image creation process is only supported for WinUI3 apps at this point.
 1. In the Solution Explorer, right-click the project and choose __Package and Publish__ -> __Create App Attach Packages__  
 
 ![Screenshot 2023-05-30 165836](media/app-attach-from-visualstudio/screenshot-2023-05-30-165836.png)
 
-4. Now you can configure the package by selecting an output location for your MSIX Package and VHDx file, and selecting the platform of choice.   
+1. Now you can configure the package by selecting an output location for your MSIX Package and VHDx file, and selecting the platform of choice.   
+1. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-using-signtool)here.
 
-5. For an MSIX package to be installed on an end user's machine, it must be signed with a cert that is trusted on the machine. You can select a certificate from your local certificate store, select a certificate file, or create a new certificate. Learn how to [Sign the app package ](/windows/msix/package/sign-app-package-using-signtool)here.
+![Screenshot 2023-10-11 181102](media/app-attach-from-visualstudio/screenshot-2023-10-11-181102.png)
 
 ## Publish your App Attach Package 
 1. To Publish your App Attach package to Azure Virtual Desktop, select the Azure option.
@@ -106,6 +106,8 @@ A6: No, this functionality is not currently supported. However, you can increase
 
 **Q7: How do I uninstall a locally attached application?**   
 A7: Right-click on your app in the search bar and select uninstall. Also, eject the new drive added to your This PC. For a comprehensive removal, launch PowerShell in admin mode and execute the following command: 
+
+
 
 
 
