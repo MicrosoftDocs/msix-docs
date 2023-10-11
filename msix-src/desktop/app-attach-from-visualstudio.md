@@ -38,7 +38,7 @@ Open Visual Studio Installer -> Click on Modify -> Check on Azure development ->
 
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).
 
-- Get the extension from [MSIX Developer Labs](https://github.com/microsoft/MSIX-Labs/blob/master/DeveloperLabs/AppAttach/AppAttachExtension.vsix).
+- Get the extension from Visual Studio Marketplace by going [here ](https://marketplace.visualstudio.com/items?itemName=AppStreamingDeveloperServices.AppAttachToolkit)or searching for "App Attach Toolkit".
 - Install the extension to Visual Studio by double clicking the above downloaded file.
 
 ![User's image](media/app-attach-from-visualstudio/image1.png)
@@ -106,6 +106,7 @@ A6: No, this functionality is not currently supported. However, you can increase
 
 **Q7: How do I uninstall a locally attached application?**   
 A7: Right-click on your app in the search bar and select uninstall. Also, eject the new drive added to your This PC. For a comprehensive removal, launch PowerShell in admin mode and execute the following command: 
+
 
 
 ```azurepowershell
