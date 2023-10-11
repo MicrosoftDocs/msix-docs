@@ -75,17 +75,17 @@ You should choose the appropriate option and proceed.
 
 ![User's image](image3.png)
 
-### Create App Attach ready package
+### Only create a disk image
 
 This will create an App Attach ready disk image of your app, but not publish it anywhere. It can be used to manually transfer or publish elsewhere. You can go to the specified output folder path to access the image.
 
-### Test App Attach locally
+### Local App Attach
 
 This will create an App Attach ready package and publish it locally for testing and troubleshooting.
 
 It will save the effort of attaching to AVD host for testing. Users can install the app and eject the disk post testing.
 
-### Publish your App Attach package
+### Azure (AVD) App Attach
 
 This will create an App Attach ready package and publish it to your AVD host pool.
 
