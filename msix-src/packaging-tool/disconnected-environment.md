@@ -15,12 +15,12 @@ While we make it super easy for users to acquire the MSIX Packaging Tool through
 You can download the latest version of the offline package below.
 
 > [!div class="button" style="text-align: left;" width="150px;"] 
-> [Download 1.2023.319.0 MSIX Packaging Tool](https://download.microsoft.com/download/d/0/0/d0043667-b1db-4060-9c82-eaee1fa619e8/MsixPackagingToolv1.2023.319.0.msixbundle)
+> [Download 1.2023.807.0 MSIX Packaging Tool](https://download.microsoft.com/download/6/6/5/665875c6-5449-4ba2-b3ea-4d9cf78ee197/82341417062a4309979d76cc80568820.msixbundle)
 
 If you encounter issues with the offline copy of the packaging tool, then download the offline copy of the license for the tool below.
 
 > [!div class="button" style="text-align: left;" width="150px;"] 
-> [Offline copy of the license](https://download.microsoft.com/download/d/0/0/d0043667-b1db-4060-9c82-eaee1fa619e8/MsixPackagingToolv1.2023.319.0_License.xml)
+> [Offline copy of the license](https://download.microsoft.com/download/6/6/5/665875c6-5449-4ba2-b3ea-4d9cf78ee197/82341417062a4309979d76cc80568820_License1.xml)
 
 After you have the offline version of the tool, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true) to add the app package and license to your machine.
 
@@ -46,3 +46,4 @@ Otherwise, if you have access to enterprise or OEM channels, then you can obtain
 - [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/servicecenter/default.aspx): Volume License access is required.
 - [OEM Portal](https://www.microsoftoem.com): OEM access is required.
 - [MSDN Download](https://my.visualstudio.com/Downloads/Featured): MSDN subscription is required.
+
