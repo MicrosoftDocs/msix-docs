@@ -1,17 +1,17 @@
 ---
 title: Sign packages with Azure Key Vault
 description: This article describes how to sign your app package with a certificate from Azure Key Vault.
-ms.date: 05/07/2020
+ms.date: 09/26/2023
 ms.topic: article
 keywords: windows 10, msix, uwp, azure key vault, visual studio
 ---
 
 # Sign packages with Azure Key Vault
 
-In Visual Studio 2019 version 16.6 Preview 3 and later versions, you can sign UWP and desktop app packages with a private key stored in Azure Key Vault for development and test scenarios. This tool extracts your certificate (containing the public key) and private key from your Azure Key Vault and loads them in the certificate store on your development computer in order to sign your package with SignTool.exe.
+In Visual Studio 2022, version 17.8 Preview 2 and later, you can sign UWP and desktop app packages with a certificate from Azure Key Vault. This tool sends your app package digest (hash) to Azure Key Vault for cryptographic signing with your chosen certificate. The signed digest is then returned and attached to your package locally.
 
 > [!IMPORTANT]
-> The process described in this article is intended for development and test scenarios only. This process is not considered best practice for your private keys used for distribution. To ensure best security practices, your private keys for distribution should be handled only by the tooling recommended by your Continuous Integration and Continuous Deployment (CI/CD) platform.
+> This process is secure. The private key of the certificate never leaves Azure Key Vault.
 
 ## Prerequisites
 
@@ -67,9 +67,6 @@ The **Create App Packages** wizard in Visual Studio enables you to choose the ce
 8. After the certificates have finished loading, select the one you want from the list (for example, **UwpSigningCert**).
 9. Click **OK**.
 
-> [!NOTE]
-> The certificate will be imported to your local certificate store where it will be used for package signing.
-
 ## Decrypt your certificate with a password from Azure Key Vault
 
 If you are using a local password-protected certificate (.pfx) to sign your app package, it can be difficult to manage the password used to decrypt it. When you are importing the certificate in the **Create App Packages** wizard, you will be prompted to manually enter the password. Alternatively, there is an option to choose the password from Azure Key Vault.
@@ -84,3 +81,6 @@ If you are using a local password-protected certificate (.pfx) to sign your app 
 8. Click the **View Metadata** button.
 9. After the passwords have finished loading, select the one you want from the list (for example, **UwpSigningCertPassword**).
 10. Click **OK**.
+
+## Enable signing in CI/CD scenarios
+To enable signing in CI/CD scenarios, you need to configure your pipeline to use the [DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential) to authenticate with Azure Key Vault. The **DefaultAzureCredential** will try to use the identity of the pipeline agent to access the Key Vault, if it has the appropriate permissions. Alternatively, you can specify a service principal or a managed identity to use for authentication.
