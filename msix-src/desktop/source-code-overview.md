@@ -41,6 +41,6 @@ See [Integrate your desktop application with package extensions](/windows/apps/d
 
 ### Extend with UWP components
 
-Some Windows 10 experiences (For example: a touch-enabled UI page) must run inside of a modern app container. In general, you should first determine whether you can add your experience by [enhancing](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) your existing desktop application with UWP APIs. If you have to use a UWP component, to achieve the experience, then you can add a UWP project to your solution and use app services to communicate between your desktop application and the UWP component.
+Some Windows 10 experiences (For example: a touch-enabled UI page) must run inside of an AppContainer. In general, you should first determine whether you can add your experience by [enhancing](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) your existing desktop application with UWP APIs. If you have to use a UWP component, to achieve the experience, then you can add a UWP project to your solution and use app services to communicate between your desktop application and the UWP component.
 
 See [Extend your desktop application with UWP components](/windows/apps/desktop/modernize/desktop-to-uwp-extend).
