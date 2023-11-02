@@ -39,7 +39,6 @@
       "breadcrumb_path": "/windows/msix/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-MSIX",
       "titleSuffix": "MSIX",
-      "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/msix-docs",
       "feedback_product_url": "https://aka.ms/msixcommunity",
