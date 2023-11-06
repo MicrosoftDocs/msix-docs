@@ -29,12 +29,11 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2023.807.0
-- Improvements in entry point detection by MSIX Packaging Tool
-- Added notifications for Accelerator fixups that require manual intervention
-- Enhanced accessibility features to better support keyboard navigation, voice access, screen reader compatibility and contrast themes
-- Improvements in error reporting 
-- Bug fixes and general improvements
+## Version 1.2023.1005.0
+
+New Package Analyzer feature that examines package trace logs and provides remediation support for post-conversions fixups
+
+Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of PSF fixups
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
@@ -55,3 +54,4 @@ You can also share feedback from within the app. Click on Settings(gear icon) on
     - Updates from the Microsoft Store are pushed gradually to users around the world, and there might be a delay in getting the automatic updates. You can trigger an update check by going to the [tool page](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf) in the Store. 
 3. I would like to opt-out of the MSIX Packaging Tool Insider Program. 
     - We are sorry to see you leave the program. Fill the form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-NSOqDz219PqoOqk5qxQEZUMlEwNVNKMDhNUVlKOVpTRTlVWFhMMThLQy4u) to unsubscribe from the program. 
+
