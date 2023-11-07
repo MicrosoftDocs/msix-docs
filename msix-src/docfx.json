@@ -64,12 +64,12 @@
         "supported-platforms.md": "diahar",
         "app-installer/**.md": "diahar",
         "customer/**.md": "diahar",
-        "desktop/**.md": "tajimha",
+        "desktop/**.md": "tanakajimha",
         "manage/**.md": "diahar",
         "msix-sdk/**.md": "diahar",
         "msix-core/**.md": "diahar",
         "package/**.md": "diahar",
-        "packaging-tool/**.md": "shakers",
+        "packaging-tool/**.md": "fizaazmi",
         "toolkit/**.md": "romaclac",
         "psf/**.md": "diahar"
       },
@@ -96,7 +96,7 @@
         "msix-sdk/**.md": "dianmsft",
         "msix-core/**.md": "dianmsft",
         "package/**.md": "dianmsft",
-        "packaging-tool/**.md": "sharlaakers",
+        "packaging-tool/**.md": "fiza-microsoft",
         "toolkit/**.md": "RDMacLachlan",
         "psf/**.md": "dianmsft"
       }		 
