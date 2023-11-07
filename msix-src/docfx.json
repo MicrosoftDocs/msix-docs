@@ -69,7 +69,7 @@
         "msix-sdk/**.md": "diahar",
         "msix-core/**.md": "diahar",
         "package/**.md": "diahar",
-        "packaging-tool/**.md": "fizazmi",
+        "packaging-tool/**.md": "fizaazmi",
         "toolkit/**.md": "romaclac",
         "psf/**.md": "diahar"
       },
