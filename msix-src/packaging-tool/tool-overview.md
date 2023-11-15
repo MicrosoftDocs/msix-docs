@@ -45,13 +45,10 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - Version 1.2023.807.0
+## Latest public release - Version 1.2023.1005.0
 
-- Improvements in entry point detection by MSIX Packaging Tool
-- Added notifications for Accelerator fixups that require manual intervention
-- Enhanced accessibility features to better support keyboard navigation, voice access, screen reader compatibility and contrast themes
-- Improvements in error reporting
-- Bug fixes and general improvements
+- New Package Analyzer feature that examines package trace logs and provides remediation support for post-conversions fixups
+- Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of PSF fixups
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
