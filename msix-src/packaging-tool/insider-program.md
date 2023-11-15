@@ -31,9 +31,9 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Version 1.2023.1005.0
 
-New Package Analyzer feature that examines package trace logs and provides remediation support for post-conversions fixups
-
-Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of PSF fixups
+- Enhanced support to generate accelerator template with pre-filled fixes in Package Analyzer
+- Added provision for Deletion markers via Registry Legacy in PSF Fixups
+- Added support for Package Analyzer Working directory FixUp
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
