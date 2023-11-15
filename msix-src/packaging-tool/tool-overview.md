@@ -35,7 +35,7 @@ PS C:\> winget install "MSIX Packaging Tool"
 
 MSIX Packaging tool can also be directly downloaded for offline use: 
 
-- [Download 1.2023.807.0 MSIX Packaging Tool](https://download.microsoft.com/download/6/6/5/665875c6-5449-4ba2-b3ea-4d9cf78ee197/82341417062a4309979d76cc80568820.msixbundle)  
+- [Download 1.2023.1005.0 MSIX Packaging Tool](https://download.microsoft.com/download/0/e/9/0e9ac313-1de2-4000-acd6-31a700277f83/e263e9507b954edba4fdb0e7b3adc864.msixbundle)  
 You can learn more about using the MSIX Packaging Tool in a [disconnected environment here](/windows/msix/packaging-tool/disconnected-environment).
 
 After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps&preserve-view=true) to add the app package and license to your machine. 
@@ -45,13 +45,10 @@ After you have the offline version of the application, you can use [PowerShell](
 PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
 ```
 
-## Latest public release - Version 1.2023.807.0
+## Latest public release - Version 1.2023.1005.0
 
-- Improvements in entry point detection by MSIX Packaging Tool
-- Added notifications for Accelerator fixups that require manual intervention
-- Enhanced accessibility features to better support keyboard navigation, voice access, screen reader compatibility and contrast themes
-- Improvements in error reporting
-- Bug fixes and general improvements
+- New Package Analyzer feature that examines package trace logs and provides remediation support for post-conversions fixups
+- Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of PSF fixups
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
