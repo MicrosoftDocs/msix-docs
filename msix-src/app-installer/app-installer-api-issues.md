@@ -1,5 +1,5 @@
 ---
-title: App installer file API issues
+title: App Installer file API issues
 description: This article lists known issues with the PackageManager and Package APIs for managing App Installer files.
 ms.date: 2/20/2019
 ms.topic: article
@@ -7,9 +7,9 @@ keywords: windows 10, uwp, app installer, AppInstaller, sideload, API
 ms.custom: 19H1
 ---
 
-# App installer file API issues
+# App Installer file API issues
 
-## JavaScript support for app installer file APIs
+## JavaScript support for App Installer file APIs
 
 The [PackageManager](/uwp/api/windows.management.deployment.packagemanager) and [Package](/uwp/api/windows.applicationmodel.package) classes in the Windows SDK provide methods you can use to add or modify packages via App Installer files or to retrieve information about apps with an App Installer association. For more information, see [Related documentation](app-installer-documentation.md).
 
