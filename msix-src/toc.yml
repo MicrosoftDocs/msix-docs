@@ -278,6 +278,8 @@
       href: app-installer/auto-update-and-repair--overview.md
     - name: App Installer Authentication Manager
       href: app-installer/app-installer-authentication-manager--overview.md
+    - name: Install and update the App Installer
+      href: app-installer/install-update-app-installer.md
     - name: Distribute your MSIX in an enterprise environment
       items: 
         - name: Overview
