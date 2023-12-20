@@ -19,7 +19,7 @@ If your PC doesn't have access to the Microsoft Store, then use the download but
 
 ## Use the winget tool to update
 
-Winget can update App Installer for you. At the command prompt, just type `winget update winget`.
+Winget can update App Installer for you. At the command prompt, just type `winget upgrade Microsoft.AppInstaller`.
 
 ## Which version do I have?
 
