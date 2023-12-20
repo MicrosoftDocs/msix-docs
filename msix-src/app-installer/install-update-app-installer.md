@@ -17,11 +17,11 @@ If your PC doesn't have access to the Microsoft Store, then use the download but
 > [!div class="button" style="text-align: left;" width="150px;"] 
 > [Download the installer for the latest version of App Installer](https://aka.ms/getwinget)
 
-# Use the winget tool to update
+## Use the winget tool to update
 
 Winget can update App Installer for you. At the command prompt, just type `winget update winget`.
 
-# Which version do I have?
+## Which version do I have?
 
 You can use this PowerShell command to determine the version of App Installer that you have installed:
 
