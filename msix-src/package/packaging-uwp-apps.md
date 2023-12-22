@@ -62,7 +62,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
     ![Manifest designer in Visual Studio](images/packaging-screen1.jpg)
 
-    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](/windows/uwp/design/style/app-icons-and-logos).
+    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](/windows/apps/design/style/iconography/overview).
 
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
