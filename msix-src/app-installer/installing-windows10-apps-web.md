@@ -1,16 +1,18 @@
 ---
 title: Installing Windows 10 apps from a web page
-description: In this section, we will review the steps you need to take to allow users to install your apps directly from the web page.
-ms.date: 12/13/2021
+description: In this topic, we'll describe the steps you need to take to allow users to install your apps directly from your web page.
+ms.date: 12/13/2023
 ms.topic: article
-keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
+keywords: windows 11, windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: RS5
 ---
 
 # Installing Windows 10 apps from a web page
 
 > [!IMPORTANT]
-> The *ms-appinstaller* scheme (protocol) has been disabled. That means that App Installer won't be able to install an app directly from a web server; instead, the app will need to be downloaded first. Update the link on your website by removing `'ms-appinstaller:?source='` so that the MSIX package or `.appinstaller` file will be downloaded. That might increase the download size for some packages. The user can then install the package by using App Installer. 
+> This topic describes the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol), and how to use it. That URI scheme is disabled by default; but it can be enabled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). If the Group Policy **EnableMSAppInstallerProtocol** is set to disabled, or if it isn't specified, then *ms-appinstaller* is disabled.
+>
+> When the *ms-appinstaller* URI scheme is disabled, App Installer will *not* be able to install an app directly from a web server (which is what this topic is about). In that case, the user *will* need to download the app first. So update the link on your website by removing `'ms-appinstaller:?source='` so that the MSIX package or `.appinstaller` file will be downloaded. That might increase the download size for some packages. The user can then install the package by using App Installer.
 
 Typically, an app needs to be locally available on a device before it can be installed with the App Installer. For the web scenario, this means that the user must download the app package from the web server, after which it can be installed with App Installer. This is inefficient and wastes disk space, which is why App Installer now has built in features to streamline the process.
 
@@ -22,6 +24,7 @@ The direct app install is only available in the Windows 10 Fall Creators Update 
 > App Installer version must be greater than 1.0.12271.0 to support this feature.
 
 ## Protocol Activation Scheme
+
 In this mechanism, App Installer registers with the operating system for a protocol activation scheme. When user clicks on a web link, the browser checks with the OS for apps that are registered to that web link. If the scheme matches the protocol activation scheme specified by App Installer, then App Installer is invoked. It's important to note that this mechanism is browser independent. This is beneficial to site administrators, for example, who don't need to consider web browser differences while incorporating this into a webpage.
 
 ### Requirements for protocol activation scheme
@@ -32,6 +35,7 @@ In this mechanism, App Installer registers with the operating system for a proto
     - Here's how to declare the new content types as part of [web config file](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types)
 
 ### How to enable this on a webpage
+
 App developers who want to host app packages on their web sites need to follow this step:
 
 Prefix your app package URIs with the activation scheme `'ms-appinstaller:?source='` that App Installer is registered to when referencing them on your webpage. See the example for **MyApp Web Page** for details.
@@ -46,13 +50,12 @@ Prefix your app package URIs with the activation scheme `'ms-appinstaller:?sourc
 </html>
 ```
 
-> [!Note]
+> [!NOTE]
 > By prefixing the link to the Windows app, or AppInstaller file with `ms-appinstaller:?source=''` client devices will launch the Desktop App Installer, with details pertaining to the Windows app. MIME Types must be configured on the Web Server as this information will be shared with the Desktop App Installer informing of the file type and it's file type association.
 
 It is required that MIME-Types be configured for the Windows apps and AppInstaller files that will be shared from your website. By including the MIME Types, the Desktop App Installer will quickly identify the file association and launch the information page with next steps. If not included, the Desktop App Installer must determine the file association which can negatively impact how quickly the Desktop App Installer will interpret the information and launch the Windows app installer. The only MIME-Types that are required to be configured on your Web Server are of the file types that will be hosted on your website.
 
 If the Windows app installation media is hosted on a file share, and linked to from the website then MIME-Types need not be configured on the Web Server. 
-
 
 | File Extension | MIME Type                |
 |----------------|--------------------------|
@@ -65,6 +68,7 @@ If the Windows app installation media is hosted on a file share, and linked to f
 For more information on how to configure the MIME types, please visit [Distribute a Windows 10 App from an IIS Server](./web-install-iis.md#step-7---configure-the-web-app-for-app-package-mime-types).
 
 ## Signing the app package
+
 For users to install your app, you will need to sign the app package with a trusted certificate. You can use a third party paid certificate from a trusted certification authority to sign your app package. If a third party certificate is used, the user will need to have their device in either sideload or developer mode to install and run your app.
 
 If you are deploying an app to employees within an enterprise, you can use an enterprise issued certificate to sign the app. It's important to note that the enterprise certificate must be deployed to any devices which the app will be installed on. For more information on deploying enterprise apps, see [Enterprise app management](/windows/client-management/mdm/enterprise-app-management).
@@ -73,7 +77,7 @@ If you are deploying an app to employees within an enterprise, you can use an en
 
 Invoking App Installer from the browser is supported on all versions of Windows 10 where App Installer is available (starting with the Anniversary Update). However, the functionality to install directly from the web without the need to download the package first is only available on the Windows 10 Fall Creators Update.  
 
-Users of previous versions of Windows 10 (with App Installer available) can also take advantage of web install of Windows 10 apps via App Installer, but will have a different user experience. When these users click the web link, App Installer will prompt to **Download** the package instead of **Install**. After download, App Installer will initiate the launch of the downloaded package automatically. Because the app package is downloaded from the web, these files will pass through Microsoft SmartScreen for a security check. Once the user provides permission to continue and then one more click on **Install**, the app is ready for use!
+Users of previous versions of Windows 10 (with App Installer available) can also take advantage of web install of Windows 10 apps via App Installer, but will have a different user experience. When these users click the web link, App Installer will prompt to **Download** the package instead of **Install**. After download, App Installer will initiate the launch of the downloaded package automatically. One more click on **Install**, and the app is ready for use.
 
 Although this flow isn't quite as seamless as the direct install on Windows 10 Fall Creators Update, users can still quickly engage with the app. Additionally, with this flow the user doesn't have to worry about app package files unnecessarily taking up space in drives. App Installer efficiently manages space by downloading the package to its app data folder and clearing packages when they are no longer needed.
 
@@ -87,8 +91,3 @@ Here's a quick comparison of the Windows 10 Fall Creators update version of App 
 | App Installer will take care of disposal of downloaded packages | User must manually delete the downloaded files |
 
 On versions prior to the Windows 10 Fall Creators Update, App Installer cannot directly install an app from the web. On these versions, App Installer can only install app packages that are locally available. Instead, App Installer will download the package and require the user to double click the downloaded package to install.
-
-
-## Microsoft SmartScreen integration
-
-Microsoft SmartScreen has always been part of the installation process for installing apps via App Installer. SmartScreen ensures users are safeguarded from malcontent that can make its way on to their devices. With the latest update to App Installer, SmartScreen integration is more seamless and robust, providing warnings when installing unknown apps and protecting devices from harm.
