@@ -9,7 +9,7 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2023.1212.0
+## Version 1.2023.1212.0 - Public Version
 - Bug fixes and general improvements
 
 ## Version 1.2023.1114.0
@@ -17,7 +17,7 @@ ms.custom: Vibranium
 - Added provision for Deletion markers via Registry Legacy in PSF Fixups
 - Added support for Package Analyzer Working directory FixUp 
 
-## Version 1.2023.1005.0 - Public Version
+## Version 1.2023.1005.0 
 - New [Package Analyzer](https://learn.microsoft.com/windows/msix/packaging-tool/package-analyzer) feature that examines package trace logs and provides remediation support for post-conversions fixups
 - Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of [PSF fixups](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt)
 
