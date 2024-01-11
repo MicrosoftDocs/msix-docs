@@ -9,6 +9,9 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2023.1212.0
+- Bug fixes and general improvements
+
 ## Version 1.2023.1114.0
 - Enhanced support to generate accelerator template with pre-filled fixes in Package Analyzer 
 - Added provision for Deletion markers via Registry Legacy in PSF Fixups
