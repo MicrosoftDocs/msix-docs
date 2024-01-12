@@ -1,7 +1,7 @@
 ---
-description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 title: Package a desktop app from source code using Visual Studio
-ms.date: 06/29/2023
+description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package a desktop application.
+ms.date: 01/11/2024
 ms.topic: article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
@@ -52,21 +52,23 @@ Review this guide before you begin creating a package for your application: [Pre
 > [!NOTE]
 > If you want to package your project in x64 configuration, make sure you have configured referenced project to x64. To confirm this, refer to [Additional notes](#Additional notes) below.
 
-2. Add a **Windows Application Packaging Project** project to your solution, choosing the appropriate language (C# or C++) that matches the language of your existing dekstop app's project.
+1. Add a **Windows Application Packaging Project** project to your solution, choosing the appropriate language (C# or C++) that matches the language of your existing dekstop app's project.
 
    You won't have to add any code to the packaging project. Its purpose is only to generate and configure a package for you. We'll refer to this project as *the packaging project*.
 
    ![Packaging project](images/add-packaging-project.png)
 
-3. Set the **Target Version** of this project to any version that you want, but make sure to set the **Minimum Version** to not lower than **Windows 10 Anniversary Update**.
+1. Set the **Target Version** of this project to any version that you want, but make sure to set the **Minimum Version** to not lower than **Windows 10 Anniversary Update**.
 
    <img src="images/target-version.png" alt="Packaging version selector dialog box" width=70%>
 
-4. In Solution Explorer, right-click the **Dependencies** folder under the packaging project and choose **Add Project Reference...**.
+1. Set the **Windows Application Packaging Project** project as the startup project (right-click on the project, and select **Set as StartUp Project**).
+
+1. In Solution Explorer, right-click the **Dependencies** folder under the packaging project and choose **Add Project Reference...**.
 
    ![Add Project Reference](images/add-project-ref.png)
 
-5. Choose your desktop application project, and then choose the **OK** button.
+1. Choose your desktop application project, and then choose the **OK** button.
 
    ![Desktop project](images/add-project-ref-2.png)
 
@@ -74,11 +76,11 @@ Review this guide before you begin creating a package for your application: [Pre
 
    ![Set entry point](images/set-as-entry-point.png)
 
-6. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
+1. Build the packaging project to ensure that no errors appear. If you receive errors, open **Configuration Manager** and ensure that your projects target the same platform.
 
    ![Config manager](images/config-manager.png)
 
-7. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for Store publishing to the Store).
+1. Use the [Create App Packages](../package/packaging-uwp-apps.md) wizard to generate an MSIX package/bundle or an .msixupload/.appxupload file (for publishing to the Microsoft Store).
 
 ## Additional notes
 
@@ -91,7 +93,6 @@ __Approach 1:__ Before adding the WAP project on any of the project, add x64 arc
 __Approach 2:__ For the existing projects where WAP has been added, 
 
 1. Remove the x64 entries from .sln files entry manually. 
-
 
 ``` 
 _Global_
@@ -133,4 +134,3 @@ See [Extend your desktop application with modern UWP components](/windows/apps/d
 **Distribute your app**
 
 See [Distribute a packaged desktop application](/windows/apps/desktop/modernize/desktop-to-uwp-distribute)
-
