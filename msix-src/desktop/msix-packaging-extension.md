@@ -52,9 +52,7 @@ Change your *Agent Specification* selection to ***windows-2019*** since the MSIX
 
 You should see *Agent job 1* by default in your pipeline. Click on the plus symbol to *Add a task to Agent job 1*.
 
-Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks mentioned before in the *MSIX Packaging* Extension. You can custom build your pipeline by adding the tasks you need according to your requirements. But we will demonstrate how to configure all four tasks on this page.
-
-![Add a task](images/msix-packaging-ext/add-task.png)
+Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks mentioned before in the *MSIX Packaging* Extension. You can custom build your pipeline by adding the tasks you need according to your requirements. But we will demonstrate how to configure all four tasks on this page.![ADO Extension Image1](media/msix-packaging-extension/ado-extension-image1.png)
 
 ### MSIX build and package
 
@@ -206,7 +204,7 @@ steps:
 ```
 
 #### [UI](#tab/UI/)
-![app attach](images/msix-packaging-ext/app-attach.png)
+![ADO Extension Image2](media/msix-packaging-extension/ado-extension-image2.png)
 
 - **Display name** - Customize your task name.
 - **Package Path** - This is the path to the MSIX package/bundle.
@@ -234,3 +232,4 @@ We would love to hear your feedback on the *MSIX Packaging* Extension. Reach out
 - Review the extension on Azure DevOps Marketplace
 - [MSIX Tech Community](https://techcommunity.microsoft.com/t5/msix/ct-p/MSIX)
 - [GitHub open source project](https://github.com/microsoft/msix-packaging/tree/master/tools/pipelines-tasks) - The source code for this extension is a part of the MSIX SDK open source project, which welcomes contributions and suggestions.
+
