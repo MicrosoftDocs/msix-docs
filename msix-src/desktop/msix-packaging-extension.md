@@ -216,24 +216,12 @@ steps:
 - **Display name** - Customize your task name. 
 - **VHDX Path** - This is the path of the VHDX file that will be app attached(publish) to Azure Virtual Desktop (AVD). 
 - **Azure Subscription** - This is the service connection to target azure subscription that your application needs to be app attached. Drop down lists all the azure subscriptions available to the current ADO logged in user and user can select any of these and establish service connection to it. 
-
-Resource Group - Choose the resource group that your app needs to be published. This resource group should contain all the target resources that are required for app attach, like storage account, host pool, workspace, application group. 
-
-This drop-down lists all the resource groups available under the selected  		Azure subscription 
-
-Storage account - Choose the storage account that you application (or VHDX) is to be uploaded. 
-
-This drop-down lists all the storage accounts available under selected 	   	resource group. 
-
-File share - Choose the file share in the selected storage account that your application (or VHDX) is to be uploaded.  
-
-This drop-down lists all the file share available under the selected storage 		account. 
-
-Host pool - Choose the host pool that is to be used for app attaching the application.                                                                                                      This drop-down list all the host pools available under the selected resource group. 
-
-Workspace – Choose the workspace that is to be used for app attaching the application.                                                                                                       This drop-down list all the workspaces available under the selected resource group. 
-
-Application group – Choose the application group that is to be used for app attaching the application.                                                                                 This drop-down list all the application groups available under the selected resource group. 
+- **Resource Group** - Choose the resource group that your app needs to be published. This resource group should contain all the target resources that are required for app attach, like storage account, host pool, workspace, application group. This drop-down lists all the resource groups available under the selected Azure subscription.
+- **Storage account** - Choose the storage account that you application (or VHDX) is to be uploaded. This drop-down lists all the storage accounts available under selected resource group. 
+- **File share** - Choose the file share in the selected storage account that your application (or VHDX) is to be uploaded. This drop-down lists all the file share available under the selected storage account. 
+- **Host pool** - Choose the host pool that is to be used for app attaching the application. This drop-down list all the host pools available under the selected resource group. 
+- **Workspace** - Choose the workspace that is to be used for app attaching the application. This drop-down list all the workspaces available under the selected resource group. 
+- **Application group** - Choose the application group that is to be used for app attaching the application. This drop-down list all the application groups available under the selected resource group. 
 
 After configuring all the tasks, you can use a *Publish build artifacts* task to drop all the artifacts from the temp location to Azure Pipelines artifacts or a file share of your choice.
 
