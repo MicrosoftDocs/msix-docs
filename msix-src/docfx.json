@@ -35,14 +35,14 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "ms.technology": "msix",
+      "ms.subservice": "msix",
       "breadcrumb_path": "/windows/msix/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-MSIX",
       "titleSuffix": "MSIX",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/msix-docs",
       "feedback_product_url": "https://aka.ms/msixcommunity",
-      "ms.prod": "windows",
+      "ms.service": "windows",
       "searchScope": ["MSIX"]
     },
     "fileMetadata": {
