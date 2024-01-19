@@ -21,7 +21,7 @@ If you encounter issues with the offline copy of the packaging tool, then downlo
 > [!div class="button" style="text-align: left;" width="150px;"] 
 > [Offline copy of the license](https://download.microsoft.com/download/6/c/7/6c7d654b-580b-40d4-8502-f8d435ca125a/da97fb568eee4e6baa07bc3b234048b3_License1.xml)
 
-After you have the offline version of the tool, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage&preserve-view=true) to add the app package and license to your machine.
+After you have the offline version of the tool, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage) to add the app package and license to your machine.
 
 ### Example of offline installation
 
