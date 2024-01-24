@@ -52,9 +52,7 @@ Change your *Agent Specification* selection to ***windows-2019*** since the MSIX
 
 You should see *Agent job 1* by default in your pipeline. Click on the plus symbol to *Add a task to Agent job 1*.
 
-Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks mentioned before in the *MSIX Packaging* Extension. You can custom build your pipeline by adding the tasks you need according to your requirements. But we will demonstrate how to configure all four tasks on this page.
-
-![Add a task](images/msix-packaging-ext/add-task.png)
+Search for ***MSIX*** in the *Add tasks* search bar and you should see the tasks mentioned before in the *MSIX Packaging* Extension. You can custom build your pipeline by adding the tasks you need according to your requirements. But we will demonstrate how to configure all four tasks on this page.![ADO Extension Image1](media/msix-packaging-extension/ado-extension-image1.png)
 
 ### MSIX build and package
 
@@ -92,6 +90,7 @@ steps:
 - **Application Package Distribution Mode** - Select the mode from the dropdown menu to generate a Store app package or non-Store app package.
 - **MSBuild Version and Architecture** - Customize your MSBuild by specifying advanced options.
 
+
 ***
 
 ### MSIX package signing
@@ -121,6 +120,7 @@ This example shows the task when the source of the certificate is an Azure Key V
 - **Package to sign** - The MSIX package signing task uses SignTool to sign all files matching this path, regardless of whether they are MSIX packages or bundles.
 - **Certificate file type** - Select the source of the certificate file to use.
 - **Time Stamp Server** - A URL that specifies the address of a time stamping server. This is an optional parameter.
+
 
 ***
 
@@ -154,6 +154,7 @@ steps:
 - **Main Package/Bundle URI** - URI to the app package/bundle location.
 - **Update On Launch** - Select this to set the app to check for updates when launched. If this checkbox is selected, you will be asked to provide details like *Hours Between Update Checks*, whether to *Show UI to User when Updating*, and whether you want the *Update to Block App Activation*.
 
+
 ***
 
 ### Create package for MSIX app attach
@@ -182,6 +183,48 @@ After configuring all the tasks, you can use a *Publish build artifacts* task to
 
 ***
 
+### Publish MSIX app attach package to AVD
+
+#### [YAML](#tab/yaml/)
+Here's an example that shows how to configure the avd app attach task in the yaml file: 
+
+```yaml
+steps:
+- task: MSIX.msix-ci-automation-task-dev.avd-app-attach-publish.AVDAppAttachPublish@0
+  displayName: 'Publish MSIX app attach package to AVD'
+  inputs:
+    vhdxPath: '$(Build.ArtifactStagingDirectory)/App.vhdx' 
+    connectedServiceNameARM: 'ed1db943-1e1c-4eac-8683-ead2abc281b5' 
+    resourceGroupName: 'appattach-test-rg' 
+    storageAccount: 'appattachteststorage' 
+    fileShare: 'appattach-test-fs' 
+    hostPool: 'appattach-hostpool' 
+    workSpace: 'appattach-test-ws' 
+    applicationGroup: 'appattach-test-ag-rail' 
+```
+
+#### [UI](#tab/UI/)
+![ADO Extension Image2](media/msix-packaging-extension/ado-extension-image2.png)
+
+- **Display name** - Customize your task name.
+- **Package Path** - This is the path to the MSIX package/bundle.
+- **VHDX Output Path** - This is the path of the VHDX file that will be created by the task.
+- **VHDX size** - The maximum size in MBs of the VHDX.
+
+- **Display name** - Customize your task name. 
+- **VHDX Path** - This is the path of the VHDX file that will be app attached(publish) to Azure Virtual Desktop (AVD). 
+- **Azure Subscription** - This is the service connection to target azure subscription that your application needs to be app attached. Drop down lists all the azure subscriptions available to the current ADO logged in user and user can select any of these and establish service connection to it. 
+- **Resource Group** - Choose the resource group that your app needs to be published. This resource group should contain all the target resources that are required for app attach, like storage account, host pool, workspace, application group. This drop-down lists all the resource groups available under the selected Azure subscription.
+- **Storage account** - Choose the storage account that you application (or VHDX) is to be uploaded. This drop-down lists all the storage accounts available under selected resource group. 
+- **File share** - Choose the file share in the selected storage account that your application (or VHDX) is to be uploaded. This drop-down lists all the file share available under the selected storage account. 
+- **Host pool** - Choose the host pool that is to be used for app attaching the application. This drop-down list all the host pools available under the selected resource group. 
+- **Workspace** - Choose the workspace that is to be used for app attaching the application. This drop-down list all the workspaces available under the selected resource group. 
+- **Application group** - Choose the application group that is to be used for app attaching the application. This drop-down list all the application groups available under the selected resource group. 
+
+After configuring all the tasks, you can use a *Publish build artifacts* task to drop all the artifacts from the temp location to Azure Pipelines artifacts or a file share of your choice.
+
+***
+
 ## Ways to provide Feedback
 
 We would love to hear your feedback on the *MSIX Packaging* Extension. Reach out to us via the following channels:
@@ -189,3 +232,4 @@ We would love to hear your feedback on the *MSIX Packaging* Extension. Reach out
 - Review the extension on Azure DevOps Marketplace
 - [MSIX Tech Community](https://techcommunity.microsoft.com/t5/msix/ct-p/MSIX)
 - [GitHub open source project](https://github.com/microsoft/msix-packaging/tree/master/tools/pipelines-tasks) - The source code for this extension is a part of the MSIX SDK open source project, which welcomes contributions and suggestions.
+
