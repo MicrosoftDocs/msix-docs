@@ -13,10 +13,7 @@ ms.date:     10/06/2023
 
 # Analyze and resolve runtime issues
 
-The **Package Analyzer** in [MSIX Packaging tool](/windows/msix/overview) provisions runtime analysis of an MSIX package and suggests remediations to fix post-conversion issues seamlessly. This feature simplifies conversion and packaging workflows, and saves time and effort by streamlining the debugging and application of fixes.
-
-## Prerequisites
-To try out the Package Analyzer in an early-access preview build, join the [MSIX Packaging Tool Insider Program.](/windows/msix/packaging-tool/insider-program)
+The **Package Analyzer** in [MSIX Packaging tool](/windows/msix/packaging-tool/tool-overview) provisions runtime analysis of an MSIX package and suggests remediations to fix post-conversion issues seamlessly. This feature simplifies conversion and packaging workflows, and saves time and effort by streamlining the debugging and application of fixes.
 
 ## Key features 
 
