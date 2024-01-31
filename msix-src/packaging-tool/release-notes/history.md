@@ -18,8 +18,8 @@ ms.custom: Vibranium
 - Added support for Package Analyzer Working directory FixUp 
 
 ## Version 1.2023.1005.0 
-- New [Package Analyzer](https://learn.microsoft.com/windows/msix/packaging-tool/package-analyzer) feature that examines package trace logs and provides remediation support for post-conversions fixups
-- Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of [PSF fixups](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt)
+- New [Package Analyzer](../package-analyzer.md) feature that examines package trace logs and provides remediation support for post-conversions fixups
+- Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of [PSF fixups](../../psf/psf-integration-with-mpt.md)
 
 ## Version 1.2023.807.0 
 - Improvements in entry point detection by MSIX Packaging Tool
@@ -29,7 +29,7 @@ ms.custom: Vibranium
 - Bug fixes and general improvements
 
 ## Version 1.2023.504.0
-- Search for and apply [Accelerators](https://learn.microsoft.com/windows/msix/toolkit/accelerators) during conversion process
+- Search for and apply [Accelerators](../../toolkit/accelerators.md) during conversion process
 
 ## Version 1.2023.319.0 
 - MSIX Packaging Tool now supports High Contrast themes of Windows
