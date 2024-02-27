@@ -39,9 +39,10 @@
       "breadcrumb_path": "/windows/msix/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-MSIX",
       "titleSuffix": "MSIX",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/msix-docs",
+      "feedback_system": "Standard",
       "feedback_product_url": "https://aka.ms/msixcommunity",
+      "feedback_help_link_url": "https://learn.microsoft.com/answers/tags/184/windows-app-sdk/",
+      "feedback_help_link_type": "get-help-at-qna",
       "ms.service": "windows",
       "searchScope": ["MSIX"]
     },
