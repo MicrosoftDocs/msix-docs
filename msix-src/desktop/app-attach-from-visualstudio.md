@@ -24,7 +24,10 @@ Enterprises prefer App Attach for:
 1. Easier Windows Image management 
 2. Better app manageability including lower maintenance costs and better security 
 
-Streamed app's data roams with the user. This helps them instantly run apps and continue their experience wherever they are.   
+Streamed app's data roams with the user. This helps them instantly run apps and continue their experience wherever they are.  
+
+[Local App Attach](/azure/virtual-desktop/app-attach-test-msix-packages?tabs=posh6%2Ccimfs) allows you to run MSIX applications without installing them on the device. The APIs that power Local App Attach are fully supported on Windows 11 Enterprise and Windows 10 Enterprise, baked into the OS to mount and unmount the applications. You can also use PowerShell cmdlets or scripts to automate the process. 
+
   
 ## Pre-requisite steps  
 - Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
