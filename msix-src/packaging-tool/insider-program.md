@@ -29,12 +29,10 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2023.1212.0
+## Version 1.2024.405.0
 
-- Enhanced support to generate accelerator template with pre-filled fixes in Package Analyzer
-- Added provision for Deletion markers via Registry Legacy in PSF Fixups
-- Added support for Package Analyzer Working directory FixUp
-- Bug fixes and general improvements
+- Enhanced [PSF Support](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
+- Improved guideline support for utilizing PSF Fixup feature in the tool
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
 
