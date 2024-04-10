@@ -29,7 +29,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ## Current Insider Preview build
 
-## Version 1.2024.405.0
+### Version 1.2024.405.0
 
 - Enhanced [PSF Support](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
 - Improved guideline support for utilizing PSF Fixup feature in the tool
