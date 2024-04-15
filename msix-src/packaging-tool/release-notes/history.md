@@ -9,6 +9,10 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2024.405.0
+- Enhanced [PSF Support](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
+- Improved guideline support for utilizing PSF Fixup feature in the tool
+
 ## Version 1.2023.1212.0 - Public Version
 - Bug fixes and general improvements
 
@@ -19,7 +23,7 @@ ms.custom: Vibranium
 
 ## Version 1.2023.1005.0 
 - New [Package Analyzer](https://learn.microsoft.com/windows/msix/packaging-tool/package-analyzer) feature that examines package trace logs and provides remediation support for post-conversions fixups
-- Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of [PSF fixups](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt)
+- Integration of the Package Support Framework (PSF) with MSIX Packaging Tool to support easy application of PSF Fixups
 
 ## Version 1.2023.807.0 
 - Improvements in entry point detection by MSIX Packaging Tool
