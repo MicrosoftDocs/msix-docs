@@ -9,11 +9,11 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
-## Version 1.2024.405.0
+## Version 1.2024.405.0 - Public Version
 - Enhanced [PSF Support](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
 - Improved guideline support for utilizing PSF Fixup feature in the tool
 
-## Version 1.2023.1212.0 - Public Version
+## Version 1.2023.1212.0 
 - Bug fixes and general improvements
 
 ## Version 1.2023.1114.0
