@@ -9,6 +9,9 @@ ms.custom: Vibranium
 
 # Release notes for the MSIX Packaging Tool
 
+## Version 1.2024.508.0 
+- Integration of [Trusted Signing](https://learn.microsoft.com/azure/trusted-signing/overview) to simply package signing process 
+
 ## Version 1.2024.405.0 - Public Version
 - Enhanced [PSF Support](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
 - Improved guideline support for utilizing PSF Fixup feature in the tool
