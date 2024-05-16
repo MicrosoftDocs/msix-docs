@@ -35,7 +35,7 @@ PS C:\> winget install "MSIX Packaging Tool"
 
 MSIX Packaging tool can also be directly downloaded for offline use: 
 
-- [Download 1.2023.1212.0 MSIX Packaging Tool](https://download.microsoft.com/download/6/c/7/6c7d654b-580b-40d4-8502-f8d435ca125a/da97fb568eee4e6baa07bc3b234048b3.msixbundle)  
+- [Download 1.2024.405.0 MSIX Packaging Tool](https://download.microsoft.com/download/e/2/e/e2e923b2-7a3a-4730-969d-ab37001fbb5e/MSIXPackagingtoolv1.2024.405.0.msixbundle)  
 You can learn more about using the MSIX Packaging Tool in a [disconnected environment here](/windows/msix/packaging-tool/disconnected-environment).
 
 After you have the offline version of the application, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage?view=win10-ps&preserve-view=true) to add the app package and license to your machine. 
