@@ -99,6 +99,10 @@ To manually sign your application package:
 ### Test your application with comparepackage.exe
 ComparePackage.exe is a tool in the [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-sdk/) that shows a report that states which files have been changed, what new files have been added, what files have been deleted, and what remains unchanged when an app has been update from one version to the next.
 
+### Test you app using Local App Attach
+
+Local App Attach allows you to run MSIX applications without installing them on the device. The APIs that power Local App Attach are fully supported on Windows 11 Enterprise and Windows 10 Enterprise, baked into the OS to mount and unmount the applications. You can also use PowerShell cmdlets or scripts to automate the process. For more information, see [App attach from Visual Studio](app-attach-from-visualstudio.md).
+
 ### Test your application for Windows 10 S
 
 Before you publish your app, make sure that it will operate correctly on devices that run Windows 10 S. In fact, if you plan to publish your application to the Microsoft Store, you must do this because it is a store requirement. Apps that don't operate correctly on devices that run Windows 10 S won't be certified.

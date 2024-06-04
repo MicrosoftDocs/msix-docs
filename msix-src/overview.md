@@ -58,7 +58,11 @@ The AppxSignature.p7x is generated when the package is signed. All MSIX packages
 
 ## Supported platforms
 
-See [this article](supported-platforms.md) for a full list of platforms that support MSIX.
+For a full list of platforms that support MSIX see [MSIX features and supported platforms](supported-platforms.md).
+
+## Validation, testing, and troubleshooting
+
+For information about testing your MSIX implementation before deployment, see [MSIX Validation, Testing, and Troubleshooting](desktop/validation-overview.md).
 
 ## Benefits of app containers
 
