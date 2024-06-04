@@ -1,6 +1,6 @@
 ---
 description: This section provides information on validating, testing, and troubleshooting MSIX packages.  This section is targeted at enterprise and IT Pros.
-title: Manage your MSIX deployment Overview
+title: MSIX validation, testing and troubleshooting
 ms.date: 2/3/2020
 ms.topic: article
 keywords: windows 10, deployment, msix

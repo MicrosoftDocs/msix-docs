@@ -72,7 +72,7 @@ additionalContent:
             - text: Setup instructions for remote machine conversions
               url: packaging-tool/remote-conversion-setup.md
             - text: App Attach from Visual Studio
-              url: /desktop/app-attach-from-visualstudio
+              url: desktop/app-attach-from-visualstudio.md
         # Card
         - title: Package
           links:
