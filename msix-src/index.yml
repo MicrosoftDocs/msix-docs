@@ -91,8 +91,8 @@ additionalContent:
               url: desktop/desktop-to-uwp-test-windows-s.md
             - text: Create run time fixes for packaged apps
               url: psf/package-support-framework.md
-            - text: App Attach from Visual Studio
-              url: desktop/app-attach-from-visualstudio.md
+            - text: Test your app using Local App Attach
+              url: desktop/desktop-to-uwp-debug.md#test-your-app-using-local-app-attach
         # Card
         - title: Distribute
           links:
@@ -104,6 +104,8 @@ additionalContent:
               url: desktop/managing-your-msix-deployment-retail.md
             - text: Create a shared runtime container
               url: manage/shared-package-container.md
+            - text: App Attach from Visual Studio
+              url: desktop/app-attach-from-visualstudio.md
         # Card
         - title: Related resources
           links:

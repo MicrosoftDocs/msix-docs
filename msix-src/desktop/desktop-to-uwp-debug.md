@@ -101,7 +101,7 @@ ComparePackage.exe is a tool in the [Windows SDK](https://developer.microsoft.co
 
 ### Test your app using Local App Attach
 
-Local App Attach allows you to run MSIX applications without installing them on the device. The APIs that power Local App Attach are fully supported on Windows 11 Enterprise and Windows 10 Enterprise, baked into the OS to mount and unmount the applications. You can also use PowerShell cmdlets or scripts to automate the process. For more information, see [App attach from Visual Studio](app-attach-from-visualstudio.md).
+Local App Attach allows you to run MSIX applications without installing them on the device. The APIs that power Local App Attach are fully supported on Windows 11 Enterprise and Windows 10 Enterprise, baked into the OS to mount and unmount the applications. You can also use PowerShell cmdlets or scripts to automate the process. For more information, see [App attach from Visual Studio](app-attach-from-visualstudio.md). 
 
 ### Test your application for Windows 10 S
 
