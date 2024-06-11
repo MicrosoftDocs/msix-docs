@@ -30,13 +30,15 @@ Streamed app's data roams with the user. This helps them instantly run apps and 
 
   
 ## Pre-requisite steps  
+
 - Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
 - Setup [Visual Studio for C#](/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
-- Configure 'Azure development' workload in Visual Studio by the following:
+- Configure the 'Azure development' workload in Visual Studio by the following:
+  - Open Visual Studio Installer 
+  - Click on **Modify**
+  - Make sure that **Azure development** is selected
+  - Click on **Modify** at the bottom to initiate the update.
 
-```
-Open Visual Studio Installer -> Click on Modify -> Check on Azure development -> Confirm by clicking on Modify at the bottom.
-```
 ![Visual Studio Extension](https://github.com/bansalsushant/msix-docs/assets/15215151/e517e795-4dc6-4337-8ad8-3b70f4725f19)
 
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).
