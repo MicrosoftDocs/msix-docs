@@ -20,7 +20,7 @@ keywords: windows 10, msix, uwp, app installer, AppInstaller, sideload, related 
 To get the latest development tools, see [Downloads and tools for Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
-> To submit an app that uses optional packages and/or related sets to the Store, you will need permission. Optional packages and related sets can be used for Line of Business (LOB) or enterprise apps without Partner Center permission if they are not submitted to the Store. See [Windows developer support](https://developer.microsoft.com/windows/support) to get permission to submit an app that uses optional packages and related sets.
+> To submit an app that uses optional packages and/or related sets to the Store, you will need permission. Optional packages and related sets can be used for Line of Business (LOB) or enterprise apps without Partner Center permission if they are not submitted to the Store. See [Windows developer support](https://developer.microsoft.com/windows/support) to get permission to submit an app that uses optional packages and related sets. Click on **Contact us** followed by **Submit an incident** to the **Non-Technical Support** team within the table.
 
 > [!NOTE]
 > Optional packages containing executable code must be part of a [related set](optional-packages.md#related-sets). You will not be able to execute code from an optional package unless it is part of a related set.
