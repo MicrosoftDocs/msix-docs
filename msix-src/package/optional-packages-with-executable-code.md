@@ -9,6 +9,10 @@ keywords: windows 10, msix, uwp, app installer, AppInstaller, sideload, related 
 ---
 # Optional packages with executable code
  
+> [!NOTE]
+> As of July 2024 this feature has been deprecated.
+> There are alternative solutions for in-app purchases and trials on the Microsoft platform. Learn more here: [In-app purchases and trials - Microsoft Store | Microsoft Learn](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fuwp%2Fmonetize%2Fin-app-purchases-and-trials&data=05%7C02%7Cdvoyles%40microsoft.com%7C24110c376b9e4876fb6f08dc9fa3a10d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638560772353484310%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=tTrb7GzchZKSbF6Tt4q961px21oM0XOpVYvY7nLRGC8%3D&reserved=0)
+
 [Optional packages](optional-packages.md) with executable code are useful for dividing a large or complex app, or for adding on to an app that's already been published. With Visual Studio 2017, version 15.7 and .NET Native 2.1, you can load executable code from both C++ and C# optional packages.
 
 ## Prerequisites
