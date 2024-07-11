@@ -99,10 +99,11 @@ At first, you will need to create a few variables to store the information requi
 In Azure DevOps select your pipeline and press the **Edit** button at the top. Once you are in the YAML editor, click on the **Variables** button at the top to open the panel.
 You're going to click on the + button to add the following variables:
 
-- **AzureKeyVaultName**, with the friendly name of your vault.
+- **AzureKeyVaultCertificateName**, with the friendly name of your certificate in vault.
 - **AzureKeyVaultUrl**, with the URL of your vault.
 - **AzureKeyVaultClientId**, with the application id of your Azure application.
 - **AzureKeyVaultClientSecret**, with the client secret of your Azure application.
+- **AzureKeyVaultTenantId**, with the tenant id to get token for the Azure application
 
 When you create each variable, make sure to enable the **Keep this value** secret option. It will make sure that other people who have access to the pipeline won't be able to see their values.
 
@@ -122,7 +123,7 @@ Now you can customize your existing YAML pipeline by adding a .NET Core task to 
 The next step is to add a PowerShell task to execute the command that will sign the package. You must perform this task only at the end of the build process, once the MSIX package has been created.
 
 ```yaml
-- powershell: '& AzureSignTool sign -kvu $(AzureKeyVaultUrl) -kvi $(AzureKeyVaultClientId) -kvs $(AzureKeyVaultClientSecret) -kvc $(AzureKeyVaultName) -tr http://timestamp.digicert.com -v "$(System.DefaultWorkingDirectory)\MyPipeline\MyContosoApp\MyContosoApp.msix"'
+- powershell: '& AzureSignTool sign -kvu $(AzureKeyVaultUrl) -kvi $(AzureKeyVaultClientId) -kvs $(AzureKeyVaultClientSecret) -kvc $(AzureKeyVaultCertificateName) -tr http://timestamp.digicert.com -v "$(System.DefaultWorkingDirectory)\MyPipeline\MyContosoApp\MyContosoApp.msix"'
   displayName: 'Sign the package'
 ```
 
@@ -161,7 +162,7 @@ The second one will sign the package and, as such, it must be executed after the
    run: |
         Get-ChildItem -recurse -Include **.msix | ForEach-Object {
         $msixPath = $_.FullName
-        & AzureSignTool sign -kvu "${{ secrets.AzureKeyVaultUrl }}" -kvi "${{ secrets.AzureKeyVaultClientId }}" -kvs "${{ secrets.AzureKeyVaultClientSecret }}" -kvc ${{ secrets.AzureKeyVaultName }} -tr http://timestamp.digicert.com -v $msixPath
+        & AzureSignTool sign -kvt $(AzureKeyVaultTenantId) -kvu "${{ secrets.AzureKeyVaultUrl }}" -kvi "${{ secrets.AzureKeyVaultClientId }}" -kvs "${{ secrets.AzureKeyVaultClientSecret }}" -kvc ${{ secrets.AzureKeyVaultName }} -tr http://timestamp.digicert.com -v $msixPath
         }
 ```
 
