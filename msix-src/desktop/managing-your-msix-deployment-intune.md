@@ -8,7 +8,7 @@ ms.custom: RS5
 ---
 
 # Microsoft Intune
-The [Microsoft Intune Console](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) can be used to create a Line-of Business App which can be delivered to client devices. When deploying an MSIX app through the Microsoft Intune, you will require an MSIX app to deploy, as well as an Azure Active Directory Group to be the target of the install.
+The [Microsoft Intune Console](https://intune.microsoft.com/) can be used to create a Line-of Business App which can be delivered to client devices. When deploying an MSIX app through the Microsoft Intune, you will require an MSIX app to deploy, as well as an Azure Active Directory Group to be the target of the install.
 
 ## Deploying an MSIX app
 When deploying a client app from Microsoft Intune to be delivered to client devices you will first require a local or network path to your MSIX app. The details of the app being created from within the Microsoft Intune will retrieve the meta data contained within the MSIX app package and automatically load the retrieved information into the app properties.
