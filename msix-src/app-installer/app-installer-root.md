@@ -20,6 +20,7 @@ To learn how to use the App Installer to install your app, see the topics in the
 
 | Topic | Description |
 |-------|-------------|
+| [App Installer user interface](app-installer-ui-dialog.md) | Understand the various components of the default App Installer interface. |
 | [App Installer file overview](app-installer-file-overview.md) | Learn about the contents of App Installer files and how they work. |
 | [Create an App Installer file in Visual Studio](create-appinstallerfile-vs.md)| Learn how to use Visual Studio to enable automatic updates using the .appinstaller file. |
 | [Create an App Installer file manually](how-to-create-appinstaller-file.md)| Learn how to create an .appinstaller file manually. This is particularly useful for installing a related set that contains a main package and optional packages. |
@@ -30,6 +31,7 @@ To learn how to use the App Installer to install your app, see the topics in the
 | [Troubleshoot installation issues with the App Installer file](troubleshoot-appinstaller-issues.md) | Common issues and solutions when sideloading applications with the App Installer file. |
 | [Related documentation](app-installer-documentation.md) | Provides links to related documentation, including APIs that you can use to modify packages via App Installer files or to retrieve information about apps with an App Installer association.  |
 | [App Installer file (.appinstaller) reference](/uwp/schemas/appinstallerschema/app-installer-file?context=%252fwindows%252fmsix%252frender) | View the full XML schema for the App Installer file. |
+| [App Installer security features](app-installer-security-features.md) | This page describes security features associated with the App Installer.|
 
 ## Tutorials
 
