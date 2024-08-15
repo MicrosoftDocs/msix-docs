@@ -54,7 +54,7 @@ Enabled: <code>'HKLM:\Software\Policies\Microsoft\Windows\AppInstaller" EnableMs
 
 When the *EnableMsixAllowedZones* is enabled, the App Installer will look to honor the restrictions specified in *MsixAllowedZones*. By default, the URLs in the users *UntrustedSites* security zone will be rejected.
 
-Enabled: <code>HKLM:\Software\Policies\Microsoft\Windows\AppInstaller\MsixAllowedZones" UntrustedSites=0</code>
+Allow zone: <code>HKLM:\Software\Policies\Microsoft\Windows\AppInstaller\MsixAllowedZones" UntrustedSites=1</code>
 
 ### Zone data
 
