@@ -9,7 +9,7 @@ keywords: windows 10, uwp, msix
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
-> Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution).
+> Microsoft Store for Business and Microsoft Store for Education was retired in the first quarter of 2023. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution).
 >
 > You can continue to use the current Device Guard Signing Service v2 (DGSS) capabilities until that time. DGSS will be replaced by the [Azure Code Signing service (ACS)](https://aka.ms/AzureCodeSigning) and will support your Windows Defender Application Control (WDAC) policy and catalog file signing needs.
 
