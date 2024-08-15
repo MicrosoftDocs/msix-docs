@@ -11,7 +11,7 @@ ms.custom: RS5
 
 ## Automate conversion of Windows installers to MSIX packages using scripts
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 The MSIX Packaging Tool supports a command line interface for creating MSIX application packages. This enables you to automate the process of repackaging app installers and perform bulk conversions.
 

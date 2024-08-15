@@ -96,12 +96,14 @@ On versions prior to the Windows 10 Fall Creators Update, App Installer cannot d
 
 With version <bugbug> of the App Installer, the following security measures have been added:
 * Internet Zone validation
-* SmartScreen Validation
+* Microsoft SmartScreen Validation
 
 ### Internet Zone Validation
+
 Prior to accessing the domain referenced by the the *ms-appinstaller* URI scheme, the App Installer will verify that the domain is allowed by the IT Professional. If the domain has been restricted, the App Installer will present an error to the user.
 
-### Smart Screen Validation
-If the domain referenced by the *ms-appinstaller* URI scheme is allowed, the App Installer will validate the URI with [Smart Screen](https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen)>. URIs that fail the reputation check will present the user with an error.
+### Microsoft SmartScreen Validation
+
+If the domain referenced by the *ms-appinstaller* URI scheme is allowed, the App Installer will validate the URI with [Smart Screen](https://learn.microsoft.com/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen)>. URIs that fail the reputation check will present the user with an error.
 
 See [App Installer security features](./app-installer-security-features.md) for more information.
