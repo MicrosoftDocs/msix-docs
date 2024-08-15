@@ -46,7 +46,7 @@ Enabled: <code>HKLM:\Software\Policies\Microsoft\Windows\AppInstaller EnableMSAp
 
 **EnableMsixAllowedZones**
 
-By default, *EnableMsixAllowedZones* is enabled. If not defined, or set to "1", the App Installer will verify URL domains are allowed prior to opening the application.
+If *EnableMsixAllowedZones* is enabled (set to "1"), you will have the option to override whether App Installer allows a Security Zone or not.
 
 Enabled: <code>'HKLM:\Software\Policies\Microsoft\Windows\AppInstaller" EnableMsixAllowedZones=1'</code>
 
