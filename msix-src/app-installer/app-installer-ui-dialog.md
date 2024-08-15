@@ -8,7 +8,7 @@ ms.custom: 19H1
 ---
 
 # App Installer User Interface
-The App Installer provides the user interface for [MSIX packages](https://learn.microsoft.com/windows/msix/overview). The interface is defined to provide the user with critical information about the package in order to make an informed decision about installing the application.
+The App Installer provides the user interface for installation of [MSIX packages](https://learn.microsoft.com/windows/msix/overview). The interface is defined to provide the user with critical information about the package in order to make an informed decision about installing the application.
 
 The App Installer interface consist of the following features:
 
