@@ -66,7 +66,7 @@ Allow zone: <code>HKLM:\Software\Policies\Microsoft\Windows\AppInstaller\MsixAll
 | Intranet | Allow | Setting to *Blocked* will prevent files from enterprise servers from being downloaded and installed.
 | Trusted Sites | Allow | When set to *Allow*, allows the IT professional to allow specific Internet URIs.
 | Internet | Allow | When set to *Allow*, allows the IT professional to restrict installing apps from all Internet URIs.
-| Untrusted Sites | Blocked | Used in conjunction with Trusted Sites, and Internet, allows the IT professional to block specific Internet URIs.
+| Untrusted Sites | Blocked | When set to *Blocked*, allows the IT professional to block specific Internet URIs.
 
 
 ## App Installer CSP Security Zones
