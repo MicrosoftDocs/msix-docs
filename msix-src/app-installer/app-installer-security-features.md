@@ -74,6 +74,6 @@ The App Installer access to URL Security Zones is controlled by the [DesktopAppi
 
 ![Internet Zone Error](./images/app-installer-zone-error.png)
 
-IT Professionals can add sites to the Restricted or Trusted Sites Zone, by use of the [policy-csp-internetexplorer](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer). If a URL appears in a zone that is blocked, the App Installer will block installation.
+IT Professionals can add sites to the Restricted or Trusted Sites Zone by use of the [policy-csp-internetexplorer](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer). If a URL appears in a zone that is blocked, the App Installer will block installation.
 
 
