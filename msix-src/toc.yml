@@ -273,7 +273,7 @@
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
     - name: App installer user interface
-      href: app-installer-ui-dialog.md
+      href: app-installer/app-installer-ui-dialog.md
     - name: Create custom App Installer UX
       href: app-installer/How-to-create-custom-app-installer-ux.md
     - name: Auto-update and repair apps
