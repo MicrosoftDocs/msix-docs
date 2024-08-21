@@ -8,7 +8,7 @@ ms.custom: 19H1
 ---
 
 # App Installer User Interface
-The App Installer provides the user interface for installation of [MSIX packages](https://learn.microsoft.com/windows/msix/overview). The interface is defined to provide the user with critical information about the package in order to make an informed decision about installing the application.
+The App Installer provides the user interface for installation of [MSIX packages](/windows/msix/overview). The interface is defined to provide the user with critical information about the package in order to make an informed decision about installing the application.
 
 The App Installer interface consist of the following features:
 
@@ -26,20 +26,20 @@ The App Installer interface consist of the following features:
 ![Smart Dialog](./images/app-installer-ui-dialog.png)
 
 ## Application name
-The application name is provided by the app author, and extracted from the [MSIX file.](https://learn.microsoft.com/windows/msix/overview)
+The application name is provided by the app author, and extracted from the [MSIX file.](/windows/msix/overview)
 
 ## Microsoft Store signature
-If the dialog shows the string, "Microsoft Store App", you know the application has been successfully built and distributed through the Microsoft Store. Microsoft Store Signed Apps have been tested and comply with the [Microsoft Store Policies](https://learn.microsoft.com/windows/apps/publish/store-policies)
+If the dialog shows the string, "Microsoft Store App", you know the application has been successfully built and distributed through the Microsoft Store. Microsoft Store Signed Apps have been tested and comply with the [Microsoft Store Policies](/windows/apps/publish/store-policies)
 
 ## Publisher name and Version
-The publisher name and version are provided by the app author, and extracted from the [MSIX file.](https://learn.microsoft.com/windows/msix/overview)
+The publisher name and version are provided by the app author, and extracted from the [MSIX file.](/windows/msix/overview)
 
 ## Source
 
 The source provides the domain of the URL that the package was sourced from. This allows the user to decide whether they trust the source when deciding whether to install the package.
 
 ## Capabilities
-The listing of the [capabilities](https://learn.microsoft.com/windows/uwp/packaging/app-capability-declarations) allows the user to evaluate what the application can access on your PC before installing it. If the application is accessing a capability you do not agree with, it is recommended you choose cancel.
+The listing of the [capabilities](/windows/uwp/packaging/app-capability-declarations) allows the user to evaluate what the application can access on your PC before installing it. If the application is accessing a capability you do not agree with, it is recommended you choose cancel.
 
 ## Install and Cancel buttons
 

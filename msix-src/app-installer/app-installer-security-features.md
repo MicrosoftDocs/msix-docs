@@ -19,15 +19,16 @@ Build 1.24.1981 introduced the following App Installer security features:
 
 App Installer displays a warning banner to the user whenever the user is installing a package from the internet. When the internet warning is shown, users should be careful to verify that the source listed on the dialog is trusted.
 
-![Microsoft SmartScreen Error](./images/app-installer-ui-dialog-update.png)
+![A screenshot showing a Microsoft SmartScreen internet warning. It's an installation confirmation dialog. At the bottom of the pane, a badge icon with an exclamation point is next to a warning that reads "Internet applications can potentially harm your computer. If you do not trust the source, do not install this software".](./images/app-installer-ui-dialog-update.png)
 
 Installing software from an untrusted site on the internet can be risky and expose you to malware and other exploits. For more information, see [Protect yourself from online scams and attacks](https://support.microsoft.com/office/protect-yourself-from-online-scams-and-attacks-0109ae3f-fe61-4262-8dce-2ee3cd43bac7)
 
 ## Microsoft SmartScreen Reputation-based URL Validation
-The App Installer now takes advantage of [Microsoft SmartScreen](https://learn.microsoft.com/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/) to help users make informed decsions before installing software.
+
+The App Installer now takes advantage of [Microsoft SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/) to help users make informed decsions before installing software.
 Prior to downloading a package from an Internet source, App Installer will consult Microsoft SmartScreen's URL Reputation service. 
 
-![Microsoft SmartScreen Error](./images/app-installer-smart-screen.png)
+![A screenshot showing a Microsoft SmartScreen reputation-based URL validation error. The title of the dialog is "SmartScreen validation unsuccessful!" and the explanation text below says "This application was blocked as unsafe by Microsoft Defender SmartScreen. If you choose to continue, this application may not be safe to install."](./images/app-installer-smart-screen.png)
 
 When presented with this error, the user can choose to **Cancel** or **Continue** (Not recommended).
 
@@ -38,7 +39,7 @@ In addition to enabling and disabling the MS-AppInstaller protocol, IT Professio
 
 When a user attempts to open a blocked URL, they will be presented with the following dialog.
 
-![Internet Zone Error](./images/app-installer-zone-error.png)
+![A screenshot of an URL Security Zone error. The title of the dialog says "Your internet security settings prevented this file from being opened". The explanation text below states "The application you are attempting to access has been blocked by your administrator."](./images/app-installer-zone-error.png)
 
 ### Configuring App Installers Zone
 
@@ -70,10 +71,10 @@ Allow zone: <code>HKLM:\Software\Policies\Microsoft\Windows\AppInstaller\MsixAll
 
 
 ## App Installer CSP Security Zones
-The App Installer access to URL Security Zones is controlled by the [DesktopAppinstaller CSP](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller). If an App Installer attempts to load a URL from a zone that is blocked, the user will be presented with an error.
+The App Installer access to URL Security Zones is controlled by the [DesktopAppinstaller CSP](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller). If an App Installer attempts to load a URL from a zone that is blocked, the user will be presented with an error.
 
-![Internet Zone Error](./images/app-installer-zone-error.png)
+![This image is identical to the URL Security Zone Error image earlier in the page. A screenshot of an URL Security Zone error. The title of the dialog says "Your internet security settings prevented this file from being opened". The explanation text below states "The application you are attempting to access has been blocked by your administrator."](./images/app-installer-zone-error.png)
 
-IT Professionals can add sites to the Restricted or Trusted Sites Zone by use of the [policy-csp-internetexplorer](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer). If a URL appears in a zone that is blocked, the App Installer will block installation.
+IT Professionals can add sites to the Restricted or Trusted Sites Zone by use of the [policy-csp-internetexplorer](/windows/client-management/mdm/policy-csp-internetexplorer). If a URL appears in a zone that is blocked, the App Installer will block installation.
 
 
