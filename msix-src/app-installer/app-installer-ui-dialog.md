@@ -53,7 +53,7 @@ Because the App Installer improves the installation process, it can automaticall
 
 ## Internet Warning
 
-App Installer will display an internet application warning for applications that come from the internet. This warning informs the user to use caution when installing this application. As with any application installed from the internet, the user must use caution. Only install apps only from trusted sources, such as Microsoft Store, and be thoughtful about which apps you install. 
+App Installer will display an internet application warning for applications that come from the internet. This warning informs the user to use caution when installing this application. As with any application installed from the internet, the user must use caution. Only install apps from trusted sources, such as Microsoft Store, and be thoughtful about which apps you install. 
 See [Protect your PC from unwanted software](https://support.microsoft.com/windows/protect-your-pc-from-unwanted-software-074a2d74-02db-03dd-8340-9e1822377856) for more information.
 
 
