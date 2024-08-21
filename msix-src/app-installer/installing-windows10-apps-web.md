@@ -104,6 +104,6 @@ Prior to accessing the domain referenced by the the *ms-appinstaller* URI scheme
 
 ### Microsoft SmartScreen Validation
 
-If the domain referenced by the *ms-appinstaller* URI scheme is allowed, the App Installer will validate the URI with [Microsoft SmartScreen](https://learn.microsoft.com/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen)>. URIs that fail the reputation check will present the user with an error.
+If the domain referenced by the *ms-appinstaller* URI scheme is allowed, the App Installer will validate the URI with [Microsoft SmartScreen](https://learn.microsoft.com/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen). URIs that fail the reputation check will present the user with an error.
 
 See [App Installer security features](./app-installer-security-features.md) for more information.
