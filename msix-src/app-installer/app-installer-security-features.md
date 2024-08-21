@@ -34,7 +34,7 @@ When presented with this error, the user can choose to **Cancel** or **Continue*
 Clicking continue will allow App Installer to open the package for installation.
 
 ## URL Security Zones
-In addition to enabling and disabling the MS-AppInstaller protocol, IT Professionals can now prevent users from installing apps from URIs that the enterprise does not support. IT Pros can disable installation from specific URL Security Zones.
+In addition to enabling and disabling the MS-AppInstaller protocol, IT Professionals can now prevent users from installing apps from URIs that the enterprise does not allow. IT Pros can disable installation from specific URL Security Zones.
 
 When a user attempts to open a blocked URL, they will be presented with the following dialog.
 
