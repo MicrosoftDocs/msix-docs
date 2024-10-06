@@ -8,7 +8,7 @@ ms.custom: "RS5, seodec18"
 ---
 
 # Deploy MSIX Core apps with Microsoft Endpoint Configuration Manager
-The delivery of MSIX applications using the Microsoft Endpoint Configuration Manager allows IT Pros to link other applications as dependencies, forcing them to install prior to. By creating a dependency to the MSIX Core application, we enforce the MSIX Core application to be installed only when required by the device. For more information on application dependencies in Micosoft Endpoint Configuration Manager see: [Create Applications: Deployment type Dependencies](/configmgr/apps/deploy-use/create-applications#bkmk_dt-depend).
+The delivery of MSIX applications using the Microsoft Endpoint Configuration Manager allows IT Pros to link other applications as dependencies, forcing them to install prior to. By creating a dependency to the MSIX Core application, we enforce the MSIX Core application to be installed only when required by the device. For more information on application dependencies in Microsoft Endpoint Configuration Manager see: [Create Applications: Deployment type Dependencies](/configmgr/apps/deploy-use/create-applications#bkmk_dt-depend).
 
 ## Get started
 The following steps will guide you through setting up an MSIX Core deployment strategy by using Microsoft Endpoint Configuration Manager:
