@@ -5,7 +5,7 @@
 
 title:       Package Analyzer
 description: feature in MSIX Packaging tool that analyzes the package. It then detects errors and suggests fixes.
-author:      fiza-microsoft # GitHub alias
+author:      fiza-azmi # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
 ms.topic:    article 
 ms.date:     10/06/2023

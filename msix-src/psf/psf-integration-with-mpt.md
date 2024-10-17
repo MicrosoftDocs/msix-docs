@@ -5,7 +5,7 @@
 
 title:       Automated PSF config generation 
 description: Integration of PSF with MSIX Packaging tool to simplify conversion by automating PSF config file generation
-author:      fiza-microsoft # GitHub alias
+author:      fiza-azmi # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
 ms.topic:    article
 ms.date:     10/06/2023

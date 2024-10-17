@@ -5,7 +5,7 @@
 
 title:       App Attach from Visual Studio # Add a title for the browser tab
 description: This article explains how to create an App Attach ready package using Visual Studio 2022 and publish it to Azure Virtual Desktop # Add a meaningful description for search results
-author:      fiza-microsoft # GitHub alias
+author:      fiza-azmi # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
 ms.topic:    conceptual # Add the ms.topic value
 ms.date:     05/02/2023
