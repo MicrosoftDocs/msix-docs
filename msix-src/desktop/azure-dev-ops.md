@@ -251,3 +251,6 @@ The generated HTML file includes a hyperlink prefixed with the browser-agnostic 
 ```
 
 If you set up a release pipeline that publishes the contents of the drop folder to your intranet or any other Web site, and the Web server supports byte-range requests and is configured properly, your end users can use this link to directly install the app without downloading the MSIX package first.
+
+> [!Note]
+> The ability to use the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol) can be controlled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). For more info, see [Installing Windows 10 apps from a web page](/windows/msix/app-installer/installing-windows10-apps-web).
