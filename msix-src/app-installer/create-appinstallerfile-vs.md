@@ -10,6 +10,9 @@ ms.custom: "RS5, seodec18"
 # Create an App Installer file with Visual Studio
 
 Starting with Windows 10, Version 1803, and Visual Studio 2017, Update 15.7, sideloaded apps can be configured to receive automatic updates using an `.appinstaller` file. Visual Studio supports enabling these updates.
+> [!Note]
+> The ability to use the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol) can be controlled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). For more info, see [Installing Windows 10 apps from a web page](/windows/msix/app-installer/installing-windows10-apps-web).
+
 
 ## App Installer file location
 The `.appinstaller` file can be hosted in a shared location like a HTTP endpoint or a UNC shared folder, and includes the path to find the app packages to be installed. Users install the app from the shared location and enable periodic checks for new updates. 

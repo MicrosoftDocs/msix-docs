@@ -9,7 +9,7 @@ ms.custom: RS5
 
 # Edit a package using Package editor
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 To make changes to an existing MSIX package, such as editing the properties in the manifest or the contents of the package without having to package the installer again, you can use **Package editor** in the MSIX Packaging Tool.
 
