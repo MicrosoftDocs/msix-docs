@@ -9,7 +9,7 @@ keywords: windows 10, uwp, msix
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
-> Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution).
+> Microsoft Store for Business and Microsoft Store for Education was retired in the first quarter of 2023. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution).
 >
 > You can continue to use the current Device Guard Signing Service v2 (DGSS) capabilities until that time. DGSS will be replaced by the [Azure Code Signing service (ACS)](https://aka.ms/AzureCodeSigning) and will support your Windows Defender Application Control (WDAC) policy and catalog file signing needs.
 
@@ -63,7 +63,7 @@ To register your app with the proper settings so that you can use Azure AD authe
     - **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g., Skype, Xbox)** – This option is not recommended due to it being open to use by consumer level Microsoft accounts. All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign into services like Xbox and Skype.
     - **Personal Microsoft accounts only** – Like the last option this option is also not recommended. This is not only because it allows personal accounts, but because this option only supports personal accounts.  Azure AD accounts are explicitly blocked. Personal accounts that are used to sign into services like Xbox and Skype
 
-7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter https://dgss.microsoft.com in the text box.
+7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter `https://dgss.microsoft.com` in the text box.
 8.	Click **Register**
 9.	Toward the top right of the page locate the entry labeled Redirect URIs. Select the line below it labeled **0 web, 0 spa, 1 public client**
 10.	Locate the entry labeled **Allow public client flows** in the Advanced settings section. Set this value to **Yes**

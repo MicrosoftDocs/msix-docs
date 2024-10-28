@@ -1,11 +1,11 @@
 ---
 # Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
+# For more information, see https://review.learn.microsoft.com/help/platform/learn-editor-add-metadata?branch=main
+# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/help/platform/metadata-taxonomies?branch=main
 
 title:       Package Analyzer
 description: feature in MSIX Packaging tool that analyzes the package. It then detects errors and suggests fixes.
-author:      fiza-microsoft # GitHub alias
+author:      fiza-azmi # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
 ms.topic:    article 
 ms.date:     10/06/2023

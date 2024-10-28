@@ -91,3 +91,5 @@ ms-appinstaller:?source=https://contoso.com/myapp.appinstaller&activationUri=my-
 ```html
 ms-appinstaller:?source=https://contos.com/myapp.msix&activationUri=my-custom-protocol:?my-parameter=my-param-value
 ```
+> [!NOTE]
+> The ability to use the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol) can be controlled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). For more info, see [Installing Windows 10 apps from a web page](/windows/msix/app-installer/installing-windows10-apps-web).

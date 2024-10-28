@@ -1,5 +1,5 @@
 ---
-Description: The Package Support Framework helps you fix issues that prevent your desktop application from running in an MSIX container.
+description: The Package Support Framework helps you fix issues that prevent your desktop application from running in an MSIX container.
 title: Package Support Framework
 ms.date: 05/14/2020
 ms.topic: article
@@ -31,7 +31,7 @@ You can check our [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFrame
 
 If you can't find a runtime fix that addresses your issue, you can [create one](create-package-support-framework.md). To do that, you'll identify which function calls fail when your application runs in an MSIX container. Then, you can create replacement functions that you'd like the runtime manager to call instead. This gives you an opportunity to replace the implementation of a function with behavior that conforms to the rules of the modern runtime environment.
 
-To create the Package Support Framework leverages the [Detours](https://www.microsoft.com/en-us/research/project/detours) technology which is an open source framework developed by Microsoft Research (MSR) and helps with API redirection and hooking.
+To create the Package Support Framework leverages the [Detours](https://www.microsoft.com/research/project/detours) technology which is an open source framework developed by Microsoft Research (MSR) and helps with API redirection and hooking.
 
 You can also use the Package Support Framework to run scripts to customize an application for the user environment dynamically. For more information, see [this article](run-scripts-with-package-support-framework.md).
 
@@ -41,7 +41,7 @@ The Package Support Framework does not support registry overrides. It is designe
 
 ## Data and telemetry
 
-The Package Support Framework includes telemetry that collects usage data and sends it to Microsoft to help improve our products and services. Read Microsoft's [privacy statement to learn more](https://privacy.microsoft.com/en-US/privacystatement). However, data will be collected only when both of the following conditions are met:
+The Package Support Framework includes telemetry that collects usage data and sends it to Microsoft to help improve our products and services. Read Microsoft's [privacy statement to learn more](https://privacy.microsoft.com/privacystatement). However, data will be collected only when both of the following conditions are met:
 
 * The Package Support Framework binaries are used from the [NuGet package](https://www.nuget.org/packages?q=packagesupportframework) on a Windows 10 computer.
 * The user has enabled collection of data on the computer.
