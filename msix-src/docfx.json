@@ -97,7 +97,7 @@
         "msix-sdk/**.md": "dianmsft",
         "msix-core/**.md": "dianmsft",
         "package/**.md": "dianmsft",
-        "packaging-tool/**.md": "fiza-microsoft",
+        "packaging-tool/**.md": "fiza-azmi",
         "toolkit/**.md": "RDMacLachlan",
         "psf/**.md": "dianmsft"
       }		 

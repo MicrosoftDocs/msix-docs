@@ -10,7 +10,7 @@ ms.custom: RS5
 # Installing Windows 10 apps from a web page
 
 > [!IMPORTANT]
-> This topic describes the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol), and how to use it. That URI scheme is disabled by default; but it can be enabled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). If the Group Policy **EnableMSAppInstallerProtocol** is set to disabled, or if it isn't specified, then *ms-appinstaller* is disabled.
+> This topic describes the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol), and how to use it. This URI scheme can be disabled by an IT professional (an administrator). To disable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to disabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). If the Group Policy **EnableMSAppInstallerProtocol** is set to enabled, or if it isn't specified, then *ms-appinstaller* is enabled.
 >
 > When the *ms-appinstaller* URI scheme is disabled, App Installer will *not* be able to install an app directly from a web server (which is what this topic is about). In that case, the user *will* need to download the app first. So update the link on your website by removing `'ms-appinstaller:?source='` so that the MSIX package or `.appinstaller` file will be downloaded. That might increase the download size for some packages. The user can then install the package by using App Installer.
 
@@ -21,11 +21,12 @@ App Installer can install an app directly from a web server. When the user click
 The direct app install is only available in the Windows 10 Fall Creators Update and newer. Previous versions of Windows (going back to the Windows 10 Anniversary Update) will be supported by the [web install experience on previous versions of Windows 10](#web-install-experience). This experience is not as fluid as the direct app install, but it provides significant improvements to the existing app install procedure.
 
 > [!NOTE]
-> App Installer version must be greater than 1.0.12271.0 to support this feature.
+> App Installer version must be greater than 1.0.12271.0 to support this feature, and the ability to use the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol) can be controlled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). For more info, see [Installing Windows 10 apps from a web page](/windows/msix/app-installer/installing-windows10-apps-web).
 
 ## Protocol Activation Scheme
 
 In this mechanism, App Installer registers with the operating system for a protocol activation scheme. When user clicks on a web link, the browser checks with the OS for apps that are registered to that web link. If the scheme matches the protocol activation scheme specified by App Installer, then App Installer is invoked. It's important to note that this mechanism is browser independent. This is beneficial to site administrators, for example, who don't need to consider web browser differences while incorporating this into a webpage.
+
 
 ### Requirements for protocol activation scheme
 
@@ -91,3 +92,20 @@ Here's a quick comparison of the Windows 10 Fall Creators update version of App 
 | App Installer will take care of disposal of downloaded packages | User must manually delete the downloaded files |
 
 On versions prior to the Windows 10 Fall Creators Update, App Installer cannot directly install an app from the web. On these versions, App Installer can only install app packages that are locally available. Instead, App Installer will download the package and require the user to double click the downloaded package to install.
+
+## App Installer Security
+
+With Build 1.24.1981 of the App Installer, the following security measures have been added:
+
+* Internet Zone validation
+* Microsoft SmartScreen Validation
+
+### Internet Zone Validation
+
+Prior to accessing the domain referenced by the the *ms-appinstaller* URI scheme, the App Installer will verify that the domain is allowed by the IT Professional. If the domain has been restricted, the App Installer will present an error to the user.
+
+### Microsoft SmartScreen Validation
+
+If the domain referenced by the *ms-appinstaller* URI scheme is allowed, the App Installer will validate the URI with [Microsoft SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen). URIs that fail the reputation check will present the user with an error.
+
+See [App Installer security features](./app-installer-security-features.md) for more information.

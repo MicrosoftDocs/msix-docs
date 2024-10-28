@@ -23,7 +23,7 @@ The MSIX Packaging Tool Insider Program provides early access to IT pros and dev
 
 After joining the program, you will receive an email confirming your enrollment. 
 
-Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf). Make you are logged in with the Microsoft account that you used to sign up for the MSIX Packaging Tool Insider Program. Next, go to the product description page and click **Install** to begin the installation. Insider builds are not available for offline distribution.
+Install the MSIX Packaging Tool from the Microsoft Store [here](https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf). Make you are logged in with the Microsoft account that you used to sign up for the MSIX Packaging Tool Insider Program. Next, go to the product description page and click **Install** to begin the installation. Insider builds are not available for offline distribution.
 
 If the tool is already installed on your computer, check the installed version. Run the MSIX Packaging Tool, click the gear icon on the top right, and then click the **About** tab see the version. The app version should match the current Insider Preview build from the section [below](#current-insider-preview-build).
 
@@ -31,7 +31,7 @@ If the tool is already installed on your computer, check the installed version. 
 
 ### Version 1.2024.405.0
 
-- Enhanced [PSF Support](https://learn.microsoft.com/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
+- Enhanced [PSF Support](/windows/msix/psf/psf-integration-with-mpt) for Process, Dynamic Library, Environment Variable and Middleware Fixups
 - Improved guideline support for utilizing PSF Fixup feature in the tool
 
 You can find the full history of MSIX Packaging Tool release notes [here](release-notes/history.md).
@@ -50,7 +50,7 @@ You can also share feedback from within the app. Click on Settings(gear icon) on
     - Please [join the program](https://aka.ms/MSIXPackagingPreviewProgram) again.  
 
 2. I am enrolled into the Insider Program but I don't have the Insider Preview version of the MSIX Packaging Tool on my computer. 
-    - Updates from the Microsoft Store are pushed gradually to users around the world, and there might be a delay in getting the automatic updates. You can trigger an update check by going to the [tool page](https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf) in the Store. 
+    - Updates from the Microsoft Store are pushed gradually to users around the world, and there might be a delay in getting the automatic updates. You can trigger an update check by going to the [tool page](https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf) in the Store. 
 3. I would like to opt-out of the MSIX Packaging Tool Insider Program. 
     - We are sorry to see you leave the program. Fill the form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-NSOqDz219PqoOqk5qxQEZUMlEwNVNKMDhNUVlKOVpTRTlVWFhMMThLQy4u) to unsubscribe from the program. 
 

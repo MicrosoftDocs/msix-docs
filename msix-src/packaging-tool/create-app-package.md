@@ -9,7 +9,7 @@ ms.custom: RS5
 
 # Create an MSIX package from any desktop installer (MSI, EXE, ClickOnce, or App-V)
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 You can use the [MSIX Packaging Tool](tool-overview.md) to create an MSIX application package from any of the following options:
 

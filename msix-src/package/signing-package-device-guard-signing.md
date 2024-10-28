@@ -1,7 +1,7 @@
 ---
 description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
-ms.date: 10/26/2020
+ms.date: 12/07/2022
 ms.topic: article
 keywords: windows 10, uwp, msix
 ---
@@ -9,28 +9,25 @@ keywords: windows 10, uwp, msix
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
-> Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. You can continue to use the current capabilities of free apps until that time. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution)
+> Microsoft Store for Business and Microsoft Store for Education was retired in the first quarter of 2023. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution).
+>
+> You can continue to use the current Device Guard Signing Service v2 (DGSS) capabilities until that time. DGSS will be replaced by the [Azure Code Signing service (ACS)](https://aka.ms/AzureCodeSigning) and will support your Windows Defender Application Control (WDAC) policy and catalog file signing needs.
 
-> [!IMPORTANT]
-> [Device Guard Signing Service v2](/microsoft-store/device-guard-signing-portal) (DGSS v2) is now available. 
-> 
-> May 2021 -
-The existing web-based mechanism for the Device Guard Signing service v1 will be retired on June 9, 2021. Please transition to the PowerShell based version of the service (DGSS v2). A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) containing the required DGSS v2 components and migration documentation is available. Please read the Microsoft Terms of Use included in the NuGet package; note that the usage of DGSS implies acceptance of these terms. For any questions, please contact us at DGSSMigration@microsoft.com.
+The [Device Guard Signing Service v2 (DGSS)](/windows/security/threat-protection/windows-defender-application-control/use-device-guard-signing-portal-in-microsoft-store-for-business) is a code signing service that comes with your existing Microsoft Store for Business and Education tenant account. You can use the DGSS to sign line-of-business apps, catalog files, and Windows Defender Application Control (WDAC) policies. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK and the DGSSv2 dlib in the NuGet package to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
+
+A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) containing the required DGSS v2 components and migration documentation is available. Please read the Microsoft Terms of Use included in the NuGet package; note that the usage of DGSS implies acceptance of these terms. For any questions, please contact us at DGSSMigration@microsoft.com.
 
 > [!NOTE]
 > After downloading microsoft.acs/dgss.client.nupkg you can rename to .zip and extract contents for files and additional documentation and information
 
-[Device Guard signing](/microsoft-store/device-guard-signing-portal) is a Device Guard feature that is available in the Microsoft Store for Business and Education. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK and the DGSSv2 dlib in the NuGet package to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
-
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
-1. If you haven't done so already, [sign up for Microsoft Store for Business or Microsoft Store for Education](/microsoft-store/sign-up-microsoft-store-for-business).
+1. In the [Microsoft Store for Business](https://businessstore.microsoft.com/) (or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
     > [!NOTE]
     > You only need to use this portal to configure permissions for Device Guard signing.
-2. In the Microsoft Store for Business (or or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
-3. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business.
-4. Get an Azure AD access token in JSON format.
-5. Run SignTool to sign your MSIX package with Device Guard signing, and pass the Azure AD access token you obtained in the previous step.
+2. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business.
+3. Get an Azure AD access token in JSON format.
+4. Run SignTool to sign your MSIX package with Device Guard signing, and pass the Azure AD access token you obtained in the previous step.
 
 The following sections describes these steps in more detail.
 
@@ -66,7 +63,7 @@ To register your app with the proper settings so that you can use Azure AD authe
     - **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g., Skype, Xbox)** – This option is not recommended due to it being open to use by consumer level Microsoft accounts. All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign into services like Xbox and Skype.
     - **Personal Microsoft accounts only** – Like the last option this option is also not recommended. This is not only because it allows personal accounts, but because this option only supports personal accounts.  Azure AD accounts are explicitly blocked. Personal accounts that are used to sign into services like Xbox and Skype
 
-7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter https://dgss.microsoft.com in the text box.
+7.	In the **Redirect URI** drop down select **Public client/native (mobile & desktop)** from the drop-down selection menu. Enter `https://dgss.microsoft.com` in the text box.
 8.	Click **Register**
 9.	Toward the top right of the page locate the entry labeled Redirect URIs. Select the line below it labeled **0 web, 0 spa, 1 public client**
 10.	Locate the entry labeled **Allow public client flows** in the Advanced settings section. Set this value to **Yes**
