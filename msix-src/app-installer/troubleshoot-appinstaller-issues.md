@@ -104,4 +104,4 @@ If the App Installer cannot install the app, these steps will help identify the 
 
 ### App Installer event logs
 
-The app deployment infrastructure emits logs that are often useful for debugging installation issues via the Windows Event Viewer: `Application and Services Logs -> Microsoft -> Windows -> AppxDeployment-Server`
+The app deployment infrastructure emits logs that are often useful for debugging installation issues via the Windows Event Viewer: `Application and Services Logs -> Microsoft -> Windows -> AppxDeployment-Server`. Additional log files are created in this folder: `%LocalAppData%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir`
