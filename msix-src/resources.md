@@ -36,7 +36,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>MSIX provides lots of benefits across the app lifecycle management. Learn how to take advantage of MSIX in your enterprise and the benefits to developers, IT Pros and end users.</p>
     :::column-end:::
     :::column:::
-        > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ig2l]
+        > [!VIDEO https://learn-video.azurefd.net/vod/player?id=24217e15-a70b-42e4-af82-e423a755351d]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -60,7 +60,7 @@ This article provides a list of GitHub repositories, videos, and other resources
 :::row:::
     :::column:::
         <h3>Using MSIX with CI/CD Pipelines for Code Changes</h3>
-        <p>With MSIX and Azure DevOps you can go from making a code change in your repo to getting the updated release of your application on users’ machines in a matter of minutes. Join us for this demo-driven session as we demonstrate how to use MSIX CI/CD Pipelines to automate building, packaging, and deploying your desktop applications.</p>
+        <p>With MSIX and Azure DevOps you can go from making a code change in your repo to getting the updated release of your application on usersï¿½ machines in a matter of minutes. Join us for this demo-driven session as we demonstrate how to use MSIX CI/CD Pipelines to automate building, packaging, and deploying your desktop applications.</p>
     :::column-end:::
     :::column:::
         > [!VIDEO https://www.youtube.com/embed/MnDCaQNnZc0]
@@ -81,7 +81,7 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>Learn how developers can take advantage of the benefits of MSIX.</p>
     :::column-end:::
     :::column:::
-        > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3i5DH]
+        > [!VIDEO https://learn-video.azurefd.net/vod/player?id=e4f450f4-62e8-4c2d-ac3a-dd60b86f4ed5]
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -90,6 +90,6 @@ This article provides a list of GitHub repositories, videos, and other resources
         <p>Evolve and enhance your desktop apps with MSIX. Leverage new APIs, new controls and other features.</p>
     :::column-end:::
     :::column:::
-        > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3iiD5]
+        > [!VIDEO https://learn-video.azurefd.net/vod/player?id=bcfab734-cc4a-46e2-9a9a-6e42e6529862]
     :::column-end:::
 :::row-end:::
