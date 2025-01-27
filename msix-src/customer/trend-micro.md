@@ -1,7 +1,7 @@
 ---
 title: Trend Micro
 description: TREND Micro describes their experience with MSIX
-author: dianmsft
+author: andreww-msft
 ms.date: 03/10/2021
 ms.topic: article
 keywords: windows 10, uwp, msix
