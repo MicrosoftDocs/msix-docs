@@ -3,7 +3,7 @@ title:  MSIX resources
 description: This article provides an overview of how you can get started with using MSIX. The article will point you to our GitHub repositories depending on your scenarios. 
 ms.date: 01/16/2020
 ms.topic: article
-author: dianmsft
+author: andreww-msft
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.custom: "RS5, seodec18"
 ---

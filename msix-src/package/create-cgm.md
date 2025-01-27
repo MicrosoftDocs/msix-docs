@@ -3,8 +3,8 @@ ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
 title: Create and convert a source content group map
 description: This article describes how to create a content group map. A content group map necessary to get your app ready for streaming install.
 ms.date: 07/02/2019
-author: dianmsft
-ms.author: diahar
+author: andreww-msft
+ms.author: andreww
 ms.topic: article
 keywords: windows 10, msix, uwp, content group map, streaming install, app streaming install, source content group map
 ---
