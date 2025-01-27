@@ -1,7 +1,7 @@
 ---
 title: MID GmbH experience with MSIX
 description: Read about how MID uses MSIX and .NET Core to improve the release cycle of their Innovator Enterprise Modeling Suite.
-author: dianmsft
+author: andreww-msft
 ms.date: 05/11/2022
 ms.topic: article
 keywords: windows 10, uwp, msix
