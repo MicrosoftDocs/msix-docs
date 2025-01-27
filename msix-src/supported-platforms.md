@@ -1,7 +1,7 @@
 ---
 title: MSIX features and supported platforms 
 description: This topic describes supported platforms for MSIX, and lists feature additions by release. 
-author: dianmsft
+author: andreww-msft
 ms.date: 04/11/2023
 ms.topic: article
 keywords: windows 10, uwp, msix

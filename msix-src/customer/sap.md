@@ -1,7 +1,7 @@
 ---
 title: SAP
 description: SAP describes their experience with MSIX
-author: dianmsft
+author: andreww-msft
 ms.date: 03/05/2021
 ms.topic: article
 keywords: windows 10, uwp, msix

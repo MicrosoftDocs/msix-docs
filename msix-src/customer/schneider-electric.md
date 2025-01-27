@@ -1,7 +1,7 @@
 ---
 title: Schneider Electric
 description: Schneider Electric describes their experience with MSIX
-author: dianmsft
+author: andreww-msft
 ms.date: 06/25/2020
 ms.topic: article
 keywords: windows 10, uwp, msix

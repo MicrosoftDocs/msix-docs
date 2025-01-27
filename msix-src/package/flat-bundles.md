@@ -2,8 +2,8 @@
 title: Flat bundle app packages
 description: Describes how to create a flat bundle to bundle your app’s .appx package files with references to app packages.
 ms.date: 11/19/2024
-author: dianmsft
-ms.author: diahar
+author: andreww-msft
+ms.author: andreww
 ms.topic: article
 keywords: windows 10, msix, packaging, package configuration, flat bundle
 ---
