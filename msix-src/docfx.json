@@ -70,8 +70,8 @@
         "msix-sdk/**.md": "andreww",
         "msix-core/**.md": "andreww",
         "package/**.md": "andreww",
-        "packaging-tool/**.md": "fizaazmi",
-        "toolkit/**.md": "romaclac",
+        "packaging-tool/**.md": "andreww",
+        "toolkit/**.md": "kevinla",
         "psf/**.md": "andreww"
       },
       "author":
@@ -92,13 +92,13 @@
         "supported-platforms.md": "andreww-msft",
         "app-installer/**.md": "andreww-msft",
         "customer/**.md": "andreww-msft",
-        "desktop/**.md": "Huios",
+        "desktop/**.md": "andreww-msft",
         "manage/**.md": "andreww-msft",
         "msix-sdk/**.md": "andreww-msft",
         "msix-core/**.md": "andreww-msft",
         "package/**.md": "andreww-msft",
-        "packaging-tool/**.md": "fiza-azmi",
-        "toolkit/**.md": "RDMacLachlan",
+        "packaging-tool/**.md": "andreww-msft",
+        "toolkit/**.md": "KevinLaMS",
         "psf/**.md": "andreww-msft"
       }		 
     },
