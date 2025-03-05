@@ -1,10 +1,8 @@
 ---
 title: MSIX AppContainer apps
 description: This topic shows how you can take an app that's packaged using MSIX, and easily configure it to run in the AppContainer environment (in a lightweight app container).
-ms.date: 07/20/2023
+ms.date: 02/12/2025
 ms.topic: article
-ms.author: stwhi
-author: stevewhims
 keywords: windows 11, windows 10, winui3, uwp, msix
 --- 
 
