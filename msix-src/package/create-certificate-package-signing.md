@@ -9,7 +9,7 @@ ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 
 # Create a certificate for package signing
 
-This article explains how to create and trust a certificate for app package signing using PowerShell tools (for CMD tools, see [here](https://learn.microsoft.com/windows/win32/appxpkg/how-to-create-a-package-signing-certificate)). It's recommended that you use Visual Studio for [packaging UWP apps](packaging-uwp-apps.md) and [packaging desktop apps](../desktop/desktop-to-uwp-packaging-dot-net.md), but you can still package an app manually if you did not use Visual Studio to develop your app.
+This article explains how to create and trust a certificate for app package signing using PowerShell tools (for CMD tools, see [here](/windows/win32/appxpkg/how-to-create-a-package-signing-certificate)). It's recommended that you use Visual Studio for [packaging UWP apps](packaging-uwp-apps.md) and [packaging desktop apps](../desktop/desktop-to-uwp-packaging-dot-net.md), but you can still package an app manually if you did not use Visual Studio to develop your app.
 
 ## Prerequisites
 
