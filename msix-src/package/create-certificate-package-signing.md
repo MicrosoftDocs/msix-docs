@@ -9,7 +9,7 @@ ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 
 # Create a certificate for package signing
 
-This article explains how to create and export a certificate for app package signing using PowerShell tools. It's recommended that you use Visual Studio for [packaging UWP apps](packaging-uwp-apps.md) and [packaging desktop apps](../desktop/desktop-to-uwp-packaging-dot-net.md), but you can still package an app manually if you did not use Visual Studio to develop your app.
+This article explains how to create and trust a certificate for app package signing using PowerShell tools (for CMD tools, see [here](/windows/win32/appxpkg/how-to-create-a-package-signing-certificate)). It's recommended that you use Visual Studio for [packaging UWP apps](packaging-uwp-apps.md) and [packaging desktop apps](../desktop/desktop-to-uwp-packaging-dot-net.md), but you can still package an app manually if you did not use Visual Studio to develop your app.
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ Use the **New-SelfSignedCertificate** PowerShell cmdlet to create a self signed 
 Based on the AppxManifest.xml file from the previous example, you should use the following syntax to create a certificate. In an elevated PowerShell prompt:
 
 ```powershell
-New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName "Your friendly name goes here" -CertStoreLocation "Cert:\CurrentUser\My" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.3", "2.5.29.19={text}")
+New-SelfSignedCertificate -Type Custom -KeyUsage DigitalSignature -CertStoreLocation "Cert:\CurrentUser\My" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.3", "2.5.29.19={text}") -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -FriendlyName "Your friendly name goes here"
 ```
 
 Note the following details about some of the parameters:
@@ -60,7 +60,7 @@ Note the following details about some of the parameters:
 
   - Basic Constraints: This extension indicates whether or not the certificate is a Certificate Authority (CA). For a self-signing certificate, this parameter should include the extension string **"2.5.29.19={text}"**, which indicates that the certificate is an end entity (not a CA).
 
-After running this command, the certificate will be added to the local certificate store, as specified in the "-CertStoreLocation" parameter. The result of the command will also produce the certificate's thumbprint.  
+After running this command, the certificate will be created and added to the User Personal certificate store. The result of the command will also produce the certificate's thumbprint.  
 
 You can view your certificate in a PowerShell window by using the following commands:
 
@@ -69,13 +69,15 @@ Set-Location Cert:\CurrentUser\My
 Get-ChildItem | Format-Table Subject, FriendlyName, Thumbprint
 ```
 
-This will display all of the certificates in your local store.
+This will display all of the certificates in the User Personal certificate store.
 
-## Export a certificate 
+In order to install an app signed with this certificate, the certificate must be imported into the Local Machine Trusted People certificate store.
 
-To export the certificate in the local store to a Personal Information Exchange (PFX) file, use the **Export-PfxCertificate** cmdlet.
+## Export the certificate to a PFX file
 
-When using **Export-PfxCertificate**, you must either create and use a password or use the "-ProtectTo" parameter to specify which users or groups can access the file without a password. Note that an error will be displayed if you don't use either the "-Password" or "-ProtectTo" parameter.
+In order to import the newly created certificate into the Local Machine Trusted People certificate store, you need to first export it to a Personal Information Exchange (PFX) file using the **Export-PfxCertificate** cmdlet.
+
+When using **Export-PfxCertificate**, you must either create and use a password or use the "-ProtectTo" parameter to specify which users or groups can access the file without a password. Note that an error will be displayed if you don't use either the "-Password" or "-ProtectTo" parameter. "-Password" is recommended for general usage while "-ProtectTo" is useful when your user account is backed by a domain controller.
 
 ### Password usage
 
@@ -90,7 +92,15 @@ Export-PfxCertificate -cert "Cert:\CurrentUser\My\<Certificate Thumbprint>" -Fil
 Export-PfxCertificate -cert Cert:\CurrentUser\My\<Certificate Thumbprint> -FilePath <FilePath>.pfx -ProtectTo <Username or group name>
 ```
 
-After you create and export your certificate, you're ready to sign your app package with **SignTool**. For the next step in the manual packaging process, see [Sign an app package using SignTool](sign-app-package-using-signtool.md).
+## Import the certificate to the Local Machine Trusted People store
+
+Now that you've exported the certificate to a PFX file, you can import it into the Local Machine Trusted People store using the **Import-PfxCertificate** cmdlet from an admin PowerShell session.
+
+```powershell
+Import-PfxCertificate -CertStoreLocation "Cert:\LocalMachine\TrustedPeople" -Password $password -FilePath <FilePath>.pfx
+```
+
+Now that the certificate is trusted, you're ready to sign your app package with **SignTool**. For the next step in the manual packaging process, see [Sign an app package using SignTool](sign-app-package-using-signtool.md).
 
 ## Security considerations
 
