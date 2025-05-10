@@ -36,7 +36,7 @@ Here's an example.
 Here's an example of the syntax.
 
 ```powershell
-Add-AppPackage -Path ".\MyEmployees.appx" -AllowUnsigned
+Add-AppxPackage -Path ".\MyEmployees.appx" -AllowUnsigned
 ```
 
 When your app is ready to be distributed, you should ensure that the package is signed. Be sure to remove the special OID, and ensure that the publisher name is the same as the certificate subject name.
