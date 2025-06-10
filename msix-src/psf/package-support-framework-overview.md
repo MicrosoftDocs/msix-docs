@@ -2,7 +2,7 @@
 description: The Package Support Framework helps you fix issues that prevent your desktop application from running in an MSIX container.
 title: Package Support Framework
 ms.date: 05/14/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
 ---

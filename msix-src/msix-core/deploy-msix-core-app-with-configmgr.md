@@ -2,7 +2,7 @@
 title: Deploy MSIX Core apps with Microsoft Endpoint Configuration Manager
 description: Learn how to set up an MSIX Core deployment strategy using Microsoft Endpoint Configuration Manager.
 ms.date: 03/02/2020
-ms.topic: article
+ms.topic: install-set-up-deploy
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.custom: "RS5, seodec18"
 ---

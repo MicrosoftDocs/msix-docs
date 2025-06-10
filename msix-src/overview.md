@@ -2,7 +2,7 @@
 title: What is MSIX?
 description: This topic introduces the basics of the MSIX packaging format; a modern packaging experience for Windows apps.
 ms.date: 10/02/2023
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 11, windows 10, uwp, msix
 ms.custom: RS5
 ---

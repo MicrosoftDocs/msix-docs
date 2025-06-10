@@ -2,7 +2,7 @@
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. 
 ms.date: 10/06/2023
-ms.topic: article
+ms.topic: troubleshooting-known-issue
 keywords: msix packaging tool, known issues, troubleshooting
 ms.custom: RS5
 ---

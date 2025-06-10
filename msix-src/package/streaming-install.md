@@ -5,7 +5,7 @@ description: App streaming install enables you to specify which parts of your ap
 ms.date: 07/02/2019
 author: andreww-msft
 ms.author: andreww
-ms.topic: article
+ms.topic: install-set-up-deploy
 keywords: windows 10, msix, uwp, streaming install
 ---
 

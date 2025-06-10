@@ -3,7 +3,7 @@ title: Update Store-published apps from your code
 description: Describes how MSIX packages can be updated by developers in code. 
 author: Huios
 ms.date: 01/24/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
 ---

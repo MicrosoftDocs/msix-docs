@@ -2,7 +2,7 @@
 title: Generating MSIX package components
 description: Shows how to manually package a Windows desktop application (such as Win32, WPF, or Windows Forms) for Windows.
 ms.date: 01/04/2023
-ms.topic: article
+ms.topic: how-to
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.custom: RS5

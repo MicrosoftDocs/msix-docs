@@ -2,7 +2,7 @@
 description: Provides guidance on how to apply runtime working directory fix up with the Package Support Framework.
 title: Package Support Framework - Working Directory fixup
 ms.date: 12/16/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, psf, package support framework, working directory, workingdirectory, msix
 ---
 

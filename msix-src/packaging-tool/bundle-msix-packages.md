@@ -2,7 +2,7 @@
 title: How to bundle MSIX packages
 description: This article describes the process of creating a bundle after converting x86 and x64 versions of your app installers using the MSIX Packaging Tool.
 ms.date: 10/25/2018
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, msix
 ms.custom: "RS5, seodec18"
 ---

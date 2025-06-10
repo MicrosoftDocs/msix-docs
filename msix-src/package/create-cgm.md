@@ -5,7 +5,7 @@ description: This article describes how to create a content group map. A content
 ms.date: 07/02/2019
 author: andreww-msft
 ms.author: andreww
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, msix, uwp, content group map, streaming install, app streaming install, source content group map
 ---
 

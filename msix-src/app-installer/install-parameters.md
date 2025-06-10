@@ -3,7 +3,7 @@ title: Passing installation parameters to your app via App Installer
 description: Describes how to pass installation parameters to an app via App Installer and protocol activation.
 author: Huios
 ms.date: 12/17/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
 ---

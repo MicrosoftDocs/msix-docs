@@ -2,7 +2,7 @@
 description: This article describes known issues that can occur when you create an MSIX package for your desktop app.
 title: Known Issues with packaged desktop apps
 ms.date: 07/29/2019
-ms.topic: article
+ms.topic: troubleshooting-known-issue
 keywords: windows 10, uwp, msix
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ---

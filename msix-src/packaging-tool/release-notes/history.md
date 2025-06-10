@@ -2,7 +2,7 @@
 title: MSIX Packaging Tool release notes
 description: This article provides the full history of release notes for different versions of the MSIX Packaging Tool.
 ms.date: 04/28/2021
-ms.topic: article
+ms.topic: release-notes
 keywords: windows 10, uwp, msix, msix packaging tool, insider program
 ms.custom: Vibranium
 ---
@@ -36,7 +36,7 @@ ms.custom: Vibranium
 - Bug fixes and general improvements
 
 ## Version 1.2023.504.0
-- Search for and apply [Accelerators](https://learn.microsoft.com/windows/msix/toolkit/accelerators) during conversion process
+- Search for and apply [Accelerators](../../toolkit/accelerators.md) during conversion process
 
 ## Version 1.2023.319.0 
 - MSIX Packaging Tool now supports High Contrast themes of Windows

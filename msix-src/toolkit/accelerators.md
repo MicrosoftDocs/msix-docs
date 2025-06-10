@@ -3,7 +3,7 @@ title: Accelerators
 description: An accelerator provides an efficient way to convert legacy apps to MSIX format.
 author: fiza-azmi
 ms.author: fizaazmi
-ms.topic: conceptual
+ms.topic: article
 ms.date: 08/21/2023
 ---
 

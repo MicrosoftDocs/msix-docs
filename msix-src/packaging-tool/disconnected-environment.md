@@ -2,7 +2,7 @@
 title: Using the MSIX Packaging Tool in a disconnected environment
 description: This article describes how to acquire all of the assets required for the MSIX Packaging Tool if you are in a disconnected environment.
 ms.date: 10/03/2023
-ms.topic: article
+ms.topic: concept-article
 keywords: msix
 ---
 

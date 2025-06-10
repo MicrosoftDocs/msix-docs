@@ -2,7 +2,7 @@
 Description: An overview of topics to know before building an MSIX package
 title: Key concepts to know before packing to MSIX
 ms.date: 01/27/2020
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 10, uwp
 ms.custom: RS5
 ---

@@ -2,7 +2,7 @@
 title: How to build MSIX package on Linux 
 description: This article gives an overview of how to create an MSIX package on a Linux machine using the MSIX SDK
 ms.date: 08/16/2022
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, windows 11, linux, uwp, msix
 ms.custom: RS5
 ---
