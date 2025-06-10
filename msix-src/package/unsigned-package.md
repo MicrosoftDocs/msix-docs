@@ -2,7 +2,7 @@
 title: Create an unsigned MSIX package
 description: This topic describes how to create and install an unsigned MSIX package
 ms.date: 05/26/2023
-ms.topic: article
+ms.topic: how-to
 keywords: windows 11, uwp, desktop, msix
 ---
 

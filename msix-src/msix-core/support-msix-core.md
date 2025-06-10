@@ -2,7 +2,7 @@
 title: Update your existing MSIX to support MSIX Core 
 description: Learn how to update an existing MSIX package manifest to support MSIX Core using the MSIX Packaging Tool.
 ms.date: 12/19/2019
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.custom: "RS5, seodec18"
 ---

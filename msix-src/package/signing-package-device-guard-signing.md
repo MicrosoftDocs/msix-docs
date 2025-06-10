@@ -2,7 +2,7 @@
 description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
 ms.date: 12/07/2022
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ---
 

@@ -2,7 +2,7 @@
 description: If you have a packaging project in Visual Studios and want to apply a package support framework
 title: Apply Package Support Framework in Visual Studio
 ms.date: 05/14/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp
 ---
 

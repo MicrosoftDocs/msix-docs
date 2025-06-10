@@ -2,7 +2,7 @@
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
 ms.date: 06/27/2023
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ---

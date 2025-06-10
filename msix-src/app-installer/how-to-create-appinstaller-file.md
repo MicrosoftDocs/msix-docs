@@ -2,7 +2,7 @@
 title: Create an App Installer file manually
 description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
 ms.date: 1/4/2018
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
 ---

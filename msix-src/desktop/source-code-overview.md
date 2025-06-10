@@ -3,7 +3,7 @@ description: Learn how to build an MSIX package from source code in your build e
 title: Building an MSIX package from your code overview
 author: Huios
 ms.date: 02/03/2020
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 10, uwp
 ms.custom: RS5
 ---

@@ -2,7 +2,7 @@
 title: Remote conversion setup in MSIX Packaging Tool
 description: This article describes how to set up and connect to a remote machine to run app conversions using the MSIX Packaging Tool.
 ms.date: 02/26/2019
-ms.topic: article
+ms.topic: install-set-up-deploy
 keywords: MSIX, MPT, MSIX Packaging Tool, remote IP
 ms.custom: 19H1
 ---

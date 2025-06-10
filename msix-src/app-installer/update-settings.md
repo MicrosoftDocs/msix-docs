@@ -2,7 +2,7 @@
 title: App Installer file update settings
 description: This article describes options for how to configure the behavior of app updates by using the App Installer file.
 ms.date: 06/12/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
 ---

@@ -2,7 +2,7 @@
 title: Install and update the App Installer
 description: How to install and update the App Installer
 ms.date: 12/20/2023
-ms.topic: article
+ms.topic: install-set-up-deploy
 keywords: windows 11, windows 10, uwp, app installer, AppInstaller, install, update
 ---
 

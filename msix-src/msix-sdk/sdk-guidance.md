@@ -2,7 +2,7 @@
 title: Use the MSIX SDK to distribute an MSIX package
 description: This article provides guidance to developers who are using the MSIX SDK to build MSIX packages for use on non-Windows 10 platforms.
 ms.date: 12/13/2018
-ms.topic: article
+ms.topic: how-to
 ms.custom: RS5
 ---
 

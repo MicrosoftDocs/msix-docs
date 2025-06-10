@@ -2,7 +2,7 @@
 title: Sign an app package using SignTool
 description: This article describes how to use SignTool to manually sign an app package or bundle with a certificate.
 ms.date: 09/30/2018
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ---

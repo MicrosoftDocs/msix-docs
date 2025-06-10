@@ -2,7 +2,7 @@
 description: Provides guidance on how to apply runtime fixes with the Package Support Framework.
 title: Package Support Framework - Launching Windows apps with parameters
 ms.date: 12/16/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, psf, package support framework, arguments, app launcher, parameters, shortcut, msix
 ---
 
