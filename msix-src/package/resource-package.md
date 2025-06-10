@@ -2,9 +2,9 @@
 title: Resource packages
 description: This article describes resource packages and how developers can use them in their code.
 ms.date: 02/06/2020
-author: dianmsft
+author: andreww-msft
 ms.topic: article
-ms.author: diahar
+ms.author: andreww
 keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio
 ---
 

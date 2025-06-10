@@ -1,16 +1,11 @@
 ---
 title: How to create a custom App Installer UX
 description: A document describing how to create the custom UX xml file and how to add it to your MSIX package to create a custom look and feel for your App Installer installs.
-author: sharlaakers
-ms.author: shakers # Microsoft employees only
 ms.date: 9/30/2021
 ms.topic: article
 ---
 
 # How to create a custom App Installer experience
-
-> [!NOTE]
-> This App Installer feature has been temporarily rolled back and will not work right now. Please check back later for further updates as we plan to bring this feature back. 
 
 The App Installer App is used for all MSIX installations providing a consistent experience for all users installing an MSIX application. While this consistency is good, we want to also provide the ability for developers to customize the install experience that they are providing to their users. This feature is available on Windows 10 1709 and later.
 

@@ -1,9 +1,9 @@
 ---
 title: Flat bundle app packages
 description: Describes how to create a flat bundle to bundle your app’s .appx package files with references to app packages.
-ms.date: 02/05/2020
-author: dianmsft
-ms.author: diahar
+ms.date: 11/19/2024
+author: andreww-msft
+ms.author: andreww
 ms.topic: article
 keywords: windows 10, msix, packaging, package configuration, flat bundle
 ---
@@ -11,7 +11,7 @@ keywords: windows 10, msix, packaging, package configuration, flat bundle
 # Flat bundle app packages 
 
 > [!IMPORTANT]
-> If you intend to submit your app to the Store, you need to contact [Windows developer support](https://developer.microsoft.com/windows/support) for approval to use flat bundles.
+> This feature is intended for enterprise app deployment, and is not supported for apps that are submitted to the Store.
 
 Flat bundles are an improved way to bundle your app’s package files. A typical Windows app bundle file uses a multi-level packaging structure in which the app package files need to be contained within the bundle, flat bundles remove this need by only referencing the app package files, allowing them to be outside of the app bundle. Since the app package files are no longer contained in the bundle, they can be parallel processed, which results in reduced uploading time, faster publishing (since each app package file can be processed at the same time), and ultimately faster development iterations.
 

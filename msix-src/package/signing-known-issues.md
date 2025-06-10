@@ -3,7 +3,7 @@ description: This article describes known issues and troubleshooting tips for Si
 title: Known issues and troubleshooting with SignTool
 ms.date: 02/05/2020
 ms.topic: article
-author: dianmsft
+author: andreww-msft
 keywords: windows 10, uwp, msix
 ---
 

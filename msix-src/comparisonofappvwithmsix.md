@@ -1,7 +1,7 @@
 ---
 title:       Feature-based comparison of Application Virtualization and MSIX
 description: side-by-side comparison of App Virtualization (App-V) and MSIX 
-author:      fiza-microsoft
+author:      fiza-azmi
 ms.author:   fizaazmi
 ms.topic:    product-comparison
 ms.date:     04/05/2023

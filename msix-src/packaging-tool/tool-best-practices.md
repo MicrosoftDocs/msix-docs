@@ -9,7 +9,7 @@ ms.custom: RS5
 
 # Best practices for the MSIX Packaging Tool
 
-<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/en-us/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
+<div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
 If you haven't already configured your environment for conversion, you can follow our [environment best practices](prepare-your-environment.md) recommendations and then come back here to set up the MSIX Packaging Tool. Before you start any conversions we recommend configuring your settings in the MSIX Packaging Tool to simplify your workflow each time. Launch the MSIX Packaging Tool and then go to the settings (gear in the top right of the landing page) to configure your tool defaults. 
 

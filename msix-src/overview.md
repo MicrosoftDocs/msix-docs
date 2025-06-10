@@ -11,7 +11,7 @@ ms.custom: RS5
 
 MSIX is a Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and/or install files in addition to enabling new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.
 
-MSIX enables enterprises to stay current and ensure their applications are always up to date. It allows IT Pros and developers to deliver a user centric solution while still reducing the cost of ownership of application by reducing the need to repackage.
+MSIX enables enterprises to stay current and ensure their applications are always up to date. It allows IT Pros and developers to deliver a user-centric solution while still reducing the cost of ownership of application by reducing the need to repackage.
 
 ## Key features
 
@@ -58,7 +58,11 @@ The AppxSignature.p7x is generated when the package is signed. All MSIX packages
 
 ## Supported platforms
 
-See [this article](supported-platforms.md) for a full list of platforms that support MSIX.
+For a full list of platforms that support MSIX see [MSIX features and supported platforms](supported-platforms.md).
+
+## Validation, testing, and troubleshooting
+
+For information about testing your MSIX implementation before deployment, see [MSIX Validation, Testing, and Troubleshooting](desktop/validation-overview.md).
 
 ## Benefits of app containers
 

@@ -272,6 +272,8 @@
       href: desktop/Managing-your-MSIX-deployment-targetdevices.md
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
+    - name: App installer user interface
+      href: app-installer/app-installer-ui-dialog.md
     - name: Create custom App Installer UX
       href: app-installer/How-to-create-custom-app-installer-ux.md
     - name: Auto-update and repair apps
@@ -280,6 +282,8 @@
       href: app-installer/app-installer-authentication-manager--overview.md
     - name: Install and update the App Installer
       href: app-installer/install-update-app-installer.md
+    - name: App installer security Features
+      href: app-installer/app-installer-security-features.md
     - name: Distribute your MSIX in an enterprise environment
       items: 
         - name: Overview
@@ -374,8 +378,10 @@
       href: desktop\tamper-protection.md
     - name: Reset and Repair MSIX Apps
       href: desktop\managing-your-msix-reset-and-repair.md
-- name: MSIX validation and troubleshooting
+- name: MSIX validation, testing, and troubleshooting
   items: 
+    - name: Overview
+      href: desktop/validation-overview.md
     - name: Troubleshooting packaging, deployment, and query of Windows apps
       href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
     - name: Troubleshoot runtime issues in an MSIX Container

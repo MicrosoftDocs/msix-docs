@@ -1,11 +1,11 @@
 ---
 # Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
+# For more information, see https://review.learn.microsoft.com/help/platform/learn-editor-add-metadata?branch=main
+# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/help/platform/metadata-taxonomies?branch=main
 
 title:       App Attach from Visual Studio # Add a title for the browser tab
 description: This article explains how to create an App Attach ready package using Visual Studio 2022 and publish it to Azure Virtual Desktop # Add a meaningful description for search results
-author:      fiza-microsoft # GitHub alias
+author:      fiza-azmi # GitHub alias
 ms.author:   fizaazmi # Microsoft alias
 ms.topic:    conceptual # Add the ms.topic value
 ms.date:     05/02/2023
@@ -24,16 +24,21 @@ Enterprises prefer App Attach for:
 1. Easier Windows Image management 
 2. Better app manageability including lower maintenance costs and better security 
 
-Streamed app's data roams with the user. This helps them instantly run apps and continue their experience wherever they are.   
+Streamed app's data roams with the user. This helps them instantly run apps and continue their experience wherever they are.  
+
+[Local App Attach](/azure/virtual-desktop/app-attach-test-msix-packages?tabs=posh6%2Ccimfs) allows you to run MSIX applications without installing them on the device. The APIs that power Local App Attach are fully supported on Windows 11 Enterprise and Windows 10 Enterprise, baked into the OS to mount and unmount the applications. You can also use PowerShell cmdlets or scripts to automate the process. 
+
   
 ## Pre-requisite steps  
+
 - Download and install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
 - Setup [Visual Studio for C#](/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
-- Configure 'Azure development' workload in Visual Studio by the following:
+- Configure the 'Azure development' workload in Visual Studio by the following:
+  - Open Visual Studio Installer 
+  - Click on **Modify**
+  - Make sure that **Azure development** is selected
+  - Click on **Modify** at the bottom to initiate the update.
 
-```
-Open Visual Studio Installer -> Click on Modify -> Check on Azure development -> Confirm by clicking on Modify at the bottom.
-```
 ![Visual Studio Extension](https://github.com/bansalsushant/msix-docs/assets/15215151/e517e795-4dc6-4337-8ad8-3b70f4725f19)
 
 - A functioning Azure Virtual Desktop deployment. To learn how to deploy Azure Virtual Desktop (classic), see [Create a tenant in Azure Virtual Desktop](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory). To learn how to deploy Azure Virtual Desktop with Azure Resource Manager integration, see [Create a host pool with the Azure portal](/azure/virtual-desktop/create-host-pools-azure-marketplace).

@@ -32,6 +32,7 @@ When you have the container definition .xml, you can use the following PowerShel
 ### PowerShell commands 
 
 #### Deploy a shared Package container definition 
+
 ```powershell
 Add-AppSharedPackageContainer <path> 
 ``` 
@@ -41,7 +42,8 @@ This command deploys the shared package container definiton for the particular u
 |---------|---------|
 |ForceApplicationShutdown |Closes all packages currently running in the Shared Package Container. |
 
-#### Remove a shared package container 
+#### Remove a shared package container
+
 ```powershell
 Remove-AppSharedPackageContainer -Name <name>  
 ``` 
@@ -51,14 +53,42 @@ This command removes the shared package container definiton for the particular u
 |---------|---------|
 |ForceApplicationShutdown  |Closes all packages in the Shared Package Container.  |
 
-#### Get information on a shared package container 
+#### Get information on a shared package container
+ 
 ```powershell
 Get-AppSharedPackageContainer -Name <name> 
 ``` 
 This command gets information about the shared package container. In particular, it will show what packages are inside the shared package container. 
 
-#### Reset shared package container 
+#### Reset shared package container
+
 ```powershell
 Reset-AppSharedPackageContainer -Name <name>  
 ``` 
 This command destroys all the application data of the container, including the virtual files and registry keys.
+
+#### Deploy a provisioned package container
+
+This command deploys a provisioned shared package container.
+
+```powershell
+Add-AppProvisionedSharedPackageContainer -DefinitionFile "<filepath>" -Online
+```
+
+#### Verify that a provisioned package container is deployed
+
+This command verifies that a provisioned shared package container is deployed
+
+```powershell
+Get-AppProvisionedSharedPackageContainer -Online
+```
+
+#### Remove a provisioned package container
+
+This command removes a provisioned shared package container
+
+```powershell
+Remove-AppProvisionedSharedPackageContainer -Name "<name>" -Online
+```
+
+

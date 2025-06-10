@@ -1,7 +1,7 @@
 ---
 description: Enforce a packag integrity check at run time 
 title: Enforce Package Integrity Check
-author: dianmsft
+author: andreww-msft
 ms.date: 03/25/2021
 ms.topic: article
 keywords: windows 10, uwp
