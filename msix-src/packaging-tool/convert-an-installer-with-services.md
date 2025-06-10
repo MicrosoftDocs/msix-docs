@@ -2,7 +2,7 @@
 title: Converting an installer with services
 description: This article explains how to convert an existing installer with services to MSIX using the MSIX Packaging Tool
 ms.date: 12/19/2019
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 10, MSIX, MSIX Packaging Tool, services
 ---
 

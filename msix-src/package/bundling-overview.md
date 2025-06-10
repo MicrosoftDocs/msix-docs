@@ -2,7 +2,7 @@
 title: Bundling MSIX packages
 description: An overview of MSIX Bundles
 ms.date: 02/05/2020
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 10, msix
 ms.custom: "RS5, seodec18"
 ---

@@ -2,7 +2,7 @@
 description: This article provides guidance on how to register a package layout from a network share
 title: Registering a package layout from a network share
 ms.date: 02/06/2020
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ---

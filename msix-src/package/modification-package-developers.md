@@ -2,7 +2,7 @@
 title: Building an app with a modification package 
 description: This article describes how modification packages will work with their app when it is packaged as an MSIX 
 ms.date: 02/04/2020
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 10, uwp, msix
 ms.custom: "RS5, seodec18"
 ---

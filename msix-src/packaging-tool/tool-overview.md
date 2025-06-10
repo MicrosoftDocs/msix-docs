@@ -2,7 +2,7 @@
 title: MSIX Packaging Tool Overview
 description: This article introduces the MSIX Packaging Tool, which enables you to repackage your existing Windows desktop applications to the MSIX format.
 ms.date: 04/28/2021
-ms.topic: article
+ms.topic: concept-article
 keywords: windows 10, uwp, msix
 ms.custom: "RS5, seodec18"
 ---

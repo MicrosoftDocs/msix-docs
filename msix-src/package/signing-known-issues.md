@@ -2,7 +2,7 @@
 description: This article describes known issues and troubleshooting tips for Sign Tool
 title: Known issues and troubleshooting with SignTool
 ms.date: 02/05/2020
-ms.topic: article
+ms.topic: troubleshooting-known-issue
 author: andreww-msft
 keywords: windows 10, uwp, msix
 ---

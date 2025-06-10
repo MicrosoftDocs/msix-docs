@@ -2,7 +2,7 @@
 title: Deploy an MSIX package with MSIX Core
 description: Describes how to deploy an MSIX package with MSIX Core by using the msixmgr.exe tool.
 ms.date: 12/19/2019
-ms.topic: article
+ms.topic: install-set-up-deploy
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.custom: "RS5, seodec18"
 ---

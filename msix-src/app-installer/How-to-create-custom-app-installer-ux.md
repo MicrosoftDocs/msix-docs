@@ -2,7 +2,7 @@
 title: How to create a custom App Installer UX
 description: A document describing how to create the custom UX xml file and how to add it to your MSIX package to create a custom look and feel for your App Installer installs.
 ms.date: 9/30/2021
-ms.topic: article
+ms.topic: how-to
 ---
 
 # How to create a custom App Installer experience

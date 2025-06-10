@@ -2,7 +2,7 @@
 description: This article provides troubleshooting and validation guidance for MSIX installations.
 title: Managing your MSIX deployment
 ms.date: 2/3/2020
-ms.topic: article
+ms.topic: troubleshooting-general
 keywords: windows 10, deployment, msix
 ms.assetid:  
 ---

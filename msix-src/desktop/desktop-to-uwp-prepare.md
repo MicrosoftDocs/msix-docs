@@ -2,7 +2,7 @@
 description: This article lists the things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
 title: Prepare to package a desktop application (MSIX)
 ms.date: 10/04/2023
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ---

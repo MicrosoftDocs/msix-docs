@@ -2,7 +2,7 @@
 title: Customize your Enterprise apps with modification packages
 description: This article describes how tocustomize your Enterprise apps by using modification MSIX packages that store customizations.
 ms.date: 01/15/2019
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: "RS5, seodec18"
 ---

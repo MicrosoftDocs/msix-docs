@@ -2,7 +2,7 @@
 title: Sign packages with Azure Key Vault
 description: This article describes how to sign your app package with a certificate from Azure Key Vault.
 ms.date: 09/26/2023
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, msix, uwp, azure key vault, visual studio
 ---
 

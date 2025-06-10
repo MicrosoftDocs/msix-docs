@@ -2,7 +2,7 @@
 Description: This article provides details on how MSIX applications handle being downgraded.
 title: Install earlier versions of an MSIX app package
 ms.date: 2/3/2020
-ms.topic: article
+ms.topic: install-set-up-deploy
 keywords: windows 10, deployment, msix
 ms.assetid:  
 ---

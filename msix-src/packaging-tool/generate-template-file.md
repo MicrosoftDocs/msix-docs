@@ -2,7 +2,7 @@
 title: How to generate a template file for command line conversions
 description: This article describes how to generate a template file for command line conversions.
 ms.date: 01/28/2020
-ms.topic: article
+ms.topic: how-to
 keywords: msix
 ---
 

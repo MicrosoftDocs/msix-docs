@@ -2,7 +2,7 @@
 description: You can configure a pipeline with a YAML file to create automated builds for your MSIX project.
 title: Configure CI/CD pipeline with YAML file
 ms.date: 01/11/2021
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp
 ms.custom: RS5
 ---

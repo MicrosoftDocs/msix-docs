@@ -2,7 +2,7 @@
 title: Create an App Installer file with Visual Studio
 description: Learn how to use Visual Studio to enable automatic updates using the .appinstaller file.
 ms.date: 5/2/2018
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload
 ms.custom: "RS5, seodec18"
 ---

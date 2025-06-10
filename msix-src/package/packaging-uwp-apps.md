@@ -3,7 +3,7 @@ ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Packaging MSIX apps
 description: To distribute or sell your Windows app, you need to create an app package for it.
 ms.date: 07/18/2019
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 f1_keywords: ["vs.packagewizard",  "vs.storeassociationwizard"]
 ---

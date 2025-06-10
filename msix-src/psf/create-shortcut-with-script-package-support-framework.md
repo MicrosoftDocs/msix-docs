@@ -2,7 +2,7 @@
 description: This document will show you how to create application shortcuts using scripts with Package Support Framework. 
 title: How to run scripts with the Package Support Framework to create an application shortcut
 ms.date: 04/14/2021
-ms.topic: article
+ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
 ---
