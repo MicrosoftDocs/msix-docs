@@ -151,8 +151,8 @@ Switch back to the __MSIX Packaging Tool__, click on __Package files__, select t
   "applications": [
     {
       "id": "App",
-      "executable": "ContosoExpenses\\ContosoExpenses.exe",
-      "workingDirectory": "ContosoExpenses\\",
+      "executable": "ContosoExpenses/ContosoExpenses.exe",
+      "workingDirectory": "ContosoExpenses/",
       "startScript":
       {
         "scriptPath": "createshortcut.ps1",
