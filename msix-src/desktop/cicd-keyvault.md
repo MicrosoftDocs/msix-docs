@@ -49,6 +49,9 @@ There's one last information you need to save together with the client secret: t
 ## Enable access to Azure Key Vault
 
 The next step is to configure the Azure application we have just created to access to our Azure Key Vault service.
+
+### Using an Access Policy
+
 From the Azure portal, move to the Azure Key Vault instance which holds the certificate you want to use to sign your MSIX package. Go to the **Access policies** section and click on **Add Access Policy**. The tool supports choosing one of the available templates to define the permissions we want to grant but, in our scenario, no one of them is the right fit. As such, we'll need to manually set, using the dropdowns, the following options:
 
 - Under **Key permissions**, enable the **Sign** option.
@@ -63,6 +66,32 @@ Once you have found it, press **Select**. This is how the policy should look lik
 ![Add access policy](images/cicd-keyvault/add-access-policy.png)
 
 When you have completed the process, click **Add** to create the policy.
+
+### Using role-based access control
+
+The tool supports choosing one of the built-in roles to define the permissions we want to grant but, in our scenario, not one of them is the right fit. As such, we'll need to create a custom role. Follow [Create or update Azure custom roles using the Azure portal](/azure/role-based-access-control/custom-roles-portal) for instructions on creating a custom role.
+
+**Required permissions:**
+
+| Action                                      | Name                        | Type       |
+|---------------------------------------------|-----------------------------|------------|
+| Microsoft.KeyVault/vaults/certificates/read | Read Certificate properties | DataAction |
+| Microsoft.KeyVault/vaults/keys/sign/action  | Sign with Key               | DataAction |
+
+Once the custom role has been created, from the Azure portal, move to the Azure Key Vault instance which holds the certificate you want to use to sign your MSIX package.
+
+1. Go to the **Access control (IAM)** section, select the **Role assignments** tab and click on **Add** -> **Add role assigment**.
+
+2. Under the **Assignment type** tab select the **Job function roles** option and click **Next**.
+
+3. Select the custom role you created earlier and click **Next**.
+
+4. The last important step is to specify which application is going to use this role assignment. Ensure that **User, group, or service principal** is selected under **Assign access to** and click on **Select members**. Search for the Azure application you have created in the previous step by using its name. In the example, it's called **SignToolForContoso**.
+![Select principal](images/cicd-keyvault/select-principal.png)
+
+5. Once you have found it, press **Select**.
+
+6. When you have completed the process, click **Review + assign** to create the role assignment.
 
 ## Use Azure SignTool to sign the package locally
 
