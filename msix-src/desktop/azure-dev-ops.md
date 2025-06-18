@@ -110,7 +110,7 @@ Next, update the MSBuild task to reference the signing certificate:
     msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" 
                   /p:AppxPackageDir="$(appxPackageDir)" 
                   /p:AppxBundle=Never 
-                  p:UapAppxPackageBuildMode=SideLoadOnly 
+                  /p:UapAppxPackageBuildMode=SideLoadOnly 
                   /p:AppxPackageSigningEnabled=true
                   /p:PackageCertificateThumbprint="" 
                   /p:PackageCertificateKeyFile="$(signingCert.secureFilePath)"'
