@@ -92,7 +92,7 @@ Save your file as &#39;MsixAppInstallerData.xml&#39;
 ## Troubleshooting
 
 - The file must be named MSIXAppInstallerData.xml
-- The file must be in the folder named MSIXAppInstallerData
+- The file must be in the folder named MSIX.AppInstaller.Data
 - The folder must be underneath the Package root of the package files
 - Check your OS version and your App Installer version
 - Double check the validity of your xml file
