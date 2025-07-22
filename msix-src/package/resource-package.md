@@ -24,25 +24,28 @@ In Windows SDK 10.0.17095.0 [AddResourcePackageAsync API](/uwp/api/Windows.Appli
 - The API returns a progress for the download that can display in the application. Also note that for apps published to the store,  the resource package acquisition shows up in the Microsoft Store **downloads and updates** page and shows up as an update to your application. The end user can choose to pause or cancel the download of the resource package from the Microsoft Store. 
 
 Example 
-```
- private async void DownloadGermanResourcePackage(object sender, RoutedEventArgs e)
-{            
+```cs
+private async void DownloadGermanResourcePackage(object sender, RoutedEventArgs e)
+{
     // ResourceId that is unique to the resource package
     string resourceId = "split.language-de";
     // Warn user that application will need to restart.
     // To take update if available pass in the ApplyUpdateIfAvailable flag
     var packageCatalog = PackageCatalog.OpenForCurrentPackage();
-    PackageCatalogAddResourcePackageResult result = await packageCatalog.AddResourcePackageAsync("29270depappf.CaffeMacchiato_gah1vdar1nn7a", resourceId, 
-        AddResourcePackageOptions.ApplyUpdateIfAvailable | AddResourcePackageOptions.ForceTargetApplicationShutdown)
-        .AsTask<PackageCatalogAddResourcePackageResult, PackageInstallProgress>(new Progress
-        (progress =>;
-        {
+    PackageCatalogAddResourcePackageResult result = await packageCatalog
+        .AddResourcePackageAsync(
+            "29270depappf.CaffeMacchiato_gah1vdar1nn7a",
+            resourceId,
+            AddResourcePackageOptions.ApplyUpdateIfAvailable | AddResourcePackageOptions.ForceTargetApplicationShutdown)
+        .AsTask<PackageCatalogAddResourcePackageResult, PackageInstallProgress>(
+            new Progress(progress =>
+            {
                 // Draw progress
-        }));
+            }));
 
         if (result.ExtendedError != null)
         {
-                //Display error or retry if needed
+            //Display error or retry if needed
         }
 }
 ```
@@ -53,11 +56,11 @@ Example
 The app can choose to remove to remove the resource package(s) it downloaded via the [RemoveResourcePackageAsync API](/uwp/api/Windows.ApplicationModel.PackageCatalog). However, Resource packages that are  applicable for the user or the device as a whole cannot be uninstalled. 
 
 Example 
-```
- private async void RemoveResourcePackage(object sender, RoutedEventArgs e)
-{            
+```cs
+private async void RemoveResourcePackage(object sender, RoutedEventArgs e)
+{
     var packageCatalog = PackageCatalog.OpenForCurrentPackage();
-    List resourcePackagesToRemove = new List();
+    var resourcePackagesToRemove = new List();
     resourcePackagesToRemove.Add("split.language-de");
     //Warn user that application will be restarted
     var removePackageResult = await packageCatalog.RemoveResourcePackagesAsync(resourcePackagesToRemove);
