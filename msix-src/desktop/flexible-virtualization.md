@@ -15,9 +15,9 @@ The flexible virtualization feature provides a way for your app to declare that 
 ## How to control the virtualization of selected locations
 
 > [!NOTE]
-> The behavior described in this section was introduced in Windows 10, version 21H1.
+> The behavior described in this section was introduced in Windows 11.
 
-Starting from Windows 10, version 21H1, the system retains the existing behavior of the [**unvirtualizedResources**](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) restricted capability, and the [**RegistryWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-registrywritevirtualization) and [**FilesystemWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-filesystemwritevirtualization) properties. In addition, the system adds the ability for your app to declare specific folders and/or Registry keys that you want to be unvirtualized.
+Starting from Windows 11, the system retains the existing behavior of the [**unvirtualizedResources**](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) restricted capability, and the [**RegistryWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-registrywritevirtualization) and [**FilesystemWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-filesystemwritevirtualization) properties. In addition, the system adds the ability for your app to declare specific folders and/or Registry keys that you want to be unvirtualized.
 
 * You can declare only file system locations that are within `%USERPROFILE%\AppData`.
 * You can declare only Registry locations that are within **HKCU**.
@@ -45,7 +45,7 @@ Here's an example.
     <!-- If you don't want virtualization of file system writes to the user's AppData folder, then include the property, and set it to disabled. -->
     <desktop6:FileSystemWriteVirtualization>disabled</desktop6:FileSystemWriteVirtualization>
     
-    <!-- On Windows 10, version 21H1 and later OS versions, you can declare specific file system and/or registry locations that you want to be unvirtualized. 
+    <!-- On Windows 11 and later OS versions, you can declare specific file system and/or registry locations that you want to be unvirtualized. 
     If these are recognized on the current device, then they take precedence over the old declarations. On older devices,
     the new declarations are ignored and the old ones are honored. -->
     <virtualization:FileSystemWriteVirtualization>
@@ -70,9 +70,9 @@ Here's an example.
 ```
 
 > [!NOTE]
-> If your app declares both the pre-Windows 10, version 21H1 and the Windows 10, version 21H1 syntax, then the old declaration will be used on pre-Windows 10, version 21H1 versions, while the new declaration will be used on pre-Windows 10, version 21H1, and later.
+> If your app declares both the pre-Windows 11 and the Windows 11 syntax, then the old declaration will be used on pre-Windows 11 versions, while the new declaration will be used on pre-Windows 11 and later.
 
-## Mechanisms prior to Windows 10, version 21H1
+## Mechanisms prior to Windows 11
 
 In traditional environments, apps can create, update, and delete files in most places in the file system. And they can create, update, and delete entries in the Windows Registry. Those files and Registry entries are visible to other apps on the system, even though they often don't need to be. In addition, when the app is uninstalled, those files and Registry entries are often left behind, and become clutter.
 
