@@ -222,7 +222,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 ## Automate Store submissions
 
 >[!NOTE]
-    > Starting in Visual Studio 2026, the **Automate Store submissions**  feature is no longer supported.
+> Starting in Visual Studio 2026, the **Automate Store submissions**  feature is no longer supported.
 
 Starting in Visual Studio 2019, you can submit the generated .appxupload file to the Microsoft Store directly from the IDE by selecting the **Automatically submit to the Microsoft Store after Windows App Certification Kit validation** option at the end of the [Create App Packages wizard](#create-your-app-package-upload-file-using-visual-studio). This feature leverages Azure Active Directory for accessing the Partner Center account info needed to publish your app. To use this feature, you'll need associate Azure Active Directory with your Partner Center account and retrieve several credentials required for submissions.
 
