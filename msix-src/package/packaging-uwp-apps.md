@@ -159,7 +159,7 @@ You can create an app package upload file by using the **Create App Packages** w
 
 5. Select the app name for your package from the list of apps currently registered to your account, or reserve a new one if you have not already reserved one in Partner Center.  
 
-    >[!NOTE]
+    > [!NOTE]
     > If you are using Visual Studio 2017 you will be unable to list apps currently registered to your account or reserve new app names when using a Microsoft account (MSA) , only Azure Active Directory (AAD) accounts will work.  MSA accounts are supported starting in Visual Studio 2019.
 
 6. Make sure you select all three architecture configurations (x86, x64, and ARM) in the **Select and Configure Packages** dialog to ensure that your app can be deployed to the widest range of devices. In the **Generate app bundle** listbox, select **Always**. An app bundle (.appxbundle or .msixbundle) is preferred over a single app package file because it contains a collection of app packages configured for each type of processor architecture. When you choose to generate the app bundle, the app bundle will be included in the final app package upload (.appxupload or .msixupload) file along with debugging and crash analytic information. If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](device-architecture.md).  
