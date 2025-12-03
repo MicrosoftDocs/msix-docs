@@ -202,7 +202,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 ### Validate your app package on a remote Windows 10 device
 
 1. Enable your Windows 10 device for development by following the [Enable your device for development](/windows/uwp/get-started/enable-your-device-for-development) instructions.
-    >[!IMPORTANT]
+    > [!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
 
 2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applications on a remote machine](/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine).
@@ -210,7 +210,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
 
 4. On the **Package Creation Completed** page of the wizard, choose the **Remote Machine** option button, and then choose the ellipsis button next to the **Test Connection** button.
-    >[!NOTE]
+    > [!NOTE]
     > The **Remote Machine** option button is available only if you selected at least one solution configuration that supports validation. For more information about testing your app with the WACK, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
 5. Specify a device form inside your subnet, or provide the Domain Name Server (DNS) name or IP address of a device that's outside of your subnet.
@@ -221,7 +221,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 
 ## Automate Store submissions
 
->[!NOTE]
+> [!NOTE]
 > Starting in Visual Studio 2026, the **Automate Store submissions**  feature is no longer supported.
 
 Starting in Visual Studio 2019, you can submit the generated .appxupload file to the Microsoft Store directly from the IDE by selecting the **Automatically submit to the Microsoft Store after Windows App Certification Kit validation** option at the end of the [Create App Packages wizard](#create-your-app-package-upload-file-using-visual-studio). This feature leverages Azure Active Directory for accessing the Partner Center account info needed to publish your app. To use this feature, you'll need associate Azure Active Directory with your Partner Center account and retrieve several credentials required for submissions.
