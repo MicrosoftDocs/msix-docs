@@ -159,7 +159,7 @@ You can create an app package upload file by using the **Create App Packages** w
 
 5. Select the app name for your package from the list of apps currently registered to your account, or reserve a new one if you have not already reserved one in Partner Center.  
 
-    >[!NOTE]
+    > [!NOTE]
     > If you are using Visual Studio 2017 you will be unable to list apps currently registered to your account or reserve new app names when using a Microsoft account (MSA) , only Azure Active Directory (AAD) accounts will work.  MSA accounts are supported starting in Visual Studio 2019.
 
 6. Make sure you select all three architecture configurations (x86, x64, and ARM) in the **Select and Configure Packages** dialog to ensure that your app can be deployed to the widest range of devices. In the **Generate app bundle** listbox, select **Always**. An app bundle (.appxbundle or .msixbundle) is preferred over a single app package file because it contains a collection of app packages configured for each type of processor architecture. When you choose to generate the app bundle, the app bundle will be included in the final app package upload (.appxupload or .msixupload) file along with debugging and crash analytic information. If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](device-architecture.md).  
@@ -202,7 +202,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 ### Validate your app package on a remote Windows 10 device
 
 1. Enable your Windows 10 device for development by following the [Enable your device for development](/windows/uwp/get-started/enable-your-device-for-development) instructions.
-    >[!IMPORTANT]
+    > [!IMPORTANT]
     > You cannot validate your app package on a remote ARM device for Windows 10.
 
 2. Download and install the remote tools for Visual Studio. These tools are used to run the Windows App Certification Kit remotely. You can get more information about these tools including where to download them by visiting [Run MSIX applications on a remote machine](/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine).
@@ -210,7 +210,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 3. Download the required [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) and then install it on your remote Windows 10 device.
 
 4. On the **Package Creation Completed** page of the wizard, choose the **Remote Machine** option button, and then choose the ellipsis button next to the **Test Connection** button.
-    >[!NOTE]
+    > [!NOTE]
     > The **Remote Machine** option button is available only if you selected at least one solution configuration that supports validation. For more information about testing your app with the WACK, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
 5. Specify a device form inside your subnet, or provide the Domain Name Server (DNS) name or IP address of a device that's outside of your subnet.
@@ -220,6 +220,9 @@ Validate your app before you submit it to Partner Center for certification on a 
 7. Choose the **Select** button, and then choose the **Launch Windows App Certification Kit** button. If the remote tools are running on that device, Visual Studio connects to the device and then performs the validation tests. See [Windows App Certification Kit tests](/windows/uwp/debug-test-perf/windows-app-certification-kit-tests).
 
 ## Automate Store submissions
+
+> [!NOTE]
+> Starting in Visual Studio 2026, the **Automate Store submissions**  feature is no longer supported.
 
 Starting in Visual Studio 2019, you can submit the generated .appxupload file to the Microsoft Store directly from the IDE by selecting the **Automatically submit to the Microsoft Store after Windows App Certification Kit validation** option at the end of the [Create App Packages wizard](#create-your-app-package-upload-file-using-visual-studio). This feature leverages Azure Active Directory for accessing the Partner Center account info needed to publish your app. To use this feature, you'll need associate Azure Active Directory with your Partner Center account and retrieve several credentials required for submissions.
 
