@@ -17,7 +17,7 @@ Note that an app will only be allowed to be inside one container. Deploying a sh
 To use the feature, enterprises will require an administrator on the device. Additionally, the packages will all need to be .msix packages. To package your installers as MSIX package, visit our [create package from existing installer documentation](../packaging-tool/create-an-msix-overview.md).  
 
 ## Shared package container definition
-Shared package contianer is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Only main packages need to be included in the .xml. Optional packages and modification packages will automatically be included in the shared package container as they already share the same container as their main package. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
+Shared package container is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Only main packages need to be included in the .xml. Optional packages and modification packages will automatically be included in the shared package container as they already share the same container as their main package. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?> 
@@ -36,7 +36,7 @@ When you have the container definition .xml, you can use the following PowerShel
 ```powershell
 Add-AppSharedPackageContainer <path> 
 ``` 
-This command deploys the shared package container definiton for the particular user. Optional parameters include the following: 
+This command deploys the shared package container definition for the particular user. Optional parameters include the following: 
 
 |**Parameter** |	**Description**|
 |---------|---------|
@@ -47,7 +47,7 @@ This command deploys the shared package container definiton for the particular u
 ```powershell
 Remove-AppSharedPackageContainer -Name <name>  
 ``` 
-This command removes the shared package container definiton for the particular user. Optional parameters include the following: 
+This command removes the shared package container definition for the particular user. Optional parameters include the following: 
 
 |**Parameter** |	**Description**|
 |---------|---------|
