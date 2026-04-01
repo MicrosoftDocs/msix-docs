@@ -27,9 +27,9 @@ To distribute your related set as one entity, you must create an App Installer f
 1. [Specify the main Windows app Package.](#step-3-add-the-main-package-information)
 1. [Specify the related set Optional Package.](#step-4-add-the-optional-packages)
 1. [Specify the dependency Windows app Framework Package.](#step-5-add-dependencies)
-1. [Specify the Update URI paths.](#step-6-add-update-setting)
-1. [Specify the Repair URI paths.](#step-7-add-auto-update-settings)
-1. [Specify the Update Settings.](#step-8-add-auto-repair-settings)
+1. [Specify the update settings.](#step-6-add-update-setting)
+1. [Specify the update URI paths.](#step-7-add-auto-update-settings)
+1. [Specify the repair URI paths.](#step-8-add-auto-repair-settings)
 
 
 ##### Example of an App Installer file
