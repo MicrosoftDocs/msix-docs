@@ -42,8 +42,6 @@ additionalContent:
           summary: SDK 1.8 includes MSIX BuildTools refactoring and packaging improvements. See the stable channel release notes for details.
           url: /windows/apps/windows-app-sdk/stable-channel
 
-additionalContent:
-  sections:
     # Section
     - title: Top tasks
       items:
