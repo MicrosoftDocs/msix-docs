@@ -8,11 +8,11 @@ keywords: windows, msix, signing, certificate, azure trusted signing, signtool, 
 
 # Sign an MSIX package
 
-App package signing is a required step in the process of creating an MSIX package that can be deployed. Windows requires all applications to be signed with a valid code signing certificate.
+App package signing is a required step in the process of creating an MSIX package that can be deployed. Windows requires MSIX packages to be signed with a valid code signing certificate.
 
 To successfully install a Windows application, the package doesn't just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. By default, Windows trusts certificates from most certificate authorities that provide code signing certificates.
 
-Additionally, if you are creating an MSIX bundle, there is no need to sign all the packages in the bundle individually. Only the bundle needs to be signed, and all packages inside get signed recursively.
+Additionally, if you are creating an MSIX bundle, there is no need to sign all the packages in the bundle individually. Only the bundle needs to be signed; the signature covers the packages inside the bundle.
 
 ## Signing options
 
