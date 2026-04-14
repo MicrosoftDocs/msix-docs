@@ -37,7 +37,7 @@ additionalContent:
           url: /windows/apps/package-and-deploy/packaging/
         - title: WinApp CLI
           summary: The new WinApp command-line tool streamlines common MSIX packaging and signing workflows, including generating self-signed certificates and building packages from source.
-          url: /windows/apps/windows-app-sdk/winapp-cli
+          url: /windows/apps/dev-tools/winapp-cli
         - title: Windows App SDK 1.8 — MSIX improvements
           summary: SDK 1.8 includes MSIX BuildTools refactoring and packaging improvements. See the stable channel release notes for details.
           url: /windows/apps/windows-app-sdk/stable-channel
