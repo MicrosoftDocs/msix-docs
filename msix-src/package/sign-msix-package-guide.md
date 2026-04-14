@@ -16,7 +16,7 @@ This guide walks you through signing an MSIX package for each stage of developme
 |---|---|---|
 | Local development and testing | WinApp CLI (self-signed cert) | Windows 10 and later |
 | Distribute to testers (sideloading) | Self-signed cert with cert trust step | Windows 10 and later |
-| Production distribution | Azure Artifact Signing (formerly Trusted Signing) | Windows 10 version 1809 and later |
+| Production distribution | Azure Artifact Signing (formerly Trusted Signing) | Windows 10 version 1809 and later, Windows Server 2016 and later |
 | Microsoft Store distribution | Signed by the Store on submission | All supported Windows versions |
 
 ---
@@ -35,12 +35,12 @@ The [WinApp CLI](/windows/apps/dev-tools/winapp-cli) handles certificate generat
 **Step 1: Install the WinApp CLI**
 
 ```powershell
-winget install Microsoft.winappcli --source winget
+winget install -e --id Microsoft.WinAppCLI --source winget
 ```
 
 **Step 2: Generate a self-signed development certificate**
 
-```bash
+```powershell
 winapp cert generate --manifest .\appxmanifest.xml --output .\devcert.pfx --install
 ```
 
@@ -48,7 +48,7 @@ The `--manifest` flag reads the publisher name directly from your `appxmanifest.
 
 **Step 3: Sign the package**
 
-```bash
+```powershell
 winapp sign MyApp.msix --cert .\devcert.pfx
 ```
 

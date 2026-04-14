@@ -3,6 +3,8 @@ description: Solutions for the most common MSIX installation, signing, deploymen
 title: MSIX troubleshooting guide
 ms.date: 04/14/2026
 ms.topic: troubleshooting-general
+author: GrantMeStrength
+ms.author: jken
 keywords: windows, msix, troubleshooting, error, signing, deployment, app installer, vfs
 ---
 
@@ -11,7 +13,7 @@ keywords: windows, msix, troubleshooting, error, signing, deployment, app instal
 This guide covers the most common MSIX errors across installation, signing, App Installer delivery, missing dependencies, and runtime behavior. Each section includes the symptom, root cause, and resolution.
 
 For a full log of deployment events, open Event Viewer and navigate to:
-**Applications and Services Logs → Microsoft → Windows → AppxDeployment-Server**
+**Applications and Services Logs → Microsoft → Windows → AppxDeployment-Server → Operational**
 
 > [!TIP]
 > For a consolidated set of diagnostics, also run [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit) before distributing your package.
@@ -253,9 +255,9 @@ Add-AppxPackage -Path .\MyApp.msix
 **Option 2 — Use the WinApp CLI** (simplest for MSIX signing):
 ```yaml
 - name: Install WinApp CLI
-  run: winget install --id Microsoft.WinAppCLI --accept-source-agreements
+  run: winget install -e --id Microsoft.WinAppCLI --source winget --accept-source-agreements
 - name: Sign MSIX
-  run: winapp sign --file output\MyApp.msix --certificate-thumbprint ${{ secrets.CERT_THUMBPRINT }}
+  run: winapp sign output\MyApp.msix --cert ${{ secrets.CERT_THUMBPRINT }}
 ```
 
 **Option 3 — Use Azure Artifact Signing** (recommended for production):
