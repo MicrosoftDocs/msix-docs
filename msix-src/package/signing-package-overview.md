@@ -26,7 +26,21 @@ Choose a signing approach based on your scenario:
 | Microsoft Store distribution | Signed by the Store on submission | Free |
 
 > [!NOTE]
-> **Azure Trusted Signing** is Microsoft's managed code signing service and is the recommended option for production MSIX signing. It provides timestamping, certificate lifecycle management, and CI/CD integration out of the box. See [What is Azure Trusted Signing?](/azure/trusted-signing/overview)
+> **Azure Trusted Signing** (also called Artifact Signing) is Microsoft's managed code signing service and is the recommended option for production MSIX signing. Key characteristics:
+>
+> - **Instant SmartScreen reputation**: Reputation is tied to your verified identity, not a certificate lifetime — so new builds get immediate trust.
+> - **Short-lived certs**: Certificates rotate daily (3-day lifespan), enabling time-precise revocation if needed.
+> - **CI/CD ready**: Supports GitHub Actions (`azure/trusted-signing-action`) and Azure DevOps out of the box.
+>
+> **Eligibility for Public Trust certificates**: Available to organizations in the USA, Canada, the European Union, and the United Kingdom, and to individual developers in the USA and Canada. Organizations must have a verifiable tax history of three or more years. See [Important information for identity validation](/azure/trusted-signing/quickstart#important-information-for-public-identity-validation).
+>
+> **Signing with SignTool requires extra setup**: Standard SignTool syntax does *not* work with Azure Trusted Signing. You must install the Artifact Signing Client Tools (includes the required dlib plugin and .NET 8 runtime) and provide a `metadata.json` file with your account endpoint and certificate profile. The easiest installation is:
+>
+> ```
+> winget install -e --id Microsoft.Azure.ArtifactSigningClientTools
+> ```
+>
+> See [Set up SignTool with Trusted Signing](/azure/trusted-signing/how-to-signing-integrations#set-up-signtool-to-use-artifact-signing) for the complete setup.
 >
 > **AzureSignTool** is a separate community tool for signing with certificates stored in Azure Key Vault. It does *not* support Azure Trusted Signing — the two are distinct services. For Azure Key Vault-based signing in Visual Studio, see [Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md).
 
