@@ -1,25 +1,53 @@
 ---
-description: This article describes signing requirements for Windows 10 apps. Signing is a required step in the process of creating an app package that can be deployed.
-title: Sign a Windows 10 app package 
-ms.date: 06/25/2020
+description: Learn how to sign an MSIX app package for deployment on Windows, including signing options for development, testing, and production.
+title: Sign an MSIX package
+ms.date: 04/14/2026
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows, msix, signing, certificate, azure trusted signing, signtool, winapp cli
 ---
 
-# Sign a Windows 10 app package
+# Sign an MSIX package
 
-App package signing is a required step in the process of creating a Windows 10 app package that can be deployed. Windows 10 requires all applications to be signed with a valid code signing certificate.
+App package signing is a required step in the process of creating an MSIX package that can be deployed. Windows requires all applications to be signed with a valid code signing certificate.
 
-To successfully install a Windows 10 application, the package doesn't just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. By default, Windows 10 trusts certificates from most of the certificate authorities that provide code signing certificates.
+To successfully install a Windows application, the package doesn't just have to be signed but also trusted on the device. This means that the certificate has to chain to one of the trusted roots on the device. By default, Windows trusts certificates from most certificate authorities that provide code signing certificates.
 
 Additionally, if you are creating an MSIX bundle, there is no need to sign all the packages in the bundle individually. Only the bundle needs to be signed, and all packages inside get signed recursively.
 
+## Signing options
+
+Choose a signing approach based on your scenario:
+
+| Scenario | Option | Cost |
+|---|---|---|
+| Development and local testing | Self-signed certificate | Free |
+| Production distribution (recommended) | [Azure Trusted Signing](/azure/trusted-signing/) | ~$10/month |
+| Production distribution (alternative) | OV code signing certificate from a CA | $300–500/year |
+| Microsoft Store distribution | Signed by the Store on submission | Free |
+
+> [!NOTE]
+> **Azure Trusted Signing** is Microsoft's managed code signing service and is the recommended option for production MSIX signing. It provides timestamping, certificate lifecycle management, and CI/CD integration out of the box. See [What is Azure Trusted Signing?](/azure/trusted-signing/overview)
+>
+> **AzureSignTool** is a separate community tool for signing with certificates stored in Azure Key Vault. It does *not* support Azure Trusted Signing — the two are distinct services. For Azure Key Vault-based signing in Visual Studio, see [Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md).
+
+## WinApp CLI
+
+The [WinApp CLI](/windows/apps/dev-tools/winapp-cli) provides convenient commands for development signing:
+
+- `winapp cert generate` — create a self-signed certificate for development
+- `winapp sign` — sign an MSIX package or executable with a certificate
+- `winapp tool signtool` — access SignTool directly from the Windows SDK
+
+## Signing topics
+
 |Topic| Description |
 |:---|:---|
-|[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| This section discusses the prerequisites required to sign the Windows 10 app package. | 
-|[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| This section discusses how to use SignTool from the Windows 10 SDK to sign the app package.|
-|[Sign an MSIX package with Device Guard signing](./signing-package-device-guard-signing.md)| This section discusses how to sign your app with Device Guard signing.|
-|[Creating unsigned packages for testing](./unsigned-package.md)| This section discusses how to create an unsigned msix package.|
+|[Prerequisites for signing](sign-app-package-using-signtool.md#prerequisites)| Prerequisites required to sign an app package. | 
+|[Using SignTool](sign-app-package-using-signtool.md#using-signtool)| How to use SignTool from the Windows SDK to sign an app package.|
+|[Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md)| How to sign packages using a certificate stored in Azure Key Vault from Visual Studio.|
+|[Sign an MSIX package with Device Guard signing](./signing-package-device-guard-signing.md)| How to sign your app with Device Guard signing.|
+|[Creating unsigned packages for testing](./unsigned-package.md)| How to create an unsigned MSIX package for testing.|
+|[Azure Trusted Signing](/azure/trusted-signing/)| Microsoft's managed signing service for production MSIX packages.|
 
 ## Timestamping
 
