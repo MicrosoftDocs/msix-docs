@@ -5,7 +5,7 @@ metadata:
   title: MSIX documentation
   description: MSIX is a packaging format for Windows apps that is built to be safe and reliable. It is based on a combination of .msi, .appx, App-V and ClickOnce installation technologies. 
   ms.topic: hub-page
-  ms.date: 11/06/2019
+  ms.date: 04/10/2026
   keywords: windows 10, uwp, MSIX
   ms.localizationpriority: medium
   ms.custom: "RS5, seodec18"
@@ -28,6 +28,20 @@ highlightedContent:
 
 additionalContent:
   sections:
+    # Section
+    - title: What's new for MSIX
+      summary: Recent improvements to the MSIX and Windows App SDK ecosystem.
+      items:
+        - title: Packaging decision guide
+          summary: Not sure which packaging model is right for your app? This new guide walks you through the decision — packaged, unpackaged, or packaging with external location.
+          url: /windows/apps/package-and-deploy/packaging/
+        - title: WinApp CLI
+          summary: The new WinApp command-line tool streamlines common MSIX packaging and signing workflows, including generating self-signed certificates and building packages from source.
+          url: /windows/apps/dev-tools/winapp-cli
+        - title: Windows App SDK 1.8 — MSIX improvements
+          summary: SDK 1.8 includes MSIX BuildTools refactoring and packaging improvements. See the stable channel release notes for details.
+          url: /windows/apps/windows-app-sdk/stable-channel
+
     # Section
     - title: Top tasks
       items:
