@@ -8,6 +8,10 @@ ms.assetid:
 ---
 
 # MSIX validation and troubleshooting
+
+> [!TIP]
+> For a consolidated guide covering common MSIX errors with specific error codes and fixes, see [MSIX troubleshooting guide](../msix-troubleshooting-guide.md).
+
 Though MSIX has a 99% successful install rate, sometimes you need to be able to trouble shoot an installation.
 
 ## Know the application

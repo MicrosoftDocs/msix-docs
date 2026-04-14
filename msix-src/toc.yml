@@ -384,6 +384,8 @@
   items: 
     - name: Overview
       href: desktop/validation-overview.md
+    - name: MSIX troubleshooting guide
+      href: msix-troubleshooting-guide.md
     - name: Troubleshooting packaging, deployment, and query of Windows apps
       href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
     - name: Troubleshoot runtime issues in an MSIX Container
