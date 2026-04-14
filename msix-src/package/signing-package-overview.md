@@ -61,7 +61,7 @@ The [WinApp CLI](/windows/apps/dev-tools/winapp-cli) provides convenient command
 |[Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md)| How to sign packages using a certificate stored in Azure Key Vault from Visual Studio.|
 |[Sign an MSIX package with Device Guard signing](./signing-package-device-guard-signing.md)| How to sign your app with Device Guard signing.|
 |[Creating unsigned packages for testing](./unsigned-package.md)| How to create an unsigned MSIX package for testing.|
-|[Azure Trusted Signing](/azure/trusted-signing/)| Microsoft's managed signing service for production MSIX packages.|
+|[Azure Artifact Signing](/azure/trusted-signing/)| Microsoft's managed signing service (formerly Trusted Signing) for production MSIX packages.|
 
 ## Timestamping
 
