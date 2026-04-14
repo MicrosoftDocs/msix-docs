@@ -3,7 +3,7 @@ description: Learn how to sign an MSIX app package for deployment on Windows, in
 title: Sign an MSIX package
 ms.date: 04/14/2026
 ms.topic: article
-keywords: windows, msix, signing, certificate, azure trusted signing, signtool, winapp cli
+keywords: windows, msix, signing, certificate, artifact signing, trusted signing, signtool, winapp cli
 ---
 
 # Sign an MSIX package
@@ -21,12 +21,12 @@ Choose a signing approach based on your scenario:
 | Scenario | Option | Cost |
 |---|---|---|
 | Development and local testing | Self-signed certificate | Free |
-| Production distribution (recommended) | [Azure Trusted Signing](/azure/trusted-signing/) | ~$10/month |
+| Production distribution (recommended) | [Azure Artifact Signing](/azure/trusted-signing/) (formerly Trusted Signing) | Basic: ~$10/month |
 | Production distribution (alternative) | OV code signing certificate from a CA | $300–500/year |
 | Microsoft Store distribution | Signed by the Store on submission | Free |
 
 > [!NOTE]
-> **Azure Trusted Signing** (also called Artifact Signing) is Microsoft's managed code signing service and is the recommended option for production MSIX signing. Key characteristics:
+> **Azure Artifact Signing** (formerly known as Trusted Signing) is Microsoft's managed code signing service and is the recommended option for production MSIX signing. Key characteristics:
 >
 > - **Instant SmartScreen reputation**: Reputation is tied to your verified identity, not a certificate lifetime — so new builds get immediate trust.
 > - **Short-lived certs**: Certificates rotate daily (3-day lifespan), enabling time-precise revocation if needed.
@@ -34,15 +34,15 @@ Choose a signing approach based on your scenario:
 >
 > **Eligibility for Public Trust certificates**: Available to organizations in the USA, Canada, the European Union, and the United Kingdom, and to individual developers in the USA and Canada. Organizations must have a verifiable tax history of three or more years. See [Important information for identity validation](/azure/trusted-signing/quickstart#important-information-for-public-identity-validation).
 >
-> **Signing with SignTool requires extra setup**: Standard SignTool syntax does *not* work with Azure Trusted Signing. You must install the Artifact Signing Client Tools (includes the required dlib plugin and .NET 8 runtime) and provide a `metadata.json` file with your account endpoint and certificate profile. The easiest installation is:
+> **Signing with SignTool requires extra setup**: Standard SignTool syntax does *not* work with Artifact Signing. You must install the Artifact Signing Client Tools (includes the required dlib plugin and .NET 8 runtime) and provide a `metadata.json` file with your account endpoint and certificate profile. The easiest installation is:
 >
 > ```
 > winget install -e --id Microsoft.Azure.ArtifactSigningClientTools
 > ```
 >
-> See [Set up SignTool with Trusted Signing](/azure/trusted-signing/how-to-signing-integrations#set-up-signtool-to-use-artifact-signing) for the complete setup.
+> See [Set up SignTool with Artifact Signing](/azure/trusted-signing/how-to-signing-integrations#set-up-signtool-to-use-artifact-signing) for the complete setup.
 >
-> **AzureSignTool** is a separate community tool for signing with certificates stored in Azure Key Vault. It does *not* support Azure Trusted Signing — the two are distinct services. For Azure Key Vault-based signing in Visual Studio, see [Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md).
+> **AzureSignTool** is a separate community tool for signing with certificates stored in Azure Key Vault. It does *not* support Artifact Signing — the two are distinct services. For Azure Key Vault-based signing in Visual Studio, see [Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md).
 
 ## WinApp CLI
 
