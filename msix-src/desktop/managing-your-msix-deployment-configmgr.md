@@ -17,7 +17,7 @@ When deploying a Windows app package from within the Microsoft Configuration Man
 | Task | Documentation reference |
 |-----|------|
 | 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md)  |
-| 2. Launch the Microsoft Configuration Manager console | [Microsoft Configuration Manager](https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager) |
+| 2. Launch the Microsoft Configuration Manager console | [Open the Configuration Manager console](/mem/configmgr/core/servers/manage/admin-console) |
 | 3. Create a Line-of-Business App | [Create a Windows app package](/configmgr/apps/get-started/creating-windows-applications) |
 | 4. Create a user or device collection | [Creating collections](/configmgr/core/clients/manage/collections/create-collections) |
 | 5. Deploy the Line-of-Business App | [Deploying applications with Configuration Manager](/configmgr/apps/deploy-use/deploy-applications) |

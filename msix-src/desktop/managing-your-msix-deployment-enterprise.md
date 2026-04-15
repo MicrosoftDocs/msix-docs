@@ -29,7 +29,7 @@ Installation of an MSIX application is standardized. As such, when adding a new 
 MSIX can be deployed with an IIS server.  If you add the ms-appinstaller protocol, it creates a much better install experience.  
 For IIS distribution of a MSIX file, and how to configure your IIS server to support MSIX app distribution, see [Distribute a Windows 10 app from an IIS server.](../app-installer/web-install-iis.md)
 
-## Microsoft Store for Business
+## Microsoft Store for Business (retired)
 
 > [!IMPORTANT]
 > Microsoft Store for Business and Microsoft Store for Education were retired on March 31, 2023. For enterprise app distribution, use [Microsoft Intune](/mem/intune/apps/lob-apps-windows) to deploy MSIX line-of-business apps directly to managed devices.
