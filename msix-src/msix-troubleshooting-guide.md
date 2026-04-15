@@ -320,6 +320,39 @@ For more detail on what paths are virtualized, see [Troubleshoot runtime issues 
 
 For a deeper look at MSIX container behavior, see [Understand how packaged desktop apps run on Windows](/windows/msix/desktop/desktop-to-uwp-behind-the-scenes).
 
+## Windows 10 MSIX limitations
+
+Some MSIX features require Windows 11 or a specific Windows 10 version. If you're deploying to Windows 10 devices, be aware of the following.
+
+### Features that require Windows 10, version 2004 (build 19041) or later
+
+| Feature | Minimum version |
+|---|---|
+| Auto-update 2021 schema (`ShowPrompt`, `UpdateBlocksActivation`) | Windows 10 2004 (19041) |
+| Package integrity enforcement (`uap10:PackageIntegrity`) | Windows 10 2004 (19041) |
+| App Installer auto-repair | Windows 10 2004 (19041) |
+| No separate sideloading policy toggle for trusted app package installs; see [Enable your device for development](/windows/apps/get-started/developer-mode-features-and-debugging) for current requirements | Windows 10 2004 (19041) |
+
+### Features that require Windows 11
+
+| Feature | Notes |
+|---|---|
+| Sparse package identity without full packaging | Requires Windows 11 |
+| MSIX support for unpackaged apps with external location (full platform support) | Some APIs improved in Windows 11 |
+| Improved per-machine MSIX install performance | Windows 11 optimizations |
+
+### Windows 10 devices older than version 1709
+
+MSIX is not natively supported on Windows 10 versions prior to 1709 (Fall Creators Update). To deploy MSIX packages to those devices, use [MSIX Core](msix-core/msixcore.md), which provides a compatibility layer for down-level Windows 10 versions.
+
+### Manifest extensions
+
+Some `AppxManifest.xml` namespace extensions are Windows 11-only. Declaring them on a package targeting Windows 10 may fail schema validation during packaging or be rejected during installation. Check the [App package manifest schema reference](/uwp/schemas/appxpackage/uapmanifestschema/schema-root) for the `MinOSVersion` listed for each extension.
+
+### Debugging tip
+
+To verify what MSIX features are available on a specific Windows 10 build, check the [MSIX features and supported platforms](supported-platforms.md) page, which lists feature availability by OS version.
+
 ## Related resources
 
 - [Sign an MSIX package overview](package/signing-package-overview.md)

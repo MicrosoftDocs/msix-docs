@@ -1,40 +1,49 @@
 ---
 title: What is MSIX?
-description: This topic introduces the basics of the MSIX packaging format; a modern packaging experience for Windows apps.
-ms.date: 10/02/2023
-ms.topic: concept-article
-keywords: windows 11, windows 10, uwp, msix
-ms.custom: RS5
+description: MSIX is the modern Windows app packaging format. Learn how it works, what it enables, and how to get started packaging your app.
+ms.date: 04/15/2026
+ms.topic: overview
+keywords: windows 11, windows 10, uwp, msix, package identity, winui 3, winapp cli
 ---
 
 # What is MSIX?
 
-MSIX is a Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and/or install files in addition to enabling new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.
+MSIX is the modern Windows app packaging format. It gives any Windows app a reliable, clean install and uninstall, automatic updates, and access to Windows platform features that require a package identity.
 
-MSIX enables enterprises to stay current and ensure their applications are always up to date. It allows IT Pros and developers to deliver a user-centric solution while still reducing the cost of ownership of application by reducing the need to repackage.
+**Package identity** is the key concept. When your app is packaged as MSIX, Windows assigns it a unique identity (publisher + name + version). That identity is required for:
+
+- Windows platform APIs such as push notifications, background tasks, and live tiles
+- AI features that use on-device models through the Windows AI APIs
+- Store distribution and update channels
+- Enterprise management through Intune and Configuration Manager
+
+If you're not sure whether to package your app or which packaging model to use, start with the [Packaging decision guide](/windows/apps/package-and-deploy/packaging-overview).
 
 ## Key features
 
-* **Reliability.** MSIX provides a reliable install boasting a 99.96% success rate over millions of installs with a guaranteed uninstall.
-* **Network bandwidth optimization.** MSIX decreases the impact to network bandwidth through downloading only the 64k block. This is done by leveraging the AppxBlockMap.xml file contained in the MSIX app package (see below for more details). MSIX is designed for modern systems and the cloud.
-* **Disk space optimizations.** With MSIX there is no duplication of files across apps and Windows manages the shared files across apps. The apps are still independent of each other so updates will not impact other apps that share the file. A clean uninstall is guaranteed even if the platform manages shared files across apps.
+* **Reliable install and uninstall.** MSIX delivers a 99.96% install success rate across millions of installs and guarantees a clean uninstall with no leftover files or registry entries.
+* **Differential updates.** Only changed 64 KB blocks are downloaded on update, minimizing network impact and update time.
+* **Disk space efficiency.** Shared files across apps are managed by Windows; each app remains independent so updates don't affect other apps.
+* **Containerized execution.** Apps run in a lightweight container with virtual file system and registry, and Windows virtualizes or redirects certain file system and registry writes to reduce system impact. See [MSIX containerization overview](msix-containerization-overview.md).
+* **Enterprise-ready.** Full support for deployment via Intune, Configuration Manager, and the [Enterprise Modern App Management CSP](/windows/client-management/mdm/enterprisemodernappmanagement-csp).
+
+## Get started
+
+| Goal | Start here |
+|---|---|
+| Package a new UWP app | [Create an MSIX package from Visual Studio](package/packaging-uwp-apps.md) |
+| Convert an existing installer to MSIX | [MSIX Packaging Tool](packaging-tool/tool-overview.md) |
+| Package and sign from the command line | [WinApp CLI](/windows/apps/dev-tools/winapp-cli) |
+| Deliver updates without the Store | [App Installer](app-installer/app-installer-root.md) |
+| Decide between packaged and unpackaged | [Packaging decision guide](/windows/apps/package-and-deploy/packaging-overview) |
+| Deploy to enterprise devices | [Enterprise deployment overview](desktop/managing-your-msix-deployment-overview.md) |
 
 ## Highlights
 
-* **Package existing Windows apps.** Use the [MSIX Packaging Tool](./packaging-tool/tool-overview.md) to create an MSIX package for any Windows app, old or new. The MSIX packaging tool streamlines the packaging experience, offering an interactive user interface or command line to convert and package Windows apps.
-* **Install MSIX app packages.** Use [App Installer](app-installer/app-installer-root.md) to install or update any MSIX app package that is locally available or on any content distribution network.
-* **Apply run time fixes to packaged apps.** The [Package Support Framework](psf/package-support-framework-overview.md) is an open source kit that helps you apply fixes to your existing desktop app when you don't have access to the source code, so that it can run in an MSIX container.
-* **Use MSIX anywhere.** With the open source [MSIX SDK](msix-sdk/sdk-overview.md), MSIX packages are more versatile, and platform independent. The SDK provides all of the APIs needed to verify, validate, and unpack an app package on any platform, including Windows 10 and non-Windows 10 platforms.
-
-## Introduction video to MSIX and resources
-
-This video introduces the key ways that MSIX packaging can help you streamline and improve your app installation and deployment workflows.
-
-<br/>
-
-> [!VIDEO https://www.youtube.com/embed/phrD081sMWc]
-
-Visit the [MSIX Tech Community](https://aka.ms/msixcommunity) page for discussions and the latest information about MSIX. For additional resources about learning MSIX, see [this article](resources.md).
+* **WinApp CLI.** The [WinApp CLI](/windows/apps/dev-tools/winapp-cli) provides command-line tools for the complete MSIX workflow: generating certificates, building packages, and signing without leaving the terminal.
+* **Package existing Windows apps.** Use the [MSIX Packaging Tool](./packaging-tool/tool-overview.md) to create an MSIX package for any Windows app without access to source code.
+* **Apply runtime fixes.** The [Package Support Framework](psf/package-support-framework-overview.md) lets you apply compatibility fixes to packaged apps without modifying the source code.
+* **Cross-platform SDK.** The open source [MSIX SDK](msix-sdk/sdk-overview.md) provides APIs to verify, validate, and unpack MSIX packages on any platform.
 
 ## Inside an MSIX package
 
@@ -42,30 +51,28 @@ Visit the [MSIX Tech Community](https://aka.ms/msixcommunity) page for discussio
 
 ### App payload
 
-The payload files are the app code files and assets that are created when building the app.
+The payload files are the app code files and assets built from your source.
 
 ### AppxBlockMap.xml
 
-The package block map file is an XML document that contains a list of the app’s files along with indexes and cryptographic hashes for each block of data that is stored in the package. The block map file itself is verified and secured with a digital signature when the package is signed. The block map file allows MSIX packages to be downloaded and validated incrementally, and also works to support differential updates to the app files after they’re installed.
+An XML document listing every file in the package with cryptographic hashes for each 64 KB block. Used for incremental download, differential updates, and integrity verification.
 
 ### AppxManifest.xml
 
-The package manifest is an XML document that contains the info the system needs to deploy, display, and update an MSIX app. This info includes package identity, package dependencies, required capabilities, visual elements, and extensibility points.
+The package manifest declares the app's identity, dependencies, capabilities, visual elements, and extension points. This is what Windows reads to deploy, display, and update the app.
 
 ### AppxSignature.p7x
 
-The AppxSignature.p7x is generated when the package is signed. All MSIX packages are required to be signed before install. With the AppxBlockmap.xml, the platform is able to install the package and be validated.
+Generated when the package is signed. All MSIX packages must be signed before installation. Combined with AppxBlockMap.xml, this enables Windows to verify package integrity at install time and at runtime.
 
 ## Supported platforms
 
-For a full list of platforms that support MSIX see [MSIX features and supported platforms](supported-platforms.md).
+For a full list of supported platforms, see [MSIX features and supported platforms](supported-platforms.md).
 
 ## Validation, testing, and troubleshooting
 
-For information about testing your MSIX implementation before deployment, see [MSIX Validation, Testing, and Troubleshooting](desktop/validation-overview.md).
+For testing and common errors, see the [MSIX troubleshooting guide](msix-troubleshooting-guide.md) and [MSIX validation and testing overview](desktop/validation-overview.md).
 
 ## Benefits of app containers
 
-Apps that are packaged using MSIX can be configured to run in a lightweight app container. The app's process, and its child processes, run inside the container, and are isolated using file system and registry virtualization. For more info, see [MSIX AppContainer apps](/windows/msix/msix-container).
-
-All AppContainer apps can read the global registry. An AppContainer app writes to its own virtual registry and application data folder, and that data is deleted when the app is uninstalled or reset. Other apps don't have access to the virtual registry or virtual file system of an AppContainer app.
+Apps packaged with MSIX can be configured to run in a lightweight app container that isolates the process using file system and registry virtualization. For a full explanation of what the container changes and how to work with it, see [MSIX containerization overview](msix-containerization-overview.md).
