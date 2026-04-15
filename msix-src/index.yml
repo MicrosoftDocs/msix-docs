@@ -16,6 +16,9 @@ highlightedContent:
    - title: What is MSIX?
      itemType: overview
      url: overview.md
+   - title: MSIX containerization overview
+     itemType: concept
+     url: msix-containerization-overview.md
    - title: Get the MSIX Packaging Tool
      itemType: download
      url: https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf
