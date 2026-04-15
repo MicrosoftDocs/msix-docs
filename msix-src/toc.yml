@@ -4,6 +4,8 @@
       href: index.yml  
     - name: What is MSIX?
       href: overview.md
+    - name: MSIX containerization overview
+      href: msix-containerization-overview.md
     - name: Features and supported platforms 
       href: supported-platforms.md
     - name: MSIX appContainer apps
