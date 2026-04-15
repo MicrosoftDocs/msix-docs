@@ -1,10 +1,10 @@
 ---
 description: This article describes known issues and troubleshooting tips for Sign Tool
 title: Known issues and troubleshooting with SignTool
-ms.date: 02/05/2020
+ms.date: 04/15/2026
 ms.topic: troubleshooting-known-issue
 author: andreww-msft
-keywords: windows 10, uwp, msix
+keywords: windows 10, windows 11, uwp, msix
 ---
 
 # Known issues and troubleshooting for SignTool
@@ -49,7 +49,7 @@ Another common error is 0x80080057. You may experience the following issues when
 
 This issue occurs for PE files such as .exe, .sys, and so on. This issue occurs because of a ULONG variable in the PE header that specifies the image size. (The image size is 2 GB for down-level operating systems, such as Vista and earlier versions.) This is a design limitation since 1996. The maximum limit for this value is 4 GB for PE files, such as .exe and .sys. Although .cat files are usually signable, the internal hash that's generated may not be accurate.
 
-To work around this issue, make sure that any PE file that you try to sign is less than 4 GB. Because of backward compatibility risks, neither backports nor a permanent fix are currently possible. However, this issue is being investigated.
+To work around this issue, make sure that any PE file that you try to sign is less than 4 GB. This is a known design limitation of the PE format with no planned fix, due to backward compatibility constraints.
 
 > [!NOTE]
 > This issue isn't specific to SignTool. The design of the PE header is limited to 4 GB for Windows 7 and later Windows versions, regardless of which tool is used.
@@ -74,7 +74,7 @@ A: No. However, the limitations would remain regardless of which version of Sign
 
 Q5: Should we be using a different signing tool or method altogether?
 
-A: We currently have no alternative method for digital signing.
+A: Yes. [Azure Trusted Signing](/azure/trusted-signing/) is Microsoft's managed code-signing service and is the recommended modern alternative to managing your own certificates. It handles certificate lifecycle management and integrates with CI/CD pipelines. [Azure Key Vault](/azure/key-vault/general/overview) is another option for signing with cloud-stored certificates. For offline or self-service scenarios, SignTool remains the standard tool.
 
 
 
