@@ -28,7 +28,7 @@ If you are interested in joining our Insider Program, go to [Join MSIX Packaging
 
 The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update. It will fail to install if the Windows Update service is disabled on the computer or if Windows Insider flight ring settings do not match the OS build of the computer.
 
-If you are running into problems acquiring the driver, or you are working in an offline environment, you can find links to download the driver [here](disconnected-environment.md#get-the-msix-packaging-tool-driver). 
+If you are running into problems acquiring the driver, or you are working in an offline environment, you can find links to download the driver [here](disconnected-environment.md#get-the-msix-packaging-tool). 
 
 If you have downloaded the driver and are running into issues during your package conversion, it may be one of the following issues.
 

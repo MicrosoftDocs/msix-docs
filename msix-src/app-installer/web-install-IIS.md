@@ -111,7 +111,7 @@ Open the **Web.config** file from the solution explorer and add the following li
 ```
 
 > [!NOTE]
-> On newest Microsoft web technology .NET Core. Web site build using .NET Core ASP ignore web.config static content mimeMap. As a result, you will need to a proper configuration of .NET Core website which will host your MSIX installation you need modify Configure method in Startup.cs file. Visit [.NET Core documentation](/aspnet/core/&preserve-view=true) for more information. 
+> ASP.NET Core does not use `web.config` MIME mappings for static content. If your hosting app is built with ASP.NET Core, configure the required content types for `.appx`, `.msix`, `.appxbundle`, `.msixbundle`, and `.appinstaller` in the static file middleware, typically in the `Startup.Configure` method. For more information, see the [.NET Core documentation](/aspnet/core/?preserve-view=true).
 
 ## Step 8 - Add loopback exemption for App Installer
 

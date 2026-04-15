@@ -5,7 +5,7 @@ description: Optional packages contain content that can be integrated with a mai
 ms.date: 07/02/2019
 ms.topic: article
 author: andreww-msft
-ms.author: andreww
+ms.author: jken
 keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio
 ---
 

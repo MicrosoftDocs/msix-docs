@@ -17,7 +17,7 @@ MSIX is the modern Windows app packaging format. It gives any Windows app a reli
 - Store distribution and update channels
 - Enterprise management through Intune and Configuration Manager
 
-If you're not sure whether to package your app or which packaging model to use, start with the [Packaging decision guide](/windows/apps/package-and-deploy/packaging-overview).
+If you're not sure whether to package your app or which packaging model to use, start with the [Packaging decision guide](/windows/apps/package-and-deploy/).
 
 ## Key features
 
@@ -35,7 +35,7 @@ If you're not sure whether to package your app or which packaging model to use, 
 | Convert an existing installer to MSIX | [MSIX Packaging Tool](packaging-tool/tool-overview.md) |
 | Package and sign from the command line | [WinApp CLI](/windows/apps/dev-tools/winapp-cli) |
 | Deliver updates without the Store | [App Installer](app-installer/app-installer-root.md) |
-| Decide between packaged and unpackaged | [Packaging decision guide](/windows/apps/package-and-deploy/packaging-overview) |
+| Decide between packaged and unpackaged | [Packaging decision guide](/windows/apps/package-and-deploy/) |
 | Deploy to enterprise devices | [Enterprise deployment overview](desktop/managing-your-msix-deployment-overview.md) |
 
 ## Highlights

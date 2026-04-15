@@ -101,9 +101,9 @@ Our MSIX and app attach API offerings are broken down into the following:
     *	You can set the duration in hours of the MSIX Intune delivered package. 
     *	We provide all the results of the application package, specifically looking for any CPU or memory spikes. 
     
-How we plug our APIs into your existing traditional end to end application management workflows: [End-to-End Application Packaging & Testing Automation Solution](https://www.accessitautomation.com/access-capture-end-to-end) 
+How we plug our APIs into your existing traditional end to end application management workflows: [End-to-End Application Packaging & Testing Automation Solution](https://www.accessitautomation.com/) 
 
-Modern API driven application management: [Modern API-Driven Application Packaging & Testing](https://www.accessitautomation.com/api-driven-app-packaging-testing) 
+Modern API driven application management: [Modern API-Driven Application Packaging & Testing](https://www.accessitautomation.com/) 
 
 ## FireGiant
 

@@ -193,7 +193,7 @@ Validate your app before you submit it to Partner Center for certification on a 
 ### Validate your app package locally
 
 > [!NOTE]
-> Windows App Certification Kit (WACK) has been deprecated and is no longer maintained. Submit your package to Partner Center; certification testing is performed automatically during the submission process. See [App submissions](/windows/uwp/publish/app-submissions).
+> Windows App Certification Kit (WACK) is deprecated and no longer maintained, but you can still use it for optional local pre-submission checks. Official certification is performed automatically when you submit your package to Partner Center. See [App submissions](/windows/uwp/publish/app-submissions).
 
 1. In the final **Package Creation Completed** page of the **Create App Packages** wizard, leave the **Local machine** option selected and click **Launch Windows App Certification Kit**. For more information about testing your app with the Windows App Certification Kit, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
