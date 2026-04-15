@@ -151,6 +151,7 @@ Then expand the packaging project's **Dependencies** > **Applications** node, an
 
 ## Related topics
 
+* [MSIX containerization overview](msix-containerization-overview.md)
 * [AppContainer for legacy applications](/windows/win32/secauthz/appcontainer-for-legacy-applications-)
 * [Create a new project for a packaged C# or C++ WinUI 3 desktop app](/windows/apps/winui/winui3/create-your-first-winui3-app#packaged-create-a-new-project-for-a-packaged-c-or-c-winui-3-desktop-app)
 * [Application element](/uwp/schemas/appxpackage/uapmanifestschema/element-application)
