@@ -1,7 +1,7 @@
 ---
 title: Support legacy context menus
 description: Describes how to support legacy context menus for MSIX apps.
-ms.date: 8/16/2021
+ms.date: 04/15/2026
 ms.topic: how-to
 keywords: MSIX, IContextMenu, DropHandler, win32 shell extensions, MPT, MSIX Packaging Tool
 ---
@@ -10,8 +10,7 @@ keywords: MSIX, IContextMenu, DropHandler, win32 shell extensions, MPT, MSIX Pac
 
 The context menu is one of the most popular and useful shell extensions. If you are already in File Explorer or on the Desktop, it significantly reduces the number of steps to complete a file operation compared to opening a separate app.
 
-If your desktop app implements the legacy IContextMenu interface for shell extensions such as the context menu handler or drag and drop handler, the shell extension might not work after you package your app. In order for shell to recognize and register the extension, you will need to modify the package manifest file.
-(This feature is available on Windows 11 build 22000+, which is currently available via [Windows Insider](https://insider.windows.com/) builds)
+If your desktop app implements the legacy IContextMenu interface for shell extensions such as the context menu handler or drag and drop handler, the shell extension might not work after you package your app. In order for shell to recognize and register the extension, you will need to modify the package manifest file. This feature is available on Windows 11, version 21H2 (build 22000) and later.
 
 - Add com namespace and [windows.comServer extension](/uwp/schemas/appxpackage/uapmanifestschema/element-com-surrogateserver) for your shellex dll
     
