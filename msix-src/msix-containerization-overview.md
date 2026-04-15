@@ -3,6 +3,8 @@ description: An overview of the MSIX containerization model, including app isola
 title: MSIX containerization overview
 ms.date: 04/15/2026
 ms.topic: concept-article
+author: GrantMeStrength
+ms.author: jken
 keywords: windows 10, windows 11, msix, container, virtualization, isolation, appcontainer, trust level
 ---
 

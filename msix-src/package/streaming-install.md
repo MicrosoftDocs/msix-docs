@@ -4,7 +4,7 @@ title: App streaming install
 description: App streaming install enables you to specify which parts of your app you would like the Microsoft Store to download first. 
 ms.date: 07/02/2019
 author: andreww-msft
-ms.author: andreww
+ms.author: jken
 ms.topic: install-set-up-deploy
 keywords: windows 10, msix, uwp, streaming install
 ---

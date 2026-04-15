@@ -63,7 +63,7 @@ The Visual Studio manifest designer allows you to update the manifest file witho
 
     ![Manifest designer in Visual Studio](images/packaging-screen1.jpg)
 
-    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](/windows/uwp/design/style/app-icons-and-logos).
+    Check that you have all the images that are required for an app on the **Visual Assets** tab.  This is where you would provide [app icons and logos](/windows/apps/design/style/app-icons-and-logos).
 
     From the **Packaging** tab, you can enter publishing data. This is where you can choose which certificate to use to sign your app. All MSIX apps must be signed with a certificate.
 
@@ -161,7 +161,7 @@ You can create an app package upload file by using the **Create App Packages** w
 5. Select the app name for your package from the list of apps currently registered to your account, or reserve a new one if you have not already reserved one in Partner Center.  
 
     > [!NOTE]
-    > If you are using Visual Studio 2017 you will be unable to list apps currently registered to your account or reserve new app names when using a Microsoft account (MSA) , only Azure Active Directory (AAD) accounts will work.  MSA accounts are supported starting in Visual Studio 2019.
+    > If you are using Visual Studio 2017 you will be unable to list apps currently registered to your account or reserve new app names when using a Microsoft account (MSA) , only Microsoft Entra ID (AAD) accounts will work.  MSA accounts are supported starting in Visual Studio 2019.
 
 6. Make sure you select all three architecture configurations (x86, x64, and ARM) in the **Select and Configure Packages** dialog to ensure that your app can be deployed to the widest range of devices. In the **Generate app bundle** listbox, select **Always**. An app bundle (.appxbundle or .msixbundle) is preferred over a single app package file because it contains a collection of app packages configured for each type of processor architecture. When you choose to generate the app bundle, the app bundle will be included in the final app package upload (.appxupload or .msixupload) file along with debugging and crash analytic information. If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](device-architecture.md).  
 
@@ -191,6 +191,9 @@ You can create an app package upload file by using the **Create App Packages** w
 Validate your app before you submit it to Partner Center for certification on a local or remote machine. You can only validate release builds for your app package, not debug builds. For more information on submitting your app to Partner Center, see [App submissions](/windows/uwp/publish/app-submissions).
 
 ### Validate your app package locally
+
+> [!NOTE]
+> Windows App Certification Kit (WACK) is deprecated and no longer maintained, but you can still use it for optional local pre-submission checks. Official certification is performed automatically when you submit your package to Partner Center. See [App submissions](/windows/uwp/publish/app-submissions).
 
 1. In the final **Package Creation Completed** page of the **Create App Packages** wizard, leave the **Local machine** option selected and click **Launch Windows App Certification Kit**. For more information about testing your app with the Windows App Certification Kit, see [Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
@@ -225,13 +228,13 @@ Validate your app before you submit it to Partner Center for certification on a 
 > [!NOTE]
 > Starting in Visual Studio 2026, the **Automate Store submissions**  feature is no longer supported.
 
-Starting in Visual Studio 2019, you can submit the generated .appxupload file to the Microsoft Store directly from the IDE by selecting the **Automatically submit to the Microsoft Store after Windows App Certification Kit validation** option at the end of the [Create App Packages wizard](#create-your-app-package-upload-file-using-visual-studio). This feature leverages Azure Active Directory for accessing the Partner Center account info needed to publish your app. To use this feature, you'll need associate Azure Active Directory with your Partner Center account and retrieve several credentials required for submissions.
+Starting in Visual Studio 2019, you can submit the generated .appxupload file to the Microsoft Store directly from the IDE by selecting the **Automatically submit to the Microsoft Store after Windows App Certification Kit validation** option at the end of the [Create App Packages wizard](#create-your-app-package-upload-file-using-visual-studio). This feature leverages Microsoft Entra ID for accessing the Partner Center account info needed to publish your app. To use this feature, you'll need associate Microsoft Entra ID with your Partner Center account and retrieve several credentials required for submissions.
 
-### Associate Azure Active Directory with your Partner Center account
+### Associate Microsoft Entra ID with your Partner Center account
 
 Before you can retrieve the credentials that are required for automatic Store submissions, you must first follow these steps in the [Partner Center dashboard](https://partner.microsoft.com/dashboard) if you have not done so already.
 
-1. [Associate your Partner Center account with your organization's Azure Active Directory](/windows/uwp/publish/associate-azure-ad-with-partner-center). If your organization already uses Office 365 or other business services from Microsoft, you already have Azure AD. Otherwise, you can create a new Azure AD tenant from within Partner Center at no additional charge.
+1. [Associate your Partner Center account with your organization's Microsoft Entra ID](/windows/uwp/publish/associate-azure-ad-with-partner-center). If your organization already uses Office 365 or other business services from Microsoft, you already have Azure AD. Otherwise, you can create a new Azure AD tenant from within Partner Center at no additional charge.
 
 2. [Add an Azure AD application to your partner Center account](/windows/uwp/publish/add-users-groups-and-azure-ad-applications#add-azure-ad-applications-to-your-partner-center-account). This Azure AD application represents the app or service that you will use to access submissions for your Dev Center account. You must assign this application to the **Manager** role. If this application already exists in your Azure AD directory, you can select it on the **Add Azure AD applications** page to add it to your Dev Center account. Otherwise, you can create a new Azure AD application on the **Add Azure AD applications** page.
 

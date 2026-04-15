@@ -1,15 +1,14 @@
 ---
 title: Group applications under a folder in the Start menu
 description: Describes how to enable multiple packaged MSIX application to be grouped under a single folder in the Start menu
-ms.date: 12/02/2020
+ms.date: 04/15/2026
 ms.topic: how-to
-keywords: windows 10, uwp, msix, appx
+keywords: windows 10, windows 11, uwp, msix, appx
 ---
 
 # Group applications under a folder in the Start menu
 
-> [!IMPORTANT]
-> This feature is currently available in preliminary Windows 10 builds which are distributed through the Dev Ring of the [Windows Insider program](https://insider.windows.com/en/). You will need at least build 20257 to enable this feature.
+This feature is available on Windows 11.
 
 The manifest of a packaged application contains one or more `<Application>` entries, which are the available entry points. Each of them will become an icon in the Start menu.
 

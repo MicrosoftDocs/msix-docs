@@ -37,7 +37,7 @@ For IIS distribution of a MSIX file, and how to configure your IIS server to sup
 ## CI/CD pipelines
 
 > [!IMPORTANT]
-> Visual Studio App Center was retired on March 31, 2025. Use [GitHub Actions](/windows/apps/package-and-deploy/ci-cd-overview) or [Azure Pipelines](/azure/devops/pipelines/apps/windows/universal) to automate building, testing, and distributing your MSIX packages. For guidance on MSIX CI/CD, see [Set up a CI/CD pipeline for your MSIX app](azure-dev-ops.md).
+> Visual Studio App Center was retired on March 31, 2025. Use [GitHub Actions](/windows/msix/desktop/cicd-overview) or [Azure Pipelines](/azure/devops/pipelines/apps/windows/universal) to automate building, testing, and distributing your MSIX packages. For guidance on MSIX CI/CD, see [Set up a CI/CD pipeline for your MSIX app](azure-dev-ops.md).
 
 ## Deployment Image Servicing and Management (DISM.exe) and Provisioning
 

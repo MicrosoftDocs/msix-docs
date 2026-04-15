@@ -1,29 +1,29 @@
 ---
-title: Deploy MSIX Core apps with Microsoft Endpoint Configuration Manager
-description: Learn how to set up an MSIX Core deployment strategy using Microsoft Endpoint Configuration Manager.
+title: Deploy MSIX Core apps with Microsoft Configuration Manager
+description: Learn how to set up an MSIX Core deployment strategy using Microsoft Configuration Manager.
 ms.date: 03/02/2020
 ms.topic: install-set-up-deploy
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.custom: "RS5, seodec18"
 ---
 
-# Deploy MSIX Core apps with Microsoft Endpoint Configuration Manager
-The delivery of MSIX applications using the Microsoft Endpoint Configuration Manager allows IT Pros to link other applications as dependencies, forcing them to install prior to. By creating a dependency to the MSIX Core application, we enforce the MSIX Core application to be installed only when required by the device. For more information on application dependencies in Micosoft Endpoint Configuration Manager see: [Create Applications: Deployment type Dependencies](/configmgr/apps/deploy-use/create-applications#bkmk_dt-depend).
+# Deploy MSIX Core apps with Microsoft Configuration Manager
+The delivery of MSIX applications using the Microsoft Configuration Manager allows IT Pros to link other applications as dependencies, forcing them to install prior to. By creating a dependency to the MSIX Core application, we enforce the MSIX Core application to be installed only when required by the device. For more information on application dependencies in Microsoft Configuration Manager see: [Create Applications: Deployment type Dependencies](/configmgr/apps/deploy-use/create-applications#bkmk_dt-depend).
 
 ## Get started
-The following steps will guide you through setting up an MSIX Core deployment strategy by using Microsoft Endpoint Configuration Manager:
+The following steps will guide you through setting up an MSIX Core deployment strategy by using Microsoft Configuration Manager:
 
-1. [Deploy MSIX Core with Microsoft Endpoint Configuration Manager](deploy-msix-core-with-configmgr.md)
+1. [Deploy MSIX Core with Microsoft Configuration Manager](deploy-msix-core-with-configmgr.md)
 1. [Update your existing MSIX package to support MSIX Core](support-msix-core.md)
-1. Deploy MSIX Core Apps with Microsoft Endpoint Configuration Manager
+1. Deploy MSIX Core Apps with Microsoft Configuration Manager
 
-## Creating the MSIX Core Microsoft Endpoint Configuration Manager application
-The following will guide you through the creation of a Microsoft Endpoint Configuration Manager application, for the purpose of deploying MSIX Core apps to client devices.
+## Creating the MSIX Core Microsoft Configuration Manager application
+The following will guide you through the creation of a Microsoft Configuration Manager application, for the purpose of deploying MSIX Core apps to client devices.
  
-Assuming you followed the previous guides (See the list of guides in the Get Started section above) and have retrieved/updated/created an MSIX Core enlightened app. As well as have copied the app to a file share that is accessible by the Microsoft Endpoint Configuration Manager tool. The next step is to deploy the new app to client devices within your environment.
+Assuming you followed the previous guides (See the list of guides in the Get Started section above) and have retrieved/updated/created an MSIX Core enlightened app. As well as have copied the app to a file share that is accessible by the Microsoft Configuration Manager tool. The next step is to deploy the new app to client devices within your environment.
 
-### Create MSIX Core dependent application in Microsoft Endpoint Configuration Manager
-1. From within the Microsoft Endpoint Configuration Manager console navigate to: **Software Library > Overview / Application Management / Applications**.
+### Create MSIX Core dependent application in Microsoft Configuration Manager
+1. From within the Microsoft Configuration Manager console navigate to: **Software Library > Overview / Application Management / Applications**.
 1. Select **Create Application** from the ribbon.
 1. Select the **Manually specify the application information** radio button.
 1. Select the **Next** button.

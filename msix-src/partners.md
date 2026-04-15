@@ -63,11 +63,11 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 
 :::column:::
-    [![Pace logo](images/MP_logo.png)](https://www.masterpackager.com/)
+    [![Master Packager logo](images/MP_logo.png)](https://www.masterpackager.com/)
 :::column-end:::
 
 :::column:::
-    [![Pace logo](images/PACE-suite-logos.png)](https://pacesuite.com/convert-exe-to-msix/)
+    [![PACE Suite logo](images/PACE-suite-logos.png)](https://pacesuite.com/convert-exe-to-msix/)
 :::column-end:::
 
 :::column:::
@@ -101,7 +101,7 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
 :::column:::
 
-[![App-V-Scheduler-logo2](media/partners/app-v-scheduler-logo2.png)](https://appventix.com/)
+[![App-V Scheduler logo](media/partners/app-v-scheduler-logo2.png)](https://appventix.com/)
 
   
   
@@ -136,12 +136,12 @@ The following partners provide additional tooling and support for MSIX developme
 :::row:::
     :::column:::
         ![Camwood logo](images/Camwood_Logo_2.png)<br>
-        [Learn more](http://camwood.com/windows-10/)
+        [Learn more](https://camwood.com/)
     :::column-end:::
 
     :::column:::
         ![Cloudhouse logo](images/CloudHouse_Logo.png)<br>
-        [Learn more)](https://cloudhouse.com/msixpr)
+        [Learn more)](https://cloudhouse.com/)
     :::column-end:::
     
     :::column:::

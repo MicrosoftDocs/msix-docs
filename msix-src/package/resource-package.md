@@ -4,7 +4,7 @@ description: This article describes resource packages and how developers can use
 ms.date: 02/06/2020
 author: andreww-msft
 ms.topic: article
-ms.author: andreww
+ms.author: jken
 keywords: windows 10, msix, uwp, optional packages, related set, package extension, visual studio
 ---
 

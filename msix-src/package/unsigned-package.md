@@ -43,4 +43,7 @@ When your app is ready to be distributed, you should ensure that the package is 
 
 ## Related topics
 
+* [Signing overview](signing-package-overview.md)
+* [Sign an MSIX package: end-to-end guide](sign-msix-package-guide.md)
+* [Sign with Azure Trusted Signing](../desktop/sign-with-akv-cert.md)
 * [Create hosted apps](/windows/uwp/launch-resume/hosted-apps)

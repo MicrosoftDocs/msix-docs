@@ -1,18 +1,20 @@
 ---
 description: This article describes how to sign an MSIX package with Device Guard signing, which enables enterprises to guarantee that apps come from a trusted source.
 title: Sign an MSIX package with Device Guard signing
-ms.date: 12/07/2022
+ms.date: 04/15/2026
 ms.topic: how-to
-keywords: windows 10, uwp, msix
+keywords: windows 10, windows 11, uwp, msix
 ms.custom: sfi-ga-nochange
 ---
 
 # Sign an MSIX package with Device Guard signing
 
 > [!IMPORTANT]
-> Microsoft Store for Business and Microsoft Store for Education was retired in the first quarter of 2023. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://aka.ms/windows/msfb_evolution).
+> **Device Guard Signing Service v2 (DGSS) is no longer available.** Microsoft Store for Business and Microsoft Store for Education — which DGSS required for authentication and permissions — were retired on March 31, 2023.
 >
-> You can continue to use the current Device Guard Signing Service v2 (DGSS) capabilities until that time. DGSS will be replaced by the [Azure Code Signing service (ACS)](https://aka.ms/AzureCodeSigning) and will support your Windows Defender Application Control (WDAC) policy and catalog file signing needs.
+> For enterprise code signing, use [Azure Trusted Signing](/azure/trusted-signing/), which is the successor service. Azure Trusted Signing provides managed certificate lifecycle, integrates with SignTool and CI/CD pipelines, and supports MSIX, catalog file, and WDAC policy signing. See [Sign an MSIX package: end-to-end guide](sign-msix-package-guide.md) for current guidance.
+
+The content below is retained for historical reference only.
 
 The [Device Guard Signing Service v2 (DGSS)](/windows/security/threat-protection/windows-defender-application-control/use-device-guard-signing-portal-in-microsoft-store-for-business) is a code signing service that comes with your existing Microsoft Store for Business and Education tenant account. You can use the DGSS to sign line-of-business apps, catalog files, and Windows Defender Application Control (WDAC) policies. It enables enterprises to guarantee that every app comes from a trusted source. You can use SignTool in the Windows SDK and the DGSSv2 dlib in the NuGet package to sign your MSIX apps with Device Guard signing. This feature support enables you to easily incorporate Device Guard signing into the MSIX package building and signing workflow.
 
@@ -23,7 +25,7 @@ A [NuGet package](https://www.nuget.org/packages/Microsoft.Acs.Dgss.Client) cont
 
 Device Guard signing requires permissions in the Microsoft Store for Business and uses Azure Active Directory (AD) authentication. To sign an MSIX package with Device Guard signing, follow these steps.
 
-1. In the [Microsoft Store for Business](https://businessstore.microsoft.com/) (or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
+1. In the Microsoft Store for Business (or Microsoft Store for Education), assign yourself a role with permissions necessary to perform Device Guard signing.
     > [!NOTE]
     > You only need to use this portal to configure permissions for Device Guard signing.
 2. Register your app in the [Azure portal](https://portal.azure.com/) with the proper settings so that you can use Azure AD authentication with the Microsoft Store for Business.
@@ -40,11 +42,11 @@ To use Device Guard signing in the Microsoft Store for Business or Microsoft Sto
 > Device Guard Signer role is used when you are signing as an app. Global Administrator and Billing Account Owner is used when you sign as a logged in person.
 
 To confirm or reassign roles:
-1.	Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com/).
+1.	Sign in to the Microsoft Store for Business.
 2.	Select **Manage** and then select **Permissions**.
 3.	View **Roles**.
 
-For more information, see [Roles and permissions in the Microsoft Store for Business and Education](/microsoft-store/roles-and-permissions-microsoft-store-for-business).
+For more information, see Roles and permissions in the Microsoft Store for Business and Education.
 
 ## Register your app in the Azure Portal
 
@@ -73,7 +75,7 @@ To register your app with the proper settings so that you can use Azure AD authe
 13.	From the menu bar select **Add a permission.** In the fly out menu select the **APIs my organization** uses tab. In the search box enter **Windows Store for Business**
 
 > [!NOTE]
-> If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
+> If Windows Store for Business does not show up in the list open a new browser tab and navigate to the Microsoft Store for Business portal (now retired) then sign in as the tenant Global Administrator. Close the browser tab, then search again.
 
 14.	Select **Windows Store for Business**, then select **Delegated permissions.** Check **user_impersonation**.
 15.	Click **Add permissions** at the bottom of the page. From the left side menu select **Overview** to return to the DGSSv2 app registration overview.
@@ -84,7 +86,7 @@ To register your app with the proper settings so that you can use Azure AD authe
 Next, obtain an Azure AD access token for your Azure AD app in JSON format. You can do this using a variety of programming and scripting languages. For more information about this process, see [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/develop/v1-protocols-oauth-code). We recommend that you retrieve a [refresh token](/azure/active-directory/develop/v1-protocols-oauth-code#refreshing-the-access-tokens) along with the access token, because your access token will expire in one hour.
 
 > [!NOTE]
-> If Windows Store for Business does not show up in the list open a new browser tab and navigate to https://businessstore.microsoft.com then sign in as the tenant Global Administrator. Close the browser tab, then search again.
+> If Windows Store for Business does not show up in the list open a new browser tab and navigate to the Microsoft Store for Business portal (now retired) then sign in as the tenant Global Administrator. Close the browser tab, then search again.
 
 The following PowerShell example demonstrates how to request an access token.
 
