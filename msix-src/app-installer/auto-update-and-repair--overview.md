@@ -63,7 +63,7 @@ See the Get-AppxPackageAutoUpdateSettings and Set-AppxPackageAutoUpdateSettings 
 
 ### CSP
 
-Enterprise IT pro's make use of mobile device management solutions (such as: Microsoft Endpoint Manager) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic updating of specific Windows apps.
+Enterprise IT pros make use of mobile device management solutions (such as Microsoft Intune) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic updating of specific Windows apps.
 
 The following CSP Settings can be found in the following path: `./Device/Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/nonStore/<Windows app Family Name>/AppUpdateSettings/AutoUpdateSettings/AutoUpdateSettings/`
 
@@ -92,7 +92,7 @@ For more information on how to create an *.AppInstaller file, see [How to create
 
 ### CSP
 
-Enterprise IT pro's make use of mobile device management solutions (such as: Microsoft Endpoint Manager) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic repair of specific Windows apps.
+Enterprise IT pros make use of mobile device management solutions (such as Microsoft Intune) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic repair of specific Windows apps.
 
 The following CSP Settings can be found in the following path: `./Device/Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/nonStore/<Windows app Family Name>/AppUpdateSettings/AutoUpdateSettings/AutoRepair/`
 
