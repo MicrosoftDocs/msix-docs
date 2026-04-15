@@ -3,7 +3,7 @@ description: An overview of the MSIX containerization model, including app isola
 title: MSIX containerization overview
 ms.date: 04/15/2026
 ms.topic: concept-article
-keywords: windows 10, windows 11, msix, container, virtualization, isolation, appcointainer, trust level
+keywords: windows 10, windows 11, msix, container, virtualization, isolation, appcontainer, trust level
 ---
 
 # MSIX containerization overview
@@ -20,7 +20,6 @@ This means:
 
 - The app's install files are never modified at runtime.
 - App state is stored separately from app binaries — making updates, repairs, and uninstalls clean and reliable.
-- Multiple versions of the same app can coexist because each has its own isolated state.
 
 > [!NOTE]
 > MSIX containers are a Windows runtime feature, not a separate operating system environment. The app runs as a native Windows process — it just has a virtualized view of certain system resources.
@@ -51,7 +50,6 @@ UWP apps always run in an AppContainer. Desktop apps can also opt into AppContai
 | **Clean uninstall** | Because Windows tracks all app state separately, uninstalling an MSIX package removes all app files, registry entries, and system changes — with no leftover artifacts. User-created files are preserved. |
 | **Reliable updates** | App binaries are read-only at runtime. Updates replace the package atomically, and the app can be rolled back if needed. |
 | **No registry pollution** | Registry writes from the app go to a per-user virtual hive, not to `HKEY_LOCAL_MACHINE`. This prevents the registry sprawl common with traditional Win32 installers. |
-| **Side-by-side versions** | Multiple versions of the same package can be installed simultaneously because each version has its own isolated state. |
 | **Security isolation** | AppContainer apps are restricted to explicitly granted resources, reducing the impact of a compromised process. |
 | **Integrity enforcement** | Windows can detect tampering with package files at runtime. If a package is tampered with, Windows blocks launch and triggers repair. See [Sign an MSIX package overview](package/signing-package-overview.md). |
 
