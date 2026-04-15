@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
-ms.date: 2/3/2020
+ms.date: 04/15/2026
 ms.topic: concept-article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -21,10 +21,10 @@ How you deploy often depends on who is your customer and your role as a develope
 
 ### IT Pros
 IT Pros typically use a software management system to install and manage their apps.  In the [Distribute your MSIX in an enterprise environment](managing-your-msix-deployment-enterprise.md) section we will discuss:
-* Using Microsoft Endpoint Configuration Manager and Intune to manage your apps
+* Using Microsoft Configuration Manager and Intune to manage your apps
 * Using provisioning and DISM to preconfigure machines with MSIX
 * Controlling app access with Group Policies and AppLocker
-* Distributing apps through the web or Microsoft Store for Business
+* Distributing apps through the web or Microsoft Intune
 * Using AppCenter for building, testing, releasing, and desktop apps
  
 ### Developers

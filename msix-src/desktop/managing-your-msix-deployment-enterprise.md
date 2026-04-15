@@ -1,7 +1,7 @@
 ---
-description: This article provides all the details you need to manage deploying you MSIX applications in an enterprise environment.  This article is targeted at enterprise and IT Pros.
+description: This article provides all the details you need to manage deploying your MSIX applications in an enterprise environment.  This article is targeted at enterprise and IT Pros.
 title: Distribute your MSIX in an enterprise environment
-ms.date: 2/3/2020
+ms.date: 04/15/2026
 ms.topic: article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -12,11 +12,11 @@ The MSIX packaging format can be delivered to client devices through the use of 
 
 Packaged apps can be installed using deployment tools, PowerShell, or by using [AppInstaller](https://www.microsoft.com/p/app-installer/9nblggh4nns1?ocid=9nblggh4nns1_ORSEARCH_Bing&rtc=1&activetab=pivot:overviewtab). By using AppInstaller to install an MSIX packaged app, the user or IT Pro may select to right-click and install or double click the MSIX installer. This approach will prompt the user to select the **Install** button to initiate the installation and view the installation progress. Alternatively, by using available [PowerShell cmdlets](./powershell-msix-cmdlets.md) the installation and uninstallation of an MSIX packaged app can be performed silently.
 
-##	Microsoft Endpoint Configuration Manager 
+## Microsoft Configuration Manager
 
-As MSIX is a standardized installation packaging format, the details regarding the application (Publisher, Application Name, and Version) will be automatically retrieved and presented for review through the create application wizard within Microsoft Endpoint Configuration Manager. Similarly, the install string and detection methods used with MSIX applications is consistent and automatically configured by the Microsoft Endpoint Configuration Manager create application wizard.
+As MSIX is a standardized installation packaging format, the details regarding the application (Publisher, Application Name, and Version) will be automatically retrieved and presented for review through the create application wizard within Microsoft Configuration Manager. Similarly, the install string and detection methods used with MSIX applications is consistent and automatically configured by the Microsoft Configuration Manager create application wizard.
 
-When creating an application in Microsoft Endpoint Configuration Manager, select application type: **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**. For guidance about how to create and deploy an application through Microsoft Endpoint Configuration Manager, see [create and deploy an application](/configmgr/apps/get-started/create-and-deploy-an-application).
+When creating an application in Microsoft Configuration Manager, select application type: **Windows app package (*.appx, *.appxbundle, *.msix, *.msixbundle)**. For guidance about how to create and deploy an application through Microsoft Configuration Manager, see [create and deploy an application](/configmgr/apps/get-started/create-and-deploy-an-application).
 
 ## Microsoft Intune
 
@@ -31,11 +31,13 @@ For IIS distribution of a MSIX file, and how to configure your IIS server to sup
 
 ## Microsoft Store for Business
 
-[Microsoft Store for Business](https://businessstore.microsoft.com/store) is a store specifically designed for Business and Education app distribution. You can use Microsoft Store to find, acquire, distribute, and manage apps for your organization or school.  For details on the Microsoft Store for Business, see [Microsoft Store for Business and Education.](/microsoft-store/)
+> [!IMPORTANT]
+> Microsoft Store for Business and Microsoft Store for Education were retired on March 31, 2023. For enterprise app distribution, use [Microsoft Intune](/mem/intune/apps/lob-apps-windows) to deploy MSIX line-of-business apps directly to managed devices.
 
-## App Center
+## CI/CD pipelines
 
-[App Center](https://appcenter.ms/) enables you to automatically build your app, test it on real devices, and distribute it to beta testers.  App Center lets you ship apps more frequently, at higher-quality, and with greater confidence.  With App Center you can connect your repo and within minutes automate your builds, test on real devices in the cloud, distribute apps to beta testers, and monitor real-world usage with crash and analytics data. All in one place.
+> [!IMPORTANT]
+> Visual Studio App Center was retired on March 31, 2025. Use [GitHub Actions](/windows/apps/package-and-deploy/ci-cd-overview) or [Azure Pipelines](/azure/devops/pipelines/apps/windows/universal) to automate building, testing, and distributing your MSIX packages. For guidance on MSIX CI/CD, see [Set up a CI/CD pipeline for your MSIX app](azure-dev-ops.md).
 
 ## Deployment Image Servicing and Management (DISM.exe) and Provisioning
 
@@ -49,9 +51,9 @@ To learn more about provisioning, see [Deployment Image Servicing and Management
 
 ## Managing your MSIX app
 
-MSIX Packages have a comprehensive set of controls that IT Pros can use to control their installation.  IT Pros can dictate how and when MSIX apps can upgrade, downgrade or uninstall.  MSIX packages also can be limited with inbox Windows services like AppLocker and Group Policies. 
+MSIX Packages have a comprehensive set of controls that IT Pros can use to control their installation.  IT Pros can dictate how and when MSIX apps can upgrade, downgrade or uninstall.  MSIX packages also can be limited with inbox Windows services like AppLocker and Group Policies.
 
-###	Prevent MSIX app installs through AppLocker
+### Prevent MSIX app installs through AppLocker
 
 Supported in [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview), is the ability to allow or deny MSIX applications to execute on a corporate device. This is done by defining rules based on the MSIX app attributes. These attributes include: publisher name, product name, file name, file version, file path and file hash. MSIX apps identified by these rules are then configured to allow or deny execution.
 
@@ -82,4 +84,4 @@ To learn more about UpdateBlocksActivation, see [Configure update settings in th
 
 ## Uninstall
 
-MSIX provides a robust install and uninstall story.  Since MSIX packages are are containerized packages, the unistall of the package will remove all application artifacts including all files written to  %ProgramFiles%WindowsApps as well as any system files in the AppData folder or registry settings created for the application.  The uninstall will not remove any user created files.
+MSIX provides a robust install and uninstall story.  Since MSIX packages are containerized packages, the uninstall of the package will remove all application artifacts including all files written to %ProgramFiles%\WindowsApps as well as any system files in the AppData folder or registry settings created for the application.  The uninstall will not remove any user created files.
