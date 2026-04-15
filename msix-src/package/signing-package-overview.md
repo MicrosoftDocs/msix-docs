@@ -29,12 +29,12 @@ Choose a signing approach based on your scenario:
 > **Azure Artifact Signing** (formerly known as Trusted Signing) is Microsoft's managed code signing service and is the recommended option for production MSIX signing. Key characteristics:
 >
 > - **Instant SmartScreen reputation**: Reputation is tied to your verified identity, not a certificate lifetime — so new builds get immediate trust.
-> - **Short-lived certs**: Certificates rotate daily (3-day lifespan), enabling time-precise revocation if needed.
+> - **Short-lived certs**: A new certificate is issued daily, and each certificate remains valid for about 3 days, enabling time-precise revocation if needed.
 > - **CI/CD ready**: Supports GitHub Actions (`azure/trusted-signing-action`) and Azure DevOps out of the box.
 >
 > **Eligibility for Public Trust certificates**: Available to organizations in the USA, Canada, the European Union, and the United Kingdom, and to individual developers in the USA and Canada. Organizations must have a verifiable tax history of three or more years. See [Important information for identity validation](/azure/trusted-signing/quickstart#important-information-for-public-identity-validation).
 >
-> **Signing with SignTool requires extra setup**: Standard SignTool syntax does *not* work with Artifact Signing. You must install the Artifact Signing Client Tools (includes the required dlib plugin and .NET 8 runtime) and provide a `metadata.json` file with your account endpoint and certificate profile. The easiest installation is:
+> **Signing with SignTool requires extra setup**: SignTool works with Artifact Signing only when you use the Artifact Signing Client Tools, which include the required dlib plugin and .NET 8 runtime. You must also provide a `metadata.json` file with your account endpoint and certificate profile. A standard Windows SDK SignTool invocation by itself won't work with Artifact Signing. The easiest installation is:
 >
 > ```
 > winget install -e --id Microsoft.Azure.ArtifactSigningClientTools

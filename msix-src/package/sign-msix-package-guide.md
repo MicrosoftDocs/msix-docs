@@ -184,7 +184,7 @@ Use the SignTool installed with the Artifact Signing Client Tools. The `/dlib` f
 
 ```powershell
 signtool sign /v /fd SHA256 `
-  /tr "http://timestamp.acs.microsoft.com" /td SHA256 `
+  /tr "https://timestamp.acs.microsoft.com" /td SHA256 `
   /dlib "C:\Program Files (x86)\Microsoft\ArtifactSigningClientTools\bin\Azure.CodeSigning.Dlib.dll" `
   /dmdf .\metadata.json `
   MyApp.msix

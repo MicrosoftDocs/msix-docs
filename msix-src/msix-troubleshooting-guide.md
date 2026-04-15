@@ -30,7 +30,7 @@ For a full log of deployment events, open Event Viewer and navigate to:
 
 | Cause | Fix |
 |-------|-----|
-| Running as a standard user without elevation when the package requires per-machine install | Run PowerShell as Administrator, or use `Add-AppxPackage -AllUsers` |
+| Running as a standard user without elevation when the package requires per-machine install | Run PowerShell as Administrator. To install for all users, use `Add-AppxProvisionedPackage` instead of `Add-AppxPackage`. |
 | Antivirus or security software blocking the package file | Temporarily disable real-time scanning, or add an exclusion for the `.msix` / `.msixbundle` file |
 | Package staged for another user and not provisioned | Use `Add-AppxProvisionedPackage` to provision for all users |
 | File system ACLs blocking read access to the package | Check permissions on the package file with `icacls`; grant read access to the installing user |
@@ -44,7 +44,7 @@ For a full log of deployment events, open Event Viewer and navigate to:
 **Fix**: Close all running instances of the app before updating. If the app is a background service or has a background task registered, you may need to terminate those as well:
 
 ```powershell
-Get-Process -Name <AppName> | Stop-Process -Force
+Get-Process -Name "MyApp" | Stop-Process -Force
 Add-AppxPackage -Path .\updated-app.msix
 ```
 
@@ -78,7 +78,7 @@ For enterprise deployments, consider scheduling updates during maintenance windo
 - **Per-user vs. per-machine install**: `Add-AppxPackage` installs for the current user only. If you're running as Administrator but expect the app for another user, use `Add-AppxProvisionedPackage` instead.
 - **Package registered but tile not pinned**: The app is installed but Start Menu hasn't refreshed. Sign out and sign back in, or check **Settings → Apps** to confirm installation.
 - **Missing Start Menu entry in the manifest**: Verify the `<Application>` element in `AppxManifest.xml` includes a `VisualElements` entry with a valid `Square150x150Logo`.
-- **Duplicate package family name conflict**: If a newer or older version of the app is already installed with the same package family name, the new install may silently replace it. Check with `Get-AppxPackage -Name <PackageFamilyName>`.
+- **Duplicate package family name conflict**: If a newer or older version of the app is already installed with the same package family name, the new install may silently replace it. Check with `Get-AppxPackage -Name "YourPackageFamilyName"`.
 
 ## Signing and certificate errors
 
@@ -126,7 +126,7 @@ the subject name of the signing certificate (CN=Contoso, C=US).
 
 1. Get the exact subject name from the certificate:
    ```powershell
-   (Get-Item Cert:\CurrentUser\My\<Thumbprint>).Subject
+   (Get-Item Cert:\CurrentUser\My\THUMBPRINT).Subject
    # Example output: CN=Contoso, C=US
    ```
 
