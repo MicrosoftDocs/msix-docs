@@ -105,3 +105,9 @@ Windows 10 allows users to select the mode in which to run their device on in th
 
 > [!NOTE]
 > Starting in Windows 10 version 2004, Sideload option is turned on by default. As a result, **Developer mode** is now a toggle. Enterprises can still turn off Sideloading via policy.
+
+## Related articles
+
+- [Sign an MSIX package: end-to-end guide](sign-msix-package-guide.md)
+- [Sign an app package using SignTool](sign-app-package-using-signtool.md)
+- [MSIX troubleshooting guide](../msix-troubleshooting-guide.md)

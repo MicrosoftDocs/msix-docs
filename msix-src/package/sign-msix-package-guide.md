@@ -252,3 +252,4 @@ For full signing options, see [Sign an app package using SignTool](sign-app-pack
 - [Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md)
 - [Artifact Signing quickstart](/azure/trusted-signing/quickstart)
 - [WinApp CLI reference](/windows/apps/dev-tools/winapp-cli)
+- [MSIX troubleshooting guide](../msix-troubleshooting-guide.md)
