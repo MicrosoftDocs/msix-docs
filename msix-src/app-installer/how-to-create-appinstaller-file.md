@@ -1,7 +1,7 @@
 ---
 title: Create an App Installer file manually
 description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
-ms.date: 1/4/2018
+ms.date: 04/15/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
@@ -300,11 +300,11 @@ The App Installer file can also specify update setting so that the related sets 
 
 ## Step 7: Add Auto Update Settings
 >[!Important]
->The following settings are only available when using the 2021 schema on a Windows Insider build of Windows 10.
+>The following settings require the 2021 schema version in your `.appinstaller` file and Windows 10, version 2004 (build 19041) or later.
 
-Windows apps installed with an App Installer file will default to updating their Windows app from the App Installer URI, adhereing to the configurations set in the previous step. The Update URIs configured in this step will act as fallback URIs that can be used if the original App Installer URI is no longer accessible. A maximum of 10 Update URI's can be configured for any Windows app.
+These settings allow updating the Windows app from the App Installer URI, adhering to the configurations set in the previous step. The Update URIs configured in this step will act as fallback URIs that can be used if the original App Installer URI is no longer accessible. A maximum of 10 Update URIs can be configured for any Windows app.
 
-The Update URI's must target App Installer files.
+The Update URIs must target App Installer files.
 
 >[!Note]
 > These settings only work when the schema is configured as 2021 or newer.
@@ -337,12 +337,11 @@ The Update URI's must target App Installer files.
 
 ## Step 8: Add Auto Repair Settings
 >[!Important]
->The following settings are only available when using the 2021 schema on a Windows Insider build of Windows 10.
+>The following settings require the 2021 schema version in your `.appinstaller` file and Windows 10, version 2004 (build 19041) or later.
 
+These settings enable repair of the Windows app when it has become tampered with. The source installer used to repair the app can be configured using the `<RepairURIs>` property. The Windows app will attempt to repair itself based on the App Installer URI; if inaccessible, it will use the Repair URIs to identify a repair source. A maximum of 10 Repair URIs can be configured for any Windows app.
 
-Windows apps installed on a device can support automatic repairing of the Windows app when it has become tampered with. The source installer that will be used to repair the Windows app can be configured using the `<RepairURIs>` property. The Windows app will attempt to repair itself based on the App Installer URI, if inaccessible, then the Windows app will use the Repair URI's to identify a repair source. A maximum of 10 Repair URI's can be configured for any Windows app.
-
-The Repair URI's can target Windows app's or App Installer files. This setting does not require that the Windows app have been installed using an App Installer file.
+The Repair URIs can target Windows apps or App Installer files. This setting does not require that the Windows app have been installed using an App Installer file.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -4,6 +4,8 @@
       href: index.yml  
     - name: What is MSIX?
       href: overview.md
+    - name: MSIX containerization overview
+      href: msix-containerization-overview.md
     - name: Features and supported platforms 
       href: supported-platforms.md
     - name: MSIX appContainer apps
@@ -14,6 +16,8 @@
       items:
         - name: Overview
           href: package/signing-package-overview.md
+        - name: End-to-end signing guide
+          href: package/sign-msix-package-guide.md
         - name: Sign an app package using SignTool
           href: package/sign-app-package-using-signtool.md
         - name: Sign an MSIX package with Device Guard signing
@@ -163,13 +167,13 @@
             - name: How to implement PSF in your package
               items:
                 - name: Windows app working directory error
-                  href: psf\psf-current-working-directory.md
+                  href: psf/psf-current-working-directory.md
                 - name: Windows app writing to directory error
                   href: psf/psf-filesystem-writepermission.md
                 - name: Windows app launcher parameter requirement
-                  href: psf\psf-launch-apps-with-parameters.md
+                  href: psf/psf-launch-apps-with-parameters.md
                 - name: Apply Package Support Framework in Visual Studio
-                  href: psf\package-support-framework-vs.md
+                  href: psf/package-support-framework-vs.md
                 - name: Run scripts with the Package Support Framework
                   items:
                     - name: Overview
@@ -269,7 +273,7 @@
     - name: Overview
       href: desktop/managing-your-msix-deployment-overview.md
     - name: Plan for your deployment
-      href: desktop/Managing-your-MSIX-deployment-targetdevices.md
+      href: desktop/managing-your-msix-deployment-targetdevices.md
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
     - name: App installer user interface
@@ -288,9 +292,9 @@
       items: 
         - name: Overview
           href: desktop/managing-your-msix-deployment-enterprise.md
-        - name: Microsoft Endpoint Manager Admin Console
+        - name: Microsoft Intune admin center
           href: desktop/managing-your-msix-deployment-mem-adminconsole.md
-        - name: Microsoft Endpoint Configuration Manager
+        - name: Microsoft Configuration Manager
           href: desktop/managing-your-msix-deployment-configmgr.md
         - name: Microsoft Intune
           href: desktop/managing-your-msix-deployment-intune.md
@@ -307,7 +311,7 @@
         - name: App Installer file overview
           href: app-installer/app-installer-file-overview.md
         - name: Using an embedded App Installer file to update your app
-          href: app-installer\how-to-embed-an-appinstaller-file.md
+          href: app-installer/how-to-embed-an-appinstaller-file.md
         - name: Create an App Installer file in Visual Studio
           href: app-installer/create-appinstallerfile-vs.md
         - name: Create an App Installer file manually
@@ -373,15 +377,17 @@
         - name: Troubleshooting
           href: msix-core/msixcore-troubleshoot.md  
     - name: Deployment Validation and Troubleshooting
-      href: desktop\managing-your-msix-deployment-troubleshooting.md
+      href: desktop/managing-your-msix-deployment-troubleshooting.md
     - name: Enforcing Package Integrity check
-      href: desktop\tamper-protection.md
+      href: desktop/tamper-protection.md
     - name: Reset and Repair MSIX Apps
-      href: desktop\managing-your-msix-reset-and-repair.md
+      href: desktop/managing-your-msix-reset-and-repair.md
 - name: MSIX validation, testing, and troubleshooting
   items: 
     - name: Overview
       href: desktop/validation-overview.md
+    - name: MSIX troubleshooting guide
+      href: msix-troubleshooting-guide.md
     - name: Troubleshooting packaging, deployment, and query of Windows apps
       href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
     - name: Troubleshoot runtime issues in an MSIX Container

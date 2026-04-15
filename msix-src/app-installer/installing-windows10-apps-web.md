@@ -9,11 +9,6 @@ ms.custom: RS5
 
 # Installing Windows 10 apps from a web page
 
-> [!IMPORTANT]
-> This topic describes the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol), and how to use it. This URI scheme can be disabled by an IT professional (an administrator). To disable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to disabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). If the Group Policy **EnableMSAppInstallerProtocol** is set to enabled, or if it isn't specified, then *ms-appinstaller* is enabled.
->
-> When the *ms-appinstaller* URI scheme is disabled, App Installer will *not* be able to install an app directly from a web server (which is what this topic is about). In that case, the user *will* need to download the app first. So update the link on your website by removing `'ms-appinstaller:?source='` so that the MSIX package or `.appinstaller` file will be downloaded. That might increase the download size for some packages. The user can then install the package by using App Installer.
-
 Typically, an app needs to be locally available on a device before it can be installed with the App Installer. For the web scenario, this means that the user must download the app package from the web server, after which it can be installed with App Installer. This is inefficient and wastes disk space, which is why App Installer now has built in features to streamline the process.
 
 App Installer can install an app directly from a web server. When the user clicks on an app package hosted web link, App Installer is invoked automatically. The user is then taken to the app info view in App Installer and is then one click away from engaging directly with the app.

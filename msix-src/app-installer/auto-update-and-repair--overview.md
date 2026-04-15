@@ -1,14 +1,20 @@
 ---
 title: Auto-update and repair apps
 description: Overview of the auto-update and repair settings for Windows apps installed using an AppInstaller file.
-ms.date: 4/15/2021
+ms.date: 04/10/2026
 ms.topic: article
-keywords: windows 10, uwp, app installer, AppInstaller
+keywords: windows 10, windows 11, uwp, app installer, AppInstaller, auto-update, auto-repair
 ---
 
 # Auto-update and repair apps
->[!Important]
-> The following article discusses settings currently available in Windows Insider build 22415 and newer.
+
+Auto-update and repair features are available on Windows 10, version 2004 (build 19041) and later, and on all versions of Windows 11.
+
+> [!NOTE]
+> Visual Studio generates `.appinstaller` files using the 2017/2 schema by default, which does not support `ShowPrompt` or `UpdateBlocksActivation`. To use those settings, manually set the schema version in your `.appinstaller` file to `2021`:
+> ```xml
+> <AppInstaller xmlns="http://schemas.microsoft.com/appx/appinstaller/2021" ...>
+> ```
 
 The auto-update and repair settings allows developers and IT pros to provide an automated update solution to Windows apps that are distributed without the use of the Microsoft Store. By specifying auto-updates and repair settings as part of your App Installer file, the Windows app can be configured to check for updates on every launch, hide the updating / repairing prompt, and/or prevent the Windows app from launching until it has received the latest update.
 
@@ -57,7 +63,7 @@ See the Get-AppxPackageAutoUpdateSettings and Set-AppxPackageAutoUpdateSettings 
 
 ### CSP
 
-Enterprise IT pro's make use of mobile device management solutions (such as: Microsoft Endpoint Manager) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic updating of specific Windows apps.
+Enterprise IT pros make use of mobile device management solutions (such as Microsoft Intune) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic updating of specific Windows apps.
 
 The following CSP Settings can be found in the following path: `./Device/Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/nonStore/<Windows app Family Name>/AppUpdateSettings/AutoUpdateSettings/AutoUpdateSettings/`
 
@@ -86,7 +92,7 @@ For more information on how to create an *.AppInstaller file, see [How to create
 
 ### CSP
 
-Enterprise IT pro's make use of mobile device management solutions (such as: Microsoft Endpoint Manager) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic repair of specific Windows apps.
+Enterprise IT pros make use of mobile device management solutions (such as Microsoft Intune) to manage their devices remotely. The Enterprise Modern App Management CSP has been expanded to include the settings which can be applied to Windows 10 devices to manage the automatic repair of specific Windows apps.
 
 The following CSP Settings can be found in the following path: `./Device/Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/nonStore/<Windows app Family Name>/AppUpdateSettings/AutoUpdateSettings/AutoRepair/`
 

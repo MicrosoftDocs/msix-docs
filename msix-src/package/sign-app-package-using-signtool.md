@@ -28,6 +28,7 @@ For more information about code signing and certificates in general, see [Introd
     Based on your installation path of the SDK, this is where **SignTool** is on your Windows 10 PC:
     - x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;sdk version&gt;\x86\SignTool.exe
     - x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;sdk version&gt;\x64\SignTool.exe
+    - Arm64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;sdk version&gt;\arm64\SignTool.exe
 
 ## Using SignTool
 
