@@ -290,9 +290,9 @@
       items: 
         - name: Overview
           href: desktop/managing-your-msix-deployment-enterprise.md
-        - name: Microsoft Endpoint Manager Admin Console
+        - name: Microsoft Intune admin center
           href: desktop/managing-your-msix-deployment-mem-adminconsole.md
-        - name: Microsoft Endpoint Configuration Manager
+        - name: Microsoft Configuration Manager
           href: desktop/managing-your-msix-deployment-configmgr.md
         - name: Microsoft Intune
           href: desktop/managing-your-msix-deployment-intune.md
