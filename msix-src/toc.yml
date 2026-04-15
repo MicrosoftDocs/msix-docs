@@ -14,6 +14,8 @@
       items:
         - name: Overview
           href: package/signing-package-overview.md
+        - name: End-to-end signing guide
+          href: package/sign-msix-package-guide.md
         - name: Sign an app package using SignTool
           href: package/sign-app-package-using-signtool.md
         - name: Sign an MSIX package with Device Guard signing
@@ -382,6 +384,8 @@
   items: 
     - name: Overview
       href: desktop/validation-overview.md
+    - name: MSIX troubleshooting guide
+      href: msix-troubleshooting-guide.md
     - name: Troubleshooting packaging, deployment, and query of Windows apps
       href: /windows/win32/appxpkg/troubleshooting?context=/windows/msix/render
     - name: Troubleshoot runtime issues in an MSIX Container
