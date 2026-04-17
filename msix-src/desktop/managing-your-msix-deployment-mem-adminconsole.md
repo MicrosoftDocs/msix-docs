@@ -1,19 +1,39 @@
 ---
-description: This guide provides instruction on how to create and deploy an MSIX app with the Microsoft Intune admin center
-title: Microsoft Intune admin center
-ms.date: 04/15/2026
-ms.topic: article
-keywords: windows 10, intune, admin center, app, msix
+description: Quick reference for deploying MSIX apps using the Microsoft Intune admin center web console.
+title: Deploy MSIX apps using the Intune admin center
+ms.date: 04/17/2026
+ms.topic: how-to
+keywords: windows 10, windows 11, intune, admin center, msix, lob app
 ---
 
-# Microsoft Intune admin center
-The [Microsoft Intune admin center](https://intune.microsoft.com/) can be used to deploy an MSIX package to client devices. When deploying an MSIX app through the Microsoft Intune admin center, you will require an MSIX app to deploy, as well as a Microsoft Entra ID group to be the target of the install.
+# Deploy MSIX apps using the Intune admin center
 
-## Deploying an MSIX application
-When deploying an app from within the Microsoft Intune admin center, you will first require a local or network path to your MSIX package. The details of the app being created from within the Microsoft Intune admin center will retrieve the metadata contained within the MSIX app package and automatically load the retrieved information into the app properties.
+The [Microsoft Intune admin center](https://intune.microsoft.com/) is the web console for creating and managing Line-of-Business app deployments. This article is a quick reference for the admin center steps. For full guidance — including code signing, certificate trust distribution, update management, and troubleshooting — see [Deploy MSIX apps with Microsoft Intune](managing-your-msix-deployment-intune.md).
 
-| Task | Documentation reference |
-|-----|------|
-| 1. Capture an MSIX Package from Installer, or retrieve an existing MSIX app | [Create an MSIX Package from desktop installer](../packaging-tool/create-app-package.md)  |
-| 2. Launch the Microsoft Intune admin center | [Microsoft Intune admin center](https://intune.microsoft.com/) |
-| 3. Create and deploy a Line-of-Business App | [Create a Line-of-Business App](/mem/intune/apps/lob-apps-windows) |
+## Quick steps: Add an MSIX Line-of-Business app
+
+1. Sign in to the [Intune admin center](https://intune.microsoft.com/)
+2. Go to **Apps** > **All apps** > **Add**
+3. Under **App type**, select **Line-of-business app**, then select **Select**
+4. Under **App package file**, upload your signed `.msix` or `.msixbundle` file
+5. Review the auto-populated app metadata (Name, Publisher, Version)
+6. Complete the **Description** field, set **App install context** to **Device** (recommended), then select **Next**
+7. On **Assignments**, add the Entra ID groups that should receive the app and set the intent (**Required** for silent install)
+8. Select **Next**, review, then **Create**
+
+> [!NOTE]
+> Your MSIX package must be signed before upload. If using a self-signed certificate, deploy a **Trusted Certificate** configuration profile to target devices first — otherwise installation will fail. For details, see [Deploy MSIX apps with Microsoft Intune](managing-your-msix-deployment-intune.md).
+
+## Monitor deployment status
+
+After creating the app:
+
+1. Go to **Apps** > **All apps** and select your app
+2. Select **Device install status** or **User install status**
+3. Look for **Installed** per device; investigate **Failed** entries using the error code shown
+
+## Related content
+
+- [Deploy MSIX apps with Microsoft Intune (full guide)](managing-your-msix-deployment-intune.md)
+- [Create a Line-of-Business app in Intune](/mem/intune/apps/lob-apps-windows)
+
