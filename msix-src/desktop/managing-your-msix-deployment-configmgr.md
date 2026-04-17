@@ -47,8 +47,8 @@ MSIX apps deployed outside the Microsoft Store require sideloading to be enabled
 | Windows version | Sideloading default | Action required |
 |---|---|---|
 | Windows 11 | Enabled by default | None |
-| Windows 10 (version 1809 and later) | Enabled by default | None |
-| Windows 10 (before version 1809) | Disabled by default | Enable via Group Policy |
+| Windows 10 (version 2004 and later) | Enabled by default | None |
+| Windows 10 (before version 2004) | Disabled by default | Enable via Group Policy |
 
 To enable sideloading via Group Policy on older Windows 10 devices:
 
@@ -58,13 +58,13 @@ To enable sideloading via Group Policy on older Windows 10 devices:
 4. Link the GPO to the OU containing your managed devices
 
 > [!NOTE]
-> On Windows 10 version 1809 (RS5) and later, and all Windows 11 devices, sideloading is on by default. The **Allow all trusted apps to install** policy is not required.
+> On Windows 10 version 2004 and later, and all Windows 11 devices, sideloading is on by default. The **Allow all trusted apps to install** policy is not required.
 
 ---
 
 ## Distribute certificate trust (self-signed only)
 
-If you're using a **self-signed certificate**, you must deploy the certificate's public key to target devices before the app arrives. If using Azure Trusted Signing, skip this section.
+If you're using a **self-signed certificate**, you must deploy the certificate's public key to target devices before the app arrives. If using Azure Artifact Signing, skip this section.
 
 ### Using Group Policy
 
@@ -94,7 +94,7 @@ Alternatively, create a **Certificate Profile** in ConfigMgr:
 2. On the ribbon, select **Create Application**
 3. On the **General** page, select **Automatically detect information about this application from installation files**, set the type to **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**, and provide the UNC path to your MSIX file
 4. ConfigMgr reads the package manifest and auto-populates **Name**, **Publisher**, **Version**, and detection method — review these fields
-5. Complete **Software Center** display information (description, icon) on the **Application Catalog** page if desired
+5. Complete **Software Center** display information (description, icon) on the **Software Center** tab if desired
 6. On the **Deployment Types** page, confirm the auto-created deployment type. The installation and uninstall commands are set automatically for MSIX packages.
 7. Select **Next** through the remaining pages, review, and select **Finish**
 
@@ -133,7 +133,7 @@ Some MSIX deployment behaviors differ between Windows 10 and Windows 11:
 
 | Scenario | Windows 10 | Windows 11 |
 |---|---|---|
-| Sideloading default | May require GPO (pre-1809) | On by default |
+| Sideloading default | May require GPO (pre-2004) | On by default |
 | App registration for all users | Requires elevated session | Simplified |
 | Known MSIX packaging bugs | More unbackported issues | Better platform support |
 

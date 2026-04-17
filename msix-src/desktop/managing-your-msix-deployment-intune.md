@@ -31,9 +31,9 @@ A self-signed certificate can sign your MSIX package at no cost, but the certifi
 
 This option is suitable when all target devices are Intune-managed and the app will never be distributed outside your organization.
 
-### Option 2: Azure Trusted Signing (recommended for most scenarios)
+### Option 2: Azure Artifact Signing (formerly Trusted Signing) (recommended for most scenarios)
 
-[Azure Trusted Signing](/azure/trusted-signing/) provides a CA-trusted certificate with no hardware token required. Certificates integrate directly with CI/CD pipelines (GitHub Actions, Azure Pipelines). For current pricing, see the [Azure Trusted Signing pricing page](https://azure.microsoft.com/pricing/details/trusted-signing/).
+[Azure Artifact Signing (formerly Trusted Signing)](/azure/trusted-signing/) provides a CA-trusted certificate with no hardware token required. Certificates integrate directly with CI/CD pipelines (GitHub Actions, Azure Pipelines). For current pricing, see the [Azure Artifact Signing pricing page](https://azure.microsoft.com/pricing/details/trusted-signing/).
 
 Since the certificate is CA-trusted, Windows devices trust it automatically: no additional Intune configuration profiles needed. This is the lower-friction option for most enterprise scenarios.
 
@@ -43,7 +43,7 @@ For guidance on signing your MSIX package, see [Sign an app package using SignTo
 
 ## Option A: Deploy with a self-signed certificate
 
-If you're using a self-signed certificate, complete these steps **before** creating the LOB app. If using Azure Trusted Signing, skip to [Option B](#option-b-deploy-with-azure-trusted-signing).
+If you're using a self-signed certificate, complete these steps **before** creating the LOB app. If using Azure Artifact Signing, skip to [Option B](#option-b-deploy-with-azure-artifact-signing-formerly-trusted-signing).
 
 ### Step 1: Create and export your self-signed certificate
 
@@ -80,20 +80,20 @@ This profile pushes your certificate's public key to target devices so Windows t
 1. In the [Intune admin center](https://intune.microsoft.com/), go to **Devices** > **Configuration** > **Create policy**
 2. Select **Windows 10 and later** as platform, **Templates** as profile type, then **Trusted certificate**
 3. Upload the `.cer` file you exported in Step 1
-   4. Set **Destination store** to **Local Computer - Trusted People**
+4. Set **Destination store** to **Local Computer - Trusted People**
 5. Assign the profile to the same device or user groups that will receive the app
-6. Select **Create** — devices will receive the certificate within the next Intune sync cycle (typically within 15 minutes on active devices)
+6. Select **Create** — Intune sends a push notification to active, online devices; they typically check in and receive the certificate within a few minutes. The background sync interval is 8 hours for devices that miss the notification.
 
 > [!IMPORTANT]
 > Deploy the Trusted Certificate profile **before** or **at the same time** as the LOB app. If the app reaches the device before the certificate is trusted, installation will fail.
 
 ---
 
-## Option B: Deploy with Azure Trusted Signing
+## Option B: Deploy with Azure Artifact Signing (formerly Trusted Signing)
 
-If you're using [Azure Trusted Signing](/azure/trusted-signing/), the certificate is already trusted by Windows. No Trusted Certificate profile is needed in Intune.
+If you're using [Azure Artifact Signing (formerly Trusted Signing)](/azure/trusted-signing/), the certificate is already trusted by Windows. No Trusted Certificate profile is needed in Intune.
 
-Sign your MSIX package using the Azure Trusted Signing task in your CI/CD pipeline, or by following the local signing guidance in the [Azure Trusted Signing documentation](/azure/trusted-signing/).
+Sign your MSIX package using the [`azure/trusted-signing-action`](https://github.com/azure/trusted-signing-action) GitHub Actions task or the equivalent Azure Pipelines integration, or by following the local signing guidance in the [Azure Artifact Signing (formerly Trusted Signing) documentation](/azure/trusted-signing/).
 
 ---
 
@@ -210,7 +210,7 @@ Search both log sources for your app name or package family name to find the rel
 ## Related content
 
 - [Sign an app package using SignTool](/windows/msix/package/sign-app-package-using-signtool)
-- [Azure Trusted Signing documentation](/azure/trusted-signing/)
+- [Azure Artifact Signing (formerly Trusted Signing) documentation](/azure/trusted-signing/)
 - [Deploy MSIX apps with Configuration Manager](managing-your-msix-deployment-configmgr.md)
 - [MSIX deployment troubleshooting](managing-your-msix-deployment-troubleshooting.md)
 - [Create a Line-of-Business app in Intune (Microsoft docs)](/mem/intune/apps/lob-apps-windows)

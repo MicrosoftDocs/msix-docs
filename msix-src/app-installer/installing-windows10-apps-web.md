@@ -74,7 +74,9 @@ For more information on how to configure the MIME types, please visit [Distribut
 
 ## Signing the app package
 
-For users to install your app, you will need to sign the app package with a trusted certificate. You can use a third party paid certificate from a trusted certification authority to sign your app package. If a third party certificate is used, the user will need to have their device in either sideload or developer mode to install and run your app.
+For users to install your app, you will need to sign the app package with a trusted certificate. You can use a certificate from a trusted certificate authority (CA) — such as [Azure Artifact Signing (formerly Trusted Signing)](/azure/trusted-signing/) — to sign your app package. A CA-trusted certificate means Windows already trusts the signature; no certificate distribution to devices is required.
+
+If you are using a self-signed certificate instead, you must ensure the certificate is deployed to the **Trusted People** certificate store on each target device before the app is installed. On Windows 10 version 2004 and later, and Windows 11, sideloading is enabled by default; on earlier versions you may also need to enable the **Allow all trusted apps to install** policy.
 
 If you are deploying an app to employees within an enterprise, you can use an enterprise issued certificate to sign the app. It's important to note that the enterprise certificate must be deployed to any devices which the app will be installed on. For more information on deploying enterprise apps, see [Enterprise app management](/windows/client-management/mdm/enterprise-app-management).
 
