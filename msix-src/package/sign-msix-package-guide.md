@@ -128,7 +128,13 @@ After trusting the certificate, testers can install the `.msix` by double-clicki
 
 Azure Artifact Signing is the new name for what was previously called Trusted Signing. The service is identical — only the name changed. You may still see "Trusted Signing" in some tooling (such as the `azure/trusted-signing-action` GitHub Action and the `winget` package ID) as those references are being updated over time.
 
-Artifact Signing is the recommended option for production MSIX signing. Reputation is tied to your verified identity rather than a specific certificate, so all signed builds get immediate SmartScreen trust. See [Sign an MSIX package overview](signing-package-overview.md) for eligibility requirements and cost information before setting up an account.
+Azure Artifact Signing is the recommended option for production MSIX signing. Reputation is tied to your verified identity rather than a specific certificate, which means your publisher identity builds SmartScreen reputation over time as users install your signed apps. See [Sign an MSIX package overview](signing-package-overview.md) for eligibility requirements and cost information before setting up an account.
+
+> [!IMPORTANT]
+> **Azure Artifact Signing availability:** Organizations in the USA, Canada, the European Union, and the United Kingdom can sign up. Individual developers are currently limited to the USA and Canada. If you're an individual developer outside those regions, use an OV code signing certificate from a CA instead (see [Production: OV code signing certificate](#production-ov-code-signing-certificate) below).
+
+> [!NOTE]
+> Signing with Azure Artifact Signing does **not** provide instant SmartScreen trust. Like OV certificates, your apps will initially show a SmartScreen warning until your publisher identity builds sufficient download reputation — typically several weeks and hundreds of clean installs. This is expected behavior for new publishers. For details on how SmartScreen reputation works and what to expect as a new publisher, see [SmartScreen reputation for Windows app developers](/windows/apps/package-and-deploy/smartscreen-reputation).
 
 ### Prerequisites
 
@@ -240,7 +246,7 @@ SignTool sign /fd SHA256 /a /f .\cert.pfx /p "YourPassword" `
 For full signing options, see [Sign an app package using SignTool](sign-app-package-using-signtool.md).
 
 > [!NOTE]
-> Unlike Artifact Signing, newly purchased OV certificates don't have built-in SmartScreen reputation. SmartScreen reputation is built up over time as your signed packages are installed without being reported as threats.
+> OV certificates don't provide instant SmartScreen trust. Reputation builds over time as your signed packages are installed without being flagged. For details, see [SmartScreen reputation for Windows app developers](/windows/apps/package-and-deploy/smartscreen-reputation).
 
 ---
 
