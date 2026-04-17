@@ -11,7 +11,7 @@ keywords: windows 10, windows 11, uwp, app installer, AppInstaller, auto-update,
 Auto-update and repair features are available on Windows 10, version 2004 (build 19041) and later, and on all versions of Windows 11.
 
 > [!NOTE]
-> Visual Studio generates `.appinstaller` files using the 2017/2 schema by default, which does not support `ShowPrompt` or `UpdateBlocksActivation`. To use those settings, manually set the schema version in your `.appinstaller` file to `2021`:
+> Visual Studio generates `.appinstaller` files using the 2017/2 schema by default. The 2017/2 schema supports `HoursBetweenUpdateChecks`, but it does not support `ShowPrompt` or `UpdateBlocksActivation`. To use those settings, manually set the schema version in your `.appinstaller` file to `2021`:
 > ```xml
 > <AppInstaller xmlns="http://schemas.microsoft.com/appx/appinstaller/2021" ...>
 > ```

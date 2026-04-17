@@ -1,13 +1,22 @@
 ---
-title: Installing Windows 10 apps from a web page
+title: Installing Windows apps from a web page
 description: In this topic, we'll describe the steps you need to take to allow users to install your apps directly from your web page.
-ms.date: 12/13/2023
+ms.date: 04/17/2026
 ms.topic: how-to
 keywords: windows 11, windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: RS5
 ---
 
-# Installing Windows 10 apps from a web page
+# Installing Windows apps from a web page
+
+> [!WARNING]
+> **The `ms-appinstaller:` URI protocol is disabled by default as of December 2023.** In App Installer version 1.21.3421.0 and later, Microsoft disabled the `ms-appinstaller:?source=` protocol handler on consumer devices in response to security concerns. The one-click browser-triggered install described in this article will not work for most users without IT administrator intervention.
+>
+> **For enterprise environments:** An IT administrator can re-enable the protocol by setting the Group Policy **EnableMSAppInstallerProtocol** to Enabled. See [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol).
+>
+> **For general distribution (non-enterprise):** Use one of these alternatives instead:
+> - **[Publish to the Microsoft Store](/windows/apps/publish/)** — the recommended path for broad distribution. The Store handles code signing, updates, and discovery.
+> - **Direct `.appinstaller` file download** — host the `.appinstaller` file on your web server and link to it directly. Users download and double-click the file; no special protocol is required. See [App Installer file overview](app-installer-file-overview.md).
 
 Typically, an app needs to be locally available on a device before it can be installed with the App Installer. For the web scenario, this means that the user must download the app package from the web server, after which it can be installed with App Installer. This is inefficient and wastes disk space, which is why App Installer now has built in features to streamline the process.
 

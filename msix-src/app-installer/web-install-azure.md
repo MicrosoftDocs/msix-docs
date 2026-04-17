@@ -1,5 +1,5 @@
 ---
-title: Distribute a Windows 10 app from an Azure web app 
+title: Distribute a Windows app from an Azure web app
 description: This tutorial demonstrates how to set up an Azure web server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 ms.date: 09/30/2018
 ms.topic: how-to
@@ -10,11 +10,14 @@ ms.custom:
   - sfi-image-nochange
 ---
 
-# Distribute a Windows 10 app from an Azure web app
+# Distribute a Windows app from an Azure web app
 
-The App Installer app allows developers and IT Pros to distribute Windows 10 apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows 10 packaging and deployment platform.
+> [!WARNING]
+> The `ms-appinstaller:` URI protocol used in these web-install tutorials is **disabled by default as of December 2023**. Users on most devices will not be able to use the one-click browser-triggered install flow. For broad distribution, [publish to the Microsoft Store](/windows/apps/publish/) instead. For enterprise-managed devices where IT can re-enable the protocol via Group Policy, see [Installing Windows apps from a web page](installing-windows10-apps-web.md).
 
-This topic outlines the steps to configure an Azure Web Server to host Windows 10 app packages, and how to use the App Installer app to install the app packages.
+The App Installer app allows developers and IT Pros to distribute Windows apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows packaging and deployment platform.
+
+This topic outlines the steps to configure an Azure Web Server to host Windows app packages, and how to use the App Installer app to install the app packages.
 
 In this tutorial, we will go over setting up an IIS server to locally verify that your web application can properly host the app packages and invoke and use App Installer app effectively. We will also have tutorials for hosting your web applications properly on the popular cloud web services in the field (Azure and AWS) to ensure that they meets the App Installer web install requirements. This step-by-step tutorial doesn't require any expertise and is very easy to follow. 
 

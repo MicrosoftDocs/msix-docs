@@ -1,5 +1,5 @@
 ---
-title: Distribute a Windows 10 app from an AWS web service
+title: Distribute a Windows app from an AWS web service
 description: Tutorial for setting up AWS web server to validate app install via App Installer App
 ms.date: 05/30/2018
 ms.topic: how-to
@@ -10,11 +10,14 @@ ms.custom:
   - sfi-image-nochange
 ---
 
-# Distribute a Windows 10 app from an AWS web service
+# Distribute a Windows app from an AWS web service
 
-The App Installer app allows developers and IT Pros to distribute Windows 10 apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows 10 packaging and deployment platform.
+> [!WARNING]
+> The `ms-appinstaller:` URI protocol used in these web-install tutorials is **disabled by default as of December 2023**. Users on most devices will not be able to use the one-click browser-triggered install flow. For broad distribution, [publish to the Microsoft Store](/windows/apps/publish/) instead. For enterprise-managed devices where IT can re-enable the protocol via Group Policy, see [Installing Windows apps from a web page](installing-windows10-apps-web.md).
 
-This topic outlines the steps to configure an Amazon Web Services (AWS) website to host Windows 10 app packages, and how to use the App Installer app to install the app packages.
+The App Installer app allows developers and IT Pros to distribute Windows apps by hosting them on their own Content Delivery Network (CDN). This is useful for enterprises that don't want or need to publish their apps to the Microsoft Store, but still want to take advantage of the Windows packaging and deployment platform.
+
+This topic outlines the steps to configure an Amazon Web Services (AWS) website to host Windows app packages, and how to use the App Installer app to install the app packages.
 
 ## Setup
 
