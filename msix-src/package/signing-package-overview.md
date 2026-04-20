@@ -28,7 +28,7 @@ Choose a signing approach based on your scenario:
 > [!NOTE]
 > **Azure Artifact Signing** (formerly known as Trusted Signing) is Microsoft's managed code signing service and is the recommended option for production MSIX signing. Key characteristics:
 >
-> - **Instant SmartScreen reputation**: Reputation is tied to your verified identity, not a certificate lifetime — so new builds get immediate trust.
+> - **Identity-based reputation**: Reputation is tied to your verified publisher identity rather than a specific certificate, so it accumulates across builds. However, like all non-Store distribution, new apps will still show SmartScreen warnings until sufficient download history builds — this typically takes several weeks. See [SmartScreen reputation for Windows app developers](/windows/apps/package-and-deploy/smartscreen-reputation).
 > - **Short-lived certs**: A new certificate is issued daily, and each certificate remains valid for about 3 days, enabling time-precise revocation if needed.
 > - **CI/CD ready**: Supports GitHub Actions (`azure/trusted-signing-action`) and Azure DevOps out of the box.
 >

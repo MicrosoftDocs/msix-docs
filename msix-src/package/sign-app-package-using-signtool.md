@@ -11,6 +11,9 @@ ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 
 **SignTool** is a command line tool used to digitally sign an app package or bundle with a certificate. The certificate can either be created by the user (for testing purposes) or issued by a company (for distribution). Signing an app package provides the user with verification that the app's data has not been modified after it was signed while also confirming the identity of the user or company that signed it. **SignTool** can sign encrypted or unencrypted app packages and bundles.
 
+> [!NOTE]
+> When you sign a bundle (.msixbundle or .appxbundle), SignTool recursively signs all packages contained within the bundle. You do not need to sign each inner package separately.
+
 > [!IMPORTANT] 
 > If you used Visual Studio to develop your app, it's recommended that you use the Visual Studio wizard to create and sign your app package. For more information, see [Package a UWP app with Visual Studio](packaging-uwp-apps.md) and [Package a desktop app from source code using Visual Studio](../desktop/desktop-to-uwp-packaging-dot-net.md).
 

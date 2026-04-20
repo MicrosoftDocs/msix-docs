@@ -1,9 +1,9 @@
 ---
 title: App Installer file overview
 description: This article describes the contents of App Installer files and how they work to help manage the distribution and installation of your desktop apps.
-ms.date: 06/12/2020
+ms.date: 04/17/2026
 ms.topic: article
-keywords: windows 10, uwp, msix
+keywords: windows 10, windows 11, uwp, msix
 ms.custom: "RS5, seodec18"
 ---
 
@@ -33,6 +33,9 @@ Starting in the Windows 10 Fall Creators Update (version 1709, build 16299) and 
 ## Hosting the App Installer file for downloads and updates
 
 You can use the App Installer file to download or update your app from the web, a network share or local file share. App Installer file downloads and updates support https, http and smb protocols.
+
+> [!IMPORTANT]
+> **The `ms-appinstaller:` URI protocol is disabled by default as of December 2023.** If you were using the `ms-appinstaller:?source=` URI scheme to trigger one-click browser-based installs, this no longer works on most users' devices. Instead, link directly to the `.appinstaller` file — users download and double-click it to install. For enterprise environments where an IT admin can enable the protocol via Group Policy, see [Installing Windows apps from a web page](installing-windows10-apps-web.md). For broad consumer distribution, consider [publishing to the Microsoft Store](/windows/apps/publish/).
 
 
 ## Contents of the App Installer file

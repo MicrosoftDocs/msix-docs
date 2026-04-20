@@ -1,5 +1,5 @@
 ---
-title: Distribute a Windows 10 app from an IIS server
+title: Distribute a Windows app from an IIS server
 description: This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 ms.date: 04/23/2021
 ms.topic: how-to
@@ -7,7 +7,10 @@ keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, o
 ms.custom: "RS5, seodec18"
 ---
 
-# Distribute a Windows 10 app from an IIS server
+# Distribute a Windows app from an IIS server
+
+> [!WARNING]
+> The `ms-appinstaller:` URI protocol used in these web-install tutorials is **disabled by default as of December 2023**. Users on most devices will not be able to use the one-click browser-triggered install flow. For broad distribution, [publish to the Microsoft Store](/windows/apps/publish/) instead. For enterprise-managed devices where IT can re-enable the protocol via Group Policy, see [Installing Windows apps from a web page](installing-windows10-apps-web.md).
 
 This tutorial demonstrates how to set up an IIS server, verify that your web app can host app packages, and invoke and use App Installer effectively.
 
