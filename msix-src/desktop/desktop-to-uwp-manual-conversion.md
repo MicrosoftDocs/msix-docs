@@ -67,7 +67,7 @@ Fill in this template with information that describes your package.
 
 ### Identity information
 
-Here's an example **Identity** element with placeholder text for the attributes. You can set the ``ProcessorArchitecture`` attribute to ``x64`` , ``x86`` , ``arm`` (i.e. 32bit ARM), ``arm64`` , or ``neutral``
+Here's an example **Identity** element with placeholder text for the attributes. You can set the ``ProcessorArchitecture`` attribute to ``x64`` , ``x86`` , ``arm64`` , or ``neutral``
 
 ```XML
 <Identity Name="MyCompany.MySuite.MyApp"
@@ -177,8 +177,7 @@ If you create target-based assets as described in the section above, or you modi
 Based on your installation path of the SDK, this is where **MakePri.exe** is on your Windows PC:
 - x86: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x86\makepri.exe
 - x64: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\x64\makepri.exe
-
-There is no ARM version of this tool.
+- Arm: C:\Program Files (x86)\Windows Kits\10\bin\\&lt;build number&gt;\arm64\makepri.exe
 
 1.	Open a Command Prompt or PowerShell window.
 
