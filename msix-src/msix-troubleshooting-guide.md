@@ -1,7 +1,7 @@
 ---
 description: Solutions for the most common MSIX installation, signing, deployment, and runtime errors on Windows 10 and Windows 11.
 title: MSIX troubleshooting guide
-ms.date: 04/14/2026
+ms.date: 07/02/2026
 ms.topic: troubleshooting-general
 author: GrantMeStrength
 ms.author: jken
@@ -33,7 +33,7 @@ For a full log of deployment events, open Event Viewer and navigate to:
 | Running as a standard user without elevation when the package requires per-machine install | Run PowerShell as Administrator. To install for all users, use `Add-AppxProvisionedPackage` instead of `Add-AppxPackage`. |
 | Antivirus or security software blocking the package file | Temporarily disable real-time scanning, or add an exclusion for the `.msix` / `.msixbundle` file |
 | Package staged for another user and not provisioned | Use `Add-AppxProvisionedPackage` to provision for all users |
-| File system ACLs blocking read access to the package | Check permissions on the package file with `icacls`; grant read access to the installing user |
+| File system ACLs blocking read access to the package | Check permissions on the package file with `icacls`; grant read access to the installing user. For packages staged manually to a volume or file share, also grant read to the app-container identities — see [Staging permissions (ACLs)](desktop/deploy-preinstalled-apps.md#staging-permissions-acls) |
 
 ### Package installation blocked because the app is in use
 

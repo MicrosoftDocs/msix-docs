@@ -1,7 +1,7 @@
 ---
 title: Preinstalling packaged apps 
 description: This article provides an overview of preinstalled apps 
-ms.date: 11/30/2020
+ms.date: 07/02/2026
 ms.topic: how-to
 author: andreww-msft
 ms.author: jken
@@ -29,6 +29,46 @@ The staging of a packaged app can be performed on an offline image (.wim, .vhd, 
 
 ### Registration
 After a packaged app has been staged, the app can then be registered to users on the device. Registration occurs on a per-user basis, and begins when a user of the device logs on. The operating system will then load the preinstalled packaged app package creating user specific app data, create file type associations, and app tiles in the start menu. This accomplished by the App Rediness Service (ARS) which is aware of all pre-installed apps. 
+
+## Staging permissions (ACLs)
+
+When you stage a packaged app with a provisioning tool such as DISM or [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage?preserve-view=true), the tool sets the correct file system permissions (ACLs) on the staged files for you. If you stage packages *manually* — for example, to an external volume, a network share, or a staging directory that remote or virtual desktops mount — you must set these ACLs yourself. Without them, registration can fail, or registration succeeds but the app fails to launch because the packaged process can't read its own files.
+
+> [!NOTE]
+> The principals listed below are the identities that the deployment runtime and the packaged app container rely on. Confirm them against your environment and grant only the least privilege required before deploying broadly.
+
+### Local or external staging volume
+
+Grant the following on the staging folder and everything it contains so that any user on the device can register and run the app:
+
+| Principal | SID | Access |
+|-----------|-----|--------|
+| `SYSTEM` | `S-1-5-18` | Full control |
+| `Administrators` | `S-1-5-32-544` | Full control |
+| `Users` | `S-1-5-32-545` | Read & execute |
+| `ALL APPLICATION PACKAGES` | `S-1-15-2-1` | Read & execute |
+| `ALL RESTRICTED APPLICATION PACKAGES` | `S-1-15-2-2` | Read & execute |
+
+The `ALL APPLICATION PACKAGES` and `ALL RESTRICTED APPLICATION PACKAGES` entries are required because a packaged app runs inside an app container with a reduced token. If these identities can't read the staged files, the app fails to launch even when registration reports success.
+
+Apply the permissions with `icacls`, using the SIDs so the command works regardless of display language:
+
+```cmd
+icacls "D:\MsixStaging" /grant "*S-1-5-18:(OI)(CI)F" "*S-1-5-32-544:(OI)(CI)F" "*S-1-5-32-545:(OI)(CI)RX" "*S-1-15-2-1:(OI)(CI)RX" "*S-1-15-2-2:(OI)(CI)RX"
+```
+
+### Network share or virtual desktop staging directory
+
+When packages are staged to an SMB file share that remote or virtual desktops mount during sign-in — for example, a Windows Virtual Desktop or Azure Virtual Desktop staging directory — each session host reads the staged files as its *computer account*. Grant **Read & execute** to each session host computer object, or, for easier management, to an Active Directory security group that contains those computer accounts, on **both**:
+
+- the **NTFS** permissions of the staged files and folders, and
+- the **share** (SMB) permissions of the file share.
+
+```cmd
+icacls "\\server\share\MsixImages" /grant "CONTOSO\AVD-SessionHosts$:(OI)(CI)RX"
+```
+
+For Azure Files and the Azure role-based access control (RBAC) roles required when you use App Attach with Azure Virtual Desktop, see [App attach in Azure Virtual Desktop](/azure/virtual-desktop/app-attach-overview#file-share) and [Set up App Attach](/azure/virtual-desktop/app-attach-setup).
 
 ## DISM
 DISM is a command-line tool that can be used to service and prepare Windows images, including those used for Windows Pre-Execution (Win-PE), Recovery Environment (Win-RE), and Windows Setup. Dism can be used to service a Windows image (.wim) or virtual hard disks (.vhd, or .vhdx).
