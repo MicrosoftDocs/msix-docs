@@ -1,9 +1,9 @@
 ---
 description: End-to-end guide to signing MSIX packages for development, testing, and production distribution, including Azure Artifact Signing and CI/CD integration.
 title: Sign your MSIX package - end-to-end guide
-ms.date: 04/14/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-keywords: windows, msix, signing, certificate, artifact signing, trusted signing, signtool, winapp cli, sideloading, ci/cd
+keywords: windows, msix, signing, certificate, artifact signing, trusted signing, signtool, winapp cli, sideloading, ci/cd, msbuild, visual studio
 ---
 
 # Sign your MSIX package: end-to-end guide
@@ -92,6 +92,58 @@ SignTool sign /fd SHA256 /a /f .\devcert.pfx /p "YourPassword" MyApp.msix
 ```
 
 For full SignTool usage, see [Sign an app package using SignTool](sign-app-package-using-signtool.md).
+
+---
+
+## Automate signing in your Visual Studio build (MSBuild)
+
+Instead of signing as a separate manual step, you can have Visual Studio&mdash;or a command-line `msbuild` build on a CI agent&mdash;sign the package automatically every time you build. This is the modern replacement for older post-build signing scripts.
+
+Windows Application Packaging Projects (`.wapproj`) and single-project MSIX apps expose MSBuild properties that control build-time signing. Set them in the project file, or pass them on the `msbuild` command line.
+
+| MSBuild property | Description |
+|---|---|
+| `AppxPackageSigningEnabled` | Set to `true` to sign the package during the build. |
+| `PackageCertificateThumbprint` | Thumbprint of a certificate in the current user's **Personal** store (`Cert:\CurrentUser\My`) to sign with. |
+| `PackageCertificateKeyFile` | Path to a `.pfx` file to sign with, when the certificate isn't installed in the store. |
+| `PackageCertificatePassword` | Password for the `.pfx` file, if it's password-protected. |
+| `AppxPackageSigningTimestampServerUrl` | Timestamp server URL. Timestamping is strongly recommended so the signature stays valid after the certificate expires. |
+| `AppxPackageSigningTimestampDigestAlgorithm` | Timestamp digest algorithm. Use `SHA256`. |
+
+> [!NOTE]
+> Specify **either** `PackageCertificateThumbprint` (a certificate in the store) **or** `PackageCertificateKeyFile` (a `.pfx` file)&mdash;not both. On a CI agent, prefer installing the certificate to the store and referencing it by thumbprint so you don't pass a password on the command line.
+
+**Sign at build time from the command line or a CI agent** using a certificate installed in the store:
+
+```cmd
+msbuild MyApp.wapproj /p:Configuration=Release /p:Platform=x64 ^
+  /p:AppxPackageSigningEnabled=true ^
+  /p:PackageCertificateThumbprint=<thumbprint> ^
+  /p:AppxPackageSigningTimestampServerUrl=http://timestamp.digicert.com ^
+  /p:AppxPackageSigningTimestampDigestAlgorithm=SHA256
+```
+
+Or using a `.pfx` file:
+
+```cmd
+msbuild MyApp.wapproj /p:Configuration=Release /p:Platform=x64 ^
+  /p:AppxPackageSigningEnabled=true ^
+  /p:PackageCertificateKeyFile=.\devcert.pfx ^
+  /p:PackageCertificatePassword=<password> ^
+  /p:AppxPackageSigningTimestampServerUrl=http://timestamp.digicert.com
+```
+
+> [!TIP]
+> To sign automatically inside Visual Studio, configure the signing certificate once on the packaging project's **Package.appxmanifest** > **Packaging** tab. Visual Studio saves the equivalent properties in the project file, so every subsequent build signs the package.
+
+### Post-build signing with Azure Artifact Signing or Azure Key Vault
+
+The `PackageCertificate*` properties above use a local certificate or `.pfx` file. When you sign with **Azure Artifact Signing** (formerly Trusted Signing) or a certificate stored in **Azure Key Vault**, the private key never leaves the service, so sign as a **post-build step** instead:
+
+1. Build the package **unsigned** by setting `/p:AppxPackageSigningEnabled=false`.
+2. Sign the produced `.msix` as a subsequent step:
+   - For Azure Artifact Signing, run SignTool with the dlib plugin&mdash;see [Production: Azure Artifact Signing](#production-azure-artifact-signing-formerly-trusted-signing).
+   - For Azure Key Vault from Visual Studio, see [Sign packages with Azure Key Vault](../desktop/sign-with-akv-cert.md).
 
 ---
 
