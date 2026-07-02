@@ -1,7 +1,7 @@
 ---
 title: Auto-update and repair apps
 description: Overview of the auto-update and repair settings for Windows apps installed using an AppInstaller file.
-ms.date: 04/10/2026
+ms.date: 07/02/2026
 ms.topic: article
 keywords: windows 10, windows 11, uwp, app installer, AppInstaller, auto-update, auto-repair
 ---
@@ -28,6 +28,9 @@ The Windows Settings App provides the ability to enable / disable the automatic 
 ## Automatic updates
 
 Windows apps will use their App Installer URI path to check for Windows app updates, however if the App Installer URI is inaccessible the Windows app will check for updates using the UpdateURIs, attempting to connect to each before attempting the next. The first App Installer file to be accessible will be validated against checking for any new Windows app updates.
+
+> [!NOTE]
+> On-launch update checks are triggered only when the app is launched from the Start menu (including Start menu tiles). By design, they are **not** triggered when the app is launched from a desktop shortcut or a taskbar item. To check for updates regardless of how the app is launched, update the app from your code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
 
 Updating of Windows apps supports the following elements:
 

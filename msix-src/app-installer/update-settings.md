@@ -1,7 +1,7 @@
 ---
 title: App Installer file update settings
 description: This article describes options for how to configure the behavior of app updates by using the App Installer file.
-ms.date: 06/12/2020
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
@@ -37,7 +37,10 @@ The [UpdateSettings](/uwp/schemas/appinstallerschema/element-update-settings) el
 
 - **OnLaunch**: Checks for updates on launch. This type of update can show UI and has the following attributes:
 
-    - **HoursBetweenUpdateChecks**: An integer that indicates how often (in how many hours) the system will check for updates to the app. “0” to “255” inclusive. The default value is 24 (if this value is not specified). For example if HoursBetweenUpdateChecks = 3 then when the user launches the app, if the system has not checked for updates within the past 3 hours, it will check for updates now.  
+    > [!IMPORTANT]
+    > **OnLaunch** update checks happen only when the app is launched from the **Start menu** (including Start menu tiles). By design, they are **not** triggered when the app is launched from a **desktop shortcut** or a **taskbar** item&mdash;those launches start the currently installed version without checking for updates. This behavior reduces friction for task-focused launches. If you need updates to be checked regardless of how the app is launched, check for and apply updates from your app's code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
+
+    - **HoursBetweenUpdateChecks**: An integer that indicates how often (in how many hours) the system will check for updates to the app. “0” to “255” inclusive. The default value is 24 (if this value is not specified). For example if HoursBetweenUpdateChecks = 3 then when the user launches the app, if the system has not checked for updates within the past 3 hours, it will check for updates now.
 
      - **ShowPrompt**: A boolean that determines if UI will be shown to the user. This value is supported on Windows 10, version 1903 and later.
 
