@@ -1,7 +1,7 @@
 ---
 title: Related App Installer file documentation
 description: This article provides links to documentation about the App Installer file schema and related APIs provided by the Windows SDK.
-ms.date: 2/20/2019
+ms.date: 07/02/2026
 ms.topic: article
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, API, XML, schema
 ms.custom: 19H1
@@ -10,6 +10,9 @@ ms.custom: 19H1
 # App Installer file APIs
 
 The [PackageManager](/uwp/api/windows.management.deployment.packagemanager) and [Package](/uwp/api/windows.applicationmodel.package) classes in the Windows SDK provide methods you can use to add or modify packages via App Installer files, or to retrieve information about apps with an App Installer association.
+
+> [!NOTE]
+> To add packages with the `AddPackageByAppInstallerFileAsync` or `RequestAddPackageByAppInstallerFileAsync` methods, the calling app must declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in its [package manifest](/uwp/schemas/appxpackage/appx-package-manifest). This is required for cross-publisher scenarios; managing your own app's packages works without declaring the capability.
 
 |  Method  |  Description | Minimum supported release |
 |----------|--------------|-------------------|
