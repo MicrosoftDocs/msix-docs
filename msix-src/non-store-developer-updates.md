@@ -2,7 +2,7 @@
 title: Update non-Store published apps from your code
 description: Describes how MSIX packages shipped outside the Store can be updated by developers in code. 
 author: Huios
-ms.date: 06/12/2020
+ms.date: 07/03/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -10,13 +10,23 @@ ms.custom: "RS5, seodec18"
 
 # Update non-Store published app packages from your code
 
-When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. In order to apply updates from your code, your app package must declare the `packageManagement` capability. Note that this is required for cross-publisher scenario, but managing your own app should work without having to declare the capability.
+When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. Depending on the APIs you use, applying updates from your code might require your app package to declare the `packageManagement` capability. For details on when the capability is and isn't required, see [When is the `packageManagement` capability required?](#when-is-the-packagemanagement-capability-required).
 
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
 
+## When is the `packageManagement` capability required?
+
+The `packageManagement` capability is a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities), so declare it only when your scenario actually needs it:
+
+- **Required** when your app silently adds, updates, stages, or removes packages by using the non-interactive [PackageManager](/uwp/api/windows.management.deployment.packagemanager) APIs, such as [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync) or [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync).
+- **Required** for any cross-publisher operation&mdash;that is, when the package you're managing has a different publisher than the calling app.
+- **Not required** when your app updates its own packages interactively by using the `Request*` APIs, such as [RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) or [RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync). These APIs show a user-consent prompt instead of relying on the capability.
+
+The examples in this article update the app's own packages silently, so they declare the `packageManagement` capability as shown in the next section.
+
 ## Add the PackageManagement Capability to your package manifest
 
-To use the `PackageManager` APIs, your app must declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in your [package manifest](/uwp/schemas/appxpackage/appx-package-manifest).
+When your scenario requires the capability (see [When is the `packageManagement` capability required?](#when-is-the-packagemanagement-capability-required)), declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in your [package manifest](/uwp/schemas/appxpackage/appx-package-manifest).
 
 ```xml
 <Package>
