@@ -1,7 +1,7 @@
 ---
 title: Converting an installer with services
 description: This article explains how to convert an existing installer with services to MSIX using the MSIX Packaging Tool
-ms.date: 12/19/2019
+ms.date: 07/03/2026
 ms.topic: concept-article
 keywords: windows 10, MSIX, MSIX Packaging Tool, services
 ---
@@ -9,6 +9,28 @@ keywords: windows 10, MSIX, MSIX Packaging Tool, services
 # Convert an installer that includes services
 
 Windows 10, version 2004, introduces support for running an MSIX package that includes services. You can use the MSIX Packaging Tool to take an existing installer with services and convert it to MSIX. This support is as of the January 2020 release of the [MSIX Packaging Tool](tool-overview.md)(1.2019.1220.0). Once you have a packaged MSIX with a service, it will require admin privileges to install on a machine.
+
+## Supported and unsupported services
+
+The MSIX Packaging Tool and the [`desktop6:Service`](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) manifest extension support user-mode Win32 services only. Use the following guidance to determine whether the services in your app can be included in an MSIX package.
+
+### Supported
+
+- **User-mode Win32 services** (services that run their own executable), declared with the [`desktop6:Service`](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) extension. These are detected automatically by the MSIX Packaging Tool during conversion, or you can add them to the manifest manually.
+- **Start accounts**: **Local System**, **Local Service**, and **Network Service**.
+- **Startup types**: **Automatic**, **Manual**, and **Disabled**. The MSIX Packaging Tool also supports **Delayed** start.
+- **Service dependencies** on other services that are **included in the same package**, and **trigger-start events**.
+
+### Not supported
+
+- **Kernel-mode services and device drivers**, including INF-based driver installation. MSIX doesn't support drivers. For more info, see [Prepare to package a desktop application](../desktop/desktop-to-uwp-prepare.md).
+- **Custom or arbitrary user accounts.** A packaged service must run as Local System, Local Service, or Network Service.
+- **Services that depend on services outside the package.**
+
+### Requirements
+
+- Running an MSIX package that includes services requires **Windows 10, version 2004** or later.
+- The package must declare the `packagedServices` or `localSystemServices` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities), and installing a package that includes services requires **admin privileges**.
 
 ## Instructions
 
@@ -39,4 +61,4 @@ We currently do not support services with dependencies outside the package.
 
 ## Add a service manually using your manifest
 
-If you are manually adding a service to your application, you will need to [add a service](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) to your app manifest. This does require a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) to add to your application.
+If you are manually adding a service to your application, you will need to [add a service](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) to your app manifest. This requires your application to declare the `packagedServices` or `localSystemServices` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
