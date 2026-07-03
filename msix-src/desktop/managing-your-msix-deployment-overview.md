@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying your MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
-ms.date: 04/15/2026
+ms.date: 07/03/2026
 ms.topic: concept-article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -38,5 +38,30 @@ MSIX is a robust and reliable modern app install experience. The MSIX experience
 ## Providing support for my customer
 Though MSIX has a 99.96% successful install rate, you still need to plan how to support your customer.  In the [MSIX Validation and Troubleshooting section](managing-your-msix-deployment-troubleshooting.md) we discuss tools available for you to diagnose installation issues.
 
+## How MSIX deployment works: staging and registration
 
- 
+To plan deployments&mdash;especially on multi-user machines&mdash;it helps to understand what Windows does under the covers when a package is installed. Installing an MSIX package is really two distinct operations: **staging** and **registration**.
+
+### Staging
+
+Staging places the package's files in the correct location on the machine (under `%ProgramFiles%\WindowsApps`). Staging happens **once per machine**, regardless of how many users will ultimately use the app, and it doesn't require a user to be signed in. Because the payload is shared, staging the same package for a second user doesn't copy the files again.
+
+### Registration
+
+Registration sets up the package for a **specific user** so that user is ready to run it. It creates the user's app data, wires up file type associations, and adds Start menu entries. Registration is performed **once per user** and can only happen while that user is signed in.
+
+Because staging and registration are separate, the same staged package can be registered for many users without re-copying its files.
+
+### Provisioning
+
+*Provisioning* is how you make a package install automatically for every user of a device. Provisioning does little more than:
+
+1. Stage the package, then
+1. Set a flag indicating the package should be registered for all users, then
+1. Raise an event telling the system to register the provisioned package for users who are already signed in.
+
+Windows also registers provisioned packages automatically the next time each user signs in. Note that if a package has already been provisioned for a user and that user uninstalls it, it isn't automatically reinstalled for them&mdash;re-provisioning the package resets this. For the tools used to provision packages (DISM, provisioning packages, and PowerShell), see [Preinstalling packaged apps](deploy-preinstalled-apps.md).
+
+### How updates reach other users
+
+When a package is updated, it's staged and registered for the user who triggered the update. **Every other user of the machine also ends up with the newer version registered for them**&mdash;typically the next time the package is registered for them (for example, at their next sign-in). In other words, if a package is updated for one user, you can assume the same version will apply to all other users in the near future. For how the platform minimizes what's downloaded during an update, see [App package updates](../app-package-updates.md).
