@@ -1,7 +1,7 @@
 ---
 title: App Installer file update settings
 description: This article describes options for how to configure the behavior of app updates by using the App Installer file.
-ms.date: 06/12/2020
+ms.date: 07/03/2026
 ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
@@ -49,3 +49,6 @@ The [UpdateSettings](/uwp/schemas/appinstallerschema/element-update-settings) el
 - **AutomaticBackgroundTask**: Checks for updates in the background every 8 hours independently of whether the user launched the app. This type of update cannot show UI.
 
 - **ForceUpdateFromAnyVersion**: Allows the app to update from version x to version x++ or to downgrade from version x to version x--. Without this element, the app can only move to a higher version.
+
+    > [!NOTE]
+    > This setting applies only to the *package* version. The `Version` attribute on the root `AppInstaller` element is independent of the package version and must always be incremented when you publish a change &mdash; including a package downgrade. If the App Installer file version doesn't move forward, App Installer treats the file as unchanged and won't apply the update.
