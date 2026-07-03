@@ -1,7 +1,7 @@
 ---
 title: Know your installer
 description: This article lists things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
-ms.date: 01/29/2020
+ms.date: 07/03/2026
 ms.topic: article
 keywords: msix
 ---
@@ -9,6 +9,9 @@ keywords: msix
 # Know your installer
 
 This article lists the things you need to know before you convert your existing installer into an MSIX. You might not have to do much to get your application ready for the packaging process, but if any of the items below applies to your application, you need to address it before packaging.
+
+> [!NOTE]
+> If your users already have a version of your app installed through this installer, see [Replace an existing installer-based app with MSIX](../desktop/replace-installer-based-app-with-msix.md) for guidance on transitioning them to the MSIX version.
 
 + __Your application has a service__. We support converting [applications with services](convert-an-installer-with-services.md), but its important to keep in mind the [limitations](convert-an-installer-with-services.md#known-limitations) to converting a service. After conversion, you will need admin elevation in order to install the MSIX that contains a service. You can convert an application with services beginning in version 1.2019.1220.0 of the MSIX Packaging Tool, and you can deploy the MSIX with services beginning in the spring 2020 release of Windows 10.
 
