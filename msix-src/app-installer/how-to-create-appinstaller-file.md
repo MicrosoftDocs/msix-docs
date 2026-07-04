@@ -1,7 +1,7 @@
 ---
 title: Create an App Installer file manually
 description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
-ms.date: 04/15/2026
+ms.date: 07/04/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
@@ -266,7 +266,7 @@ In the dependencies element, you can specify the required framework packages for
 
 The App Installer file can also specify update setting so that the related sets can be automatically updated when a newer App Installer file is published. **\<UpdateSettings\>** is an optional element. Within  **\<UpdateSettings\>** the OnLaunch option specifies that update checks should be made on app launch, and HoursBetweenUpdateChecks="12" specifies that an update check should be made every 12 hours. If HoursBetweenUpdateChecks is not specified, the default interval used to check for updates is 24 hours. Additional types of updates, like background updates can be found in the Update Settings [schema](/uwp/schemas/appinstallerschema/element-update-settings); Additional types of on-launch updates like updates with a prompt can be found in the OnLaunch [schema](/uwp/schemas/appinstallerschema/element-onlaunch)
 
-| Elements                  | Description                                                                                                                                                                   |
+| Setting                   | Description                                                                                                                                                                   |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | HoursBetweenUpdateChecks  | Defines the minimal gap in Windows app update checks.                                                                                                                         |
 | UpdateBlocksActivation    | Defines the experience when an app update is checked for.                                                                                                                     |
