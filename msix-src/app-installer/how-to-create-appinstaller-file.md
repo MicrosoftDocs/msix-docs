@@ -1,7 +1,7 @@
 ---
 title: Create an App Installer file manually
 description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
-ms.date: 04/15/2026
+ms.date: 07/04/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
@@ -39,7 +39,7 @@ Following the steps provided above, you will have successfully created an App In
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2021"
     Version="1.0.0.0"
     Uri="http://mywebservice.azurewebsites.net/appset.appinstaller" >
 
@@ -70,19 +70,19 @@ Following the steps provided above, you will have successfully created an App In
             ProcessorArchitecture="x64" />
     </OptionalPackages>
 
-    <UpdateURIs>
-        <UpdateURI>http://mywebservice.azurewebsites.net/appset.appinstaller</UpdateURI>
-        <UpdateURI>http://mywebservice2.azurewebsites.net/appset.appinstaller</UpdateURI>
-    </UpdateURIs>
-
-    <RepairURIs>
-        <RepairURI>http://mywebservice.azurewebsites.net/appset.appinstaller</RepairURI>
-        <RepairURI>http://mywebservice2.azurewebsites.net/appset.appinstaller</RepairURI>
-    </RepairURIs>
-
     <UpdateSettings>
-        <OnLaunch HoursBetweenUpdateChecks="0"/>   
+        <OnLaunch HoursBetweenUpdateChecks="0"/>
     </UpdateSettings>
+
+    <UpdateUris>
+        <UpdateUri>http://mywebservice.azurewebsites.net/appset.appinstaller</UpdateUri>
+        <UpdateUri>http://mywebservice2.azurewebsites.net/appset.appinstaller</UpdateUri>
+    </UpdateUris>
+
+    <RepairUris>
+        <RepairUri>http://mywebservice.azurewebsites.net/appset.appinstaller</RepairUri>
+        <RepairUri>http://mywebservice2.azurewebsites.net/appset.appinstaller</RepairUri>
+    </RepairUris>
 
 </AppInstaller>
 ```
@@ -335,11 +335,13 @@ The Update URIs must target App Installer files.
 </AppInstaller>
 ```
 
+For schema details, see the [s4:UpdateUris](/uwp/schemas/appinstallerschema/element-s4-updateuris) (container) and [s4:UpdateUri](/uwp/schemas/appinstallerschema/element-s4-updateuri) (item) reference.
+
 ## Step 8: Add Auto Repair Settings
 >[!Important]
 >The following settings require the 2021 schema version in your `.appinstaller` file and Windows 10, version 2004 (build 19041) or later.
 
-These settings enable repair of the Windows app when it has become tampered with. The source installer used to repair the app can be configured using the `<RepairURIs>` property. The Windows app will attempt to repair itself based on the App Installer URI; if inaccessible, it will use the Repair URIs to identify a repair source. A maximum of 10 Repair URIs can be configured for any Windows app.
+These settings enable repair of the Windows app when it has become tampered with. The source installer used to repair the app can be configured using the `<RepairUris>` property. The Windows app will attempt to repair itself based on the App Installer URI; if inaccessible, it will use the Repair URIs to identify a repair source. A maximum of 10 Repair URIs can be configured for any Windows app.
 
 The Repair URIs can target Windows apps or App Installer files. This setting does not require that the Windows app have been installed using an App Installer file.
 
@@ -368,6 +370,8 @@ The Repair URIs can target Windows apps or App Installer files. This setting doe
 
 </AppInstaller>
 ```
+
+For schema details, see the [s4:RepairUris](/uwp/schemas/appinstallerschema/element-s4-repairuris) (container) and [s4:RepairUri](/uwp/schemas/appinstallerschema/element-s4-repairuri) (item) reference.
 
 For all of the details on the XML schema, see [App Installer file reference](/uwp/schemas/appinstallerschema/app-installer-file).
 

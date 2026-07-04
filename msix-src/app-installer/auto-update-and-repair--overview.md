@@ -1,7 +1,7 @@
 ---
 title: Auto-update and repair apps
 description: Overview of the auto-update and repair settings for Windows apps installed using an AppInstaller file.
-ms.date: 04/10/2026
+ms.date: 07/04/2026
 ms.topic: article
 keywords: windows 10, windows 11, uwp, app installer, AppInstaller, auto-update, auto-repair
 ---
@@ -27,7 +27,7 @@ The Windows Settings App provides the ability to enable / disable the automatic 
 
 ## Automatic updates
 
-Windows apps will use their App Installer URI path to check for Windows app updates, however if the App Installer URI is inaccessible the Windows app will check for updates using the UpdateURIs, attempting to connect to each before attempting the next. The first App Installer file to be accessible will be validated against checking for any new Windows app updates.
+Windows apps will use their App Installer URI path to check for Windows app updates, however if the App Installer URI is inaccessible the Windows app will check for updates using the [UpdateUris](/uwp/schemas/appinstallerschema/element-s4-updateuris), attempting to connect to each before attempting the next. The first App Installer file to be accessible will be validated against checking for any new Windows app updates.
 
 Updating of Windows apps supports the following elements:
 
@@ -36,7 +36,7 @@ Updating of Windows apps supports the following elements:
 | HoursBetweenUpdateChecks | Defines the minimal gap in Windows app update checks.                                                                           |
 | UpdateBlocksActivation   | Defines the experience when an app update is checked for.                                                                       |
 | ShowPrompt               | Defines if a window is displayed when updates are being installed, and when updates are being checked for.                      |
-| UpdateURI                | The URI to the fallback App Installer file which can be used to update the Windows app when the App Installer URI is unavailable. |
+| [UpdateUri](/uwp/schemas/appinstallerschema/element-s4-updateuri) | The URI to the fallback App Installer file which can be used to update the Windows app when the App Installer URI is unavailable. |
 
 For instructions on how to create an App Installer file with the above settings, please visit the [Creating an App Installer file](how-to-create-appinstaller-file.md) Docs article.
 
@@ -82,11 +82,11 @@ For more information on the CSP, please visit the [Enterprise Modern App Managem
 
 ## Automatic Repair
 
-Windows apps will use their App Installer URI path to identify where the Windows app can source it's repair from. If the App Installer URI is inaccessible or not configured, it will then attempt to access a Windows app file from the `RepairURIs`. 
+Windows apps will use their App Installer URI path to identify where the Windows app can source it's repair from. If the App Installer URI is inaccessible or not configured, it will then attempt to access a Windows app file from the [`RepairUris`](/uwp/schemas/appinstallerschema/element-s4-repairuris). 
 
 | Elements  | Description                                                                                                                     |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------|
-| UpdateURI | The URI to the fallback App Installer file which can be used to update the Windows app when the App Installer URI is unavailable. |
+| [RepairUri](/uwp/schemas/appinstallerschema/element-s4-repairuri) | The URI to a Windows app or App Installer file used to repair the Windows app when the App Installer URI is inaccessible or not configured. |
 
 For more information on how to create an *.AppInstaller file, see [How to create an App Installer file](how-to-create-appinstaller-file.md) or download and use the [App Installer File Builder](https://aka.ms/msix-toolkit) as part of the MSIX Toolkit.
 
