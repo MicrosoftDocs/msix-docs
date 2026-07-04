@@ -1,7 +1,7 @@
 ---
 title: Install Windows 10 apps with App Installer
 description: This section contains or links to articles about App Installer and how to use the features of App Installer.
-ms.date: 04/15/2026
+ms.date: 07/04/2026
 ms.topic: install-set-up-deploy
 keywords: windows 10, windows 11, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
@@ -15,6 +15,11 @@ This section contains or links to articles about App Installer and how to use th
 App Installer allows for Windows 10 apps to be installed by double clicking the app package. This means that users don't need to use PowerShell or other developer tools to deploy Windows 10 apps. The App Installer can also install an app from the web, optional packages, and related sets.
 
 App Installer is built into Windows 10 (version 1803 and later) and Windows 11, and is available from the [Microsoft Store](https://apps.microsoft.com/detail/9nblggh4nns1).
+
+> [!NOTE]
+> Two related but distinct things share the "App Installer" name:
+> - **App Installer** (the app) is the built-in Windows application, available from the [Microsoft Store](https://apps.microsoft.com/detail/9nblggh4nns1), that provides the installation UI when a user double-clicks an app package or an `.appinstaller` file.
+> - The **App Installer file** (`.appinstaller`) is an XML file you author that points to your app package and defines how it is installed and updated. For details, see [App Installer file overview](app-installer-file-overview.md).
 
 To learn how to use the App Installer to install your app, see the topics in the table.
 
