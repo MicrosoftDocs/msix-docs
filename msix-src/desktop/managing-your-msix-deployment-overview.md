@@ -46,7 +46,7 @@ MSIX is a robust and reliable modern app install experience. The MSIX experience
 
 Though MSIX has a 99.96% successful install rate, you still need to plan how to support your customer.  In the [MSIX Validation and Troubleshooting section](managing-your-msix-deployment-troubleshooting.md) we discuss tools available for you to diagnose installation issues.
 
-## MSIX Install operations
+## MSIX install operations
 
 To plan deployments, especially on multi-user machines, it helps to understand what Windows does under the covers when a package is installed. Installing an MSIX package is really two distinct operations: staging and registration.
 
@@ -60,9 +60,9 @@ Registration sets up the package for a specific user so that user is ready to ru
 
 Because staging and registration are separate, the same staged package can be registered for many users without re-copying its files.
 
-## How MSIX deployment works
+## Provisioning and updates across users
 
-The sections below explain how the Staging and Registration operations combine to support provisioning (installing an app for every user) and how updates reach other users on the machine.
+The sections below explain how the staging and registration operations combine to support provisioning (installing an app for every user) and how updates reach other users on the machine.
 
 ### Provisioning
 
