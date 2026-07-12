@@ -40,7 +40,7 @@ Though MSIX has a 99.96% successful install rate, you still need to plan how to 
 
 ## How MSIX deployment works: staging and registration
 
-To plan deployments&mdash;especially on multi-user machines&mdash;it helps to understand what Windows does under the covers when a package is installed. Installing an MSIX package is really two distinct operations: **staging** and **registration**. The sections below explain those two operations, then show how they combine to support *provisioning* (installing an app for every user) and how updates reach other users on the machine.
+To plan deployments, especially on multi-user machines, it helps to understand what Windows does under the covers when a package is installed. Installing an MSIX package is really two distinct operations: **staging** and **registration**. The sections below explain those two operations, then show how they combine to support *provisioning* (installing an app for every user) and how updates reach other users on the machine.
 
 ### Staging
 
@@ -64,4 +64,4 @@ Windows also registers provisioned packages automatically the next time each use
 
 ### How updates reach other users
 
-When a package is updated, it's staged and registered for the user who triggered the update. **Every other user who has the app registered also ends up with the newer version**&mdash;typically the next time the package is registered for them (for example, at their next sign-in). In other words, if a package is updated for one user, you can assume the same version will apply to all other users in the near future. For how the platform minimizes what's downloaded during an update, see [App package updates](../app-package-updates.md).
+When a package is updated, it's staged and registered for the user who triggered the update. **Every other user who has the app registered also ends up with the newer version**, typically the next time the package is registered for them (for example, at their next sign-in). In other words, if a package is updated for one user, you can assume the same version will apply to all other users in the near future. For how the platform minimizes what's downloaded during an update, see [App package updates](../app-package-updates.md).
