@@ -75,9 +75,9 @@ private async void DownloadUpdatesAsync()
 
 ### Install updates
 
-Installing a package update replaces your app's files, so the system closes the app to apply it. The `RequestDownloadAndInstallStorePackageUpdatesAsync` call below terminates the running app as part of the install. Before you start the install, save your *app state* so the user can resume where they left off after the app relaunches.
+Installing a package update replaces your app's files, so the system closes the app to apply it. The `RequestDownloadAndInstallStorePackageUpdatesAsync` call below terminates the running app as part of the install. Before you start the install, save your app state so the user can resume where they left off after the app relaunches.
 
-*App state* is your app's runtime and session data &mdash; anything the user would lose if the app closed unexpectedly, such as an open document, unsaved form input, the current page or navigation position, and in-memory settings. It's distinct from the app binaries that the update replaces. Persist app state to the app's data store (for example, `ApplicationData.Current.LocalSettings` or the app's local folder) before calling the install API, then reload it the next time the app starts. For more information, see [Store and retrieve settings and other app data](/windows/apps/develop/data/store-and-retrieve-app-data).
+App state is your app's runtime and session data: anything the user would lose if the app closed unexpectedly, such as an open document, unsaved form input, the current page or navigation position, and in-memory settings. It's distinct from the app binaries that the update replaces. Persist app state to the app's data store (for example, `ApplicationData.Current.LocalSettings` or the app's local folder) before calling the install API, then reload it the next time the app starts. For more information, see [Store and retrieve settings and other app data](/windows/apps/develop/data/store-and-retrieve-app-data).
 
 ```csharp
 private async void InstallUpdatesAsync()
