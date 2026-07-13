@@ -194,12 +194,12 @@ There is no ARM version of this tool.
 
 <a id="virtual-registry"></a>
 
-## (Optional) Include registry entries (virtual registry)
+## Include registry entries (virtual registry)
 
 If your application relies on registry keys under *HKLM\Software*, you can ship those keys inside the package as a *virtual registry*. Windows stores a package's virtual registry in a `Registry.dat` hive file at the root of the package layout. At runtime, the OS merges that hive over *HKLM\Software* so the app sees its keys without writing to the real system registry. For details on how the virtual registry behaves at runtime, see [the Registry section of Understanding how packaged desktop apps run on Windows](desktop-to-uwp-behind-the-scenes.md#registry).
 
 > [!IMPORTANT]
-> **MakeAppx.exe** packages the contents of your layout folder as-is&mdash;it doesn't generate `Registry.dat` from a `.reg` file. If your package needs a virtual registry, a valid `Registry.dat` hive must already be present in the layout folder before you run MakeAppx. If your app doesn't need any packaged registry keys, you can omit the file entirely.
+> **MakeAppx.exe** packages the contents of your layout folder as-is; it doesn't generate `Registry.dat` from a `.reg` file. If your package needs a virtual registry, a valid `Registry.dat` hive must already be present in the layout folder before you run MakeAppx. If your app doesn't need any packaged registry keys, you can omit the file entirely.
 
 There are a few supported ways to produce the `Registry.dat` hive, depending on your workflow:
 
