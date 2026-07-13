@@ -1,7 +1,7 @@
 ---
 title: Create an App Installer file manually
 description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
-ms.date: 04/15/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
@@ -122,6 +122,9 @@ Include the `AppInstaller` element into your App Installer file noting the versi
 
 1. Update the `Version` attribute with the version of your App Installer file 
 1. Update the `URI` attribute with the network location where this ***.AppInstaller** file will be accessible from.
+
+> [!IMPORTANT]
+> The `Version` attribute on the `AppInstaller` element is the version of the **App Installer file itself**. It's independent of the versions of the packages the file references (the `Version` attributes on the `MainPackage`, `MainBundle`, and other package elements). App Installer detects that a published update is available by comparing this file version, so you must **increment** it every time you publish a change, even when the package version stays the same or moves backward (see [Step 6](#step-6-add-update-setting)). The App Installer file version must always move forward; if it doesn't, App Installer treats the file as unchanged and won't apply the update.
 
 
 ## Step 3: Add the main package information
@@ -272,6 +275,9 @@ The App Installer file can also specify update setting so that the related sets 
 | UpdateBlocksActivation    | Defines the experience when an app update is checked for.                                                                                                                     |
 | ShowPrompt                | Defines if a window is displayed when updates are being installed, and when updates are being checked for.                                                                    |
 | ForceUpdateFromAnyVersion | Specifies that the next version of the application could be to a newer or older version. If True, will all for both, if False (default), only new versions will be installed. |
+
+> [!NOTE]
+> `ForceUpdateFromAnyVersion` controls only the **package** version that App Installer will move to. It doesn't change how updates are detected. When you downgrade the referenced package (for example, from `1.1.0.0` to `1.0.0.0`), you must still **increase** the `Version` attribute on the root `AppInstaller` element. Don't lower the App Installer file version to match the downgraded package. The App Installer file version is independent of the package version and must always move forward, or App Installer won't detect the change and apply the downgrade.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
