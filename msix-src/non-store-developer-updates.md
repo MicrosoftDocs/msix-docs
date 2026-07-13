@@ -204,13 +204,13 @@ namespace MyEmployees.Helpers
 
 ## Security best practices for self-updating apps
 
-When your app drives its own updates in code, follow these practices to limit the risk that a bug&mdash;or a tampered update source&mdash;could cause your app to install a package you didn't intend.
+When your app drives its own updates in code, follow these practices to limit the risk that a bug, or a tampered update source, could cause your app to install a package you didn't intend.
 
 ### Declare only the capabilities you need
 
-Don't declare the `packageManagement` or `packageQuery` [restricted capabilities](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) unless your app needs to install, update, or query packages that are published by a *different* publisher. An app can update and uninstall packages published by the **same publisher** (for example, another app from your own company) without declaring `packageManagement`. Interactive installs through [PackageManager.RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) also prompt the user for consent and don't require the capability.
+Don't declare the `packageManagement` or `packageQuery` [restricted capabilities](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) unless your app needs to install, update, or query packages that are published by a **different** publisher. An app can update and uninstall packages published by the **same publisher** (for example, another app from your own company) without declaring `packageManagement`. Interactive installs through [PackageManager.RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) also prompt the user for consent and don't require the capability.
 
-By *not* declaring these capabilities, you let the platform enforce that your app can only operate on same-publisher packages. This same-publisher enforcement acts as a safety net: even if your update logic is tricked into passing the wrong URI to `PackageManager`, the platform won't silently install a package from another publisher.
+By **not** declaring these capabilities, you let the platform enforce that your app can only operate on same-publisher packages. This same-publisher enforcement acts as a safety net: even if your update logic is tricked into passing the wrong URI to `PackageManager`, the platform won't silently install a package from another publisher.
 
 > [!IMPORTANT]
 > Declaring `packageManagement` removes this safety net, because it lets your app silently install packages from any publisher. Only declare it when a cross-publisher scenario genuinely requires it.
