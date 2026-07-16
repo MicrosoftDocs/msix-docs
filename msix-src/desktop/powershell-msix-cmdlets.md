@@ -30,3 +30,7 @@ The following PowerShell cmdlets are provided with aliases enabling the use of e
 | [Get-AppxDefaultVolume](/powershell/module/appx/get-appxdefaultvolume) | This cmdlet will get the default AppxVolume used as the target for all deployment operations to the devive. |
 | [Set-AppxDefaultVolume](/powershell/module/appx/set-appxdefaultvolume) | This cmdlet will set another mounted AppxVolume as the new default target for all deployment operations to the device. |
 | [Invoke-CommandInDesktopPackage](/powershell/module/appx/invoke-commandindesktoppackage) | This cmdlet enables the ability to execute commands into the Windows app package bubble. |
+
+## Related content
+
+For how the package volume cmdlets fit into per-user versus all-users deployment, install locations, and multi-drive behavior, see [Per-user vs all-users MSIX deployment and install locations](deployment-per-user-vs-all-users.md).

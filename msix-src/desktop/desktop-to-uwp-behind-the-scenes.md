@@ -140,3 +140,7 @@ This short reference table shows common registry operations and how the OS handl
 This section applies only to virtualized apps.
 
 When a package is uninstalled by the user, all files and folders located under `C:\Program Files\WindowsApps\<package_full_name>` are removed, as well as any redirected writes to `AppData` or the registry that were captured during the packaging process.
+
+## Related content
+
+For how install locations and package volumes relate to per-user versus all-users deployment and multi-user access, see [Per-user vs all-users MSIX deployment and install locations](deployment-per-user-vs-all-users.md).
