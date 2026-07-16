@@ -56,4 +56,4 @@ Licensing only applies when provisioning a Windows Store app. Any other apps can
 
 ## Related content
 
-For how staging and per-user registration relate to per-user versus all-users deployment, install locations, and multi-user access, see [Per-user vs all-users MSIX deployment and install locations](deployment-per-user-vs-all-users.md).
+For how staging and per-user registration relate to per-user versus all-users deployment, install locations, and multi-user access, see [Per-user vs all-users MSIX deployment and install locations FAQ](deployment-per-user-vs-all-users.md).

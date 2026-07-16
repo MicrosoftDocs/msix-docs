@@ -33,4 +33,4 @@ The following PowerShell cmdlets are provided with aliases enabling the use of e
 
 ## Related content
 
-For how the package volume cmdlets fit into per-user versus all-users deployment, install locations, and multi-drive behavior, see [Per-user vs all-users MSIX deployment and install locations](deployment-per-user-vs-all-users.md).
+For how the package volume cmdlets fit into per-user versus all-users deployment, install locations, and multi-drive behavior, see [Per-user vs all-users MSIX deployment and install locations FAQ](deployment-per-user-vs-all-users.md).

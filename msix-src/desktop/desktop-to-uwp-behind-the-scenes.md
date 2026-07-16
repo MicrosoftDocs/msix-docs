@@ -143,4 +143,4 @@ When a package is uninstalled by the user, all files and folders located under `
 
 ## Related content
 
-For how install locations and package volumes relate to per-user versus all-users deployment and multi-user access, see [Per-user vs all-users MSIX deployment and install locations](deployment-per-user-vs-all-users.md).
+For how install locations and package volumes relate to per-user versus all-users deployment and multi-user access, see [Per-user vs all-users MSIX deployment and install locations FAQ](deployment-per-user-vs-all-users.md).
