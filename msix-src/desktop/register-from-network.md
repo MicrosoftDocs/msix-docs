@@ -1,7 +1,7 @@
 ---
 description: This article provides guidance on how to register a package layout from a network share
 title: Registering a package layout from a network share
-ms.date: 07/02/2026
+ms.date: 07/18/2026
 ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
@@ -23,7 +23,7 @@ Multiple people can contribute to a single app package layout on a network share
 
 4. Users will only need read access to the build folder.
 
-5. For the registered package to launch, the build folder must also grant **Read & execute** to the app-container identities `ALL APPLICATION PACKAGES` (`S-1-15-2-1`) and `ALL RESTRICTED APPLICATION PACKAGES` (`S-1-15-2-2`). Without these, registration can succeed but the app fails to start because the packaged process can't read its files from the share. For the full set of staging permissions and `icacls` examples, see [Staging permissions (ACLs)](deploy-preinstalled-apps.md#staging-permissions-acls).
+5. Packaged processes can run in an app container, so the build folder must also grant **Read and eXecute** to the app-container identities `ALL APPLICATION PACKAGES` (`S-1-15-2-1`) and `ALL RESTRICTED APPLICATION PACKAGES` (`S-1-15-2-2`). These [access control entries](/windows/win32/secauthz/access-control-entries) let the packaged processes access their files from the share; without them, registration can succeed but the processes fail to launch at runtime. For the full set of staging permissions and `icacls` examples, see [Staging permissions (ACLs)](deploy-preinstalled-apps.md#staging-permissions-acls).
 
 ## In Visual Studio
 
