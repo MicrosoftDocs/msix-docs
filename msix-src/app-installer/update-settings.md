@@ -40,7 +40,7 @@ The [UpdateSettings](/uwp/schemas/appinstallerschema/element-update-settings) el
     > [!IMPORTANT]
     > **OnLaunch** update checks happen only when the app is launched from the **Start menu** (including Start menu tiles). By design, they are **not** triggered when the app is launched from a **desktop shortcut** or a **taskbar** item&mdash;those launches start the currently installed version without checking for updates. This behavior reduces friction for task-focused launches. If you need updates to be checked regardless of how the app is launched, check for and apply updates from your app's code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
 
-    - **HoursBetweenUpdateChecks**: An integer that indicates how often (in how many hours) the system will check for updates to the app. “0” to “255” inclusive. The default value is 24 (if this value is not specified). For example if HoursBetweenUpdateChecks = 3 then when the user launches the app, if the system has not checked for updates within the past 3 hours, it will check for updates now.
+    - **HoursBetweenUpdateChecks**: An integer from “0” to “255”, inclusive, that sets the minimum number of hours between update checks. The default value is 24 (if this value is not specified). On launch, the system checks for updates only if at least this many hours have passed since the last check. For example, if HoursBetweenUpdateChecks = 3, then when the user launches the app, the system checks for updates only if it hasn't checked within the past 3 hours.
 
      - **ShowPrompt**: A boolean that determines if UI will be shown to the user. This value is supported on Windows 10, version 1903 and later.
 
