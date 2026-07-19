@@ -15,7 +15,7 @@ When shipping your app as an MSIX you can programmatically kick-off an update of
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
 
 > [!TIP]
-> Updating from your code is also the recommended way to handle App Installer automatic updates that don't fire from every launch entry point. App Installer [OnLaunch update checks](app-installer/update-settings.md) are triggered only when the app is launched from the Start menu, not from a desktop shortcut or a taskbar item. If your app can be launched from those entry points and you still need it to stay current, check for and apply updates from your code as shown below.
+> Updating from your code is the reliable way to keep an app current. App Installer [OnLaunch update checks](app-installer/update-settings.md) don't run from every launch entry point - for example, starting the app from a desktop shortcut or the taskbar launches the installed version without checking for updates.
 
 ## Add the PackageManagement Capability to your package manifest
 
