@@ -27,7 +27,7 @@ The Windows Settings App provides the ability to enable / disable the automatic 
 
 ## Automatic updates
 
-Windows apps will use their App Installer URI path to check for Windows app updates, however if the App Installer URI is inaccessible the Windows app will check for updates using the [`UpdateUris`](/uwp/schemas/appinstallerschema/element-s4-updateuris), attempting to connect to each before attempting the next. The first App Installer file to be accessible will be validated against checking for any new Windows app updates.
+An MSIX package that was installed from an App Installer file checks for updates by reopening that same App Installer file at its published URI. If that URI is not reachable, App Installer falls back to the [`UpdateUris`](/uwp/schemas/appinstallerschema/element-s4-updateuris) list and tries each URI in turn until one responds. The first App Installer file it can reach is used to check the package for a newer version.
 
 Updating of Windows apps supports the following elements:
 

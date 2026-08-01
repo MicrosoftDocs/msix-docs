@@ -302,7 +302,7 @@ The App Installer file can also specify update setting so that the related sets 
 >[!Important]
 >The following settings require the 2021 schema version in your `.appinstaller` file and Windows 10, version 2004 (build 19041) or later.
 
-These settings allow updating the Windows app from the App Installer URI, adhering to the configurations set in the previous step. The Update URIs configured in this step will act as fallback URIs that can be used if the original App Installer URI is no longer accessible. A maximum of 10 Update URIs can be configured for any Windows app.
+These settings allow updating the MSIX package from the App Installer URI, adhering to the configurations set in the previous step. The Update URIs configured in this step act as fallback URIs that can be used if the original App Installer URI is no longer accessible. A maximum of 10 Update URIs can be configured for any package.
 
 The Update URIs must target App Installer files.
 
@@ -341,9 +341,9 @@ For schema details, see the [s4:UpdateUris](/uwp/schemas/appinstallerschema/elem
 >[!Important]
 >The following settings require the 2021 schema version in your `.appinstaller` file and Windows 10, version 2004 (build 19041) or later.
 
-These settings enable repair of the Windows app when it has become tampered with. The source installer used to repair the app can be configured using the `<RepairUris>` property. The Windows app will attempt to repair itself based on the App Installer URI; if inaccessible, it will use the Repair URIs to identify a repair source. A maximum of 10 Repair URIs can be configured for any Windows app.
+These settings enable repair of the MSIX package when it has become tampered with. The source installer used to repair the package can be configured using the `<RepairUris>` property. The package will attempt to repair itself based on the App Installer URI; if that URI is inaccessible, it will use the Repair URIs to identify a repair source. A maximum of 10 Repair URIs can be configured for any package.
 
-The Repair URIs can target Windows apps or App Installer files. This setting does not require that the Windows app have been installed using an App Installer file.
+The Repair URIs can target MSIX packages or App Installer files. This setting does not require that the package have been installed using an App Installer file.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
