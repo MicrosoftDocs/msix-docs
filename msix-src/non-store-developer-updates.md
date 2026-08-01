@@ -2,7 +2,7 @@
 title: Update non-Store published apps from your code
 description: Describes how MSIX packages shipped outside the Store can be updated by developers in code. 
 author: Huios
-ms.date: 07/03/2026
+ms.date: 08/01/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -19,8 +19,9 @@ This article provides examples that demonstrate how to declare the `packageManag
 The `packageManagement` capability is a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities), so declare it only when your scenario actually needs it:
 
 - **Required** when your app silently adds, updates, stages, or removes packages by using the non-interactive [PackageManager](/uwp/api/windows.management.deployment.packagemanager) APIs, such as [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync) or [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync).
-- **Required** for any cross-publisher operation&mdash;that is, when the package you're managing has a different publisher than the calling app.
-- **Not required** when your app updates its own packages interactively by using the `Request*` APIs, such as [RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) or [RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync). These APIs show a user-consent prompt instead of relying on the capability.
+- **Required** by the interactive [RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync) API. Even though it shows a user-consent prompt, its API reference lists `packageManagement` as a required capability, the same as [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync).
+- **Required** for any cross-publisher operation, that is, when the package you're managing has a different publisher than the calling app.
+- **Not required** when your app updates its own packages interactively by using [RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync). This API shows a user-consent prompt instead of relying on the capability.
 
 The examples in this article update the app's own packages silently, so they declare the `packageManagement` capability as shown in the next section.
 
