@@ -1,7 +1,7 @@
 ---
 title:  MSIX Support on Server 2019
 description: This article provides details on on how MSIX support on Server 2019
-ms.date: 01/16/2020
+ms.date: 07/02/2026
 ms.topic: article
 author: andreww-msft
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
@@ -11,6 +11,9 @@ ms.custom: "RS5, seodec18"
 # MSIX support on Windows Server 2019
 
 MSIX is now supported on Windows Server 2019 (LTSC) with the Desktop Experience. This support enables you to distribute the same MSIX packages within your enterprise on both client and server SKUs, installing via **PowerShell** or installing directly via the [Package Manager API](/uwp/api/Windows.Management.Deployment.PackageManager).
+
+> [!NOTE]
+> To add, stage, or remove packages programmatically with the [PackageManager](/uwp/api/windows.management.deployment.packagemanager) class, the calling app must declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in its [package manifest](/uwp/schemas/appxpackage/appx-package-manifest). This is required for cross-publisher scenarios; managing your own app's packages works without declaring the capability.
 
 ## Considerations
 
