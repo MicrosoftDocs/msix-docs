@@ -1,7 +1,7 @@
 ---
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
-ms.date: 09/09/2025
+ms.date: 07/03/2026
 ms.topic: concept-article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
@@ -94,21 +94,24 @@ This section applies only to virtualized apps.
 This table shows where files shipping as part of your package are overlaid on the system for the app. Your app will perceive these files to be in the listed system locations when in fact they're in the redirected locations inside `C:\Program Files\WindowsApps\<package_full_name>\VFS`. The *FOLDERID* locations are from the [**KNOWNFOLDERID**](/windows/win32/shell/knownfolderid) constants.
 
 | System location | Redirected location (Under \[<package_root>\]\VFS\) | Valid on architectures |
- :--- | :--- | :---
-*FOLDERID_SystemX86* | `SystemX86` | x86, amd64
-*FOLDERID_System* | `SystemX64` | amd64
-*FOLDERID_ProgramFilesX86* | `ProgramFilesX86` | x86, amd6
-*FOLDERID_ProgramFilesX64* | `ProgramFilesX64` | amd64
-*FOLDERID_ProgramFilesCommonX86* | `ProgramFilesCommonX86` | x86, amd64
-*FOLDERID_ProgramFilesCommonX64* | `ProgramFilesCommonX64` | amd64
-*FOLDERID_Windows* | `Windows` | x86, amd64
-*FOLDERID_ProgramData* | Common `AppData` | x86, amd64
-*FOLDERID_System*\catroot | `AppVSystem32Catroot` | x86, amd64
-*FOLDERID_System*\catroot2 | `AppVSystem32Catroot2` | x86, amd64
-*FOLDERID_System*\drivers\etc | `AppVSystem32DriversEtc` | x86, amd64
-*FOLDERID_System*\driverstore | `AppVSystem32Driverstore` | x86, amd64
-*FOLDERID_System*\logfiles | `AppVSystem32Logfiles` | x86, amd64
-*FOLDERID_System*\spool | `AppVSystem32Spool` | x86, amd64
+| :--- | :--- | :--- |
+| *FOLDERID_SystemX86* | `SystemX86` | x86, amd64 |
+| *FOLDERID_System* | `SystemX64` | amd64 |
+| *FOLDERID_ProgramFilesX86* | `ProgramFilesX86` | x86, amd64 |
+| *FOLDERID_ProgramFilesX64* | `ProgramFilesX64` | amd64 |
+| *FOLDERID_ProgramFilesCommonX86* | `ProgramFilesCommonX86` | x86, amd64 |
+| *FOLDERID_ProgramFilesCommonX64* | `ProgramFilesCommonX64` | amd64 |
+| *FOLDERID_Windows* | `Windows` | x86, amd64 |
+| *FOLDERID_ProgramData* | Common `AppData` | x86, amd64 |
+| *FOLDERID_System*\catroot | `AppVSystem32Catroot` | x86, amd64 |
+| *FOLDERID_System*\catroot2 | `AppVSystem32Catroot2` | x86, amd64 |
+| *FOLDERID_System*\drivers\etc | `AppVSystem32DriversEtc` | x86, amd64 |
+| *FOLDERID_System*\driverstore | `AppVSystem32Driverstore` | x86, amd64 |
+| *FOLDERID_System*\logfiles | `AppVSystem32Logfiles` | x86, amd64 |
+| *FOLDERID_System*\spool | `AppVSystem32Spool` | x86, amd64 |
+
+> [!NOTE]
+> The preceding table is the complete set of VFS folders that Windows maps natively, without the [Package Support Framework (PSF)](../psf/package-support-framework.md). If your app needs to redirect a folder that isn't in this list, you can use the PSF to extend redirection to additional locations. Those extra folders are defined by the author of the PSF configuration, so there's no exhaustive list of them.
 
 ## Registry
 
