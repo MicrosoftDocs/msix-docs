@@ -1,7 +1,7 @@
 ---
 description: You can configure a pipeline with a YAML file to create automated builds for your MSIX project.
 title: Configure CI/CD pipeline with YAML file
-ms.date: 01/11/2021
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp
 ms.custom: RS5
@@ -211,7 +211,7 @@ A Release Pipeline Task That Modifies the Uris in the .appinstaller File
   $xName =
     [System.Xml.Linq.XName]"{http://schemas.microsoft.com/appx/appinstaller/2018}MainPackage"
   $doc.Root.Element($xName).Attribute("Uri").Value = [string]::Format('{0}{1}',
-    $fileShare, 'MsixDesktopApp.appx')
+    $fileShare, 'MsixDesktopApp.msix')
   $doc.Save("$localFilePath")
 displayName: 'Modify URIs in App Installer File'
 ```

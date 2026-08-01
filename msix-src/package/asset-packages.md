@@ -1,7 +1,7 @@
 ---
 title: Introduction to asset packages
 description: Asset packages are a type of package that act as a centralized location for an application’s common files.
-ms.date: 07/02/2019
+ms.date: 07/02/2026
 ms.topic: concept-article
 keywords: windows 10, msix, packaging, package layout, asset package
 ---
@@ -44,8 +44,8 @@ The easiest way to create asset packages is using the packaging layout. However,
 Use one of these commands to create the asset package using MakeAppx.exe (for MSIX and .appx).
 
 ```cmd
-MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx
 MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.msix
+MakeAppx.exe pack /r /m AppxManifest.xml /f MappingFile.txt /p Videos.appx
 ```
 
 It should be noted here that all of the files referenced in the AppxManifest (the logo files) cannot be moved into asset packages – these files must be duplicated across architecture packages.
