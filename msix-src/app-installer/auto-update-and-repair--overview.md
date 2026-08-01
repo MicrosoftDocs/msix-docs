@@ -30,7 +30,7 @@ The Windows Settings App provides the ability to enable / disable the automatic 
 Windows apps will use their App Installer URI path to check for Windows app updates, however if the App Installer URI is inaccessible the Windows app will check for updates using the UpdateURIs, attempting to connect to each before attempting the next. The first App Installer file to be accessible will be validated against checking for any new Windows app updates.
 
 > [!NOTE]
-> On-launch update checks are triggered only when the app is launched from the Start menu (including Start menu tiles). By design, they are **not** triggered when the app is launched from a desktop shortcut or a taskbar item. To check for updates regardless of how the app is launched, update the app from your code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
+> On-launch update checks apply only when the app is started through an activation entry point — a menu item, a **Start menu** tile, an **app execution alias**, or a **protocol handler**. Consistent with the [`OnLaunch`](/uwp/schemas/appinstallerschema/element-onlaunch) element, the check (along with the `ShowPrompt` and `UpdateBlocksActivation` behaviors) has no effect when the app is started from a **desktop shortcut** or the **taskbar**. To check for updates regardless of how the app is launched, update the app from your code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
 
 Updating of Windows apps supports the following elements:
 
