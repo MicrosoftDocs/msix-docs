@@ -2,7 +2,7 @@
 title: Update non-Store published apps from your code
 description: Describes how MSIX packages shipped outside the Store can be updated by developers in code. 
 author: Huios
-ms.date: 06/12/2020
+ms.date: 07/03/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -201,3 +201,24 @@ namespace MyEmployees.Helpers
     }
 }
 ```
+
+## Security best practices for self-updating apps
+
+When your app drives its own updates in code, follow these practices to limit the risk that a bug, or a tampered update source, could cause your app to install a package you didn't intend.
+
+### Declare only the capabilities you need
+
+Don't declare the `packageManagement` or `packageQuery` [restricted capabilities](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) unless your app needs to install, update, or query packages that are published by a **different** publisher. An app can update and uninstall packages published by the **same publisher** (for example, another app from your own company) without declaring `packageManagement`. Interactive installs through [PackageManager.RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) also prompt the user for consent and don't require the capability.
+
+By **not** declaring these capabilities, you let the platform enforce that your app can only operate on same-publisher packages. This same-publisher enforcement acts as a safety net: even if your update logic is tricked into passing the wrong URI to `PackageManager`, the platform won't silently install a package from another publisher.
+
+> [!IMPORTANT]
+> Declaring `packageManagement` removes this safety net, because it lets your app silently install packages from any publisher. Only declare it when a cross-publisher scenario genuinely requires it.
+
+### Protect the update source
+
+If you persist the location of your update (for example, a URL that you store so it can be fetched later) treat that value as untrusted input. [Application data](/windows/apps/develop/data/store-and-retrieve-app-data) is writable by the full-trust user, so another process running as that user could modify a stored update URL. Validate the stored value before you use it, and prefer well-known, hard-coded, or server-verified sources over values that can be freely rewritten on the client.
+
+### Do you need to inspect the incoming package first?
+
+You generally don't need to open and inspect an incoming package to verify its identity before you install it. Rely on the platform's same-publisher enforcement (described above) rather than manually pre-vetting package identity. When your app hasn't declared `packageManagement`, the platform already prevents you from silently installing another publisher's package, so manually validating the package first adds complexity without meaningfully strengthening that guarantee.
