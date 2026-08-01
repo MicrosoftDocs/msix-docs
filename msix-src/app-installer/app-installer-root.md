@@ -18,7 +18,7 @@ App Installer is built into Windows 10 (version 1803 and later) and Windows 11, 
 
 > [!NOTE]
 > Two related but distinct things share the "App Installer" name:
-> - App Installer (the app) is the built-in Windows application, available from the Microsoft Store, that provides the installation UI when a user double-clicks an app package or an `.appinstaller` file.
+> - [App Installer](install-update-app-installer.md) (the app) is the built-in Windows application, available from the Microsoft Store, that provides the installation UI when a user double-clicks an app package or an `.appinstaller` file.
 > - The App Installer file (`.appinstaller`) is an XML file you author that points to your app package and defines how it is installed and updated. For details, see [App Installer file overview](app-installer-file-overview.md).
 
 To learn how to use the App Installer to install your app, see the topics in the table.
