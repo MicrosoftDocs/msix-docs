@@ -1,7 +1,7 @@
 ---
 title: App Installer file update settings
 description: This article describes options for how to configure the behavior of app updates by using the App Installer file.
-ms.date: 06/12/2020
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
@@ -37,7 +37,10 @@ The [UpdateSettings](/uwp/schemas/appinstallerschema/element-update-settings) el
 
 - **OnLaunch**: Checks for updates on launch. This type of update can show UI and has the following attributes:
 
-    - **HoursBetweenUpdateChecks**: An integer that indicates how often (in how many hours) the system will check for updates to the app. “0” to “255” inclusive. The default value is 24 (if this value is not specified). For example if HoursBetweenUpdateChecks = 3 then when the user launches the app, if the system has not checked for updates within the past 3 hours, it will check for updates now.  
+    > [!IMPORTANT]
+    > **OnLaunch** update checks depend on how the MSIX application is activated, not where the user starts it. Checks run through supported activation entry points, such as the **Start menu** (including a pinned tile), an **app execution alias**, or a **protocol handler**. A desktop shortcut or taskbar item that launches the executable directly bypasses the check and starts the currently installed MSIX application without checking for a package update. A shortcut or taskbar item that invokes a supported activation entry point triggers the check. To check for updates regardless of how the application is activated, check for and apply package updates from your code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
+
+    - **HoursBetweenUpdateChecks**: An integer from “0” to “255”, inclusive, that sets the minimum number of hours between update checks. The default value is 24 (if this value is not specified). On launch, the system checks for updates only if at least this many hours have passed since the last check. For example, if HoursBetweenUpdateChecks = 3, then when the user launches the app, the system checks for updates only if it hasn't checked within the past 3 hours.
 
      - **ShowPrompt**: A boolean that determines if UI will be shown to the user. This value is supported on Windows 10, version 1903 and later.
 

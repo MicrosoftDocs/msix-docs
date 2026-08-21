@@ -1,7 +1,7 @@
 ---
 title: Sign an app package using SignTool
 description: This article describes how to use SignTool to manually sign an app package or bundle with a certificate.
-ms.date: 09/30/2018
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
@@ -75,10 +75,6 @@ The certificate used to sign your app must be either a .pfx file or be installed
 To sign your app package with a certificate from a .pfx file, use the following syntax:
 
 ```syntax
-SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
-```
-
-```syntax
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msix
 ```
 
@@ -87,18 +83,10 @@ Note that the `/a` option allows **SignTool** to choose the best certificate aut
 If your certificate is not a .pfx file, use the following syntax:
 
 ```syntax
-SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.appx
-```
-
-```syntax
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.msix
 ```
 
 Alternatively, you can specify the SHA1 hash of the desired certificate instead of &lt;Name of Certificate&gt; using this syntax:
-
-```syntax
-SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
-```
 
 ```syntax
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix

@@ -1,7 +1,7 @@
 ---
 description: Learn about and how to use the components in the Package Support Framework to apply fixes to run in an MSIX container.
 title: Fix issues that prevent your desktop application from running in an MSIX container
-ms.date: 05/14/2020
+ms.date: 07/02/2026
 ms.topic: get-started
 keywords: windows 10, uwp
 ---
@@ -69,6 +69,9 @@ The PSF contains runtime fixes that you can use right now, such as the file redi
 You can use the [File Redirection Fixup](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) to redirect attempts to write or read data in a directory that isn't accessible from an application that runs in an MSIX container.
 
 For example, if your application writes to a log file that is in the same directory as your applications executable, then you can use the [File Redirection Fixup](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) to create that log file in another location, such as the local app data store.
+
+> [!TIP]
+> If you already know your app fails because it writes to its install directory, see the focused, end-to-end walkthrough in [How to fix Package Support Framework Filesystem Write Permission errors](psf-filesystem-writepermission.md).
 
 ### Runtime fixes from the community
 

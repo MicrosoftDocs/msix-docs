@@ -1,7 +1,7 @@
 ---
 description: The Package Support Framework helps you fix issues that prevent your desktop application from running in an MSIX container.
 title: Package Support Framework
-ms.date: 05/14/2020
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.custom: RS5
@@ -13,8 +13,8 @@ The Package Support Framework (PSF) is an open source kit that helps you apply f
 
 Here are some common examples where you can find the Package Support Framework useful:
 
-* Your app can't find some DLLs when launched. You may need to set your current working directory. You can learn about the required current working directory in the original shortcut before you converted to MSIX.
-* The app writes into the install folder. You will typically see it by "Access Denied" errors in [Process Monitor](./package-support-framework.md).
+* Your app can't find some DLLs when launched. You may need to set your current working directory. You can learn about the required current working directory in the original shortcut before you converted to MSIX. For a step-by-step fix, see [Windows app working directory error](psf-current-working-directory.md).
+* The app writes into the install folder. You will typically see it by "Access Denied" errors in [Process Monitor](/sysinternals/downloads/procmon). For a step-by-step fix, see [How to fix Package Support Framework Filesystem Write Permission errors](psf-filesystem-writepermission.md).
 * Your app needs to pass parameters to the executable on launch. You can learn more how PSF can help by going [here](psf-launch-apps-with-parameters.md) and learn more about the available configurations [here](https://github.com/microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher).
 
 This framework is open source, lightweight, and you can use it to address application issues quickly. It also gives you the opportunity to consult with the community around the globe, and to build on top of the investments of others.
