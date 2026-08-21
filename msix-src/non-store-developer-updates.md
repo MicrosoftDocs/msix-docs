@@ -15,7 +15,7 @@ When shipping your app as an MSIX you can programmatically kick-off an update of
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
 
 > [!TIP]
-> Updating from your code is the reliable way to keep an app current. App Installer [OnLaunch update checks](app-installer/update-settings.md) run when the app is started through app activation, such as a menu item, a Start menu tile, an app execution alias, or a protocol handler. Other ways of starting the app, including some desktop shortcuts and taskbar buttons that launch the program directly, can start the installed version without checking for updates, so update from your code when you need a check to run on every launch.
+> Updating from your code is the reliable way to keep an MSIX package current. App Installer [OnLaunch update checks](app-installer/update-settings.md) depend on how the MSIX application is activated, not where the user starts it. Checks run through supported activation entry points, such as the Start menu (including a pinned tile), an app execution alias, or a protocol handler. A desktop shortcut or taskbar item that launches the executable directly bypasses the check, while one that invokes a supported activation entry point triggers it. Update the package from your code when you need a check to run every time the application starts.
 
 ## Add the PackageManagement Capability to your package manifest
 
