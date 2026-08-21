@@ -2,7 +2,7 @@
 title: Update non-Store published apps from your code
 description: Describes how MSIX packages shipped outside the Store can be updated by developers in code. 
 author: Huios
-ms.date: 06/12/2020
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -13,6 +13,9 @@ ms.custom: "RS5, seodec18"
 When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. In order to apply updates from your code, your app package must declare the `packageManagement` capability. Note that this is required for cross-publisher scenario, but managing your own app should work without having to declare the capability.
 
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
+
+> [!TIP]
+> Updating from your code is the reliable way to keep an MSIX package current. App Installer [OnLaunch update checks](app-installer/update-settings.md) depend on how the MSIX application is activated, not where the user starts it. Checks run through supported activation entry points, such as the Start menu (including a pinned tile), an app execution alias, or a protocol handler. A desktop shortcut or taskbar item that launches the executable directly bypasses the check, while one that invokes a supported activation entry point triggers it. Update the package from your code when you need a check to run every time the application starts.
 
 ## Add the PackageManagement Capability to your package manifest
 
