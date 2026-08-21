@@ -31,7 +31,7 @@ When you install the MSIX Packaging Tool from the Microsoft Store on a connected
 
    - Or download the package and license manually from [Get the MSIX Packaging Tool](disconnected-environment.md#get-the-msix-packaging-tool).
 
-2. Install the package together with the license by using the `-LicensePath` parameter of [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage), for example:
+2. Install the package together with the license by using [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage) with the `-LicensePath` parameter (use `-Online` for the current OS, or `-Path` for an offline image), for example:
 
    ```powershell
    Add-AppxProvisionedPackage -Online -PackagePath C:\MSIX\MSIXPackagingTool.msixbundle -LicensePath C:\MSIX\MSIXPackagingTool.License.xml
