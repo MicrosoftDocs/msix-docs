@@ -12,13 +12,13 @@ ms.custom: "RS5, seodec18"
 ## Purpose
 This section contains or links to articles about App Installer and how to use the features of App Installer.
 
-App Installer allows for Windows apps to be installed by double clicking the package. This means that users don't need to use PowerShell or other developer tools to deploy Windows apps. The App Installer can also install an app from the web, optional packages, and related sets.
+App Installer allows packaged Windows apps to be installed by double-clicking an app package (`.msix`/`.appx`) or app bundle (`.msixbundle`/`.appxbundle`). This means that users don't need to use PowerShell or other developer tools to deploy Windows apps. App Installer can also install an app from the web, optional packages, and related sets.
 
 App Installer is built into Windows 10 (version 1803 and later) and Windows 11, and is available from the [Microsoft Store](https://apps.microsoft.com/detail/9nblggh4nns1).
 
 > [!NOTE]
 > Two related but distinct technologies share the "App Installer" name:
-> - [App Installer](install-update-app-installer.md) (the app) is the built-in Windows application, available from the Microsoft Store, that provides the installation UI when a user double-clicks a package or an `.appinstaller` file.
+> - [App Installer](install-update-app-installer.md) (the app) is the built-in Windows application, available from the Microsoft Store, that provides the installation UI when a user double-clicks an app package (`.msix`/`.appx`), app bundle (`.msixbundle`/`.appxbundle`), or an `.appinstaller` file.
 > - The [App Installer file](app-installer-file-overview.md) (`.appinstaller`) is an XML file that specifies your package location and defines how the package is installed, updated, and repaired.
 
 To learn how to use the App Installer to install your app, see the topics in the table.
