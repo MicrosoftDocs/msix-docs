@@ -1,7 +1,7 @@
 ---
 title: Developing with asset packages and package folding
 description: Learn how to efficiently organize your app with asset packages and package folding.
-ms.date: 07/02/2026
+ms.date: 08/21/2026
 ms.topic: concept-article
 keywords: windows 10, packaging, package layout, asset package
 ---
@@ -41,7 +41,7 @@ Note that the app package files that are not applicable to the user will not be 
 For this user, your game’s main executable will be within the **MyGame_1.0_x64** folder and will run from there, and normally, it will only have access to the files within this folder. In order to access the files in the **MyGame_1.0_language-fr** folder, you would have to use either the MRT APIs or the PackageManager APIs. The MRT APIs can automatically select the most appropriate file from the languages installed, you can find out more about MRT APIs at [Windows.ApplicationModel.Resources.Core](/uwp/api/windows.applicationmodel.resources.core). Alternatively, you can find the installed location of the French language package using the [PackageManager Class](/uwp/api/Windows.Management.Deployment.PackageManager). You should never assume the installed location of the packages of your app since this can change and can vary between users. 
 
 > [!NOTE]
-> To query information about packages that your app didn't author with the [PackageManager](/uwp/api/windows.management.deployment.packagemanager) class, the calling app must declare the `packageQuery` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in its [package manifest](/uwp/schemas/appxpackage/appx-package-manifest). Querying packages within your own app doesn't require this capability.
+> An app that runs in an AppContainer must declare the `packageQuery` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in its [package manifest](/uwp/schemas/appxpackage/appx-package-manifest) to query information about packages that the app didn't author by using the [PackageManager](/uwp/api/windows.management.deployment.packagemanager) class. Querying packages within your own app doesn't require this capability. For callers that don't run in an AppContainer, access isn't determined by an app capability declaration.
 
 ## Asset package folding
 
