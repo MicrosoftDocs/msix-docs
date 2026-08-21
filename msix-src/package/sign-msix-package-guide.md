@@ -130,7 +130,8 @@ msbuild MyApp.wapproj /p:Configuration=Release /p:Platform=x64 ^
   /p:AppxPackageSigningEnabled=true ^
   /p:PackageCertificateKeyFile=.\devcert.pfx ^
   /p:PackageCertificatePassword=<password> ^
-  /p:AppxPackageSigningTimestampServerUrl=http://timestamp.digicert.com
+  /p:AppxPackageSigningTimestampServerUrl=http://timestamp.digicert.com ^
+  /p:AppxPackageSigningTimestampDigestAlgorithm=SHA256
 ```
 
 > [!TIP]
