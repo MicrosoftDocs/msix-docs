@@ -1,7 +1,7 @@
 ---
 title: Developing with asset packages and package folding
 description: Learn how to efficiently organize your app with asset packages and package folding.
-ms.date: 04/30/2018
+ms.date: 07/02/2026
 ms.topic: concept-article
 keywords: windows 10, packaging, package layout, asset package
 ---
@@ -20,10 +20,10 @@ To understand how package folding doesn’t impact your development process, let
 
 At a high level, when you split some of your app’s files into other packages (that are not architecture packages), you will not be able to access those files directly relative to where your code runs. This is because these packages are all installed into different directories from where your architecture package is installed. For example, if you’re making a game and your game is localized into French and German and you built for both x86 and x64 machines, then you should have these app package files within the app bundle of your game:
 
-- 	MyGame_1.0_x86.appx
-- 	MyGame_1.0_x64.appx
-- 	MyGame_1.0_language-fr.appx
-- 	MyGame_1.0_language-de.appx
+- 	MyGame_1.0_x86.msix
+- 	MyGame_1.0_x64.msix
+- 	MyGame_1.0_language-fr.msix
+- 	MyGame_1.0_language-de.msix
 
 When your game is installed to a user’s machine, each app package file will have its own folder in the **WindowsApps** directory. So for a French user running 64-bit Windows, your game will look like this:
 
@@ -68,19 +68,19 @@ MyGame
 If you want to split your game into 3 packages: an x64 architecture package, an asset package for audios, and an asset package for videos, your game will be divided into these packages:
 
 ```example
-MyGame_1.0_x64.appx
+MyGame_1.0_x64.msix
 |-- Engine
 |   `-- ...
 |-- XboxLive
 |   `-- ...
 `-- Game.exe
-MyGame_1.0_Audios.appx
+MyGame_1.0_Audios.msix
 `-- Audios
     |-- Level1
     |   `-- ...
     `-- Level2
         `-- ...
-MyGame_1.0_Videos.appx
+MyGame_1.0_Videos.msix
 `-- Videos
     |-- Level1
     |   `-- ...
@@ -128,13 +128,13 @@ When using package folding for asset packages, you can still access the files yo
 Now for a more complicated package folding example. Let’s say that you want to split your files based on level instead, and if you want to keep the same structure as the original project folder, your packages should look like this:
 
 ```example
-MyGame_1.0_x64.appx
+MyGame_1.0_x64.msix
 |-- Engine
 |   `-- ...
 |-- XboxLive
 |   `-- ...
 `-- Game.exe
-MyGame_Level1.appx
+MyGame_Level1.msix
 |-- Audios
 |   `-- Level1
 |       `-- ...
@@ -142,7 +142,7 @@ MyGame_Level1.appx
     `-- Level1
         `-- ...
 
-MyGame_Level2.appx
+MyGame_Level2.msix
 |-- Audios
 |   `-- Level2
 |       `-- ...
