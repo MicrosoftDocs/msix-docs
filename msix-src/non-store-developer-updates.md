@@ -10,20 +10,29 @@ ms.custom: "RS5, seodec18"
 
 # Update non-Store published app packages from your code
 
-When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. Depending on the APIs you use, applying updates from your code might require your app package to declare the `packageManagement` capability. For details on when the capability is and isn't required, see [When is the `packageManagement` capability required?](#when-is-the-packagemanagement-capability-required).
+When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. If the calling process runs in an AppContainer, applying updates from your code might require your app package to declare the `packageManagement` capability. For details, see [When is the `packageManagement` capability required?](#when-is-the-packagemanagement-capability-required).
 
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
 
 ## When is the `packageManagement` capability required?
 
-The `packageManagement` capability is a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities), so declare it only when your scenario actually needs it:
+The `packageManagement` capability is a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) that grants package deployment access to a process running in an AppContainer. Determine whether your app needs the capability based first on its execution context:
 
-- **Required** when your app silently adds, updates, stages, or removes packages by using the non-interactive [PackageManager](/uwp/api/windows.management.deployment.packagemanager) APIs, such as [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync) or [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync).
-- **Required** by the interactive [RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync) API. Even though it shows a user-consent prompt, its API reference lists `packageManagement` as a required capability, the same as [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync).
-- **Required** for any cross-publisher operation, that is, when the package you're managing has a different publisher than the calling app.
-- **Not required** when your app updates its own packages interactively by using [RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync). This API shows a user-consent prompt instead of relying on the capability.
+- **AppContainer process:** Capability requirements apply. All Universal Windows Platform (UWP) apps run in an AppContainer. A packaged desktop app can also run in an AppContainer when its manifest specifies `uap10:TrustLevel="appContainer"`.
+- **Process outside an AppContainer:** The `packageManagement` capability isn't required. This includes apps that run at medium integrity level or higher, such as most unpackaged apps and packaged desktop apps. The calling user's permissions and the requirements of each API still apply.
 
-The examples in this article update the app's own packages silently, so they declare the `packageManagement` capability as shown in the next section.
+For more information about execution contexts and capabilities, see [Which kinds of apps do app capabilities apply to?](/windows/apps/package-and-deploy/app-capability-declarations#which-kinds-of-apps-do-app-capabilities-apply-to).
+
+For a process running in an AppContainer, use the following guidance:
+
+| Operation | `packageManagement` requirement |
+| --- | --- |
+| Add, update, stage, or remove packages by using non-`Request*` [PackageManager](/uwp/api/windows.management.deployment.packagemanager) APIs, such as [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync) or [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync) | Required |
+| Use [RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync) | Required, even though the API displays a user-consent prompt |
+| Update the app's own packages by using [RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) | Not required; Windows performs a SmartScreen check and asks the user to verify the installation |
+| Manage a package that has a different publisher than the calling app | Required |
+
+The examples in this article update the app's own packages from an AppContainer process by using non-`Request*` APIs, so they declare the `packageManagement` capability as shown in the next section.
 
 ## Add the PackageManagement Capability to your package manifest
 
