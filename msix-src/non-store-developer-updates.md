@@ -2,7 +2,7 @@
 title: Update non-Store published apps from your code
 description: Describes how MSIX packages shipped outside the Store can be updated by developers in code. 
 author: Huios
-ms.date: 07/02/2026
+ms.date: 08/01/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -10,16 +10,33 @@ ms.custom: "RS5, seodec18"
 
 # Update non-Store published app packages from your code
 
-When shipping your app as an MSIX you can programmatically kick-off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. In order to apply updates from your code, your app package must declare the `packageManagement` capability. Note that this is required for cross-publisher scenario, but managing your own app should work without having to declare the capability.
+When shipping your app as an MSIX, you can programmatically kick off an update of your application. If you deploy your app outside the Store, all you need to do is check your server for a new version of your app and install the new version. How you apply the update depends on whether you are deploying your app package using an App Installer file or not. If the calling process runs in an AppContainer, applying updates from your code might require your app package to declare the `packageManagement` capability. For details, see [When is the `packageManagement` capability required?](#when-is-the-packagemanagement-capability-required).
 
 This article provides examples that demonstrate how to declare the `packageManagement` capability in your package manifest and how to apply an update from your code. The first section looks at how to do this if you're using the App Installer file and the second section is about how to do so when **not** using the App Installer file. The last section looks at how to make sure your app restarts after an update has been applied.
 
-> [!TIP]
-> Updating from your code is the reliable way to keep an MSIX package current. App Installer [OnLaunch update checks](app-installer/update-settings.md) depend on how the MSIX application is activated, not where the user starts it. Checks run through supported activation entry points, such as the Start menu (including a pinned tile), an app execution alias, or a protocol handler. A desktop shortcut or taskbar item that launches the executable directly bypasses the check, while one that invokes a supported activation entry point triggers it. Update the package from your code when you need a check to run every time the application starts.
+## When is the `packageManagement` capability required?
+
+The `packageManagement` capability is a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) that grants package deployment access to a process running in an AppContainer. Determine whether your app needs the capability based first on its execution context:
+
+- **AppContainer process:** Capability requirements apply. All Universal Windows Platform (UWP) apps run in an AppContainer. A packaged desktop app can also run in an AppContainer when its manifest specifies `uap10:TrustLevel="appContainer"`.
+- **Process outside an AppContainer:** The `packageManagement` capability isn't required. This includes apps that run at medium integrity level or higher, such as most unpackaged apps and packaged desktop apps. The calling user's permissions and the requirements of each API still apply.
+
+For more information about execution contexts and capabilities, see [Which kinds of apps do app capabilities apply to?](/windows/apps/package-and-deploy/app-capability-declarations#which-kinds-of-apps-do-app-capabilities-apply-to).
+
+For a process running in an AppContainer, use the following guidance:
+
+| Operation | `packageManagement` requirement |
+| --- | --- |
+| Add, update, stage, or remove packages by using non-`Request*` [PackageManager](/uwp/api/windows.management.deployment.packagemanager) APIs, such as [AddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.addpackageasync) or [AddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.addpackagebyappinstallerfileasync) | Required |
+| Use [RequestAddPackageByAppInstallerFileAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackagebyappinstallerfileasync) | Required, even though the API displays a user-consent prompt |
+| Update the app's own packages by using [RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) | Not required; Windows performs a SmartScreen check and asks the user to verify the installation |
+| Manage a package that has a different publisher than the calling app | Required |
+
+The examples in this article update the app's own packages from an AppContainer process by using non-`Request*` APIs, so they declare the `packageManagement` capability as shown in the next section.
 
 ## Add the PackageManagement Capability to your package manifest
 
-To use the `PackageManager` APIs, your app must declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in your [package manifest](/uwp/schemas/appxpackage/appx-package-manifest).
+When your scenario requires the capability (see [When is the `packageManagement` capability required?](#when-is-the-packagemanagement-capability-required)), declare the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in your [package manifest](/uwp/schemas/appxpackage/appx-package-manifest).
 
 ```xml
 <Package>
