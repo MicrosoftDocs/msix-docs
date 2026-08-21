@@ -1,7 +1,7 @@
 ---
 title: Create an unsigned MSIX package
 description: This topic describes how to create and install an unsigned MSIX package
-ms.date: 05/26/2023
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 11, uwp, desktop, msix
 ---
@@ -36,7 +36,7 @@ Here's an example.
 Here's an example of the syntax.
 
 ```powershell
-Add-AppxPackage -Path ".\MyEmployees.appx" -AllowUnsigned
+Add-AppxPackage -Path ".\MyEmployees.msix" -AllowUnsigned
 ```
 
 When your app is ready to be distributed, you should ensure that the package is signed. Be sure to remove the special OID, and ensure that the publisher name is the same as the certificate subject name.
