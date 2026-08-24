@@ -13,6 +13,12 @@ ms.custom:
 
 This document will show you how to create application shortcuts using Package Support Framework (PSF) that run scripts via the __MSIX Packaging Tool__ and the [Contoso Expense](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/tree/master/Exercise5/02-End) WPF application.
 
+> [!NOTE]
+> This article covers a package-authoring approach, which requires rebuilding the package. If you're
+> an IT administrator who needs to create desktop shortcuts for applications from MSIX packages
+> that are already installed and that you didn't author, see
+> [Create desktop shortcuts for MSIX applications](../desktop/create-desktop-shortcuts.md) instead.
+
 ![contoso expenses](images/contosoexpense.png )
 
 The idea is to copy the application shortcut, that will be available inside the package, to the user's Desktop through the PSF scripts.
