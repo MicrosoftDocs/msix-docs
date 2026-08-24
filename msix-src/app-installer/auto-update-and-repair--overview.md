@@ -1,7 +1,7 @@
 ---
 title: Auto-update and repair apps
 description: Overview of the auto-update and repair settings for Windows apps installed using an AppInstaller file.
-ms.date: 04/10/2026
+ms.date: 07/02/2026
 ms.topic: article
 keywords: windows 10, windows 11, uwp, app installer, AppInstaller, auto-update, auto-repair
 ---
@@ -28,6 +28,9 @@ The Windows Settings App provides the ability to enable / disable the automatic 
 ## Automatic updates
 
 Windows apps will use their App Installer URI path to check for Windows app updates, however if the App Installer URI is inaccessible the Windows app will check for updates using the UpdateURIs, attempting to connect to each before attempting the next. The first App Installer file to be accessible will be validated against checking for any new Windows app updates.
+
+> [!NOTE]
+> On-launch update checks depend on how the MSIX application is activated, not where the user starts it. Checks run through supported activation entry points, such as the **Start menu** (including a pinned tile), an **app execution alias**, or a **protocol handler**. A desktop shortcut or taskbar item that launches the executable directly bypasses the check and starts the currently installed MSIX application without checking for a package update. A shortcut or taskbar item that invokes a supported activation entry point triggers the check. To check for updates regardless of how the application is activated, update the package from your code. For more information, see [Update non-Store published apps from your code](../non-store-developer-updates.md).
 
 Updating of Windows apps supports the following elements:
 

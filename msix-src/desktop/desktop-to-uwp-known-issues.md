@@ -1,7 +1,7 @@
 ---
 description: This article describes known issues that can occur when you create an MSIX package for your desktop app.
 title: Known Issues with packaged desktop apps
-ms.date: 07/29/2019
+ms.date: 07/02/2026
 ms.topic: troubleshooting-known-issue
 keywords: windows 10, uwp, msix
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
@@ -86,7 +86,7 @@ set APPXSIP_LOG=1
 Then, from the **Command Prompt**, sign your application again. For example:
 
 ```
-signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
+signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.msix
 ```
 
 Information about files that contain a bad PE cert will appear in the **Console Window**. For example:

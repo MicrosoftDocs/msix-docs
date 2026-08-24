@@ -1,7 +1,7 @@
 ---
 title: Package Support Framework Filesystem Write Permission fix
 description: Learn how to identify and apply Filesystem Write Permission error fixes by using the MSIX Package Support Framework.
-ms.date: 05/10/2022
+ms.date: 07/02/2026
 ms.topic: how-to
 keywords: windows 10, uwp, psf, package support framework, filesystem, write permission, msix
 ms.custom: kr2b-contr-experiment
@@ -280,3 +280,11 @@ After you apply all the corrections, repackage the Windows app into an MSIX and 
     Set-Location "${env:ProgramFiles(x86)}\Windows Kits\10\Bin\$Win10SDKVersion\$OSArchitecture"
     .\signtool.exe sign /v /fd sha256 /f $CodeSigningCert /p $CodeSigningPass $AppPath
     ```
+
+## Related articles
+
+- [Package Support Framework overview](package-support-framework-overview.md)
+- [Get started with the Package Support Framework](package-support-framework.md)
+- [Windows app working directory error](psf-current-working-directory.md)
+- [Windows app launcher parameter requirement](psf-launch-apps-with-parameters.md)
+- [Run scripts with the Package Support Framework](run-scripts-with-package-support-framework.md)

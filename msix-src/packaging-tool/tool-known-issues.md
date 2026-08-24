@@ -1,7 +1,7 @@
 ---
 title: MSIX Packaging Tool Known Issues and Troubleshooting Tips
 description: Describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. 
-ms.date: 10/06/2023
+ms.date: 07/02/2026
 ms.topic: troubleshooting-known-issue
 keywords: msix packaging tool, known issues, troubleshooting
 ms.custom: RS5
@@ -12,6 +12,32 @@ ms.custom: RS5
 This article describes known issues and provides troubleshooting tips to consider when converting your apps to MSIX using the MSIX Packaging Tool. Check out our other docs if you need to acquire the MSIX Packaging Tool or driver in a [disconnected environments](disconnected-environment.md).
 
 ## Known issues
+
+### MSIX Packaging Tool won't launch when the license is missing
+
+If the MSIX Packaging Tool was installed while the computer was offline or otherwise disconnected from the internet, the tool's license might not have been acquired. When the license is missing, the tool fails to launch and reports an error that is essentially an **Access Denied** error when starting the app.
+
+When you install the MSIX Packaging Tool from the Microsoft Store on a connected computer, the license is acquired automatically. In a disconnected environment, you need to add the license manually.
+
+**Resolution**
+
+1. Get the offline copy of the tool *and its license*, using one of the following options:
+
+   - Use the [Windows Package Manager (winget)](/windows/package-manager/winget/) to download the package and its license directly from the Microsoft Store. The license `.xml` file is saved to the same folder as the `.msixbundle`:
+
+     ```powershell
+     winget download 9N5LW3JBCXKF --source msstore
+     ```
+
+   - Or download the package and license manually from [Get the MSIX Packaging Tool](disconnected-environment.md#get-the-msix-packaging-tool).
+
+2. Install the package together with the license by using [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage) with the `-LicensePath` parameter (use `-Online` for the current OS, or `-Path` for an offline image), for example:
+
+   ```powershell
+   Add-AppxProvisionedPackage -Online -PackagePath C:\MSIX\MSIXPackagingTool.msixbundle -LicensePath C:\MSIX\MSIXPackagingTool.License.xml
+   ```
+
+For full offline installation steps, see [Using the MSIX Packaging Tool in a disconnected environment](disconnected-environment.md).
 
 ### Getting the latest Insider Preview build of the MSIX Packaging Tool
 

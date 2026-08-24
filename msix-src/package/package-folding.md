@@ -1,7 +1,7 @@
 ---
 title: Developing with asset packages and package folding
 description: Learn how to efficiently organize your app with asset packages and package folding.
-ms.date: 04/30/2018
+ms.date: 08/21/2026
 ms.topic: concept-article
 keywords: windows 10, packaging, package layout, asset package
 ---
@@ -20,10 +20,10 @@ To understand how package folding doesn’t impact your development process, let
 
 At a high level, when you split some of your app’s files into other packages (that are not architecture packages), you will not be able to access those files directly relative to where your code runs. This is because these packages are all installed into different directories from where your architecture package is installed. For example, if you’re making a game and your game is localized into French and German and you built for both x86 and x64 machines, then you should have these app package files within the app bundle of your game:
 
-- 	MyGame_1.0_x86.appx
-- 	MyGame_1.0_x64.appx
-- 	MyGame_1.0_language-fr.appx
-- 	MyGame_1.0_language-de.appx
+- 	MyGame_1.0_x86.msix
+- 	MyGame_1.0_x64.msix
+- 	MyGame_1.0_language-fr.msix
+- 	MyGame_1.0_language-de.msix
 
 When your game is installed to a user’s machine, each app package file will have its own folder in the **WindowsApps** directory. So for a French user running 64-bit Windows, your game will look like this:
 
@@ -39,6 +39,9 @@ C:\Program Files\WindowsApps\
 Note that the app package files that are not applicable to the user will not be installed (the x86 and German packages). 
 
 For this user, your game’s main executable will be within the **MyGame_1.0_x64** folder and will run from there, and normally, it will only have access to the files within this folder. In order to access the files in the **MyGame_1.0_language-fr** folder, you would have to use either the MRT APIs or the PackageManager APIs. The MRT APIs can automatically select the most appropriate file from the languages installed, you can find out more about MRT APIs at [Windows.ApplicationModel.Resources.Core](/uwp/api/windows.applicationmodel.resources.core). Alternatively, you can find the installed location of the French language package using the [PackageManager Class](/uwp/api/Windows.Management.Deployment.PackageManager). You should never assume the installed location of the packages of your app since this can change and can vary between users. 
+
+> [!NOTE]
+> An app that runs in an AppContainer must declare the `packageQuery` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) in its [package manifest](/uwp/schemas/appxpackage/appx-package-manifest) to query information about packages that the app didn't author by using the [PackageManager](/uwp/api/windows.management.deployment.packagemanager) class. Querying packages within your own app doesn't require this capability. For callers that don't run in an AppContainer, access isn't determined by an app capability declaration.
 
 ## Asset package folding
 
@@ -68,19 +71,19 @@ MyGame
 If you want to split your game into 3 packages: an x64 architecture package, an asset package for audios, and an asset package for videos, your game will be divided into these packages:
 
 ```example
-MyGame_1.0_x64.appx
+MyGame_1.0_x64.msix
 |-- Engine
 |   `-- ...
 |-- XboxLive
 |   `-- ...
 `-- Game.exe
-MyGame_1.0_Audios.appx
+MyGame_1.0_Audios.msix
 `-- Audios
     |-- Level1
     |   `-- ...
     `-- Level2
         `-- ...
-MyGame_1.0_Videos.appx
+MyGame_1.0_Videos.msix
 `-- Videos
     |-- Level1
     |   `-- ...
@@ -128,13 +131,13 @@ When using package folding for asset packages, you can still access the files yo
 Now for a more complicated package folding example. Let’s say that you want to split your files based on level instead, and if you want to keep the same structure as the original project folder, your packages should look like this:
 
 ```example
-MyGame_1.0_x64.appx
+MyGame_1.0_x64.msix
 |-- Engine
 |   `-- ...
 |-- XboxLive
 |   `-- ...
 `-- Game.exe
-MyGame_Level1.appx
+MyGame_Level1.msix
 |-- Audios
 |   `-- Level1
 |       `-- ...
@@ -142,7 +145,7 @@ MyGame_Level1.appx
     `-- Level1
         `-- ...
 
-MyGame_Level2.appx
+MyGame_Level2.msix
 |-- Audios
 |   `-- Level2
 |       `-- ...
