@@ -34,11 +34,11 @@ Here are the locations of each executable.
 
 For more information about PowerShell execution policies, see [this article](/powershell/module/microsoft.powershell.core/about/about_execution_policies?preserve-view=true).
 
-🚩 Make sure to also include the __StartingScriptWrapper.ps1__ file in your package and place it in the same folder as your executable. You can copy this file from the [PSF NuGet package](https://www.nuget.org/packages/Microsoft.PackageSupportFramework/) or from the [PSF Github repo](https://github.com/Microsoft/MSIX-PackageSupportFramework/releases).
+🚩 Make sure to also include the __StartingScriptWrapper.ps1__ file in your package, in the same folder as the PSF launcher executable, which is normally the package root. The PSF launcher runs this wrapper for every start and end script: it looks for the wrapper next to itself first, and, in release 1.0.220926.1 and later, then searches the rest of the package for it. You can copy this file from the [PSF NuGet package](https://www.nuget.org/packages/Microsoft.PackageSupportFramework/) or from the [Package Support Framework repository](https://github.com/microsoft/MSIX-PackageSupportFramework/blob/main/PsfLauncher/StartingScriptWrapper.ps1).
 
 ## Enable scripts
 
-To specify what scripts will run for each packaged application executable, you need to modify the [config.json file](package-support-framework.md#create-a-configuration-file). To tell PSF to run a script before the execution of the packaged application, add a configuration item called `startScript`. To tell PSF to run a script after the packaged application finishes add a configuration item called `endScript`.
+To specify what scripts will run for each packaged application executable, you need to modify the [config.json file](psf-apply-a-runtime-fix.md#create-a-configuration-file). To tell PSF to run a script before the execution of the packaged application, add a configuration item called `startScript`. To tell PSF to run a script after the packaged application finishes add a configuration item called `endScript`.
 
 ### Script configuration items
 
