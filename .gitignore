@@ -6,4 +6,4 @@ _themes*/
 _repo.*/
 .vscode/
 .openpublishing.buildcore.ps1
-.github/
+.github/agents/*.md
