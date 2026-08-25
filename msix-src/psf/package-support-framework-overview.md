@@ -124,7 +124,9 @@ fixes. For example, the ElectronFixup depends on the `CreateFileFromAppW` API an
 Windows 10, version 1803 (10.0.17134) or later.
 
 The PSF binaries are built for x86 and x64. On an Arm64 device, an x86 or x64 packaged application
-runs under emulation and uses the x86 or x64 PSF binaries that match it.
+runs under emulation and uses the x86 or x64 PSF binaries that match it. x64 emulation on Arm
+requires Windows 11; Windows 10 on Arm supports x86 emulation only, so use the x86 PSF binaries
+for emulated applications on Windows 10 on Arm.
 
 To move a package to a newer PSF release, install the newer NuGet package version, replace the PSF
 binaries in your package layout, then repackage, sign, and reinstall the package as described in
