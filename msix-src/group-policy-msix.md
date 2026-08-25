@@ -1,7 +1,7 @@
 ---
 title: How Group Policy works with packaged apps
 description: Describes how Group Policy works with apps that are converted to MSIX.
-ms.date: 04/12/2019
+ms.date: 08/25/2026
 ms.topic: article
 keywords: msix
 ---
@@ -37,6 +37,36 @@ This policy denies or allows access to the Store application. If you enable this
 * **GPO:** `Computer Configuration\Administrative Templates\Windows Components\Store` or `User Configuration\Administrative Templates\Windows Components\Store`
 * **Registry:** `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStoreRemoveWindowsStore REG_DWORD` or `HKEY_CURRENT_USER\Software\Policies\Microsoft\WindowsStoreRemoveWindowsStore REG_DWORD`
 * **App updates:** If configured in the computer context, this policy turns off app updates.
+
+### Prevent users from uninstalling applications from Start
+
+Administrators can use the **Prevent users from uninstalling applications from Start**
+policy to remove the Start menu uninstall command for applications. This policy
+controls the Start menu user experience. It doesn't uninstall an MSIX package and
+isn't a blanket control that prevents every package-removal path.
+
+* **GPO:** `Computer Configuration\Administrative Templates\Start Menu and Taskbar`
+  or `User Configuration\Administrative Templates\Start Menu and Taskbar`
+* **Registry-backed setting:** `Software\Policies\Microsoft\Windows\Explorer`
+  `NoUninstallFromStart`
+* **Start menu uninstall:** If enabled, users can't uninstall apps from Start. If
+  disabled or not configured, users can access the uninstall command from Start.
+* **Scope and limitations:** This policy is documented for the Start menu
+  uninstall command. It doesn't document a block for uninstall initiated from
+  **Settings**, PowerShell commands such as `Remove-AppxPackage`, or management
+  tools. Administrators and device management solutions can still remove MSIX
+  packages by using an authorized removal path.
+
+For more information, see [Start menu policy settings][start-menu-policy-settings]
+and [ADMX_StartMenu Policy CSP][admx-startmenu-policy-csp].
+
+[start-menu-policy-settings]: /windows/configuration/start/policy-settings#prevent-users-from-uninstalling-applications-from-start
+[admx-startmenu-policy-csp]: /windows/client-management/mdm/policy-csp-admx-startmenu#nouninstallfromstart
+
+<!-- SME question: Does this Start policy affect the Settings uninstall UI on any
+supported Windows 10 or Windows 11 release, or only the Start menu command? -->
+<!-- SME question: Is this policy supported and effective on Windows Server, or
+should this guidance be scoped to Windows client only? -->
 
 ### Overview of both Store signed and Trusted non-Store apps on Windows 10 2004 Enterprise 
 The table below demonstrates what happens when *BlockNonAdminUserInstall* policy is **Enabled**, *AllowAllTrustedApps* is **Enabled** and *AllowDevelopmentWithoutDevLicense* is **Enabled**
