@@ -260,6 +260,8 @@
       items:
         - name: Overview
           href: desktop/extend-overview.md
+        - name: Start your app with an app execution alias
+          href: desktop/app-execution-alias.md
         - name: App extensions
           href: /windows/uwp/launch-resume/how-to-create-an-extension?context=/windows/msix/render
         - name: Custom properties for app extensions
