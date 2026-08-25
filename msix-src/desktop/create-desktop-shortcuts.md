@@ -1,5 +1,5 @@
 ---
-description: Learn how IT administrators create desktop shortcuts for installed MSIX applications by using an Application User Model ID, either manually in File Explorer or with a PowerShell script.
+description: Learn how IT administrators create desktop shortcuts for applications from installed MSIX packages by using an Application User Model ID, either manually in File Explorer or with a PowerShell script.
 title: Create desktop shortcuts for MSIX applications
 ms.date: 08/24/2026
 ms.topic: how-to
