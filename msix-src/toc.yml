@@ -211,6 +211,8 @@
           href: desktop/before-packaging-overview.md
         - name: Prepare to package a desktop app 
           href: desktop/desktop-to-uwp-prepare.md
+        - name: COM support in MSIX packages
+          href: desktop/com-support.md
         - name: Understanding how packaged desktop apps run on Windows
           href: desktop/desktop-to-uwp-behind-the-scenes.md
         - name: Bundling MSIX packages
