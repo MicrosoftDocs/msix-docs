@@ -11,7 +11,7 @@ ms.custom: "RS5, seodec18"
 
 Updating modern Windows app packages is optimized to ensure that only the essential changed bits of the app are downloaded to update an existing Windows app.
 
-Differential updates don't require you to create or publish a separate patch package. Publish the complete MSIX package with the same package identity and a higher version. The deployment service compares the block maps for the installed and updated packages and downloads the blocks that it needs.
+Differential updates don't require you to create or publish a separate patch package. Publish the complete MSIX package with the same package family name (same package name and publisher) and a higher package version. When Windows acquires the update over the network, it compares the block maps of the installed and updated packages and downloads only the blocks that differ.
 
 ## Metadata in the AppxBlockMap.xml file
 
@@ -68,7 +68,7 @@ Run the tool from its Windows SDK installation folder (`%ProgramFiles(x86)%\Wind
 ComparePackage.exe "C:\Packages\ContosoApp_1.0.0.0_x64.msix" "C:\Packages\ContosoApp_1.1.0.0_x64.msix" -XML "C:\Reports\ContosoApp_1.0.0.0_1.1.0.0.xml" -o -v
 ```
 
-The `-XML` option writes the report to a file, `-o` replaces an existing report, and `-v` includes verbose output. Use the report's update-impact value to compare packaging changes before publishing an update. This value estimates the package content that changes; measure the download through your distribution service when you also need transport and service overhead.
+The `-XML` option writes the report to a file, `-o` replaces an existing report, and `-v` includes verbose output. ComparePackage requires the updated (second) package to have a higher package version than the installed package; otherwise it reports an error. Use the report's update-impact value to compare packaging changes before publishing an update. This value estimates the package content that changes; measure the download through your distribution service when you also need transport and service overhead.
 
 ## App update constraints
 
