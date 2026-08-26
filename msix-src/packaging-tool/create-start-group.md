@@ -8,11 +8,11 @@ keywords: windows 10, windows 11, uwp, msix, appx
 
 # Configure MSIX application entries in the Start menu
 
-An MSIX package can contain one or more applications. By default, each `<Application>` entry point in the package manifest appears in the **All** list in the Start menu. You can hide entry points that users don't launch directly or, on Windows 11, group visible entries under a folder.
+An MSIX package can contain one or more applications. By default, each `<Application>` that defines visual elements appears in the app list in the Start menu. You can hide entry points that users don't launch directly or, on Windows 11, group visible entries under a folder.
 
 ## Hide an application entry point
 
-Set the [`AppListEntry`](https://learn.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements#attributes) attribute of `uap:VisualElements` to `none` when an entry point doesn't need its own Start menu entry. For example, use this setting for a command-line tool launched through an app execution alias, an app extension, or a helper application activated by another application.
+Set the [`AppListEntry`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements#attributes) attribute of `uap:VisualElements` to `none` when an entry point doesn't need its own Start menu entry. For example, use this setting for a command-line tool launched through an app execution alias, an app extension, or a helper application activated by another application.
 
 ```xml
 <Application
@@ -29,7 +29,7 @@ Set the [`AppListEntry`](https://learn.microsoft.com/uwp/schemas/appxpackage/uap
 </Application>
 ```
 
-The `none` value suppresses the entry point from the Start menu. It doesn't remove the application from the package or disable other activation mechanisms declared for that application. If users should launch the application directly from the Start menu, omit `AppListEntry` or set it to `default`.
+The `none` value suppresses the entry point from the Start menu. It doesn't remove the application from the package or disable other activation mechanisms declared for that application. If users should launch the application directly from the Start menu, omit `AppListEntry` or set it to `default`. Because `AppListEntry` is set in the package manifest, rebuild and redeploy the MSIX package for a change to take effect.
 
 ## Group application entries under a folder
 
@@ -37,7 +37,7 @@ Start menu folders for MSIX application entries are available on Windows 11.
 
 You might want to group visible entries when a package contains multiple applications. You can also group applications from separate MSIX packages that belong to the same suite.
 
-This goal can be achieved using the `VisualGroup` property of the `VisualElements` item.
+You group entries by setting the `VisualGroup` attribute on the `uap3:VisualElements` element.
 Here are the steps to implement this change:
 
 1) Open the manifest file of your application with a text editor of choice. Alternatively, if you're using the MSIX Packaging Tool, you can press the *Open manifest* button in the Package Editor.
@@ -56,7 +56,7 @@ Here are the steps to implement this change:
     ```xml
       <Applications>
           <Application>
-              <VisualElements DisplayName="App1" 
+              <uap:VisualElements DisplayName="App1"
                               Square150x150Logo="images/150x150.png"
                               Square44x44Logo="images/44x44.png"
                               Description="App1"
@@ -64,7 +64,7 @@ Here are the steps to implement this change:
                               AppListEntry="default">  
                   <uap:SplashScreen BackgroundColor="#777777"
                                     Image="images/splash.png"/>  
-              </VisualElements>  
+              </uap:VisualElements>
           </Application>
           <Application>
               ...
@@ -72,7 +72,7 @@ Here are the steps to implement this change:
       </Applications>
     ```
 
-4) Add the `uap3` prefix to the `VisualElements` section. Remember to add it both to the opening and ending tags:
+4) Change the `VisualElements` prefix to `uap3`. Remember to update both the opening and ending tags:
 
     ```xml
       <Applications>
