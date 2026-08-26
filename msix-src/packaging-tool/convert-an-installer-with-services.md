@@ -11,16 +11,13 @@ keywords: windows 10, MSIX, MSIX Packaging Tool, services
 Windows 10, version 2004, introduces support for running an MSIX package that includes services. You can use the MSIX Packaging Tool to take an existing installer with services and convert it to MSIX. This support is as of the January 2020 release of the [MSIX Packaging Tool](tool-overview.md)(1.2019.1220.0).
 
 > [!IMPORTANT]
-> Installing or deploying an MSIX package that contains a Windows service requires
-> administrator (elevated) permissions. The Windows service is registered when the
-> package is installed, and Windows stores installed service configuration as
-> machine-wide state in the [Service Control Manager (SCM) database][scm-database]
-> under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`. The [SCM
-> access-rights documentation][scm-access-rights] states that only processes with
-> administrator privileges can open SCM handles that can create services. A per-user,
-> non-elevated installation can't register that machine-wide service, so the
-> installation fails unless the deployment tool runs with administrative rights or
-> elevates the operation.
+> When an MSIX package that contains a Windows service is installed, Windows registers
+> the service in the [Service Control Manager (SCM) database][scm-database]. Creating
+> a service requires `SC_MANAGER_CREATE_SERVICE` access to the SCM. By default, the
+> [SCM security descriptor][scm-access-rights] grants this access to administrators.
+> The SCM security descriptor governs access and can be modified, so administrator
+> privileges aren't an absolute requirement. With the default SCM security
+> descriptor, however, installing the package requires elevation.
 
 ## Instructions
 
