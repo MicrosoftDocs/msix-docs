@@ -66,11 +66,11 @@ The staged payload remains on the device while another user, provisioning entry,
 
 On Windows 10, version 2004 and later, an administrator can use [force provisioning](deploy-preinstalled-apps.md#force-provisioning) when the package must be restored for all users. Force provisioning isn't supported on Windows Server 2019 or Windows Server 2022. Check [MSIX features and supported platforms](../supported-platforms.md) before using this option on another Windows edition.
 
-To remove a provisioned package from future user registrations, an administrator must deprovision it. Deprovisioning alone doesn't remove registrations that already exist for users.
+To remove a provisioned package from future user registrations, an administrator must [deprovision it](deploy-preinstalled-apps.md#powershell). Deprovisioning alone doesn't remove registrations that already exist for users.
 
 ### How updates reach users
 
-When an update stages a newer package version, the user who initiated the update is registered to that version as part of the update. Other users aren't updated on a fixed timer. At each user's next sign-in, Windows compares the user's registered packages with the staged packages and registers a newer applicable version when one is available.
+When a user updates the package, that user is registered to the new version as part of the update. When an update is applied without an interactive user (for example, by re-provisioning or servicing), each user picks up the newer version at sign-in. Other users aren't updated on a fixed timer: at each user's next sign-in, Windows compares the user's registered packages with the staged packages and registers a newer applicable version when one is available.
 
 This behavior lets one staged version serve multiple users while keeping registration user-specific. For information about how Windows minimizes the payload downloaded for an update, see [App package updates](../app-package-updates.md).
 
