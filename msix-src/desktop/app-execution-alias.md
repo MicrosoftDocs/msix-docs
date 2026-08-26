@@ -76,16 +76,19 @@ Use these rules when you adapt the example:
   with `.exe` and must follow the schema restrictions for invalid characters.
 - Include the `uap3` and `desktop` namespaces in `IgnorableNamespaces`.
 
-The `uap3:Extension` and `uap3:AppExecutionAlias` schema pages list Windows 10,
-version 1607 (build 14393) as the minimum OS version. Some newer attributes for
-app execution aliases are available only in later schema namespaces.
+For version requirements and supported attributes, see the
+[`uap3:Extension`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap3-extension)
+and
+[`uap3:AppExecutionAlias`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap3-appexecutionalias)
+schema references.
 
 ## UWP application variant
 
 For a UWP application, use the `uap5` app execution alias elements instead of the
 packaged desktop `desktop:ExecutionAlias` element. Place the following fragment
-under the UWP application's `Application` element. Declare the `uap5` namespace
-on the `Package` element and include `uap5` in `IgnorableNamespaces`.
+under the UWP application's `Application` element. On the `Package` element,
+declare `xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"`
+and include `uap5` in `IgnorableNamespaces`.
 
 ```xml
 <Extensions>
@@ -97,8 +100,12 @@ on the `Package` element and include `uap5` in `IgnorableNamespaces`.
 </Extensions>
 ```
 
-The `uap5:Extension`, `uap5:AppExecutionAlias`, and `uap5:ExecutionAlias` schema
-pages list Windows 10, version 1709 (build 16299) as the minimum OS version.
+For version requirements and supported attributes, see the
+[`uap5:Extension`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-extension),
+[`uap5:AppExecutionAlias`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias),
+and
+[`uap5:ExecutionAlias`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-executionalias)
+schema references.
 
 ## Invoke the alias
 
@@ -110,10 +117,6 @@ by using the alias name.
 | **Run** dialog | Press **Win+R**, enter `contoso.exe`, and select **OK**. |
 | Command Prompt | Run `contoso.exe` or `contoso.exe --help`. |
 | PowerShell | Run `contoso.exe` or `& contoso.exe --help`. |
-
-If you use MSIX Core on Windows 10, version 1703 or earlier, app execution
-aliases work from **Win+R** but not from Command Prompt or PowerShell. For more
-information, see [MSIX Core](../msix-core/msixcore.md).
 
 ## Practical notes
 
