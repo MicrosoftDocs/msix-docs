@@ -17,6 +17,13 @@ The MSIX Packaging Tool includes the `MsixPackagingToolCLI.exe` command-line int
 creating MSIX packages. This enables you to automate the process of repackaging app installers
 and perform bulk conversions.
 
+> [!NOTE]
+> The Windows App Development CLI (`winapp`) can create an MSIX package from a prepared
+> application directory, but it doesn't convert an existing installer. Use the MSIX Packaging
+> Tool command-line interface for installer conversion. To package files from a prepared
+> application directory, see
+> [Windows App Development CLI](/windows/apps/dev-tools/winapp-cli/).
+
 For sample PowerShell and Bash scripts that demonstrate how to automate the process of packaging,
 signing, managing, and distributing MSIX packages, see the
 [scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts) folder of the MSIX Toolkit.
@@ -52,8 +59,7 @@ MsixPackagingToolCLI.exe create-package ^
 ```
 
 > [!NOTE]
-> App-V 5.x conversion is currently supported through the command-line interface. This
-> includes capabilities.
+> The command-line interface currently supports converting App-V 5.x packages.
 
 You can [generate a command-line template file](generate-template-file.md) with the MSIX
 Packaging Tool GUI app by completing the conversion process for an installer. You can also build
