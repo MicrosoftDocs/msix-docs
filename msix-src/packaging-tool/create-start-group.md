@@ -1,19 +1,41 @@
 ---
-title: Group applications under a folder in the Start menu
-description: Describes how to enable multiple packaged MSIX application to be grouped under a single folder in the Start menu
-ms.date: 04/15/2026
+title: Configure MSIX application entries in the Start menu
+description: Learn how to hide an MSIX application entry point or group multiple entries under a folder in the Start menu.
+ms.date: 08/26/2026
 ms.topic: how-to
 keywords: windows 10, windows 11, uwp, msix, appx
 ---
 
-# Group applications under a folder in the Start menu
+# Configure MSIX application entries in the Start menu
 
-This feature is available on Windows 11.
+An MSIX package can contain one or more applications. By default, each `<Application>` entry point in the package manifest appears in the **All** list in the Start menu. You can hide entry points that users don't launch directly or, on Windows 11, group visible entries under a folder.
 
-The manifest of a packaged application contains one or more `<Application>` entries, which are the available entry points. Each of them will become an icon in the Start menu.
+## Hide an application entry point
 
-A MSIX package can contain multiple applications. Alternatively, a company can build multiple applications, which are packaged as separate MSIX packages, but they all belong to the same suite.
-In both scenarios, you may want to group together all the entries in the Start menu under a single folder, so that for the user it's easier to find all the applications in the same place.
+Set the [`AppListEntry`](https://learn.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements#attributes) attribute of `uap:VisualElements` to `none` when an entry point doesn't need its own Start menu entry. For example, use this setting for a command-line tool launched through an app execution alias, an app extension, or a helper application activated by another application.
+
+```xml
+<Application
+    Id="CommandLineTool"
+    Executable="tool.exe"
+    EntryPoint="Windows.FullTrustApplication">
+    <uap:VisualElements
+        DisplayName="Command-line tool"
+        Description="Command-line tool"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        AppListEntry="none" />
+</Application>
+```
+
+The `none` value suppresses the entry point from the Start menu. It doesn't remove the application from the package or disable other activation mechanisms declared for that application. If users should launch the application directly from the Start menu, omit `AppListEntry` or set it to `default`.
+
+## Group application entries under a folder
+
+Start menu folders for MSIX application entries are available on Windows 11.
+
+You might want to group visible entries when a package contains multiple applications. You can also group applications from separate MSIX packages that belong to the same suite.
 
 This goal can be achieved using the `VisualGroup` property of the `VisualElements` item.
 Here are the steps to implement this change:
