@@ -37,7 +37,7 @@ The labels in the packaging wizard can vary by Visual Studio release and project
 Visual Studio writes the App Installer file, the referenced MSIX package or bundle, and any required dependency packages to the output folder. Depending on the architecture and bundle selections, Visual Studio can generate one App Installer file for a bundle or separate files for architecture-specific packages.
 
 > [!NOTE]
-> Visual Studio generates App Installer files that use the 2017/2 schema by default. This schema supports `HoursBetweenUpdateChecks`, but not `ShowPrompt` or `UpdateBlocksActivation`. To use those settings, edit the generated file to use the 2021 schema and validate it against the [App Installer file schema reference](/uwp/schemas/appinstallerschema/schema-root). For more information, see [Auto-update and repair apps](auto-update-and-repair--overview.md).
+> Visual Studio generates App Installer files that use the 2017/2 schema by default. This schema supports `HoursBetweenUpdateChecks`, but not `ShowPrompt` or `UpdateBlocksActivation`. To use those settings, edit the generated file to use the 2021 schema and validate it against the [App Installer file schema reference](/uwp/schemas/appinstallerschema/schema-root). `ShowPrompt` and `UpdateBlocksActivation` take effect only on Windows 10, version 1903 and later. For more information, see [Auto-update and repair apps](auto-update-and-repair--overview.md).
 
 ## Publish the generated files
 
@@ -62,7 +62,7 @@ Upload the complete output to the web location specified in the packaging wizard
 Link directly to the `.appinstaller` file. Users download and open the file with the App Installer app.
 
 > [!IMPORTANT]
-> The `ms-appinstaller:` protocol is disabled by default on current Windows devices. An administrator can enable it for managed devices with the `EnableMSAppInstallerProtocol` policy, but don't depend on this protocol for general distribution. For more information, see [Install Windows apps from a web page](installing-windows10-apps-web.md).
+> The `ms-appinstaller:` protocol is disabled by default on current Windows devices. An administrator can enable it for managed devices with the [`EnableMSAppInstallerProtocol`](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol) policy, but don't depend on this protocol for general distribution. For more information, see [Install Windows apps from a web page](installing-windows10-apps-web.md).
 
 ## Validate installation and updates
 
