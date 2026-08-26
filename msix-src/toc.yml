@@ -159,6 +159,20 @@
               href: psf/package-support-framework-overview.md
             - name: Get started with Package Support Framework
               href: psf/package-support-framework.md
+            - name: Step-by-step workflow
+              items:
+                - name: "Step 1: Identify compatibility issues"
+                  href: psf/psf-identify-issues.md
+                  displayName: "Process Monitor, procmon, Trace Fixup, diagnose"
+                - name: "Step 2: Find a runtime fix"
+                  href: psf/psf-find-a-runtime-fix.md
+                  displayName: "fixup, File Redirection Fixup, RegLegacyFixups, EnvVarFixup"
+                - name: "Step 3: Apply a runtime fix"
+                  href: psf/psf-apply-a-runtime-fix.md
+                  displayName: "config.json, PSF launcher, makeappx, repackage"
+                - name: "Step 4: Debug or extend a runtime fix"
+                  href: psf/psf-debug-a-runtime-fix.md
+                  displayName: "Visual Studio, WinDbg, debug fixup"
             - name: Create a Package Support Framework fixup
               href: psf/create-package-support-framework.md
             - name: Automated PSF config generation

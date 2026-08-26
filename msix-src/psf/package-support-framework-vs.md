@@ -114,7 +114,7 @@ Provide a value for each key. Use this table as a guide.
 |-------|-----------|-------|
 | applications | id |  Use the value of the `Id` attribute of the `Application` element in the package manifest. |
 | applications | executable | The package-relative path to the executable that you want to start. In most cases, you can get this value from your package manifest file before you modify it. It's the value of the `Executable` attribute of the `Application` element. |
-| applications | workingDirectory | (Optional) A package-relative path to use as the working directory of the application that starts. If you don't set this value, the operating system uses the `System32` directory as the application's working directory. |
+| applications | workingDirectory | (Optional) The working directory of the application that starts. A relative path is resolved against the package root. If you omit this value or set it to an empty string, the launcher uses the package root. Without the launcher, a packaged desktop application starts with the `System32` directory as its working directory. |
 | processes | executable | In most cases, this will be the name of the `executable` configured above with the path and file extension removed. |
 | fixups | dll | Package-relative path to the fixup DLL to load. |
 | fixups | config | (Optional) Controls how the fixup DLL behaves. The exact format of this value varies on a fixup-by-fixup basis as each fixup can interpret this "blob" as it wants. |
