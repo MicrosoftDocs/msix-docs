@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying your MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
-ms.date: 04/15/2026
+ms.date: 08/26/2026
 ms.topic: concept-article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -38,5 +38,38 @@ MSIX is a robust and reliable modern app install experience. The MSIX experience
 ## Providing support for my customer
 Though MSIX has a 99.96% successful install rate, you still need to plan how to support your customer.  In the [MSIX Validation and Troubleshooting section](managing-your-msix-deployment-troubleshooting.md) we discuss tools available for you to diagnose installation issues.
 
+## How MSIX deployment works
 
- 
+On a multi-user device, installing an MSIX package involves two separate operations: staging the package on the device and registering it for a user.
+
+### Staging
+
+Staging stores the package payload in `%ProgramFiles%\WindowsApps`. This operation is device-wide and doesn't require a user account to exist. Windows stages a given package payload once, so registering that package for another user doesn't create another copy of the payload.
+
+### Per-user registration
+
+Registration makes a staged package available to a specific user. Registration creates the user-specific package data and Windows integrations, such as file type associations and Start menu entries. A package must be registered separately for each user who runs its applications.
+
+For a package added interactively, staging and registration can occur as part of the same add operation. For a preinstalled or provisioned package, Windows registers the package for a user when that user signs in.
+
+### Provisioning for all users
+
+[Provisioning](deploy-preinstalled-apps.md) provides the MSIX equivalent of installing for all users. Windows stages a package and adds its package family to the device's provisioned list. Provisioning tracks the package family, not a specific package version.
+
+Provisioning doesn't require every user profile to be loaded at the time of deployment. Windows registers the highest applicable staged version in the provisioned family for each user at sign-in. Therefore, staging a newer version of a provisioned package is sufficient; you don't have to provision that version again.
+
+### User removal and package lifetime
+
+When a user uninstalls an MSIX package, Windows removes that user's registration and user-specific integrations. This action doesn't unregister the package for other users or remove its family from the provisioned list.
+
+The staged payload can remain on the device while another user, provisioning, a dependency, or another package reference still requires it. Windows removes the payload after its remaining references are gone; removal isn't necessarily immediate. If a user removes a regularly provisioned package, a package update doesn't automatically reinstall it for that user. An administrator can use force provisioning when the package must be restored for all users.
+
+To remove a provisioned package from future user registrations, an administrator must deprovision it. Deprovisioning alone doesn't remove registrations that already exist for users.
+
+### How updates reach users
+
+When an update stages a newer package version, the user who initiated the update is registered to that version as part of the update. Other users aren't updated on a fixed timer. At each user's next sign-in, Windows compares the user's registered packages with the staged packages and registers a newer applicable version when one is available.
+
+This behavior lets one staged version serve multiple users while keeping registration user-specific. For information about how Windows minimizes the payload downloaded for an update, see [App package updates](../app-package-updates.md).
+
+
