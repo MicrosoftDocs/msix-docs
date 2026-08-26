@@ -44,13 +44,13 @@ On a multi-user device, installing an MSIX package involves two separate operati
 
 ### Staging
 
-Staging stores the package payload in `%ProgramFiles%\WindowsApps`. This operation is device-wide and doesn't require a user account to exist. Windows stages a given package payload once, so registering that package for another user doesn't create another copy of the payload.
+Staging typically stores the package payload in `%ProgramFiles%\WindowsApps`. This operation is device-wide and doesn't require a user account to exist. Windows stages a given package payload once, so registering that package for another user doesn't create another copy of the payload.
 
 ### Per-user registration
 
 Registration makes a staged package available to a specific user. Registration creates the user-specific package data and Windows integrations, such as file type associations and Start menu entries. A package must be registered separately for each user who runs its applications.
 
-For a package added interactively, staging and registration can occur as part of the same add operation. For a preinstalled or provisioned package, Windows registers the package for a user when that user signs in.
+For a package added interactively, staging and registration can occur as part of the same add operation. For a preinstalled or provisioned package, the App Readiness service registers the package for a user when that user signs in.
 
 ### Provisioning for all users
 
@@ -62,7 +62,9 @@ Provisioning doesn't require every user profile to be loaded at the time of depl
 
 When a user uninstalls an MSIX package, Windows removes that user's registration and user-specific integrations. This action doesn't unregister the package for other users or remove its family from the provisioned list.
 
-The staged payload can remain on the device while another user, provisioning, a dependency, or another package reference still requires it. Windows removes the payload after its remaining references are gone; removal isn't necessarily immediate. If a user removes a regularly provisioned package, a package update doesn't automatically reinstall it for that user. An administrator can use force provisioning when the package must be restored for all users.
+The staged payload remains on the device while another user, provisioning entry, dependency, or package reference still requires it. Windows can remove the payload only after those references are gone, not when a single user removes the package. If a user removes a regularly provisioned package, a package update doesn't automatically reinstall it for that user.
+
+On Windows 10, version 2004 and later, an administrator can use [force provisioning](deploy-preinstalled-apps.md#force-provisioning) when the package must be restored for all users. Force provisioning isn't supported on Windows Server 2019 or Windows Server 2022. Check [MSIX features and supported platforms](../supported-platforms.md) before using this option on another Windows edition.
 
 To remove a provisioned package from future user registrations, an administrator must deprovision it. Deprovisioning alone doesn't remove registrations that already exist for users.
 
@@ -71,5 +73,4 @@ To remove a provisioned package from future user registrations, an administrator
 When an update stages a newer package version, the user who initiated the update is registered to that version as part of the update. Other users aren't updated on a fixed timer. At each user's next sign-in, Windows compares the user's registered packages with the staged packages and registers a newer applicable version when one is available.
 
 This behavior lets one staged version serve multiple users while keeping registration user-specific. For information about how Windows minimizes the payload downloaded for an update, see [App package updates](../app-package-updates.md).
-
 
