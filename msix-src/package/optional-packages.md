@@ -11,7 +11,7 @@ keywords: windows 10, msix, uwp, optional packages, related set, package extensi
 
 # Optional packages and related set authoring
 
-An optional package contains content or executable code that a main MSIX package can use. Optional packages are useful for downloadable content (DLC), feature modules, and content that you want to install or service separately from the main package. The optional packages run in the main package's container.
+An optional package contains content or executable code that a main MSIX package can use. Optional packages are useful for downloadable content (DLC), feature modules, and content that you want to install or service separately from the main package. The optional packages run in the main package's MSIX container.
 
 This article uses the [OptionalPackageSample](https://github.com/AppInstaller/OptionalPackageSample) to show the complete development flow. The sample has a main application, a content-only optional package, and two activatable optional packages in a related set.
 
@@ -29,6 +29,7 @@ A related set is stricter than an independent optional package. Use it when mixi
 ## Prerequisites
 
 - Visual Studio with the Universal Windows Platform development workload
+- The **C++ (v14x) Universal Windows Platform tools** component, to build the sample's C++ optional packages that carry executable code
 - Windows 10, version 1703 or later
 - Windows 10, version 1703 SDK or later
 
@@ -66,7 +67,7 @@ Create a packaging project for the main package and a packaging project for each
 For a content-only package, omit user-facing entry points or set `AppListEntry="none"`. If the optional package provides an application that users can launch, declare its application entry point and visual elements. Compare the `OptionalPackage` and `ActivatableOptionalPackage1` manifests in the sample.
 
 > [!NOTE]
-> For non-Store distribution, an optional package can have a different publisher. Declare the `uap4` namespace and specify the main package publisher, for example: `<uap4:MainPackageDependency Name="Contoso.MainApp" Publisher="CN=Contoso" />`. Different publishers aren't supported for Microsoft Store submissions.
+> For non-Store distribution, an optional package can have a different publisher. Add `xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"`, include `uap4` in `IgnorableNamespaces`, and use `uap4:MainPackageDependency` in place of the uap3 element, for example: `<uap4:MainPackageDependency Name="Contoso.MainApp" Publisher="CN=Contoso" />`. Because the `Publisher` attribute is defined in the uap4 schema, this scenario requires Windows 10, version 1709 (10.0.16299.0) or later and the 1709 SDK. Different publishers aren't supported for Microsoft Store submissions.
 
 ## Configure a related set
 
@@ -98,7 +99,7 @@ For the related-set projects in the sample, deploying `MyMainApp` also deploys `
 
 ## Access optional content and code
 
-The main application must treat an optional package as optional. Enumerate the current package's dependencies, identify the package by its identity, and then access files from its installed location. The sample's **Load Content from Optional Packages** action demonstrates this pattern for content-only and activatable packages.
+The main application must treat an optional package as optional. Enumerate [`Package.Current.Dependencies`](/uwp/api/windows.applicationmodel.package.dependencies), select the entries where [`IsOptional`](/uwp/api/windows.applicationmodel.package.isoptional) is `true`, and read files from each package's [`InstalledLocation`](/uwp/api/windows.applicationmodel.package.installedlocation). The sample's **Load Content from Optional Packages** action demonstrates this pattern for content-only and activatable packages.
 
 Don't assume that the optional package is installed, at a particular path, or at the same version as the main package unless it belongs to a related set. Keep a built-in fallback for missing optional content. To load a DLL or Windows Runtime component from an optional package, follow [Optional packages with executable code](optional-packages-with-executable-code.md); executable-code packages have additional build and loading requirements.
 
@@ -139,7 +140,7 @@ if (result.ExtendedError != null)
 - Store submission requires permission, and Store packages can't use different publishers for the main and optional packages.
 - The main application must handle an independent optional package being unavailable or removed.
 - Visual Studio doesn't support directly debugging a related-set optional project. Deploy without debugging, start the main application, and use **Debug** > **Attach to Process** to attach to the main application process.
-- Optional packages aren't a general plug-in security boundary. Their code and content run in the main application's MSIX container.
+- Optional packages aren't a general plug-in security boundary. Their code and content run in the main package's MSIX container.
 
 ## Next steps
 
