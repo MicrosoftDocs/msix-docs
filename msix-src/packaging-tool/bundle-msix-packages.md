@@ -1,7 +1,7 @@
 ---
 title: How to bundle MSIX packages
 description: This article describes the process of creating a bundle after converting x86 and x64 versions of your app installers using the MSIX Packaging Tool.
-ms.date: 10/25/2018
+ms.date: 08/26/2026
 ms.topic: how-to
 keywords: windows 10, msix
 ms.custom: "RS5, seodec18"
@@ -58,11 +58,11 @@ C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" 
 /p c:\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
 
-After running the command, an unsigned .msixbundle will be created in the path specified. Packages do not need to be signed before bundling.  
+After running the command, an unsigned `.msixbundle` is created at the specified path. The individual MSIX packages don't need separate signatures before bundling.
 
 ## Step 3: Sign the bundle
 
-After you create the bundle, you must sign the package before you can distribute the app to your users or install it. 
+After you create the bundle, sign the `.msixbundle` before you distribute or install it. You only need to sign the bundle: its signature covers the MSIX packages contained in the bundle, so you don't need to extract or sign the individual packages separately. For more information, see [Sign an app package using SignTool](../package/sign-app-package-using-signtool.md).
 
 To sign a package, you will need a general code signing certificate and use SignTool.exe from the Windows 10 SDK. 
 
@@ -84,7 +84,5 @@ Here is an example command.
 C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\SignTool.exe" sign /fd SHA256 /a 
 /f c:\private-cert.pfx /p aaabbb123 c:\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
-
-For more information about signing app packages with SignTool.exe, see [this article](../package/sign-app-package-using-signtool.md). 
 
 After successfully signing the bundle, you are ready to host it on a network share or on any content distribution network to distribute it to your users.
