@@ -53,6 +53,17 @@ To learn more about provisioning, see [Deployment Image Servicing and Management
 
 MSIX Packages have a comprehensive set of controls that IT Pros can use to control their installation.  IT Pros can dictate how and when MSIX apps can upgrade, downgrade or uninstall.  MSIX packages also can be limited with inbox Windows services like AppLocker and Group Policies.
 
+### Create desktop shortcuts
+
+An MSIX package can register one or more applications that appear in the Start menu, but package
+registration doesn't create desktop shortcuts for those applications. A shortcut should activate
+the application through its Application User Model ID rather than through a path into the package
+install folder, which changes with every package update.
+
+To learn how to find an application's Application User Model ID and create desktop shortcuts
+manually or with a script, see
+[Create desktop shortcuts for MSIX applications](create-desktop-shortcuts.md).
+
 ### Prevent MSIX app installs through AppLocker
 
 Supported in [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview), is the ability to allow or deny MSIX applications to execute on a corporate device. This is done by defining rules based on the MSIX app attributes. These attributes include: publisher name, product name, file name, file version, file path and file hash. MSIX apps identified by these rules are then configured to allow or deny execution.

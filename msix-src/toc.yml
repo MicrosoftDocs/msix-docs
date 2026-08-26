@@ -300,6 +300,8 @@
           href: desktop/managing-your-msix-deployment-intune.md
         - name: MSIX PowerShell Cmdlets
           href: desktop/powershell-msix-cmdlets.md
+        - name: Create desktop shortcuts for MSIX applications
+          href: desktop/create-desktop-shortcuts.md
         - name: Using Group Policy
           href: group-policy-msix.md
         - name: Preinstalling packaged apps
