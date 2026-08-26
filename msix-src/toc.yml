@@ -182,7 +182,7 @@
                       href: psf/create-shortcut-with-script-package-support-framework.md
         - name: Bundling MSIX Packages
           href: packaging-tool/bundle-msix-packages.md
-        - name: Configure application entries in the Start menu
+        - name: Configure MSIX application entries in the Start menu
           href: packaging-tool/create-start-group.md
         - name: Support legacy context menus
           href: packaging-tool/support-legacy-context-menus.md
