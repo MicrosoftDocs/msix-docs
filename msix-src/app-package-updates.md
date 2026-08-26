@@ -1,7 +1,7 @@
 ---
 title: App package updates
 description: Describes how MSIX packages are optimized to ensure that only the essential changed bits of the app are downloaded to update an existing Windows app.
-ms.date: 11/30/2020
+ms.date: 08/26/2026
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx, pfan, package family name
 ms.custom: "RS5, seodec18"
@@ -10,6 +10,8 @@ ms.custom: "RS5, seodec18"
 # App package updates
 
 Updating modern Windows app packages is optimized to ensure that only the essential changed bits of the app are downloaded to update an existing Windows app.
+
+Differential updates don't require you to create or publish a separate patch package. Publish the complete MSIX package with the same package family name (same package name and publisher) and a higher package version. When Windows acquires the update over the network, it compares the block maps of the installed and updated packages and downloads only the blocks that differ.
 
 ## Metadata in the AppxBlockMap.xml file
 
@@ -42,6 +44,31 @@ The first file (asset1.jpg) has two block hashes. The first hash represents the 
 During an update, if the second block of that file is modified, the hash is also updated to reflect that. The download component pulls down the second block and reuses the first unchanged block from the old package.
 
 On a larger scale, if an entire file does not change (determined by a full set of blocks not changing), that file can be reused from the existing package, saving time and resources.
+
+## What a differential update downloads
+
+Windows evaluates files by path and block hash:
+
+- A file that has the same path and the same block hashes is reused from the installed package.
+- For a file that changed in place, Windows downloads the changed blocks and reuses matching blocks.
+- A new file must be downloaded.
+- A file removed from the new package doesn't contribute payload bytes to the update.
+
+For example, consider a 10-MB package in which a 2-MB file changes. If only one 64-KB block in that file has a different hash, the content portion of the update is approximately 64 KB rather than 2 MB or 10 MB. Package metadata and transfer overhead add to the actual network traffic, so the final download can be larger than the changed-content estimate.
+
+Differential updates work between any two versions in the same package family; Windows doesn't need every intermediate version. A device can update directly from version 1.0.0.0 to 3.0.0.0 by comparing those two versions.
+
+## Estimate update impact with ComparePackage
+
+`ComparePackage.exe`, included in the [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-sdk/), compares two packages or two `AppxBlockMap.xml` files. It reports added, changed, deleted, and unchanged files and calculates the expected update impact.
+
+Run the tool from its Windows SDK installation folder (`%ProgramFiles(x86)%\Windows Kits\10\bin\<SDK version>\<architecture>`) or add that folder to `PATH`. Pass the installed version first and the updated version second:
+
+```cmd
+ComparePackage.exe "C:\Packages\ContosoApp_1.0.0.0_x64.msix" "C:\Packages\ContosoApp_1.1.0.0_x64.msix" -XML "C:\Reports\ContosoApp_1.0.0.0_1.1.0.0.xml" -o -v
+```
+
+The `-XML` option writes the report to a file, `-o` replaces an existing report, and `-v` includes verbose output. ComparePackage requires the updated (second) package to have a higher package version than the installed package; otherwise it reports an error. Use the report's update-impact value to compare packaging changes before publishing an update. This value estimates the package content that changes; measure the download through your distribution service when you also need transport and service overhead.
 
 ## App update constraints
 
