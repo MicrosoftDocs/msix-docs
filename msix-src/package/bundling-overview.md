@@ -35,9 +35,9 @@ creation. You can set this option to have Visual Studio generate an MSIX bundle 
 If you're generating MSIX packages using the
 [MSIX Packaging Tool](../packaging-tool/tool-overview.md) or
 [MakeAppx.exe](manual-packaging-root.md) you can take advantage of MakeAppx.exe to
-generate a bundle from individual packages e.g. after generating or converting an x86
-and x64 MSIX package of your app you can use the process outlined below to bundle the
-packages using MakeAppx.exe.
+generate a bundle from individual packages. For example, after generating or converting
+x86 and x64 MSIX packages for your app, you can use the process outlined below to bundle
+the packages using MakeAppx.exe.
 
 
 
