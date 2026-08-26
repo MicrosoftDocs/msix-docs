@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying your MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
-ms.date: 04/15/2026
+ms.date: 08/26/2026
 ms.topic: concept-article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -15,6 +15,20 @@ In order to successfully deploy MSIX, you need to consider the following:
 * Who is my customer?
 * What dependencies do I have?
 * How will I provide the best support for my customer?
+
+## Choose a deployment mechanism for the execution context
+
+MSIX package registration is per user. Registration creates user-specific package state and makes the package's applications available in that user's session. A package can also be staged on the device without being registered, and a package family can be provisioned so that Windows registers the latest staged package for users.
+
+The LocalSystem account, also shown as **SYSTEM**, can't have packages registered. A process that runs as LocalSystem therefore can't use a per-user deployment mechanism to install an MSIX package for the signed-in user. This limitation commonly affects services and device-context management agents.
+
+| Goal | Execution context and supported mechanism |
+| --- | --- |
+| Install for the current user | Run the [App Installer app](../app-installer/app-installer-root.md), [Add-AppxPackage](/powershell/module/appx/add-appxpackage), or a Package Manager add operation in that user's interactive context. These mechanisms stage and register the package for the caller. Don't run them as LocalSystem with the expectation that they register the package for another user. |
+| Make the package available to users on a device | From an elevated administrator or LocalSystem context, use [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage) or the corresponding [DISM app package servicing command](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options). Provisioning stages the package and adds its package family to the provisioned list. Windows registers the latest applicable staged package for each user, other than LocalSystem, at sign-in. |
+| Stage package files only | Use a deployment API stage operation, such as [StagePackageAsync](/uwp/api/windows.management.deployment.packagemanager.stagepackageasync). Staging is machine-wide, but staging alone doesn't make the package's applications available to a user; registration or provisioning is still required. |
+
+If a management tool runs in device or system context but the deployment must remain per user, configure the tool to run the install in the target user's context. Otherwise, use provisioning for the all-users experience. For more information about the relationship between staging, registration, and provisioning, see [Preinstalling packaged apps](deploy-preinstalled-apps.md) and [MSIX per-user versus all-users deployment](https://devblogs.microsoft.com/insidemsix/msix-per-user-vs-all-users/).
 
 ## Who is my customer?
 How you deploy often depends on who is your customer and your role as a developer or administrator.   It is important to identify your role to know what tools to use.
