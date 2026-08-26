@@ -37,9 +37,12 @@ COM registrations in an MSIX package use package manifest extensions:
   library.
 
 The `com4` schema is a superset and replacement for the older `com`, `com2`, and `com3`
-syntax. Use `com4` for new Windows 11 package manifests that can depend on Windows 10
-Build 20348 or later. If your package must install on earlier Windows versions, review the
-older namespace schema and validate the manifest against every target OS version.
+syntax. Its minimum supported OS version is Windows 10, build 20348. Windows 11 meets this
+requirement. Use `com4` for new package manifests when your minimum supported OS meets that
+requirement. If your package must install on earlier Windows versions, review the older
+namespace schemas and validate the manifest against every target OS version. For the complete
+set of COM schema references, see the
+[package manifest schema reference](/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 
 > [!IMPORTANT]
 > Do not treat packaged COM as direct registry authoring. Packaged COM support works with
@@ -151,6 +154,7 @@ package. If your in-process DLL path differs by architecture, use the architectu
 - [com4:Extension](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-extension)
 - [com4:ComServer](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-comserver)
 - [com4:InProcessServer](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-inprocessserver)
+- [com4:InProcessServerDll](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-inprocessserverdll)
 - [com4:ExeServer](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-exeserver)
 - [com4:ComInterface](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-cominterface)
 - [com4:TypeLib in ComInterface](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-cominterface-typelib)
@@ -159,7 +163,3 @@ package. If your in-process DLL path differs by architecture, use the architectu
 - [Prepare to package a desktop application](desktop-to-uwp-prepare.md)
 - [Understanding how packaged desktop apps run on Windows](desktop-to-uwp-behind-the-scenes.md)
 - [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal)
-
-<!-- SME question: Should this article include a tested example for multiple com4:Version
-children under one com4:TypeLib, including the expected behavior when a class references one
-VersionNumber? -->
