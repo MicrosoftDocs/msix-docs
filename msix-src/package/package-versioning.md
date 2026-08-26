@@ -20,6 +20,8 @@ Every MSIX package has a version in the `Version` attribute of the [`Identity`](
 
 The version belongs to the MSIX package, not to an individual application in the package. A package can contain multiple applications, but Windows deploys and updates the package as one unit.
 
+If you distribute a bundle (`.msixbundle`), the bundle also has its own four-part version in the `Identity` element of its bundle manifest. Windows compares the bundle version when it updates a bundle, so raise the bundle version for each release in addition to the versions of the packages it contains. When one release targets multiple architectures (x86, x64, Arm64, or neutral), use the same version across those architecture-specific packages.
+
 ## Version format
 
 An MSIX package version uses four period-separated unsigned integers:
@@ -42,7 +44,7 @@ For a normal update, keep the package `Name` and `Publisher` unchanged and assig
 
 Windows can update directly between nonconsecutive versions. You don't have to publish or install every intermediate version. For information about how Windows minimizes the update download, see [App package updates](../app-package-updates.md).
 
-Installing a lower version isn't allowed by default. Some deployment tools support an explicit force-update option for rollback scenarios, but don't rely on that option as your normal versioning strategy.
+Installing a lower version over a higher installed version isn't allowed by default. Deployment APIs and tools can override this with the `ForceUpdateFromAnyVersion` option (for example, `Add-AppxPackage -ForceUpdateFromAnyVersion`) for rollback scenarios, but don't rely on it as your normal versioning strategy.
 
 ## Version preview releases
 
@@ -53,7 +55,7 @@ Choose one of these strategies for preview releases:
 - **Use the production package identity.** Assign preview builds numeric versions lower than the planned production version. The production package must have a higher version than every preview that it replaces. For example, use `1.0.0.1` through `1.0.0.20` for previews and `1.0.1.0` for the production release.
 - **Use a separate preview package identity.** Give the preview package a different `Name`, such as `Contoso.DesktopApp.Preview`. Windows then treats preview and production as separate package families, which allows side-by-side installation. Because they are separate, the production package doesn't update or remove the preview package, and package data isn't shared automatically.
 
-A separate identity is usually the clearer choice when users need preview and production applications side by side.
+A separate identity is usually the clearer choice when you need the preview and production packages installed side by side so users can run both applications.
 
 ## Microsoft Store version requirements
 
