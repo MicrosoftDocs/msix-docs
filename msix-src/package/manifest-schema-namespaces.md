@@ -3,7 +3,7 @@ title: Package manifest schema namespaces
 description: Learn how the MSIX package manifest schema uses XML namespaces.
 ms.date: 08/25/2026
 ms.topic: article
-keywords: windows 11, windows 10, msix, package manifest, schema, namespaces
+keywords: windows 11, windows 10, msix, package manifest, schema, namespaces, uap, desktop, com, rescap
 ---
 
 # Package manifest schema namespaces
@@ -87,35 +87,13 @@ pages for exact syntax and element-specific requirements.
 | `holo`, `mobile`, `serverpreview` | Device-family or preview namespaces listed in the Windows 10 package manifest schema namespace history. | [What's different in Windows 10](/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10) |
 | `cloudFiles`, `deployment`, `heap`, `printSupport`, `virtualization` | Feature-specific namespaces added by later Windows 10 or Windows 11 releases. | [What's different in Windows 10](/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10) |
 
-## Verified namespace additions by Windows version
+## Namespace additions by Windows version
 
-The following mappings come from the Learn page
-[What's different in Windows 10](/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10),
-which lists the namespaces and XML prefixes added in each Windows 10 or Windows 11
-update. Use individual element pages to confirm any element-specific minimum OS
-version before you depend on that element.
-
-| Windows version or build | Prefixes added |
-| --- | --- |
-| Windows 10 version 1507, Build 10240 | `uap`, `f`, `holo`, `mobile`, `rescap`, `serverpreview` |
-| Windows 10 version 1511, Build 10586 | `f2`, `uap2` |
-| Windows 10 version 1607, Build 14393 | `desktop`, `rescap2`, `uap3` |
-| Windows 10 version 1703, Build 15063 | `com`, `desktop2`, `rescap3`, `uap4` |
-| Windows 10 version 1709, Build 16299.15 | `com2`, `desktop3`, `uap5` |
-| Windows 10 version 1803, Build 17134 | `desktop4`, `rescap4`, `uap6` |
-| Windows 10 version 1809, Build 17763 | `desktop5`, `rescap5`, `uap7` |
-| Windows 10 version 1903, Build 18362 | `desktop6`, `rescap6`, `uap8` |
-| Windows 10 version 2004, Build 19041 | `com3`, `printSupport`, `uap10` |
-| Windows 10, Build 19645 | `cloudFiles`, `uap11` |
-| Windows 10, Build 20348 | `com4`, `deployment`, `desktop7`, `uap12`, `virtualization` |
-| Windows 11, Build 22000 | `com5`, `desktop8`, `heap`, `uap13` |
-| Windows 11, Build 22159 | `desktop9` |
-| Windows 11, Build 22621 | `desktop10`, `uap15` |
-
-<!-- SME question: The Learn namespace-additions page lists desktop7 under Windows 10
-Build 20348, but the desktop7:Extension requirements table currently says Minimum OS
-Version Windows 10 (Build 19645). Which minimum should this overview use for
-desktop7? -->
+For the canonical list of namespaces and XML prefixes added in each Windows release,
+see
+[What's different in Windows 10](/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10).
+Use the schema reference for each element to confirm its minimum supported OS version
+before you depend on that element.
 
 ## Packaged desktop apps and UWP apps
 
