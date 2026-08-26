@@ -1,83 +1,76 @@
 ---
 title: Create an App Installer file with Visual Studio
-description: Learn how to use Visual Studio to enable automatic updates using the .appinstaller file.
-ms.date: 5/2/2018
+description: Learn how to use Visual Studio to create an App Installer file and an MSIX package for non-Store distribution and automatic updates.
+ms.date: 08/26/2026
 ms.topic: how-to
-keywords: windows 10, uwp, app installer, AppInstaller, sideload
-ms.custom: "RS5, seodec18"
+keywords: windows 10, windows 11, uwp, msix, app installer, AppInstaller, sideload
 ---
 
 # Create an App Installer file with Visual Studio
 
-Starting with Windows 10, Version 1803, and Visual Studio 2017, Update 15.7, sideloaded apps can be configured to receive automatic updates using an `.appinstaller` file. Visual Studio supports enabling these updates.
-> [!Note]
-> The ability to use the *ms-appinstaller* URI (Uniform Resource Identifier) scheme (protocol) can be controlled by an IT professional (an administrator). To enable *ms-appinstaller* on your network, set the Group Policy **EnableMSAppInstallerProtocol** (/windows/client-management/mdm/policy-csp-desktopappinstaller) to enabled (see [Policy CSP - DesktopAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemsappinstallerprotocol)). For more info, see [Installing Windows 10 apps from a web page](/windows/msix/app-installer/installing-windows10-apps-web).
+Visual Studio can generate an App Installer file when it creates an MSIX package for non-Store distribution. The App Installer file is an XML document that identifies the package location and configures update checks. The App Installer app reads this file to install and update the MSIX package.
 
+For details about the file format and supported update options, see [App Installer file overview](app-installer-file-overview.md) and [Configure update settings in the App Installer file](update-settings.md).
 
-## App Installer file location
-The `.appinstaller` file can be hosted in a shared location like a HTTP endpoint or a UNC shared folder, and includes the path to find the app packages to be installed. Users install the app from the shared location and enable periodic checks for new updates. 
+## Prerequisites
 
+- Use a project that supports the Visual Studio **Create App Packages** command. For a desktop application that uses a Windows Application Packaging Project, run the command from the packaging project.
+- Set the project's `TargetPlatformMinVersion` to Windows 10, version 1803 (build 17134) or later. Visual Studio generates an App Installer file only when the minimum version meets this requirement.
+- Choose a certificate that target devices trust. Every MSIX package must be signed, and the package publisher must match the signing certificate subject. For more information, see [Package signing overview](../package/signing-package-overview.md).
+- Prepare an HTTPS location or a UNC share where users and their devices can access the App Installer file, the MSIX package or bundle, and any dependencies.
 
-## Configure the project to target the correct Windows version
+## Create the package and App Installer file
 
-You can either configure the `TargetPlatformMinVersion` property when you create the project, or change it later from the project properties. 
+The labels in the packaging wizard can vary by Visual Studio release and project type. The supported workflow remains the same:
 
->[!IMPORTANT]
-> The app installer file is only generated when the `TargetPlatformMinVersion` is Windows 10, Version 1803 or greater.
+1. In **Solution Explorer**, right-click the package project, and then select **Publish** > **Create App Packages**.
+1. Choose the non-Store or sideloading distribution option.
+1. Enable automatic updates. If this option isn't available, verify that `TargetPlatformMinVersion` is Windows 10, version 1803 or later and that you started the wizard from the package project.
+1. Select a signing method and certificate.
+1. Select the processor architectures to package. Generate an MSIX bundle when you need one artifact that supports multiple architectures. For more information, see [Device architecture](../package/device-architecture.md).
+1. Choose the package version and output location.
+1. In the update settings, specify:
+   - The installation URL or UNC path where you will publish the generated files.
+   - How frequently the installed package should check for updates.
+1. Create the package.
 
+Visual Studio writes the App Installer file, the referenced MSIX package or bundle, and any required dependency packages to the output folder. Depending on the architecture and bundle selections, Visual Studio can generate one App Installer file for a bundle or separate files for architecture-specific packages.
 
-## Create packages
+> [!NOTE]
+> Visual Studio generates App Installer files that use the 2017/2 schema by default. This schema supports `HoursBetweenUpdateChecks`, but not `ShowPrompt` or `UpdateBlocksActivation`. To use those settings, edit the generated file to use the 2021 schema and validate it against the [App Installer file schema reference](/uwp/schemas/appinstallerschema/schema-root). For more information, see [Auto-update and repair apps](auto-update-and-repair--overview.md).
 
-To distribute an app via sideloading, you must create an app package (.appx/.msix) or app bundle (.appxbundle/.msixbundle) and publish it in a shared location.
+## Publish the generated files
 
-To do that, use the **Create App Packages** wizard in Visual Studio with the following steps.
+Publish the App Installer file and every file that it references. Preserve the relative locations generated by Visual Studio, or update the `Uri` attributes in the App Installer file to match the final locations.
 
-1. Right-click the project and choose **Store** -> **Create App Packages**.  
+### Publish to a UNC share
 
-    ![Context menu with navigation to Create App Packages](images/packaging-screen2.jpg)   
+Copy the complete output to the share specified in the packaging wizard. Give users read access to the App Installer file, the MSIX package or bundle, and any dependency packages. Users can open the `.appinstaller` file from the share with the App Installer app.
 
-    The **Create App Packages** wizard appears.
+### Publish to an HTTPS server
 
-2. Select **I want to create packages for sideloading.** and **Enable automatic updates**  
+Upload the complete output to the web location specified in the packaging wizard. Configure the web server for the file types that you host:
 
-    ![Create Your Packages dialog window shown](images/select-sideloading.png)  
+| File extension | MIME type |
+| --- | --- |
+| `.msix` | `application/msix` |
+| `.appx` | `application/appx` |
+| `.msixbundle` | `application/msixbundle` |
+| `.appxbundle` | `application/appxbundle` |
+| `.appinstaller` | `application/appinstaller` |
 
-    **Enable automatic updates** is enabled only if the project's `TargetPlatformMinVersion` is set to the correct version of Windows 10.
+Link directly to the `.appinstaller` file. Users download and open the file with the App Installer app.
 
-3. The **Select and Configure Packages** dialog allows you to select the supported architecture configurations. If you select a bundle it will generate a single installer, however if you don't want a bundle and prefer one package per architecture you will also get one installer file per architecture.  If you're unsure which architecture(s) to choose, or want to learn more about which architectures are used by various devices, see [App package architectures](../package/device-architecture.md).
+> [!IMPORTANT]
+> The `ms-appinstaller:` protocol is disabled by default on current Windows devices. An administrator can enable it for managed devices with the `EnableMSAppInstallerProtocol` policy, but don't depend on this protocol for general distribution. For more information, see [Install Windows apps from a web page](installing-windows10-apps-web.md).
 
-4. Configure any additional details, such as version numbering or the package output location.
+## Validate installation and updates
 
-    ![Create App Packages window with package configuration shown](images/packaging-screen5.jpg)  
+Before sharing the App Installer file:
 
-5. If you checked **Enable automatic updates** in Step 2, the **Configure Update Settings** dialog will appear. Here, you can specify the **Installation URL** and the frequency of update checks.
+1. Install the package on a clean test device by opening the published `.appinstaller` file.
+1. Publish a package with the same identity and a higher package version.
+1. Update the App Installer file so that its package version and URI identify the new package.
+1. Confirm that the App Installer app detects and installs the update according to the configured update settings.
 
-    ![Configure Update Settings window with publish location configuration](images/sideloading-screen.png)  
-
-6. When your app has been successfully packaged, a dialog will display the location of the output folder containing your app package. The output folder includes all the files needed to sideload the app, including an HTML page that can be used to promote your app.
-
-## Publish packages
-
-To make the application available the generated files must be published to the location specified:
-
-#### Publish to shared folders (UNC)
-
-If you want to publish your packages over Universal Naming Convention (UNC) shared folders, configure the app package output folder and the Installation URL (see Step 6 for details) to the same path. The wizard will generate the files in the correct location, and users will get both the app and future updates from the same path.
-
-#### Publish to a web location (HTTP)
-
-Publishing to a web location requires access to publish content to the web server, making sure the final URL matches the Installation URL defined in the wizard (see Step 6 for details). Typically, File Transfer Protocol (FTP) or SSH File Transfer Protocol (SFTP) are used to upload the files, but there are other publishing methods like MSDeploy, SSH, or Blob storage, depending on your web provider.
-
-To configure the web server you must verify the MIME types used for the file types in use. This example is of the `web.config` for Internet Information Services (IIS):
-
-```xml
-<configuration>
-  <system.webServer>
-    <staticContent>
-      <mimeMap fileExtension=".appx" mimeType="application/vns.ms-appx" />
-      <mimeMap fileExtension=".appxbundle" mimeType="application/vns.ms-appx" />
-      <mimeMap fileExtension=".appinstaller" mimeType="application/xml" />
-    </staticContent>  
-  </system.webServer>  
-</configuration>
-```
+For troubleshooting information, see [Troubleshoot App Installer issues](troubleshoot-appinstaller-issues.md).
