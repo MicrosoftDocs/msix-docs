@@ -1,14 +1,23 @@
 ---
 title: Converting an installer with services
 description: This article explains how to convert an existing installer with services to MSIX using the MSIX Packaging Tool
-ms.date: 12/19/2019
+ms.date: 08/25/2026
 ms.topic: concept-article
 keywords: windows 10, MSIX, MSIX Packaging Tool, services
 ---
 
 # Convert an installer that includes services
 
-Windows 10, version 2004, introduces support for running an MSIX package that includes services. You can use the MSIX Packaging Tool to take an existing installer with services and convert it to MSIX. This support is as of the January 2020 release of the [MSIX Packaging Tool](tool-overview.md)(1.2019.1220.0). Once you have a packaged MSIX with a service, it will require admin privileges to install on a machine.
+Windows 10, version 2004, introduces support for running an MSIX package that includes services. You can use the MSIX Packaging Tool to take an existing installer with services and convert it to MSIX. This support is as of the January 2020 release of the [MSIX Packaging Tool](tool-overview.md)(1.2019.1220.0).
+
+> [!IMPORTANT]
+> When an MSIX package that contains a Windows service is installed, Windows registers
+> the service in the [Service Control Manager (SCM) database][scm-database]. Creating
+> a service requires `SC_MANAGER_CREATE_SERVICE` access to the SCM. By default, the
+> [SCM security descriptor][scm-access-rights] grants this access to administrators.
+> The SCM security descriptor governs access and can be modified, so administrator
+> privileges aren't an absolute requirement. With the default SCM security
+> descriptor, however, installing the package requires elevation.
 
 ## Instructions
 
@@ -40,3 +49,6 @@ We currently do not support services with dependencies outside the package.
 ## Add a service manually using your manifest
 
 If you are manually adding a service to your application, you will need to [add a service](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-service) to your app manifest. This does require a [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) to add to your application.
+
+[scm-access-rights]: /windows/win32/services/service-security-and-access-rights
+[scm-database]: /windows/win32/services/database-of-installed-services
