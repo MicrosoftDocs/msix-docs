@@ -58,7 +58,7 @@ C:\> "C:\Program Files (x86)\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" 
 /p c:\MyLOBApp_10.0.0.0_ph32m9x8skttmg.msixbundle
 ```
 
-After running the command, an unsigned `.msixbundle` is created at the specified path. Leave the individual MSIX packages unsigned when you create the bundle; they don't need separate signatures before bundling.
+After running the command, an unsigned `.msixbundle` is created at the specified path. The individual MSIX packages don't need separate signatures before bundling.
 
 ## Step 3: Sign the bundle
 
