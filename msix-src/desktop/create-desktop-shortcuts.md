@@ -150,7 +150,7 @@ function New-MsixAppShortcut {
     $appsFolder = (New-Object -ComObject Shell.Application).NameSpace(
         'shell:::{4234d49b-0245-4df3-b780-3893943456e1}')
 
-    if (-not ($appsFolder.Items() | Where-Object { $_.Path -eq $Aumid })) {
+    if (-not $appsFolder.ParseName($Aumid)) {
         throw "No application is registered with the AUMID '$Aumid' for the current user."
     }
 
@@ -222,8 +222,8 @@ everyone on the device.
 ### Account for registration timing
 
 The AUMID resolves only after the package is registered for the user who is signed in. If you
-provision a package for all users, Windows completes per-user registration at that user's next sign
-in. A shortcut script that runs before registration finishes fails its validation check.
+provision a package for all users, Windows completes per-user registration at that user's next
+sign-in. A shortcut script that runs before registration finishes fails its validation check.
 
 Run shortcut creation in the user context after sign-in, for example from a logon script, an Intune
 user-targeted script, or a Configuration Manager deployment configured to run with user rights. For
