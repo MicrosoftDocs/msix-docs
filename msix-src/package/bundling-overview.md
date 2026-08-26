@@ -29,11 +29,6 @@ cannot move from the `.msixbundle` back to a standalone `.msix` package. For mor
 information, see
 [reverse update constraint](../app-package-updates.md#packages-cant-update-from-an-msixbundle-to-a-standalone-msix).
 
-<!--
-SME question: Confirm the rationale for why a later update cannot move from an
-.msixbundle back to a standalone .msix package.
--->
-
 If you're [packaging your application in Visual Studio](../package/packaging-uwp-apps.md),
 the Create Package Wizard gives you a "Generate app bundle" option during package
 creation. You can set this option to have Visual Studio generate an MSIX bundle for you.
