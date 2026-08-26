@@ -33,7 +33,7 @@ Add-AppxProvisionedPackage -Online `
 
 The `-Online` parameter means the currently running Windows installation; it doesn't require an internet connection. For the complete command reference, see [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage).
 
-Provisioning registers the tool for new user profiles. If the tool doesn't appear for an existing signed-in user, sign out and sign in again.
+Provisioning registers the package for new user profiles at sign-in. If the tool doesn't appear for an existing signed-in user, sign out and sign in again, or register the package for that user with `Add-AppxPackage`.
 
 To provision the tool into a mounted Windows image instead, replace `-Online` with `-Path` and specify the root of the mounted image:
 
@@ -49,7 +49,7 @@ Use a version of DISM that is the same as or newer than the Windows image that y
 
 The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities). On a connected device, the tool can acquire the driver from Windows Update. Driver acquisition fails if the Windows Update service is disabled. On Windows Insider builds, the selected flight and the device build must also match the available FOD.
 
-For a disconnected device, obtain Features on Demand media that matches the device's Windows release and architecture. FOD packages are serviced Windows components. Don't use a driver CAB from a different Windows release.
+For a disconnected device, obtain the Features on Demand media designated for the device's Windows release and architecture, as shown in the following table. FOD packages are serviced Windows components; some media covers a range of releases (for example, the Windows 10, version 2004 Features on Demand ISO applies to version 2004 and later). Match the architecture exactly, and don't substitute media that the table doesn't list for the device's release.
 
 | Conversion device | Offline source |
 | --- | --- |
@@ -70,4 +70,4 @@ DISM /Online /Add-Package /PackagePath:"D:\<FOD repository path>\Msix-PackagingT
 
 Replace `D:` and the example path with the location on the mounted media. Use the x86 CAB instead of the amd64 CAB for an x86 device. If you create a reduced repository instead of using the mounted ISO, follow the [FOD repository guidance](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#fod-repositories) so the repository includes the required metadata and dependencies.
 
-The direct-download driver CABs formerly listed in this article targeted Windows releases that are out of support. For supported releases, use matching FOD media and review the [Windows lifecycle fact sheet](https://support.microsoft.com/windows/windows-lifecycle-fact-sheet-2d8ca36f-4aaf-043c-9bc2-2ef96f2f9e0e) before servicing an older conversion device.
+The direct-download driver CABs formerly listed in this article targeted Windows releases that are out of support. For supported releases, use matching FOD media and review the [Windows lifecycle FAQ](/lifecycle/faq/windows) before servicing an older conversion device.
