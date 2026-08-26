@@ -62,7 +62,7 @@ After running the command, an unsigned `.msixbundle` is created at the specified
 
 ## Step 3: Sign the bundle
 
-After you create the bundle, sign the `.msixbundle` before you distribute or install it. When SignTool signs an MSIX bundle, it recursively signs every MSIX package contained in the bundle. You don't need to extract or sign the individual packages separately. For more information, see [Sign an app package using SignTool](../package/sign-app-package-using-signtool.md).
+After you create the bundle, sign the `.msixbundle` before you distribute or install it. You only need to sign the bundle: its signature covers the MSIX packages contained in the bundle, so you don't need to extract or sign the individual packages separately. For more information, see [Sign an app package using SignTool](../package/sign-app-package-using-signtool.md).
 
 To sign a package, you will need a general code signing certificate and use SignTool.exe from the Windows 10 SDK. 
 
