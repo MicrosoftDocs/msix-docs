@@ -30,6 +30,8 @@
       items: 
         - name: Overview
           href: package/app-package-formats.md
+        - name: Package identity
+          href: package/package-identity.md
         - name: App package architectures
           href: package/device-architecture.md
         - name: Optional packages
