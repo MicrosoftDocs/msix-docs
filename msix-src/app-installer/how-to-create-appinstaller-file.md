@@ -1,7 +1,7 @@
 ---
 title: Create an App Installer file manually
 description: This article describes how to install a related set via App Installer, including how to create a *.appinstaller file that defines your related set.
-ms.date: 07/03/2026
+ms.date: 08/27/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app installer, AppInstaller, sideload, related set, optional packages
 ms.custom: "RS5, seodec18"
@@ -278,6 +278,9 @@ The App Installer file can also specify update setting so that the related sets 
 
 > [!NOTE]
 > `ForceUpdateFromAnyVersion` controls only the **package** version that App Installer will move to. It doesn't change how updates are detected. When you downgrade the referenced package (for example, from `1.1.0.0` to `1.0.0.0`), you must still **increase** the `Version` attribute on the root `AppInstaller` element. Don't lower the App Installer file version to match the downgraded package. The App Installer file version is independent of the package version and must always move forward, or App Installer won't detect the change and apply the downgrade.
+
+> [!WARNING]
+> Avoid `ForceUpdateFromAnyVersion` unless you specifically need to move users to an *older* package version, and test the result carefully. Forcing a downgrade is not necessarily durable: Windows generally hands out the highest applicable version that's staged on the device, so if a newer version of the package is later staged by any means, it can become the desired version again and effectively undo the downgrade. Prefer shipping a higher version that contains the fix over forcing a downgrade.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
