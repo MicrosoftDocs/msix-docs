@@ -58,6 +58,8 @@
           href: /windows/desktop/appxpkg/interfaces?context=/windows/msix/render
         - name: App manifest schema
           href: /uwp/schemas/appxpackage/appx-package-manifest?context=/windows/msix/render
+        - name: App execution aliases
+          href: package/app-execution-alias.md
         - name: App Installer file schema
           href: /uwp/schemas/appinstallerschema/app-installer-file?context=/windows/msix/render
     - name: MSIX resources
