@@ -20,5 +20,6 @@ App extensions are also independent packages. They can be standalone apps and ca
 |Topic| Description |
 |:---|:---|
 |[Creating and hosting an app extension](/windows/uwp/launch-resume/how-to-create-an-extension?context=%252fwindows%252fmsix%252frender)|This section discusses how to create and host an app extension in your MSIX package. |
-[Custom properties for app extensions](custom-props-app-extensions.md)|This section discusses how to use custom properties for app extensions. |
+|[COM support in MSIX packages](com-support.md)|This section discusses how to declare COM servers, classes, interfaces, proxy stubs, and type libraries in the package manifest. |
+|[Custom properties for app extensions](custom-props-app-extensions.md)|This section discusses how to use custom properties for app extensions. |
 |[Extending your app using optional packages](../package/optional-packages-with-executable-code.md)| This section discusses how to take advantage of the optional package model to load content into your main package. |
