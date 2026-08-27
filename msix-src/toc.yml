@@ -44,6 +44,8 @@
           href: package/flat-bundles.md
         - name: Framework packages
           href: package/fx-packages.md
+        - name: External dependencies
+          href: package/external-dependencies.md
         - name: Asset packages
           href: package/asset-packages.md
         - name: Resource Packages 
