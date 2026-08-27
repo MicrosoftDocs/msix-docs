@@ -1,7 +1,7 @@
 ---
 description: Learn how MSIX packages register COM servers and type libraries.
 title: COM support in MSIX packages
-ms.date: 08/25/2026
+ms.date: 08/27/2026
 ms.topic: concept-article
 keywords: windows 10, windows 11, msix, com
 ---
@@ -37,9 +37,10 @@ COM registrations in an MSIX package use package manifest extensions:
   library.
 
 The `com4` schema is a superset and replacement for the older `com`, `com2`, and `com3`
-syntax. Its minimum supported OS version is Windows 10, build 20348. Windows 11 meets this
-requirement. Use `com4` for new package manifests when your minimum supported OS meets that
-requirement. If your package must install on earlier Windows versions, review the older
+syntax. As listed in the [`com4:Extension` schema reference](/uwp/schemas/appxpackage/uapmanifestschema/element-com4-extension),
+its minimum supported OS version is Windows 10, build 20348 (the Windows Server 2022 build),
+and Windows 11 meets this requirement. Use `com4` for new package manifests when your app
+targets Windows 11 or later. If your package must install on earlier Windows versions, review the older
 namespace schemas and validate the manifest against every target OS version. For the complete
 set of COM schema references, see the
 [package manifest schema reference](/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
