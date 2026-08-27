@@ -1,7 +1,7 @@
 ---
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
-ms.date: 07/03/2026
+ms.date: 08/27/2026
 ms.topic: concept-article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
@@ -112,6 +112,9 @@ This table shows where files shipping as part of your package are overlaid on th
 
 > [!NOTE]
 > The preceding table is the complete set of VFS folders that Windows maps natively, without the [Package Support Framework (PSF)](../psf/package-support-framework.md). If your app needs to redirect a folder that isn't in this list, you can use the PSF to extend redirection to additional locations. Those extra folders are defined by the author of the PSF configuration, so there's no exhaustive list of them.
+
+> [!NOTE]
+> The **Valid on architectures** column lists the package architectures for which each redirection applies. On ARM64 Windows, x86 processes run through emulation, and Windows 11 also emulates x64, so the x86 and x64 redirections in the preceding table also apply to those emulated binaries running on ARM64. Place each binary in the VFS subfolder that matches its own architecture.
 
 ## Registry
 
