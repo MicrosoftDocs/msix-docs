@@ -1,7 +1,7 @@
 ---
 description: This guide explains MSIX Shared Package Container
 title: MSIX Shared Package Container
-ms.date: 03/17/2021
+ms.date: 08/27/2026
 ms.topic: article
 keywords: windows 10, uwp, msix
 ---
@@ -29,7 +29,14 @@ Shared package contianer is defined by a .xml file.  The container definition re
 ```
 When you have the container definition .xml, you can use the following PowerShell commands to deploy, reset, update, and remove a Shared Package Container from the device. Note that all other app deployment commands remain the same (i.e installing packages)
 
-### PowerShell commands 
+### PowerShell commands
+
+For complete syntax, parameters, inputs, and outputs for the per-user commands, see the Appx module reference:
+
+- [`Add-AppSharedPackageContainer`](/powershell/module/appx/add-appsharedpackagecontainer)
+- [`Get-AppSharedPackageContainer`](/powershell/module/appx/get-appsharedpackagecontainer)
+- [`Remove-AppSharedPackageContainer`](/powershell/module/appx/remove-appsharedpackagecontainer)
+- [`Reset-AppSharedPackageContainer`](/powershell/module/appx/reset-appsharedpackagecontainer)
 
 #### Deploy a shared Package container definition 
 
@@ -90,5 +97,3 @@ This command removes a provisioned shared package container
 ```powershell
 Remove-AppProvisionedSharedPackageContainer -Name "<name>" -Online
 ```
-
-
