@@ -39,7 +39,7 @@
           href: package/resource-package.md
         - name: Modification packages
           href: modification-packages.md
-- name: Develop MSIX apps
+- name: Develop MSIX packaged apps
   items:
     - name: Overview
       href: desktop/source-code-overview.md
@@ -68,7 +68,7 @@
         - name: App Attach from Visual Studio
           href: desktop/app-attach-from-visualstudio.md
           displayName: Azure Virtual Desktop, App Streaming, Visual Studio, Extension
-    - name: Package from the command line
+    - name: Packaging from the command line
       items:
         - name: Overview
           href: package/manual-packaging-root.md
