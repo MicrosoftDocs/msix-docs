@@ -1,14 +1,14 @@
 ---
 title: Per-user vs all-users MSIX deployment and install locations FAQ
 description: Answers to frequently asked questions about MSIX per-user and all-users deployment, staging and registration, install locations and package volumes across multiple drives, and multi-user access and filesystem permissions.
-ms.date: 07/16/2026
+ms.date: 08/27/2026
 ms.topic: faq
 keywords: windows 10, windows 11, msix, per-user, all-users, provisioning, registration, staging, package volume, install location, multiple drives, multi-user, faq
 ---
 
 # Per-user vs all-users MSIX deployment and install locations FAQ
 
-When you deploy an MSIX package to a machine that has more than one user, or more than one drive, questions come up about where the app is installed and who can use it. This article answers the most common ones. It brings together the staging and registration model from [Preinstalling packaged apps](deploy-preinstalled-apps.md), the install-location and package-volume behavior described in [Understanding how packaged desktop apps run on Windows](desktop-to-uwp-behind-the-scenes.md), and the volume management cmdlets listed in [Managing MSIX with PowerShell](powershell-msix-cmdlets.md).
+When you deploy an MSIX package to a machine that has more than one user, or more than one drive, questions come up about where the app is installed and who can use it. This article answers the most common questions. It brings together the staging and registration model from [Preinstalling packaged apps](deploy-preinstalled-apps.md), the install-location and package-volume behavior described in [Understanding how packaged desktop apps run on Windows](desktop-to-uwp-behind-the-scenes.md), and the volume management cmdlets listed in [Managing MSIX with PowerShell](powershell-msix-cmdlets.md).
 
 ## How does installing an MSIX package work: is there a separate copy per user?
 
