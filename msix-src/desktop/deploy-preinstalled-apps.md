@@ -53,3 +53,7 @@ Using the MSIX PowerShell cmdlets, to preinstall or provision a packaged app on 
 
 ## Licensing
 Licensing only applies when provisioning a Windows Store app. Any other apps can be provisioned without a license. If an app is from the Store a machine-license must also provided when the app is provisioned. At this time, all preinstall Windows Store apps must be free apps and configured to be pre-installable via the Windows Store Partner Center. Once it is configured the pre-installable package and license can be downloaded and then provisioned onto any image.
+
+## Related content
+
+For how staging and per-user registration relate to per-user versus all-users deployment, install locations, and multi-user access, see [Per-user vs all-users MSIX deployment and install locations FAQ](deployment-per-user-vs-all-users.md).

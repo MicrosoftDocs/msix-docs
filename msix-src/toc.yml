@@ -274,6 +274,8 @@
       href: desktop/managing-your-msix-deployment-overview.md
     - name: Plan for your deployment
       href: desktop/managing-your-msix-deployment-targetdevices.md
+    - name: Per-user vs all-users deployment and install locations FAQ
+      href: desktop/deployment-per-user-vs-all-users.md
     - name: Install MSIX with App Installer
       href: app-installer/app-installer-root.md
     - name: App installer user interface
