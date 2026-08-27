@@ -1,7 +1,7 @@
 ---
-description: This article provides details regarding the the reset and repair of MSIX apps that have been deployed to a device.
+description: This article provides details regarding the reset and repair of MSIX apps that have been deployed to a device.
 title: Reset or Repair MSIX Apps
-ms.date: 07/02/2026
+ms.date: 08/27/2026
 ms.topic: article
 keywords: windows 10, deployment, msix, reset, repair
 ms.assetid:  
@@ -11,13 +11,13 @@ ms.assetid:
 
 ## Overview
 
-Windows apps (*.msix, *.msixbundle, *.appx, and *.appxbundle) offer functionality known as App Reset, and Repair. Which can be performed by the device user (without elevation) to re-install or refresh the Windows app installation in an attempt to resolve a failure with a Windows app.
+Windows apps (*.msix, *.msixbundle, *.appx, and *.appxbundle) offer App Reset and Repair functionality, which the device user can perform (without elevation) to reinstall or refresh a Windows app installation in an attempt to resolve a failure with the app.
 
 ## Capture app data before you reset or repair
 
-Resetting an app **permanently deletes its data**, and repairing an app can change it. If an app is in a broken state and you want to investigate what caused the failure, copy the app's data *before* you reset or repair it. This lets you diagnose the problem (or share the data with the app publisher) without losing the state that reproduces it.
+Resetting an app **permanently deletes its package-managed data**, and repairing an app can change it. If an app is in a broken state and you want to investigate what caused the failure, copy the app's data *before* you reset or repair it. This lets you diagnose the problem (or share the data with the app publisher) without losing the state that reproduces it.
 
-A packaged app's per-user data is stored under:
+A packaged app's package-managed per-user data is stored under:
 
 ```
 %LocalAppData%\Packages\<PackageFamilyName>\
@@ -66,10 +66,10 @@ Repairing a Windows app using the Windows Settings:
 
 ## Reset
 
-You can reset Windows apps that have been installed to an online Windows image. When you use the PowerShell cmdlets, or the Windows Settings app to reset a Windows app, it will permanently delete the app's data, and re-install the app fresh. The Windows app will lose preferences, and/or sign-in details, etc.
+You can reset Windows apps that have been installed to an online Windows image. When you use the PowerShell cmdlets, or the Windows Settings app to reset a Windows app, it will permanently delete the app's package-managed data, and re-install the app fresh. The Windows app will lose preferences, and/or sign-in details, etc.
 
 > [!WARNING]
-> Reset **permanently deletes** the app's data and it can't be recovered afterward. If you might need the data to diagnose a failure, [capture the app data](#capture-app-data-before-you-reset-or-repair) before you reset the app.
+> Reset **permanently deletes** the app's package-managed data and it can't be recovered afterward. If you might need the data to diagnose a failure, [capture the app data](#capture-app-data-before-you-reset-or-repair) before you reset the app.
 
 ### Resetting a Windows app
 
