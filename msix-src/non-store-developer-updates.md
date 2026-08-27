@@ -2,7 +2,7 @@
 title: Update non-Store published apps from your code
 description: Describes how MSIX packages shipped outside the Store can be updated by developers in code. 
 author: Huios
-ms.date: 07/03/2026
+ms.date: 08/27/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -206,19 +206,28 @@ namespace MyEmployees.Helpers
 
 When your app drives its own updates in code, follow these practices to limit the risk that a bug, or a tampered update source, could cause your app to install a package you didn't intend.
 
-### Declare only the capabilities you need
+### Understand when the capability matters
 
-Don't declare the `packageManagement` or `packageQuery` [restricted capabilities](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) unless your app needs to install, update, or query packages that are published by a **different** publisher. An app can update and uninstall packages published by the **same publisher** (for example, another app from your own company) without declaring `packageManagement`. Interactive installs through [PackageManager.RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) also prompt the user for consent and don't require the capability.
+Whether your app needs the `packageManagement` restricted capability depends on the trust level your app runs at, not only on the publisher of the package. For a call to a [PackageManager](/uwp/api/windows.management.deployment.packagemanager) install, update, or remove method to succeed, the caller has to meet one of the following conditions (see the Remarks in [PackageManager.RemovePackageAsync](/uwp/api/windows.management.deployment.packagemanager.removepackageasync) and [Packaging, deployment, and process](/windows/apps/get-started/intro-pack-dep-proc)):
 
-By **not** declaring these capabilities, you let the platform enforce that your app can only operate on same-publisher packages. This same-publisher enforcement acts as a safety net: even if your update logic is tricked into passing the wrong URI to `PackageManager`, the platform won't silently install a package from another publisher.
+- It runs in an AppContainer (Low IL) *and* declares the `packageManagement` [restricted capability](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+- It runs at Medium IL or higher.
+- Its publisher matches the publisher of the package (or volume) being changed.
+
+Most self-updating packaged desktop apps run full trust (Medium IL or higher), so they meet the second condition and can call `PackageManager` **without** declaring `packageManagement`, regardless of the target package's publisher. Declare `packageManagement` (or the `packageQuery` capability, for querying other packages) only when an appContainer (Low IL) app needs to manage or query packages from a **different** publisher. Interactive installs through [PackageManager.RequestAddPackageAsync](/uwp/api/windows.management.deployment.packagemanager.requestaddpackageasync) prompt the user for consent and don't require the capability.
 
 > [!IMPORTANT]
-> Declaring `packageManagement` removes this safety net, because it lets your app silently install packages from any publisher. Only declare it when a cross-publisher scenario genuinely requires it.
+> Because a full-trust app can install packages from any publisher, omitting `packageManagement` is **not** a same-publisher safety net for it. Don't rely on capability declarations to constrain what your update code installs; control and validate your update source instead, as described next.
 
 ### Protect the update source
 
 If you persist the location of your update (for example, a URL that you store so it can be fetched later) treat that value as untrusted input. [Application data](/windows/apps/develop/data/store-and-retrieve-app-data) is writable by the full-trust user, so another process running as that user could modify a stored update URL. Validate the stored value before you use it, and prefer well-known, hard-coded, or server-verified sources over values that can be freely rewritten on the client.
 
-### Do you need to inspect the incoming package first?
+### Constrain what your update code installs
 
-You generally don't need to open and inspect an incoming package to verify its identity before you install it. Rely on the platform's same-publisher enforcement (described above) rather than manually pre-vetting package identity. When your app hasn't declared `packageManagement`, the platform already prevents you from silently installing another publisher's package, so manually validating the package first adds complexity without meaningfully strengthening that guarantee.
+Because the platform doesn't restrict a full-trust app to same-publisher packages, the meaningful protection is controlling *what* your code installs and *where* it comes from, rather than opening and inspecting each package after you download it. Downloading a package only to pre-vet its contents before you deploy it adds latency and duplicates the signature and integrity validation that the deployment stack already performs, so don't treat manual inspection as a security control.
+
+Instead:
+
+- Fetch updates only from sources you control and have validated, as described in [Protect the update source](#protect-the-update-source).
+- Pass the package to `PackageManager`, or to the Windows App SDK [package deployment APIs](/windows/windows-app-sdk/api/winrt/microsoft.windows.management.deployment.packagedeploymentmanager), and let the deployment stack verify the package signature and integrity as part of installation.
