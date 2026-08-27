@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying your MSIX applications in an enterprise and retail environment.  This article is targeted at enterprise and IT Pros.
 title: Manage your MSIX deployment Overview
-ms.date: 04/15/2026
+ms.date: 07/03/2026
 ms.topic: concept-article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -10,6 +10,8 @@ ms.assetid:
 # Manage your MSIX deployment
 
 Packaging your application is only half the battle. Next you need to be able to deploy your application to your users. How you deploy your application depends on who your customer is.  This section, Managing your MSIX deployment, will discuss deployment of MSIX packages for both enterprise and retail markets. It will provide links and tips and tricks to ensuring a successful experience. 
+
+If your users already have a version of your app installed through a classic **.exe**, **.msi**, or ClickOnce installer, see [Replace an existing installer-based app with MSIX](replace-installer-based-app-with-msix.md) for guidance on how the two installs coexist and how to remove the previous version.
 
 In order to successfully deploy MSIX, you need to consider the following:
 * Who is my customer?

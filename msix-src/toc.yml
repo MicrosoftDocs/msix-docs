@@ -272,6 +272,8 @@
   items: 
     - name: Overview
       href: desktop/managing-your-msix-deployment-overview.md
+    - name: Replace an existing installer-based app with MSIX
+      href: desktop/replace-installer-based-app-with-msix.md
     - name: Plan for your deployment
       href: desktop/managing-your-msix-deployment-targetdevices.md
     - name: Install MSIX with App Installer
