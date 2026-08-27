@@ -1,23 +1,45 @@
 ---
 description: This guide explains MSIX Shared Package Container
 title: MSIX Shared Package Container
-ms.date: 03/17/2021
+ms.date: 08/27/2026
 ms.topic: article
 keywords: windows 10, uwp, msix
 ---
 
-# Shared package container 
-Shared package containers allows IT Pros to create a shared runtime container for packaged application – sharing a merged view of the virtual file system and virtual registry - enabling access to one another’s package root files and state. Beginning on Windows 10 Insider Preview Build 21354,  IT Pros will be able to manage what apps can be in what container is important to the conversion of MSIX from legacy installers. The concept of a shared container is used primarily for customization, sharing pre-requisite software, and supporting addons for converted apps. Please note that this is an enterprise only feature and will require administrative privileges to use.  
+# Shared package container
 
-Shared package container operations are independent of app deployment operations. What this means is that apps do not have to be installed prior to share package container definition being deployed to a device. It also means that not all apps that are defined inside the shared package container need to be installed for the shared package container to run. The apps inside the shared package container will be able to independently update without having to modify the shared package container definition.  
+A shared package container lets multiple MSIX packages run with a merged view of their virtual file systems and virtual registries. An application in the container can therefore resolve package files and virtualized registry state contributed by another package in the same container.
 
-Note that an app will only be allowed to be inside one container. Deploying a shared package container that contains an app that is already part of a shared package container will result in an error.  
+This Windows 11 feature is intended for enterprise management and requires administrator privileges to configure. Common scenarios include:
+
+- A converted application and an add-on that expects to find the application's files or registry state.
+- A suite split into separate packages that share a packaged runtime or prerequisite.
+- A customization package that overlays files or virtual registry settings for another packaged application.
+
+### Merged view and conflict priority
+
+At runtime, Windows composes the virtual file system and virtual registry views from the installed packages listed in the container definition. The package families are listed in priority order, from highest to lowest. If multiple packages contribute an item at the same virtual path or registry location, the item from the higher-priority package is visible in the merged view. The lower-priority package isn't modified.
+
+Only installed members contribute content to the runtime view. You can deploy a container definition before its packages, and the container can operate when only a subset of its defined packages is installed.
+
+### What a shared package container doesn't do
+
+A shared package container is a targeted compatibility mechanism, not a general removal of MSIX isolation. It doesn't:
+
+- Give an application unrestricted access to the host file system or registry outside the merged virtualized views.
+- Merge package identities, manifests, declarations, installation, or servicing. Each package retains its own identity and can be installed, updated, or removed independently. Processes running in the shared package container can, however, share the container's virtualized file and registry state.
+- Add package capabilities or supported application extensions that aren't declared in a package manifest.
+- Guarantee that applications with other compatibility problems will work after packaging. For example, code that depends on a driver, service, architecture, or integration point that MSIX doesn't support must still be addressed separately.
+
+For a given user, a package family can belong to only one shared package container. Deploying another definition that assigns the same package family to a different container for that user fails.
 
 ## Prerequisite  
-To use the feature, enterprises will require an administrator on the device. Additionally, the packages will all need to be .msix packages. To package your installers as MSIX package, visit our [create package from existing installer documentation](../packaging-tool/create-an-msix-overview.md).  
+
+Use Windows 11 and run the management commands with administrator privileges. Each main package in the definition must be an MSIX package. To convert an existing installer, see [Create an MSIX package from any desktop installer](../packaging-tool/create-an-msix-overview.md).
 
 ## Shared package container definition
-Shared package contianer is defined by a .xml file.  The container definition requires a unique name and a list of packages that belong to that container. Only main packages need to be included in the .xml. Optional packages and modification packages will automatically be included in the shared package container as they already share the same container as their main package. Note that the priority of the packages is established from top to bottom of the list. Meaning that the top package will have the highest priority. Priority of the package is used for conflict resolutions among packages that may have the same files. Below is a sample of one.  
+
+A shared package container is defined by an XML file. The definition requires a unique name and an ordered list of package family names. Include only main packages. Optional packages and modification packages are included automatically because they already share the container of their main package. The first package family in the list has the highest priority.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?> 
@@ -27,31 +49,31 @@ Shared package contianer is defined by a .xml file.  The container definition re
   <PackageFamily Name="ContosoCustomize_7xekyb3d8ccde"/> 
 </AppSharedPackageContainer>   
 ```
-When you have the container definition .xml, you can use the following PowerShell commands to deploy, reset, update, and remove a Shared Package Container from the device. Note that all other app deployment commands remain the same (i.e installing packages)
+After you create the container definition, use the following PowerShell commands to deploy, inspect, reset, update, or remove the shared package container. These operations are separate from MSIX package deployment. Changing package installation or update state doesn't require changing the container definition.
 
 ### PowerShell commands 
 
-#### Deploy a shared Package container definition 
+#### Deploy a shared package container definition
 
 ```powershell
 Add-AppSharedPackageContainer <path> 
 ``` 
-This command deploys the shared package container definiton for the particular user. Optional parameters include the following: 
+This command deploys the shared package container definition for the current user. Optional parameters include the following:
 
 |**Parameter** |	**Description**|
 |---------|---------|
-|ForceApplicationShutdown |Closes all packages currently running in the Shared Package Container. |
+|ForceApplicationShutdown |Closes all applications currently running in the shared package container. |
 
 #### Remove a shared package container
 
 ```powershell
 Remove-AppSharedPackageContainer -Name <name>  
 ``` 
-This command removes the shared package container definiton for the particular user. Optional parameters include the following: 
+This command removes the shared package container definition for the current user. Optional parameters include the following:
 
 |**Parameter** |	**Description**|
 |---------|---------|
-|ForceApplicationShutdown  |Closes all packages in the Shared Package Container.  |
+|ForceApplicationShutdown  |Closes all applications in the shared package container.  |
 
 #### Get information on a shared package container
  
@@ -65,7 +87,7 @@ This command gets information about the shared package container. In particular,
 ```powershell
 Reset-AppSharedPackageContainer -Name <name>  
 ``` 
-This command destroys all the application data of the container, including the virtual files and registry keys.
+This command deletes the shared package container's application data, including its virtual files and registry keys. Back up required data before running the command.
 
 #### Deploy a provisioned package container
 
@@ -90,5 +112,3 @@ This command removes a provisioned shared package container
 ```powershell
 Remove-AppProvisionedSharedPackageContainer -Name "<name>" -Online
 ```
-
-
