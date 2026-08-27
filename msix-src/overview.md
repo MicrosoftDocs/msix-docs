@@ -1,7 +1,7 @@
 ---
 title: What is MSIX?
 description: MSIX is the modern Windows app packaging format. Learn how it works, what it enables, and how to get started packaging your app.
-ms.date: 04/15/2026
+ms.date: 08/27/2026
 ms.topic: overview
 keywords: windows 11, windows 10, uwp, msix, package identity, winui 3, winapp cli
 ---
@@ -63,7 +63,13 @@ The package manifest declares the app's identity, dependencies, capabilities, vi
 
 ### AppxSignature.p7x
 
-Generated when the package is signed. All MSIX packages must be signed before installation. Combined with AppxBlockMap.xml, this enables Windows to verify package integrity at install time and at runtime.
+`AppxSignature.p7x` is generated when an MSIX package is signed. It contains the package's PKCS #7 digital signature, including information that identifies the signer and protects cryptographic hashes of the package. The signature covers `AppxBlockMap.xml`, which in turn contains hashes for the payload files, so Windows can detect changes made after signing.
+
+During deployment, Windows verifies the signature and its trust requirements. For a package signed outside the Microsoft Store, the signing certificate subject must match the `Publisher` value in `AppxManifest.xml`. The Microsoft Store applies its own signing and publisher-identity validation when it signs a submitted package.
+
+Runtime package-integrity enforcement is automatic for Microsoft Store packages. For packages distributed outside the Store, declare [`uap10:PackageIntegrity`](/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-packageintegrity); this enforcement is supported on Windows 10, version 2004 and later. Don't edit, replace, or remove `AppxSignature.p7x`; changing the package after it is signed invalidates the signature, and the package must be signed again.
+
+For an MSIX bundle, sign the bundle rather than each package inside it. The bundle's `AppxSignature.p7x` covers the packages it contains. For signing and trust requirements, see [Sign an MSIX package](package/signing-package-overview.md).
 
 ## Supported platforms
 
