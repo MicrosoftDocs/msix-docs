@@ -24,7 +24,7 @@ You will need the following setup to successfully build an MSIX bundle:
 
 ## Step 1: Find MakeAppx.exe
 
-[MakeAppx.exe](/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) is a tool available in the Windows 10 SDK that allows for packaging and bundling of MSIX packages. You will use this tool to bundle the two MSIX packages together.
+[MakeAppx.exe](https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk) is a tool available in the Windows 10 SDK that allows for packaging and bundling of MSIX packages. You will use this tool to bundle the two MSIX packages together.
 
 MakeAppx.exe can be used to extract the file contents of a Windows 10 app package or bundle. It also encrypts and decrypts app packages and bundles.
 
