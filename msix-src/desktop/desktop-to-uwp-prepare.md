@@ -1,17 +1,17 @@
 ---
 description: This article lists the things you need to know before packaging your desktop application. You may not need to do much to get your app ready for the packaging process.
-title: Prepare to package a desktop application (MSIX)
+title: Compatibility considerations for packaging a desktop application (MSIX)
 ms.date: 10/04/2023
 ms.topic: how-to
 keywords: windows 10, uwp, msix
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ---
 
-# Prepare to package a desktop application
+#  Compatibility considerations for packaging a desktop application
 
 This article lists the things you need to know before you package your desktop application. You might not have to do much to get your application ready for the packaging process, but if any of the items below apply to your application, you need to address it before packaging.
 
-+ __Your .NET application requires a version of the .NET Framework earlier than 4.6.2__. If you are packaging a .NET application, we recommend that your application target .NET Framework 4.6.2 or later. The ability to install and run packaged desktop applications was first introduced in Windows 10, version 1607 (also called the Anniversary Update), and this OS version includes the .NET Framework 4.6.2 by default. Later OS versions include later versions of the .NET Framework. For a full list of what versions of .NET are included in later versions of Windows 10, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies).
++ __Your .NET application targets a version of the .NET Framework earlier than 4.6.2.__ For best compatibility, we recommend you update your application to target .NET Framework 4.6.2 or later. The ability to install and run packaged desktop applications was first introduced in Windows 10, version 1607 (also called the Anniversary Update), and this OS version includes the .NET Framework 4.6.2 by default. Later OS versions include later versions of the .NET Framework. For a full list of what versions of .NET are included in later versions of Windows 10, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies).
 
   Targeting versions of the .NET Framework earlier than 4.6.2 in packaged desktop applications is expected to work in most cases. However, if you target an earlier version than 4.6.2, you should fully test your packaged desktop application before distributing it to users.
 
