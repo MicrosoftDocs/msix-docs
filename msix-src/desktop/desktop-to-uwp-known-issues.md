@@ -1,7 +1,7 @@
 ---
 description: This article describes known issues that can occur when you create an MSIX package for your desktop app.
 title: Known Issues with packaged desktop apps
-ms.date: 07/02/2026
+ms.date: 09/02/2026
 ms.topic: troubleshooting-known-issue
 keywords: windows 10, uwp, msix
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
@@ -98,6 +98,10 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 
 ...   
 ```
+
+## MSIX applications might not launch when Unified Write Filter is enabled
+
+On Windows 11, an issue can prevent an MSIX application from launching when Unified Write Filter (UWF) is enabled on the device.
 
 ## Next Steps
 
