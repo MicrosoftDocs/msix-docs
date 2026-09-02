@@ -73,7 +73,7 @@ All writes to the user's `AppData` folder (for example, `C:\Users\<user_name>\Ap
 This section applies only to virtualized apps.
 
 > [!NOTE]
-> On Windows 11, a known MSIX VFS issue can prevent an application from launching when its package contains VFS mappings. This issue doesn't apply to AppData write virtualization, which doesn't use package VFS mappings. For those controls, see [Flexible virtualization](flexible-virtualization.md).
+> On Windows 11, a known issue can prevent an application from launching when Unified Write Filter (UWF) is enabled on the device and the application's MSIX package contains VFS mappings.
 
 In addition to redirecting `AppData`, Windows' well-known folders (`System32`, `Program Files (x86)`, etc.) are dynamically merged with corresponding directories in the app package. Each package contains a folder named `VFS` at its root. Any reads of directories or files in the `VFS` directory are merged at runtime with their respective native counterparts. For example, an app could contain `C:\Program Files\WindowsApps\<package_full_name>\VFS\SystemX86\vc10.dll` as part of its app package, but the file would appear to be installed at `C:\Windows\System32\vc10.dll`. That maintains compatibility with desktop apps that expect files to live in non-package locations.
 
