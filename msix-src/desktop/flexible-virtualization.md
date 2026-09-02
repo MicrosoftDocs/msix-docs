@@ -1,7 +1,7 @@
 ---
 title: Flexible virtualization
 description: The flexible virtualization feature provides a way for your app to declare that *some set* of its files and Registry entries should be visible to other apps; and that those should persist on app uninstall. *All other* files and Registry entries are not visible to other apps; and are removed on uninstall.
-ms.date: 10/20/2021
+ms.date: 09/02/2026
 ms.topic: article
 keywords: windows 10, uwp, msix, flexible, virtualization
 ---
@@ -16,6 +16,9 @@ The flexible virtualization feature provides a way for your app to declare that 
 
 > [!NOTE]
 > The behavior described in this section was introduced in Windows 11.
+
+> [!NOTE]
+> On Windows 11, a known MSIX VFS issue can prevent an application from launching when its package contains VFS mappings. This issue is separate from the AppData and registry write-virtualization controls described in this article. For supported package VFS mappings, see [Packaged VFS locations](desktop-to-uwp-behind-the-scenes.md#packaged-vfs-locations).
 
 Starting from Windows 11, the system retains the existing behavior of the [**unvirtualizedResources**](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) restricted capability, and the [**RegistryWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-registrywritevirtualization) and [**FilesystemWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-filesystemwritevirtualization) properties. In addition, the system adds the ability for your app to declare specific folders and/or Registry keys that you want to be unvirtualized.
 
@@ -87,7 +90,7 @@ In the Universal Windows Platform (UWP), such files and Registry entries are vir
 |**HKLM**|Install-time|<ul><li>The app can include a `registry.dat` file that specifies **HKLM**\\**Software** entries. These entries are actually written to a `user.dat` file in the user's **AppData** folder (in a sub-folder for each app), and presented to the app as if the keys were in **HKLM**.</li><li>For reading, this private hive is merged with the unvirtualized **HKLM**\\**Software** so that all entries appear to be in the same place.</li><li>When the app is uninstalled, the virtualized entries are no longer available, because they were never actually added to the registry.</li><li>Keys in the virtualized hive are visible only to the app.</li></ul>|
 |**HKLM**|Run-time|<ul><li>Writes under **HKLM** are allowed as long as a corresponding key/value doesn't exist in the package hive and the user has the correct access permissions (which effectively means this is only available to a Centennial app running elevated).</li></ul>|
 |**Well-known folders**|Install-time|<ul><li>The app can include a *VFS* folder with well-known named subfolders that contain arbitrary files.</li><li>For reading, these subfolders are merged with the unvirtualized well-known locations, so that all files appear to be in the same place.</li></ul>|
-|**AppData**|Run-time|<ul><li>For Windows versions less than or equal to 1809, all writes to the user's **AppData** folder (including create, delete, and update) are copied on write to a private per-user, per-app location, which is merged at run-time to appear in the real **AppData** location.</li><li>For Windows versions greater than 1809, all newly created files and folders in the user's **AppData** folder are written to a private per-user, per-app location which is merged at run-time to appear in the real **AppData** location. Modifications to existing **AppData** files is done on the unvirtualized files. For reads, the system tries the private location first, then falls back to the unvirtualized **AppData**.</li><li>On fallback, writes to the unvirtualized files are allowed.</li><li>When the app is uninstalled, the virtualized entries are removed.</li><li>Files in the virtualized location are visible only to the app.</li><li>There's no VFS support for **AppData**.</li><li>Apart from **AppData**, the app can write to any location where the user has write access, including other parts of `%userprofile%` (of which **AppData** is just one part).</li></ul>|
+|**AppData**|Run-time|<ul><li>For Windows versions less than or equal to 1809, all writes to the user's **AppData** folder (including create, delete, and update) are copied on write to a private per-user, per-app location, which is merged at run-time to appear in the real **AppData** location.</li><li>For Windows versions greater than 1809, all newly created files and folders in the user's **AppData** folder are written to a private per-user, per-app location which is merged at run-time to appear in the real **AppData** location. Modifications to existing **AppData** files is done on the unvirtualized files. For reads, the system tries the private location first, then falls back to the unvirtualized **AppData**.</li><li>On fallback, writes to the unvirtualized files are allowed.</li><li>When the app is uninstalled, the virtualized entries are removed.</li><li>Files in the virtualized location are visible only to the app.</li><li>A package's VFS folder can't map content to **AppData**. For supported mappings, see <a href="desktop-to-uwp-behind-the-scenes.md#packaged-vfs-locations">Packaged VFS locations</a>.</li><li>Apart from **AppData**, the app can write to any location where the user has write access, including other parts of `%userprofile%` (of which **AppData** is just one part).</li></ul>|
 
 ### The `unvirtualizedResources` restricted capability
 

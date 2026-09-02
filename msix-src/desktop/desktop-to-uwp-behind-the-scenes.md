@@ -1,7 +1,7 @@
 ---
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
-ms.date: 09/09/2025
+ms.date: 09/02/2026
 ms.topic: concept-article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
@@ -71,6 +71,9 @@ All writes to the user's `AppData` folder (for example, `C:\Users\<user_name>\Ap
 ### Working directory, and application files
 
 This section applies only to virtualized apps.
+
+> [!NOTE]
+> On Windows 11, a known MSIX VFS issue can prevent an application from launching when its package contains VFS mappings. This issue doesn't apply to AppData write virtualization, which doesn't use package VFS mappings. For those controls, see [Flexible virtualization](flexible-virtualization.md).
 
 In addition to redirecting `AppData`, Windows' well-known folders (`System32`, `Program Files (x86)`, etc.) are dynamically merged with corresponding directories in the app package. Each package contains a folder named `VFS` at its root. Any reads of directories or files in the `VFS` directory are merged at runtime with their respective native counterparts. For example, an app could contain `C:\Program Files\WindowsApps\<package_full_name>\VFS\SystemX86\vc10.dll` as part of its app package, but the file would appear to be installed at `C:\Windows\System32\vc10.dll`. That maintains compatibility with desktop apps that expect files to live in non-package locations.
 
