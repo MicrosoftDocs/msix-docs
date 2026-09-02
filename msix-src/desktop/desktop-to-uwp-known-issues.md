@@ -11,11 +11,6 @@ ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 
 This article contains known issues that can occur when you create an MSIX package for your desktop app.
 
-## MSIX applications might not launch when Unified Write Filter is enabled
-
-> [!NOTE]
-> On Windows 11, an issue can prevent an MSIX application from launching when Unified Write Filter (UWF) is enabled on the device.
-
 ## You receive the error	MSB4018	The "GenerateResource" task failed unexpectedly
 
 This can happen when trying to convert satellite assemblies to Package Resource Index (PRI) files.
@@ -103,6 +98,10 @@ ERROR: [AppxSipCustomLoggerCallback] File has malformed certificate: uninstall.e
 
 ...   
 ```
+
+## MSIX applications might not launch when Unified Write Filter is enabled
+
+On Windows 11, an issue can prevent an MSIX application from launching when Unified Write Filter (UWF) is enabled on the device.
 
 ## Next Steps
 
