@@ -1,7 +1,7 @@
 ---
 description: This article describes known issues that can occur when you create an MSIX package for your desktop app.
 title: Known Issues with packaged desktop apps
-ms.date: 07/02/2026
+ms.date: 09/02/2026
 ms.topic: troubleshooting-known-issue
 keywords: windows 10, uwp, msix
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
@@ -10,6 +10,11 @@ ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 # Known Issues with packaged desktop apps
 
 This article contains known issues that can occur when you create an MSIX package for your desktop app.
+
+## MSIX applications might not launch when Unified Write Filter is enabled
+
+> [!NOTE]
+> On Windows 11, an issue can prevent an MSIX application from launching when Unified Write Filter (UWF) is enabled on the device.
 
 ## You receive the error	MSB4018	The "GenerateResource" task failed unexpectedly
 
