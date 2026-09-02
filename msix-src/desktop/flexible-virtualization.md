@@ -17,9 +17,6 @@ The flexible virtualization feature provides a way for your app to declare that 
 > [!NOTE]
 > The behavior described in this section was introduced in Windows 11.
 
-> [!NOTE]
-> On Windows 11, a known issue can prevent an application from launching when Unified Write Filter (UWF) is enabled on the device and the application's MSIX package contains VFS mappings. For supported package VFS mappings, see [Packaged VFS locations](desktop-to-uwp-behind-the-scenes.md#packaged-vfs-locations).
-
 Starting from Windows 11, the system retains the existing behavior of the [**unvirtualizedResources**](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) restricted capability, and the [**RegistryWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-registrywritevirtualization) and [**FilesystemWriteVirtualization**](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop6-filesystemwritevirtualization) properties. In addition, the system adds the ability for your app to declare specific folders and/or Registry keys that you want to be unvirtualized.
 
 * You can declare only file system locations that are within `%USERPROFILE%\AppData`.
