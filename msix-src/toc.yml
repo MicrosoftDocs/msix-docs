@@ -30,6 +30,8 @@
       items: 
         - name: Overview
           href: package/app-package-formats.md
+        - name: MSIX package types
+          href: package/package-types.md
         - name: App package architectures
           href: package/device-architecture.md
         - name: Optional packages
@@ -272,6 +274,10 @@
   items: 
     - name: Overview
       href: desktop/managing-your-msix-deployment-overview.md
+    - name: Package storage volumes
+      href: package/package-volumes.md
+    - name: Package registration and lifetime
+      href: package/package-lifetime.md
     - name: Plan for your deployment
       href: desktop/managing-your-msix-deployment-targetdevices.md
     - name: Install MSIX with App Installer

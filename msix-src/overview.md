@@ -1,7 +1,7 @@
 ---
 title: What is MSIX?
 description: MSIX is the modern Windows app packaging format. Learn how it works, what it enables, and how to get started packaging your app.
-ms.date: 04/15/2026
+ms.date: 09/30/2026
 ms.topic: overview
 keywords: windows 11, windows 10, uwp, msix, package identity, winui 3, winapp cli
 ---
@@ -10,7 +10,7 @@ keywords: windows 11, windows 10, uwp, msix, package identity, winui 3, winapp c
 
 MSIX is the modern Windows app packaging format. It gives any Windows app a reliable, clean install and uninstall, automatic updates, and access to Windows platform features that require a package identity.
 
-**Package identity** is the key concept. When your app is packaged as MSIX, Windows assigns it a unique identity (publisher + name + version). That identity is required for:
+**Package identity** is the key concept. When your app is packaged as MSIX, Windows assigns it an identity based on manifest information such as its name, publisher, version, architecture, and resource identifier. That identity is required for:
 
 - Windows platform APIs such as push notifications, background tasks, and live tiles
 - AI features that use on-device models through the Windows AI APIs
@@ -36,6 +36,7 @@ If you're not sure whether to package your app or which packaging model to use, 
 | Package and sign from the command line | [WinApp CLI](/windows/apps/dev-tools/winapp-cli) |
 | Deliver updates without the Store | [App Installer](app-installer/app-installer-root.md) |
 | Decide between packaged and unpackaged | [Packaging decision guide](/windows/apps/package-and-deploy/) |
+| Understand package types | [MSIX package types](package/package-types.md) |
 | Deploy to enterprise devices | [Enterprise deployment overview](desktop/managing-your-msix-deployment-overview.md) |
 
 ## Highlights
@@ -49,21 +50,23 @@ If you're not sure whether to package your app or which packaging model to use, 
 
 ![MSIX Package Diagram](package/images/msixpackage.png)
 
-### App payload
+### Payload files
 
-The payload files are the app code files and assets built from your source.
+Payload files are files stored in and delivered by the package, including executable code, libraries, assets, configuration files, and resources.
 
-### AppxBlockMap.xml
+### Footprint files
 
-An XML document listing every file in the package with cryptographic hashes for each 64 KB block. Used for incremental download, differential updates, and integrity verification.
+Footprint files are package metadata and infrastructure files that describe, validate, or support the payload. Core footprint files include:
 
-### AppxManifest.xml
+- **AppxManifest.xml** declares the package identity, dependencies, capabilities, visual elements, and extension points.
+- **AppxBlockMap.xml** lists package files with cryptographic hashes for each 64 KB block. Windows uses it for differential updates and integrity verification.
+- **AppxSignature.p7x** contains the package signature. All MSIX packages must be signed before installation.
 
-The package manifest declares the app's identity, dependencies, capabilities, visual elements, and extension points. This is what Windows reads to deploy, display, and update the app.
+Other footprint files are present only when a package uses the corresponding feature. For example, `AppxContentGroupMap.xml` describes content groups for a streaming install, and `AppxMetadata\CodeIntegrity.cat` contains code-integrity metadata.
 
-### AppxSignature.p7x
+The Windows packaging APIs distinguish payload files from footprint files.
 
-Generated when the package is signed. All MSIX packages must be signed before installation. Combined with AppxBlockMap.xml, this enables Windows to verify package integrity at install time and at runtime.
+For package architecture and deployment behavior, see [MSIX package types](package/package-types.md), [Package storage volumes](package/package-volumes.md), and [Package registration and lifetime](package/package-lifetime.md).
 
 ## Supported platforms
 

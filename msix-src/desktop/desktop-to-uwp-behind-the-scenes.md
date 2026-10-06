@@ -1,7 +1,7 @@
 ---
 title: Understanding how packaged desktop apps run on Windows
 description: This topic provides a deep dive into how the OS behaves with packaged desktop apps.
-ms.date: 09/09/2025
+ms.date: 09/30/2026
 ms.topic: concept-article
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
@@ -44,7 +44,7 @@ App packages are installed on a per-user basis instead of system-wide. The defau
 
 After deployment, package files are marked read-only, and are heavily locked down by the operating system (OS). Windows prevents apps from launching if those files are tampered with.
 
-The `C:\Program Files\WindowsApps` location is what's known as a *PackageVolume*. That location is the default PackageVolume that Windows ships with; but you can create a PackageVolume on any drive, and at any path. Furthermore, not all packages are installed in a PackageVolume (see the Visual Studio example above).
+The `C:\Program Files\WindowsApps` installation store is the default [package volume](../package/package-volumes.md). You can create package volumes on other drives or at other paths, select a default volume, move supported packages between volumes, and take volumes offline. Not all packages are staged in a package volume; for example, Visual Studio can register a development layout directly from its build output.
 
 ## File system
 

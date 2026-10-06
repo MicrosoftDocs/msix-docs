@@ -1,7 +1,7 @@
 ---
 title: App package formats
 description: This article describes the different types of MSIX package formats that are useful for certain scenarios.
-ms.date: 07/02/2019
+ms.date: 09/30/2026
 ms.topic: article
 keywords: windows 10, msix, uwp, desktop, package
 ---
@@ -9,6 +9,8 @@ keywords: windows 10, msix, uwp, desktop, package
 # App package formats
 
 In addition to standard MSIX packages that contain a Windows app, there are several different types of specialized MSIX package formats that are useful for certain scenarios.
+
+This article describes specialized formats and extension scenarios. For the deployment and manifest distinctions among Main, Framework, Resource, Optional, and Bundle packages, see [MSIX package types](package-types.md).
 
 ## Optional packages
 
@@ -36,7 +38,7 @@ For more details, see [Introduction to asset packages](asset-packages.md).
 
 ## Resource packages
 
-Resource packages are asset-only packages that allow your app to adapt to multiple display sizes and system languages. The resource package targets user language, system scale, and DirectX features, allowing the app to be tailored to a variety of user scenarios. Although an app package can contain several resources, the OS will only download the relevant resources per user device, saving bandwidth and disk space.
+Resource packages allow a package to adapt to multiple display sizes, system languages, and other resource qualifiers. They don't permit execution by default, but a package can explicitly enable execution with [uap6:AllowExecution](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-allowexecution). Although an app can use several resource packages, Windows installs only the resources that apply to the user's device, saving bandwidth and disk space.
 
 ## MSIX Bundles 
 An MSIX bundle is made up of multiple MSIX packages and it can reduce the size of the app that users download. They are helpful for different architectures, language-specific assets, varying image-scale assets, or resources that apply to specific devices. By bundling multiple architectures versions of your application into one entity, only the bundle needs to be uploaded to your distribution location (instead of having one for each architecture). The Windows 10 deployment platform is aware of the .msixbundle package type and will only download the files that are applicable to a device's architecture. Keep in mind that if you decide to distribute an .msixbundle for a particular app, you cannot revert back to distributing just an MSIX package.

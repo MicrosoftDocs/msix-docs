@@ -1,7 +1,7 @@
 ---
 description: Solutions for the most common MSIX installation, signing, deployment, and runtime errors on Windows 10 and Windows 11.
 title: MSIX troubleshooting guide
-ms.date: 04/14/2026
+ms.date: 09/30/2026
 ms.topic: troubleshooting-general
 author: GrantMeStrength
 ms.author: jken
@@ -37,18 +37,47 @@ For a full log of deployment events, open Event Viewer and navigate to:
 
 ### Package installation blocked because the app is in use
 
-**Symptom**: Update or re-install fails with an error indicating the package is in use. In Event Viewer, you see that the deployment operation was rejected.
+**Symptom**: An update, repair, removal, or reinstallation fails with `ERROR_PACKAGES_IN_USE` (`0x80073D02`). The deployment message states that resources the operation modifies are currently in use.
 
 **Applies to**: Windows 10 and later, Windows 11
 
-**Fix**: Close all running instances of the app before updating. If the app is a background service or has a background task registered, you may need to terminate those as well:
+MSIX doesn't modify a package while a process is using it. Executables and DLLs can be mapped into running processes, and an application might have active file, registry, or interprocess communication operations.
+
+**Preferred fix**: Ask the user to close the application cleanly before retrying the deployment. Check for background processes, services, or out-of-process components that use the package.
+
+For unattended deployment, choose one of the following behaviors.
+
+#### Shut down the target application
+
+Use `-ForceTargetApplicationShutdown` to shut down processes associated with the target package, forcibly if necessary:
 
 ```powershell
-Get-Process -Name "MyApp" | Stop-Process -Force
-Add-AppxPackage -Path .\updated-app.msix
+Add-AppxPackage -Path .\updated-app.msix -ForceTargetApplicationShutdown
 ```
 
-For enterprise deployments, consider scheduling updates during maintenance windows using Intune or Configuration Manager.
+The equivalent `Windows.Management.Deployment` option is [AddPackageOptions.ForceTargetAppShutdown](/uwp/api/windows.management.deployment.addpackageoptions.forcetargetappshutdown).
+
+This option can terminate the application if it doesn't close. Don't use forced shutdown when the app could lose unsaved work or interrupt a long-running operation.
+
+#### Defer registration until the package isn't in use
+
+Use `-DeferRegistrationWhenPackagesAreInUse` to stage the update and defer registration:
+
+```powershell
+Add-AppxPackage -Path .\updated-app.msix -DeferRegistrationWhenPackagesAreInUse
+```
+
+The equivalent API is [AddPackageOptions.DeferRegistrationWhenPackagesAreInUse](/uwp/api/windows.management.deployment.addpackageoptions.deferregistrationwhenpackagesareinuse). Windows completes registration when the package can be updated, such as during a later activation.
+
+On Windows 11, version 24H2 and later, a package can declare the `uap17:UpdateWhileInUse` manifest element with a value of `defer`. This package-level setting takes precedence over force-shutdown options. See [uap17:UpdateWhileInUse](/uwp/schemas/appxpackage/uapmanifestschema/element-uap17-updatewhileinuse).
+
+Apps that use the Windows App SDK can call [PackageDeploymentManager.IsPackageRegistrationPending](/windows/windows-app-sdk/api/winrt/microsoft.windows.management.deployment.packagedeploymentmanager.ispackageregistrationpending) to detect a previously deferred registration for the current user. An administrator can call [IsPackageRegistrationPendingForUser](/windows/windows-app-sdk/api/winrt/microsoft.windows.management.deployment.packagedeploymentmanager.ispackageregistrationpendingforuser) to check another user.
+
+#### Defer package removal
+
+Removal normally requests application shutdown. To defer removal instead, call [PackageManager.RemovePackageAsync](/uwp/api/windows.management.deployment.packagemanager.removepackageasync) with [RemovalOptions.DeferRemovalWhenPackagesAreInUse](/uwp/api/windows.management.deployment.removaloptions).
+
+For enterprise deployments, schedule disruptive updates during maintenance windows and select a deferral or shutdown policy that matches the application's data-loss risk. For more detail, see [Servicing While In Use and ERROR_PACKAGES_IN_USE](https://devblogs.microsoft.com/insidemsix/msix-servicing-while-in-use/).
 
 ### MinVersion or architecture mismatch
 
