@@ -1,8 +1,8 @@
 ---
 title: Detect package identity and runtime context
-description: Describes how an app can determine whether its shipped as an MSIX package on Win 1709 or later. 
+description: Determine whether a process has package identity by using Task Manager, the Win32 app model API, or managed code.
 author: Huios
-ms.date: 01/23/2020
+ms.date: 09/30/2026
 ms.topic: how-to
 keywords: windows 10, uwp, app package, app update, msix, appx
 ms.custom: "RS5, seodec18"
@@ -10,86 +10,101 @@ ms.custom: "RS5, seodec18"
 
 # Detect package identity and runtime context
 
-You may have some versions of your app that were not distributed in an MSIX package. At runtime your app can detect whether it was deployed as an MSIX package by using the Windows Package Manager API, or your own custom installer. You may want to change the app behavior such as update settings or you may want to take advantage of functionality only available to MSIX packages.
+A process is **packaged** when it has package identity. A process is **unpackaged** when it doesn't have package identity. This distinction applies to processes rather than only to applications because background tasks, out-of-process servers, and other processes can also have package identity.
 
-To determine whether your application is running as an MSIX package on a version of Windows that supports the full MSIX feature set, you can use the [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) native function in kernel32.dll. When a desktop application is running as an unpackaged application without package identity, this function returns an error which can help you infer the context in which the app is running.
+Package identity can come from a package that contains the application files or from a [package with external location](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps). Therefore, detecting package identity doesn't tell you where the application files are stored or which packaging model the app uses.
 
-If the function succeeds, it means:
+An app might check its runtime identity before it uses a feature that requires package identity, selects an update mechanism, or chooses a storage location.
 
-* Your app is packaged in an MSIX package.
-* Your app is running on Windows 10, version 1709 (build 16299) or later with full MSIX support.
+## Check a process in Task Manager
+
+You can inspect a running process without changing the app:
+
+1. Open Task Manager and select **Details**.
+1. Right-click a column heading, and then select **Select columns**.
+1. Select **Package name**, and then select **OK**.
+
+The **Package name** field is blank for an unpackaged process. For a packaged process, it normally contains the package's localized display name. Display names aren't guaranteed to be unique. If Task Manager can't resolve the localized resource, it might display an `ms-resource:` reference instead.
 
 ## Use GetCurrentPackageFullName in native code
 
-The following code example demonstrates how to use [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) to determine the context of an app.
+Call [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) without a buffer:
+
+- `ERROR_INSUFFICIENT_BUFFER` means the process has package identity.
+- `APPMODEL_ERROR_NO_PACKAGE` means the process doesn't have package identity.
+- Any other value is an error that your app should handle.
 
 ```cpp
-#define _UNICODE 1
-#define UNICODE 1
-
 #include <Windows.h>
 #include <appmodel.h>
-#include <malloc.h>
-#include <stdio.h>
 
-int __cdecl wmain()
+LONG IsPackagedProcess(bool* isPackaged)
 {
+    if (isPackaged == nullptr)
+    {
+        return ERROR_INVALID_PARAMETER;
+    }
+
+    *isPackaged = false;
     UINT32 length = 0;
-    LONG rc = GetCurrentPackageFullName(&length, NULL);
-    if (rc != ERROR_INSUFFICIENT_BUFFER)
+    const LONG result = GetCurrentPackageFullName(&length, nullptr);
+
+    if (result == ERROR_INSUFFICIENT_BUFFER)
     {
-        if (rc == APPMODEL_ERROR_NO_PACKAGE)
-            wprintf(L"Process has no package identity\n");
-        else
-            wprintf(L"Error %d in GetCurrentPackageFullName\n", rc);
-        return 1;
+        *isPackaged = true;
+        return ERROR_SUCCESS;
     }
 
-    PWSTR fullName = (PWSTR) malloc(length * sizeof(*fullName));
-    if (fullName == NULL)
+    if (result == APPMODEL_ERROR_NO_PACKAGE)
     {
-        wprintf(L"Error allocating memory\n");
-        return 2;
+        return ERROR_SUCCESS;
     }
 
-    rc = GetCurrentPackageFullName(&length, fullName);
-    if (rc != ERROR_SUCCESS)
-    {
-        wprintf(L"Error %d retrieving PackageFullName\n", rc);
-        return 3;
-    }
-    wprintf(L"%s\n", fullName);
-
-    free(fullName);
-
-    return 0;
+    return result;
 }
 ```
+
+This check doesn't need to retrieve the package full name. If you also need the identity value, allocate a buffer of the returned length and call `GetCurrentPackageFullName` again.
 
 ## Use GetCurrentPackageFullName function in managed code
 
-To call [GetCurrentPackageFullName](/windows/win32/api/appmodel/nf-appmodel-getcurrentpackagefullname) in a managed .NET Framework app, you'll need to use [Platform Invoke (P/Invoke)](/dotnet/standard/native-interop/pinvoke) or some other form of interop.
-
-To simplify this process, you can use the [DesktopBridgeHelpers](https://github.com/qmatteoq/DesktopBridgeHelpers/) library. This library supports .NET Framework 4 and later, and it uses P/Invoke internally to provide a helper class that determines whether the app is running on a version of Windows that supports the full MSIX feature set. This library is also available as a [NuGet Package](https://www.nuget.org/packages/DesktopBridge.Helpers/).
-
-After you install the package in your project, you can create a new instance of the `DesktopBridge.Helpers` class and call the `IsRunningAsUwp` method. This method returns true if your app is running as an MSIX package on Windows 10, version 1709 (build 16299) or later and false if either of those are not true. The following sample demonstrates how to call this method.
+Use platform invocation to call `GetCurrentPackageFullName` from .NET:
 
 ```csharp
-private bool IsRunningAsUwp()
-{
-   UwpHelpers helpers = new UwpHelpers();
-   return helpers.IsRunningAsUwp();
-}
+using System;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
 
-private void Form1_Load(object sender, EventArgs e)
+internal static class PackageIdentity
 {
-   if (IsRunningAsUwp())
-   {
-       txtUwp.Text = "I'm running as MSIX";
-   }
-   else
-   {
-       txtUwp.Text = "I'm running as a native desktop app";
-   }
+    private const int ErrorInsufficientBuffer = 122;
+    private const int AppModelErrorNoPackage = 15700;
+
+    [DllImport("kernel32.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
+    private static extern int GetCurrentPackageFullName(
+        ref int packageFullNameLength,
+        IntPtr packageFullName);
+
+    public static bool IsPackagedProcess()
+    {
+        var length = 0;
+        var result = GetCurrentPackageFullName(ref length, IntPtr.Zero);
+
+        return result switch
+        {
+            ErrorInsufficientBuffer => true,
+            AppModelErrorNoPackage => false,
+            _ => throw new Win32Exception(result),
+        };
+    }
 }
 ```
+
+Don't treat every nonzero return value as meaning that the process is unpackaged. Values other than `ERROR_INSUFFICIENT_BUFFER` and `APPMODEL_ERROR_NO_PACKAGE` represent errors.
+
+## Related content
+
+- [Package identity overview](/windows/apps/desktop/modernize/package-identity-overview)
+- [Features that require package identity](/windows/apps/desktop/modernize/modernize-packaged-apps)
+- [Packaging overview](/windows/apps/package-and-deploy/packaging/)
+- [Is it MSIX? How to tell if a process is packaged](https://devblogs.microsoft.com/insidemsix/how-to-tell-if-a-process-is-packaged/)

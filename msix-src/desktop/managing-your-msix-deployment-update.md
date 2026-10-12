@@ -1,7 +1,7 @@
 ---
 description: This article provides details regarding the options available when updating an MSIX app.
 title: Differential updates MSIX app package
-ms.date: 2/3/2020
+ms.date: 09/30/2026
 ms.topic: article
 keywords: windows 10, deployment, msix
 ms.assetid:  
@@ -27,18 +27,21 @@ When a newer version of the MSIX app package is installed, the manifest file is 
 When an older version of the MSIX app package is installed, the manifest file is compared and modifed file blocks are identified. As the MSIX app package is upgraded to the older version only the modified files are retrieved decreasing the bandwidth consumption if updated applications reside on a network share or external to an organization.
 
 ## Optimizing upgrade experiences
-The delivery or installation of an MSIX app package to a device can be configured to improve the users experience. When an app is deployed the device can be configured to update the app after the user closes the app , or force the application to be closed and update the app forcably.
+The delivery or installation of an MSIX app package can be configured to control what happens when the package is in use. A deployment can fail, request application shutdown, or defer registration until the package is no longer in use.
 
 ### PowerShell
 Installing an MSIX app package to a device using PowerShell leverages the [add-appxpackage](/windows/msix/desktop/powershell-msix-cmdlets) cmdlet. This cmdlet contains the following parameters which alter the MSIX app package installation or upgrade user experience.
 
 | Parameter | Description |
 |-|-|
-| -DeferRegistrationWhenPackagesAreInUse | Indicates that this cmdlet will prevent the MSIX app package from updating while the user currently has the app open. |
-| -ForceApplicationShutdown | Indicates that this cmdlet forces all active processes that are associated with the package or its dependencies to shut down |
+| -DeferRegistrationWhenPackagesAreInUse | If the package is currently in use, defers registration until the package is no longer in use. Windows completes the registration later. |
+| -ForceApplicationShutdown | If the package is currently in use, the processes associated with the package are shut down forcibly so that registration can continue. |
+| -ForceTargetApplicationShutdown | If the target package is currently in use, the processes associated with the target package are shut down forcibly so that registration can continue. |
 | -ForceUpdateFromAnyVersion | Indicates that the MSIX app package will force a specific version of a package to be staged/registered, regardless of whether a higher version is already stages/registered. |
 | -InstallAllResources | Indicates that the cmdlet forces the deployment of all resource packages specified from a bundle argument. This overrides the resource applicability check of the deployment engine and forces staging of all resource packages. |
 | -RetainFilesOnFailure | In the case of a failed deployment, if this switch is set to True, files that have been created on the target machine during the installation process are not removed. |
 | -Update | Specifies that the package being added is a dependency package update. A dependency package is removed when the parent app is removed. If not specified, the package will not be removed when the parent app is removed. |
 
 For a full list of parameters available for this cmdlet, please visit the PowerShell article on [add-appxpackage](/powershell/module/appx/add-appxpackage?preserve-view=true).
+
+For guidance about `ERROR_PACKAGES_IN_USE`, manifest-based deferred updates, pending registrations, and deferred removal, see [Package installation blocked because the app is in use](../msix-troubleshooting-guide.md#package-installation-blocked-because-the-app-is-in-use).
