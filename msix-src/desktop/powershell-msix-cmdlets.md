@@ -1,7 +1,7 @@
 ---
 description: This article provides all the details you need to manage deploying you MSIX applications in an enteroprise environment.  This article is targeted at enterprise and IT developers.
 title: Managing MSIX with PowerShell
-ms.date: 12/4/2020
+ms.date: 09/30/2026
 ms.topic: concept-article
 keywords: windows 10, deployment, msix, PowerShell, PSH, PS, PoSh, cmdlets
 ms.assetid:  
@@ -16,7 +16,7 @@ The following PowerShell cmdlets are provided with aliases enabling the use of e
 | PowerShell cmdlets | Description |
 |-------------------|-------------|
 | [Add-AppxPackage](/powershell/module/appx/add-appxpackage) | This cmdlet is used to add a signed app (*.msix, *.appx) package to a device. The Add-AppPackage cmdlet can also be used when adding an MSIX app that has a relationship to another MSIX app such as: External Packages, [Optional Packages](../package/optional-packages.md), and [Related Packages](../package/optional-packages.md). |
-| [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage) | This cmdlet is used to remove a signed app (*.msix, *.appx) package from a device. Once removed, the contents of the folder that the signed app was installed to are removed, as well as any references to the uninstalled application on the machine. |
+| [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage) | Removes a package registration for a user. The staged package payload becomes eligible for removal after no strong references remain. See [Package registration and lifetime](../package/package-lifetime.md). |
 | [Get-AppxPackage](/powershell/module/appx/get-appxpackage) | This cmdlet will provide a list of all installed signed app (*.msix, *.appx) packages on the machine. A value can be provided to filter the results. To create a filtered return provide a full or partial string into the **-Name** parameter using * as the wild character. |
 | [Get-AppxDefaultVolume](/powershell/module/appx/get-appxdefaultvolume) | This cmdlet will provide the default volume being used by signed app (*.msix, *.appx) packages on the machine. The default volume is the target for all deployment or install operations on a machine. This volume can not be removed from the list of volumes. |
 | [Get-AppxPackageManifest](/powershell/module/appx/get-appxpackagemanifest) | This cmdlet will return a signed app (*.msix, *.appx) package manifest xml object for the specified signed app full package name. |
@@ -30,3 +30,5 @@ The following PowerShell cmdlets are provided with aliases enabling the use of e
 | [Get-AppxDefaultVolume](/powershell/module/appx/get-appxdefaultvolume) | This cmdlet will get the default AppxVolume used as the target for all deployment operations to the devive. |
 | [Set-AppxDefaultVolume](/powershell/module/appx/set-appxdefaultvolume) | This cmdlet will set another mounted AppxVolume as the new default target for all deployment operations to the device. |
 | [Invoke-CommandInDesktopPackage](/powershell/module/appx/invoke-commandindesktoppackage) | This cmdlet enables the ability to execute commands into the Windows app package bubble. |
+
+For an explanation of package-volume identity, offline behavior, encryption, and the corresponding `Windows.Management.Deployment` APIs, see [Package storage volumes](../package/package-volumes.md).
