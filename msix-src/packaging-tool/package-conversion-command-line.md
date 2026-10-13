@@ -13,15 +13,29 @@ ms.custom: RS5
 
 <div class="nextstepaction"><p><a class="x-hidden-focus" href="https://www.microsoft.com/p/msix-packaging-tool/9n5lw3jbcxkf" data-linktype="external">Get MSIX Packaging Tool</a></p></div>
 
-The MSIX Packaging Tool supports a command line interface for creating MSIX application packages. This enables you to automate the process of repackaging app installers and perform bulk conversions.
+The MSIX Packaging Tool includes the `MsixPackagingToolCLI.exe` command-line interface for
+creating MSIX packages. This enables you to automate the process of repackaging app installers
+and perform bulk conversions.
 
-For sample PowerShell and Bash scripts that demonstrate how to automate the process of packaging, signing, managing and distributing MSIX packages, see the [scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts) folder of the MSIX Toolkit.
+> [!NOTE]
+> The Windows App Development CLI (`winapp`) can create an MSIX package from a prepared
+> application directory, but it doesn't convert an existing installer. Use the MSIX Packaging
+> Tool command-line interface for installer conversion. To package files from a prepared
+> application directory, see
+> [Windows App Development CLI](/windows/apps/dev-tools/winapp-cli/).
+
+For sample PowerShell and Bash scripts that demonstrate how to automate the process of packaging,
+signing, managing, and distributing MSIX packages, see the
+[scripts](https://github.com/microsoft/MSIX-Toolkit/tree/master/Scripts) folder of the MSIX Toolkit.
 
 ## Use the command line with the Command Prompt
 
-To create a new MSIX package for your application, run the `MsixPackagingTool.exe create-package` command in an administrator Command prompt window. Please note this is an [app execution alias](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-an-alias) to make it easier to run the application without specifying the full path. 
+To create a new MSIX package, run the `MsixPackagingToolCLI.exe create-package` command in an
+elevated Command Prompt window. This command uses an
+[app execution alias](/windows/apps/desktop/modernize/desktop-to-uwp-extensions#start-your-application-by-using-an-alias)
+for the MSIX Packaging Tool command-line interface, not the MSIX Packaging Tool GUI app.
 
-Here are the parameters that can be passed as command line arguments(case sensitive):
+Here are the parameters that can be passed as command-line arguments (case-sensitive):
 
 |**Parameter** |	**Description**|
 |---------|---------|
@@ -35,14 +49,18 @@ Here are the parameters that can be passed as command line arguments(case sensit
 Examples:
 
 ```console
+MsixPackagingToolCLI.exe create-package ^
+    --template C:\Users\Documents\ConversionTemplate.xml ^
+    -v
 
-    MsixPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml -v
-
-    MSIXPackagingTool.exe create-package --template c:\users\documents\ConversionTemplate.xml --virtualMachinePassword pswd112893
-    
+MsixPackagingToolCLI.exe create-package ^
+    --template C:\Users\Documents\ConversionTemplate.xml ^
+    --virtualMachinePassword pswd112893
 ```
 
 > [!NOTE]
-> App-V 5.x conversion is currently supported to be converted throught the command line. This includes capabilities.
+> The command-line interface currently supports converting App-V 5.x packages.
 
-You can [generate a command line template file](generate-template-file.md) through the MSIX Packaging Tool by going through the conversion process with an application or you can build one from our sample template.
+You can [generate a command-line template file](generate-template-file.md) with the MSIX
+Packaging Tool GUI app by completing the conversion process for an installer. You can also build
+one from the sample template.
