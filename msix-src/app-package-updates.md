@@ -1,7 +1,7 @@
 ---
 title: App package updates
 description: Describes how MSIX packages are optimized to ensure that only the essential changed bits of the app are downloaded to update an existing Windows app.
-ms.date: 11/30/2020
+ms.date: 08/25/2026
 ms.topic: article
 keywords: windows 10, uwp, app package, app update, msix, appx, pfan, package family name
 ms.custom: "RS5, seodec18"
@@ -59,7 +59,14 @@ The update package to the currently installed app package can be of a different 
 For example: If you have x86 version of MyFavApp(v1.0.0.0) installed on a x64 Windows 10 device and the update package(v2.0.0.0) is x64 version: MyFavApp(1.0.0.0) will be updated to MyFavApp(v2.0.0.0) successfully. 
 
 #### Packages can update from an MSIX to an MSIXbundle
-An update package can go from MSIX package to an MSIXbundle package but not vice-versa. When an MSIXbundle is installed, the package update will need to remain a bundle. 
+An update package can go from a standalone `.msix` package to an `.msixbundle`
+package for the same package family.
+
+#### Packages can't update from an MSIXbundle to a standalone MSIX
+For the same package family, after a version ships as an `.msixbundle`, later package
+updates must remain bundles. A later update can't move from the `.msixbundle` back to
+a standalone `.msix` package. The `.msix` to `.msixbundle` transition is supported,
+but the reverse transition isn't.
 
 ## Optimize differential update technology
     
