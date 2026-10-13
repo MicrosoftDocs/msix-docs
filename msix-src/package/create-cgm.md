@@ -2,7 +2,7 @@
 ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
 title: Create and convert a source content group map
 description: This article describes how to create a content group map. A content group map necessary to get your app ready for streaming install.
-ms.date: 07/02/2019
+ms.date: 07/03/2026
 author: andreww-msft
 ms.author: jken
 ms.topic: how-to
@@ -92,7 +92,9 @@ Adding the single wildcard file name will include files added to the project dir
 
 Note that you cannot use the double wild card, "**", at the root of the file structure to include every file in the project since this will fail when attempting to convert `SourceAppxContentGroupMap.xml` to the final `AppxContentGroupMap.xml`.
 
-It's also important to note that footprint files (AppxManifest.xml, AppxSignature.p7x, resources.pri, etc.) should not be included in the content group map. If footprint files are included within one of the wildcard file names you specify, they will be ignored.
+It's also important to note that footprint files should not be included in the content group map. If footprint files are included within one of the wildcard file names you specify, they will be ignored.
+
+*Footprint files* are the reserved files that describe the package itself, rather than the app payload (your executables, DLLs, and assets). They include the package manifest (`AppxManifest.xml`), the block map (`AppxBlockMap.xml`), the package signature (`AppxSignature.p7x`), the code integrity catalog (`AppxMetadata\CodeIntegrity.cat`), and the content group map (`AppxContentGroupMap.xml`). The package resource index (`resources.pri`) is also generated and managed as part of the package structure. Because Windows manages these files, you don't list them as content in the content group map.
 
 ### Automatic content groups
 

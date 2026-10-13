@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Tips 
 description: This article list out the error codes and issues that customers may face when working with MSIX Core 
-ms.date: 11/15/2019
+ms.date: 07/03/2026
 ms.topic: troubleshooting-general
 keywords: windows 10, windows 7, windows 8, Windows Server, uwp, msix, msixcore, 1709, 1703, 1607, 1511, 1507
 ms.custom: "RS5, seodec18"
@@ -32,6 +32,9 @@ The following errors occur when there is an issue with the package format.
 | 0x8BAD0035 | DuplicateFootprintFile |
 | 0x8BAD0036 | UnknownFileNameEncoding |
 | 0x8BAD0037 | DuplicateFile |
+
+> [!NOTE]
+> Several of these errors refer to *footprint files*. Footprint files are the reserved files that describe the package itself, rather than the app payload (your executables, DLLs, and assets). They include the package manifest (`AppxManifest.xml`), the block map (`AppxBlockMap.xml`), the package signature (`AppxSignature.p7x`), the code integrity catalog (`AppxMetadata\CodeIntegrity.cat`), and the content group map (`AppxContentGroupMap.xml`). A package must contain exactly one of each required footprint file; a `DuplicateFootprintFile` error means the package contains more than one.
 
 The following errors are related to file issues
 
