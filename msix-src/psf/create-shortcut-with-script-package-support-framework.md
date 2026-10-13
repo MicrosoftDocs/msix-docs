@@ -24,7 +24,13 @@ There are a couple of things to keep in mind:
 
 C:\Program Files\WindowsApps\ContosoExpenses_`1.0.0.0`_x86__3z09h3y28h0qg
 
-To avoid having to change the application shortcut every time the application is updated, create the shortcut by pointing to the [AppExecutionAlias](/windows/apps/desktop/modernize/desktop-to-uwp-extensions). The __AppExecutionAlias__ allows it to launch the application with the value defined in the alias session of the application manifest, so there is no need to specify the full application path. Therefore, before create the shortcut, define the alias in the application manifest. Otherwise, Windows Explorer will not recognize the alias and it will not allow us to create the shortcut.
+To avoid having to change the application shortcut every time the application is updated, create
+the shortcut by pointing to an app execution alias. For more information, see
+[Start an MSIX application with an app execution alias](../desktop/app-execution-alias.md).
+The app execution alias starts the MSIX application by using the value defined in the
+application manifest, so there is no need to specify the full application path. Therefore,
+before creating the shortcut, define the alias in the application manifest. Otherwise,
+Windows Explorer will not recognize the alias and it will not allow us to create the shortcut.
 
 ## Create the application alias
 
