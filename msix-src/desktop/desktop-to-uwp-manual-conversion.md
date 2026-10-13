@@ -1,7 +1,7 @@
 ---
 title: Generating MSIX package components
 description: Shows how to manually package a Windows desktop application (such as Win32, WPF, or Windows Forms) for Windows.
-ms.date: 01/04/2023
+ms.date: 07/04/2026
 ms.topic: how-to
 keywords: windows 11, windows 10, uwp, msix
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
@@ -191,6 +191,21 @@ There is no ARM version of this tool.
 6.	Package your application by using the instructions in the next step.
 
 <a id="make-appx"></a>
+
+<a id="virtual-registry"></a>
+
+## Include registry entries (virtual registry)
+
+If your application relies on registry keys under *HKLM\Software*, you can ship those keys inside the package as a *virtual registry*. Windows stores a package's virtual registry in a `Registry.dat` hive file at the root of the package layout. At runtime, the OS merges that hive over *HKLM\Software* so the app sees its keys without writing to the real system registry. For details on how the virtual registry behaves at runtime, see [the Registry section of Understanding how packaged desktop apps run on Windows](desktop-to-uwp-behind-the-scenes.md#registry).
+
+> [!IMPORTANT]
+> **MakeAppx.exe** packages the contents of your layout folder as-is; it doesn't generate `Registry.dat` from a `.reg` file. If your package needs a virtual registry, a valid `Registry.dat` hive must already be present in the layout folder before you run MakeAppx. If your app doesn't need any packaged registry keys, you can omit the file entirely.
+
+There are a few supported ways to produce the `Registry.dat` hive, depending on your workflow:
+
+- **Automate it in a CI/CD pipeline (recommended).** Use the MSIX Packaging Tool's command line interface to run an unattended conversion. As it monitors your installer, the tool captures the installer's registry writes and generates the `Registry.dat` hive as part of the finished package. See [Create a package using the command line interface](../packaging-tool/package-conversion-command-line.md) and [Generate a template file](../packaging-tool/generate-template-file.md) for driving conversions from a script.
+- **Edit an existing package.** Open the package in the MSIX Packaging Tool's Package Editor and use the [Virtual registry page](../packaging-tool/package-editor.md#virtual-registry-page) to add, modify, or remove packaged registry entries, then save and re-sign the package.
+- **Generate a hive directly (advanced).** The built-in `reg save` command writes the contents of a registry key to a hive file in the same binary format as `Registry.dat`. Populate a temporary key with the values your app needs (for example, by importing a `.reg` file into a scratch location), run `reg save` to produce the hive, and add it to your layout. Because the hive represents *HKLM\Software*, verify the result by opening the package in the Package Editor's Virtual registry page before you ship it.
 
 ## Test your application before packaging
 
