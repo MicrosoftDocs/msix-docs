@@ -1,48 +1,73 @@
 ---
 title: Using the MSIX Packaging Tool in a disconnected environment
 description: This article describes how to acquire all of the assets required for the MSIX Packaging Tool if you are in a disconnected environment.
-ms.date: 10/03/2023
+ms.date: 08/26/2026
 ms.topic: concept-article
 keywords: msix
 ---
 
 # Using the MSIX Packaging Tool in a disconnected environment
 
-While we make it super easy for users to acquire the MSIX Packaging Tool through the Microsoft Store, we know that not everyone has access to the Store or to a connected environment where they want to perform conversions. So this topic is about using the tool in a disconnected mode. The info here applies only to our public releases; not to our [Insider program](insider-program.md) releases.
+The MSIX Packaging Tool is available from the Microsoft Store, but conversion devices in restricted networks might not have Store or internet access. This article explains how to transfer and install the public release of the tool and its driver on a disconnected device. It doesn't apply to [Insider program](insider-program.md) releases.
 
 ## Get the MSIX Packaging Tool
 
-You can download the latest version of the offline package below.
+On an internet-connected device, download the offline bundle and license:
 
 > [!div class="button" style="text-align: left;" width="150px;"] 
 > [Download 1.2024.405.0 MSIX Packaging Tool](https://download.microsoft.com/download/e/2/e/e2e923b2-7a3a-4730-969d-ab37001fbb5e/MSIXPackagingtoolv1.2024.405.0.msixbundle)
-If you encounter issues with the offline copy of the packaging tool, then download the offline copy of the license for the tool below.
-
 > [!div class="button" style="text-align: left;" width="150px;"] 
 > [Offline copy of the license](https://download.microsoft.com/download/e/2/e/e2e923b2-7a3a-4730-969d-ab37001fbb5e/MSIXPackagingtoolv1.2024.405.0.License.xml)
-After you have the offline version of the tool, you can use [PowerShell](/powershell/module/dism/add-appxprovisionedpackage) to add the app package and license to your machine.
 
-### Example of offline installation
+Copy both files to the disconnected device. Keep the license with the matching bundle version.
 
+## Install the tool on a disconnected device
+
+To provision the tool on the running Windows installation, open PowerShell as an administrator and run:
+
+```powershell
+Add-AppxProvisionedPackage -Online `
+    -PackagePath "C:\MSIX\MSIXPackagingtoolv1.2024.405.0.msixbundle" `
+    -LicensePath "C:\MSIX\MSIXPackagingtoolv1.2024.405.0.License.xml"
 ```
-PS C:\> Add-AppxProvisionedPackage -Path C:\offline -PackagePath C:\MSIX\MyPackage.msix -LicensePath C:\MSIX\MyLicense.xml
+
+The `-Online` parameter means the currently running Windows installation; it doesn't require an internet connection. For the complete command reference, see [Add-AppxProvisionedPackage](/powershell/module/dism/add-appxprovisionedpackage).
+
+Provisioning registers the package for new user profiles at sign-in. If the tool doesn't appear for an existing signed-in user, sign out and sign in again, or register the package for that user with `Add-AppxPackage`.
+
+To provision the tool into a mounted Windows image instead, replace `-Online` with `-Path` and specify the root of the mounted image:
+
+```powershell
+Add-AppxProvisionedPackage -Path "C:\MountedImage" `
+    -PackagePath "C:\MSIX\MSIXPackagingtoolv1.2024.405.0.msixbundle" `
+    -LicensePath "C:\MSIX\MSIXPackagingtoolv1.2024.405.0.License.xml"
 ```
 
-The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) package from Windows Update, and it will fail to install if the Windows Update service is disabled on the machine, or if Windows Insider flight ring settings don't match the operating system (OS) build number of the computer.
+Use a version of DISM that is the same as or newer than the Windows image that you service. For more information, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms).
 
-If you're in an enterprise environment with Windows Server Update Services (WSUS) or Systems Center (now Microsoft Endpoint Manager), then you might need to modify your default configuration (see [How to make Features on Demand and language packs available when you're using WSUS or Configuration Manager](/windows/deployment/update/fod-and-lang-packs)). Or just download and install the FOD manually:
+## Install the MSIX Packaging Tool driver
 
-- Download the FOD .cab file for [Windows 10, version 1809, x64](https://download.microsoft.com/download/8/4/3/8436215A-42DB-4FD2-966D-60D436D6EEFC/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) or [Windows 10, version 1809, x86](https://download.microsoft.com/download/9/9/4/9948d09d-af25-45a5-b01f-cc4bcf05f5bf/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~x86~~.cab)
-- Download the FOD .cab file for [Windows 10, version 1903, x64](https://download.microsoft.com/download/5/2/e/52ec35e9-3b50-47b2-879d-c815a93bc3fc/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) or [Windows 10, version 1903, x86](https://download.microsoft.com/download/2/c/3/2c3a78a2-4d64-426a-976d-dfe4805110cc/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~x86~~.cab) **NOTE: This will also work for Windows 10, version 1909**
-- Download the FOD .cab file for [Windows 10, version 2004, x64](https://download.microsoft.com/download/4/c/7/4c79bf31-946c-444a-bc5f-61398d3b0a76/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) **NOTE: This will also work for later Windows 10 versions**
-- Download the FOD .cab file for [Windows 11, version 21H2, x64](https://download.microsoft.com/download/6/c/7/6c7d654b-580b-40d4-8502-f8d435ca125a/Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab) **NOTE: This will also work for Windows 11, version 22H2 and later**
-- Individually-obtained Feature on Demand (FOD) packages can be installed using [DISM command-line options](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options). In an elevated PowerShell window type: ```Dism /Online /add-package /packagepath:(path)``` **NOTE: Please ensure that the file path contains the right file name with the '.cab' extension.**
+The MSIX Packaging Tool driver is delivered as a [Feature on Demand (FOD)](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities). On a connected device, the tool can acquire the driver from Windows Update. Driver acquisition fails if the Windows Update service is disabled. On Windows Insider builds, the selected flight and the device build must also match the available FOD.
 
-IT admins can also create [Side by side feature store (shared folder)](/windows-server/administration/server-manager/configure-features-on-demand-in-windows-server) to allow access to the MSIX Packaging tool driver FOD. You can find additional details at the bottom of the blog post [Language pack acquisition and retention for enterprise devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Language-pack-acquisition-and-retention-for-enterprise-devices/ba-p/275404).
+For a disconnected device, obtain the Features on Demand media designated for the device's Windows release and architecture, as shown in the following table. FOD packages are serviced Windows components; some media covers a range of releases (for example, the Windows 10, version 2004 Features on Demand ISO applies to version 2004 and later). Match the architecture exactly, and don't substitute media that the table doesn't list for the device's release.
 
-Otherwise, if you have access to enterprise or OEM channels, then you can obtain the driver from Windows 10 Features on Demand media from one of the following sources:
+| Conversion device | Offline source |
+| --- | --- |
+| Windows 11 | Matching Windows 11 Languages and Optional Features ISO |
+| Windows 10, version 2004 and later | Windows 10, version 2004 Features on Demand ISO |
 
-- [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/Licensing/servicecenter/default.aspx): Volume License access is required.
-- [OEM Portal](https://www.microsoftoem.com): OEM access is required.
-- [MSDN Download](https://my.visualstudio.com/Downloads/Featured): MSDN subscription is required.
+The [Features on Demand media table](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#features-on-demand-media) identifies the media for other Windows releases. Acquire the ISO through a channel available to your organization:
 
+- Volume licensing customers can [download volume licensing products](/microsoft-365/commerce/licenses/download-vl-products) from the Microsoft 365 admin center.
+- Visual Studio subscribers can use [Visual Studio Subscriptions Downloads](https://my.visualstudio.com/Downloads/Featured).
+- OEMs and system builders can obtain media through the [Microsoft OEM site](https://go.microsoft.com/fwlink/?LinkId=131359) or [Device Partner Center](https://devicepartner.microsoft.com/).
+
+Mount the matching ISO and locate the `Msix-PackagingTool-Driver-Package` CAB for the device architecture. In an elevated Command Prompt, install that package on the running Windows installation:
+
+```cmd
+DISM /Online /Add-Package /PackagePath:"D:\<FOD repository path>\Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab"
+```
+
+Replace `D:` and the example path with the location on the mounted media. Use the x86 CAB instead of the amd64 CAB for an x86 device. If you create a reduced repository instead of using the mounted ISO, follow the [FOD repository guidance](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#fod-repositories) so the repository includes the required metadata and dependencies.
+
+The direct-download driver CABs formerly listed in this article targeted Windows releases that are out of support. For supported releases, use matching FOD media and review the [Windows lifecycle FAQ](/lifecycle/faq/windows) before servicing an older conversion device.
