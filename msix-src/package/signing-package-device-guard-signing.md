@@ -12,7 +12,7 @@ ms.custom: sfi-ga-nochange
 > [!IMPORTANT]
 > **Device Guard Signing Service v2 (DGSS) is no longer available.** Microsoft Store for Business and Microsoft Store for Education — which DGSS required for authentication and permissions — were retired on March 31, 2023.
 >
-> For enterprise code signing, use [Azure Trusted Signing](/azure/trusted-signing/), which is the successor service. Azure Trusted Signing provides managed certificate lifecycle, integrates with SignTool and CI/CD pipelines, and supports MSIX, catalog file, and WDAC policy signing. See [Sign an MSIX package: end-to-end guide](sign-msix-package-guide.md) for current guidance.
+> For enterprise code signing, use [Azure Artifact Signing](/azure/artifact-signing/), which is the successor service. Azure Artifact Signing provides managed certificate lifecycle, integrates with SignTool and CI/CD pipelines, and supports MSIX, catalog file, and WDAC policy signing. See [Sign an MSIX package: end-to-end guide](sign-msix-package-guide.md) for current guidance.
 
 The content below is retained for historical reference only.
 
