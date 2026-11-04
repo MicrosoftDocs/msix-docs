@@ -1,7 +1,7 @@
 ---
 title: App Installer file overview
 description: This article describes the contents of App Installer files and how they work to help manage the distribution and installation of your desktop apps.
-ms.date: 04/17/2026
+ms.date: 11/04/2026
 ms.topic: article
 keywords: windows 10, windows 11, uwp, msix
 ms.custom: "RS5, seodec18"
@@ -37,6 +37,25 @@ You can use the App Installer file to download or update your app from the web, 
 > [!IMPORTANT]
 > **The `ms-appinstaller:` URI protocol is disabled by default as of December 2023.** If you were using the `ms-appinstaller:?source=` URI scheme to trigger one-click browser-based installs, this no longer works on most users' devices. Instead, link directly to the `.appinstaller` file — users download and double-click it to install. For enterprise environments where an IT admin can enable the protocol via Group Policy, see [Installing Windows apps from a web page](installing-windows10-apps-web.md). For broad consumer distribution, consider [publishing to the Microsoft Store](/windows/apps/publish/).
 
+
+## Automatic updates for packages distributed through GitHub
+
+Publishing a standalone `.msix` or `.msixbundle` file in a GitHub release does not, by itself, configure automatic updates. Choose an update mechanism as part of your distribution plan.
+
+### Use an App Installer file
+
+You can host your packages and an `.appinstaller` file as GitHub release assets:
+
+1. [Sign the package or bundle](../package/signing-package-overview.md) with a certificate trusted by the target devices. Keep the package identity and publisher consistent across releases so Windows can recognize subsequent packages as updates.
+1. [Create an App Installer file](how-to-create-appinstaller-file.md) that references the signed package or bundle. Use HTTPS download URLs that return the actual files, not a GitHub release page. Keep the `.appinstaller` URL stable so installed apps can retrieve future updates. For GitHub release and asset URL formats, see [Linking to releases](https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases).
+1. Configure the [update settings](update-settings.md) for your supported Windows versions, such as checks on app launch or background checks. See the [App Installer file schema reference](/uwp/schemas/appinstallerschema/schema-root) for the available elements.
+1. Share the `.appinstaller` download with users and have them download and open it to install the app, rather than installing the standalone package directly.
+
+For each update, upload a package with a higher version, increase the App Installer file's `Version`, and update the main package or bundle's `Version` and `Uri` to match the new release asset. Keep the App Installer file available at the URL used by installed apps. Updates are checked according to the configured update settings, not immediately when a GitHub release is published.
+
+### Use the Microsoft Store
+
+Alternatively, [publish your packaged app through the Microsoft Store](/windows/apps/publish/). The Store signs the submitted package and manages updates for Store installations, subject to Store policies and the user's update settings. Uploading a package to GitHub does not enroll it in Store-managed updates.
 
 ## Contents of the App Installer file
 
