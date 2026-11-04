@@ -1,7 +1,7 @@
 ---
 description: Sign a MSIX package in a CI/CD pipeline with Azure Key Vault
 title: MSIX and CI/CD Pipeline signing with Azure Key Vault
-ms.date: 03/25/2021
+ms.date: 11/04/2026
 ms.topic: article
 keywords: windows 10, uwp
 ms.custom: RS5
@@ -42,7 +42,7 @@ The last step is to create a client secret, which is the password we'll need to 
 Give it a name, choose an expiration and then press the **Add** button.
 You will be redirected back to the main page, where the secret will be listed together with its value. Make sure to copy it and to store it somewhere safe. You won't be able to retrieve it again. As soon as you refresh the page, the secret will be masked and there won't be any way to reveal it. Your only option will be to generate a new secret.
 
-There's one last information you need to save together with the client secret: the application identifier. Go back to the home of the application (by clicking on **Overview**) and, in the upper section, look for the value **Application (client) ID**:
+Save two more values together with the client secret: the application identifier and tenant identifier. Go back to the home of the application (by clicking on **Overview**) and, in the upper section, copy **Application (client) ID** and **Directory (tenant) ID**. Azure SignTool requires the tenant ID when you authenticate with a client ID and client secret.
 
 ![Application Id](images/cicd-keyvault/application-id.png)
 
@@ -78,10 +78,11 @@ Now you can sign your package using the AzureSignTool command, which requires th
 
 - `kvu` is the URL of your Azure Key Vault. You can find it in the main page of the service in the Azure portal, under DNS Name.
 - `kvi` is the application id of the Azure app you have registered and that you have previously noted.
+- `kvt` is the directory (tenant) ID of the Azure app you have registered.
 - `kvs` is the client secret you have previously generated and that you have previously noted.
 - `kvc` is the friendly name of the certificate you want to use.
 - `tr` is the URL of a timestamp server. By using this option, we can enable our package to work also when the certificate will expire.
-- `v` is the path of the MSIX package we want to sign.
+- `v` enables verbose output. Pass the path of the MSIX package as the final argument.
 
 This is a sample command:
 
@@ -99,11 +100,11 @@ At first, you will need to create a few variables to store the information requi
 In Azure DevOps select your pipeline and press the **Edit** button at the top. Once you are in the YAML editor, click on the **Variables** button at the top to open the panel.
 You're going to click on the + button to add the following variables:
 
-- **AzureKeyVaultCertificateName**, with the friendly name of your certificate in vault.
+- **AzureKeyVaultCertificateName**, with the name of the certificate in your vault.
 - **AzureKeyVaultUrl**, with the URL of your vault.
 - **AzureKeyVaultClientId**, with the application id of your Azure application.
 - **AzureKeyVaultClientSecret**, with the client secret of your Azure application.
-- **AzureKeyVaultTenantId**, with the tenant id to get token for the Azure application
+- **AzureKeyVaultTenantId**, with the directory (tenant) ID of your Azure application.
 
 When you create each variable, make sure to enable the **Keep this value** secret option. It will make sure that other people who have access to the pipeline won't be able to see their values.
 
@@ -123,7 +124,7 @@ Now you can customize your existing YAML pipeline by adding a .NET Core task to 
 The next step is to add a PowerShell task to execute the command that will sign the package. You must perform this task only at the end of the build process, once the MSIX package has been created.
 
 ```yaml
-- powershell: '& AzureSignTool sign -kvu $(AzureKeyVaultUrl) -kvi $(AzureKeyVaultClientId) -kvs $(AzureKeyVaultClientSecret) -kvc $(AzureKeyVaultCertificateName) -tr http://timestamp.digicert.com -v "$(System.DefaultWorkingDirectory)\MyPipeline\MyContosoApp\MyContosoApp.msix"'
+- powershell: '& AzureSignTool sign -kvt "$(AzureKeyVaultTenantId)" -kvu "$(AzureKeyVaultUrl)" -kvi "$(AzureKeyVaultClientId)" -kvs "$(AzureKeyVaultClientSecret)" -kvc "$(AzureKeyVaultCertificateName)" -tr http://timestamp.digicert.com -v "$(System.DefaultWorkingDirectory)\MyPipeline\MyContosoApp\MyContosoApp.msix"'
   displayName: 'Sign the package'
 ```
 
@@ -138,12 +139,13 @@ This section assumes you already have a CI/CD pipeline for a Windows application
 
 As first step, like we did on Azure Pipeline, we need to safely store the credentials. GitHub uses **secrets** and they can be added in the settings of your repository. Once you're on the GitHub repository which hosts your Windows application, click on **Settings** then move to **Secrets**.
 
-Similarly to what you did with Azure Pipelines, you're going to click on **New secret** to create four secrets:
+Similarly to what you did with Azure Pipelines, you're going to click on **New secret** to create five secrets:
 
-- **AzureKeyVaultName**, with the friendly name of your vault.
+- **AzureKeyVaultCertificateName**, with the name of the certificate in your vault.
 - **AzureKeyVaultUrl**, with the URL of your vault.
 - **AzureKeyVaultClientId**, with the application id of your Azure application.
 - **AzureKeyVaultClientSecret**, with the client secret of your Azure application.
+- **AzureKeyVaultTenantId**, with the directory (tenant) ID of your Azure application.
 
 The difference with Azure Pipeline is that secrets are implicitly hidden, so you won't have to enable any option to protect them.
 
@@ -162,7 +164,7 @@ The second one will sign the package and, as such, it must be executed after the
    run: |
         Get-ChildItem -recurse -Include **.msix | ForEach-Object {
         $msixPath = $_.FullName
-        & AzureSignTool sign -kvt $(AzureKeyVaultTenantId) -kvu "${{ secrets.AzureKeyVaultUrl }}" -kvi "${{ secrets.AzureKeyVaultClientId }}" -kvs "${{ secrets.AzureKeyVaultClientSecret }}" -kvc ${{ secrets.AzureKeyVaultName }} -tr http://timestamp.digicert.com -v $msixPath
+        & AzureSignTool sign -kvt "${{ secrets.AzureKeyVaultTenantId }}" -kvu "${{ secrets.AzureKeyVaultUrl }}" -kvi "${{ secrets.AzureKeyVaultClientId }}" -kvs "${{ secrets.AzureKeyVaultClientSecret }}" -kvc "${{ secrets.AzureKeyVaultCertificateName }}" -tr http://timestamp.digicert.com -v $msixPath
         }
 ```
 
