@@ -271,7 +271,7 @@ The App Installer file can also specify update setting so that the related sets 
 | HoursBetweenUpdateChecks  | Defines the minimal gap in Windows app update checks.                                                                                                                         |
 | UpdateBlocksActivation    | Defines the experience when an app update is checked for.                                                                                                                     |
 | ShowPrompt                | Defines if a window is displayed when updates are being installed, and when updates are being checked for.                                                                    |
-| ForceUpdateFromAnyVersion | Specifies that the next version of the application could be to a newer or older version. If True, will all for both, if False (default), only new versions will be installed. |
+| [ForceUpdateFromAnyVersion](/uwp/schemas/appinstallerschema/element-s4-forceupdatefromanyversion) | If `true`, allows updates to a higher or lower package version. If `false` (the default), only updates to a higher version are allowed. |
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
