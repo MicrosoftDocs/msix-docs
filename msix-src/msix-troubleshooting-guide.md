@@ -236,7 +236,7 @@ For IIS, add MIME type mappings in `web.config`. For Azure Static Web Apps or Gi
 | Framework | Needed when | Source |
 |-----------|-------------|--------|
 | VCLibs (x64/x86/arm64) | App uses C++ runtime | Microsoft Store (auto-installed) or [direct download](/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge) |
-| .NET 8 Desktop Runtime | App targets .NET 8 | Included with Windows App SDK; or [direct download](https://dotnet.microsoft.com/download) |
+| .NET 8 Desktop Runtime | App targets .NET 8 and isn't self-contained | Not included with the Windows App SDK. Install it from [.NET downloads](https://dotnet.microsoft.com/download), or publish the app as self-contained |
 | Windows App SDK (WinAppSDK) | App uses WinUI 3 or other WinAppSDK APIs | [Windows App SDK releases on GitHub](https://github.com/microsoft/WindowsAppSDK/releases) |
 
 **Fix for development**: When installing via `Add-AppxPackage` locally, add the `-DependencyPackages` parameter or install the framework packages first:
